@@ -108,6 +108,7 @@ void libSCBW_InitVariables () {
     int init_i1;
     int init_j1;
 
+    libSCBW_gv_usingSC2BWTestMap = true;
     libSCBW_gv_version = StringExternal("Param/Value/lib_SCBW_E9AAE7CB");
     libSCBW_gv_gamemodeDialog = c_invalidDialogId;
     libSCBW_gv_gamemodeListbox = c_invalidDialogControlId;
