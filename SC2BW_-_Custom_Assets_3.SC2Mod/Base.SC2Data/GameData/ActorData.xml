@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <const id="$LurkerSpineSiteOps" value="{LurkerSOpAoEVariancer SOpShadow SOpForwardCasterPoint SOp2DRotation LurkerSOpShadowSpine SOpRotVariancerUp15}"/>
+    <CActorUnit id="ScienceVessel" parent="GenericUnitBase" unitName="ScienceVessel">
+        <PortraitModel value="ScienceVesselPortrait"/>
+        <On Terms="Abil.Irradiate.SourceCastStart" Send="$Spell"/>
+        <DeathArray index="Normal" ModelLink="ScienceVesselDeath" SoundLink=""/>
+        <DeathActorModel value="ScienceVesselDeathModel"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-shipplatinglevel0.dds"/>
+        <UnitIcon value="Assets\Textures\BTN-Unit-Terran-ScienceVessel.dds"/>
+        <HeroIcon value="Assets\Textures\BTN-Unit-Terran-ScienceVessel.dds"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-sciencevessel.dds"/>
+        </GroupIcon>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-sciencevessel.dds"/>
+        </Wireframe>
+        <BarWidth value="100"/>
+    </CActorUnit>
+    <CActorRange id="IrradiateRange" parent="RangeAbil" abil="Irradiate"/>
+    <CActorTurret id="ScienceVesselRotateTurret">
+        <On Terms="TurretEnable.ScienceVesselRotate" Send="Create"/>
+    </CActorTurret>
+    <CActorSiteOpForward id="SOpScienceVesselDeath">
+        <HostForward Subject="ScienceVesselRotateTurret" Actor="Find"/>
+    </CActorSiteOpForward>
+    <CActorModel id="ScienceVesselDeathModel" parent="UnitDeathModel">
+        <HostSiteOps Ops="SOpAttachOrigin SOpScienceVesselDeath"/>
+    </CActorModel>
+    <CActorUnit id="Scourge" parent="GenericUnitStandard" unitName="Scourge">
+        <DeathArray index="Normal" ModelLink="ScourgeDeath" SoundLink=""/>
+        <On Terms="WeaponStart.Suicide.AttackStart" Send="StatusSet DeathSuicide 1"/>
+        <On Terms="UnitDeathCustomize; IsStatus DeathSuicide 0" Send="Create ScourgeDeathNormalSound"/>
+        <On Terms="UnitDeathCustomize; IsStatus DeathSuicide 1" Send="Create ScourgeDeathSuicideSound"/>
+        <PortraitModel value="ScourgePortrait"/>
+        <BarWidth value="36"/>
+        <BarOffset value="30"/>
+        <UnitIcon value="Assets\Textures\btn-unit-zerg-scourge.dds"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\wireframe-zerg-scourge.dds"/>
+        </GroupIcon>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-zerg-scourge.dds"/>
+        </Wireframe>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-zerg-flyercarapace-level0.dds"/>
+    </CActorUnit>
+    <CActorSound id="ScourgeDeathNormalSound" parent="SoundOneShot">
+        <Sound value="Scourge_Explode"/>
+    </CActorSound>
+    <CActorSound id="ScourgeDeathSuicideSound" parent="SoundOneShot">
+        <Sound value="Scourge_AttackLaunch"/>
+    </CActorSound>
+    <!--                                                                                         -->
+    <!-- Firebat ............................................................................... -->
+    <!--                                                                                         -->
+    <CActorUnit id="Firebat" parent="GenericUnitStandard" unitName="Firebat">
+        <Macros value="UnloadDropAnim"/>
+        <DeathArray index="Normal" ModelLink="FirebatDeath" SoundLink="Firebat_Explode"/>
+        <WalkAnimMoveSpeed value="1.875"/>
+        <PortraitModel value="FirebatPortrait"/>
+        <BarWidth value="45"/>
+        <BarOffset value="77"/>
+        <UnitIcon value="Assets\Textures\btn-unit-terran-firebat.dds"/>
+        <HeroIcon value="Assets\Textures\btn-unit-terran-firebat.dds"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-firebat.dds"/>
+        </GroupIcon>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-firebat.dds"/>
+        </Wireframe>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel0.dds"/>
+        <On Terms="Abil.attack.ReadyStop" Target="FirebatAttackModel" Send="SetOpacity 0.000000 0.250000"/>
+    </CActorUnit>
+    <CActorModel id="FirebatAttackModel" parent="ModelAnimationStyleOneShotNoOrphan">
+        <Flags index="SuppressCreationErrors" value="1"/>
+        <On Terms="ActorCreation; ValidateUnit BearclawNozzlesPurchased" Send="SetScale 2.250000,1.800000,1.000000"/>
+    </CActorModel>
+    <CActorAction id="FirebatAttack" parent="GenericAttackBase" effectAttack="Firebat">
+        <LaunchModel value="FirebatAttackModel"/>
+        <On Terms="Effect.FirebatSet.Start; At Caster" Send="Create"/>
+        <On Terms="Effect.FirebatUFull.Start; At Caster; FromEffectTreeDescendant" Send="ActionDamage"/>
+        <ImpactMap index="None" Sound="Firebat_AttackImpact"/>
+    </CActorAction>
+    <CActorModel id="ImpactModelFlames" parent="ModelAnimationStyleOneShot">
+        <!-- Temporary cap at 1 until we have a better solution for running out of "slots". -->
+        <Terms value="Cap 1"/>
+        <On Terms="Effect.FirebatUFull.Start; At Target" Send="Create"/>
+        <On Terms="Effect.VolatileDeathDamage.Start; At Target" Send="Create"/>
+        <On Terms="ActorOrphan" Send="Destroy"/>
+        <Host Subject="_Selectable"/>
+        <HostSiteOps Ops="SOpAttachRandomDamage"/>
+    </CActorModel>
+    <CActorModel id="VolatileDeathExplosion" parent="ModelAnimationStyleOneShot">
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachOriginStationary"/>
+        <On Terms="Effect.VolatileDeathSearchArea.Start" Send="Create"/>
+    </CActorModel>
+    <CActorTurret id="GoliathTurret">
+        <On Terms="TurretEnable.Goliath" Send="Create"/>
+    </CActorTurret>
+    <CActorModel id="GoliathDeath" parent="UnitDeathModel">
+        <AcceptedTransfers index="Textures" value="1"/>
+        <CopySource value="Goliath"/>
+        <Inherits index="BaseModelScale" value="0"/>
+        <Host Subject="_Selectable"/>
+        <HostSiteOps Ops="SOpAttachOriginStationary SOpShadow"/>
+    </CActorModel>
+    <!-- Ground attack.                                                                          -->
+    <CActorAction id="GoliathGroundAttack" parent="GenericAttack" effectAttack="GoliathG">
+        <ImpactMap index="None" Sound="Goliath_GroundAttackImpact"/>
+    </CActorAction>
+    <!--                                                                                         -->
+    <!-- Medic ................................................................................. -->
+    <!--                                                                                         -->
+    <CActorUnit id="Medic" parent="GenericUnitStandard" unitName="Medic">
+        <PortraitModel value="MedicPortrait"/>
+        <On Terms="Abil.heal.SourceChannelStart" Send="$Spell PlayForever"/>
+        <On Terms="Abil.heal.SourceChannelStop" Send="AnimClear Spell"/>
+        <On Terms="Behavior.KillSquad.On" Send="ModelSwap MedicKillSquad"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit IsKillSquad" Send="DeathCustomize Variation2"/>
+        <Macros value="UnloadDropAnim"/>
+        <DeathArray index="Normal" ModelLink="MedicDeath" SoundLink="Medic_Explode"/>
+        <DeathArray index="Blast" ModelLink="MedicDeath"/>
+        <DeathCustoms ModelLink="MedicKillSquadDeath" SoundLink="Medic_Death" Name="Variation2"/>
+        <WalkAnimMoveSpeed value="2.25"/>
+        <BarWidth value="36"/>
+        <BarOffset value="20"/>
+        <UnitIcon value="Assets\Textures\BTN-Unit-Terran-Medic.dds"/>
+        <HeroIcon value="Assets\Textures\BTN-Unit-Terran-Medic.dds"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-medic.dds"/>
+        </GroupIcon>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-medic.dds"/>
+        </Wireframe>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel0.dds"/>
+    </CActorUnit>
+    <CActorSound id="Medic_Death" parent="SoundOneShot">
+        <On Terms="UnitDeath.Medic; PassChance 25.000000" Send="Create"/>
+    </CActorSound>
+    <!-- Heal                                                                           -->
+    <!--CActorSite id="MedicHealBeamLaunchSite" parent="SiteWeapon">
+        <On Terms="Abil.heal.SourceChannelStart" Send="Create"/>
+        <On Terms="ActorCreation" Send="RefSet ::global.MedicHealLaunch ::Self"/>
+        <On Terms="Signal.*.HealModel" Send="RefSetFromMsg ::actor.HealModel ::Sender"/>
+        <On Terms="Signal.*.HealSound" Send="RefSetFromMsg ::actor.HealSound ::Sender"/>
+        <On Terms="Effect.heal.TargetStop" Target="::actor.HealModel" Send="Destroy"/>
+        <On Terms="Effect.heal.TargetStop" Target="::actor.HealSound" Send="Destroy"/>
+        <On Terms="Effect.heal.TargetStop" Send="Destroy"/>
+    </CActorSite>
+    <CActorSite id="MedicHealBeamImpactSite" parent="SiteCenter">
+        <On Terms="Abil.heal.TargetChannelStart" Send="Create"/>
+        <On Terms="ActorCreation" Send="RefSet ::global.MedicHealImpact ::Self"/>
+        <On Terms="Effect.heal.TargetStop" Send="Destroy"/>
+    </CActorSite-->
+    <CActorBeamSimple id="MedicHealBeam" parent="BeamSimpleAnimationStyleContinuous">
+        <On Terms="Effect.heal.TargetStart" Send="Create"/>
+        <On Terms="Effect.heal.TargetStop" Send="Destroy"/>
+        <HostForProps Subject="_Unit" Scope="Caster" Actor="Find"/>
+        <HostLaunch Subject="_Unit" Scope="Caster" Actor="Find"/>
+        <HostImpact Subject="_Unit" Scope="Target" Actor="Find"/>
+        <HostLaunchSiteOps Ops="SOpAttachWeapon"/>
+        <HostImpactSiteOps Ops="SOpAttachCenter"/>
+        <Inherits index="Visibility" value="1"/>
+    </CActorBeamSimple>
+    <CActorModel id="MedicHealModel" parent="ModelAnimationStyleContinuous">
+        <On Terms="ActorCreation" Send="$Birth PlayForever"/>
+        <On Terms="Abil.heal.TargetChannelStart" Send="Create"/>
+        <On Terms="Abil.heal.TargetChannelStop" Send="Destroy"/>
+        <On Terms="ActorOrphan" Send="Destroy"/>
+        <Host Subject="_Selectable"/>
+        <HostSiteOps Ops="SOpAttachOverhead"/>
+    </CActorModel>
+    <CActorSound id="MedicHealSound" parent="SoundContinuous">
+        <Sound value="Medic_Heal"/>
+        <On Terms="Abil.heal.TargetChannelStart" Send="Create"/>
+        <On Terms="Abil.heal.TargetChannelStop" Send="Destroy"/>
+        <On Terms="ActorOrphan" Send="Destroy"/>
+        <On Terms="ActorCreation" Send="Create MedicHealSoundStart"/>
+        <On Terms="ActorDestruction" Send="Create MedicHealSoundStop"/>
+        <Host Subject="_Selectable"/>
+        <HostSiteOps Ops="SOpAttachOverhead"/>
+    </CActorSound>
+    <CActorSound id="MedicHealSoundStop" parent="SoundOneShot">
+        <Sound value="Medic_HealEnd"/>
+    </CActorSound>
+    <!-- Flare ................................................................................. -->
+    <CActorSound id="MedicHealSoundStart" parent="SoundOneShot">
+        <Sound value="Medic_HealStart"/>
+    </CActorSound>
+    <CActorRange id="FlareRange" parent="RangeAbil" abil="Flare"/>
+    <CActorSound id="FlareLaunch" parent="SoundOneShot">
+        <Sound value="MissileTurretWeaponBirth"/>
+        <On Terms="Effect.Flare.Start; At Caster" Send="Create"/>
+    </CActorSound>
+    <!--                                                                                         -->
+    <!-- Scout ................................................................................. -->
+    <!--                                                                                         -->
+    <CActorUnit id="Scout" parent="GenericUnitStandard" unitName="Scout">
+        <PortraitModel value="ScoutPortrait"/>
+        <BuildModel value="ScoutWarpIn"/>
+        <DeathArray index="Normal" ModelLink="ScoutDeath" SoundLink="Scout_Explode"/>
+        <On Terms="Behavior.WarpInEffect.On" Send="ModelSwap ScoutWarpInStargate"/>
+        <On Terms="Behavior.WarpInEffect.On" Send="$Spell"/>
+        <On Terms="Behavior.WarpInEffect.Off" Send="ModelSwap Scout"/>
+        <BarWidth value="66"/>
+        <BarOffset value="40"/>
+        <NameOffset value="40"/>
+        <UnitIcon value="Assets\Textures\btn-unit-protoss-scout.dds"/>
+        <HeroIcon value="Assets\Textures\btn-unit-protoss-scout.dds"/>
+        <WireframeShield>
+            <Image value="Assets\Textures\Wireframe-Protoss-Scout-Shield01.dds"/>
+            <Image value="Assets\Textures\Wireframe-Protoss-Scout-Shield02.dds"/>
+            <Image value="Assets\Textures\Wireframe-Protoss-Scout-Shield03.dds"/>
+        </WireframeShield>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Protoss-Scout.dds"/>
+        </GroupIcon>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Protoss-Scout.dds"/>
+        </Wireframe>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-protoss-airarmorlevel0.dds"/>
+    </CActorUnit>
+    <CActorMissile id="ScoutAirLeftAttackMissile" parent="GenericAttackMissile" unitName="ScoutAirWeaponLeft"/>
+    <CActorAction id="ScoutAirLeftAttack" parent="GenericAttack" effectImpact="ScoutAirU" effectLaunch="ScoutAirLMLeft">
+        <LaunchAssets Sound="Scout_AirAttackLaunch"/>
+        <ImpactMap index="None" Sound="Scout_AirAttackImpact"/>
+    </CActorAction>
+    <CActorMissile id="ScoutAirRightAttackMissile" parent="GenericAttackMissile" unitName="ScoutAirWeaponRight"/>
+    <CActorAction id="ScoutAirRightAttack" parent="GenericAttack" effectImpact="ScoutAirU" effectLaunch="ScoutAirLMRight"/>
+    <CActorModel id="ScoutGroundAttackModel" parent="GenericAttackModel"/>
+    <CActorAction id="ScoutGroundAttack" parent="GenericAttack" effectLaunch="ScoutGround">
+        <LaunchModel value="ScoutGroundAttackModel"/>
+        <ImpactModel value="ScoutGroundAttackModel"/>
+        <ImpactMap index="None" Sound="Scout_GroundAttackImpact"/>
+    </CActorAction>
+    <!--                                                                                         -->
+    <!-- Vulture ............................................................................... -->
+    <!--                                                                                         -->
+    <CActorUnit id="Vulture" parent="GenericUnitStandard" unitName="Vulture">
+        <DeathArray index="Normal" ModelLink="VultureDeath" SoundLink="Vulture_Explode"/>
+        <PortraitModel value="VulturePortrait"/>
+        <Macros value="UnloadDropAnim"/>
+        <BarWidth value="102"/>
+        <BarOffset value="80"/>
+        <NameOffset value="40"/>
+        <UnitIcon value="Assets\Textures\btn-unit-terran-vulture.dds"/>
+        <HeroIcon value="Assets\Textures\btn-unit-terran-vulture.dds"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-Vulture.dds"/>
+        </GroupIcon>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-Vulture.dds"/>
+        </Wireframe>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel0.dds"/>
+        <AbilSoundArray AbilCmd="VultureSpiderMines,0" Sound="Vulture_SpiderMinePlace"/>
+    </CActorUnit>
+    <CActorMissile id="VultureAttackMissile" parent="GenericAttackMissile" unitName="VultureWeapon"/>
+    <CActorAction id="VultureAttack" parent="GenericAttack" effectImpact="VultureU" effectLaunch="Vulture"/>
+    <CActorModel id="ScavengingSystemsHealModel" parent="ModelAnimationStyleOneShot">
+        <Model value="NanoRepairBeamImpact"/>
+        <On Terms="Effect.ScavengingSystemsHeal.Start; At Target" Send="Create"/>
+        <On Terms="ActorCreation" Send="SetScale 2.000000"/>
+    </CActorModel>
+    <CActorSound id="ScavengingSystemsHealSound" parent="SoundOneShot">
+        <On Terms="Effect.ScavengingSystemsHeal.Start; At Target" Send="Create"/>
+    </CActorSound>
+    <!-- Spider Mine ........................................................................... -->
+    <CActorUnit id="SpiderMineVulture" parent="GenericUnitStandard" unitName="SpiderMine">
+        <On Terms="UnitBirth.SpiderMineBurrowed" Send="Create"/>
+        <On Terms="UnitBirth.SpiderMineBurrowed" Send="AnimPlay Burrow Burrow PlayForever,NonLooping"/>
+        <On Terms="AbilMorph.*.Start; MorphTo SpiderMineBurrowed" Send="AnimPlay Burrow Burrow PlayForever,NonLooping"/>
+        <On Terms="AbilMorph.*.Start; MorphTo SpiderMineBurrowed" Send="AnimClear Unburrow"/>
+        <On Terms="AbilMorph.*.Start; MorphTo SpiderMine" Send="AnimClear Burrow"/>
+        <On Terms="AbilMorph.*.Start; MorphTo SpiderMine" Send="AnimPlay Unburrow Unburrow"/>
+        <On Terms="AbilMorph.VultureSpiderMineBurrow.Start" Send="Create VultureSpiderMineBurrowSound"/>
+        <On Terms="Abil.attack.ReadyStart" Send="Create VultureSpiderMineSeekSound"/>
+        <DeathArray index="Normal" ModelLink="SpiderMineExplosion" SoundLink="Terran_ExplosionSmall"/>
+        <BarWidth value="36"/>
+        <BarOffset value="10"/>
+        <NameOffset value="10"/>
+        <PlacementModel value="SpiderMinePlacement"/>
+        <UnitIcon value="Assets\Textures\BTN-Unit-Terran-SpiderMine.dds"/>
+        <HeroIcon value="Assets\Textures\BTN-Unit-Terran-SpiderMine.dds"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-SpiderMine.dds"/>
+        </GroupIcon>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-SpiderMine.dds"/>
+        </Wireframe>
+        <SoundArray index="Birth" value="SpiderMineBirth"/>
+        <SoundArray index="Ready" value="SpiderMineReady"/>
+        <SoundArray index="Help" value="SpiderMineHelp"/>
+        <SoundArray index="What" value="SpiderMineWhat"/>
+        <SoundArray index="Yes" value="SpiderMineYes"/>
+        <SoundArray index="Attack" value="SpiderMineYes"/>
+        <SoundArray index="Pissed" value="SpiderMinePissed"/>
+        <SoundArray index="Movement" value="SpiderMineMovement"/>
+        <SoundArray index="Turning" value="SpiderMineTurning"/>
+        <SoundArray index="Board" value="SpiderMineBoard"/>
+        <GroupSoundArray index="Birth" value="SpiderMineBirth"/>
+        <GroupSoundArray index="Ready" value="SpiderMineReady"/>
+        <GroupSoundArray index="Help" value="SpiderMineHelp"/>
+        <GroupSoundArray index="What" value="SpiderMineWhat"/>
+        <GroupSoundArray index="Yes" value="SpiderMineYes"/>
+        <GroupSoundArray index="Attack" value="SpiderMineYes"/>
+        <GroupSoundArray index="Pissed" value="SpiderMinePissed"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel0.dds"/>
+        <Scale value="1.500000"/>
+    </CActorUnit>
+    <CActorSound id="VultureSpiderMineBury" parent="SoundOneShot">
+        <Sound value="SpiderMineBurrow"/>
+        <On Terms="AbilMorph.*.Start; MorphTo SpiderMine" Send="Create"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo SpiderMineBurrowed" Send="Create"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachOriginStationary"/>
+    </CActorSound>
+    <CActorSound id="VultureSpiderMineBirthSound" parent="SoundOneShot">
+        <Sound value="Vulture_SpiderMinePlace"/>
+        <On Terms="AbilMorph.VultureSpiderMineUnburrow.Start" Send="Create"/>
+    </CActorSound>
+    <CActorSound id="VultureSpiderMineBurrowSound" parent="SoundOneShot">
+        <Sound value="Vulture_SpiderMineBurrow"/>
+    </CActorSound>
+    <CActorSound id="VultureSpiderMineSeekSound" parent="SoundOneShot">
+        <Sound value="Vulture_SpiderMineSeek"/>
+    </CActorSound>
+    <!--                                                                                         -->
+    <!-- Wraith ................................................................................ -->
+    <!--                                                                                         -->
+    <CActorUnit id="Wraith" parent="GenericUnitBase" unitName="Wraith">
+        <DeathArray index="Normal" ModelLink="WraithDeath" SoundLink="Wraith_Explode"/>
+        <PortraitModel value="WraithPortrait"/>
+        <AnimBlendTime value="0.300000"/>
+        <On Terms="Abil.attack.ReadyStart" Send="AnimGroupApply Ready"/>
+        <On Terms="WeaponStart.WraithA.AttackStart" Send="AnimBracketStart Attack Attack,Superior"/>
+        <On Terms="WeaponStart.WraithG.AttackStart" Send="AnimBracketStart Attack Attack"/>
+        <On Terms="WeaponStop.*.AttackStop" Send="AnimBracketStop Attack"/>
+        <On Terms="Abil.attack.ReadyStop" Send="AnimGroupRemove Ready"/>
+        <BarWidth value="66"/>
+        <BarOffset value="55"/>
+        <UnitIcon value="Assets\Textures\btn-unit-terran-wraith.dds"/>
+        <HeroIcon value="Assets\Textures\btn-unit-terran-wraith.dds"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-wraith.dds"/>
+        </GroupIcon>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-wraith.dds"/>
+        </Wireframe>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-shipplatinglevel0.dds"/>
+        <GroupSoundArray index="Birth" value="Wraith_Birth"/>
+        <GroupSoundArray index="Ready" value="Wraith_Ready"/>
+        <GroupSoundArray index="Help" value="Wraith_Help"/>
+        <GroupSoundArray index="What" value="Wraith_What"/>
+        <GroupSoundArray index="Yes" value="Wraith_Yes"/>
+        <GroupSoundArray index="Attack" value="Wraith_Attack"/>
+        <GroupSoundArray index="Pissed" value="Wraith_Pissed"/>
+        <HostSiteOps Ops="SOpBankerWraith"/>
+    </CActorUnit>
+    <CActorSiteOpBanker id="SOpBankerWraith" parent="SOpBanker">
+        <RollAngleMax value="75.000000"/>
+        <RollInRate value="23.450001"/>
+        <RollOutRate value="18.799999"/>
+    </CActorSiteOpBanker>
+    <CActorMissile id="WraithAirAttackLeftMissile" parent="GenericAttackMissile" unitName="WraithAirWeaponLeft"/>
+    <CActorMissile id="WraithAirAttackRightMissile" parent="GenericAttackMissile" unitName="WraithAirWeaponRight"/>
+    <CActorMissile id="WraithGroundAttackMissile" parent="GenericAttackMissile" unitName="WraithGroundWeapon"/>
+    <CActorModel id="WraithEvade" parent="ModelAnimationStyleOneShot">
+        <On Terms="Behavior.CloakDistortionField.DamageHandled" Send="Create"/>
+        <Host Subject="_Selectable"/>
+        <HostSiteOps Ops="SOpAttachCenter"/>
+    </CActorModel>
+</Catalog>

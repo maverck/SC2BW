@@ -1,0 +1,3 @@
+DocInfo/DescLong=SC2BW - Custom Assets 5
+DocInfo/DescShort=Any
+DocInfo/Name=SC2BW_CustomAssets5_1234

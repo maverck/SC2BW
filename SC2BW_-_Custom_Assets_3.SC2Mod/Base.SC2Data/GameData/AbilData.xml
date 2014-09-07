@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CAbilMorph id="LurkerAspectFromHydraliskBurrowed">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="LurkerFromHydraliskBurrowed" Requirements="UseLurkerAspect"/>
+        <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
+        <Flags index="BestUnit" value="1"/>
+        <Flags index="Birth" value="1"/>
+        <Flags index="DisableAbils" value="1"/>
+        <Flags index="FastBuild" value="1"/>
+        <Flags index="Interruptible" value="1"/>
+        <Flags index="Produce" value="1"/>
+        <Flags index="ShowProgress" value="1"/>
+        <Flags index="SuppressMovement" value="1"/>
+        <AbilClassEnableArray index="CAbilMove" value="1"/>
+        <AbilClassEnableArray index="CAbilStop" value="1"/>
+        <CancelUnit value="Hydralisk"/>
+        <InfoArray Unit="Hydralisk" RandomDelayMax="0.5">
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="1.333"/>
+            </SectionArray>
+            <SectionArray index="Collide">
+                <DurationArray index="Delay" value="0.0556"/>
+            </SectionArray>
+        </InfoArray>
+        <InfoArray Unit="LurkerEgg"/>
+        <InfoArray Score="1" Unit="Lurker">
+            <SectionArray index="Abils">
+                <DurationArray index="Delay" value="33"/>
+            </SectionArray>
+            <SectionArray index="Actor">
+                <DurationArray index="Delay" value="33"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="33"/>
+                <EffectArray index="Finish" value="PostMorphHeal"/>
+            </SectionArray>
+        </InfoArray>
+        <Alert value="MorphComplete_Zerg"/>
+        <ActorKey value="BurrowUpMorph"/>
+    </CAbilMorph>
+</Catalog>

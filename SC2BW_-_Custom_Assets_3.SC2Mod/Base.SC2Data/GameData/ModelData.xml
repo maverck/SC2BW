@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CModel id="ScienceFacility" parent="Building">
+        <Model value="Assets\Buildings\Terran\ScienceFacility\ScienceFacility.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Radius value="1.500000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="2.800000"/>
+        <ShadowRadius value="2.800000"/>
+    </CModel>
+    <CModel id="ScienceFacilityDeath" parent="BuildingDeath">
+        <Model value="Assets\Buildings\Terran\ScienceFacilityDeath\ScienceFacilityDeath.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="FirebatAttackLaunch" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\FirebatFireSprite\FirebatFireSprite.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="1.000000,1.500000,1.000000"/>
+        <ScaleMin value="1.000000,1.500000,1.000000"/>
+    </CModel>
+    <CModel id="FirebatBunkerAttackLaunch" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\FirebatFireSprite\FirebatFireSprite.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="1.000000,3.000000,1.000000"/>
+        <ScaleMin value="1.000000,3.000000,1.000000"/>
+    </CModel>
+    <CModel id="ScoutAirWeaponLeft" parent="MissileFX">
+        <Model value="Assets\Effects\Protoss\ScoutAirMissile\ScoutAirMissile.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+    </CModel>
+    <CModel id="ScoutAirWeaponRight" parent="MissileFX">
+        <Model value="Assets\Effects\Protoss\ScoutAirMissile\ScoutAirMissile.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+    </CModel>
+    <CModel id="ScoutAirMissileImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Protoss\ScoutAirMissileImpact\ScoutAirMissileImpact.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+    </CModel>
+    <CModel id="ScoutGroundAttackLaunch" parent="LaunchFX">
+        <Model value="Assets\Effects\Protoss\ScoutWeaponLaunch\ScoutWeaponLaunch.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+    </CModel>
+    <CModel id="ScoutGroundAttackImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Protoss\ScoutWeaponImpact\ScoutWeaponImpact.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+    </CModel>
+    <CModel id="WraithAirAttackImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\WraithMissileImpact\WraithMissileImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="WraithAirWeaponRight" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\WraithMissile\WraithMissile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="WraithAirWeaponLeft" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\WraithMissile\WraithMissile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="WraithGroundAttackImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\WraithLaserMissileImpact\WraithLaserMissileImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="WraithGroundWeapon" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\WraithLaserMissile\WraithLaserMissile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="ScourgePortrait" parent="Portrait" Race="Zerg"/>
+    <CModel id="ScienceVesselPortrait" parent="FXAPortrait" Race="Terran"/>
+    <CModel id="VulturePortrait" parent="FXAPortrait" Race="Terran"/>
+    <CModel id="WraithPortrait" parent="FXAPortrait" Race="Terran"/>
+    <CModel id="FirebatPortrait" parent="FXAPortrait" Race="Terran"/>
+    <CModel id="Scout" parent="Unit" Race="Protoss">
+        <Occlusion value="Show"/>
+        <SelectionRadius value="0.750000"/>
+        <Radius value="0.750000"/>
+        <TechPurchaseCamera value="Star2CameraLow05"/>
+        <UnitGlossaryCamera value="Star2CameraLow05"/>
+        <PlanetPanelCamera value="Star2CameraLow05"/>
+        <ShadowRadius value="0.750000"/>
+    </CModel>
+    <CModel id="ScoutWarpIn" parent="OneShotSpellFX">
+        <Model value="Assets\Units\Protoss\ScoutWarpIn\ScoutWarpIn.m3"/>
+        <Occlusion value="Show"/>
+        <ScaleMax value="0.850000,0.850000,0.850000"/>
+        <ScaleMin value="0.850000,0.850000,0.850000"/>
+        <EditorCategories value="Race:Protoss"/>
+        <LowQualityModel value="ProtossUnitBirth"/>
+        <SelectionOffset value="0.000000,0.000000,-0.750000"/>
+        <SelectionRadius value="0.750000"/>
+        <ShadowRadius value="0.750000"/>
+    </CModel>
+    <CModel id="ScoutWarpInStargate" parent="PersistentSpellFX">
+        <Model value="Assets\Units\Protoss\ScoutWarpInStargate\ScoutWarpInStargate.m3"/>
+        <Occlusion value="Show"/>
+        <SelectionRadius value="0.750000"/>
+        <Radius value="0.750000"/>
+        <TechPurchaseCamera value="Star2CameraLow07"/>
+        <UnitGlossaryCamera value="Star2CameraLow07"/>
+        <PlanetPanelCamera value="Star2CameraLow07"/>
+        <ShadowRadius value="0.750000"/>
+    </CModel>
+    <CModel id="ScoutDeath" parent="UnitDeath" Race="Protoss">
+        <Occlusion value="Show"/>
+        <SelectionRadius value="0.750000"/>
+        <Radius value="0.750000"/>
+        <ShadowRadius value="0.750000"/>
+        <LowQualityModel value="ProtossMediumUnitDeathLow"/>
+    </CModel>
+    <CModel id="Medic" parent="Unit" Race="Terran">
+        <Occlusion value="Show"/>
+        <SelectionRadius value="0.375000"/>
+        <SquibTypeDefault value="Flesh"/>
+        <Radius value="0.375000"/>
+        <TechPurchaseCamera value="TechPurchaseInfantry"/>
+        <UnitGlossaryCamera value="Star2CameraMid03"/>
+        <PlanetPanelCamera value="Star2CameraMid03"/>
+        <ShadowRadius value="0.375000"/>
+    </CModel>
+    <CModel id="MedicKillSquad" parent="Medic">
+        <Model value="Assets\Units\Terran\MedicKillSquad\MedicKillSquad.m3"/>
+    </CModel>
+    <CModel id="MedicDeath" parent="UnitDeath" Race="Terran">
+        <Occlusion value="Show"/>
+        <LowQualityModel value="TerranBloodDeathLow"/>
+    </CModel>
+    <CModel id="MedicKillSquadDeath" parent="UnitDeath" Race="Terran">
+        <Occlusion value="Show"/>
+        <LowQualityModel value="TerranBloodDeathLow"/>
+    </CModel>
+    <CModel id="ScienceVessel" parent="Unit">
+        <Model value="Assets\Units\Terran\ScienceVessel\ScienceVessel.m3"/>
+        <Occlusion value="Show"/>
+        <SelectionRadius value="1.000000"/>
+        <Radius value="1.000000"/>
+        <EditorCategories value="Race:Terran"/>
+        <ShadowRadius value="1.000000"/>
+        <TechPurchaseCamera value="Star2CameraMid05"/>
+        <UnitGlossaryCamera value="Star2CameraMid05"/>
+        <PlanetPanelCamera value="Star2CameraMid05"/>
+    </CModel>
+    <CModel id="ScienceVesselDeath" parent="UnitDeath" Race="Terran">
+        <Occlusion value="Show"/>
+        <LowQualityModel value="ScienceVesselDeathLow"/>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranExplosionMedium"/>
+            <Type value="Sound"/>
+            <Time value="0.933000"/>
+        </Events>
+    </CModel>
+    <CModel id="Vulture" parent="Unit">
+        <Model value="Assets\Units\Terran\Vulture\Vulture.m3"/>
+        <Occlusion value="Show"/>
+        <ScaleMax value="0.850000,0.850000,0.850000"/>
+        <ScaleMin value="0.850000,0.850000,0.850000"/>
+        <EditorCategories value="Race:Terran"/>
+        <Radius value="0.650000"/>
+        <SelectionRadius value="0.722000"/>
+        <TechPurchaseCamera value="TechPurchaseVehicle"/>
+        <UnitGlossaryCamera value="Star2CameraMid07"/>
+        <PlanetPanelCamera value="Star2CameraMid07"/>
+        <ShadowRadius value="0.722000"/>
+        <Tipability value="1.000000"/>
+        <TipabilityWidth value="0.400000"/>
+        <TipabilityLength value="0.800000"/>
+    </CModel>
+    <CModel id="VultureDeath" parent="UnitDeath" Race="Terran">
+        <LowQualityModel value="TerranMediumUnitDeathLow"/>
+    </CModel>
+    <CModel id="Wraith" parent="Unit">
+        <Model value="Assets\Units\Terran\Wraith\Wraith.m3"/>
+        <Occlusion value="Show"/>
+        <SelectionRadius value="0.625000"/>
+        <Tipability value="0.750000"/>
+        <Radius value="0.625000"/>
+        <EditorCategories value="Race:Terran"/>
+        <TechPurchaseCamera value="TechPurchaseStarship"/>
+        <UnitGlossaryCamera value="Star2CameraLow04"/>
+        <PlanetPanelCamera value="Star2CameraLow04"/>
+        <ShadowRadius value="0.625000"/>
+    </CModel>
+    <CModel id="WraithDeath" parent="UnitDeath" Race="Terran">
+        <Radius value="0.625000"/>
+        <LowQualityModel value="TerranMediumUnitDeathLow"/>
+    </CModel>
+    <CModel id="VultureAttackLaunch" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\GhostFireSprite\GhostFireSprite.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="VultureAttackImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\VikingFighterMissileImpact\VikingFighterMissileImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="GoliathGroundAttackLaunch" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\VikingAssaultWeaponLaunch\VikingAssaultWeaponLaunch.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="GoliathGroundAttackImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\VikingAssaultWeaponImpact\VikingAssaultWeaponImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="GoliathAirAttackLaunch" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\VikingFighterMissileLaunch\VikingFighterMissileLaunch.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="GoliathAirAttackImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\GoliathAirMissileImpact\GoliathAirMissileImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="FirebatDeath" parent="UnitDeath" Race="Terran">
+        <Occlusion value="Show"/>
+        <LowQualityModel value="TerranSmallUnitDeathLow"/>
+    </CModel>
+    <CModel id="Scourge" parent="Unit" Race="Zerg">
+        <Occlusion value="Show"/>
+        <SelectionRadius value="0.375000"/>
+        <Tipability value="0.750000"/>
+        <Radius value="0.375000"/>
+        <TechPurchaseCamera value="Star2CameraLow05"/>
+        <UnitGlossaryCamera value="Star2CameraLow05"/>
+        <PlanetPanelCamera value="Star2CameraLow05"/>
+        <ShadowRadius value="0.375000"/>
+    </CModel>
+    <CModel id="ScourgeDeath" parent="UnitDeath" Race="Zerg">
+        <LowQualityModel value="ZergSmallUnitDeathLow"/>
+    </CModel>
+    <CModel id="MedicHealBeam" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Terran\MedivacBeam\MedivacBeam.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="0.500000,0.500000,0.500000"/>
+        <ScaleMin value="0.500000,0.500000,0.500000"/>
+    </CModel>
+    <CModel id="MedicHealModel" parent="OneShotSpellFX">
+        <Model value="Assets\Effects\Terran\MedicHeal\MedicHeal.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="DefensiveMatrixModel" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Terran\BattlecruiserDefensiveMatrix\BattlecruiserDefensiveMatrix.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="0.900000,0.900000,0.900000"/>
+        <ScaleMin value="0.900000,0.900000,0.900000"/>
+        <Radius value="2.000000"/>
+        <SelectionRadius value="0.555400"/>
+        <ShadowRadius value="0.555400"/>
+    </CModel>
+    <CModel id="DefensiveMatrix" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Terran\DefensiveMatrixShield\DefensiveMatrixShield.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="FirebatAttackBeam" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Terran\JackalBeam\JackalBeam.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="SpiderMineAttackImpact" parent="OneShotSpellFX">
+        <Model value="Assets\Effects\Terran\TerranSmallUnitDeath\TerranSmallUnitDeath.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="SpiderMineExplosion" parent="OneShotSpellFX">
+        <Model value="Assets\Effects\Terran\TerranSmallUnitDeath\TerranSmallUnitDeath.m3"/>
+        <Occlusion value="Show"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="1.250000,1.250000,1.250000"/>
+        <ScaleMin value="1.250000,1.250000,1.250000"/>
+        <SelectionRadius value="2.000000"/>
+        <ShadowRadius value="2.000000"/>
+        <LowQualityModel value="SpiderMineExplosionLow"/>
+    </CModel>
+    <CModel id="SpiderMineExplosionLow" parent="OneShotSpellFX">
+        <Model value="Assets\Effects\Terran\SpiderMineExplosion\SpiderMineExplosion_Low.m3"/>
+        <Occlusion value="Show"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="0.250000,0.250000,0.250000"/>
+        <ScaleMin value="0.250000,0.250000,0.250000"/>
+        <SelectionRadius value="2.000000"/>
+        <ShadowRadius value="2.000000"/>
+    </CModel>
+    <CModel id="SpiderMine" parent="Unit" Race="Terran">
+        <Occlusion value="Show"/>
+        <SelectionLayer value="3"/>
+        <SelectionRadius value="0.250000"/>
+        <Radius value="0.250000"/>
+        <ShadowRadius value="0.250000"/>
+        <TechPurchaseCamera value="Star2CameraLow02"/>
+        <UnitGlossaryCamera value="Star2CameraLow02"/>
+        <PlanetPanelCamera value="Star2CameraLow02"/>
+    </CModel>
+    <CModel id="SpiderMinePlacement" parent="Placement" Race="Terran">
+        <Model value="Assets\Effects\Terran\SpiderMinePlacement\SpiderMinePlacement.m3"/>
+        <LowQualityModel value="SpiderMine"/>
+        <SelectionRadius value="0.250000"/>
+        <ShadowRadius value="0.250000"/>
+    </CModel>
+    <CModel id="SpiderMineWeapon" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\SpiderMinePodMissile\SpiderMinePodMissile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="ScoutAirLeftAttackImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Protoss\PhoenixMissileImpact\PhoenixMissileImpact.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+    </CModel>
+    <CModel id="ScoutAirRightAttackImpact" parent="ScoutAirLeftAttackImpact"/>
+    <CModel id="SpiderMineReleaseImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\ReaperJumpLandDown\ReaperJumpLandDown.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="LurkerEgg" parent="Unit" Race="Zerg">
+        <Occlusion value="Show"/>
+        <SquibTypeDefault value="Flesh"/>
+        <ScaleMax value="0.850000,0.850000,0.850000"/>
+        <ScaleMin value="0.850000,0.850000,0.850000"/>
+        <SelectionRadius value="0.764400"/>
+        <ShadowRadius value="0.764400"/>
+    </CModel>
+    <CModel id="LurkerEggDeath" parent="UnitDeath">
+        <Model value="Assets\Units\Zerg\LurkerEggDeath\LurkerEggDeath.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+        <Lighting value="LurkerEgg"/>
+        <Occlusion value="Show"/>
+        <LowQualityModel value="ZergSmallUnitDeathLow"/>
+        <SelectionRadius value="0.764400"/>
+        <ShadowRadius value="0.764400"/>
+    </CModel>
+    <CModel id="LurkerDeathAcid" parent="UnitDeath" Race="Zerg">
+        <LowQualityModel value="ZergMediumUnitDeathLow"/>
+        <Occlusion value="Show"/>
+    </CModel>
+    <CModel id="LurkerDeathFire" parent="UnitDeath" Race="Zerg">
+        <LowQualityModel value="ZergMediumUnitDeathLow"/>
+        <Occlusion value="Show"/>
+    </CModel>
+    <CModel id="LurkerDeath" parent="UnitDeath" Race="Zerg">
+        <LowQualityModel value="ZergMediumUnitDeathLow"/>
+        <Occlusion value="Show"/>
+        <VariationCount value="2"/>
+    </CModel>
+    <CModel id="LurkerAttackDeathBloodGeyser" parent="ImpactFX">
+        <Model value="Assets\Effects\Zerg\BloodFountainImpact\BloodFountainImpact.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CModel>
+    <CModel id="LurkerPortrait" parent="Portrait" Race="Zerg"/>
+</Catalog>

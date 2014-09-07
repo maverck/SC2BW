@@ -1,0 +1,5 @@
+DocInfo/DescLong=SC2BW Custom Assets 3
+DocInfo/DescShort=Any
+DocInfo/Name=SC2BW_CustomAssets3_1234
+Weapon/Name/ScoutAir=Anti-matter Missiles
+Weapon/Name/ScoutGround=Dual Photon Blasters

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CEffectRemoveBehavior id="HealRemoveTargetBehavior">
+        <EditorCategories value="Race:Terran"/>
+        <BehaviorLink value="MedivacTargetBeingHealed"/>
+    </CEffectRemoveBehavior>
+    <CEffectCreatePersistent id="HealScanPersistent">
+        <EditorCategories value="Race:Terran"/>
+        <WhichLocation Value="CasterUnit"/>
+        <Flags index="Channeled" value="1"/>
+        <Flags index="PersistUntilDestroyed" value="1"/>
+        <PeriodicValidator value="HealScanPeriodicCombine"/>
+        <PeriodicEffectArray value="MedivacHealSearch"/>
+        <PeriodicPeriodArray value="0.0625"/>
+        <FinalEffect value="MedivacHealIssueStopOrder"/>
+    </CEffectCreatePersistent>
+    <CEffectApplyBehavior id="SpiderMineInvulnerable">
+        <EditorCategories value="Race:Terran"/>
+    </CEffectApplyBehavior>
+    <CEffectRemoveBehavior id="SpiderMineVulnerable">
+        <EditorCategories value="Race:Terran"/>
+        <BehaviorLink value="SpiderMineInvulnerable"/>
+    </CEffectRemoveBehavior>
+    <CEffectLaunchMissile id="WraithARightLaunchMissile">
+        <EditorCategories value="Race:Terran"/>
+        <ImpactEffect value="WraithAU"/>
+        <AmmoUnit value="WraithAirWeaponRight"/>
+    </CEffectLaunchMissile>
+    <CEffectCreatePersistent id="WraithAPersistent">
+        <EditorCategories value="Race:Terran"/>
+        <WhichLocation Value="TargetUnitOrPoint"/>
+        <Flags index="Channeled" value="1"/>
+        <PeriodCount value="2"/>
+        <PeriodicEffectArray value="WraithALeftLaunchMissile"/>
+        <PeriodicEffectArray value="WraithARightLaunchMissile"/>
+        <PeriodicPeriodArray value="0"/>
+        <PeriodicPeriodArray value="0"/>
+    </CEffectCreatePersistent>
+    <CEffectLaunchMissile id="WraithALeftLaunchMissile">
+        <EditorCategories value="Race:Terran"/>
+        <ImpactEffect value="WraithAU"/>
+        <AmmoUnit value="WraithAirWeaponLeft"/>
+    </CEffectLaunchMissile>
+    <CEffectLaunchMissile id="WraithGLaunchMissile">
+        <EditorCategories value="Race:Terran"/>
+        <ImpactEffect value="WraithGU"/>
+        <AmmoUnit value="WraithGroundWeapon"/>
+    </CEffectLaunchMissile>
+    <CEffectDamage id="WraithGU" parent="DU_WEAP">
+        <EditorCategories value="Race:Terran"/>
+        <Visibility value="Visible"/>
+        <Kind value="Ranged"/>
+        <Amount value="8"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="Vulture">
+        <EditorCategories value="Race:Terran"/>
+        <ImpactEffect value="VultureU"/>
+    </CEffectLaunchMissile>
+    <CEffectDamage id="ScoutGround" parent="DU_WEAP">
+        <EditorCategories value="Race:Protoss"/>
+        <Kind value="Ranged"/>
+        <Visibility value="Visible"/>
+        <Amount value="8"/>
+    </CEffectDamage>
+    <CEffectCreatePersistent id="ScoutAir">
+        <EditorCategories value="Race:Protoss"/>
+        <PeriodCount value="2"/>
+        <WhichLocation Value="TargetUnit"/>
+        <PeriodicEffectArray value="ScoutAirLMLeft"/>
+        <PeriodicEffectArray value="ScoutAirLMRight"/>
+        <PeriodicPeriodArray value="0"/>
+        <PeriodicPeriodArray value="0"/>
+    </CEffectCreatePersistent>
+    <CEffectLaunchMissile id="ScoutAirLMLeft">
+        <EditorCategories value="Race:Protoss"/>
+        <ImpactEffect value="ScoutAirU"/>
+        <AmmoUnit value="ScoutAirWeaponLeft"/>
+        <Movers Link="MissileDefault" IfRangeLTE="1"/>
+        <Movers Link="ScoutAirWeaponLeft" IfRangeLTE="4"/>
+    </CEffectLaunchMissile>
+    <CEffectLaunchMissile id="ScoutAirLMRight">
+        <EditorCategories value="Race:Protoss"/>
+        <ImpactEffect value="ScoutAirU"/>
+        <AmmoUnit value="ScoutAirWeaponRight"/>
+        <Movers Link="MissileDefault" IfRangeLTE="1"/>
+        <Movers Link="ScoutAirWeaponRight" IfRangeLTE="4"/>
+    </CEffectLaunchMissile>
+    <CEffectDamage id="GoliathG" parent="DU_WEAP">
+        <EditorCategories value="Race:Terran"/>
+        <Kind value="Ranged"/>
+        <Amount value="18"/>
+        <ValidatorArray value="CasterIsNotHidden"/>
+    </CEffectDamage>
+    <CEffectCreatePersistent id="Firebat">
+        <EditorCategories value="Race:Terran"/>
+        <PeriodCount value="4"/>
+        <WhichLocation Value="SourcePoint"/>
+        <OffsetVectorStartLocation Value="SourcePoint"/>
+        <Flags index="Channeled" value="1"/>
+        <PeriodicEffectArray value="FirebatE"/>
+        <PeriodicOffsetArray value="0,-0.5,0"/>
+        <PeriodicOffsetArray value="0,-1,0"/>
+        <PeriodicOffsetArray value="0,-1.5,0"/>
+        <PeriodicOffsetArray value="0,-2,0"/>
+        <PeriodicPeriodArray value="0.022"/>
+        <PeriodicPeriodArray value="0.022"/>
+        <PeriodicPeriodArray value="0.022"/>
+        <PeriodicPeriodArray value="0.022"/>
+    </CEffectCreatePersistent>
+    <CEffectSet id="FirebatSet">
+        <EditorCategories value="Race:Terran"/>
+        <EffectArray value="Firebat"/>
+        <EffectArray value="FirebatUFull"/>
+    </CEffectSet>
+    <CEffectEnumArea id="FirebatE" parent="EA_WEAP">
+        <EditorCategories value="Race:Terran"/>
+        <SearchFilters value="Ground;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AreaArray Radius="0.6" Effect="FlameThrowerDamageSet"/>
+    </CEffectEnumArea>
+    <CEffectDamage id="FirebatUFull" parent="DU_WEAP_SPLASH">
+        <EditorCategories value="Race:Terran"/>
+        <Amount value="8"/>
+        <Death value="Fire"/>
+        <ValidatorArray value="noMarkers"/>
+        <AttributeBonus index="Light" value="4"/>
+    </CEffectDamage>
+</Catalog>

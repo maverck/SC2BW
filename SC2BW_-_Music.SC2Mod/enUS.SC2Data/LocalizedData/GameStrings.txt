@@ -1,0 +1,3 @@
+DocInfo/Author=MavercK
+DocInfo/DescLong=Music
+DocInfo/Name=SC2BW_Music_1234

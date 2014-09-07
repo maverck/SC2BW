@@ -1,0 +1,2 @@
+Weapon/EditorPrefix/ScoutAir=Scout -
+Weapon/EditorPrefix/ScoutGround=Scout -
