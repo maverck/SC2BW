@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CTurret id="Goliath">
+        <Idle value="ResetIfMoving"/>
+        <YawArc value="180"/>
+        <YawIdleRate value="0"/>
+    </CTurret>
+    <CTurret id="SiegeTankSieged">
+        <YawRate value="1440"/>
+    </CTurret>
+    <CTurret id="MovingShotTurret">
+        <YawArc value="0"/>
+    </CTurret>
+</Catalog>

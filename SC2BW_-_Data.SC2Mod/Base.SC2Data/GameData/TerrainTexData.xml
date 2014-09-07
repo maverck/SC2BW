@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CTerrainTex id="BadlandsAsphalt">
+        <Texture value="Assets\Textures\SC1Terrain\Badlands_asphalt_diffuse.dds"/>
+        <Normalmap value="Assets\Textures\SC1Terrain\Badlands_asphalt_normal.dds"/>
+        <EditorIcon value="Assets\Textures\SC1Terrain\Badlands_asphalt_diffuse.dds"/>
+    </CTerrainTex>
+    <CTerrainTex id="BadlandsDirt">
+        <Texture value="Assets\Textures\SC1Terrain\Badlands_Dirt_diffuse.dds"/>
+        <Normalmap value="Assets\Textures\SC1Terrain\Badlands_Dirt_normal.dds"/>
+        <EditorIcon value="Assets\Textures\SC1Terrain\Badlands_Dirt_diffuse.dds"/>
+    </CTerrainTex>
+    <CTerrainTex id="BadlandsGrass">
+        <Texture value="Assets\Textures\SC1Terrain\Badlands_grass_diffuse.dds"/>
+        <Normalmap value="Assets\Textures\SC1Terrain\Badlands_grass_normal.dds"/>
+        <EditorIcon value="Assets\Textures\SC1Terrain\Badlands_grass_diffuse.dds"/>
+        <DoodadEntry>
+            <Model value="PlantMixMarSara"/>
+            <RandomRotation value="1"/>
+            <Probability value="0.250000"/>
+            <PlacementRadius value="1.000000"/>
+        </DoodadEntry>
+        <DoodadEntry>
+            <Model value="RockMixTarsonis"/>
+            <RandomRotation value="1"/>
+            <Probability value="0.250000"/>
+            <PlacementRadius value="1.000000"/>
+        </DoodadEntry>
+        <DoodadEntry>
+            <Model value="DynamicGrassTarsonis"/>
+            <RandomRotation value="1"/>
+            <Probability value="0.500000"/>
+            <PlacementRadius value="1.000000"/>
+        </DoodadEntry>
+    </CTerrainTex>
+    <CTerrainTex id="BadlandsHighDirt">
+        <Texture value="Assets\Textures\SC1Terrain\Badlands_HighDirt_diffuse.dds"/>
+        <Normalmap value="Assets\Textures\SC1Terrain\Badlands_HighDirt_normal.dds"/>
+        <EditorIcon value="Assets\Textures\SC1Terrain\Badlands_HighDirt_diffuse.dds"/>
+        <DoodadEntry>
+            <Model value="RockMixTarsonis"/>
+            <RandomRotation value="1"/>
+            <Probability value="0.250000"/>
+            <PlacementRadius value="1.000000"/>
+        </DoodadEntry>
+    </CTerrainTex>
+    <CTerrainTex id="BadlandsMud">
+        <Texture value="Assets\Textures\SC1Terrain\Badlands_Mud_diffuse.dds"/>
+        <Normalmap value="Assets\Textures\SC1Terrain\Badlands_Mud_normal.dds"/>
+        <EditorIcon value="Assets\Textures\SC1Terrain\Badlands_Mud_diffuse.dds"/>
+    </CTerrainTex>
+    <CTerrainTex id="BadlandsRockyground">
+        <Texture value="Assets\Textures\SC1Terrain\Badlands_rockyground_diffuse.dds"/>
+        <Normalmap value="Assets\Textures\SC1Terrain\Badlands_rockyground_normal.dds"/>
+        <EditorIcon value="Assets\Textures\SC1Terrain\Badlands_rockyground_diffuse.dds"/>
+    </CTerrainTex>
+    <CTerrainTex id="SpaceplatformDarkplatform">
+        <Texture value="Assets\Textures\SC1Terrain\Spaceplatform_darkplatform_diffuse.dds"/>
+        <Normalmap value="Assets\Textures\SC1Terrain\Spaceplatform_darkplatform_normal.dds"/>
+        <EditorIcon value="Assets\Textures\SC1Terrain\Spaceplatform_darkplatform_diffuse.dds"/>
+    </CTerrainTex>
+    <CTerrainTex id="SpaceplatformLowplatform">
+        <Texture value="Assets\Textures\SC1Terrain\Spaceplatform_lowplatform_diffuse.dds"/>
+        <Normalmap value="Assets\Textures\SC1Terrain\Spaceplatform_lowplatform_normal.dds"/>
+        <EditorIcon value="Assets\Textures\SC1Terrain\Spaceplatform_lowplatform_diffuse.dds"/>
+    </CTerrainTex>
+    <CTerrainTex id="SpaceplatformPlatform">
+        <Texture value="Assets\Textures\SC1Terrain\Spaceplatform_platform_diffuse.dds"/>
+        <Normalmap value="Assets\Textures\SC1Terrain\Spaceplatform_platform_normal.dds"/>
+        <EditorIcon value="Assets\Textures\SC1Terrain\Spaceplatform_platform_diffuse.dds"/>
+    </CTerrainTex>
+    <CTerrainTex id="SpaceplatformPlating">
+        <Texture value="Assets\Textures\SC1Terrain\Spaceplatform_plating_diffuse.dds"/>
+        <Normalmap value="Assets\Textures\SC1Terrain\Spaceplatform_plating_normal.dds"/>
+        <EditorIcon value="Assets\Textures\SC1Terrain\Spaceplatform_plating_diffuse.dds"/>
+    </CTerrainTex>
+    <CTerrainTex id="SpaceplatformRustypit">
+        <Texture value="Assets\Textures\SC1Terrain\Spaceplatform_rustypit_diffuse.dds"/>
+        <Normalmap value="Assets\Textures\SC1Terrain\Spaceplatform_rustypit_normal.dds"/>
+        <EditorIcon value="Assets\Textures\SC1Terrain\Spaceplatform_rustypit_diffuse.dds"/>
+    </CTerrainTex>
+    <CTerrainTex id="SpaceplatformSolararray">
+        <Texture value="Assets\Textures\SC1Terrain\Spaceplatform_solararray_diffuse.dds"/>
+        <Normalmap value="Assets\Textures\SC1Terrain\Spaceplatform_solararray_normal.dds"/>
+        <EditorIcon value="Assets\Textures\SC1Terrain\Spaceplatform_solararray_diffuse.dds"/>
+    </CTerrainTex>
+</Catalog>

@@ -1,0 +1,3279 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CAbilResearch id="ArbiterTribunalResearch">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <InfoArray index="Research1" Time="103.32" Upgrade="ResearchRecall">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="ResearchRecall" Requirements="ResearchRecall"/>
+        </InfoArray>
+        <InfoArray index="Research2" Time="86.1" Upgrade="ResearchStasis">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="ResearchStasis" Requirements="ResearchStasis"/>
+        </InfoArray>
+        <InfoArray index="Research3" Time="143.5" Upgrade="KhaydarinCore">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="ResearchKhaydarinCore" State="Restricted" Requirements="LearnKhaydarinCore"/>
+        </InfoArray>
+        <Activity value="UI/Developing"/>
+    </CAbilResearch>
+    <CAbilMerge id="ArchonWarp">
+        <Flags index="BestUnit" value="0"/>
+    </CAbilMerge>
+    <CAbilArmMagazine id="ArmSiloWithNuke">
+        <InfoArray index="Ammo1" Time="86.1"/>
+    </CAbilArmMagazine>
+    <CAbilResearch id="ArmoryResearch">
+        <InfoArray index="Research3" Time="229.6"/>
+        <InfoArray index="Research4" Time="257.152"/>
+        <InfoArray index="Research5" Time="284.704"/>
+        <InfoArray index="Research6" Time="229.6"/>
+        <InfoArray index="Research7" Time="257.152"/>
+        <InfoArray index="Research8" Time="284.704"/>
+        <InfoArray index="Research9" Time="229.6"/>
+        <InfoArray index="Research10" Time="257.152"/>
+        <InfoArray index="Research11" Time="284.704"/>
+        <InfoArray index="Research12" Time="229.6"/>
+        <InfoArray index="Research13" Time="257.152"/>
+        <InfoArray index="Research14" Time="284.704"/>
+        <Activity value="UI/Upgrading"/>
+    </CAbilResearch>
+    <CAbilResearch id="ArmoryResearchSC2BW" parent="ArmoryResearch">
+        <Name value="Abil/Name/ArmoryResearchSC2BW"/>
+        <InfoArray index="Research3" Upgrade="TerranVehicleArmorsLevel1">
+            <Button DefaultButtonFace="TerranVehiclePlatingLevel1" State="Restricted" Requirements="LearnTerranVehicleArmor1"/>
+        </InfoArray>
+        <InfoArray index="Research4" Upgrade="TerranVehicleArmorsLevel2">
+            <Button DefaultButtonFace="TerranVehiclePlatingLevel2" State="Restricted" Requirements="LearnTerranVehicleArmor2"/>
+        </InfoArray>
+        <InfoArray index="Research5" Upgrade="TerranVehicleArmorsLevel3">
+            <Button DefaultButtonFace="TerranVehiclePlatingLevel3" State="Restricted" Requirements="LearnTerranVehicleArmor3"/>
+        </InfoArray>
+        <InfoArray index="Research9" Upgrade="TerranShipArmorsLevel1">
+            <Button DefaultButtonFace="TerranShipPlatingLevel1" State="Restricted" Requirements="LearnTerranShipArmor1"/>
+        </InfoArray>
+        <InfoArray index="Research10" Upgrade="TerranShipArmorsLevel2">
+            <Button DefaultButtonFace="TerranShipPlatingLevel2" State="Restricted" Requirements="LearnTerranShipArmor2"/>
+        </InfoArray>
+        <InfoArray index="Research11" Upgrade="TerranShipArmorsLevel3">
+            <Button DefaultButtonFace="TerranShipPlatingLevel3" State="Restricted" Requirements="LearnTerranShipArmor3"/>
+        </InfoArray>
+    </CAbilResearch>
+    <CAbilMorphPlacement id="BarracksLand">
+        <InfoArray index="0" Unit="Barracks" CollideRange="0">
+            <SectionArray index="Mover">
+                <DurationArray index="Duration" value="1.25"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorphPlacement>
+    <CAbilMorph id="BarracksLiftOff">
+        <InfoArray index="0">
+            <SectionArray index="Mover">
+                <DurationArray index="Duration" value="1.5"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilMorph id="BurrowLurkerDown">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="BurrowDown">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
+        <ActorKey value="BurrowDown"/>
+        <Flags index="Interruptible" value="1"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="IgnorePlacement" value="0"/>
+        <Flags index="SuppressMovement" value="1"/>
+        <InfoArray Unit="LurkerBurrowed" RandomDelayMax="0.25">
+            <SectionArray index="Abils">
+                <DurationArray index="Delay" value="0.1"/>
+            </SectionArray>
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="2"/>
+            </SectionArray>
+            <SectionArray index="Collide">
+                <DurationArray index="Delay" value="1.8332"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="1.8332"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilMorph id="BurrowLurkerUp">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="BurrowUp">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <ActorKey value="BurrowUp"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="SuppressMovement" value="1"/>
+        <InfoArray Unit="Lurker" RandomDelayMax="0.5">
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="1"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilBehavior id="CloakingField">
+        <AbilSetId value="Clok"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="On" DefaultButtonFace="CloakOnWraith" Requirements="UseCloakingField">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="Off" DefaultButtonFace="CloakOff">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <Flags index="Toggle" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Vital index="Energy" value="25"/>
+            <Charge Link="Abil/BansheeCloak"/>
+            <Cooldown Link="Abil/BansheeCloak"/>
+        </Cost>
+        <BehaviorArray value="Cloak"/>
+    </CAbilBehavior>
+    <CAbilMorphPlacement id="CommandCenterLand">
+        <InfoArray index="0" Unit="CommandCenter" CollideRange="0">
+            <SectionArray index="Mover">
+                <DurationArray index="Duration" value="1.25"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorphPlacement>
+    <CAbilMorph id="CommandCenterLiftOff">
+        <InfoArray index="0">
+            <SectionArray index="Mover">
+                <DurationArray index="Duration" value="1.5"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilTrain id="CommandCenterTrain">
+        <Activity value="UI/Building"/>
+        <Alert value="TrainingCompletePing"/>
+        <InfoArray index="Train1" Time="17.2807"/>
+    </CAbilTrain>
+    <CAbilMorphPlacement id="FactoryLand">
+        <InfoArray index="0" Unit="Factory" CollideRange="0">
+            <SectionArray index="Mover">
+                <DurationArray index="Duration" value="1.25"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorphPlacement>
+    <CAbilMorph id="FactoryLiftOff">
+        <InfoArray index="0">
+            <SectionArray index="Mover">
+                <DurationArray index="Duration" value="1.5"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilEffectTarget id="Feedback">
+        <TargetFilters index="0" value="Visible,HasEnergy;Self,Ally,Neutral,Structure,Missile,Stasis,Dead,Hidden,Hallucination,Invulnerable"/>
+    </CAbilEffectTarget>
+    <CAbilArmMagazine id="HangarHardcore">
+        <AbilSetId value="CarrierHangerHC"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Flags index="Retarget" value="1"/>
+        <Leash value="12"/>
+        <InfoArray index="Ammo1" Time="17" Manage="Recall" Unit="Interceptor">
+            <Charge Link="CarrierInterceptorHC" Location="Unit"/>
+            <Cooldown Link="CarrierInterceptorHC"/>
+            <Button DefaultButtonFace="Interceptor" Requirements="ArmInterceptor">
+                <Flags index="ToSelection" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Ammo2">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo3">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo4">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo5">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo6">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo7">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo8">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo9">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo10">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo11">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo12">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo13">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo14">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo15">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo16">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo17">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo18">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo19">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo20">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <Alert value="TrainComplete"/>
+        <EffectArray index="Death" value="InterceptorFate"/>
+        <ReturnLifeFraction value="0.25"/>
+    </CAbilArmMagazine>
+    <CAbilEffectTarget id="DarkSwarmHardcore">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="DarkSwarmPersistent"/>
+        <Flags index="BestUnit" value="0"/>
+        <Cost>
+            <Vital index="Energy" value="100"/>
+            <Charge Link="Abil/DarkSwarm"/>
+            <Cooldown Link="Abil/DarkSwarm"/>
+        </Cost>
+        <Range value="9"/>
+        <Marker Link="Abil/DarkSwarm"/>
+        <AINotifyEffect value="DarkSwarm"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="DarkSwarm"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="DefensiveMatrixHardcore">
+        <Alignment value="Positive"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="DefensiveMatrixApplyBehavior"/>
+        <Effect value="DefensiveMatrixHealShield"/>
+        <Cost>
+            <Vital index="Energy" value="100"/>
+            <Charge Link="Abil/DefensiveMatrix2"/>
+            <Cooldown Link="Abil/DefensiveMatrix2"/>
+        </Cost>
+        <TargetFilters value="Visible;Self,Neutral,Enemy,Structure,RawResource,HarvestableResource,Missile,Item,Dead,Hidden,Invulnerable"/>
+        <Range value="10"/>
+        <Marker Link="Abil/DefensiveMatrix2"/>
+        <AINotifyEffect value="DefensiveMatrix2"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="DefensiveMatrix">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <Arc value="360"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="DisruptionWebHardcore">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="DisruptionWebPersistent"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="BestUnit" value="0"/>
+        <Cost>
+            <Vital index="Energy" value="125"/>
+            <Charge Link="Abil/DisruptionWeb"/>
+            <Cooldown Link="Abil/DisruptionWeb"/>
+        </Cost>
+        <Range value="9"/>
+        <PrepTime value="0"/>
+        <CastIntroTime value="0"/>
+        <CastOutroTime value="0"/>
+        <Marker Link="Abil/DisruptionWeb"/>
+        <AINotifyEffect value="DisruptionWeb"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="DisruptionWeb" State="Restricted" Requirements="DisruptionWebCompleted"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="EMPHardcore">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="EMPLaunchMissile"/>
+        <Cost>
+            <Vital index="Energy" value="100"/>
+            <Charge Link="Abil/EMP"/>
+            <Cooldown Link="Abil/EMP"/>
+        </Cost>
+        <Range value="8"/>
+        <Marker Link="Abil/EMP"/>
+        <AINotifyEffect value="EMPLaunchMissile"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="EMP" Requirements="EMPCompleted"/>
+        <Arc value="360"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="EnsnareHardcore">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Effect index="0" value="EnsnareSearch"/>
+        <Flags index="BestUnit" value="0"/>
+        <Cost>
+            <Vital index="Energy" value="75"/>
+            <Charge Link="Abil/Ensnare"/>
+            <Cooldown Link="Abil/Ensnare"/>
+        </Cost>
+        <Range value="9"/>
+        <Marker Link="Abil/Ensnare"/>
+        <AINotifyEffect value="EnsnareSearch"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Ensnare" State="Restricted" Requirements="UseEnsnare"/>
+    </CAbilEffectTarget>
+    <CAbilMorphPlacement id="InfestedCommandCenterLand" parent="TerranBuildingLand" unit="InfestedCommandCenter">
+        <Name value="Abil/Name/InfestedCommandCenterLand"/>
+        <Cost>
+            <Charge Link="Abil/CommandCenterLand"/>
+            <Cooldown Link="Abil/CommandCenterLand"/>
+        </Cost>
+        <InfoArray index="0" Unit="InfestedCommandCenter" CollideRange="0">
+            <SectionArray index="Mover">
+                <DurationArray index="Duration" value="1.25"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorphPlacement>
+    <CAbilMorph id="InfestedCommandCenterLiftOff" parent="TerranBuildingLiftOff" unit="InfestedCommandCenterFlying">
+        <Name value="Abil/Name/InfestedCommandCenterLiftOff"/>
+        <Cost>
+            <Charge Link="Abil/CommandCenterLiftOff"/>
+            <Cooldown Link="Abil/CommandCenterLiftOff"/>
+        </Cost>
+        <InfoArray index="0" Unit="InfestedCommandCenterFlying">
+            <SectionArray index="Mover">
+                <DurationArray index="Duration" value="1.5"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilEffectTarget id="Irradiate">
+        <Effect index="0" value="IrradiateApplyBehavior"/>
+        <Cost>
+            <Vital index="Energy" value="75"/>
+        </Cost>
+        <TargetFilters value="-;Self,Structure,RawResource,HarvestableResource,Item,Dead,Hidden,Invulnerable"/>
+        <Range value="9"/>
+        <Arc value="360"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Irradiate" Requirements="IrradiateCompleted"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="IrradiateHardcore">
+        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <Effect index="0" value="IrradiateApplyBehavior"/>
+        <Cost>
+            <Vital index="Energy" value="75"/>
+            <Charge Link="Abil/Irradiate"/>
+            <Cooldown Link="Abil/Irradiate"/>
+        </Cost>
+        <TargetFilters value="-;Self,Structure,RawResource,HarvestableResource,Item,Dead,Hidden,Invulnerable"/>
+        <Range value="9"/>
+        <Marker Link="Abil/Irradiate"/>
+        <CancelableArray index="Channel" value="1"/>
+        <UninterruptibleArray index="Channel" value="1"/>
+        <AINotifyEffect value=""/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Irradiate" Requirements="IrradiateCompleted"/>
+        <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
+        <Arc value="360"/>
+    </CAbilEffectTarget>
+    <CAbilTrain id="LarvaTrain2">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
+        <Activity value="UI/Morphing"/>
+        <Flags index="BestUnit" value="0"/>
+        <Flags index="DisableCollision" value="1"/>
+        <Flags index="KillOnCancel" value="1"/>
+        <Flags index="KillOnFinish" value="1"/>
+        <Flags index="Select" value="1"/>
+        <Flags index="WaitForFood" value="0"/>
+        <MorphUnit value="Egg"/>
+        <InfoArray index="Train1" Time="17" Alert="TrainWorkerComplete" Effect="DroneAlert">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+            <Button DefaultButtonFace="Drone"/>
+            <Unit value="Drone"/>
+        </InfoArray>
+        <InfoArray index="Train2" Time="24.108">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+            <Button DefaultButtonFace="Zergling" Requirements="HaveSpawningPool"/>
+            <Unit value="Zergling"/>
+            <Unit value="Zergling"/>
+        </InfoArray>
+        <InfoArray index="Train3" Time="34.44">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+            <Button DefaultButtonFace="Overlord"/>
+            <Unit value="Overlord"/>
+        </InfoArray>
+        <InfoArray index="Train4" Time="24.108">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+            <Button DefaultButtonFace="Hydralisk" Requirements="HaveHydraliskDen"/>
+            <Unit value="Hydralisk"/>
+        </InfoArray>
+        <InfoArray index="Train5" Time="34.44">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+            <Button DefaultButtonFace="Mutalisk" Requirements="HaveSpire"/>
+            <Unit value="Mutalisk"/>
+        </InfoArray>
+        <InfoArray index="Train6" Time="51.66">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+            <Button DefaultButtonFace="Ultralisk" Requirements="HaveUltraliskCavern"/>
+            <Unit value="Ultralisk"/>
+        </InfoArray>
+        <InfoArray index="Train7" Time="35">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+            <Button Requirements="HaveBanelingNest"/>
+        </InfoArray>
+        <InfoArray index="Train8" Time="43.05">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+            <Button DefaultButtonFace="Defiler" State="Restricted" Requirements="HaveDefilerMound"/>
+            <Unit value="Defiler"/>
+        </InfoArray>
+        <InfoArray index="Train9" Time="43.05">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+            <Button DefaultButtonFace="Queen" State="Restricted" Requirements="HaveInfestationPit"/>
+            <Unit value="QueenBW"/>
+        </InfoArray>
+        <InfoArray index="Train10" Time="27">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+            <Button Requirements="HaveBanelingNest2"/>
+        </InfoArray>
+        <InfoArray index="Train11" Time="50">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+            <Button Requirements="HaveInfestationPit"/>
+        </InfoArray>
+        <InfoArray index="Train12" Time="40">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+            <Button Requirements="HaveSpire"/>
+        </InfoArray>
+        <InfoArray index="Train13">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+        </InfoArray>
+        <InfoArray index="Train14" Time="25.83">
+            <Resource index="Minerals" value="25"/>
+            <Resource index="Vespene" value="75"/>
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+            <Button DefaultButtonFace="Scourge" State="Restricted" Requirements="HaveSpire"/>
+            <Unit value="Scourge"/>
+            <Unit value="Scourge"/>
+        </InfoArray>
+        <InfoArray index="Train15">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+        </InfoArray>
+        <InfoArray index="Train16">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+        </InfoArray>
+        <InfoArray index="Train17">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+        </InfoArray>
+        <InfoArray index="Train18">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+        </InfoArray>
+        <InfoArray index="Train19">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+        </InfoArray>
+        <InfoArray index="Train20">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+        </InfoArray>
+        <InfoArray index="Train21">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+        </InfoArray>
+        <InfoArray index="Train22">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+        </InfoArray>
+        <InfoArray index="Train23">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+        </InfoArray>
+        <InfoArray index="Train24">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+        </InfoArray>
+        <InfoArray index="Train25">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+        </InfoArray>
+        <InfoArray index="Train26">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+        </InfoArray>
+        <InfoArray index="Train27">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+        </InfoArray>
+        <InfoArray index="Train28">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+        </InfoArray>
+        <InfoArray index="Train29">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+        </InfoArray>
+        <InfoArray index="Train30">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+        </InfoArray>
+        <Alert value="TrainingCompletePing"/>
+    </CAbilTrain>
+    <CAbilEffectTarget id="LockdownHardcore">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="LockdownLM"/>
+        <Flags index="BestUnit" value="0"/>
+        <Cost>
+            <Vital index="Energy" value="100"/>
+            <Charge Link="Abil/Lockdown"/>
+            <Cooldown Link="Abil/Lockdown"/>
+        </Cost>
+        <TargetFilters value="Mechanical;Structure,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="8"/>
+        <Marker Link="Abil/Lockdown"/>
+        <AINotifyEffect value="Lockdown"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="UseLockdown" State="Restricted" Requirements="UseLockdown"/>
+        <CastIntroTime value="0.5"/>
+    </CAbilEffectTarget>
+    <CAbilMorph id="LurkerAspect">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Lurker" Requirements="UseLurkerAspect"/>
+        <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
+        <Flags index="Birth" value="1"/>
+        <Flags index="DisableAbils" value="1"/>
+        <Flags index="FastBuild" value="1"/>
+        <Flags index="Interruptible" value="1"/>
+        <Flags index="Produce" value="1"/>
+        <Flags index="ShowProgress" value="1"/>
+        <Flags index="SuppressMovement" value="1"/>
+        <InfoArray Unit="LurkerEgg" RandomDelayMax="0.5"/>
+        <InfoArray Score="1" Unit="Lurker">
+            <SectionArray index="Abils">
+                <DurationArray index="Delay" value="34"/>
+            </SectionArray>
+            <SectionArray index="Actor">
+                <DurationArray index="Delay" value="34"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="34"/>
+                <EffectArray index="Finish" value="PostMorphHeal"/>
+            </SectionArray>
+        </InfoArray>
+        <Alert value="MorphComplete_Zerg"/>
+        <AbilClassEnableArray index="CAbilMove" value="1"/>
+        <AbilClassEnableArray index="CAbilStop" value="1"/>
+    </CAbilMorph>
+    <CAbilMorph id="LurkerAspectFromHydraliskBurrowed">
+        <InfoArray index="2" Score="1" Unit="Lurker">
+            <SectionArray index="Abils">
+                <DurationArray index="Delay" value="34"/>
+            </SectionArray>
+            <SectionArray index="Actor">
+                <DurationArray index="Delay" value="34"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="34"/>
+            </SectionArray>
+        </InfoArray>
+        <Flags index="BestUnit" value="0"/>
+    </CAbilMorph>
+    <CAbilEffectTarget id="MaelstromHardcore">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="MaelstromSearch"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="BestUnit" value="0"/>
+        <Cost>
+            <Vital index="Energy" value="100"/>
+            <Charge Link="Abil/Maelstrom"/>
+            <Cooldown Link="Abil/Maelstrom"/>
+        </Cost>
+        <Range value="10"/>
+        <Marker Link="Abil/Maelstrom"/>
+        <AINotifyEffect value="Maelstrom"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Maelstrom" State="Restricted" Requirements="MaelstromResearched"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="MindControlHardcore">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="MindControlSet"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="BestUnit" value="0"/>
+        <Cost>
+            <Vital index="Energy" value="150"/>
+            <Charge Link="Abil/MindControl2"/>
+            <Cooldown Link="Abil/MindControl2"/>
+        </Cost>
+        <TargetFilters value="Visible;Player,Ally,Neutral,Structure,RawResource,HarvestableResource,Missile,Stasis,UnderConstruction,Dead,Invulnerable"/>
+        <Range value="8"/>
+        <Marker Link="Abil/MindControl2"/>
+        <AINotifyEffect value="MindControlApplyTarget"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="MindControl" State="Restricted" Requirements="MindControlResearched"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="OpticalFlareHardcore">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="OpticalFlareApplyBehavior"/>
+        <Flags index="BestUnit" value="0"/>
+        <Cost>
+            <Vital index="Energy" value="75"/>
+            <Charge Link="Abil/OpticalFlare"/>
+            <Cooldown Link="Abil/OpticalFlare"/>
+        </Cost>
+        <Range value="6"/>
+        <Marker Link="Abil/OpticalFlare"/>
+        <AINotifyEffect value="OpticalFlare"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="OpticalFlare" Requirements="UseOpticalFlare"/>
+        <TargetFilters value="Visible;Player,Ally,Structure,RawResource,HarvestableResource,Stasis,Dead,Hidden,Invulnerable"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="ParasiteHardcore">
+        <EditorCategories value="AbilityorEffectType:Units,Race:Zerg"/>
+        <Effect index="0" value="ParasiteLM"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="BestUnit" value="0"/>
+        <Cost>
+            <Vital index="Energy" value="75"/>
+            <Charge Link="Abil/Parasite"/>
+            <Cooldown Link="Abil/Parasite"/>
+        </Cost>
+        <TargetFilters value="-;Player,Ally,Structure,RawResource,HarvestableResource,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="12"/>
+        <CastIntroTime value="0.5"/>
+        <Marker Link="Abil/Parasite"/>
+        <AINotifyEffect value="ParasiteLM"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Parasite"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="PlagueHardcore">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="PlagueSearch"/>
+        <Flags index="BestUnit" value="0"/>
+        <Cost>
+            <Vital index="Energy" value="150"/>
+            <Charge Link="Abil/Plague"/>
+            <Cooldown Link="Abil/Plague"/>
+        </Cost>
+        <Range value="9"/>
+        <Marker Link="Abil/Plague"/>
+        <AINotifyEffect value="Plague"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Plague" Requirements="PlagueCompleted"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="PsiStorm">
+        <Cost index="0">
+            <Vital index="Energy" value="75"/>
+            <Cooldown TimeUse="0"/>
+        </Cost>
+        <Flags index="AllowMovement" value="0"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="PsiStormHardcore">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Effect index="0" value="PsiStormPersistent"/>
+        <Flags index="BestUnit" value="0"/>
+        <Cost>
+            <Vital index="Energy" value="75"/>
+            <Charge Link="Abil/PsiStorm"/>
+            <Cooldown Link="Abil/PsiStorm"/>
+        </Cost>
+        <Range value="9"/>
+        <CastOutroTime value="0.5"/>
+        <Marker Link="Abil/PsiStorm"/>
+        <AINotifyEffect value="PsiStorm"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="PsiStorm" Requirements="UsePsiStorm"/>
+    </CAbilEffectTarget>
+    <CAbilRally id="HatcheryRallyHC">
+        <OrderArray index="0">
+            <Color value="255,245,140,70"/>
+            <Model value="Assets\UI\Feedback\WayPointRally\WayPointRally.m3"/>
+            <Scale value="0"/>
+            <LineTexture value="Assets\Textures\WayPointLine.dds"/>
+        </OrderArray>
+        <OrderArray index="1">
+            <Color value="255,200,200,200"/>
+            <Model value="Assets\UI\Feedback\WayPointRally\WayPointRally.m3"/>
+            <Scale value="0.75"/>
+            <LineTexture value="Assets\Textures\WayPointLine.dds"/>
+        </OrderArray>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Structures"/>
+        <CmdButtonArray index="Rally1" DefaultButtonFace="RallyExtra"/>
+        <CmdButtonArray index="Rally2" DefaultButtonFace="Rally2"/>
+        <InfoArray index="0" SetOnGround="0" UseFilters="Worker;-">
+            <UseValidators value="NotQueen"/>
+        </InfoArray>
+        <InfoArray SetFilters="-;RawResource,HarvestableResource" UseFilters="-;Worker">
+            <UseValidators value="NotQueen"/>
+        </InfoArray>
+        <InfoArray SetOnGround="0">
+            <SetValidators value="Failure"/>
+        </InfoArray>
+    </CAbilRally>
+    <CAbilRally id="EggRally">
+        <EditorCategories value="Race:Neutral,AbilityorEffectType:Structures"/>
+    </CAbilRally>
+    <CAbilEffectTarget id="Repair">
+        <InheritAttackPriorityArray index="Prep" value="0"/>
+        <InheritAttackPriorityArray index="Cast" value="0"/>
+        <InheritAttackPriorityArray index="Channel" value="0"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="RepairHardcore">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="Repair"/>
+        <Flags index="BestUnit" value="0"/>
+        <Flags index="ReExecutable" value="1"/>
+        <Flags index="Smart" value="1"/>
+        <Flags index="PassengerAcquirePassengers" value="1"/>
+        <TargetFilters value="Mechanical,Visible;Self,Enemy,Missile,UnderConstruction,Dead,Hidden"/>
+        <AutoCastAcquireLevel value="Defensive"/>
+        <AutoCastFilters value="Visible;Neutral,Enemy"/>
+        <AutoCastRange value="7"/>
+        <Marker Link="Abil/Repair">
+            <MatchFlags index="Link" value="0"/>
+            <MismatchFlags index="Id" value="0"/>
+        </Marker>
+        <UseMarkerArray index="Approach" value="0"/>
+        <UseMarkerArray index="Prep" value="0"/>
+        <UseMarkerArray index="Cast" value="0"/>
+        <UseMarkerArray index="Channel" value="0"/>
+        <AINotifyEffect value="Repair"/>
+        <DefaultError value="RequiresRepairTarget"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Repair"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="RestorationHardcore">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="RestorationSet"/>
+        <Flags index="BestUnit" value="0"/>
+        <Cost>
+            <Vital index="Energy" value="50"/>
+            <Charge Link="Abil/Restoration"/>
+            <Cooldown Link="Abil/Restoration"/>
+        </Cost>
+        <TargetFilters value="Visible;Neutral,Enemy,Structure,RawResource,HarvestableResource,Missile,Item,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="6"/>
+        <AutoCastAcquireLevel value="Defensive"/>
+        <Marker Link="Abil/Restoration"/>
+        <AINotifyEffect value="Restoration"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="UseRestoration" State="Restricted" Requirements="UseRestoration"/>
+    </CAbilEffectTarget>
+    <CAbilMorph id="ScarabDumb">
+        <AbilSetId value="ScarabSmart"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="AssaultMode">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <ActorKey value=""/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="IgnorePlacement" value="0"/>
+        <InfoArray Unit="WeaponReaverScarabDumb" CollideRange="3.75" RandomDelayMax="0.5"/>
+    </CAbilMorph>
+    <CAbilArmMagazine id="ScarabHanger">
+        <AbilSetId value="ReaverHanger"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Leash value="0"/>
+        <InfoArray index="Ammo1" Time="7" Manage="Ignore" Unit="WeaponReaverScarabDumb">
+            <Charge CountMax="5" Link="ReaverScarab" Location="Unit"/>
+            <Cooldown Link="ReaverHanger"/>
+            <Button DefaultButtonFace="ConstructScarab" Requirements="Lessthan5Scarabs">
+                <Flags index="ToSelection" value="1"/>
+            </Button>
+            <Flags index="AutoBuild" value="1"/>
+        </InfoArray>
+        <InfoArray index="Ammo2">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo3">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo4">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo5">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo6">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo7">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo8">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo9">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo10">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo11">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo12">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo13">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo14">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo15">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo16">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo17">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo18">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo19">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo20">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <Alert value=""/>
+        <EffectArray index="Launch" value="ReaverScarabsApply"/>
+    </CAbilArmMagazine>
+    <CAbilArmMagazine id="ScarabHangerHardcore">
+        <AbilSetId value="ReaverHangerHC"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Leash value="0"/>
+        <InfoArray index="Ammo1" Time="7" Manage="Ignore" Unit="WeaponReaverScarabDumb">
+            <Charge CountMax="5" Link="ReaverScarab" Location="Unit"/>
+            <Cooldown Link="ReaverHanger"/>
+            <Button DefaultButtonFace="ConstructScarab" Requirements="Lessthan5Scarabs">
+                <Flags index="ToSelection" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Ammo2">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo3">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo4">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo5">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo6">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo7">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo8">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo9">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo10">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo11">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo12">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo13">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo14">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo15">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo16">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo17">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo18">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo19">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <InfoArray index="Ammo20">
+            <Charge Link="Abil/CarrierHangar"/>
+            <Cooldown Link="Abil/CarrierHangar"/>
+        </InfoArray>
+        <Alert value=""/>
+        <EffectArray index="Death" value="InterceptorFate"/>
+        <EffectArray index="Launch" value="ReaverScarabsApply"/>
+    </CAbilArmMagazine>
+    <CAbilMorph id="ScarabSmart">
+        <AbilSetId value="ScarabSmart"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="AssaultMode">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <ActorKey value=""/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="IgnorePlacement" value="0"/>
+        <InfoArray Unit="WeaponReaverScarabSmart" CollideRange="0"/>
+    </CAbilMorph>
+    <CAbilMorph id="SiegeMode">
+        <Flags index="IgnoreCollision" value="1"/>
+    </CAbilMorph>
+    <CAbilMorph id="SiegeModeSC2BW" parent="SiegeMode">
+        <Name value="Abil/Name/SiegeModeSC2BW"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SiegeModeSC2BW" Requirements="UseSiegeModeSC2BW"/>
+    </CAbilMorph>
+    <CAbilEffectTarget id="SpawnBroodlingHardcore">
+        <EditorCategories value="AbilityorEffectType:Units,Race:Zerg"/>
+        <Effect index="0" value="SpawnBroodlingLM"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="BestUnit" value="0"/>
+        <Cost>
+            <Vital index="Energy" value="150"/>
+            <Charge Link="Abil/SpawnBroodling"/>
+            <Cooldown Link="Abil/SpawnBroodling"/>
+        </Cost>
+        <TargetFilters value="-;Air,Robotic,Psionic,Structure,RawResource,HarvestableResource,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="9"/>
+        <CastIntroTime value="0.5"/>
+        <Marker Link="Abil/SpawnBroodling"/>
+        <AINotifyEffect value="SpawnBroodling"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SpawnBroodling" State="Restricted" Requirements="SpawnBroodlingUpgraded"/>
+    </CAbilEffectTarget>
+    <CAbilMorphPlacement id="StarportLand">
+        <InfoArray index="0" Unit="Starport" CollideRange="0">
+            <SectionArray index="Mover">
+                <DurationArray index="Duration" value="1.25"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorphPlacement>
+    <CAbilMorph id="StarportLiftOff">
+        <InfoArray index="0">
+            <SectionArray index="Mover">
+                <DurationArray index="Duration" value="1.5"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilEffectTarget id="StasisFieldHardcore">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="StasisFieldSearch"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="BestUnit" value="0"/>
+        <Cost>
+            <Vital index="Energy" value="100"/>
+            <Charge Link="Abil/StasisField"/>
+            <Cooldown Link="Abil/StasisField"/>
+        </Cost>
+        <Range value="9"/>
+        <Marker Link="Abil/StasisField"/>
+        <AINotifyEffect value="StasisField"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="UseStasisField" Requirements="StasisCompleted"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="NuclearStrikeHardcore">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="Nuke"/>
+        <Flags index="BestUnit" value="0"/>
+        <Range value="8"/>
+        <FinishTime value="2.5"/>
+        <Marker Link="Abil/TacNukeStrike"/>
+        <CancelableArray index="Channel" value="1"/>
+        <UninterruptibleArray index="Channel" value="1"/>
+        <ValidatedArray index="Channel" value="0"/>
+        <AlertArray index="Cast" value="CalldownLaunch"/>
+        <CalldownEffect value="Nuke"/>
+        <AINotifyEffect value="Nuke"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="NukeCalldown" Requirements="HaveNuke"/>
+        <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
+    </CAbilEffectTarget>
+    <CAbilTrain id="TrainInfestedCommandCenter">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <InfoArray index="Train1" Time="34.44">
+            <Charge Link="Abil/InfestedCommandTrain"/>
+            <Cooldown Link="Abil/InfestedCommandTrain"/>
+            <Button DefaultButtonFace="InfestedTerrans" State="Restricted"/>
+            <Unit value="InfestedTerran"/>
+        </InfoArray>
+        <InfoArray index="Train2">
+            <Charge Link="Abil/CommandCenterTrain"/>
+            <Cooldown Link="Abil/CommandCenterTrain"/>
+        </InfoArray>
+        <InfoArray index="Train3">
+            <Charge Link="Abil/CommandCenterTrain"/>
+            <Cooldown Link="Abil/CommandCenterTrain"/>
+        </InfoArray>
+        <InfoArray index="Train4">
+            <Charge Link="Abil/CommandCenterTrain"/>
+            <Cooldown Link="Abil/CommandCenterTrain"/>
+        </InfoArray>
+        <InfoArray index="Train5">
+            <Charge Link="Abil/CommandCenterTrain"/>
+            <Cooldown Link="Abil/CommandCenterTrain"/>
+        </InfoArray>
+        <InfoArray index="Train6">
+            <Charge Link="Abil/CommandCenterTrain"/>
+            <Cooldown Link="Abil/CommandCenterTrain"/>
+        </InfoArray>
+        <InfoArray index="Train7">
+            <Charge Link="Abil/CommandCenterTrain"/>
+            <Cooldown Link="Abil/CommandCenterTrain"/>
+        </InfoArray>
+        <InfoArray index="Train8">
+            <Charge Link="Abil/CommandCenterTrain"/>
+            <Cooldown Link="Abil/CommandCenterTrain"/>
+        </InfoArray>
+        <InfoArray index="Train9">
+            <Charge Link="Abil/CommandCenterTrain"/>
+            <Cooldown Link="Abil/CommandCenterTrain"/>
+        </InfoArray>
+        <InfoArray index="Train10">
+            <Charge Link="Abil/CommandCenterTrain"/>
+            <Cooldown Link="Abil/CommandCenterTrain"/>
+        </InfoArray>
+        <InfoArray index="Train11">
+            <Charge Link="Abil/CommandCenterTrain"/>
+            <Cooldown Link="Abil/CommandCenterTrain"/>
+        </InfoArray>
+        <InfoArray index="Train12">
+            <Charge Link="Abil/CommandCenterTrain"/>
+            <Cooldown Link="Abil/CommandCenterTrain"/>
+        </InfoArray>
+        <InfoArray index="Train13">
+            <Charge Link="Abil/CommandCenterTrain"/>
+            <Cooldown Link="Abil/CommandCenterTrain"/>
+        </InfoArray>
+        <InfoArray index="Train14">
+            <Charge Link="Abil/CommandCenterTrain"/>
+            <Cooldown Link="Abil/CommandCenterTrain"/>
+        </InfoArray>
+        <InfoArray index="Train15">
+            <Charge Link="Abil/CommandCenterTrain"/>
+            <Cooldown Link="Abil/CommandCenterTrain"/>
+        </InfoArray>
+        <InfoArray index="Train16">
+            <Charge Link="Abil/CommandCenterTrain"/>
+            <Cooldown Link="Abil/CommandCenterTrain"/>
+        </InfoArray>
+        <InfoArray index="Train17">
+            <Charge Link="Abil/CommandCenterTrain"/>
+            <Cooldown Link="Abil/CommandCenterTrain"/>
+        </InfoArray>
+        <InfoArray index="Train18">
+            <Charge Link="Abil/CommandCenterTrain"/>
+            <Cooldown Link="Abil/CommandCenterTrain"/>
+        </InfoArray>
+        <InfoArray index="Train19">
+            <Charge Link="Abil/CommandCenterTrain"/>
+            <Cooldown Link="Abil/CommandCenterTrain"/>
+        </InfoArray>
+        <InfoArray index="Train20">
+            <Charge Link="Abil/CommandCenterTrain"/>
+            <Cooldown Link="Abil/CommandCenterTrain"/>
+        </InfoArray>
+        <InfoArray index="Train21">
+            <Charge Link="Abil/CommandCenterTrain"/>
+            <Cooldown Link="Abil/CommandCenterTrain"/>
+        </InfoArray>
+        <InfoArray index="Train22">
+            <Charge Link="Abil/CommandCenterTrain"/>
+            <Cooldown Link="Abil/CommandCenterTrain"/>
+        </InfoArray>
+        <InfoArray index="Train23">
+            <Charge Link="Abil/CommandCenterTrain"/>
+            <Cooldown Link="Abil/CommandCenterTrain"/>
+        </InfoArray>
+        <InfoArray index="Train24">
+            <Charge Link="Abil/CommandCenterTrain"/>
+            <Cooldown Link="Abil/CommandCenterTrain"/>
+        </InfoArray>
+        <InfoArray index="Train25">
+            <Charge Link="Abil/CommandCenterTrain"/>
+            <Cooldown Link="Abil/CommandCenterTrain"/>
+        </InfoArray>
+        <InfoArray index="Train26">
+            <Charge Link="Abil/CommandCenterTrain"/>
+            <Cooldown Link="Abil/CommandCenterTrain"/>
+        </InfoArray>
+        <InfoArray index="Train27">
+            <Charge Link="Abil/CommandCenterTrain"/>
+            <Cooldown Link="Abil/CommandCenterTrain"/>
+        </InfoArray>
+        <InfoArray index="Train28">
+            <Charge Link="Abil/CommandCenterTrain"/>
+            <Cooldown Link="Abil/CommandCenterTrain"/>
+        </InfoArray>
+        <InfoArray index="Train29">
+            <Charge Link="Abil/CommandCenterTrain"/>
+            <Cooldown Link="Abil/CommandCenterTrain"/>
+        </InfoArray>
+        <InfoArray index="Train30">
+            <Charge Link="Abil/CommandCenterTrain"/>
+            <Cooldown Link="Abil/CommandCenterTrain"/>
+        </InfoArray>
+        <Alert value="TrainingCompletePing"/>
+        <Activity value="UI/Mutating"/>
+    </CAbilTrain>
+    <CAbilEffectTarget id="DefensiveMatrix2">
+        <Alignment value="Positive"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="DefensiveMatrixApplyBehavior"/>
+        <Effect value="DefensiveMatrixHealShield"/>
+        <Cost>
+            <Vital index="Energy" value="100"/>
+        </Cost>
+        <TargetFilters value="Visible;Self,Neutral,Enemy,Structure,RawResource,HarvestableResource,Missile,Item,Dead,Hidden,Invulnerable"/>
+        <Range value="10"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="DefensiveMatrix">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <Arc value="360"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="Ensnare">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Effect index="0" value="EnsnareSearch"/>
+        <Cost>
+            <Vital index="Energy" value="75"/>
+        </Cost>
+        <Range value="9"/>
+        <CursorEffect value="EnsnareSearch"/>
+        <AINotifyEffect value="EnsnareSearch"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Ensnare" State="Restricted" Requirements="UseEnsnare"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="HallucinationCustom">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Cost>
+            <Vital index="Energy" value="100"/>
+        </Cost>
+        <TargetFilters value="Visible;Self,Structure,RawResource,HarvestableResource,Dead,Hallucination"/>
+        <Range value="7"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="HallucinationHighTemplar" Requirements="UseHallucination2"/>
+        <Effect index="0" value="HallucinationDummy"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="Infest">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="InfestApply"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Infest"/>
+        <CastIntroTime value="5"/>
+        <ShowProgressArray index="Cast" value="1"/>
+        <ShowProgressArray index="Channel" value="1"/>
+    </CAbilEffectTarget>
+    <CAbilResearch id="InfestationPitResearch">
+        <InfoArray index="Research1" Time="68.88" Upgrade="SpawnBroodling">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="EvolveSpawnBroodling" Requirements="EvolveSpawnBroodling"/>
+        </InfoArray>
+        <InfoArray index="Research2" Time="68.88" Upgrade="QueenEnsnare">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="EvolveEnsnare" Requirements="EvolveEnsnare"/>
+        </InfoArray>
+        <InfoArray index="Research3" Time="143.5"/>
+        <Activity value="UI/Evolving"/>
+    </CAbilResearch>
+    <CAbilEffectTarget id="OpticalFlare">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="OpticalFlareApplyBehavior"/>
+        <Cost>
+            <Vital index="Energy" value="75"/>
+        </Cost>
+        <Range value="6"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="OpticalFlare" Requirements="UseOpticalFlare"/>
+        <TargetFilters value="Visible;Player,Ally,Structure,RawResource,HarvestableResource,Stasis,Dead,Hidden,Invulnerable"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="Parasite">
+        <EditorCategories value="AbilityorEffectType:Units,Race:Zerg"/>
+        <Effect index="0" value="ParasiteLM"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Cost>
+            <Vital index="Energy" value="75"/>
+        </Cost>
+        <TargetFilters value="-;Player,Ally,Structure,RawResource,HarvestableResource,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="12"/>
+        <CastIntroTime value="0.5"/>
+        <AINotifyEffect value="ParasiteLM"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Parasite"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="RechargeShields">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="NoDeceleration" value="1"/>
+        <Flags index="ReExecutable" value="1"/>
+        <Flags index="Smart" value="1"/>
+        <TargetFilters value="Visible;Self,Enemy,Structure,Missile,UnderConstruction,Dead,Hidden,Invulnerable"/>
+        <TargetSorts RequestCount="1">
+            <SortArray value="TSAlliancePassive"/>
+            <SortArray value="TSDistance"/>
+            <SortArray value="TSShieldsFraction"/>
+        </TargetSorts>
+        <Range value="5"/>
+        <Arc value="360"/>
+        <AutoCastFilters value="Visible;Neutral,Enemy"/>
+        <AutoCastRange value="6"/>
+        <AutoCastValidatorArray value="NotWarpingIn"/>
+        <Marker Link="Abil/MedivacHeal"/>
+        <UseMarkerArray index="Approach" value="0"/>
+        <UseMarkerArray index="Prep" value="0"/>
+        <ValidatedArray index="Approach" value="0"/>
+        <ValidatedArray index="Prep" value="0"/>
+        <DefaultError value="RequiresHealTarget"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="RechargeShield"/>
+        <AcquireAttackers value="1"/>
+        <FollowRange value="3"/>
+        <Effect index="0" value="RechargeShieldSet"/>
+        <SmartValidatorArray value="TargetIsNotEnemy"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="Restoration">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="RestorationSet"/>
+        <Cost>
+            <Vital index="Energy" value="50"/>
+        </Cost>
+        <Range value="6"/>
+        <TargetFilters value="Visible;Neutral,Enemy,Structure,RawResource,HarvestableResource,Missile,Item,Stasis,Dead,Hidden,Invulnerable"/>
+        <AutoCastAcquireLevel value="Defensive"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="UseRestoration" State="Restricted" Requirements="UseRestoration"/>
+    </CAbilEffectTarget>
+    <CAbilResearch id="ScienceFacilityPhysicsLabResearch">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <InfoArray index="Research1" Time="103.32" Upgrade="BattlecruiserEnableSpecializations">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="ResearchBattlecruiserSpecializations" Requirements="LearnWeaponRefit"/>
+        </InfoArray>
+        <InfoArray index="Research2" Time="143.5" Upgrade="BattlecruiserBehemothReactor">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Charge Link="Abil/Lockdown"/>
+            <Cooldown Link="Abil/Lockdown"/>
+            <Button DefaultButtonFace="ResearchBattlecruiserEnergyUpgrade" State="Restricted" Requirements="LearnColossusReactor2"/>
+        </InfoArray>
+        <InfoArray index="Research3">
+            <Charge Link="Abil/FactoryTechLabResearch2"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch2"/>
+        </InfoArray>
+        <InfoArray index="Research4">
+            <Charge Link="Abil/FactoryTechLabResearch"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch"/>
+        </InfoArray>
+        <InfoArray index="Research5">
+            <Charge Link="Abil/FactoryTechLabResearch"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch"/>
+        </InfoArray>
+        <InfoArray index="Research6">
+            <Charge Link="Abil/FactoryTechLabResearch2"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch2"/>
+        </InfoArray>
+        <InfoArray index="Research7">
+            <Charge Link="Abil/FactoryTechLabResearch2"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch2"/>
+        </InfoArray>
+        <InfoArray index="Research8">
+            <Charge Link="Abil/FactoryTechLabResearch"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch"/>
+        </InfoArray>
+        <InfoArray index="Research9">
+            <Charge Link="Abil/FactoryTechLabResearch"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch"/>
+        </InfoArray>
+        <InfoArray index="Research10">
+            <Charge Link="Abil/FactoryTechLabResearch"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch"/>
+        </InfoArray>
+        <InfoArray index="Research11">
+            <Charge Link="Abil/FactoryTechLabResearch"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch"/>
+        </InfoArray>
+        <InfoArray index="Research12">
+            <Charge Link="Abil/FactoryTechLabResearch"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch"/>
+        </InfoArray>
+        <InfoArray index="Research13">
+            <Charge Link="Abil/FactoryTechLabResearch"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch"/>
+        </InfoArray>
+        <InfoArray index="Research14">
+            <Charge Link="Abil/FactoryTechLabResearch"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch"/>
+        </InfoArray>
+        <InfoArray index="Research15">
+            <Charge Link="Abil/FactoryTechLabResearch"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch"/>
+        </InfoArray>
+        <InfoArray index="Research16">
+            <Charge Link="Abil/FactoryTechLabResearch"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch"/>
+        </InfoArray>
+        <InfoArray index="Research17">
+            <Charge Link="Abil/FactoryTechLabResearch"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch"/>
+        </InfoArray>
+        <InfoArray index="Research18">
+            <Charge Link="Abil/FactoryTechLabResearch"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch"/>
+        </InfoArray>
+        <InfoArray index="Research19">
+            <Charge Link="Abil/FactoryTechLabResearch"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch"/>
+        </InfoArray>
+        <InfoArray index="Research20">
+            <Charge Link="Abil/FactoryTechLabResearch"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch"/>
+        </InfoArray>
+        <InfoArray index="Research21">
+            <Charge Link="Abil/FactoryTechLabResearch"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch"/>
+        </InfoArray>
+        <InfoArray index="Research22">
+            <Charge Link="Abil/FactoryTechLabResearch"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch"/>
+        </InfoArray>
+        <InfoArray index="Research23">
+            <Charge Link="Abil/FactoryTechLabResearch"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch"/>
+        </InfoArray>
+        <InfoArray index="Research24">
+            <Charge Link="Abil/FactoryTechLabResearch"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch"/>
+        </InfoArray>
+        <InfoArray index="Research25">
+            <Charge Link="Abil/FactoryTechLabResearch"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch"/>
+        </InfoArray>
+        <InfoArray index="Research26">
+            <Charge Link="Abil/FactoryTechLabResearch"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch"/>
+        </InfoArray>
+        <InfoArray index="Research27">
+            <Charge Link="Abil/FactoryTechLabResearch"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch"/>
+        </InfoArray>
+        <InfoArray index="Research28">
+            <Charge Link="Abil/FactoryTechLabResearch"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch"/>
+        </InfoArray>
+        <InfoArray index="Research29">
+            <Charge Link="Abil/FactoryTechLabResearch"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch"/>
+        </InfoArray>
+        <InfoArray index="Research30">
+            <Charge Link="Abil/FactoryTechLabResearch"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch"/>
+        </InfoArray>
+        <Activity value="UI/Upgrading"/>
+    </CAbilResearch>
+    <CAbilMorph id="NuclearSiloMorphDetached">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="TechLab" Requirements="ShowIfHaveNoCC"/>
+        <ActorKey value="ComsatMorph"/>
+        <Flags index="Automatic" value="1"/>
+        <Cost>
+            <Charge Link="Abil/TechLabMorph"/>
+            <Cooldown Link="Abil/TechLabMorph"/>
+        </Cost>
+        <InfoArray Unit="NuclearSilo">
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="0.125"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilMorph id="ComsatStationMorph">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="TechLabBarracks" Requirements="ShowIfHaveCCAddOnParent"/>
+        <ActorKey value="ComsatMorph"/>
+        <Flags index="Automatic" value="1"/>
+        <Flags index="Produce" value="1"/>
+        <Cost>
+            <Charge Link="Abil/BarracksTechLabMorph"/>
+            <Cooldown Link="Abil/BarracksTechLabMorph"/>
+        </Cost>
+        <InfoArray Unit="ComsatStation2"/>
+    </CAbilMorph>
+    <CAbilBuild id="CCAddOns" parent="TerranAddOns">
+        <Name value="Abil/Name/CCAddOns"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <BuildMorphAbil value="CommandCenterLiftOff"/>
+        <InfoArray index="Build1" Unit="ComsatStation2" Time="34.44">
+            <Charge Link="Abil/BarracksAddOns"/>
+            <Cooldown Link="Abil/BarracksAddOns"/>
+            <Button DefaultButtonFace="OrbitalCommand" State="Restricted" Requirements="HaveAcademy"/>
+        </InfoArray>
+        <InfoArray index="Build2" Unit="NuclearSilo2" Time="68.88">
+            <Charge Link="Abil/BarracksAddOns"/>
+            <Cooldown Link="Abil/BarracksAddOns"/>
+            <Button DefaultButtonFace="BuildNuclearSilo" Requirements="HaveScienceFacilitywithAttachedCovertOps"/>
+        </InfoArray>
+        <InfoArray index="Build4">
+            <Charge Link="Abil/BarracksAddOns"/>
+            <Cooldown Link="Abil/BarracksAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build5">
+            <Charge Link="Abil/BarracksAddOns"/>
+            <Cooldown Link="Abil/BarracksAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build6">
+            <Charge Link="Abil/BarracksAddOns"/>
+            <Cooldown Link="Abil/BarracksAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build7">
+            <Charge Link="Abil/BarracksAddOns"/>
+            <Cooldown Link="Abil/BarracksAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build8">
+            <Charge Link="Abil/BarracksAddOns"/>
+            <Cooldown Link="Abil/BarracksAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build9">
+            <Charge Link="Abil/BarracksAddOns"/>
+            <Cooldown Link="Abil/BarracksAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build10">
+            <Charge Link="Abil/BarracksAddOns"/>
+            <Cooldown Link="Abil/BarracksAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build11">
+            <Charge Link="Abil/BarracksAddOns"/>
+            <Cooldown Link="Abil/BarracksAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build12">
+            <Charge Link="Abil/BarracksAddOns"/>
+            <Cooldown Link="Abil/BarracksAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build13">
+            <Charge Link="Abil/BarracksAddOns"/>
+            <Cooldown Link="Abil/BarracksAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build14">
+            <Charge Link="Abil/BarracksAddOns"/>
+            <Cooldown Link="Abil/BarracksAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build15">
+            <Charge Link="Abil/BarracksAddOns"/>
+            <Cooldown Link="Abil/BarracksAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build16">
+            <Charge Link="Abil/BarracksAddOns"/>
+            <Cooldown Link="Abil/BarracksAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build17">
+            <Charge Link="Abil/BarracksAddOns"/>
+            <Cooldown Link="Abil/BarracksAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build18">
+            <Charge Link="Abil/BarracksAddOns"/>
+            <Cooldown Link="Abil/BarracksAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build19">
+            <Charge Link="Abil/BarracksAddOns"/>
+            <Cooldown Link="Abil/BarracksAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build20">
+            <Charge Link="Abil/BarracksAddOns"/>
+            <Cooldown Link="Abil/BarracksAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build21">
+            <Charge Link="Abil/BarracksAddOns"/>
+            <Cooldown Link="Abil/BarracksAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build22">
+            <Charge Link="Abil/BarracksAddOns"/>
+            <Cooldown Link="Abil/BarracksAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build23">
+            <Charge Link="Abil/BarracksAddOns"/>
+            <Cooldown Link="Abil/BarracksAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build24">
+            <Charge Link="Abil/BarracksAddOns"/>
+            <Cooldown Link="Abil/BarracksAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build25">
+            <Charge Link="Abil/BarracksAddOns"/>
+            <Cooldown Link="Abil/BarracksAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build26">
+            <Charge Link="Abil/BarracksAddOns"/>
+            <Cooldown Link="Abil/BarracksAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build27">
+            <Charge Link="Abil/BarracksAddOns"/>
+            <Cooldown Link="Abil/BarracksAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build28">
+            <Charge Link="Abil/BarracksAddOns"/>
+            <Cooldown Link="Abil/BarracksAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build29">
+            <Charge Link="Abil/BarracksAddOns"/>
+            <Cooldown Link="Abil/BarracksAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build30">
+            <Charge Link="Abil/BarracksAddOns"/>
+            <Cooldown Link="Abil/BarracksAddOns"/>
+        </InfoArray>
+    </CAbilBuild>
+    <CAbilArmMagazine id="CarrierHangar">
+        <InfoArray index="Ammo1" Time="17" CountStart="0"/>
+        <ReturnLifeFraction value="0.25"/>
+        <EffectArray index="Launch" value="CarrierCeptorLaunched"/>
+    </CAbilArmMagazine>
+    <CAbilMorph id="NuclearSiloMorph">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="TechLabBarracks" Requirements="ShowIfHaveCCAddOnParent"/>
+        <ActorKey value="ComsatMorph"/>
+        <Flags index="Automatic" value="1"/>
+        <Flags index="Produce" value="1"/>
+        <Cost>
+            <Charge Link="Abil/BarracksTechLabMorph"/>
+            <Cooldown Link="Abil/BarracksTechLabMorph"/>
+        </Cost>
+        <InfoArray Unit="NuclearSilo2"/>
+    </CAbilMorph>
+    <CAbilMerge id="DarkArchonWarp">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="SelectedUnits" DefaultButtonFace="DarkArchonWarpSelection" State="Restricted">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="WithTarget" DefaultButtonFace="DarkArchonWarpTarget" State="Restricted"/>
+        <Info Unit="Archon2" Time="20">
+            <Resource index="Minerals" value="-250"/>
+            <Resource index="Vespene" value="-200"/>
+            <Charge Link="Abil/ArchonWarp"/>
+            <Cooldown Link="Abil/ArchonWarp"/>
+        </Info>
+        <Flags index="BestUnit" value="0"/>
+    </CAbilMerge>
+    <CAbilBuild id="BuildNydusCanal">
+        <InfoArray index="Build1" Time="34.44">
+            <Charge CountMax="1" CountStart="1" CountUse="1"/>
+        </InfoArray>
+        <FlagArray index="Cancelable" value="1"/>
+        <EffectArray index="Start" value=""/>
+        <EffectArray index="Finish" value="NydusExitFinishedSet"/>
+    </CAbilBuild>
+    <CAbilResearch id="EngineeringBayResearch">
+        <InfoArray index="Research3" Time="229.6"/>
+        <InfoArray index="Research4" Time="257.152"/>
+        <InfoArray index="Research5" Time="284.704"/>
+        <InfoArray index="Research7" Time="229.6"/>
+        <InfoArray index="Research8" Time="257.152"/>
+        <InfoArray index="Research9" Time="284.704"/>
+        <Activity value="UI/Upgrading"/>
+    </CAbilResearch>
+    <CAbilBuild id="FactoryAddOns2" parent="TerranAddOns">
+        <Name value="Abil/Name/FactoryAddOns2"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <BuildMorphAbil value="ScienceLiftOff"/>
+        <InfoArray index="Build1" Unit="CovertOps2" Time="34.44">
+            <Charge Link="Abil/FactoryAddOns"/>
+            <Cooldown Link="Abil/FactoryAddOns"/>
+            <Button DefaultButtonFace="BuildCovertOps" State="Available"/>
+        </InfoArray>
+        <InfoArray index="Build2" Unit="PhysicsLab2" Time="34.44">
+            <Button DefaultButtonFace="BuildPhysicsLab" State="Available"/>
+        </InfoArray>
+        <InfoArray index="Build4">
+            <Charge Link="Abil/FactoryAddOns"/>
+            <Cooldown Link="Abil/FactoryAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build5">
+            <Charge Link="Abil/FactoryAddOns"/>
+            <Cooldown Link="Abil/FactoryAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build6">
+            <Charge Link="Abil/FactoryAddOns"/>
+            <Cooldown Link="Abil/FactoryAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build7">
+            <Charge Link="Abil/FactoryAddOns"/>
+            <Cooldown Link="Abil/FactoryAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build8">
+            <Charge Link="Abil/FactoryAddOns"/>
+            <Cooldown Link="Abil/FactoryAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build9">
+            <Charge Link="Abil/FactoryAddOns"/>
+            <Cooldown Link="Abil/FactoryAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build10">
+            <Charge Link="Abil/FactoryAddOns"/>
+            <Cooldown Link="Abil/FactoryAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build11">
+            <Charge Link="Abil/FactoryAddOns"/>
+            <Cooldown Link="Abil/FactoryAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build12">
+            <Charge Link="Abil/FactoryAddOns"/>
+            <Cooldown Link="Abil/FactoryAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build13">
+            <Charge Link="Abil/FactoryAddOns"/>
+            <Cooldown Link="Abil/FactoryAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build14">
+            <Charge Link="Abil/FactoryAddOns"/>
+            <Cooldown Link="Abil/FactoryAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build15">
+            <Charge Link="Abil/FactoryAddOns"/>
+            <Cooldown Link="Abil/FactoryAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build16">
+            <Charge Link="Abil/FactoryAddOns"/>
+            <Cooldown Link="Abil/FactoryAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build17">
+            <Charge Link="Abil/FactoryAddOns"/>
+            <Cooldown Link="Abil/FactoryAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build18">
+            <Charge Link="Abil/FactoryAddOns"/>
+            <Cooldown Link="Abil/FactoryAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build19">
+            <Charge Link="Abil/FactoryAddOns"/>
+            <Cooldown Link="Abil/FactoryAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build20">
+            <Charge Link="Abil/FactoryAddOns"/>
+            <Cooldown Link="Abil/FactoryAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build21">
+            <Charge Link="Abil/FactoryAddOns"/>
+            <Cooldown Link="Abil/FactoryAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build22">
+            <Charge Link="Abil/FactoryAddOns"/>
+            <Cooldown Link="Abil/FactoryAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build23">
+            <Charge Link="Abil/FactoryAddOns"/>
+            <Cooldown Link="Abil/FactoryAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build24">
+            <Charge Link="Abil/FactoryAddOns"/>
+            <Cooldown Link="Abil/FactoryAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build25">
+            <Charge Link="Abil/FactoryAddOns"/>
+            <Cooldown Link="Abil/FactoryAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build26">
+            <Charge Link="Abil/FactoryAddOns"/>
+            <Cooldown Link="Abil/FactoryAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build27">
+            <Charge Link="Abil/FactoryAddOns"/>
+            <Cooldown Link="Abil/FactoryAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build28">
+            <Charge Link="Abil/FactoryAddOns"/>
+            <Cooldown Link="Abil/FactoryAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build29">
+            <Charge Link="Abil/FactoryAddOns"/>
+            <Cooldown Link="Abil/FactoryAddOns"/>
+        </InfoArray>
+        <InfoArray index="Build30">
+            <Charge Link="Abil/FactoryAddOns"/>
+            <Cooldown Link="Abil/FactoryAddOns"/>
+        </InfoArray>
+    </CAbilBuild>
+    <CAbilMorph id="PhysicsLabMorph">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="TechLabFactory" Requirements="ShowIfHaveSFAddOnParent"/>
+        <ActorKey value="CovertOpsMorph"/>
+        <Flags index="Automatic" value="1"/>
+        <Flags index="Produce" value="1"/>
+        <Cost>
+            <Charge Link="Abil/FactoryTechLabMorph"/>
+            <Cooldown Link="Abil/FactoryTechLabMorph"/>
+        </Cost>
+        <InfoArray Unit="PhysicsLab2"/>
+    </CAbilMorph>
+    <CAbilResearch id="ForgeResearch">
+        <InfoArray index="Research1" Time="229.6"/>
+        <InfoArray index="Research2" Time="257.152"/>
+        <InfoArray index="Research3" Time="284.704"/>
+        <InfoArray index="Research4" Time="229.6"/>
+        <InfoArray index="Research5" Time="257.152"/>
+        <InfoArray index="Research6" Time="284.704"/>
+        <InfoArray index="Research7" Time="229.6"/>
+        <InfoArray index="Research8" Time="257.152"/>
+        <InfoArray index="Research9" Time="284.704"/>
+        <Activity value="UI/Upgrading"/>
+    </CAbilResearch>
+    <CAbilResearch id="FusionCoreResearch">
+        <InfoArray index="Research1" Time="103.32"/>
+        <InfoArray index="Research2" Time="143.5"/>
+        <Activity value="UI/Upgrading"/>
+    </CAbilResearch>
+    <CAbilResearch id="LairResearch">
+        <InfoArray index="Research2" Time="114.8">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+        </InfoArray>
+        <InfoArray index="Research3" Time="137.76"/>
+        <InfoArray index="Research4" Time="68.88"/>
+        <InfoArray index="Research5" Time="114.8" Upgrade="Antennae">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="ResearchAntennae" State="Restricted" Requirements="LearnAntennae"/>
+        </InfoArray>
+        <Activity value="UI/Evolving"/>
+    </CAbilResearch>
+    <CAbilMorph id="MorphMutaliskDevourer">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="BroodLord2" Requirements="HaveGreaterSpire"/>
+        <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
+        <ActorKey value="GuardianAspect"/>
+        <Flags index="Birth" value="1"/>
+        <Flags index="DisableAbils" value="1"/>
+        <Flags index="FastBuild" value="1"/>
+        <Flags index="Interruptible" value="1"/>
+        <Flags index="Produce" value="1"/>
+        <Flags index="ShowProgress" value="1"/>
+        <Flags index="SuppressMovement" value="1"/>
+        <InfoArray Unit="BroodLordCocoon">
+            <SectionArray index="Abils">
+                <DurationArray index="Delay" value="0.5"/>
+            </SectionArray>
+            <SectionArray index="Actor">
+                <DurationArray index="Delay" value="0.5"/>
+            </SectionArray>
+            <SectionArray index="Facing">
+                <DurationArray index="Duration" value="0.4"/>
+            </SectionArray>
+        </InfoArray>
+        <InfoArray Score="1" Unit="BroodLord2">
+            <SectionArray index="Abils">
+                <DurationArray index="Delay" value="34"/>
+            </SectionArray>
+            <SectionArray index="Actor">
+                <DurationArray index="Delay" value="34"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="34"/>
+                <EffectArray index="Finish" value="PostMorphHeal"/>
+            </SectionArray>
+        </InfoArray>
+        <Alert value="TrainingCompletePing"/>
+        <AbilClassEnableArray index="CAbilMove" value="1"/>
+        <AbilClassEnableArray index="CAbilStop" value="1"/>
+        <Activity value="UI/Mutating"/>
+    </CAbilMorph>
+    <CAbilMorph id="MorphToBroodLord">
+        <Activity value="UI/Mutating"/>
+        <Alert value="TrainingCompletePing"/>
+        <Flags index="BestUnit" value="0"/>
+    </CAbilMorph>
+    <CAbilResearch id="ObservatoryResearch">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Structures"/>
+        <InfoArray index="Research1" Time="70"/>
+        <InfoArray index="Research2" Time="114.8" Upgrade="ObserverGraviticBooster">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="ResearchGraviticBooster" State="Restricted" Requirements="LearnGraviticBooster"/>
+        </InfoArray>
+        <InfoArray index="Research3" Time="114.8" Upgrade="SensorArray">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="ResearchSensorArray" State="Restricted" Requirements="ResearchSensorArray"/>
+        </InfoArray>
+        <Activity value="UI/Upgrading"/>
+    </CAbilResearch>
+    <CAbilMorphPlacement id="ScienceLand" parent="TerranBuildingLand" unit="ScienceFacility">
+        <Name value="Abil/Name/ScienceLand"/>
+        <Cost>
+            <Charge Link="Abil/FactoryLand"/>
+            <Cooldown Link="Abil/FactoryLand"/>
+        </Cost>
+        <InfoArray index="0" Unit="ScienceFacility" CollideRange="0">
+            <SectionArray index="Mover">
+                <DurationArray index="Duration" value="1.25"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorphPlacement>
+    <CAbilMorphPlacement id="EngineeringBayLand" parent="TerranBuildingLand" unit="EngineeringBay">
+        <Name value="Abil/Name/EngineeringBayLand"/>
+        <Cost>
+            <Charge Link="Abil/FactoryLand"/>
+            <Cooldown Link="Abil/FactoryLand"/>
+        </Cost>
+        <InfoArray index="0" Unit="EngineeringBay" CollideRange="0">
+            <SectionArray index="Mover">
+                <DurationArray index="Duration" value="1.25"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorphPlacement>
+    <CAbilMorph id="ScienceLiftOff" parent="TerranBuildingLiftOff" unit="ScienceFacilityFlying">
+        <Name value="Abil/Name/ScienceLiftOff"/>
+        <Cost>
+            <Charge Link="Abil/FactoryLiftOff"/>
+            <Cooldown Link="Abil/FactoryLiftOff"/>
+        </Cost>
+        <InfoArray index="0" Unit="ScienceFacilityFlying">
+            <SectionArray index="Mover">
+                <DurationArray index="Duration" value="1.5"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilMorph id="FactoryTechLabMorph">
+        <InfoArray index="0" Unit="MachineShop2"/>
+    </CAbilMorph>
+    <CAbilMorph id="FactoryTechLabMorph2">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="TechLabFactory" Requirements="ShowIfHaveSFAddOnParent"/>
+        <ActorKey value="CovertOpsMorph"/>
+        <Flags index="Automatic" value="1"/>
+        <Flags index="Produce" value="1"/>
+        <Cost>
+            <Charge Link="Abil/FactoryTechLabMorph"/>
+            <Cooldown Link="Abil/FactoryTechLabMorph"/>
+        </Cost>
+        <InfoArray Unit="CovertOps2"/>
+    </CAbilMorph>
+    <CAbilResearch id="FactoryTechLabResearch2">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <InfoArray index="Research1" Time="86.1" Upgrade="Lockdown">
+            <Resource index="Minerals" value="200"/>
+            <Resource index="Vespene" value="200"/>
+            <Charge Link="Abil/Lockdown"/>
+            <Cooldown Link="Abil/Lockdown"/>
+            <Button DefaultButtonFace="ResearchLockdown" State="Restricted" Requirements="ResearchLockdown"/>
+        </InfoArray>
+        <InfoArray index="Research2" Time="68.88" Upgrade="PersonalCloaking">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Charge Link="Abil/FactoryTechLabResearch"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch"/>
+            <Button DefaultButtonFace="ResearchPersonalCloaking" State="Restricted" Requirements="LearnPersonnelCloaking"/>
+        </InfoArray>
+        <InfoArray index="Research3" Time="143.5" Upgrade="GhostMoebiusReactor">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="ResearchGhostEnergyUpgrade" Requirements="LearnMoebiusReactor"/>
+        </InfoArray>
+        <InfoArray index="Research4" Time="143.5" Upgrade="OcularImplants2">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Charge Link="Abil/FactoryTechLabResearch"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch"/>
+            <Button DefaultButtonFace="ResearchOcularImplants" State="Restricted" Requirements="LearnOcularImplants"/>
+        </InfoArray>
+        <InfoArray index="Research5">
+            <Charge Link="Abil/FactoryTechLabResearch"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch"/>
+        </InfoArray>
+        <InfoArray index="Research8">
+            <Charge Link="Abil/FactoryTechLabResearch"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch"/>
+        </InfoArray>
+        <InfoArray index="Research9">
+            <Charge Link="Abil/FactoryTechLabResearch"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch"/>
+        </InfoArray>
+        <InfoArray index="Research10">
+            <Charge Link="Abil/FactoryTechLabResearch"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch"/>
+        </InfoArray>
+        <InfoArray index="Research11">
+            <Charge Link="Abil/FactoryTechLabResearch"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch"/>
+        </InfoArray>
+        <InfoArray index="Research12">
+            <Charge Link="Abil/FactoryTechLabResearch"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch"/>
+        </InfoArray>
+        <InfoArray index="Research13">
+            <Charge Link="Abil/FactoryTechLabResearch"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch"/>
+        </InfoArray>
+        <InfoArray index="Research14">
+            <Charge Link="Abil/FactoryTechLabResearch"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch"/>
+        </InfoArray>
+        <InfoArray index="Research15">
+            <Charge Link="Abil/FactoryTechLabResearch"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch"/>
+        </InfoArray>
+        <InfoArray index="Research16">
+            <Charge Link="Abil/FactoryTechLabResearch"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch"/>
+        </InfoArray>
+        <InfoArray index="Research17">
+            <Charge Link="Abil/FactoryTechLabResearch"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch"/>
+        </InfoArray>
+        <InfoArray index="Research18">
+            <Charge Link="Abil/FactoryTechLabResearch"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch"/>
+        </InfoArray>
+        <InfoArray index="Research19">
+            <Charge Link="Abil/FactoryTechLabResearch"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch"/>
+        </InfoArray>
+        <InfoArray index="Research20">
+            <Charge Link="Abil/FactoryTechLabResearch"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch"/>
+        </InfoArray>
+        <InfoArray index="Research21">
+            <Charge Link="Abil/FactoryTechLabResearch"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch"/>
+        </InfoArray>
+        <InfoArray index="Research22">
+            <Charge Link="Abil/FactoryTechLabResearch"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch"/>
+        </InfoArray>
+        <InfoArray index="Research23">
+            <Charge Link="Abil/FactoryTechLabResearch"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch"/>
+        </InfoArray>
+        <InfoArray index="Research24">
+            <Charge Link="Abil/FactoryTechLabResearch"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch"/>
+        </InfoArray>
+        <InfoArray index="Research25">
+            <Charge Link="Abil/FactoryTechLabResearch"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch"/>
+        </InfoArray>
+        <InfoArray index="Research26">
+            <Charge Link="Abil/FactoryTechLabResearch"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch"/>
+        </InfoArray>
+        <InfoArray index="Research27">
+            <Charge Link="Abil/FactoryTechLabResearch"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch"/>
+        </InfoArray>
+        <InfoArray index="Research28">
+            <Charge Link="Abil/FactoryTechLabResearch"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch"/>
+        </InfoArray>
+        <InfoArray index="Research29">
+            <Charge Link="Abil/FactoryTechLabResearch"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch"/>
+        </InfoArray>
+        <InfoArray index="Research30">
+            <Charge Link="Abil/FactoryTechLabResearch"/>
+            <Cooldown Link="Abil/FactoryTechLabResearch"/>
+        </InfoArray>
+        <Activity value="UI/Upgrading"/>
+    </CAbilResearch>
+    <CAbilResearch id="GhostAcademyResearch">
+        <InfoArray index="Research1" Time="68.88"/>
+        <InfoArray index="Research2" Time="143.5"/>
+        <InfoArray index="Research5" Time="86.1" Upgrade="Lockdown">
+            <Resource index="Minerals" value="200"/>
+            <Resource index="Vespene" value="200"/>
+            <Button DefaultButtonFace="ResearchLockdown" Requirements="ResearchLockdown"/>
+        </InfoArray>
+        <Activity value="UI/Upgrading"/>
+    </CAbilResearch>
+    <CAbilEffectTarget id="Lockdown">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="LockdownLM"/>
+        <Cost>
+            <Vital index="Energy" value="100"/>
+        </Cost>
+        <TargetFilters value="Mechanical;Psionic,Structure,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="8"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="UseLockdown" State="Restricted" Requirements="UseLockdown"/>
+        <CastIntroTime value="0.5"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="Maelstrom">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="MaelstromSearch"/>
+        <Cost>
+            <Vital index="Energy" value="100"/>
+        </Cost>
+        <Range value="10"/>
+        <CursorEffect value="MaelstromSearch"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Maelstrom" State="Restricted" Requirements="MaelstromResearched"/>
+        <Flags index="AllowMovement" value="1"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="MindControl2">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="MindControlSet"/>
+        <Cost>
+            <Vital index="Energy" value="150"/>
+        </Cost>
+        <TargetFilters value="Visible;Player,Ally,Neutral,Structure,RawResource,HarvestableResource,Missile,Stasis,UnderConstruction,Dead,Invulnerable"/>
+        <Range value="8"/>
+        <AINotifyEffect value="MindControlApplyTarget"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="MindControl" State="Restricted" Requirements="MindControlResearched"/>
+        <Flags index="AllowMovement" value="1"/>
+    </CAbilEffectTarget>
+    <CAbilTransport id="NydusCanalTransport">
+        <CmdButtonArray index="UnloadAll">
+            <Flags index="ToSelection" value="0"/>
+        </CmdButtonArray>
+        <InitialUnloadDelay value="0"/>
+        <LoadPeriod value="0.0625"/>
+        <UnloadPeriod value="0.0625"/>
+        <MaxUnloadRange value="5"/>
+        <LoadValidatorArray value="nydusCanalBuilt"/>
+    </CAbilTransport>
+    <CAbilResearch id="ScienceFacilityResearch">
+        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <InfoArray index="Research1" Time="103.32" Upgrade="ResearchEMPShockwave">
+            <Resource index="Minerals" value="200"/>
+            <Resource index="Vespene" value="200"/>
+            <Button DefaultButtonFace="ResearchEMPShockwave" Requirements="ResearchEMP"/>
+        </InfoArray>
+        <InfoArray index="Research2" Time="68.88" Upgrade="ResearchIrradiate">
+            <Resource index="Minerals" value="200"/>
+            <Resource index="Vespene" value="200"/>
+            <Button DefaultButtonFace="ResearchIrradiate" Requirements="ResearchIrradiate"/>
+        </InfoArray>
+        <InfoArray index="Research3" Time="143.5" Upgrade="ScienceVesselTitanReactor">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Charge Link="Abil/ArbiterTribunalResearch"/>
+            <Cooldown Link="Abil/ArbiterTribunalResearch"/>
+            <Button DefaultButtonFace="ResearchScienceVesselEnergyUpgrade" Requirements="LearnTitanReactor"/>
+        </InfoArray>
+        <InfoArray index="Research4">
+            <Charge Link="Abil/ArbiterTribunalResearch"/>
+            <Cooldown Link="Abil/ArbiterTribunalResearch"/>
+        </InfoArray>
+        <InfoArray index="Research5">
+            <Charge Link="Abil/ArbiterTribunalResearch"/>
+            <Cooldown Link="Abil/ArbiterTribunalResearch"/>
+        </InfoArray>
+        <InfoArray index="Research6">
+            <Charge Link="Abil/ArbiterTribunalResearch"/>
+            <Cooldown Link="Abil/ArbiterTribunalResearch"/>
+        </InfoArray>
+        <InfoArray index="Research7">
+            <Charge Link="Abil/ArbiterTribunalResearch"/>
+            <Cooldown Link="Abil/ArbiterTribunalResearch"/>
+        </InfoArray>
+        <InfoArray index="Research8">
+            <Charge Link="Abil/ArbiterTribunalResearch"/>
+            <Cooldown Link="Abil/ArbiterTribunalResearch"/>
+        </InfoArray>
+        <InfoArray index="Research9">
+            <Charge Link="Abil/ArbiterTribunalResearch"/>
+            <Cooldown Link="Abil/ArbiterTribunalResearch"/>
+        </InfoArray>
+        <InfoArray index="Research10">
+            <Charge Link="Abil/ArbiterTribunalResearch"/>
+            <Cooldown Link="Abil/ArbiterTribunalResearch"/>
+        </InfoArray>
+        <InfoArray index="Research11">
+            <Charge Link="Abil/ArbiterTribunalResearch"/>
+            <Cooldown Link="Abil/ArbiterTribunalResearch"/>
+        </InfoArray>
+        <InfoArray index="Research12">
+            <Charge Link="Abil/ArbiterTribunalResearch"/>
+            <Cooldown Link="Abil/ArbiterTribunalResearch"/>
+        </InfoArray>
+        <InfoArray index="Research13">
+            <Charge Link="Abil/ArbiterTribunalResearch"/>
+            <Cooldown Link="Abil/ArbiterTribunalResearch"/>
+        </InfoArray>
+        <InfoArray index="Research14">
+            <Charge Link="Abil/ArbiterTribunalResearch"/>
+            <Cooldown Link="Abil/ArbiterTribunalResearch"/>
+        </InfoArray>
+        <InfoArray index="Research15">
+            <Charge Link="Abil/ArbiterTribunalResearch"/>
+            <Cooldown Link="Abil/ArbiterTribunalResearch"/>
+        </InfoArray>
+        <InfoArray index="Research16">
+            <Charge Link="Abil/ArbiterTribunalResearch"/>
+            <Cooldown Link="Abil/ArbiterTribunalResearch"/>
+        </InfoArray>
+        <InfoArray index="Research17">
+            <Charge Link="Abil/ArbiterTribunalResearch"/>
+            <Cooldown Link="Abil/ArbiterTribunalResearch"/>
+        </InfoArray>
+        <InfoArray index="Research18">
+            <Charge Link="Abil/ArbiterTribunalResearch"/>
+            <Cooldown Link="Abil/ArbiterTribunalResearch"/>
+        </InfoArray>
+        <InfoArray index="Research19">
+            <Charge Link="Abil/ArbiterTribunalResearch"/>
+            <Cooldown Link="Abil/ArbiterTribunalResearch"/>
+        </InfoArray>
+        <InfoArray index="Research20">
+            <Charge Link="Abil/ArbiterTribunalResearch"/>
+            <Cooldown Link="Abil/ArbiterTribunalResearch"/>
+        </InfoArray>
+        <InfoArray index="Research21">
+            <Charge Link="Abil/ArbiterTribunalResearch"/>
+            <Cooldown Link="Abil/ArbiterTribunalResearch"/>
+        </InfoArray>
+        <InfoArray index="Research22">
+            <Charge Link="Abil/ArbiterTribunalResearch"/>
+            <Cooldown Link="Abil/ArbiterTribunalResearch"/>
+        </InfoArray>
+        <InfoArray index="Research23">
+            <Charge Link="Abil/ArbiterTribunalResearch"/>
+            <Cooldown Link="Abil/ArbiterTribunalResearch"/>
+        </InfoArray>
+        <InfoArray index="Research24">
+            <Charge Link="Abil/ArbiterTribunalResearch"/>
+            <Cooldown Link="Abil/ArbiterTribunalResearch"/>
+        </InfoArray>
+        <InfoArray index="Research25">
+            <Charge Link="Abil/ArbiterTribunalResearch"/>
+            <Cooldown Link="Abil/ArbiterTribunalResearch"/>
+        </InfoArray>
+        <InfoArray index="Research26">
+            <Charge Link="Abil/ArbiterTribunalResearch"/>
+            <Cooldown Link="Abil/ArbiterTribunalResearch"/>
+        </InfoArray>
+        <InfoArray index="Research27">
+            <Charge Link="Abil/ArbiterTribunalResearch"/>
+            <Cooldown Link="Abil/ArbiterTribunalResearch"/>
+        </InfoArray>
+        <InfoArray index="Research28">
+            <Charge Link="Abil/ArbiterTribunalResearch"/>
+            <Cooldown Link="Abil/ArbiterTribunalResearch"/>
+        </InfoArray>
+        <InfoArray index="Research29">
+            <Charge Link="Abil/ArbiterTribunalResearch"/>
+            <Cooldown Link="Abil/ArbiterTribunalResearch"/>
+        </InfoArray>
+        <InfoArray index="Research30">
+            <Charge Link="Abil/ArbiterTribunalResearch"/>
+            <Cooldown Link="Abil/ArbiterTribunalResearch"/>
+        </InfoArray>
+    </CAbilResearch>
+    <CAbilBuild id="BarracksAddOns">
+        <InfoArray index="Build1" Time="40"/>
+    </CAbilBuild>
+    <CAbilResearch id="BarracksTechLabResearch">
+        <InfoArray index="Research1" Time="68.88"/>
+        <InfoArray index="Research2" Time="86.1" Upgrade="U238Shells">
+            <Button DefaultButtonFace="U238Shells" State="Available" Requirements="U238Shells"/>
+        </InfoArray>
+        <InfoArray index="Research3" Time="68.88" Upgrade="Restoration">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="ResearchRestoration" Requirements="ResearchRestoration"/>
+        </InfoArray>
+        <InfoArray index="Research5" Time="143.5" Upgrade="MedicCaduceusReactor">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="ResearchMedivacEnergyUpgrade" State="Restricted" Requirements="LearnCaduceusReactor"/>
+        </InfoArray>
+        <InfoArray index="Research6" Time="69" Upgrade="OpticalFlare">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="ResearchOpticalFlare" Requirements="LearnOpticalFlare"/>
+        </InfoArray>
+        <Name value="Abil/Name/AcademyResearch"/>
+        <Activity value="UI/Upgrading"/>
+    </CAbilResearch>
+    <CAbilTrain id="BarracksTrain">
+        <InfoArray index="Train1" Time="20.664"/>
+        <InfoArray index="Train3" Time="43.05">
+            <Button Requirements="HaveAcademyandCovertOps"/>
+        </InfoArray>
+        <InfoArray index="Train5" Time="20.664">
+            <Button DefaultButtonFace="Firebat" Requirements="HaveAcademy"/>
+            <Unit value="Firebat"/>
+        </InfoArray>
+        <InfoArray index="Train6" Time="25.83">
+            <Button DefaultButtonFace="Medic" State="Restricted" Requirements="HaveAcademy"/>
+            <Unit value="Medic"/>
+        </InfoArray>
+        <Activity value="UI/Building"/>
+        <Alert value="TrainingCompletePing"/>
+    </CAbilTrain>
+    <CAbilMorph id="BurrowDefiler">
+        <AbilSetId value="BrwD"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="BurrowDown" Requirements="UseBurrow">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
+        <ActorKey value="BurrowDown"/>
+        <Flags index="Interruptible" value="1"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="IgnorePlacement" value="0"/>
+        <Flags index="SuppressMovement" value="1"/>
+        <Cost>
+            <Charge Link="Abil/BurrowZerglingDown"/>
+            <Cooldown Link="Abil/BurrowZerglingDown"/>
+        </Cost>
+        <InfoArray Unit="DefilerBurrowed" RandomDelayMax="0.3703">
+            <SectionArray index="Abils">
+                <DurationArray index="Delay" value="0.1"/>
+            </SectionArray>
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="1.333"/>
+            </SectionArray>
+            <SectionArray index="Collide">
+                <DurationArray index="Delay" value="0.5556"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="1"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilResearch id="CyberneticsCoreResearch">
+        <InfoArray index="Research1" Time="229.6"/>
+        <InfoArray index="Research2" Time="257.152"/>
+        <InfoArray index="Research3" Time="284.704"/>
+        <InfoArray index="Research4" Time="229.6"/>
+        <InfoArray index="Research5" Time="257.152"/>
+        <InfoArray index="Research6" Time="284.704"/>
+        <InfoArray index="Research8" Time="143.5" Upgrade="DragoonRange">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="ResearchSingularityCharge2" Requirements="ResearchSingularityCharge"/>
+        </InfoArray>
+        <Activity value="UI/Upgrading"/>
+    </CAbilResearch>
+    <CAbilEffectTarget id="DisruptionWeb">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="DisruptionWebPersistent"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Cost>
+            <Vital index="Energy" value="125"/>
+        </Cost>
+        <Range value="9"/>
+        <PrepTime value="0"/>
+        <CastIntroTime value="0"/>
+        <CastOutroTime value="0"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="DisruptionWeb" State="Restricted" Requirements="DisruptionWebCompleted"/>
+        <CursorEffect value="DisruptionWebSearch"/>
+    </CAbilEffectTarget>
+    <CAbilBuild id="FactoryAddOns">
+        <InfoArray index="Build1" Unit="MachineShop2" Time="34.44">
+            <Button DefaultButtonFace="BuildMachineShop"/>
+        </InfoArray>
+    </CAbilBuild>
+    <CAbilResearch id="FleetBeaconResearch">
+        <InfoArray index="Research2" Time="86.1">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+        </InfoArray>
+        <InfoArray index="Research3" Time="68.88" Upgrade="ResearchDisruptionWeb">
+            <Resource index="Minerals" value="200"/>
+            <Resource index="Vespene" value="200"/>
+            <Button DefaultButtonFace="ResearchDisruptionWeb" State="Restricted" Requirements="ResearchDisruptionWeb"/>
+        </InfoArray>
+        <InfoArray index="Research4" Time="143.5" Upgrade="ArgusJewel">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="ResearchArgusJewel" State="Restricted" Requirements="LearnArgusJewel"/>
+        </InfoArray>
+        <InfoArray index="Research5" Time="143.5" Upgrade="ApialSensors">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="ResearchApialSensors" State="Restricted" Requirements="LearnApialSensors"/>
+        </InfoArray>
+        <InfoArray index="Research6" Time="143.5" Upgrade="GraviticThrusters">
+            <Resource index="Minerals" value="200"/>
+            <Resource index="Vespene" value="200"/>
+            <Button DefaultButtonFace="ResearchGraviticThrusters" State="Restricted" Requirements="ResearchGraviticThrusters"/>
+        </InfoArray>
+        <Activity value="UI/Upgrading"/>
+    </CAbilResearch>
+    <CAbilMorph id="MorphBuildingCreepColonySpore">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SporeCrawler" Requirements="HaveEvolutionChamber"/>
+        <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
+        <ActorKey value="LairUpgrade"/>
+        <Flags index="BestUnit" value="1"/>
+        <Flags index="Birth" value="1"/>
+        <Flags index="DisableAbils" value="1"/>
+        <Flags index="FastBuild" value="1"/>
+        <Flags index="Interruptible" value="1"/>
+        <Flags index="Produce" value="1"/>
+        <Flags index="ShowProgress" value="1"/>
+        <Cost>
+            <Resource index="Minerals" value="50"/>
+            <Charge Link="UpgradetoSpore"/>
+            <Cooldown Link="UpgradetoSpore"/>
+        </Cost>
+        <InfoArray Score="1" Unit="SporeCrawler">
+            <SectionArray index="Abils">
+                <DurationArray index="Delay" value="17.22"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="17.22"/>
+            </SectionArray>
+        </InfoArray>
+        <Alert value="MorphComplete_Zerg"/>
+        <Activity value="UI/Mutating"/>
+    </CAbilMorph>
+    <CAbilTrain id="NexusTrain">
+        <Activity value="UI/Building"/>
+        <Alert value="TrainingCompletePing"/>
+    </CAbilTrain>
+    <CAbilMorph id="EngineeringBayLiftOff" parent="TerranBuildingLiftOff" unit="EngineeringBayFlying">
+        <Name value="Abil/Name/EngineeringBayLiftOff"/>
+        <Cost>
+            <Charge Link="Abil/FactoryLiftOff"/>
+            <Cooldown Link="Abil/FactoryLiftOff"/>
+        </Cost>
+        <InfoArray index="0" Unit="EngineeringBayFlying">
+            <SectionArray index="Mover">
+                <DurationArray index="Duration" value="1.5"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilEffectTarget id="SpawnBroodling">
+        <EditorCategories value="AbilityorEffectType:Units,Race:Zerg"/>
+        <Effect index="0" value="SpawnBroodlingLM"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Cost>
+            <Vital index="Energy" value="150"/>
+        </Cost>
+        <TargetFilters value="-;Air,Robotic,Psionic,Structure,RawResource,HarvestableResource,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="9"/>
+        <CastIntroTime value="0.5"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SpawnBroodling" State="Restricted" Requirements="SpawnBroodlingUpgraded"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="SpiderMineAttack">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="VultureSpiderMinesSet"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="BestUnit" value="0"/>
+        <Flags index="Chase" value="1"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <TargetFilters value="Ground;Player,Ally,Air,Psionic,Structure,Hover,Worker,RawResource,HarvestableResource,Missile,Stasis,Dead,Invulnerable"/>
+        <Range value="0.25"/>
+        <AutoCastFilters value="Ground;Player,Ally,Neutral,Air,Robotic,Psionic,Hover,Worker,Missile,Dead,Hidden,Invulnerable"/>
+        <AutoCastRange value="3"/>
+        <CastIntroTime value="0.35"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Attack"/>
+        <FollowRange value="500"/>
+    </CAbilEffectTarget>
+    <CAbilResearch id="SpireResearch">
+        <InfoArray index="Research1" Time="229.6"/>
+        <InfoArray index="Research2" Time="257.152"/>
+        <InfoArray index="Research3" Time="284.704"/>
+        <InfoArray index="Research4" Time="229.6"/>
+        <InfoArray index="Research5" Time="257.152"/>
+        <InfoArray index="Research6" Time="284.704"/>
+        <Activity value="UI/Evolving"/>
+    </CAbilResearch>
+    <CAbilBuild id="StarportAddOns">
+        <InfoArray index="Build1" Unit="ControlTower2" Time="34.44">
+            <Button DefaultButtonFace="BuildControlTower"/>
+        </InfoArray>
+    </CAbilBuild>
+    <CAbilMorph id="StarportTechLabMorph">
+        <InfoArray index="0" Unit="ControlTower2"/>
+    </CAbilMorph>
+    <CAbilEffectTarget id="TacNukeStrike">
+        <Range index="0" value="8"/>
+        <CursorEffect index="0" value="NukeSearch"/>
+    </CAbilEffectTarget>
+    <CAbilMorph id="TechLabMorph">
+        <InfoArray index="0" Unit="MachineShop"/>
+    </CAbilMorph>
+    <CAbilMorph id="TechLabMorph2">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="TechLab" Requirements="ShowIfHaveNoAddOnParent"/>
+        <ActorKey value="TechLabMorph"/>
+        <Flags index="Automatic" value="1"/>
+        <Cost>
+            <Charge Link="Abil/TechLabMorph"/>
+            <Cooldown Link="Abil/TechLabMorph"/>
+        </Cost>
+        <InfoArray Unit="ControlTower">
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="0.125"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilMorph id="ComsatMorphDetached">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="TechLab" Requirements="ShowIfHaveNoCC"/>
+        <ActorKey value="ComsatMorph"/>
+        <Flags index="Automatic" value="1"/>
+        <Cost>
+            <Charge Link="Abil/TechLabMorph"/>
+            <Cooldown Link="Abil/TechLabMorph"/>
+        </Cost>
+        <InfoArray Unit="ComsatStation">
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="0.125"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilMorph id="TechLabMorph3">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="TechLab" Requirements="ShowIfHaveNoSF"/>
+        <ActorKey value="CovertOpsMorph"/>
+        <Flags index="Automatic" value="1"/>
+        <Cost>
+            <Charge Link="Abil/TechLabMorph"/>
+            <Cooldown Link="Abil/TechLabMorph"/>
+        </Cost>
+        <InfoArray Unit="CovertOps">
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="0.125"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilMorph id="PhysicsLabMorphDetached">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="TechLab" Requirements="ShowIfHaveNoSF"/>
+        <ActorKey value="CovertOpsMorph"/>
+        <Flags index="Automatic" value="1"/>
+        <Cost>
+            <Charge Link="Abil/TechLabMorph"/>
+            <Cooldown Link="Abil/TechLabMorph"/>
+        </Cost>
+        <InfoArray Unit="PhysicsLab">
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="0.125"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilResearch id="TemplarArchivesResearch">
+        <InfoArray index="Research1" Time="143.5"/>
+        <InfoArray index="Research5" Time="103.32"/>
+        <InfoArray index="Research6" Time="86.1" Upgrade="Maelstrom">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="ResearchMaelstrom" Requirements="MaelstromNotResearched"/>
+        </InfoArray>
+        <InfoArray index="Research7" Time="103.32" Upgrade="MindControl">
+            <Resource index="Minerals" value="200"/>
+            <Resource index="Vespene" value="200"/>
+            <Button DefaultButtonFace="MindControl2" Requirements="MindControlNotResearched"/>
+        </InfoArray>
+        <InfoArray index="Research8" Time="68.88" Upgrade="HallucinationHighTemplar">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="ResearchHallucination" Requirements="LearnHallucination2"/>
+        </InfoArray>
+        <InfoArray index="Research9" Time="143.5" Upgrade="ArgusTalisman">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="ResearchArgusTalisman" State="Restricted" Requirements="LearnArgusTalisman"/>
+        </InfoArray>
+        <InfoArray index="Research13" Time="147.0695" Upgrade="HighTemplarKhaydarinAmulet">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="ResearchHighTemplarEnergyUpgrade" Requirements="LearnHighTemplarEnergyUpgrade"/>
+        </InfoArray>
+        <Activity value="UI/Developing"/>
+    </CAbilResearch>
+    <CAbilBuild id="TerranBuild">
+        <InfoArray index="Build1" Time="103.32"/>
+        <InfoArray index="Build2" Time="34.44"/>
+        <InfoArray index="Build3" Time="34.44"/>
+        <InfoArray index="Build4" Time="68.88">
+            <Button Requirements=""/>
+        </InfoArray>
+        <InfoArray index="Build5" Time="51.66"/>
+        <InfoArray index="Build6" Time="25.83"/>
+        <InfoArray index="Build7" Time="25.83"/>
+        <InfoArray index="Build10" Time="68.88"/>
+        <InfoArray index="Build11" Time="68.88"/>
+        <InfoArray index="Build12" Time="60.27"/>
+        <InfoArray index="Build14" Time="68.88"/>
+        <InfoArray index="Build15" Unit="ScienceFacility" Time="51.66">
+            <Button DefaultButtonFace="BuildScienceFacility" State="Restricted" Requirements="HaveStarport"/>
+        </InfoArray>
+        <InfoArray index="Build16" Time="68.88"/>
+        <InfoArray index="Build17" Unit="Academy" Time="68.88">
+            <Button DefaultButtonFace="BuildAcademy" State="Restricted" Requirements="HaveBarracks"/>
+        </InfoArray>
+    </CAbilBuild>
+    <CAbilTrain id="TrainQueen">
+        <InfoArray index="Train1" Effect=""/>
+    </CAbilTrain>
+    <CAbilResearch id="TwilightCouncilResearch">
+        <InfoArray index="Research1" Time="114.8">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+        </InfoArray>
+        <InfoArray index="Research2" Time="0" Upgrade="">
+            <Resource index="Minerals" value="0"/>
+            <Resource index="Vespene" value="0"/>
+            <Button DefaultButtonFace="" State="Available" Requirements=""/>
+        </InfoArray>
+        <Activity value="UI/Upgrading"/>
+    </CAbilResearch>
+    <CAbilResearch id="UltraliskCavernResearch">
+        <InfoArray index="Research2" Time="114.8" Upgrade="ChitinousPlating">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="EvolveChitinousPlating" Requirements="LearnChitinousPlating"/>
+        </InfoArray>
+        <InfoArray index="Research3" Time="114.8" Upgrade="AnabolicSynthesis">
+            <Resource index="Minerals" value="200"/>
+            <Resource index="Vespene" value="200"/>
+            <Button DefaultButtonFace="EvolveAnabolicSynthesis2" Requirements="LearnAnabolicSynthesis"/>
+        </InfoArray>
+        <Activity value="UI/Evolving"/>
+    </CAbilResearch>
+    <CAbilMorph id="UnburrowDefiler">
+        <AbilSetId value="BrwU"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="BurrowUp">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <ActorKey value="BurrowUp"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Cost>
+            <Charge Link="Abil/BurrowZerglingUp"/>
+            <Cooldown Link="Abil/BurrowZerglingUp"/>
+        </Cost>
+        <InfoArray Unit="Defiler" RandomDelayMax="0.5">
+            <SectionArray index="Abils">
+                <DurationArray index="Delay" value="1.0625"/>
+            </SectionArray>
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="1"/>
+            </SectionArray>
+        </InfoArray>
+        <AutoCastFilters value="Ground,Visible;Player,Ally,Neutral,Air,Missile,Stasis,Dead,Hidden"/>
+        <AutoCastRange value="2"/>
+        <AutoCastCountMin value="1"/>
+    </CAbilMorph>
+    <CAbilEffectTarget id="Consume">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="ConsumeApply"/>
+        <TargetFilters value="Biological;Self,Ally,Neutral,Enemy,Structure,Dead"/>
+        <Range value="1"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Consume" Requirements="ConsumeCompleted"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="DarkSwarm">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="DarkSwarmPersistent"/>
+        <Range value="9"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="DarkSwarm"/>
+        <Cost>
+            <Vital index="Energy" value="100"/>
+        </Cost>
+        <CursorEffect value="DarkSwarmSearch"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="EMP">
+        <Cost index="0">
+            <Vital index="Energy" value="100"/>
+        </Cost>
+        <CmdButtonArray index="Execute" Requirements="EMPCompleted"/>
+        <PrepTime index="0" removed="1"/>
+        <FinishTime index="0" removed="1"/>
+        <Range index="0" value="8"/>
+        <Arc value="360"/>
+    </CAbilEffectTarget>
+    <CAbilTrain id="GatewayTrain">
+        <InfoArray index="Train1" Time="34.44"/>
+        <InfoArray index="Train2" Time="43.05"/>
+        <InfoArray index="Train4" Time="43.05"/>
+        <InfoArray index="Train5" Time="43.05">
+            <Button Requirements="HaveTemplarArchives"/>
+        </InfoArray>
+        <Activity value="UI/TrainingProtoss"/>
+        <Alert value="TrainingCompletePing"/>
+    </CAbilTrain>
+    <CAbilResearch id="DefilerMoundResearch">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Structures"/>
+        <InfoArray index="Research1" Time="86.1" Upgrade="EvolveConsume">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Charge Link="DefilerMoundResearch"/>
+            <Cooldown Link="DefilerMoundResearch"/>
+            <Button DefaultButtonFace="ResearchConsume" State="Restricted" Requirements="EvolveConsume"/>
+        </InfoArray>
+        <InfoArray index="Research2" Time="86.1" Upgrade="EvolvePlague">
+            <Resource index="Minerals" value="200"/>
+            <Resource index="Vespene" value="200"/>
+            <Charge Link="DefilerMoundResearch"/>
+            <Cooldown Link="DefilerMoundResearch"/>
+            <Button DefaultButtonFace="ResearchPlague" State="Restricted" Requirements="EvolvePlague"/>
+        </InfoArray>
+        <InfoArray index="Research3" Time="143.5" Upgrade="ResearchMetasynapticNode">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Charge Link="Abil/InfestationPitResearch"/>
+            <Cooldown Link="Abil/InfestationPitResearch"/>
+            <Button DefaultButtonFace="ResearchMetasynapticNode" State="Restricted" Requirements="EvolveDefilerEnergy"/>
+        </InfoArray>
+        <InfoArray index="Research4">
+            <Charge Link="Abil/InfestationPitResearch"/>
+            <Cooldown Link="Abil/InfestationPitResearch"/>
+        </InfoArray>
+        <InfoArray index="Research5">
+            <Charge Link="Abil/InfestationPitResearch"/>
+            <Cooldown Link="Abil/InfestationPitResearch"/>
+        </InfoArray>
+        <InfoArray index="Research6">
+            <Charge Link="Abil/InfestationPitResearch"/>
+            <Cooldown Link="Abil/InfestationPitResearch"/>
+        </InfoArray>
+        <InfoArray index="Research7">
+            <Charge Link="Abil/InfestationPitResearch"/>
+            <Cooldown Link="Abil/InfestationPitResearch"/>
+        </InfoArray>
+        <InfoArray index="Research8">
+            <Charge Link="Abil/InfestationPitResearch"/>
+            <Cooldown Link="Abil/InfestationPitResearch"/>
+        </InfoArray>
+        <InfoArray index="Research9">
+            <Charge Link="Abil/InfestationPitResearch"/>
+            <Cooldown Link="Abil/InfestationPitResearch"/>
+        </InfoArray>
+        <InfoArray index="Research10">
+            <Charge Link="Abil/InfestationPitResearch"/>
+            <Cooldown Link="Abil/InfestationPitResearch"/>
+        </InfoArray>
+        <InfoArray index="Research11">
+            <Charge Link="Abil/InfestationPitResearch"/>
+            <Cooldown Link="Abil/InfestationPitResearch"/>
+        </InfoArray>
+        <InfoArray index="Research12">
+            <Charge Link="Abil/InfestationPitResearch"/>
+            <Cooldown Link="Abil/InfestationPitResearch"/>
+        </InfoArray>
+        <InfoArray index="Research13">
+            <Charge Link="Abil/InfestationPitResearch"/>
+            <Cooldown Link="Abil/InfestationPitResearch"/>
+        </InfoArray>
+        <InfoArray index="Research14">
+            <Charge Link="Abil/InfestationPitResearch"/>
+            <Cooldown Link="Abil/InfestationPitResearch"/>
+        </InfoArray>
+        <InfoArray index="Research15">
+            <Charge Link="Abil/InfestationPitResearch"/>
+            <Cooldown Link="Abil/InfestationPitResearch"/>
+        </InfoArray>
+        <InfoArray index="Research16">
+            <Charge Link="Abil/InfestationPitResearch"/>
+            <Cooldown Link="Abil/InfestationPitResearch"/>
+        </InfoArray>
+        <InfoArray index="Research17">
+            <Charge Link="Abil/InfestationPitResearch"/>
+            <Cooldown Link="Abil/InfestationPitResearch"/>
+        </InfoArray>
+        <InfoArray index="Research18">
+            <Charge Link="Abil/InfestationPitResearch"/>
+            <Cooldown Link="Abil/InfestationPitResearch"/>
+        </InfoArray>
+        <InfoArray index="Research19">
+            <Charge Link="Abil/InfestationPitResearch"/>
+            <Cooldown Link="Abil/InfestationPitResearch"/>
+        </InfoArray>
+        <InfoArray index="Research20">
+            <Charge Link="Abil/InfestationPitResearch"/>
+            <Cooldown Link="Abil/InfestationPitResearch"/>
+        </InfoArray>
+        <InfoArray index="Research21">
+            <Charge Link="Abil/InfestationPitResearch"/>
+            <Cooldown Link="Abil/InfestationPitResearch"/>
+        </InfoArray>
+        <InfoArray index="Research22">
+            <Charge Link="Abil/InfestationPitResearch"/>
+            <Cooldown Link="Abil/InfestationPitResearch"/>
+        </InfoArray>
+        <InfoArray index="Research23">
+            <Charge Link="Abil/InfestationPitResearch"/>
+            <Cooldown Link="Abil/InfestationPitResearch"/>
+        </InfoArray>
+        <InfoArray index="Research24">
+            <Charge Link="Abil/InfestationPitResearch"/>
+            <Cooldown Link="Abil/InfestationPitResearch"/>
+        </InfoArray>
+        <InfoArray index="Research25">
+            <Charge Link="Abil/InfestationPitResearch"/>
+            <Cooldown Link="Abil/InfestationPitResearch"/>
+        </InfoArray>
+        <InfoArray index="Research26">
+            <Charge Link="Abil/InfestationPitResearch"/>
+            <Cooldown Link="Abil/InfestationPitResearch"/>
+        </InfoArray>
+        <InfoArray index="Research27">
+            <Charge Link="Abil/InfestationPitResearch"/>
+            <Cooldown Link="Abil/InfestationPitResearch"/>
+        </InfoArray>
+        <InfoArray index="Research28">
+            <Charge Link="Abil/InfestationPitResearch"/>
+            <Cooldown Link="Abil/InfestationPitResearch"/>
+        </InfoArray>
+        <InfoArray index="Research29">
+            <Charge Link="Abil/InfestationPitResearch"/>
+            <Cooldown Link="Abil/InfestationPitResearch"/>
+        </InfoArray>
+        <InfoArray index="Research30">
+            <Charge Link="Abil/InfestationPitResearch"/>
+            <Cooldown Link="Abil/InfestationPitResearch"/>
+        </InfoArray>
+        <Activity value="UI/Evolving"/>
+    </CAbilResearch>
+    <CAbilEffectTarget id="MassRecall">
+        <Cost index="0">
+            <Vital index="Energy" value="150"/>
+        </Cost>
+        <CmdButtonArray index="Execute" Requirements="RecallCompleted"/>
+        <Flags index="AllowMovement" value="1"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="Plague">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="PlagueSearch"/>
+        <Cost>
+            <Vital index="Energy" value="150"/>
+        </Cost>
+        <Range value="9"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Plague" Requirements="PlagueCompleted"/>
+        <CursorEffect value="PlagueSearch"/>
+    </CAbilEffectTarget>
+    <CAbilBuild id="ProtossBuild">
+        <InfoArray index="Build1" Time="103.32"/>
+        <InfoArray index="Build2" Time="25.83"/>
+        <InfoArray index="Build3" Time="34.44"/>
+        <InfoArray index="Build4" Time="51.66"/>
+        <InfoArray index="Build5" Time="34.44"/>
+        <InfoArray index="Build6" Time="51.66"/>
+        <InfoArray index="Build7" Time="51.66"/>
+        <InfoArray index="Build8" Time="43.05"/>
+        <InfoArray index="Build9" Unit="FleetBeacon2" Time="51.66">
+            <Button DefaultButtonFace="WarpinArbiterTribunal" State="Restricted" Requirements="HaveStargateandTemplarArchives"/>
+        </InfoArray>
+        <InfoArray index="Build10" Time="60.27"/>
+        <InfoArray index="Build11" Time="51.66"/>
+        <InfoArray index="Build13" Time="25.83"/>
+        <InfoArray index="Build14" Time="68.88"/>
+        <InfoArray index="Build15" Time="51.66"/>
+        <InfoArray index="Build16" Unit="Observatory" Time="25.83">
+            <Button DefaultButtonFace="WarpinObservatory" State="Restricted" Requirements="HaveRoboticsFa"/>
+        </InfoArray>
+        <InfoArray index="Build17" Unit="ShieldBattery" Time="25.83">
+            <Button DefaultButtonFace="WarpinShieldBattery" Requirements="HaveGateway"/>
+        </InfoArray>
+    </CAbilBuild>
+    <CAbilResearch id="RoboticsBayResearch">
+        <InfoArray index="Research2" Time="143.5" Upgrade="GraviticDrive">
+            <Resource index="Minerals" value="200"/>
+            <Resource index="Vespene" value="200"/>
+            <Button DefaultButtonFace="ResearchGraviticDrive" Requirements="LearnGraviticDrive"/>
+        </InfoArray>
+        <InfoArray index="Research3" Time="143.5" Upgrade="IncreasedReaverCapacity">
+            <Resource index="Minerals" value="200"/>
+            <Resource index="Vespene" value="200"/>
+            <Button DefaultButtonFace="ResearchIncreasedReaverCapacity" State="Available" Requirements="IncreasedReaverCapacity"/>
+        </InfoArray>
+        <InfoArray index="Research4" Time="143.5" Upgrade="ScarabDamage">
+            <Resource index="Minerals" value="200"/>
+            <Resource index="Vespene" value="200"/>
+            <Button DefaultButtonFace="ResearchScarabDamage" Requirements="ResearchScarabDamage"/>
+        </InfoArray>
+        <InfoArray index="Research6" Time="0" Upgrade="">
+            <Resource index="Minerals" value="0"/>
+            <Resource index="Vespene" value="0"/>
+            <Button DefaultButtonFace="" State="Available" Requirements=""/>
+        </InfoArray>
+        <Activity value="UI/Upgrading"/>
+    </CAbilResearch>
+    <CAbilTrain id="RoboticsFacilityTrain">
+        <InfoArray index="Train1" Time="51.66" Effect=""/>
+        <InfoArray index="Train2" Time="34.44" Effect="">
+            <Button Requirements="HaveObservatory"/>
+        </InfoArray>
+        <InfoArray index="Train3" Time="60.27">
+            <Button DefaultButtonFace="WarpinReaver"/>
+            <Unit index="0" value="Reaver"/>
+        </InfoArray>
+        <InfoArray index="Train4" Time="0">
+            <Button DefaultButtonFace="" State="Available"/>
+            <Unit index="0" removed="1"/>
+        </InfoArray>
+        <Activity value="UI/Building"/>
+        <Alert value="TrainingCompletePing"/>
+    </CAbilTrain>
+    <!--    <CAbilEffectTarget id="ScannerSweep">-->
+    <!--        <CmdButtonArray index="Execute" Requirements="UseScannerSweep"/>-->
+    <!--    </CAbilEffectTarget>-->
+    <!--    <CAbilEffectTarget id="CalldownMULE">-->
+    <!--        <CmdButtonArray index="Execute" Requirements="UseCalldownMULE"/>-->
+    <!--    </CAbilEffectTarget> -->
+    <CAbilEffectTarget id="ScannerSweep">
+        <CmdButtonArray index="Execute" Requirements="ConnectedtoCC"/>
+    </CAbilEffectTarget>
+    <CAbilResearch id="FactoryTechLabResearch">
+        <InfoArray index="Research1" Time="68.88" Upgrade="SiegeTechSC2BW">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Charge Link="ResearchSiegeMode"/>
+            <Cooldown Link="ResearchSiegeMode"/>
+        </InfoArray>
+        <InfoArray index="Research2" Time="0" Upgrade="">
+            <Resource index="Minerals" value="0"/>
+            <Resource index="Vespene" value="0"/>
+            <Button DefaultButtonFace="" State="Available" Requirements=""/>
+        </InfoArray>
+        <InfoArray index="Research3" Time="114.8" Upgrade="AresClassWeaponsSystem">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Charge Link="ResearchCharonBoosters"/>
+            <Cooldown Link="ResearchCharonBoosters"/>
+            <Button DefaultButtonFace="CharonBoosters" State="Restricted" Requirements="LearnCharonBoosters"/>
+        </InfoArray>
+        <InfoArray index="Research6" Time="68.88" Upgrade="ResearchSpiderMines">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Charge Link="Research Spider Mines"/>
+            <Cooldown Link="Research Spider Mines"/>
+            <Button DefaultButtonFace="ResearchSpiderMinesSC1" State="Restricted" Requirements="ResearchSpiderMines"/>
+        </InfoArray>
+        <InfoArray index="Research7" Time="86.1" Upgrade="IonThrusters">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="ResearchIonThrusters" State="Restricted" Requirements="ResearchIonThrusters"/>
+        </InfoArray>
+        <Activity value="UI/Upgrading"/>
+    </CAbilResearch>
+    <CAbilTrain id="FactoryTrain">
+        <InfoArray index="Train2" Time="43.05"/>
+        <InfoArray index="Train7" Time="25.83">
+            <Button DefaultButtonFace="Vulture" State="Restricted"/>
+            <Unit value="Vulture"/>
+        </InfoArray>
+        <InfoArray index="Train8" Time="34.44">
+            <Button DefaultButtonFace="Goliath" State="Restricted" Requirements="HaveArmory"/>
+            <Unit value="Goliath"/>
+        </InfoArray>
+        <InfoArray index="Train9" Time="30"/>
+        <Alert value="TrainingCompletePing"/>
+    </CAbilTrain>
+    <CAbilTrain id="FactoryTrainSC2BW" parent="FactoryTrain">
+        <Name value="Abil/Name/FactoryTrainSC2BW"/>
+        <InfoArray index="Train7" Time="0">
+            <Button DefaultButtonFace=""/>
+            <Unit index="0" removed="1"/>
+            <Unit index="1" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train30" Time="25.83">
+            <Button DefaultButtonFace="Vulture"/>
+            <Unit value="Vulture"/>
+        </InfoArray>
+    </CAbilTrain>
+    <CAbilResearch id="HydraliskDenResearch">
+        <InfoArray index="Research1" Time="86.1" Upgrade="hydraliskspeed2">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="MuscularAugments" State="Restricted" Requirements="LearnMuscularAugments22"/>
+        </InfoArray>
+        <InfoArray index="Research2" Time="103.32" Upgrade="EvolveLurkerAspect">
+            <Resource index="Minerals" value="200"/>
+            <Resource index="Vespene" value="200"/>
+            <Button DefaultButtonFace="LurkerDen" State="Restricted" Requirements="HaveLurkerDen"/>
+        </InfoArray>
+        <InfoArray index="Research3" Time="86.1"/>
+        <Activity value="UI/Evolving"/>
+    </CAbilResearch>
+    <CAbilTrain id="LarvaTrain">
+        <InfoArray index="Train1" Effect="DroneAlert"/>
+        <InfoArray index="Train2" Time="24.108"/>
+        <InfoArray index="Train3" Time="34.44"/>
+        <InfoArray index="Train4" Time="24.108"/>
+        <InfoArray index="Train5" Time="34.44"/>
+        <InfoArray index="Train6" Time="51.66">
+            <Button DefaultButtonFace="Ultralisk" Requirements="HaveUltraliskCavern"/>
+            <Unit value="Ultralisk"/>
+        </InfoArray>
+        <InfoArray index="Train7" Time="35">
+            <Button DefaultButtonFace="Baneling" Requirements="HaveBanelingNest"/>
+            <Unit index="0" value="Baneling"/>
+        </InfoArray>
+        <InfoArray index="Train8" Time="43.05">
+            <Button DefaultButtonFace="Defiler" State="Restricted" Requirements="HaveDefilerMound"/>
+            <Unit value="Defiler"/>
+        </InfoArray>
+        <InfoArray index="Train9" Time="43.05">
+            <Button DefaultButtonFace="Queen" State="Restricted" Requirements="HaveInfestationPit"/>
+            <Unit value="QueenBW"/>
+        </InfoArray>
+        <InfoArray index="Train10">
+            <Button DefaultButtonFace=""/>
+            <Unit index="0" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train11">
+            <Button DefaultButtonFace=""/>
+            <Unit index="0" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train12">
+            <Button DefaultButtonFace=""/>
+            <Unit index="0" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train13">
+            <Button DefaultButtonFace=""/>
+            <Unit index="0" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train14" Time="25.83">
+            <Resource index="Minerals" value="25"/>
+            <Resource index="Vespene" value="75"/>
+            <Button DefaultButtonFace="Scourge" State="Restricted" Requirements="HaveSpire"/>
+            <Unit value="Scourge"/>
+            <Unit value="Scourge"/>
+        </InfoArray>
+        <InfoArray index="Train15">
+            <Button DefaultButtonFace=""/>
+            <Unit index="0" removed="1"/>
+        </InfoArray>
+        <Alert value="TrainingCompletePing"/>
+    </CAbilTrain>
+    <CAbilResearch id="SpawningPoolResearch">
+        <InfoArray index="Research1" Time="86.1"/>
+        <InfoArray index="Research2" Time="86.1"/>
+        <Activity value="UI/Evolving"/>
+    </CAbilResearch>
+    <CAbilTrain id="StargateTrain">
+        <InfoArray index="Train1" Time="34.44" Effect=""/>
+        <InfoArray index="Train2" Time="137.76">
+            <Button DefaultButtonFace="WarpinArbiter" State="Restricted" Requirements="HaveArbiterTribunal"/>
+            <Unit value="Arbiter"/>
+        </InfoArray>
+        <InfoArray index="Train3" Time="120.54"/>
+        <InfoArray index="Train6" Time="80"/>
+        <InfoArray index="Train7" Time="68.88">
+            <Button DefaultButtonFace="WarpInScout"/>
+            <Unit value="Scout"/>
+        </InfoArray>
+        <InfoArray index="Train8" Time="34.44">
+            <Button DefaultButtonFace="Phoenix"/>
+            <Unit value="Phoenix"/>
+        </InfoArray>
+        <Activity value="UI/TrainingProtoss"/>
+        <Alert value="TrainingCompletePing"/>
+    </CAbilTrain>
+    <CAbilTrain id="StargateTrainSC2BW" parent="StargateTrain">
+        <Name value="Abil/Name/StargateTrainSC2BW"/>
+        <InfoArray index="Train2">
+            <Unit index="0" value="Arbiter"/>
+            <Unit index="1" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train5" Time="80" Effect="">
+            <Button DefaultButtonFace="" State="Available"/>
+            <Unit index="0" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train8" Time="123.5385">
+            <Button DefaultButtonFace="Carrier" Requirements="HaveFleetBeacon">
+                <Flags index="ToSelection" value="1"/>
+            </Button>
+            <Unit index="0" value="Carrier"/>
+        </InfoArray>
+        <InfoArray index="Train9" Time="0" Effect="">
+            <Button DefaultButtonFace=""/>
+            <Unit index="0" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train10" Time="0" Effect="">
+            <Button DefaultButtonFace="" Requirements=""/>
+            <Unit index="0" removed="1"/>
+        </InfoArray>
+    </CAbilTrain>
+    <CAbilResearch id="StarportTechLabResearch">
+        <InfoArray index="Research2" Time="103.32" Upgrade="ResearchEMPShockwave">
+            <Resource index="Minerals" value="200"/>
+            <Resource index="Vespene" value="200"/>
+            <Button DefaultButtonFace="ResearchEMPShockwave" State="Restricted" Requirements="ResearchEMP"/>
+        </InfoArray>
+        <InfoArray index="Research10" Time="86.1" Upgrade="WraithCloak">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="ResearchCloakingField" State="Restricted" Requirements="LearnCloakingField"/>
+        </InfoArray>
+        <InfoArray index="Research11" Time="143.5" Upgrade="WraithApolloReactor">
+            <Resource index="Minerals" value="200"/>
+            <Resource index="Vespene" value="200"/>
+            <Button DefaultButtonFace="ResearchWraithEnergyUpgrade" Requirements="LearnApolloReactor"/>
+        </InfoArray>
+        <Activity value="UI/Upgrading"/>
+    </CAbilResearch>
+    <CAbilTrain id="StarportTrain">
+        <InfoArray index="Train1" Time="43.05">
+            <Button Requirements="HaveAttachedControlTower"/>
+        </InfoArray>
+        <InfoArray index="Train4" Time="114.513">
+            <Button Requirements="HaveScienceFacilitywithAttachedPhysicsLab"/>
+        </InfoArray>
+        <InfoArray index="Train5" Time="43.05"/>
+        <InfoArray index="Train6" Time="51.66">
+            <Button DefaultButtonFace="Wraith"/>
+            <Unit value="Wraith"/>
+        </InfoArray>
+        <InfoArray index="Train7" Time="68.88">
+            <Button DefaultButtonFace="BuildScienceVessel" Requirements="HaveScienceFacilityandControlTower"/>
+            <Unit value="ScienceVessel"/>
+        </InfoArray>
+        <InfoArray index="Train8" Time="43.05">
+            <Button DefaultButtonFace="BuildValkyrie" State="Restricted" Requirements="HaveArmoryandAttachedControlTower"/>
+            <Unit value="VikingFighter"/>
+        </InfoArray>
+        <Activity value="UI/Building"/>
+        <Alert value="TrainingCompletePing"/>
+    </CAbilTrain>
+    <CAbilEffectTarget id="StasisField">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="StasisFieldSearch"/>
+        <Cost>
+            <Vital index="Energy" value="100"/>
+        </Cost>
+        <Range value="9"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="UseStasisField" Requirements="StasisCompleted"/>
+        <CursorEffect value="StasisFieldSearch"/>
+        <Flags index="AllowMovement" value="1"/>
+    </CAbilEffectTarget>
+    <CAbilEffectInstant id="Stimpack"/>
+    <CAbilMorph id="MorphBuildingCreepColonySunken">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SpineCrawler" Requirements="HaveSpawningPool"/>
+        <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
+        <ActorKey value="CreepColonyBuild"/>
+        <Flags index="BestUnit" value="1"/>
+        <Flags index="Birth" value="1"/>
+        <Flags index="DisableAbils" value="1"/>
+        <Flags index="FastBuild" value="1"/>
+        <Flags index="Interruptible" value="1"/>
+        <Flags index="Produce" value="1"/>
+        <Flags index="ShowProgress" value="1"/>
+        <Cost>
+            <Resource index="Minerals" value="50"/>
+            <Charge Link="UpgradetoSunken"/>
+            <Cooldown Link="UpgradetoSunken"/>
+        </Cost>
+        <InfoArray Score="1" Unit="SpineCrawler">
+            <SectionArray index="Abils">
+                <DurationArray index="Delay" value="17.22"/>
+            </SectionArray>
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="17.22"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="17.22"/>
+            </SectionArray>
+        </InfoArray>
+        <Alert value="MorphComplete_Zerg"/>
+        <Activity value="UI/Mutating"/>
+    </CAbilMorph>
+    <CAbilEffectInstant id="UnknownAbility">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+    </CAbilEffectInstant>
+    <CAbilMorph id="Unsiege">
+        <InfoArray index="0" Unit="SiegeTank" RandomDelayMax="0.5">
+            <SectionArray index="Abils">
+                <DurationArray index="Delay" value="3.5417"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilMorph id="UpgradeToOrbital">
+        <CmdButtonArray index="Execute" Requirements="HaveAcademyandCovertOps"/>
+        <Cost>
+            <Resource index="Minerals" value="50"/>
+            <Resource index="Vespene" value="50"/>
+        </Cost>
+        <InfoArray index="0" Score="1" Unit="OrbitalCommand">
+            <SectionArray index="Abils">
+                <DurationArray index="Delay" value="40"/>
+            </SectionArray>
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="40"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="40"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilEffectTarget id="VulturePatrol">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="Null"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="MovePatrol"/>
+        <Flags index="BestUnit" value="0"/>
+    </CAbilEffectTarget>
+    <CAbilMorph id="VultureSpiderMineBurrow">
+        <InfoArray Unit="SpiderMineBurrowed">
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="1.5"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilMorph id="VultureSpiderMineUnburrow">
+        <InfoArray Unit="SpiderMine">
+            <SectionArray index="Abils">
+                <DurationArray index="Delay" value="1"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="0.06"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilEffectTarget id="UseSpiderMinesTarget">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="SpawnSpiderMineSet"/>
+        <Flags index="BestUnit" value="0"/>
+        <Cost>
+            <Charge>
+                <CountMax value="3"/>
+                <CountStart value="3"/>
+                <CountUse value="1"/>
+                <Link value="Abil/VultureSpiderMines"/>
+                <Location value="Unit"/>
+            </Charge>
+            <Cooldown Link="Abil/VultureSpiderMines" Location="Unit"/>
+        </Cost>
+        <Placeholder value="SpiderMine"/>
+        <Range value="0.1"/>
+        <Arc value="360"/>
+        <CastIntroTime value="0.25"/>
+        <Marker Link="Abil/VultureSpiderMines"/>
+        <UseMarkerArray index="Approach" value="0"/>
+        <UseMarkerArray index="Prep" value="0"/>
+        <UseMarkerArray index="Channel" value="0"/>
+        <AINotifyEffect value="VultureSpiderMines"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SpiderMine" State="Restricted" Requirements="UseResearchSpiderMines"/>
+        <RangeSlop value="0"/>
+        <CastOutroTime value="0.4"/>
+        <CancelableArray index="Approach" value="1"/>
+        <CancelableArray index="Prep" value="1"/>
+        <CancelableArray index="Cast" value="1"/>
+        <CancelableArray index="Channel" value="1"/>
+        <CancelableArray index="Finish" value="1"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="Yamato">
+        <Cost index="0">
+            <Vital index="Energy" value="150"/>
+        </Cost>
+    </CAbilEffectTarget>
+    <CAbilBuild id="ZergBuild">
+        <InfoArray index="Build1" Time="103.32"/>
+        <InfoArray index="Build2" Unit="CreepColony" Time="17.22">
+            <Button Requirements="HaveHatchery"/>
+        </InfoArray>
+        <InfoArray index="Build3" Time="34.44">
+            <Resource index="Minerals" value="50"/>
+        </InfoArray>
+        <InfoArray index="Build4" Time="68.88"/>
+        <InfoArray index="Build5" Time="34.44"/>
+        <InfoArray index="Build6" Time="34.44">
+            <Button Requirements="HaveSpawningPool"/>
+        </InfoArray>
+        <InfoArray index="Build7" Time="103.32"/>
+        <InfoArray index="Build8" Time="68.88"/>
+        <InfoArray index="Build9" Time="51.66"/>
+        <InfoArray index="Build10" Time="34.44">
+            <Button Requirements="HaveHive"/>
+        </InfoArray>
+        <InfoArray index="Build17" Unit="DefilerMound" Time="51.66">
+            <Button DefaultButtonFace="MutateintoDefilerMound" State="Restricted" Requirements="HaveHive"/>
+        </InfoArray>
+    </CAbilBuild>
+    <CAbilResearch id="evolutionchamberresearch">
+        <InfoArray index="Research1" Time="229.6"/>
+        <InfoArray index="Research2" Time="257.152"/>
+        <InfoArray index="Research3" Time="284.704"/>
+        <InfoArray index="Research4" Time="229.6"/>
+        <InfoArray index="Research5" Time="257.152"/>
+        <InfoArray index="Research6" Time="284.704"/>
+        <InfoArray index="Research7" Time="229.6"/>
+        <InfoArray index="Research8" Time="257.152"/>
+        <InfoArray index="Research9" Time="284.704"/>
+        <InfoArray index="Research11" Time="80"/>
+        <Activity value="UI/Evolving"/>
+    </CAbilResearch>
+    <CAbilEffectTarget id="heal">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Flags index="NoDeceleration" value="1"/>
+        <Flags index="ReExecutable" value="1"/>
+        <Flags index="Smart" value="1"/>
+        <Flags index="WaitToSpend" value="0"/>
+        <Flags index="UpdateChargesOnLevelChange" value="0"/>
+        <TargetFilters value="Biological,Visible;Self,Enemy,Structure,Missile,Uncommandable,Dead,Hidden,Invulnerable"/>
+        <TargetSorts RequestCount="1">
+            <SortArray value="TSAlliancePassive"/>
+            <SortArray value="TSLifeFraction"/>
+            <SortArray value="TSDistance"/>
+        </TargetSorts>
+        <Range value="0.75"/>
+        <RangeSlop value="0.5"/>
+        <Arc value="14.9963"/>
+        <SmartValidatorArray value="healSmartTargetFilters"/>
+        <AutoCastAcquireLevel value="Defensive"/>
+        <AutoCastFilters value="Visible;Neutral,Enemy,Missile,Stasis,Dead,Invulnerable"/>
+        <AutoCastRange value="6"/>
+        <AutoCastValidatorArray value="healCasterMinEnergy"/>
+        <UseMarkerArray index="Approach" value="0"/>
+        <UseMarkerArray index="Prep" value="0"/>
+        <DefaultError value="RequiresHealTarget"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Heal"/>
+        <AcquireAttackers value="1"/>
+    </CAbilEffectTarget>
+    <CAbilQueue id="que1Addon">
+        <EditorCategories value="Race:Neutral,AbilityorEffectType:Structures"/>
+        <QueueSize value="1"/>
+    </CAbilQueue>
+</Catalog>

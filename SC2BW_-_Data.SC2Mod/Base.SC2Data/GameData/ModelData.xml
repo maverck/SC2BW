@@ -1,0 +1,847 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CModel id="ATALaserBatteryLMWeapon">
+        <ScaleMax value="2.000000,2.000000,2.000000"/>
+        <ScaleMin value="2.000000,2.000000,2.000000"/>
+    </CModel>
+    <CModel id="AcidSpore" parent="BuffFX">
+        <Model value="Assets\Effects\Zerg\FungalGrowth\FungalGrowth.m3"/>
+    </CModel>
+    <CModel id="AlarmLight">
+        <Model value="Assets\UI\Feedback\PingArrow\PingArrow.m3"/>
+        <VariationCount value="1"/>
+        <ScaleMax value="3.000000,3.000000,3.000000"/>
+        <ScaleMin value="3.000000,3.000000,3.000000"/>
+    </CModel>
+    <CModel id="ArbiterAttackLM" parent="MissileFX">
+        <Model value="Assets\Effects\Protoss\ArcadePlasmaMissile\ArcadePlasmaMissile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Lighting value="ATALaserBatteryLMWeapon"/>
+    </CModel>
+    <CModel id="Arbiter">
+        <Model value="Assets\Units\Protoss\Arbiter\Arbiter0.2.m3"/>
+        <ScaleMax value="2.000000,2.000000,2.000000"/>
+        <ScaleMin value="2.000000,2.000000,2.000000"/>
+    </CModel>
+    <CModel id="ArbiterAttackImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Protoss\DragoonMissileImpact\DragoonMissileImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Lighting value="BattlecruiserAirAttackImpact"/>
+    </CModel>
+    <CModel id="Battlecruiser">
+        <Model value="Assets\Units\Terran\Battlecruiser\BehemothBattlecruiserCampaign.m3"/>
+        <AttachProps index="2" Id="Ref_Weapon 09">
+            <Keys index="CustomA" value="0"/>
+            <Keys index="SetA" value="1"/>
+        </AttachProps>
+        <AttachProps index="3" Id="Ref_Weapon 10">
+            <Keys index="SetA" value="2"/>
+        </AttachProps>
+    </CModel>
+    <CModel id="BroodLord">
+        <Model value="Assets\Units\Zerg\Guardian\Guardian.m3"/>
+    </CModel>
+    <CModel id="BroodLordDeath">
+        <Model value="Assets\Units\Zerg\GuardianDeath\GuardianDeath.m3"/>
+        <LowQualityModel value=""/>
+        <VariationCount value="1"/>
+        <AnimSpeed value="2.000000"/>
+    </CModel>
+    <CModel id="Carrier">
+        <Model value="Assets\Units\Protoss\Carrier\CarrierNew.m3"/>
+        <ScaleMax value="0.500000,0.500000,0.500000"/>
+        <ScaleMin value="0.500000,0.500000,0.500000"/>
+        <SelectionRadius value="3.000000"/>
+    </CModel>
+    <CModel id="CarrierDeath">
+        <Model value="Assets\Units\Protoss\ScoutDeath\ScoutDeath.m3"/>
+        <ScaleMax value="3.000000,3.000000,3.000000"/>
+        <ScaleMin value="3.000000,3.000000,3.000000"/>
+    </CModel>
+    <CModel id="CommandCenterPlacement">
+        <ScaleMax value="0.700000,0.750000,0.750000"/>
+        <ScaleMin value="0.700000,0.750000,0.750000"/>
+    </CModel>
+    <CModel id="CreepColonyBuild" parent="ZergBuildingBuild3x3">
+        <Radius value="2.000000"/>
+        <ScaleMax value="0.550000,0.550000,0.800000"/>
+        <ScaleMin value="0.550000,0.550000,0.800000"/>
+        <SelectionRadius value="2.500000"/>
+        <ShadowRadius value="2.500000"/>
+    </CModel>
+    <CModel id="DarkShrine">
+        <Model value="Assets\Buildings\Protoss\ShieldBattery\ShieldBattery.m3"/>
+        <AttachProps index="0" removed="1"/>
+    </CModel>
+    <CModel id="DarkShrineBirth">
+        <ScaleMax value="1.300000,1.300000,0.250000"/>
+        <ScaleMin value="1.300000,1.300000,0.250000"/>
+    </CModel>
+    <CModel id="DarkShrineDeath">
+        <ScaleMax value="1.300000,1.300000,0.250000"/>
+        <ScaleMin value="1.300000,1.300000,0.250000"/>
+    </CModel>
+    <CModel id="DarkShrinePlacement">
+        <ScaleMax value="1.300000,1.300000,0.250000"/>
+        <ScaleMin value="1.300000,1.300000,0.250000"/>
+    </CModel>
+    <CModel id="DefensiveMatrixModel">
+        <ScaleMax value="0.250000,0.250000,0.250000"/>
+        <ScaleMin value="0.250000,0.250000,0.250000"/>
+    </CModel>
+    <CModel id="FeedbackImpact">
+        <Model value="Assets\Effects\Zerg\KerriganRespawnImpact\KerriganRespawnImpact.m3"/>
+    </CModel>
+    <CModel id="FusionCore">
+        <Model value="Assets\Buildings\Terran\TechLabEx1\TechLabEx1.m3"/>
+        <SelectionRadius value="1.000000"/>
+        <ShadowRadius value="1.000000"/>
+    </CModel>
+    <CModel id="FusionCoreDeath">
+        <Model value="Assets\Buildings\Terran\TechLabDeathEx1\TechLabDeathEx1.m3"/>
+        <LowQualityModel value="TechLabDeath"/>
+        <SelectionRadius value="1.000000"/>
+        <ShadowRadius value="1.000000"/>
+    </CModel>
+    <CModel id="Gateway">
+        <ScaleMax value="0.900000,0.900000,0.800000"/>
+        <ScaleMin value="0.900000,0.900000,0.800000"/>
+    </CModel>
+    <CModel id="GatewayBirth">
+        <ScaleMax value="0.900000,0.900000,0.800000"/>
+        <ScaleMin value="0.900000,0.900000,0.800000"/>
+    </CModel>
+    <CModel id="GatewayPlacement">
+        <ScaleMax value="0.900000,0.900000,0.800000"/>
+        <ScaleMin value="0.900000,0.900000,0.800000"/>
+    </CModel>
+    <CModel id="GatewaySplat">
+        <ScaleMax value="0.900000,0.900000,0.800000"/>
+        <ScaleMin value="0.900000,0.900000,0.800000"/>
+    </CModel>
+    <CModel id="Goliath" parent="Unit" Race="Terran">
+        <AttachProps Id="Ref_TurretZ">
+            <Keys index="Turret" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon">
+            <Keys index="SetA" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 01">
+            <Keys index="SetA" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 02">
+            <Keys index="SetB" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 03">
+            <Keys index="SetB" value="2"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 04">
+            <Keys index="SetB" value="4"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 05">
+            <Keys index="SetB" value="1"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 06">
+            <Keys index="SetB" value="3"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 07">
+            <Keys index="SetB" value="5"/>
+        </AttachProps>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraHigh09"/>
+        <Radius value="0.650000"/>
+        <ScaleMax value="0.650000,0.650000,0.650000"/>
+        <ScaleMin value="0.650000,0.650000,0.650000"/>
+        <SelectionRadius value="0.999700"/>
+        <ShadowRadius value="0.999700"/>
+        <TechPurchaseCamera value="TechPurchaseGoliath"/>
+        <TextureDeclares Prefix="Goliath_">
+            <Adaptions TriggerOnSubstring="_Diffuse" Slot="main"/>
+            <Adaptions TriggerOnSubstring="_Specular" Slot="main"/>
+        </TextureDeclares>
+        <UnitGlossaryCamera value="Star2CameraHigh09"/>
+        <Variations Probability="1">
+            <TextureExpressionsForEditor Slot="main" Expression="RequireAll diffuse"/>
+        </Variations>
+    </CModel>
+    <CModel id="GoliathAWeapon">
+        <Model value="Assets\Effects\Terran\GoliathAirMissile\GoliathAirMissile.m3"/>
+    </CModel>
+    <CModel id="GoliathAWeaponU">
+        <Model value="Assets\Effects\Terran\ValkyrieMissile\ValkyrieMissile.m3"/>
+    </CModel>
+    <CModel id="GoliathAWeaponU2">
+        <Model value="Assets\Effects\Terran\ValkyrieMissile\ValkyrieMissile.m3"/>
+    </CModel>
+    <CModel id="GoliathDeath" parent="UnitDeath" Race="Terran">
+        <LowQualityModel value="TerranMediumUnitDeathLow"/>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="GoliathDeathFXA"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+            <Payload value="Goliath_DeathFXA"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="GoliathDeathFXA"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+            <Payload value="Goliath_DeathFXA"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="GoliathDeathFXB"/>
+            <Type value="Sound"/>
+            <Time value="2.000000"/>
+            <Payload value="Goliath_DeathFXB"/>
+        </Events>
+        <Events>
+            <Anim value="Death,02"/>
+            <Name value="GoliathDeathFXB"/>
+            <Type value="Sound"/>
+            <Time value="0.870000"/>
+            <Payload value="Goliath_DeathFXB"/>
+        </Events>
+        <Occlusion value="Show"/>
+        <SelectionRadius value="0.999700"/>
+        <ShadowRadius value="0.999700"/>
+        <TextureDeclares Prefix="Goliath_">
+            <Adaptions TriggerOnSubstring="_Diffuse" Slot="main"/>
+            <Adaptions TriggerOnSubstring="_Specular" Slot="main"/>
+        </TextureDeclares>
+    </CModel>
+    <CModel id="GoliathPortrait" parent="FXAPortrait" Race="Terran">
+        <Image value="Assets\Textures\goliathportrait_static.dds"/>
+    </CModel>
+    <CModel id="HitTestSphere">
+        <Model value="Assets\Units\Test\HitTestSphere\HitTestSphere.m3"/>
+    </CModel>
+    <CModel id="DragoonDeath" parent="UnitDeath" Race="Protoss">
+        <Model value="Assets\Models\dragoondeath\dragoondeath.m3"/>
+        <Occlusion value="Show"/>
+        <VariationCount value="2"/>
+        <AnimSpeed value="2.000000"/>
+    </CModel>
+    <CModel id="Infestation" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Zerg\InfestationCommandCenter\InfestationCommandCenter.m3"/>
+    </CModel>
+    <CModel id="Lurker" parent="Unit" Race="Zerg">
+        <Model value="Assets\Units\Zerg\Lurker\BW-Lurker.m3"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid07"/>
+        <Radius value="0.700000"/>
+        <ScaleMax value="1.100000,1.100000,1.100000"/>
+        <ScaleMin value="1.100000,1.100000,1.100000"/>
+        <SelectionRadius value="0.590500"/>
+        <ShadowRadius value="0.900000"/>
+        <SquibTypeDefault value="Flesh"/>
+        <TechPurchaseCamera value="Star2CameraMid07"/>
+        <UnitGlossaryCamera value="Star2CameraMid07"/>
+    </CModel>
+    <CModel id="MedicPortrait" parent="FXAPortrait" Race="Terran"/>
+    <CModel id="Medivac">
+        <Model value="Assets\Units\Terran\Dropship\Dropship.m3"/>
+    </CModel>
+    <CModel id="MindControlImpact"/>
+    <CModel id="MaelstromImpact"/>
+    <CModel id="ObservatoryPlacement" parent="Building" Race="Protoss">
+        <Model value="Assets\Buildings\Protoss\Observatory\ObservatoryPlacement.m3"/>
+        <Lighting value="RoboticsBay"/>
+        <SelectionLayer value="3"/>
+        <SelectionRadius value="1.500000"/>
+        <ShadowRadius value="1.000000"/>
+    </CModel>
+    <CModel id="PhysicsExplosionSmallStrong">
+        <Model value="Assets\Models\forceEffect\forceEffect.m3"/>
+    </CModel>
+    <CModel id="Reactor">
+        <Model value="Assets\Buildings\Terran\ControlTower\ControlTower.m3"/>
+    </CModel>
+    <CModel id="ReactorPlacement">
+        <Model value="Assets\Buildings\Terran\ControlTower\ControlTowerPlacement.m3"/>
+    </CModel>
+    <CModel id="RestorationImpact">
+        <Model value="Assets\Effects\Protoss\BlinkIn\BlinkIn.m3"/>
+    </CModel>
+    <CModel id="OpticalFlareImpact">
+        <Model value="Assets\Effects\Terran\MissileTurretMissileImpact\MissileTurretMissileImpact.m3"/>
+    </CModel>
+    <CModel id="ScienceVesselPortrait" parent="FXAPortrait" Race="Terran"/>
+    <CModel id="SiegeTankLightTest">
+        <Model value="Assets\testlight.m3"/>
+    </CModel>
+    <CModel id="SpiderMineExplosion">
+        <ScaleMax value="0.750000,0.750000,0.750000"/>
+        <ScaleMin value="0.750000,0.750000,0.750000"/>
+        <LowQualityModel value=""/>
+    </CModel>
+    <CModel id="SpiderMineExplosion2" parent="OneShotSpellFX">
+        <Model value="Assets\Effects\Terran\TerranSmallUnitDeath\TerranSmallUnitDeath.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Occlusion value="Show"/>
+        <ScaleMax value="0.150000,0.150000,0.150000"/>
+        <ScaleMin value="0.150000,0.150000,0.150000"/>
+        <SelectionRadius value="2.000000"/>
+        <ShadowRadius value="2.000000"/>
+    </CModel>
+    <CModel id="SpineCrawler">
+        <Model value="Assets\Units\Zerg\PrimalSunkenColony\PrimalSunkenColony.m3"/>
+        <ScaleMax value="0.650000,0.650000,0.650000"/>
+        <ScaleMin value="0.650000,0.650000,0.650000"/>
+    </CModel>
+    <CModel id="StarportReactor">
+        <Model value="Assets\Buildings\Terran\ControlTower\ControlTower.m3"/>
+    </CModel>
+    <CModel id="StasisImpact">
+        <Model value="Assets\Effects\Protoss\TimeWarpLaunch\TimeWarpLaunch.m3"/>
+    </CModel>
+    <CModel id="TechLab">
+        <Model value="Assets\Buildings\Terran\CovertOps\CovertOps.m3"/>
+    </CModel>
+    <CModel id="TechLabPlacement">
+        <Model value="Assets\Buildings\Terran\CovertOps\CovertOpsPlacement.m3"/>
+    </CModel>
+    <CModel id="ThorAAAttackImpact">
+        <ScaleMax value="0.750000,0.750000,0.750000"/>
+        <ScaleMin value="0.750000,0.750000,0.750000"/>
+    </CModel>
+    <CModel id="VulturePortrait" parent="FXAPortrait" Race="Terran"/>
+    <CModel id="WraithPortrait" parent="FXAPortrait" Race="Terran"/>
+    <CModel id="LurkerAttackSpike" parent="MissileFX">
+        <Model value="Assets\Effects\Zerg\LurkerMissile\LurkerMissile.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+        <ScaleMax value="1.000000,1.000000,1.750000"/>
+        <ScaleMin value="1.000000,1.000000,1.750000"/>
+    </CModel>
+    <CModel id="MachineShopPlacement">
+        <Model value="Assets\Buildings\Terran\TechReactorPlacement\TechReactorPlacement.m3"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="1.000000"/>
+    </CModel>
+    <CModel id="NukeSiloNova" parent="Building" Race="Terran">
+        <Model value="Assets\Buildings\Terran\Silo\Silo.m3"/>
+        <Occlusion value="Show"/>
+        <Radius value="1.500000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="1.666500"/>
+        <ShadowRadius value="1.666500"/>
+    </CModel>
+    <CModel id="ReaverDeath" parent="UnitDeath" Race="Protoss">
+        <Model value="Assets\Models\reaver_death\reaver_death.m3"/>
+        <Occlusion value="Show"/>
+        <AnimSpeed value="0.500000"/>
+    </CModel>
+    <CModel id="Devourer" parent="Unit" Race="Zerg">
+        <AnimBlendTime value="0.400000"/>
+        <Occlusion value="Show"/>
+        <Radius value="0.850000"/>
+        <SquibTypeDefault value="Flesh"/>
+        <TechPurchaseCamera value="Star2CameraLow08"/>
+        <UnitGlossaryCamera value="Star2CameraLow08"/>
+        <PlanetPanelCamera value="Star2CameraLow08"/>
+        <SelectionOffset value="0.000000,0.000000,-0.700000"/>
+        <SelectionRadius value="1.000000"/>
+        <ShadowRadius value="1.000000"/>
+        <Tipability value="0.750000"/>
+    </CModel>
+    <CModel id="DarkArchon" parent="Portrait" Race="Protoss">
+        <Model value="Assets\Portraits\Protoss\ArchonPortrait\ArchonPortrait.m3"/>
+        <Image value="Assets\Textures\ArchonPortrait_Static.dds"/>
+        <Lighting value="PortraitDarkArchon"/>
+    </CModel>
+    <CModel id="BroodLordAttackImpact">
+        <Model value="Assets\Effects\Zerg\PrimalGuardianMissileImpact\PrimalGuardianMissileImpact.m3"/>
+    </CModel>
+    <CModel id="BroodLordWeapon">
+        <Model value="Assets\Effects\Zerg\PrimalGuardianMissile\PrimalGuardianMissile.m3"/>
+        <AnimSpeed value="5.000000"/>
+    </CModel>
+    <CModel id="CreepTumor">
+        <ScaleMax value="1.750000,1.750000,1.750000"/>
+        <ScaleMin value="1.750000,1.750000,1.750000"/>
+        <Model value="Assets\Buildings\Zerg\CreepColony\GnaCColony.m3"/>
+    </CModel>
+    <CModel id="DefilerMoundBuild" parent="ZergBuildingBuild3x3"/>
+    <CModel id="DefilerMoundDeath" parent="BuildingDeath">
+        <Model value="Assets\Buildings\Zerg\BanelingNestDeath\BanelingNestDeath.m3"/>
+        <LowQualityModel value="ZergLargeBuildingDeathLow"/>
+        <EditorCategories value="Race:Zerg"/>
+        <Lighting value="BanelingNestDeath"/>
+        <Radius value="-1.000000"/>
+        <ScaleMax value="1.000000,1.000000,0.250000"/>
+        <ScaleMin value="1.000000,1.000000,0.250000"/>
+        <SelectionRadius value="0.000000"/>
+        <ShadowRadius value="0.000000"/>
+    </CModel>
+    <CModel id="Consume">
+        <Model value="Assets\Effects\Zerg\UnitStunImpact\UnitStunImpact.m3"/>
+    </CModel>
+    <CModel id="DefilerMound">
+        <Model value="Assets\Buildings\Zerg\BanelingNest\BanelingNest.m3"/>
+        <ScaleMax value="1.000000,1.000000,0.250000"/>
+        <ScaleMin value="1.000000,1.000000,0.250000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="1.500000"/>
+        <ShadowRadius value="1.500000"/>
+    </CModel>
+    <CModel id="DevourerMissile" parent="MissileFX">
+        <Model value="Assets\Effects\Zerg\SlimeMissile\SlimeMissile.m3"/>
+    </CModel>
+    <CModel id="DisruptionWeb" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Protoss\NullField\NullField.m3"/>
+        <ScaleMax value="0.850000,0.850000,0.850000"/>
+        <ScaleMin value="0.850000,0.850000,0.850000"/>
+    </CModel>
+    <CModel id="EMP2Weapon">
+        <Model value="Assets\Effects\Terran\MarauderMissile\MarauderMissile.m3"/>
+    </CModel>
+    <CModel id="Firebat">
+        <Model value="Assets\Units\Terran\Firebat\SC1firebat.m3"/>
+    </CModel>
+    <CModel id="FirebatAttackLaunch">
+        <Model value="Assets\Effects\Terran\FirebatLaunch\FirebatLaunch.m3"/>
+        <ScaleMax value="1.000000,1.000000,1.000000"/>
+        <ScaleMin value="1.000000,1.000000,1.000000"/>
+    </CModel>
+    <CModel id="FleetBeacon2" parent="Building" Race="Protoss">
+        <Model value="Assets\Buildings\Protoss\ArbiterTribunal\ArbiterTribunal.m3"/>
+        <Radius value="1.500000"/>
+        <SquibTypeDefault value="Metal"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="1.200000"/>
+        <ShadowRadius value="1.200000"/>
+        <TextureDeclares Prefix="fleetbecon_">
+            <Adaptions TriggerOnSubstring="_Diffuse" Slot="main"/>
+            <Adaptions TriggerOnSubstring="_Specular" Slot="main"/>
+            <Adaptions TriggerOnSubstring="_Emissive" Slot="main"/>
+        </TextureDeclares>
+        <TextureDeclares Prefix="grad_">
+            <Adaptions Slot="generic02"/>
+        </TextureDeclares>
+    </CModel>
+    <CModel id="FleetBeacon22" parent="Building" Race="Protoss">
+        <Model value="Assets\Buildings\Protoss\ObeliskDeath\ObeliskDeath.m3"/>
+        <Lighting value="FleetBeacon2"/>
+        <Radius value="1.500000"/>
+        <SquibTypeDefault value="Metal"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="1.200000"/>
+        <ShadowRadius value="1.200000"/>
+        <TextureDeclares Prefix="fleetbecon_">
+            <Adaptions TriggerOnSubstring="_Diffuse" Slot="main"/>
+            <Adaptions TriggerOnSubstring="_Specular" Slot="main"/>
+            <Adaptions TriggerOnSubstring="_Emissive" Slot="main"/>
+        </TextureDeclares>
+        <TextureDeclares Prefix="grad_">
+            <Adaptions Slot="generic02"/>
+        </TextureDeclares>
+    </CModel>
+    <CModel id="FleetBeacon222" parent="Building" Race="Protoss">
+        <Model value="Assets\Buildings\Protoss\ArbiterTribunal\ArbiterTribunalPlacement.m3"/>
+        <Lighting value="FleetBeacon2"/>
+        <Radius value="1.500000"/>
+        <SquibTypeDefault value="Metal"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="1.200000"/>
+        <ShadowRadius value="1.200000"/>
+        <TextureDeclares Prefix="fleetbecon_">
+            <Adaptions TriggerOnSubstring="_Diffuse" Slot="main"/>
+            <Adaptions TriggerOnSubstring="_Specular" Slot="main"/>
+            <Adaptions TriggerOnSubstring="_Emissive" Slot="main"/>
+        </TextureDeclares>
+        <TextureDeclares Prefix="grad_">
+            <Adaptions Slot="generic02"/>
+        </TextureDeclares>
+    </CModel>
+    <CModel id="FleetBeacon2222" parent="Building" Race="Protoss">
+        <Model value="Assets\Buildings\Protoss\ObeliskWarpIn\ObeliskWarpIn.m3"/>
+        <Lighting value="FleetBeacon2"/>
+        <Radius value="1.500000"/>
+        <SquibTypeDefault value="Metal"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="1.200000"/>
+        <ShadowRadius value="1.200000"/>
+        <TextureDeclares Prefix="fleetbecon_">
+            <Adaptions TriggerOnSubstring="_Diffuse" Slot="main"/>
+            <Adaptions TriggerOnSubstring="_Specular" Slot="main"/>
+            <Adaptions TriggerOnSubstring="_Emissive" Slot="main"/>
+        </TextureDeclares>
+        <TextureDeclares Prefix="grad_">
+            <Adaptions Slot="generic02"/>
+        </TextureDeclares>
+    </CModel>
+    <CModel id="FungalGrowth">
+        <ScaleMax value="1.500000,1.500000,1.500000"/>
+        <ScaleMin value="1.500000,1.500000,1.500000"/>
+    </CModel>
+    <CModel id="FusionCorePlacement">
+        <Model value="Assets\Buildings\Terran\TechLabPlacement\TechLabPlacement.m3"/>
+    </CModel>
+    <CModel id="GatewayDeath">
+        <ScaleMax value="0.900000,0.900000,0.800000"/>
+        <ScaleMin value="0.900000,0.900000,0.800000"/>
+    </CModel>
+    <CModel id="ImmortalDeath">
+        <Model value="Assets\Models\dragoon\dragoon_death.m3"/>
+        <VariationCount value="1"/>
+        <LowQualityModel value=""/>
+    </CModel>
+    <CModel id="IrradiateEffect">
+        <AnimSpeed value="10.000000"/>
+        <ScaleMax value="1.250000,1.250000,1.250000"/>
+        <ScaleMin value="1.250000,1.250000,1.250000"/>
+        <Model value="Assets\Effects\Zerg\DiseaseCloud\DiseaseCloud.m3"/>
+    </CModel>
+    <CModel id="LockdownEffect" parent="BuffFX">
+        <Model value="Assets\Effects\Terran\LockDown\LockDown.m3"/>
+    </CModel>
+    <CModel id="LockdownMissile" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\MissilePodMissile\MissilePodMissile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="HydraliskGroundAttackImpact">
+        <Model value="Assets\Effects\Zerg\RoachMissileImpact\RoachMissileImpact.m3"/>
+    </CModel>
+    <CModel id="HydraliskGroundAttackLaunch">
+        <ScaleMax value="2.500000,2.500000,2.500000"/>
+        <ScaleMin value="2.500000,2.500000,2.500000"/>
+    </CModel>
+    <CModel id="MachineShop">
+        <Model value="Assets\Buildings\Terran\TechReactor\TechReactor.m3"/>
+        <SelectionRadius value="1.000000"/>
+        <SelectionLayer value="2"/>
+    </CModel>
+    <CModel id="MachineShopAttached">
+        <Model value="Assets\Buildings\Terran\TechReactor\TechReactor.m3"/>
+        <SelectionLayer value="2"/>
+    </CModel>
+    <CModel id="MaelstromEffect" parent="BuffFX">
+        <Model value="Assets\Effects\Protoss\NullifierBeamImpact\NullifierBeamImpact.m3"/>
+        <AnimSpeed value="2.000000"/>
+    </CModel>
+    <CModel id="MarineAttackImpact">
+        <ScaleMax value="2.000000,2.000000,2.000000"/>
+        <ScaleMin value="2.000000,2.000000,2.000000"/>
+    </CModel>
+    <CModel id="Mutalisk">
+        <ScaleMin value="0.660000,0.660000,0.660000"/>
+    </CModel>
+    <CModel id="MutaliskAttackSegment1Impact">
+        <ScaleMax value="1.500000,1.500000,1.500000"/>
+        <ScaleMin value="1.500000,1.500000,1.500000"/>
+    </CModel>
+    <CModel id="MutaliskAttackSegment2Impact">
+        <ScaleMax value="1.500000,1.500000,1.500000"/>
+        <ScaleMin value="1.500000,1.500000,1.500000"/>
+    </CModel>
+    <CModel id="MutaliskAttackSegment3Impact">
+        <ScaleMax value="1.500000,1.500000,1.500000"/>
+        <ScaleMin value="1.500000,1.500000,1.500000"/>
+    </CModel>
+    <CModel id="NeedleSpinesWeapon">
+        <Model value="Assets\Effects\Zerg\HydraliskAttackMissile\SwarmHostSpawnAAMissile.m3"/>
+        <AnimSpeed value="3.000000"/>
+    </CModel>
+    <CModel id="NexusPlacement">
+        <ScaleMax value="1.000000,1.000000,1.000000"/>
+        <ScaleMin value="1.000000,1.000000,1.000000"/>
+    </CModel>
+    <CModel id="OpticalFlareLMWeapon" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\MarauderMissile\MarauderMissile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="ParasiteMissile" parent="MissileFX">
+        <Model value="Assets\Effects\Zerg\CorruptorMissile\CorruptorMissile.m3"/>
+        <AnimSpeed value="0.500000"/>
+        <ScaleMax value="0.500000,0.500000,0.500000"/>
+        <ScaleMin value="0.500000,0.500000,0.500000"/>
+    </CModel>
+    <CModel id="Phoenix">
+        <ScaleMax value="0.650000,0.650000,0.650000"/>
+        <ScaleMin value="0.750000,0.750000,0.750000"/>
+        <SelectionOffset value="0.000000,0.000000,0.000000"/>
+        <Model value="Assets\Units\Protoss\Corsair\corsair0.3.m3"/>
+        <AttachProps index="0" removed="1"/>
+        <AttachProps index="1" removed="1"/>
+    </CModel>
+    <CModel id="PingWarning">
+        <Model value="Assets\UI\Cursors\ProtossCursor1Geo\ProtossCursor1Geo.m3"/>
+    </CModel>
+    <CModel id="PlagueImpact" parent="OneShotSpellFX">
+        <Model value="Assets\Effects\Zerg\FungalInfestationAreaImpact\FungalInfestationAreaImpact.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+        <Lighting value="FungalGrowthImpact"/>
+    </CModel>
+    <CModel id="DarkSwarm" parent="PersistentSpellFX">
+        <Model value="Assets\Models\DarkSwarm\DarkSwarm.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+        <Lighting value="HighTemplarPsiStormModel"/>
+        <ScaleMax value="1.250000,1.250000,1.250000"/>
+        <ScaleMin value="1.250000,1.250000,1.250000"/>
+    </CModel>
+    <CModel id="Comsat" parent="Building" Race="Terran">
+        <Lighting value="Reactor"/>
+        <Radius value="1.000000"/>
+        <SquibTypeDefault value="Metal"/>
+        <ScaleMax value="0.850000,0.850000,0.850000"/>
+        <ScaleMin value="0.850000,0.850000,0.850000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="1.176200"/>
+        <ShadowRadius value="1.176200"/>
+    </CModel>
+    <CModel id="ProtossBuildingBirth">
+        <ScaleMax value="0.650000,0.650000,0.650000"/>
+        <ScaleMin value="0.650000,0.650000,0.650000"/>
+    </CModel>
+    <CModel id="ArbiterDeath" parent="UnitDeath" Race="Protoss">
+        <Model value="Assets\Units\Protoss\Arbiter\Arbiter_Death.m3"/>
+        <Occlusion value="Show"/>
+        <ScaleMax value="0.250000,0.250000,0.250000"/>
+        <ScaleMin value="0.250000,0.250000,0.250000"/>
+    </CModel>
+    <CModel id="DeathModelTest" parent="UnitDeath" Race="Protoss">
+        <Model value="Assets\Reaver_Death.m3"/>
+        <Occlusion value="Show"/>
+        <AnimSpeed value="0.500000"/>
+    </CModel>
+    <CModel id="Reaver" parent="Unit" Race="Protoss">
+        <Occlusion value="Show"/>
+        <SelectionRadius value="0.800000"/>
+        <ShadowRadius value="1.000000"/>
+        <Radius value="0.250000"/>
+        <SquibTypeDefault value="Metal"/>
+        <TechPurchaseCamera value="Star2CameraHigh08"/>
+        <UnitGlossaryCamera value="Star2CameraHigh08"/>
+        <PlanetPanelCamera value="Star2CameraHigh08"/>
+        <Tipability value="0.750000"/>
+        <TipabilityLength value="0.800000"/>
+        <TipabilityWidth value="0.800000"/>
+    </CModel>
+    <CModel id="ReaverScarab" parent="Unit">
+        <Model value="Assets\Effects\Protoss\ArcadePlasmaMissile\ArcadePlasmaMissile.m3"/>
+        <EditorCategories value=""/>
+    </CModel>
+    <CModel id="ReaverScarabImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Protoss\TempestPlasmaMissileImpact\TempestPlasmaMissileImpact.m3"/>
+        <AnimSpeed value="3.000000"/>
+    </CModel>
+    <CModel id="CorsairAttackImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Custom\corsair_attack_impact.m3"/>
+        <Lighting value="ReaverScarabImpact"/>
+        <AnimSpeed value="10.000000"/>
+    </CModel>
+    <CModel id="Observatory" parent="Building" Race="Protoss">
+        <Lighting value="RoboticsBay"/>
+        <SelectionLayer value="3"/>
+        <SelectionRadius value="1.500000"/>
+        <ShadowRadius value="1.000000"/>
+    </CModel>
+    <CModel id="SS_SwarmGuardian">
+        <SelectionOffset value="0.000000,0.000000,-0.500000"/>
+        <Model value="Assets\Units\Zerg\QueenClassic\QueenClassic.m3"/>
+    </CModel>
+    <CModel id="ScannerSweepModel">
+        <Model value="Assets\Effects\Protoss\TimeWarpImpact\TimeWarpImpact.m3"/>
+    </CModel>
+    <CModel id="ScienceFacility">
+        <Occlusion value="Show"/>
+        <SquibTypeDefault value="Metal"/>
+        <ScaleMax value="0.750000,0.750000,0.750000"/>
+        <ScaleMin value="0.750000,0.750000,0.750000"/>
+        <SelectionRadius value="2.000000"/>
+        <ShadowRadius value="2.000000"/>
+    </CModel>
+    <CModel id="ScienceVessel">
+        <ScaleMax value="0.600000,0.600000,0.600000"/>
+        <ScaleMin value="0.600000,0.600000,0.600000"/>
+    </CModel>
+    <CModel id="ScoutPortrait" parent="Portrait" Race="Protoss">
+        <Image value="Assets\Textures\scoutportrait_static.dds"/>
+        <Lighting value="ZealotPortrait"/>
+    </CModel>
+    <CModel id="SpawnBroodlingMissile" parent="MissileFX">
+        <Model value="Assets\Effects\Zerg\GuardianMissile\GuardianMissile.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+        <ScaleMax value="0.500000,1.500000,1.000000"/>
+        <ScaleMin value="0.500000,1.500000,1.000000"/>
+    </CModel>
+    <CModel id="SpiderMine">
+        <SelectionRadius value="0.150000"/>
+        <ShadowRadius value="0.150000"/>
+    </CModel>
+    <CModel id="Stalker">
+        <Model value="Assets\Models\dragoon\dragoon.m3"/>
+        <Lighting value="Immortal"/>
+        <TechPurchaseCamera value="Star2CameraHigh08"/>
+        <UnitGlossaryCamera value="Star2CameraHigh08"/>
+        <PlanetPanelCamera value="Star2CameraHigh08"/>
+        <ScaleMax value="1.000000,1.000000,1.000000"/>
+        <ScaleMin value="1.000000,1.000000,1.000000"/>
+        <SelectionRadius value="0.866400"/>
+        <ShadowRadius value="0.866400"/>
+    </CModel>
+    <CModel id="StalkerAttackImpact">
+        <Model value="Assets\Effects\Protoss\DragoonMissileImpact\DragoonMissileImpact.m3"/>
+        <ScaleMax value="1.500000,1.500000,1.500000"/>
+        <ScaleMin value="1.500000,1.500000,1.500000"/>
+    </CModel>
+    <CModel id="StalkerWeapon">
+        <Model value="Assets\Effects\Protoss\PhotonMissile\PhotonMissile.m3"/>
+        <ScaleMax value="1.500000,1.500000,1.500000"/>
+        <ScaleMin value="1.500000,1.500000,1.500000"/>
+    </CModel>
+    <CModel id="ScienceFacilityPlacement" parent="Placement" Race="Protoss">
+        <Model value="Assets\Buildings\Terran\ScienceFacility\ScienceFacilityPlacement.m3"/>
+        <LowQualityModel value="ScienceFacility"/>
+        <Lighting value="StargatePlacement"/>
+        <ScaleMax value="0.750000,0.750000,0.750000"/>
+        <ScaleMin value="0.750000,0.750000,0.750000"/>
+        <SelectionRadius value="2.000000"/>
+        <ShadowRadius value="2.000000"/>
+    </CModel>
+    <CModel id="StasisField" parent="BuffFX">
+        <Model value="Assets\Effects\Protoss\TractorBeamImpactBubble\TractorBeamImpactBubble.m3"/>
+    </CModel>
+    <CModel id="SunkenColonyAttackImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Zerg\SunkenColonyMissile\SunkenColonyMissile.m3"/>
+    </CModel>
+    <CModel id="TerranAcademy" parent="Building" Race="Terran">
+        <Model value="Assets\Buildings\Terran\Academy\Academy.m3"/>
+        <Radius value="1.500000"/>
+        <ScaleMax value="0.600000,0.600000,0.600000"/>
+        <ScaleMin value="0.600000,0.600000,0.600000"/>
+        <SelectionLayer value="2"/>
+        <SelectionOffset value="0.000000,0.000000,-0.200000"/>
+        <SelectionRadius value="1.600000"/>
+        <ShadowRadius value="1.600000"/>
+        <SquibTypeDefault value="Metal"/>
+    </CModel>
+    <CModel id="TerranAcademyBuild" parent="TerranBuildingBuild">
+        <Radius value="2.000000"/>
+        <ScaleMax value="0.600000,0.600000,0.600000"/>
+        <ScaleMin value="0.600000,0.600000,0.600000"/>
+        <SelectionRadius value="2.000000"/>
+        <ShadowRadius value="2.000000"/>
+    </CModel>
+    <CModel id="TerranAcademyDeath" parent="BuildingDeath">
+        <Model value="Assets\Buildings\Terran\MercCompoundDeath\MercCompoundDeath.m3"/>
+        <LowQualityModel value="GhostAcademyDeathLow"/>
+        <EditorCategories value="Race:Terran"/>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranExplosionLarge"/>
+            <Type value="Sound"/>
+            <Time value="0.966000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="TerranExplosionLarge"/>
+            <Type value="Sound"/>
+            <Time value="0.800000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,02"/>
+            <Name value="TerranExplosionLarge"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+        </Events>
+        <Lighting value="GhostAcademy"/>
+        <Radius value="1.500000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="1.500000"/>
+        <ShadowRadius value="1.500000"/>
+    </CModel>
+    <CModel id="TerranAcademyPlacement">
+        <Model value="Assets\Buildings\Terran\MercCompoundPlacement\MercCompoundPlacement.m3"/>
+        <ScaleMax value="0.600000,0.600000,0.600000"/>
+        <ScaleMin value="0.600000,0.600000,0.600000"/>
+    </CModel>
+    <CModel id="TerranAcademySplat" parent="Splat">
+        <Model value="Assets\Splats\Splat_MercCompound\Splat_MercCompound.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="VikingFighter">
+        <Model value="Assets\Units\Terran\Valkyrie\valkyrie.m3"/>
+        <ScaleMax value="1.000000,1.000000,1.000000"/>
+        <ScaleMin value="1.000000,1.000000,1.000000"/>
+        <SelectionOffset value="0.000000,0.000000,-0.300000"/>
+        <SelectionRadius value="0.400000"/>
+        <ShadowRadius value="0.400000"/>
+    </CModel>
+    <CModel id="VikingFighterDeath">
+        <ScaleMax value="0.750000,0.750000,0.750000"/>
+        <ScaleMin value="0.750000,0.750000,0.750000"/>
+    </CModel>
+    <CModel id="VikingFighterWeapon">
+        <Model value="Assets\Effects\Terran\ValkyrieMissile\ValkyrieMissile.m3"/>
+        <ScaleMax value="1.000000,2.000000,1.000000"/>
+        <ScaleMin value="1.000000,2.000000,1.000000"/>
+    </CModel>
+    <CModel id="WarpPrism">
+        <Model value="Assets\Units\Protoss\Shuttle\shuttleNew.m3"/>
+        <RadiusLoose value="1.000000"/>
+    </CModel>
+    <CModel id="WraithGroundAttackImpact">
+        <ScaleMax value="3.000000,3.000000,3.000000"/>
+        <ScaleMin value="3.000000,3.000000,3.000000"/>
+    </CModel>
+    <CModel id="WraithGroundWeapon">
+        <ScaleMax value="1.500000,1.500000,1.000000"/>
+        <ScaleMin value="1.500000,1.500000,1.000000"/>
+    </CModel>
+    <CModel id="CreepColonyDeath" parent="BuildingDeath" Race="Zerg">
+        <Model value="Assets\Effects\Zerg\ZergBuildingDeath\ZergBuildingDeath.m3"/>
+        <LowQualityModel value="ZergBuildingDeathLow"/>
+        <Lighting value="ZergBuildingDeath"/>
+        <ScaleMax value="0.500000,0.500000,0.500000"/>
+        <ScaleMin value="0.500000,0.500000,0.500000"/>
+    </CModel>
+    <CModel id="Zergling2" parent="Unit" Race="Zerg">
+        <Model value="Assets\Units\Zerg\Defiler\GnaDefilerv1.m3"/>
+        <AttachProps Id="Ref_Weapon Left">
+            <Keys index="Weapon" value="1"/>
+            <Keys index="Work" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon Right">
+            <Keys index="Weapon" value="1"/>
+        </AttachProps>
+        <Occlusion value="Show"/>
+        <Radius value="0.300000"/>
+        <SquibTypeDefault value="Flesh"/>
+        <TechPurchaseCamera value="Star2CameraMid05"/>
+        <UnitGlossaryCamera value="Star2CameraMid05"/>
+        <PlanetPanelCamera value="Star2CameraMid05"/>
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
+        <SelectionRadius value="0.750000"/>
+        <ShadowRadius value="0.750000"/>
+        <Tipability value="0.750000"/>
+        <TipabilityLength value="0.400000"/>
+        <TipabilityWidth value="0.400000"/>
+    </CModel>
+    <CModel id="VultureWeapon" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\GoliathMissile\GoliathMissile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="VultureSpiderMineAttackImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\TerranSmallUnitDeath\TerranSmallUnitDeath.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Lighting value="SpiderMineAttackImpact"/>
+        <LowQualityModel value="VultureSpiderMineAttackImpact"/>
+    </CModel>
+    <CModel id="ScourgePortrait" parent="Portrait" Race="Zerg"/>
+    <CModel id="OvermindPortrait" parent="Portrait" Race="Zerg"/>
+</Catalog>

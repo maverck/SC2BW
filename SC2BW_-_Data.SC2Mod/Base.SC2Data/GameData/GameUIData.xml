@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CGameUI id="Dflt">
+        <LoadingScreenHelp index="32" Text="LoadingScreen/Help32" Race="Zerg"/>
+        <LoadingScreenHelp index="33" Text="LoadingScreen/Help33" Race="Zerg"/>
+        <LoadingScreenHelp Text="LoadingScreen/Help52"/>
+        <LoadingScreenHelp Text="LoadingScreen/Help53"/>
+    </CGameUI>
+</Catalog>

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CMoverMissile id="ATALaserBatteryLMWeapon">
+        <MotionPhases index="0">
+            <Driver value="Guidance"/>
+            <Acceleration value="3200"/>
+            <MaxSpeed value="37.5"/>
+            <ClearanceAcceleration value="75"/>
+            <Outro value="0"/>
+            <ThrowBandYaw value="-360,-360,-360,-360"/>
+            <ThrowBandPitch value="-360,-360,-360,-360"/>
+            <YawPitchRoll value="506.25"/>
+            <PowerslideAngle value="358.9892"/>
+        </MotionPhases>
+    </CMoverMissile>
+    <CMoverMissile id="Arbiter">
+        <HeightMap value="Air"/>
+        <PathMode value="Flying"/>
+        <MotionPhases>
+            <Driver value="Guidance"/>
+            <MinSpeed value="20"/>
+            <MaxSpeed value="20"/>
+            <YawPitchRoll value="5759.6484"/>
+            <PowerslideAngle value="358.9892"/>
+            <Overlays/>
+            <Overlays/>
+        </MotionPhases>
+    </CMoverMissile>
+    <CMoverMissile id="ConsumeDNAFeedback">
+        <MotionPhases>
+            <Driver value="Throw"/>
+            <Acceleration value="3200"/>
+            <MaxSpeed value="7"/>
+            <ArrivalTestType value="2D"/>
+            <BlendType value="Linear"/>
+            <Outro value="1,3.5"/>
+            <ThrowVector value="0,-1,0"/>
+            <ThrowBandYaw value="180,-180,14.9963,-14.9963"/>
+            <ThrowBandPitch value="90,4.9987,-360,-360"/>
+        </MotionPhases>
+    </CMoverMissile>
+    <CMoverMissile id="EMP2Weapon">
+        <MotionPhases index="0">
+            <Driver value="Guidance"/>
+            <Acceleration value="7"/>
+            <MaxSpeed value="18.75"/>
+            <ClearanceAcceleration value="75"/>
+            <Outro value="0"/>
+            <YawPitchRoll value="506.25"/>
+            <PowerslideAngle value="358.9892"/>
+        </MotionPhases>
+    </CMoverMissile>
+    <CMoverMissile id="EMP2Weapon2" parent="MissileDefault">
+        <MotionPhases index="0">
+            <Driver value="Guidance"/>
+            <Acceleration value="3200"/>
+            <MaxSpeed value="10"/>
+            <ClearanceAcceleration value="75"/>
+            <Outro value="-1"/>
+            <YawPitchRoll value="506.25"/>
+            <PowerslideAngle value="358.9892"/>
+        </MotionPhases>
+    </CMoverMissile>
+    <CMoverMissile id="GoliathMissile">
+        <HeightMap value="Air"/>
+        <PathMode value="Flying"/>
+        <MotionPhases>
+            <Driver value="Guidance"/>
+            <Acceleration value="5"/>
+            <Speed value="2"/>
+            <MaxSpeed value="18.75"/>
+            <Outro value="0.56,1.5"/>
+            <Timeout value="10"/>
+            <ThrowBandYaw value="-360,-360,-360,-360"/>
+            <ThrowBandPitch value="-360,-360,-360,-360"/>
+            <YawPitchRoll value="5759.6484"/>
+        </MotionPhases>
+        <MotionPhases>
+            <Driver value="Guidance"/>
+            <Acceleration value="18.75"/>
+            <MaxSpeed value="18.75"/>
+            <Timeout value="10"/>
+            <ThrowBandYaw value="-360,-360,-360,-360"/>
+            <ThrowBandPitch value="-360,-360,-360,-360"/>
+            <YawPitchRoll value="5568.75"/>
+        </MotionPhases>
+    </CMoverMissile>
+    <CMoverFlock id="GroundDumb">
+        <PlacementArray index="Prevent">
+            <Bits index="GroundNoSpawn" value="1"/>
+        </PlacementArray>
+    </CMoverFlock>
+    <CMoverFlock id="Scarab">
+        <HeightMap value="Air"/>
+    </CMoverFlock>
+    <CMoverAvoid id="ScarabSmart"/>
+    <CMoverMissile id="ScoutAirWeaponLeft">
+        <MotionPhases>
+            <Driver value="Throw"/>
+            <Acceleration value="10"/>
+            <Speed value="5"/>
+            <MaxSpeed value="15"/>
+            <Outro value="0.4,0.85"/>
+            <ThrowRotationType value="ThrowForward"/>
+            <ThrowVector value="-0.4,-1,0"/>
+        </MotionPhases>
+        <MotionPhases Outro="1,1.5" ThrowVector="-0.4,-1,0"/>
+        <MotionPhases>
+            <Driver value="Guidance"/>
+            <Acceleration value="60"/>
+            <MaxSpeed value="40"/>
+            <YawPitchRoll value="MAX"/>
+        </MotionPhases>
+    </CMoverMissile>
+    <CMoverMissile id="ScoutAirWeaponRight">
+        <MotionPhases>
+            <Driver value="Throw"/>
+            <Acceleration value="10"/>
+            <Speed value="5"/>
+            <MaxSpeed value="15"/>
+            <Outro value="0.4,0.85"/>
+            <ThrowRotationType value="ThrowForward"/>
+            <ThrowVector value="0.4,-1,0"/>
+        </MotionPhases>
+        <MotionPhases Outro="1,1.5" ThrowVector="0.4,-1,0"/>
+        <MotionPhases Driver="Guidance" MaxSpeed="40" YawPitchRoll="MAX"/>
+    </CMoverMissile>
+    <CMoverMissile id="StalkerWeapon">
+        <MotionPhases index="0">
+            <Driver value="Throw"/>
+            <Acceleration value="0"/>
+            <MinSpeed value="5"/>
+            <MaxSpeed value="5"/>
+            <ClearanceAcceleration value="75"/>
+            <Outro value="0,0.0998"/>
+            <ThrowVector value="0,0,1"/>
+            <YawPitchRoll value="0"/>
+            <PowerslideAngle value="358.9892"/>
+            <Overlays/>
+            <Overlays/>
+        </MotionPhases>
+        <MotionPhases index="1">
+            <Driver value="Guidance"/>
+            <Acceleration value="5"/>
+            <MaxSpeed value="5"/>
+            <Outro value="0,4"/>
+            <ThrowBandYaw value="-360,-360,-360,-360"/>
+            <ThrowBandPitch value="-360,-360,-360,-360"/>
+            <YawPitchRoll value="5568.75"/>
+            <PowerslideAngle value="358.9892"/>
+        </MotionPhases>
+        <MotionPhases>
+            <Driver value="Guidance"/>
+            <Acceleration value="15"/>
+            <MaxSpeed value="18.75"/>
+            <ThrowBandYaw value="-360,-360,-360,-360"/>
+            <ThrowBandPitch value="-360,-360,-360,-360"/>
+            <YawPitchRoll value="5568.75"/>
+            <PowerslideAngle value="358.9892"/>
+        </MotionPhases>
+    </CMoverMissile>
+    <CMoverMissile id="StalkerWeapon2" parent="MissileDefault">
+        <MotionPhases index="0">
+            <Driver value="Guidance"/>
+            <Acceleration value="3200"/>
+            <MaxSpeed value="25"/>
+            <ClearanceAcceleration value="75"/>
+            <Outro value="-1"/>
+            <YawPitchRoll value="506.25"/>
+            <PowerslideAngle value="358.9892"/>
+        </MotionPhases>
+    </CMoverMissile>
+    <CMoverMissile id="Devourer" parent="MissileDefault">
+        <MotionPhases index="0">
+            <Driver value="Guidance"/>
+            <Acceleration value="17.5"/>
+            <MaxSpeed value="37.5"/>
+            <ClearanceAcceleration value="75"/>
+            <Outro value="0"/>
+            <YawPitchRoll value="506.25"/>
+            <PowerslideAngle value="358.9892"/>
+        </MotionPhases>
+    </CMoverMissile>
+    <CMoverMissile id="Valkyrie">
+        <MotionPhases>
+            <Driver value="Guidance"/>
+            <Acceleration value="18"/>
+            <AccelerationRange value="4"/>
+            <MaxSpeed value="18.75"/>
+            <Outro value="0,2"/>
+            <ThrowBandYaw value="-360,-360,-360,-360"/>
+            <ThrowBandPitch value="-360,-360,-360,-360"/>
+            <YawPitchRoll value="5568.75"/>
+            <PowerslideAngle value="358.9892"/>
+            <Overlays/>
+            <Overlays/>
+        </MotionPhases>
+        <MotionPhases PowerslideAngle="358.9892">
+            <Overlays Scale="1,1"/>
+            <Overlays/>
+        </MotionPhases>
+        <MotionOverlays>
+            <Type value="Revolver"/>
+            <RevolverSpeed value="199.6875"/>
+            <RevolverMaxSpeed value="199.6875"/>
+            <RevolverAccel value="0"/>
+        </MotionOverlays>
+        <HeightMap value="Air"/>
+    </CMoverMissile>
+    <CMoverAvoid id="Vulture"/>
+    <CMoverMissile id="WraithGroundLaser">
+        <MotionPhases index="0">
+            <Driver value="Guidance"/>
+            <Acceleration value="3200"/>
+            <MaxSpeed value="37.5"/>
+            <Outro value="0"/>
+            <YawPitchRoll value="719.2968"/>
+        </MotionPhases>
+    </CMoverMissile>
+    <CMoverMissile id="YamatoWeapon">
+        <MotionPhases index="0">
+            <Driver value="Guidance"/>
+            <Acceleration value="3200"/>
+            <MaxSpeed value="18.75"/>
+            <ClearanceAcceleration value="75"/>
+            <Outro value="0"/>
+            <YawPitchRoll value="719.2968"/>
+        </MotionPhases>
+    </CMoverMissile>
+</Catalog>

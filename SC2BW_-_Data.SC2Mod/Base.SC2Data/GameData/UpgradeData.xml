@@ -1,0 +1,2040 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CUpgrade default="1" id="ZergMeleeWeapons">
+        <EffectArray index="4" removed="1"/>
+        <EffectArray index="5" removed="1"/>
+        <EffectArray index="6" removed="1"/>
+        <EffectArray index="7" removed="1"/>
+        <EffectArray index="8" removed="1"/>
+        <EffectArray index="9" removed="1"/>
+        <EffectArray index="10" removed="1"/>
+        <EffectArray index="11" removed="1"/>
+        <EffectArray index="12" removed="1"/>
+        <EffectArray index="13" removed="1"/>
+        <EffectArray index="14" removed="1"/>
+        <AffectedUnitArray index="0" value="Ultralisk"/>
+        <AffectedUnitArray index="1" value="UltraliskBurrowed"/>
+        <AffectedUnitArray index="2" value="Zergling"/>
+        <AffectedUnitArray index="3" value="ZerglingBurrowed"/>
+        <AffectedUnitArray index="4" removed="1"/>
+        <AffectedUnitArray index="5" removed="1"/>
+        <AffectedUnitArray index="6" removed="1"/>
+    </CUpgrade>
+    <CUpgrade default="1" id="ZergMissileWeapons">
+        <EffectArray index="2" Reference="Effect,HydraliskMelee,Amount" Value="1"/>
+        <EffectArray index="3" Reference="Weapon,Lurker,Level" Value="1"/>
+        <EffectArray index="4" Reference="Effect,LurkerU,Amount" Value="2"/>
+        <EffectArray index="5" removed="1"/>
+        <EffectArray index="6" removed="1"/>
+        <EffectArray index="7" removed="1"/>
+        <EffectArray index="8" removed="1"/>
+        <EffectArray index="9" removed="1"/>
+        <EffectArray index="10" removed="1"/>
+        <EffectArray index="11" removed="1"/>
+        <AffectedUnitArray index="2" value="Lurker"/>
+        <AffectedUnitArray index="3" value="LurkerBurrowed"/>
+        <AffectedUnitArray index="4" removed="1"/>
+        <AffectedUnitArray index="5" removed="1"/>
+    </CUpgrade>
+    <CUpgrade id="overlordspeed">
+        <AffectedUnitArray index="1" removed="1"/>
+        <AffectedUnitArray index="2" removed="1"/>
+        <AffectedUnitArray index="3" removed="1"/>
+        <EffectArray index="0" Reference="Unit,Overlord,Speed" Value="1.406200"/>
+        <EffectArray index="1" removed="1"/>
+    </CUpgrade>
+    <CUpgrade id="AnabolicSynthesis">
+        <EffectArray index="0" Reference="Unit,Ultralisk,Speed" Value="1.406200"/>
+    </CUpgrade>
+    <CUpgrade id="Antennae">
+        <Icon value="Assets\Textures\btn-upgrade-zerg-antennae.dds"/>
+        <EffectArray Reference="Unit,Overlord,Sight" Value="2"/>
+        <EditorCategories value="Race:Zerg,UpgradeType:Talents"/>
+        <AffectedUnitArray value="Overlord"/>
+    </CUpgrade>
+    <CUpgrade id="ApialSensors">
+        <Icon value="Assets\Textures\ApialSensors_SC1_Upgrd1.dds"/>
+        <EffectArray Reference="Unit,Scout,Sight" Value="2"/>
+        <EditorCategories value="Race:Protoss,UpgradeType:Talents"/>
+        <AffectedUnitArray value="Scout"/>
+    </CUpgrade>
+    <CUpgrade id="AresClassWeaponsSystem">
+        <Icon value="Assets\Textures\btn-upgrade-terran-charonboosters.dds"/>
+        <EffectArray Reference="Weapon,GoliathA,Range[0]" Value="3"/>
+        <EffectArray Operation="Set" Reference="Effect,GoliathAPersistent,PeriodicEffectArray[0]" Value="GoliathALMU"/>
+        <EffectArray Reference="Weapon,HellfireMissilePackNull,Range" Value="3"/>
+        <AffectedUnitArray value="Goliath"/>
+    </CUpgrade>
+    <CUpgrade id="EvolveLurkerAspect">
+        <Icon value="Assets\Textures\btn-unit-zerg-lurker.dds"/>
+        <Race value="Zerg"/>
+        <EditorCategories value="Race:Zerg,UpgradeType:Talents"/>
+        <AffectedUnitArray value="Lurker"/>
+    </CUpgrade>
+    <CUpgrade id="GhostMoebiusReactor">
+        <EffectArray index="0" Reference="Unit,Ghost,EnergyStart" Value="12"/>
+        <EffectArray Reference="Unit,Ghost,EnergyMax" Value="50"/>
+    </CUpgrade>
+    <CUpgrade id="GraviticDrive">
+        <EffectArray index="0" Reference="Unit,WarpPrism,Speed" Value="1.250000"/>
+    </CUpgrade>
+    <CUpgrade id="GraviticThrusters">
+        <Icon value="Assets\Textures\btn-upgrade-protoss-graviticthrusters.dds"/>
+        <EffectArray Reference="Unit,Scout,Speed[0]" Value="0.937500"/>
+        <AffectedUnitArray value="Scout"/>
+    </CUpgrade>
+    <CUpgrade id="InfestorEnergyUpgrade">
+        <EffectArray index="0" Reference="Unit,QueenBW,EnergyStart" Value="12.5"/>
+        <EffectArray Reference="Unit,QueenBW,EnergyMax" Value="50"/>
+        <AffectedUnitArray value="Queen"/>
+        <EditorCategories value="UpgradeType:Talents"/>
+    </CUpgrade>
+    <CUpgrade id="InterceptorLimit6">
+        <EffectArray Operation="Set" Reference="Abil,CarrierHangar,InfoArray[Ammo1].Button.Requirements" Value="ArmInterceptor8"/>
+        <Icon value="Assets\Textures\BTN-Upgrade-Protoss-GravitonCatapult.dds"/>
+    </CUpgrade>
+    <CUpgrade id="KhaydarinCore">
+        <Flags index="TechTreeCheat" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-protoss-KhaydarinCore.dds"/>
+        <Alert value="ResearchComplete"/>
+        <Race value="Prot"/>
+        <ScoreAmount value="300"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArray Reference="Unit,Arbiter,EnergyMax" Value="50"/>
+        <EffectArray Reference="Unit,Arbiter,EnergyStart" Value="12"/>
+        <EditorCategories value="Race:Protoss,UpgradeType:Talents"/>
+        <AffectedUnitArray value="Arbiter"/>
+    </CUpgrade>
+    <CUpgrade id="BattlecruiserBehemothReactor">
+        <EffectArray index="0" Reference="Unit,Battlecruiser,EnergyStart" Value="12"/>
+        <EffectArray Reference="Unit,Battlecruiser,EnergyMax" Value="50"/>
+    </CUpgrade>
+    <CUpgrade id="CarrierLaunchSpeedUpgrade">
+        <EffectArray index="0" Operation="Set" Reference="Abil,CarrierHangar,InfoArray[Ammo1].Button.Requirements" Value="ArmInterceptor8"/>
+        <EffectArray Operation="Set" Reference="Abil,HangarHardcore,InfoArray[Ammo1].Button.Requirements" Value="ArmInterceptor8"/>
+    </CUpgrade>
+    <CUpgrade id="Charge">
+        <EffectArray index="0" Reference="Unit,Zealot,Speed" Value="1.125000"/>
+    </CUpgrade>
+    <CUpgrade id="EvolveConsume">
+        <Icon value="Assets\Textures\btn-ability-zerg-devour.dds"/>
+        <EditorCategories value="Race:Zerg,UpgradeType:SpellResearch"/>
+        <AffectedUnitArray value="Defiler"/>
+    </CUpgrade>
+    <CUpgrade id="EvolvePlague">
+        <Icon value="Assets\Textures\btn-ability-zerg-plague.dds"/>
+        <EditorCategories value="Race:Zerg,UpgradeType:SpellResearch"/>
+        <AffectedUnitArray value="Defiler"/>
+    </CUpgrade>
+    <CUpgrade id="HallucinationHighTemplar">
+        <Icon value="Assets\Textures\btn-ability-protoss-hallucination-color.dds"/>
+        <Alert value="ResearchComplete"/>
+        <Race value="Prot"/>
+        <ScoreAmount value="300"/>
+        <ScoreResult value="BuildOrder"/>
+        <EditorCategories value="Race:Protoss,UpgradeType:SpellResearch"/>
+        <AffectedUnitArray value="HighTemplar"/>
+    </CUpgrade>
+    <CUpgrade id="HighTemplarKhaydarinAmulet">
+        <EffectArray index="0" Operation="Set" Reference="Unit,HighTemplar,EnergyStart" Value="62.5"/>
+        <EffectArray Operation="Set" Reference="Unit,HighTemplar,EnergyMax" Value="250"/>
+    </CUpgrade>
+    <CUpgrade id="IncreasedReaverCapacity">
+        <Icon value="Assets\Textures\UpgradeReaverCapacity.dds"/>
+        <EffectArray Operation="Set" Reference="Abil,ScarabHanger,InfoArray[Ammo1].Button.Requirements" Value="Lessthan10Scarabs"/>
+        <EffectArray Operation="Set" Reference="Abil,ScarabHangerHardcore,InfoArray[Ammo1].Button.Requirements" Value="Lessthan10Scarabs"/>
+        <EditorCategories value="Race:Protoss,UpgradeType:Talents"/>
+        <AffectedUnitArray value="Reaver"/>
+    </CUpgrade>
+    <CUpgrade id="IonThrusters">
+        <Icon value="Assets\Textures\btn-upgrade-terran-reapernitropacks.dds"/>
+        <EffectArray Reference="Unit,Vulture,Speed" Value="1.671800"/>
+        <EffectArray Reference="Unit,Vulture,Acceleration" Value="2.000000"/>
+        <EffectArray Reference="Unit,Vulture,Deceleration" Value="2.000000"/>
+        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+    </CUpgrade>
+    <CUpgrade id="ArgusJewel">
+        <Flags index="TechTreeCheat" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-protoss-ArgusJewel.dds"/>
+        <Alert value="ResearchComplete"/>
+        <Race value="Prot"/>
+        <ScoreAmount value="300"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArray Reference="Unit,Phoenix,EnergyMax" Value="50"/>
+        <EffectArray Reference="Unit,Phoenix,EnergyStart" Value="12"/>
+        <EditorCategories value="Race:Protoss,UpgradeType:Talents"/>
+        <AffectedUnitArray value="Phoenix"/>
+    </CUpgrade>
+    <CUpgrade id="Lockdown">
+        <Icon value="Assets\Textures\btn-ability-terran-lockdown.dds"/>
+        <EditorCategories value="Race:Terran,UpgradeType:SpellResearch"/>
+        <AffectedUnitArray value="Ghost"/>
+    </CUpgrade>
+    <CUpgrade id="Maelstrom">
+        <Icon value="Assets\Textures\btn-ability-protoss-maelstrom.dds"/>
+        <EditorCategories value="Race:Protoss,UpgradeType:SpellResearch"/>
+        <AffectedUnitArray value="Archon2"/>
+    </CUpgrade>
+    <CUpgrade id="MedicCaduceusReactor">
+        <Flags index="TechTreeCheat" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-caduceusreactor.dds"/>
+        <Alert value="ResearchComplete"/>
+        <Race value="Terr"/>
+        <ScoreAmount value="300"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArray Reference="Unit,Medic,EnergyMax" Value="50"/>
+        <EffectArray Reference="Unit,Medic,EnergyStart" Value="12"/>
+        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+        <AffectedUnitArray value="Medic"/>
+    </CUpgrade>
+    <CUpgrade id="OcularImplants2">
+        <Icon value="Assets\Textures\InterOcImp_Terran_SC1.dds"/>
+        <EffectArray Reference="Unit,Ghost,Sight" Value="2"/>
+        <EffectArray Reference="Abil,TacNukeStrike,Range[0]" Value="2"/>
+        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+        <AffectedUnitArray value="Ghost"/>
+    </CUpgrade>
+    <CUpgrade id="OpticalFlare">
+        <Icon value="Assets\Textures\btn-ability-terran-flare.dds"/>
+        <ScoreResult value="BuildOrder"/>
+        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+        <AffectedUnitArray value="Medic"/>
+    </CUpgrade>
+    <CUpgrade id="QueenEnsnare">
+        <Icon value="Assets\Textures\btn-ability-zerg-fungalgrowth-color.dds"/>
+        <Race value="Zerg"/>
+        <EditorCategories value="Race:Zerg,UpgradeType:SpellResearch"/>
+        <AffectedUnitArray value="Queen"/>
+    </CUpgrade>
+    <CUpgrade id="Restoration">
+        <Icon value="Assets\Textures\InterRestore_Terran_SC1.dds"/>
+        <EditorCategories value="Race:Terran,UpgradeType:SpellResearch"/>
+        <AffectedUnitArray value="Medic"/>
+    </CUpgrade>
+    <CUpgrade id="SiegeTechSC2BW">
+        <Icon value="Assets\Textures\btn-unit-terran-siegetanksiegemode.dds"/>
+        <Alert value="ResearchComplete"/>
+        <Race value="Terr"/>
+        <ScoreAmount value="200"/>
+        <ScoreResult value="BuildOrder"/>
+        <EditorCategories value="Race:Terran,UpgradeType:SpellResearch"/>
+        <AffectedUnitArray value="SiegeTank"/>
+    </CUpgrade>
+    <CUpgrade id="SpawnBroodling">
+        <Icon value="Assets\Textures\btn-ability-zerg-swarmseeds-color.dds"/>
+        <EditorCategories value="Race:Zerg,UpgradeType:SpellResearch"/>
+        <AffectedUnitArray value="Queen"/>
+    </CUpgrade>
+    <CUpgrade id="WraithApolloReactor">
+        <Flags index="TechTreeCheat" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-mobiusreactor.dds"/>
+        <Alert value="ResearchComplete"/>
+        <Race value="Terr"/>
+        <ScoreAmount value="300"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArray Reference="Unit,Wraith,EnergyMax" Value="50"/>
+        <EffectArray Reference="Unit,Wraith,EnergyStart" Value="12"/>
+        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+        <AffectedUnitArray value="Wraith"/>
+    </CUpgrade>
+    <CUpgrade id="MindControl">
+        <Icon value="Assets\Textures\btn-ability-protoss-mindcontrol.dds"/>
+        <EditorCategories value="Race:Protoss,UpgradeType:SpellResearch"/>
+        <AffectedUnitArray value="Archon2"/>
+    </CUpgrade>
+    <CUpgrade id="ProtossAirArmorsLevel1">
+        <EffectArray index="4" Reference="Unit,Phoenix,LifeArmorLevel"/>
+        <EffectArray index="5" Reference="Unit,Phoenix,LifeArmor"/>
+        <EffectArray index="6" Reference="Unit,Carrier,LifeArmorLevel"/>
+        <EffectArray index="7" Reference="Unit,Carrier,LifeArmor"/>
+        <EffectArray index="8" Reference="Unit,Interceptor,LifeArmorLevel"/>
+        <EffectArray index="9" Reference="Unit,Interceptor,LifeArmor"/>
+        <EffectArray index="10" Operation="Set" Reference="Actor,Observer,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-airarmorlevel1.dds"/>
+        <EffectArray index="11" Operation="Set" Reference="Actor,Phoenix,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-airarmorlevel1.dds"/>
+        <EffectArray index="12" Operation="Set" Reference="Actor,WarpPrism,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-airarmorlevel1.dds"/>
+        <EffectArray index="13" Operation="Set" Reference="Actor,Carrier,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-airarmorlevel1.dds"/>
+        <EffectArray index="14" Operation="Set" Reference="Actor,Interceptor,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-airarmorlevel1.dds"/>
+        <EffectArray index="15" Reference="Unit,Scout,LifeArmor"/>
+        <EffectArray index="16" Operation="Add" Reference="Unit,Scout,LifeArmorLevel" Value="1"/>
+        <EffectArray index="17" Operation="Set" Reference="Actor,Scout,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-airarmorlevel1.dds"/>
+        <EffectArray index="18" Operation="Set" Reference="Actor,Arbiter,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-airarmorlevel1.dds"/>
+        <EffectArray index="19" Operation="Add" Reference="Unit,Arbiter,LifeArmorLevel" Value="1"/>
+        <EffectArray index="20" Operation="Add" Reference="Unit,Arbiter,LifeArmor" Value="1"/>
+        <EffectArray index="21" removed="1"/>
+        <EffectArray index="22" removed="1"/>
+        <EffectArray index="23" removed="1"/>
+        <EffectArray index="24" removed="1"/>
+        <EffectArray index="25" removed="1"/>
+        <EffectArray index="26" removed="1"/>
+        <EffectArray index="27" removed="1"/>
+        <EffectArray index="28" removed="1"/>
+        <EffectArray index="29" removed="1"/>
+        <EffectArray index="30" removed="1"/>
+        <EffectArray index="31" removed="1"/>
+        <EffectArray index="32" removed="1"/>
+        <AffectedUnitArray index="2" value="Observer"/>
+        <AffectedUnitArray index="3" value="Phoenix"/>
+        <AffectedUnitArray index="4" value="WarpPrism"/>
+        <AffectedUnitArray index="5" value="Arbiter"/>
+        <AffectedUnitArray index="6" removed="1"/>
+        <AffectedUnitArray index="7" removed="1"/>
+    </CUpgrade>
+    <CUpgrade id="ProtossAirArmorsLevel2">
+        <EffectArray index="4" Reference="Unit,Phoenix,LifeArmorLevel"/>
+        <EffectArray index="5" Reference="Unit,Phoenix,LifeArmor"/>
+        <EffectArray index="6" Reference="Unit,Carrier,LifeArmorLevel"/>
+        <EffectArray index="7" Reference="Unit,Carrier,LifeArmor"/>
+        <EffectArray index="8" Reference="Unit,Interceptor,LifeArmorLevel"/>
+        <EffectArray index="9" Reference="Unit,Interceptor,LifeArmor"/>
+        <EffectArray index="10" Operation="Set" Reference="Actor,Observer,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-airarmorlevel2.dds"/>
+        <EffectArray index="11" Operation="Set" Reference="Actor,Phoenix,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-airarmorlevel2.dds"/>
+        <EffectArray index="12" Operation="Set" Reference="Actor,WarpPrism,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-airarmorlevel2.dds"/>
+        <EffectArray index="13" Operation="Set" Reference="Actor,Carrier,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-airarmorlevel2.dds"/>
+        <EffectArray index="14" Operation="Set" Reference="Actor,Interceptor,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-airarmorlevel2.dds"/>
+        <EffectArray index="15" Reference="Unit,Scout,LifeArmor"/>
+        <EffectArray index="16" Operation="Add" Reference="Unit,Scout,LifeArmorLevel" Value="1"/>
+        <EffectArray index="17" Operation="Set" Reference="Actor,Scout,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-airarmorlevel2.dds"/>
+        <EffectArray index="18" Operation="Set" Reference="Actor,Arbiter,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-airarmorlevel2.dds"/>
+        <EffectArray index="19" Operation="Add" Reference="Unit,Arbiter,LifeArmorLevel" Value="1"/>
+        <EffectArray index="20" Operation="Add" Reference="Unit,Arbiter,LifeArmor" Value="1"/>
+        <EffectArray index="21" removed="1"/>
+        <EffectArray index="22" removed="1"/>
+        <EffectArray index="23" removed="1"/>
+        <EffectArray index="24" removed="1"/>
+        <EffectArray index="25" removed="1"/>
+        <EffectArray index="26" removed="1"/>
+        <EffectArray index="27" removed="1"/>
+        <EffectArray index="28" removed="1"/>
+        <EffectArray index="29" removed="1"/>
+        <EffectArray index="30" removed="1"/>
+        <EffectArray index="31" removed="1"/>
+        <EffectArray index="32" removed="1"/>
+        <AffectedUnitArray index="2" value="Observer"/>
+        <AffectedUnitArray index="3" value="Phoenix"/>
+        <AffectedUnitArray index="4" value="WarpPrism"/>
+        <AffectedUnitArray index="5" value="Arbiter"/>
+        <AffectedUnitArray index="6" removed="1"/>
+        <AffectedUnitArray index="7" removed="1"/>
+    </CUpgrade>
+    <CUpgrade id="ProtossAirArmorsLevel3">
+        <EffectArray index="4" Reference="Unit,Phoenix,LifeArmorLevel"/>
+        <EffectArray index="5" Reference="Unit,Phoenix,LifeArmor"/>
+        <EffectArray index="6" Reference="Unit,Carrier,LifeArmorLevel"/>
+        <EffectArray index="7" Reference="Unit,Carrier,LifeArmor"/>
+        <EffectArray index="8" Reference="Unit,Interceptor,LifeArmorLevel"/>
+        <EffectArray index="9" Reference="Unit,Interceptor,LifeArmor"/>
+        <EffectArray index="10" Operation="Set" Reference="Actor,Observer,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-airarmorlevel3.dds"/>
+        <EffectArray index="11" Operation="Set" Reference="Actor,Phoenix,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-airarmorlevel3.dds"/>
+        <EffectArray index="12" Operation="Set" Reference="Actor,WarpPrism,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-airarmorlevel3.dds"/>
+        <EffectArray index="13" Operation="Set" Reference="Actor,Carrier,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-airarmorlevel3.dds"/>
+        <EffectArray index="14" Operation="Set" Reference="Actor,Interceptor,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-airarmorlevel3.dds"/>
+        <EffectArray index="15" Reference="Unit,Scout,LifeArmor"/>
+        <EffectArray index="16" Operation="Add" Reference="Unit,Scout,LifeArmorLevel" Value="1"/>
+        <EffectArray index="17" Operation="Set" Reference="Actor,Scout,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-airarmorlevel3.dds"/>
+        <EffectArray index="18" Operation="Set" Reference="Actor,Arbiter,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-airarmorlevel3.dds"/>
+        <EffectArray index="19" Operation="Add" Reference="Unit,Arbiter,LifeArmorLevel" Value="1"/>
+        <EffectArray index="20" Operation="Add" Reference="Unit,Arbiter,LifeArmor" Value="1"/>
+        <EffectArray index="21" removed="1"/>
+        <EffectArray index="22" removed="1"/>
+        <EffectArray index="23" removed="1"/>
+        <EffectArray index="24" removed="1"/>
+        <EffectArray index="25" removed="1"/>
+        <EffectArray index="26" removed="1"/>
+        <EffectArray index="27" removed="1"/>
+        <EffectArray index="28" removed="1"/>
+        <EffectArray index="29" removed="1"/>
+        <EffectArray index="30" removed="1"/>
+        <EffectArray index="31" removed="1"/>
+        <EffectArray index="32" removed="1"/>
+        <AffectedUnitArray index="2" value="Observer"/>
+        <AffectedUnitArray index="3" value="Phoenix"/>
+        <AffectedUnitArray index="4" value="WarpPrism"/>
+        <AffectedUnitArray index="5" value="Arbiter"/>
+        <AffectedUnitArray index="6" removed="1"/>
+        <AffectedUnitArray index="7" removed="1"/>
+    </CUpgrade>
+    <CUpgrade id="ProtossAirWeaponsLevel1">
+        <EffectArray index="0" Reference="Weapon,CorsairNeutronFlare,Level"/>
+        <EffectArray index="1" Reference="Effect,CorsairDamage,Amount"/>
+        <EffectArray index="2" Reference="Weapon,InterceptorLaunch,Level"/>
+        <EffectArray index="3" Reference="Weapon,InterceptorBeam,Level"/>
+        <EffectArray index="4" Reference="Effect,InterceptorBeamDamage,Amount"/>
+        <EffectArray index="5" Reference="Weapon,InterceptorsDummy,Level" Value="1"/>
+        <EffectArray index="6" Operation="Set" Reference="Weapon,CorsairNeutronFlare,Icon" Value="Assets\Textures\btn-upgrade-protoss-airweaponslevel1.dds"/>
+        <EffectArray index="7" Operation="Set" Reference="Weapon,InterceptorBeam,Icon" Value="Assets\Textures\btn-upgrade-protoss-airweaponslevel1.dds"/>
+        <EffectArray index="8" Reference="Weapon,ScoutGround,Level"/>
+        <EffectArray index="9" Reference="Effect,ScoutGround,Amount"/>
+        <EffectArray index="10" Reference="Weapon,ScoutAir,Level"/>
+        <EffectArray index="11" Reference="Effect,ScoutAirU,Amount"/>
+        <EffectArray index="12" Operation="Set" Reference="Weapon,ScoutGround,Icon" Value="Assets\Textures\btn-upgrade-protoss-airweaponslevel1.dds"/>
+        <EffectArray index="13" Operation="Set" Reference="Weapon,ScoutAir,Icon" Value="Assets\Textures\btn-upgrade-protoss-airweaponslevel1.dds"/>
+        <EffectArray index="14" Operation="Add" Reference="Effect,ArbiterDamage,Amount" Value="1"/>
+        <EffectArray index="15" Reference="Weapon,PhaseDisruptorCannon,Icon"/>
+        <EffectArray index="16" Operation="Add" Reference="Weapon,PhaseDisruptorCannon,Level" Value="1"/>
+        <EffectArray index="17" Operation="Add" Reference="Effect,CorsairShieldDamage,Amount" Value="1"/>
+        <AffectedUnitArray index="1" value="Phoenix"/>
+        <AffectedUnitArray index="2" value="Scout"/>
+        <AffectedUnitArray index="3" value="Arbiter"/>
+    </CUpgrade>
+    <CUpgrade id="ProtossAirWeaponsLevel2">
+        <EffectArray index="0" Reference="Weapon,CorsairNeutronFlare,Level"/>
+        <EffectArray index="1" Reference="Effect,CorsairDamage,Amount"/>
+        <EffectArray index="2" Reference="Weapon,InterceptorLaunch,Level"/>
+        <EffectArray index="3" Reference="Weapon,InterceptorBeam,Level"/>
+        <EffectArray index="4" Reference="Effect,InterceptorBeamDamage,Amount"/>
+        <EffectArray index="5" Reference="Weapon,InterceptorsDummy,Level" Value="1"/>
+        <EffectArray index="6" Operation="Set" Reference="Weapon,CorsairNeutronFlare,Icon" Value="Assets\Textures\btn-upgrade-protoss-airweaponslevel2.dds"/>
+        <EffectArray index="7" Operation="Set" Reference="Weapon,InterceptorBeam,Icon" Value="Assets\Textures\btn-upgrade-protoss-airweaponslevel2.dds"/>
+        <EffectArray index="8" Reference="Weapon,ScoutGround,Level"/>
+        <EffectArray index="9" Reference="Effect,ScoutGround,Amount"/>
+        <EffectArray index="10" Reference="Weapon,ScoutAir,Level"/>
+        <EffectArray index="11" Reference="Effect,ScoutAirU,Amount"/>
+        <EffectArray index="12" Operation="Set" Reference="Weapon,ScoutGround,Icon" Value="Assets\Textures\btn-upgrade-protoss-airweaponslevel2.dds"/>
+        <EffectArray index="13" Operation="Set" Reference="Weapon,ScoutAir,Icon" Value="Assets\Textures\btn-upgrade-protoss-airweaponslevel2.dds"/>
+        <EffectArray index="14" Operation="Add" Reference="Effect,ArbiterDamage,Amount" Value="1"/>
+        <EffectArray index="15" Reference="Weapon,PhaseDisruptorCannon,Icon"/>
+        <EffectArray index="16" Operation="Add" Reference="Weapon,PhaseDisruptorCannon,Level" Value="1"/>
+        <EffectArray index="17" Operation="Add" Reference="Effect,CorsairShieldDamage,Amount" Value="1"/>
+        <AffectedUnitArray index="1" value="Phoenix"/>
+        <AffectedUnitArray index="2" value="Scout"/>
+        <AffectedUnitArray index="3" value="Arbiter"/>
+    </CUpgrade>
+    <CUpgrade id="ProtossAirWeaponsLevel3">
+        <EffectArray index="0" Reference="Weapon,CorsairNeutronFlare,Level"/>
+        <EffectArray index="1" Reference="Effect,CorsairDamage,Amount"/>
+        <EffectArray index="2" Reference="Weapon,InterceptorLaunch,Level"/>
+        <EffectArray index="3" Reference="Weapon,InterceptorBeam,Level"/>
+        <EffectArray index="4" Reference="Effect,InterceptorBeamDamage,Amount"/>
+        <EffectArray index="5" Reference="Weapon,InterceptorsDummy,Level" Value="1"/>
+        <EffectArray index="6" Operation="Set" Reference="Weapon,CorsairNeutronFlare,Icon" Value="Assets\Textures\btn-upgrade-protoss-airweaponslevel3.dds"/>
+        <EffectArray index="7" Operation="Set" Reference="Weapon,InterceptorBeam,Icon" Value="Assets\Textures\btn-upgrade-protoss-airweaponslevel3.dds"/>
+        <EffectArray index="8" Reference="Weapon,ScoutGround,Level"/>
+        <EffectArray index="9" Reference="Effect,ScoutGround,Amount"/>
+        <EffectArray index="10" Reference="Weapon,ScoutAir,Level"/>
+        <EffectArray index="11" Reference="Effect,ScoutAirU,Amount"/>
+        <EffectArray index="12" Operation="Set" Reference="Weapon,ScoutGround,Icon" Value="Assets\Textures\btn-upgrade-protoss-airweaponslevel3.dds"/>
+        <EffectArray index="13" Operation="Set" Reference="Weapon,ScoutAir,Icon" Value="Assets\Textures\btn-upgrade-protoss-airweaponslevel3.dds"/>
+        <EffectArray index="14" Operation="Add" Reference="Effect,ArbiterDamage,Amount" Value="1"/>
+        <EffectArray index="15" Reference="Weapon,PhaseDisruptorCannon,Icon"/>
+        <EffectArray index="16" Operation="Add" Reference="Weapon,PhaseDisruptorCannon,Level" Value="1"/>
+        <EffectArray index="17" Operation="Add" Reference="Effect,CorsairShieldDamage,Amount" Value="1"/>
+        <AffectedUnitArray index="1" value="Phoenix"/>
+        <AffectedUnitArray index="2" value="Scout"/>
+        <AffectedUnitArray index="3" value="Arbiter"/>
+    </CUpgrade>
+    <CUpgrade id="ProtossGroundArmorsLevel1">
+        <EffectArray index="4" Reference="Unit,Stalker,LifeArmorLevel" Value="1"/>
+        <EffectArray index="5" Reference="Unit,Stalker,LifeArmor" Value="1"/>
+        <EffectArray index="6" Reference="Unit,HighTemplar,LifeArmorLevel" Value="1"/>
+        <EffectArray index="7" Reference="Unit,HighTemplar,LifeArmor" Value="1"/>
+        <EffectArray index="8" Reference="Unit,DarkTemplar,LifeArmorLevel" Value="1"/>
+        <EffectArray index="9" Reference="Unit,DarkTemplar,LifeArmor" Value="1"/>
+        <EffectArray index="10" Reference="Unit,Archon,LifeArmorLevel" Value="1"/>
+        <EffectArray index="11" Reference="Unit,Archon,LifeArmor" Value="1"/>
+        <EffectArray index="12" Operation="Set" Reference="Actor,Probe,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel1.dds"/>
+        <EffectArray index="13" Operation="Set" Reference="Actor,Zealot,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel1.dds"/>
+        <EffectArray index="14" Operation="Set" Reference="Actor,Stalker,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel1.dds"/>
+        <EffectArray index="15" Operation="Set" Reference="Actor,HighTemplar,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel1.dds"/>
+        <EffectArray index="16" Operation="Set" Reference="Actor,DarkTemplar,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel1.dds"/>
+        <EffectArray index="17" Operation="Set" Reference="Actor,Archon,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel1.dds"/>
+        <EffectArray index="18" Operation="Set" Reference="Actor,Reaver,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel1.dds"/>
+        <EffectArray index="19" Operation="Add" Reference="Unit,Reaver,LifeArmorLevel" Value="1"/>
+        <EffectArray index="20" Operation="Add" Reference="Unit,Reaver,LifeArmor" Value="1"/>
+        <EffectArray index="21" Operation="Set" Reference="Actor,Archon2,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel1.dds"/>
+        <EffectArray index="22" Operation="Add" Reference="Unit,Archon2,LifeArmorLevel" Value="1"/>
+        <EffectArray index="23" Operation="Add" Reference="Unit,Archon2,LifeArmor" Value="1"/>
+        <EffectArray index="24" removed="1"/>
+        <EffectArray index="25" removed="1"/>
+        <EffectArray index="26" removed="1"/>
+        <AffectedUnitArray index="1" value="Archon2"/>
+        <AffectedUnitArray index="3" value="HighTemplar"/>
+        <AffectedUnitArray index="4" value="Probe"/>
+        <AffectedUnitArray index="5" value="Reaver"/>
+        <AffectedUnitArray index="6" value="Stalker"/>
+        <AffectedUnitArray index="7" value="Zealot"/>
+        <AffectedUnitArray index="8" removed="1"/>
+    </CUpgrade>
+    <CUpgrade id="ProtossGroundArmorsLevel2">
+        <EffectArray index="4" Reference="Unit,Stalker,LifeArmorLevel" Value="1"/>
+        <EffectArray index="5" Reference="Unit,Stalker,LifeArmor" Value="1"/>
+        <EffectArray index="6" Reference="Unit,HighTemplar,LifeArmorLevel" Value="1"/>
+        <EffectArray index="7" Reference="Unit,HighTemplar,LifeArmor" Value="1"/>
+        <EffectArray index="8" Reference="Unit,DarkTemplar,LifeArmorLevel" Value="1"/>
+        <EffectArray index="9" Reference="Unit,DarkTemplar,LifeArmor" Value="1"/>
+        <EffectArray index="10" Reference="Unit,Archon,LifeArmorLevel" Value="1"/>
+        <EffectArray index="11" Reference="Unit,Archon,LifeArmor" Value="1"/>
+        <EffectArray index="12" Operation="Set" Reference="Actor,Probe,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel2.dds"/>
+        <EffectArray index="13" Operation="Set" Reference="Actor,Zealot,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel2.dds"/>
+        <EffectArray index="14" Operation="Set" Reference="Actor,Stalker,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel2.dds"/>
+        <EffectArray index="15" Operation="Set" Reference="Actor,HighTemplar,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel2.dds"/>
+        <EffectArray index="16" Operation="Set" Reference="Actor,DarkTemplar,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel2.dds"/>
+        <EffectArray index="17" Operation="Set" Reference="Actor,Archon,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel2.dds"/>
+        <EffectArray index="18" Operation="Set" Reference="Actor,Reaver,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel2.dds"/>
+        <EffectArray index="19" Operation="Add" Reference="Unit,Reaver,LifeArmorLevel" Value="1"/>
+        <EffectArray index="20" Operation="Add" Reference="Unit,Reaver,LifeArmor" Value="1"/>
+        <EffectArray index="21" Operation="Set" Reference="Actor,Archon2,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel2.dds"/>
+        <EffectArray index="22" Operation="Add" Reference="Unit,Archon2,LifeArmorLevel" Value="1"/>
+        <EffectArray index="23" Operation="Add" Reference="Unit,Archon2,LifeArmor" Value="1"/>
+        <EffectArray index="24" removed="1"/>
+        <EffectArray index="25" removed="1"/>
+        <EffectArray index="26" removed="1"/>
+        <AffectedUnitArray index="1" value="Archon2"/>
+        <AffectedUnitArray index="3" value="HighTemplar"/>
+        <AffectedUnitArray index="4" value="Probe"/>
+        <AffectedUnitArray index="5" value="Reaver"/>
+        <AffectedUnitArray index="6" value="Stalker"/>
+        <AffectedUnitArray index="7" value="Zealot"/>
+        <AffectedUnitArray index="8" removed="1"/>
+    </CUpgrade>
+    <CUpgrade id="ProtossGroundArmorsLevel3">
+        <EffectArray index="4" Reference="Unit,Stalker,LifeArmorLevel" Value="1"/>
+        <EffectArray index="5" Reference="Unit,Stalker,LifeArmor" Value="1"/>
+        <EffectArray index="6" Reference="Unit,HighTemplar,LifeArmorLevel" Value="1"/>
+        <EffectArray index="7" Reference="Unit,HighTemplar,LifeArmor" Value="1"/>
+        <EffectArray index="8" Reference="Unit,DarkTemplar,LifeArmorLevel" Value="1"/>
+        <EffectArray index="9" Reference="Unit,DarkTemplar,LifeArmor" Value="1"/>
+        <EffectArray index="10" Reference="Unit,Archon,LifeArmorLevel" Value="1"/>
+        <EffectArray index="11" Reference="Unit,Archon,LifeArmor" Value="1"/>
+        <EffectArray index="12" Operation="Set" Reference="Actor,Probe,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel3.dds"/>
+        <EffectArray index="13" Operation="Set" Reference="Actor,Zealot,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel3.dds"/>
+        <EffectArray index="14" Operation="Set" Reference="Actor,Stalker,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel3.dds"/>
+        <EffectArray index="15" Operation="Set" Reference="Actor,HighTemplar,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel3.dds"/>
+        <EffectArray index="16" Operation="Set" Reference="Actor,DarkTemplar,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel3.dds"/>
+        <EffectArray index="17" Operation="Set" Reference="Actor,Archon,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel3.dds"/>
+        <EffectArray index="18" Operation="Set" Reference="Actor,Reaver,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel3.dds"/>
+        <EffectArray index="19" Operation="Add" Reference="Unit,Reaver,LifeArmorLevel" Value="1"/>
+        <EffectArray index="20" Operation="Add" Reference="Unit,Reaver,LifeArmor" Value="1"/>
+        <EffectArray index="21" Operation="Set" Reference="Actor,Archon2,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel3.dds"/>
+        <EffectArray index="22" Operation="Add" Reference="Unit,Archon2,LifeArmorLevel" Value="1"/>
+        <EffectArray index="23" Operation="Add" Reference="Unit,Archon2,LifeArmor" Value="1"/>
+        <EffectArray index="24" removed="1"/>
+        <EffectArray index="25" removed="1"/>
+        <EffectArray index="26" removed="1"/>
+        <AffectedUnitArray index="1" value="Archon2"/>
+        <AffectedUnitArray index="3" value="HighTemplar"/>
+        <AffectedUnitArray index="4" value="Probe"/>
+        <AffectedUnitArray index="5" value="Reaver"/>
+        <AffectedUnitArray index="6" value="Stalker"/>
+        <AffectedUnitArray index="7" value="Zealot"/>
+        <AffectedUnitArray index="8" removed="1"/>
+    </CUpgrade>
+    <CUpgrade id="ProtossGroundWeaponsLevel1">
+        <EffectArray index="2" Reference="Weapon,ParticleDisruptors,Level"/>
+        <EffectArray index="3" Reference="Effect,ParticleDisruptorsU,Amount" Value="2"/>
+        <EffectArray index="4" Reference="Weapon,WarpBlades,Level"/>
+        <EffectArray index="5" Reference="Effect,WarpBlades,Amount" Value="3"/>
+        <EffectArray index="6" Reference="Weapon,PsionicShockwave,Level"/>
+        <EffectArray index="7" Operation="Set" Reference="Weapon,PsiBlades,Icon" Value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel1.dds"/>
+        <EffectArray index="8" Operation="Set" Reference="Weapon,ParticleDisruptors,Icon" Value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel1.dds"/>
+        <EffectArray index="9" Operation="Set" Reference="Weapon,WarpBlades,Icon" Value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel1.dds"/>
+        <EffectArray index="10" Operation="Set" Reference="Weapon,PsionicShockwave,Icon" Value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel1.dds"/>
+        <EffectArray index="11" Reference="Effect,PsionicShockwaveDamage,Amount" Value="3"/>
+        <EffectArray index="12" Reference="Effect,ParticleDisruptorsU2,Amount" Value="2"/>
+        <EffectArray index="13" Reference="Effect,WarpBlades2,Amount[0]" Value="3"/>
+        <EffectArray index="14" removed="1"/>
+        <EffectArray index="15" removed="1"/>
+        <EffectArray index="16" removed="1"/>
+        <EffectArray index="17" removed="1"/>
+        <EffectArray index="18" removed="1"/>
+        <EffectArray index="19" removed="1"/>
+        <EffectArray index="20" removed="1"/>
+        <EffectArray index="21" removed="1"/>
+        <EffectArray index="22" removed="1"/>
+        <EffectArray index="23" removed="1"/>
+        <AffectedUnitArray index="1" value="DarkTemplar"/>
+        <AffectedUnitArray index="2" value="HighTemplar"/>
+        <AffectedUnitArray index="3" value="Stalker"/>
+        <AffectedUnitArray index="4" value="Zealot"/>
+        <AffectedUnitArray index="5" removed="1"/>
+        <AffectedUnitArray index="6" removed="1"/>
+        <AffectedUnitArray index="7" removed="1"/>
+    </CUpgrade>
+    <CUpgrade id="ProtossGroundWeaponsLevel2">
+        <EffectArray index="2" Reference="Weapon,ParticleDisruptors,Level"/>
+        <EffectArray index="3" Reference="Effect,ParticleDisruptorsU,Amount" Value="2"/>
+        <EffectArray index="4" Reference="Weapon,WarpBlades,Level"/>
+        <EffectArray index="5" Reference="Effect,WarpBlades,Amount" Value="3"/>
+        <EffectArray index="6" Reference="Weapon,PsionicShockwave,Level"/>
+        <EffectArray index="7" Operation="Set" Reference="Weapon,PsiBlades,Icon" Value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel1.dds"/>
+        <EffectArray index="8" Operation="Set" Reference="Weapon,ParticleDisruptors,Icon" Value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel1.dds"/>
+        <EffectArray index="9" Operation="Set" Reference="Weapon,WarpBlades,Icon" Value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel1.dds"/>
+        <EffectArray index="10" Operation="Set" Reference="Weapon,PsionicShockwave,Icon" Value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel1.dds"/>
+        <EffectArray index="11" Reference="Effect,PsionicShockwaveDamage,Amount" Value="3"/>
+        <EffectArray index="12" Reference="Effect,ParticleDisruptorsU2,Amount" Value="2"/>
+        <EffectArray index="13" Reference="Effect,WarpBlades2,Amount[0]" Value="3"/>
+        <EffectArray index="14" removed="1"/>
+        <EffectArray index="15" removed="1"/>
+        <EffectArray index="16" removed="1"/>
+        <EffectArray index="17" removed="1"/>
+        <EffectArray index="18" removed="1"/>
+        <EffectArray index="19" removed="1"/>
+        <EffectArray index="20" removed="1"/>
+        <EffectArray index="21" removed="1"/>
+        <EffectArray index="22" removed="1"/>
+        <EffectArray index="23" removed="1"/>
+        <AffectedUnitArray index="1" value="DarkTemplar"/>
+        <AffectedUnitArray index="2" value="HighTemplar"/>
+        <AffectedUnitArray index="3" value="Stalker"/>
+        <AffectedUnitArray index="4" value="Zealot"/>
+        <AffectedUnitArray index="5" removed="1"/>
+        <AffectedUnitArray index="6" removed="1"/>
+        <AffectedUnitArray index="7" removed="1"/>
+    </CUpgrade>
+    <CUpgrade id="ProtossGroundWeaponsLevel3">
+        <EffectArray index="2" Reference="Weapon,ParticleDisruptors,Level"/>
+        <EffectArray index="3" Reference="Effect,ParticleDisruptorsU,Amount" Value="2"/>
+        <EffectArray index="4" Reference="Weapon,WarpBlades,Level"/>
+        <EffectArray index="5" Reference="Effect,WarpBlades,Amount" Value="3"/>
+        <EffectArray index="6" Reference="Weapon,PsionicShockwave,Level"/>
+        <EffectArray index="7" Operation="Set" Reference="Weapon,PsiBlades,Icon" Value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel1.dds"/>
+        <EffectArray index="8" Operation="Set" Reference="Weapon,ParticleDisruptors,Icon" Value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel1.dds"/>
+        <EffectArray index="9" Operation="Set" Reference="Weapon,WarpBlades,Icon" Value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel1.dds"/>
+        <EffectArray index="10" Operation="Set" Reference="Weapon,PsionicShockwave,Icon" Value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel1.dds"/>
+        <EffectArray index="11" Reference="Effect,PsionicShockwaveDamage,Amount" Value="3"/>
+        <EffectArray index="12" Reference="Effect,ParticleDisruptorsU2,Amount" Value="2"/>
+        <EffectArray index="13" Reference="Effect,WarpBlades2,Amount[0]" Value="3"/>
+        <EffectArray index="14" removed="1"/>
+        <EffectArray index="15" removed="1"/>
+        <EffectArray index="16" removed="1"/>
+        <EffectArray index="17" removed="1"/>
+        <EffectArray index="18" removed="1"/>
+        <EffectArray index="19" removed="1"/>
+        <EffectArray index="20" removed="1"/>
+        <EffectArray index="21" removed="1"/>
+        <EffectArray index="22" removed="1"/>
+        <EffectArray index="23" removed="1"/>
+        <AffectedUnitArray index="1" value="DarkTemplar"/>
+        <AffectedUnitArray index="2" value="HighTemplar"/>
+        <AffectedUnitArray index="3" value="Stalker"/>
+        <AffectedUnitArray index="4" value="Zealot"/>
+        <AffectedUnitArray index="5" removed="1"/>
+        <AffectedUnitArray index="6" removed="1"/>
+        <AffectedUnitArray index="7" removed="1"/>
+    </CUpgrade>
+    <CUpgrade id="ProtossShieldsLevel1">
+        <EffectArray index="4" Reference="Unit,Stalker,ShieldArmorLevel"/>
+        <EffectArray index="5" Reference="Unit,Stalker,ShieldArmor" Value="1"/>
+        <EffectArray index="6" Reference="Unit,HighTemplar,ShieldArmorLevel"/>
+        <EffectArray index="7" Reference="Unit,HighTemplar,ShieldArmor"/>
+        <EffectArray index="8" Reference="Unit,DarkTemplar,ShieldArmorLevel"/>
+        <EffectArray index="9" Reference="Unit,DarkTemplar,ShieldArmor" Value="1"/>
+        <EffectArray index="10" Reference="Unit,Archon,ShieldArmorLevel"/>
+        <EffectArray index="11" Reference="Unit,Archon,ShieldArmor"/>
+        <EffectArray index="12" Reference="Unit,Observer,ShieldArmorLevel"/>
+        <EffectArray index="13" Reference="Unit,Observer,ShieldArmor"/>
+        <EffectArray index="14" Reference="Unit,WarpPrism,ShieldArmorLevel"/>
+        <EffectArray index="15" Reference="Unit,WarpPrism,ShieldArmor"/>
+        <EffectArray index="16" Reference="Unit,Phoenix,ShieldArmorLevel"/>
+        <EffectArray index="17" Reference="Unit,Phoenix,ShieldArmor"/>
+        <EffectArray index="18" Reference="Unit,Carrier,ShieldArmorLevel"/>
+        <EffectArray index="19" Reference="Unit,Carrier,ShieldArmor"/>
+        <EffectArray index="20" Reference="Unit,Interceptor,ShieldArmorLevel"/>
+        <EffectArray index="21" Reference="Unit,Interceptor,ShieldArmor"/>
+        <EffectArray index="22" Reference="Unit,Nexus,ShieldArmorLevel"/>
+        <EffectArray index="23" Reference="Unit,Nexus,ShieldArmor"/>
+        <EffectArray index="24" Reference="Unit,Assimilator,ShieldArmorLevel"/>
+        <EffectArray index="25" Reference="Unit,Assimilator,ShieldArmor"/>
+        <EffectArray index="26" Reference="Unit,Pylon,ShieldArmorLevel"/>
+        <EffectArray index="27" Reference="Unit,Pylon,ShieldArmor"/>
+        <EffectArray index="28" Reference="Unit,Gateway,ShieldArmorLevel"/>
+        <EffectArray index="29" Reference="Unit,Gateway,ShieldArmor"/>
+        <EffectArray index="30" Reference="Unit,Forge,ShieldArmorLevel"/>
+        <EffectArray index="31" Reference="Unit,Forge,ShieldArmor"/>
+        <EffectArray index="32" Reference="Unit,PhotonCannon,ShieldArmorLevel" Value="1"/>
+        <EffectArray index="33" Reference="Unit,PhotonCannon,ShieldArmor"/>
+        <EffectArray index="34" Reference="Unit,CyberneticsCore,ShieldArmor" Value="1.000000"/>
+        <EffectArray index="35" Reference="Unit,CyberneticsCore,ShieldArmorLevel"/>
+        <EffectArray index="36" Reference="Unit,TwilightCouncil,ShieldArmorLevel"/>
+        <EffectArray index="37" Reference="Unit,TwilightCouncil,ShieldArmor"/>
+        <EffectArray index="38" Reference="Unit,TemplarArchive,ShieldArmorLevel"/>
+        <EffectArray index="39" Reference="Unit,TemplarArchive,ShieldArmor"/>
+        <EffectArray index="40" Reference="Unit,RoboticsFacility,ShieldArmorLevel"/>
+        <EffectArray index="41" Reference="Unit,RoboticsFacility,ShieldArmor"/>
+        <EffectArray index="42" Reference="Unit,RoboticsBay,ShieldArmorLevel"/>
+        <EffectArray index="43" Reference="Unit,RoboticsBay,ShieldArmor"/>
+        <EffectArray index="44" Reference="Unit,Stargate,ShieldArmorLevel"/>
+        <EffectArray index="45" Reference="Unit,Stargate,ShieldArmor"/>
+        <EffectArray index="46" Reference="Unit,FleetBeacon,ShieldArmorLevel"/>
+        <EffectArray index="47" Reference="Unit,FleetBeacon,ShieldArmor"/>
+        <EffectArray index="48" Operation="Set" Reference="Actor,Probe,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray index="49" Operation="Set" Reference="Actor,Zealot,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray index="50" Operation="Set" Reference="Actor,Stalker,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray index="51" Operation="Set" Reference="Actor,HighTemplar,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray index="52" Operation="Set" Reference="Actor,DarkTemplar,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray index="53" Operation="Set" Reference="Actor,Archon,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray index="54" Operation="Set" Reference="Actor,Observer,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray index="55" Operation="Set" Reference="Actor,WarpPrism,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray index="56" Operation="Set" Reference="Actor,Phoenix,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray index="57" Operation="Set" Reference="Actor,Carrier,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray index="58" Operation="Set" Reference="Actor,Interceptor,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray index="59" Operation="Set" Reference="Actor,Nexus,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray index="60" Operation="Set" Reference="Actor,Assimilator,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray index="61" Operation="Set" Reference="Actor,Pylon,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray index="62" Operation="Set" Reference="Actor,Gateway,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray index="63" Operation="Set" Reference="Actor,Forge,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray index="64" Operation="Set" Reference="Actor,PhotonCannon,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray index="65" Operation="Set" Reference="Actor,CyberneticsCore,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray index="66" Operation="Set" Reference="Actor,TwilightCouncil,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray index="67" Operation="Set" Reference="Actor,TemplarArchive,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray index="68" Operation="Set" Reference="Actor,RoboticsBay,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray index="69" Operation="Set" Reference="Actor,RoboticsFacility,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray index="70" Operation="Set" Reference="Actor,Stargate,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray index="71" Operation="Set" Reference="Actor,FleetBeacon,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray index="72" Operation="Add" Reference="Unit,Scout,ShieldArmor" Value="1"/>
+        <EffectArray index="73" Operation="Add" Reference="Unit,Scout,ShieldArmorLevel" Value="1"/>
+        <EffectArray index="74" Operation="Add" Reference="Unit,Obelisk,ShieldArmorLevel" Value="1"/>
+        <EffectArray index="75" Operation="Add" Reference="Unit,Obelisk,ShieldArmor" Value="1"/>
+        <EffectArray index="76" Operation="Set" Reference="Actor,Scout,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray index="77" Operation="Set" Reference="Actor,Arbiter,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray index="78" Operation="Set" Reference="Actor,FleetBeacon2,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray index="79" Operation="Set" Reference="Actor,Reaver,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray index="80" Operation="Add" Reference="Unit,Arbiter,ShieldArmor" Value="1"/>
+        <EffectArray index="81" Operation="Add" Reference="Unit,Arbiter,ShieldArmorLevel" Value="1"/>
+        <EffectArray index="82" Operation="Add" Reference="Unit,FleetBeacon2,ShieldArmor" Value="1"/>
+        <EffectArray index="83" Operation="Add" Reference="Unit,FleetBeacon2,ShieldArmorLevel" Value="1"/>
+        <EffectArray index="84" Operation="Add" Reference="Unit,Reaver,ShieldArmor" Value="1"/>
+        <EffectArray index="85" Operation="Add" Reference="Unit,Reaver,ShieldArmorLevel" Value="1"/>
+        <EffectArray index="86" Operation="Set" Reference="Actor,Archon2,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray index="87" Operation="Add" Reference="Unit,Archon2,ShieldArmorLevel" Value="1"/>
+        <EffectArray index="88" Operation="Add" Reference="Unit,Archon2,ShieldArmor" Value="1"/>
+        <EffectArray index="89" Operation="Set" Reference="Actor,Observatory,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray index="90" Operation="Add" Reference="Unit,Observatory,ShieldArmorLevel" Value="1"/>
+        <EffectArray index="91" Operation="Add" Reference="Unit,Observatory,ShieldArmor" Value="1"/>
+        <EffectArray index="92" removed="1"/>
+        <EffectArray index="93" removed="1"/>
+        <EffectArray index="94" removed="1"/>
+        <EffectArray index="95" removed="1"/>
+        <EffectArray index="96" removed="1"/>
+        <EffectArray index="97" removed="1"/>
+        <EffectArray index="98" removed="1"/>
+        <EffectArray index="99" removed="1"/>
+        <EffectArray index="100" removed="1"/>
+        <EffectArray index="101" removed="1"/>
+        <EffectArray index="102" removed="1"/>
+        <EffectArray index="103" removed="1"/>
+        <EffectArray index="104" removed="1"/>
+        <AffectedUnitArray index="1" value="Archon2"/>
+        <AffectedUnitArray index="2" value="Arbiter"/>
+        <AffectedUnitArray index="3" value="Assimilator"/>
+        <AffectedUnitArray index="4" value="FleetBeacon2"/>
+        <AffectedUnitArray index="5" value="Reaver"/>
+        <AffectedUnitArray index="6" value="Carrier"/>
+        <AffectedUnitArray index="7" value="CyberneticsCore"/>
+        <AffectedUnitArray index="8" value="DarkTemplar"/>
+        <AffectedUnitArray index="9" value="FleetBeacon"/>
+        <AffectedUnitArray index="10" value="Forge"/>
+        <AffectedUnitArray index="11" value="Gateway"/>
+        <AffectedUnitArray index="12" value="HighTemplar"/>
+        <AffectedUnitArray index="13" value="Interceptor"/>
+        <AffectedUnitArray index="15" value="Observer"/>
+        <AffectedUnitArray index="16" value="Phoenix"/>
+        <AffectedUnitArray index="17" value="PhotonCannon"/>
+        <AffectedUnitArray index="18" value="Probe"/>
+        <AffectedUnitArray index="19" value="Pylon"/>
+        <AffectedUnitArray index="20" value="RoboticsBay"/>
+        <AffectedUnitArray index="21" value="RoboticsFacility"/>
+        <AffectedUnitArray index="22" value="Stalker"/>
+        <AffectedUnitArray index="23" value="Stargate"/>
+        <AffectedUnitArray index="24" value="TemplarArchive"/>
+        <AffectedUnitArray index="25" value="TwilightCouncil"/>
+        <AffectedUnitArray index="26" value="WarpPrism"/>
+        <AffectedUnitArray index="27" value="Zealot"/>
+        <AffectedUnitArray index="28" value="Observatory"/>
+        <AffectedUnitArray index="29" removed="1"/>
+        <AffectedUnitArray index="30" removed="1"/>
+        <AffectedUnitArray index="31" removed="1"/>
+    </CUpgrade>
+    <CUpgrade id="ProtossShieldsLevel2">
+        <EffectArray index="4" Reference="Unit,Stalker,ShieldArmorLevel"/>
+        <EffectArray index="5" Reference="Unit,Stalker,ShieldArmor" Value="1"/>
+        <EffectArray index="6" Reference="Unit,HighTemplar,ShieldArmorLevel"/>
+        <EffectArray index="7" Reference="Unit,HighTemplar,ShieldArmor"/>
+        <EffectArray index="8" Reference="Unit,DarkTemplar,ShieldArmorLevel"/>
+        <EffectArray index="9" Reference="Unit,DarkTemplar,ShieldArmor" Value="1"/>
+        <EffectArray index="10" Reference="Unit,Archon,ShieldArmorLevel"/>
+        <EffectArray index="11" Reference="Unit,Archon,ShieldArmor"/>
+        <EffectArray index="12" Reference="Unit,Observer,ShieldArmorLevel"/>
+        <EffectArray index="13" Reference="Unit,Observer,ShieldArmor"/>
+        <EffectArray index="14" Reference="Unit,WarpPrism,ShieldArmorLevel"/>
+        <EffectArray index="15" Reference="Unit,WarpPrism,ShieldArmor"/>
+        <EffectArray index="16" Reference="Unit,Phoenix,ShieldArmorLevel"/>
+        <EffectArray index="17" Reference="Unit,Phoenix,ShieldArmor"/>
+        <EffectArray index="18" Reference="Unit,Carrier,ShieldArmorLevel"/>
+        <EffectArray index="19" Reference="Unit,Carrier,ShieldArmor"/>
+        <EffectArray index="20" Reference="Unit,Interceptor,ShieldArmorLevel"/>
+        <EffectArray index="21" Reference="Unit,Interceptor,ShieldArmor"/>
+        <EffectArray index="22" Reference="Unit,Nexus,ShieldArmorLevel"/>
+        <EffectArray index="23" Reference="Unit,Nexus,ShieldArmor"/>
+        <EffectArray index="24" Reference="Unit,Assimilator,ShieldArmorLevel"/>
+        <EffectArray index="25" Reference="Unit,Assimilator,ShieldArmor"/>
+        <EffectArray index="26" Reference="Unit,Pylon,ShieldArmorLevel"/>
+        <EffectArray index="27" Reference="Unit,Pylon,ShieldArmor"/>
+        <EffectArray index="28" Reference="Unit,Gateway,ShieldArmorLevel"/>
+        <EffectArray index="29" Reference="Unit,Gateway,ShieldArmor"/>
+        <EffectArray index="30" Reference="Unit,Forge,ShieldArmorLevel"/>
+        <EffectArray index="31" Reference="Unit,Forge,ShieldArmor"/>
+        <EffectArray index="32" Reference="Unit,PhotonCannon,ShieldArmorLevel" Value="1"/>
+        <EffectArray index="33" Reference="Unit,PhotonCannon,ShieldArmor"/>
+        <EffectArray index="34" Reference="Unit,CyberneticsCore,ShieldArmor" Value="1.000000"/>
+        <EffectArray index="35" Reference="Unit,CyberneticsCore,ShieldArmorLevel"/>
+        <EffectArray index="36" Reference="Unit,TwilightCouncil,ShieldArmorLevel"/>
+        <EffectArray index="37" Reference="Unit,TwilightCouncil,ShieldArmor"/>
+        <EffectArray index="38" Reference="Unit,TemplarArchive,ShieldArmorLevel"/>
+        <EffectArray index="39" Reference="Unit,TemplarArchive,ShieldArmor"/>
+        <EffectArray index="40" Reference="Unit,RoboticsFacility,ShieldArmorLevel"/>
+        <EffectArray index="41" Reference="Unit,RoboticsFacility,ShieldArmor"/>
+        <EffectArray index="42" Reference="Unit,RoboticsBay,ShieldArmorLevel"/>
+        <EffectArray index="43" Reference="Unit,RoboticsBay,ShieldArmor"/>
+        <EffectArray index="44" Reference="Unit,Stargate,ShieldArmorLevel"/>
+        <EffectArray index="45" Reference="Unit,Stargate,ShieldArmor"/>
+        <EffectArray index="46" Reference="Unit,FleetBeacon,ShieldArmorLevel"/>
+        <EffectArray index="47" Reference="Unit,FleetBeacon,ShieldArmor"/>
+        <EffectArray index="48" Operation="Set" Reference="Actor,Probe,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray index="49" Operation="Set" Reference="Actor,Zealot,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray index="50" Operation="Set" Reference="Actor,Stalker,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray index="51" Operation="Set" Reference="Actor,HighTemplar,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray index="52" Operation="Set" Reference="Actor,DarkTemplar,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray index="53" Operation="Set" Reference="Actor,Archon,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray index="54" Operation="Set" Reference="Actor,Observer,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray index="55" Operation="Set" Reference="Actor,WarpPrism,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray index="56" Operation="Set" Reference="Actor,Phoenix,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray index="57" Operation="Set" Reference="Actor,Carrier,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray index="58" Operation="Set" Reference="Actor,Interceptor,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray index="59" Operation="Set" Reference="Actor,Nexus,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray index="60" Operation="Set" Reference="Actor,Assimilator,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray index="61" Operation="Set" Reference="Actor,Pylon,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray index="62" Operation="Set" Reference="Actor,Gateway,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray index="63" Operation="Set" Reference="Actor,Forge,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray index="64" Operation="Set" Reference="Actor,PhotonCannon,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray index="65" Operation="Set" Reference="Actor,CyberneticsCore,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray index="66" Operation="Set" Reference="Actor,TwilightCouncil,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray index="67" Operation="Set" Reference="Actor,TemplarArchive,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray index="68" Operation="Set" Reference="Actor,RoboticsBay,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray index="69" Operation="Set" Reference="Actor,RoboticsFacility,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray index="70" Operation="Set" Reference="Actor,Stargate,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray index="71" Operation="Set" Reference="Actor,FleetBeacon,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray index="72" Operation="Add" Reference="Unit,Scout,ShieldArmor" Value="1"/>
+        <EffectArray index="73" Operation="Add" Reference="Unit,Scout,ShieldArmorLevel" Value="1"/>
+        <EffectArray index="74" Operation="Add" Reference="Unit,Obelisk,ShieldArmorLevel" Value="1"/>
+        <EffectArray index="75" Operation="Add" Reference="Unit,Obelisk,ShieldArmor" Value="1"/>
+        <EffectArray index="76" Operation="Set" Reference="Actor,Scout,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray index="77" Operation="Set" Reference="Actor,Arbiter,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray index="78" Operation="Set" Reference="Actor,FleetBeacon2,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray index="79" Operation="Set" Reference="Actor,Reaver,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray index="80" Operation="Add" Reference="Unit,Arbiter,ShieldArmor" Value="1"/>
+        <EffectArray index="81" Operation="Add" Reference="Unit,Arbiter,ShieldArmorLevel" Value="1"/>
+        <EffectArray index="82" Operation="Add" Reference="Unit,FleetBeacon2,ShieldArmor" Value="1"/>
+        <EffectArray index="83" Operation="Add" Reference="Unit,FleetBeacon2,ShieldArmorLevel" Value="1"/>
+        <EffectArray index="84" Operation="Add" Reference="Unit,Reaver,ShieldArmor" Value="1"/>
+        <EffectArray index="85" Operation="Add" Reference="Unit,Reaver,ShieldArmorLevel" Value="1"/>
+        <EffectArray index="86" Operation="Set" Reference="Actor,Archon2,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray index="87" Operation="Add" Reference="Unit,Archon2,ShieldArmorLevel" Value="1"/>
+        <EffectArray index="88" Operation="Add" Reference="Unit,Archon2,ShieldArmor" Value="1"/>
+        <EffectArray index="89" Operation="Set" Reference="Actor,Observatory,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray index="90" Operation="Add" Reference="Unit,Observatory,ShieldArmorLevel" Value="1"/>
+        <EffectArray index="91" Operation="Add" Reference="Unit,Observatory,ShieldArmor" Value="1"/>
+        <EffectArray index="92" removed="1"/>
+        <EffectArray index="93" removed="1"/>
+        <EffectArray index="94" removed="1"/>
+        <EffectArray index="95" removed="1"/>
+        <EffectArray index="96" removed="1"/>
+        <EffectArray index="97" removed="1"/>
+        <EffectArray index="98" removed="1"/>
+        <EffectArray index="99" removed="1"/>
+        <EffectArray index="100" removed="1"/>
+        <EffectArray index="101" removed="1"/>
+        <EffectArray index="102" removed="1"/>
+        <EffectArray index="103" removed="1"/>
+        <EffectArray index="104" removed="1"/>
+        <AffectedUnitArray index="1" value="Archon2"/>
+        <AffectedUnitArray index="2" value="Arbiter"/>
+        <AffectedUnitArray index="3" value="Assimilator"/>
+        <AffectedUnitArray index="4" value="FleetBeacon2"/>
+        <AffectedUnitArray index="5" value="Observatory"/>
+        <AffectedUnitArray index="6" value="Reaver"/>
+        <AffectedUnitArray index="7" value="Carrier"/>
+        <AffectedUnitArray index="8" value="CyberneticsCore"/>
+        <AffectedUnitArray index="9" value="DarkTemplar"/>
+        <AffectedUnitArray index="10" value="FleetBeacon"/>
+        <AffectedUnitArray index="11" value="Forge"/>
+        <AffectedUnitArray index="12" value="Gateway"/>
+        <AffectedUnitArray index="13" value="HighTemplar"/>
+        <AffectedUnitArray index="14" value="Interceptor"/>
+        <AffectedUnitArray index="15" value="Nexus"/>
+        <AffectedUnitArray index="27" value="WarpPrism"/>
+        <AffectedUnitArray index="28" value="Zealot"/>
+        <AffectedUnitArray index="29" removed="1"/>
+        <AffectedUnitArray index="30" removed="1"/>
+        <AffectedUnitArray index="31" removed="1"/>
+    </CUpgrade>
+    <CUpgrade id="ProtossShieldsLevel3">
+        <EffectArray index="4" Reference="Unit,Stalker,ShieldArmorLevel"/>
+        <EffectArray index="5" Reference="Unit,Stalker,ShieldArmor" Value="1"/>
+        <EffectArray index="6" Reference="Unit,HighTemplar,ShieldArmorLevel"/>
+        <EffectArray index="7" Reference="Unit,HighTemplar,ShieldArmor"/>
+        <EffectArray index="8" Reference="Unit,DarkTemplar,ShieldArmorLevel"/>
+        <EffectArray index="9" Reference="Unit,DarkTemplar,ShieldArmor" Value="1"/>
+        <EffectArray index="10" Reference="Unit,Archon,ShieldArmorLevel"/>
+        <EffectArray index="11" Reference="Unit,Archon,ShieldArmor"/>
+        <EffectArray index="12" Reference="Unit,Observer,ShieldArmorLevel"/>
+        <EffectArray index="13" Reference="Unit,Observer,ShieldArmor"/>
+        <EffectArray index="14" Reference="Unit,WarpPrism,ShieldArmorLevel"/>
+        <EffectArray index="15" Reference="Unit,WarpPrism,ShieldArmor"/>
+        <EffectArray index="16" Reference="Unit,Phoenix,ShieldArmorLevel"/>
+        <EffectArray index="17" Reference="Unit,Phoenix,ShieldArmor"/>
+        <EffectArray index="18" Reference="Unit,Carrier,ShieldArmorLevel"/>
+        <EffectArray index="19" Reference="Unit,Carrier,ShieldArmor"/>
+        <EffectArray index="20" Reference="Unit,Interceptor,ShieldArmorLevel"/>
+        <EffectArray index="21" Reference="Unit,Interceptor,ShieldArmor"/>
+        <EffectArray index="22" Reference="Unit,Nexus,ShieldArmorLevel"/>
+        <EffectArray index="23" Reference="Unit,Nexus,ShieldArmor"/>
+        <EffectArray index="24" Reference="Unit,Assimilator,ShieldArmorLevel"/>
+        <EffectArray index="25" Reference="Unit,Assimilator,ShieldArmor"/>
+        <EffectArray index="26" Reference="Unit,Pylon,ShieldArmorLevel"/>
+        <EffectArray index="27" Reference="Unit,Pylon,ShieldArmor"/>
+        <EffectArray index="28" Reference="Unit,Gateway,ShieldArmorLevel"/>
+        <EffectArray index="29" Reference="Unit,Gateway,ShieldArmor"/>
+        <EffectArray index="30" Reference="Unit,Forge,ShieldArmorLevel"/>
+        <EffectArray index="31" Reference="Unit,Forge,ShieldArmor"/>
+        <EffectArray index="32" Reference="Unit,PhotonCannon,ShieldArmorLevel" Value="1"/>
+        <EffectArray index="33" Reference="Unit,PhotonCannon,ShieldArmor"/>
+        <EffectArray index="34" Reference="Unit,CyberneticsCore,ShieldArmor" Value="1.000000"/>
+        <EffectArray index="35" Reference="Unit,CyberneticsCore,ShieldArmorLevel"/>
+        <EffectArray index="36" Reference="Unit,TwilightCouncil,ShieldArmorLevel"/>
+        <EffectArray index="37" Reference="Unit,TwilightCouncil,ShieldArmor"/>
+        <EffectArray index="38" Reference="Unit,TemplarArchive,ShieldArmorLevel"/>
+        <EffectArray index="39" Reference="Unit,TemplarArchive,ShieldArmor"/>
+        <EffectArray index="40" Reference="Unit,RoboticsFacility,ShieldArmorLevel"/>
+        <EffectArray index="41" Reference="Unit,RoboticsFacility,ShieldArmor"/>
+        <EffectArray index="42" Reference="Unit,RoboticsBay,ShieldArmorLevel"/>
+        <EffectArray index="43" Reference="Unit,RoboticsBay,ShieldArmor"/>
+        <EffectArray index="44" Reference="Unit,Stargate,ShieldArmorLevel"/>
+        <EffectArray index="45" Reference="Unit,Stargate,ShieldArmor"/>
+        <EffectArray index="46" Reference="Unit,FleetBeacon,ShieldArmorLevel"/>
+        <EffectArray index="47" Reference="Unit,FleetBeacon,ShieldArmor"/>
+        <EffectArray index="48" Operation="Set" Reference="Actor,Probe,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray index="49" Operation="Set" Reference="Actor,Zealot,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray index="50" Operation="Set" Reference="Actor,Stalker,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray index="51" Operation="Set" Reference="Actor,HighTemplar,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray index="52" Operation="Set" Reference="Actor,DarkTemplar,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray index="53" Operation="Set" Reference="Actor,Archon,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray index="54" Operation="Set" Reference="Actor,Observer,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray index="55" Operation="Set" Reference="Actor,WarpPrism,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray index="56" Operation="Set" Reference="Actor,Phoenix,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray index="57" Operation="Set" Reference="Actor,Carrier,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray index="58" Operation="Set" Reference="Actor,Interceptor,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray index="59" Operation="Set" Reference="Actor,Nexus,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray index="60" Operation="Set" Reference="Actor,Assimilator,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray index="61" Operation="Set" Reference="Actor,Pylon,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray index="62" Operation="Set" Reference="Actor,Gateway,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray index="63" Operation="Set" Reference="Actor,Forge,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray index="64" Operation="Set" Reference="Actor,PhotonCannon,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray index="65" Operation="Set" Reference="Actor,CyberneticsCore,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray index="66" Operation="Set" Reference="Actor,TwilightCouncil,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray index="67" Operation="Set" Reference="Actor,TemplarArchive,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray index="68" Operation="Set" Reference="Actor,RoboticsBay,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray index="69" Operation="Set" Reference="Actor,RoboticsFacility,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray index="70" Operation="Set" Reference="Actor,Stargate,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray index="71" Operation="Set" Reference="Actor,FleetBeacon,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray index="72" Operation="Add" Reference="Unit,Scout,ShieldArmor" Value="1"/>
+        <EffectArray index="73" Operation="Add" Reference="Unit,Scout,ShieldArmorLevel" Value="1"/>
+        <EffectArray index="74" Operation="Add" Reference="Unit,Obelisk,ShieldArmorLevel" Value="1"/>
+        <EffectArray index="75" Operation="Add" Reference="Unit,Obelisk,ShieldArmor" Value="1"/>
+        <EffectArray index="76" Operation="Set" Reference="Actor,Scout,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray index="77" Operation="Set" Reference="Actor,Arbiter,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray index="78" Operation="Set" Reference="Actor,FleetBeacon2,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray index="79" Operation="Set" Reference="Actor,Reaver,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray index="80" Operation="Add" Reference="Unit,Arbiter,ShieldArmor" Value="1"/>
+        <EffectArray index="81" Operation="Add" Reference="Unit,Arbiter,ShieldArmorLevel" Value="1"/>
+        <EffectArray index="82" Operation="Add" Reference="Unit,FleetBeacon2,ShieldArmor" Value="1"/>
+        <EffectArray index="83" Operation="Add" Reference="Unit,FleetBeacon2,ShieldArmorLevel" Value="1"/>
+        <EffectArray index="84" Operation="Add" Reference="Unit,Reaver,ShieldArmor" Value="1"/>
+        <EffectArray index="85" Operation="Add" Reference="Unit,Reaver,ShieldArmorLevel" Value="1"/>
+        <EffectArray index="86" Operation="Set" Reference="Actor,Archon2,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray index="87" Operation="Add" Reference="Unit,Archon2,ShieldArmorLevel" Value="1"/>
+        <EffectArray index="88" Operation="Add" Reference="Unit,Archon2,ShieldArmor" Value="1"/>
+        <EffectArray index="89" Operation="Set" Reference="Actor,Observatory,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray index="90" Operation="Add" Reference="Unit,Observatory,ShieldArmorLevel" Value="1"/>
+        <EffectArray index="91" Operation="Add" Reference="Unit,Observatory,ShieldArmor" Value="1"/>
+        <EffectArray index="92" removed="1"/>
+        <EffectArray index="93" removed="1"/>
+        <EffectArray index="94" removed="1"/>
+        <EffectArray index="95" removed="1"/>
+        <EffectArray index="96" removed="1"/>
+        <EffectArray index="97" removed="1"/>
+        <EffectArray index="98" removed="1"/>
+        <EffectArray index="99" removed="1"/>
+        <EffectArray index="100" removed="1"/>
+        <EffectArray index="101" removed="1"/>
+        <EffectArray index="102" removed="1"/>
+        <EffectArray index="103" removed="1"/>
+        <EffectArray index="104" removed="1"/>
+        <AffectedUnitArray index="1" value="Archon2"/>
+        <AffectedUnitArray index="2" value="Arbiter"/>
+        <AffectedUnitArray index="3" value="Assimilator"/>
+        <AffectedUnitArray index="4" value="Observatory"/>
+        <AffectedUnitArray index="5" value="FleetBeacon2"/>
+        <AffectedUnitArray index="6" value="Reaver"/>
+        <AffectedUnitArray index="7" value="Carrier"/>
+        <AffectedUnitArray index="8" value="CyberneticsCore"/>
+        <AffectedUnitArray index="9" value="DarkTemplar"/>
+        <AffectedUnitArray index="10" value="FleetBeacon"/>
+        <AffectedUnitArray index="11" value="Forge"/>
+        <AffectedUnitArray index="12" value="Gateway"/>
+        <AffectedUnitArray index="13" value="HighTemplar"/>
+        <AffectedUnitArray index="14" value="Interceptor"/>
+        <AffectedUnitArray index="15" value="Nexus"/>
+        <AffectedUnitArray index="27" value="WarpPrism"/>
+        <AffectedUnitArray index="28" value="Zealot"/>
+        <AffectedUnitArray index="29" removed="1"/>
+        <AffectedUnitArray index="30" removed="1"/>
+        <AffectedUnitArray index="31" removed="1"/>
+    </CUpgrade>
+    <CUpgrade id="ResearchDisruptionWeb">
+        <Icon value="Assets\Textures\btn-ability-protoss-blackhole-color.dds"/>
+        <EditorCategories value="Race:Protoss,UpgradeType:SpellResearch"/>
+        <AffectedUnitArray value="Phoenix"/>
+    </CUpgrade>
+    <CUpgrade id="ResearchEMPShockwave">
+        <Icon value="Assets\Textures\btn-ability-terran-emp-color.dds"/>
+        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+        <AffectedUnitArray value="ScienceVessel"/>
+    </CUpgrade>
+    <CUpgrade id="ResearchIrradiate">
+        <Icon value="Assets\Textures\btn-ability-terran-irradiate.dds"/>
+        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+        <AffectedUnitArray value="ScienceVessel"/>
+    </CUpgrade>
+    <CUpgrade id="ResearchMetasynapticNode">
+        <Icon value="Assets\Textures\btn-upgrade-zerg-pathogenglands.dds"/>
+        <EffectArray Operation="Set" Reference="Unit,Defiler,EnergyStart" Value="62.5"/>
+        <EffectArray Operation="Set" Reference="Unit,Defiler,EnergyMax" Value="250"/>
+        <EditorCategories value="Race:Zerg,UpgradeType:Talents"/>
+        <AffectedUnitArray value="Defiler"/>
+    </CUpgrade>
+    <CUpgrade id="ResearchRecall">
+        <Icon value="Assets\Textures\btn-ability-protoss-wormholetransit-color.dds"/>
+        <EditorCategories value="Race:Protoss,UpgradeType:SpellResearch"/>
+        <AffectedUnitArray value="Arbiter"/>
+    </CUpgrade>
+    <CUpgrade id="ResearchStasis">
+        <Icon value="Assets\Textures\btn-ability-protoss-gravitonbeam-color.dds"/>
+        <EditorCategories value="Race:Protoss,UpgradeType:SpellResearch"/>
+        <AffectedUnitArray value="Arbiter"/>
+    </CUpgrade>
+    <CUpgrade id="ResearchSpiderMines">
+        <Icon value="Assets\Textures\btn-ability-terran-spidermine.dds"/>
+        <EditorCategories value="Race:Terran,UpgradeType:SpellResearch"/>
+    </CUpgrade>
+    <CUpgrade id="ScarabDamage">
+        <Icon value="Assets\Textures\UpgradeScarabDamage.dds"/>
+        <EffectArray Reference="Effect,ScarabDamage,Amount" Value="25"/>
+        <EditorCategories value="Race:Protoss,UpgradeType:Talents"/>
+        <AffectedUnitArray value="Reaver"/>
+    </CUpgrade>
+    <CUpgrade id="SensorArray">
+        <Icon value="Assets\Textures\btn-upgrade-protoss-sensorarray.dds"/>
+        <Race value="Prot"/>
+        <EffectArray Operation="Set" Reference="Unit,Observer,Sight" Value="11"/>
+        <EditorCategories value="Race:Protoss,UpgradeType:Talents"/>
+        <AffectedUnitArray value="Observer"/>
+    </CUpgrade>
+    <CUpgrade id="DragoonRange">
+        <Icon value="Assets\Textures\btn-upgrade-protoss-fluxvanes.dds"/>
+        <EffectArray Reference="Weapon,ParticleDisruptors,Range" Value="2"/>
+        <EditorCategories value="Race:Protoss,UpgradeType:Talents"/>
+        <AffectedUnitArray value="Stalker"/>
+    </CUpgrade>
+    <CUpgrade id="TerranInfantryArmorsLevel1">
+        <EffectArray index="4" Reference="Unit,Ghost,LifeArmorLevel" Value="1"/>
+        <EffectArray index="5" Reference="Unit,Ghost,LifeArmor" Value="1"/>
+        <EffectArray index="6" Operation="Set" Reference="Actor,SCV,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel1.dds"/>
+        <EffectArray index="7" Operation="Set" Reference="Actor,Marine,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel1.dds"/>
+        <EffectArray index="8" Operation="Set" Reference="Actor,Ghost,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel1.dds"/>
+        <EffectArray index="9" Reference="Unit,Firebat,LifeArmorLevel" Value="1"/>
+        <EffectArray index="10" Reference="Unit,Firebat,LifeArmor" Value="1"/>
+        <EffectArray index="11" Reference="Unit,Medic,LifeArmorLevel" Value="1"/>
+        <EffectArray index="12" Operation="Add" Reference="Unit,Medic,LifeArmor" Value="1"/>
+        <EffectArray index="13" Operation="Set" Reference="Actor,Firebat,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel1.dds"/>
+        <EffectArray index="14" Operation="Set" Reference="Actor,Medic,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel1.dds"/>
+        <EffectArray index="15" removed="1"/>
+        <EffectArray index="16" removed="1"/>
+        <EffectArray index="17" removed="1"/>
+        <AffectedUnitArray index="1" value="Medic"/>
+        <AffectedUnitArray index="2" value=""/>
+        <AffectedUnitArray index="3" value="Marine"/>
+        <AffectedUnitArray index="4" value="Firebat"/>
+    </CUpgrade>
+    <CUpgrade id="TerranInfantryArmorsLevel2">
+        <EffectArray index="4" Reference="Unit,Ghost,LifeArmorLevel" Value="1"/>
+        <EffectArray index="5" Reference="Unit,Ghost,LifeArmor" Value="1"/>
+        <EffectArray index="6" Operation="Set" Reference="Actor,SCV,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel2.dds"/>
+        <EffectArray index="7" Operation="Set" Reference="Actor,Marine,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel2.dds"/>
+        <EffectArray index="8" Operation="Set" Reference="Actor,Ghost,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel2.dds"/>
+        <EffectArray index="9" Reference="Unit,Firebat,LifeArmorLevel" Value="1"/>
+        <EffectArray index="10" Reference="Unit,Firebat,LifeArmor" Value="1"/>
+        <EffectArray index="11" Reference="Unit,Medic,LifeArmorLevel" Value="1"/>
+        <EffectArray index="12" Operation="Add" Reference="Unit,Medic,LifeArmor" Value="1"/>
+        <EffectArray index="13" Operation="Set" Reference="Actor,Firebat,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel2.dds"/>
+        <EffectArray index="14" Operation="Set" Reference="Actor,Medic,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel2.dds"/>
+        <EffectArray index="15" removed="1"/>
+        <EffectArray index="16" removed="1"/>
+        <EffectArray index="17" removed="1"/>
+        <AffectedUnitArray index="1" value="Medic"/>
+        <AffectedUnitArray index="2" value=""/>
+        <AffectedUnitArray index="3" value="Marine"/>
+        <AffectedUnitArray index="4" value="Firebat"/>
+    </CUpgrade>
+    <CUpgrade id="TerranInfantryArmorsLevel3">
+        <EffectArray index="4" Reference="Unit,Ghost,LifeArmorLevel" Value="1"/>
+        <EffectArray index="5" Reference="Unit,Ghost,LifeArmor" Value="1"/>
+        <EffectArray index="6" Operation="Set" Reference="Actor,SCV,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel3.dds"/>
+        <EffectArray index="7" Operation="Set" Reference="Actor,Marine,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel3.dds"/>
+        <EffectArray index="8" Operation="Set" Reference="Actor,Ghost,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel3.dds"/>
+        <EffectArray index="9" Reference="Unit,Firebat,LifeArmorLevel" Value="1"/>
+        <EffectArray index="10" Reference="Unit,Firebat,LifeArmor" Value="1"/>
+        <EffectArray index="11" Reference="Unit,Medic,LifeArmorLevel" Value="1"/>
+        <EffectArray index="12" Operation="Add" Reference="Unit,Medic,LifeArmor" Value="1"/>
+        <EffectArray index="13" Operation="Set" Reference="Actor,Firebat,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel3.dds"/>
+        <EffectArray index="14" Operation="Set" Reference="Actor,Medic,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel3.dds"/>
+        <EffectArray index="15" removed="1"/>
+        <EffectArray index="16" removed="1"/>
+        <EffectArray index="17" removed="1"/>
+        <AffectedUnitArray index="1" value="Medic"/>
+        <AffectedUnitArray index="2" value=""/>
+        <AffectedUnitArray index="3" value="Marine"/>
+        <AffectedUnitArray index="4" value="Firebat"/>
+    </CUpgrade>
+    <CUpgrade id="TerranInfantryWeaponsLevel1">
+        <EffectArray index="2" Reference="Weapon,C10CanisterRifle,Level" Value="1"/>
+        <EffectArray index="3" Reference="Effect,C10CanisterRifle,Amount" Value="1.000000"/>
+        <EffectArray index="4" Operation="Set" Reference="Weapon,GuassRifle,Icon" Value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel1.dds"/>
+        <EffectArray index="5" Operation="Set" Reference="Weapon,C10CanisterRifle,Icon" Value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel1.dds"/>
+        <EffectArray index="6" Reference="Weapon,Firebat,Level" Value="1"/>
+        <EffectArray index="7" Reference="Effect,FirebatUFull,Amount" Value="2"/>
+        <EffectArray index="8" Operation="Set" Reference="Weapon,Firebat,Icon" Value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel1.dds"/>
+        <EffectArray index="9" Reference="Effect,FirebatUFull2,Amount" Value="2"/>
+        <EffectArray index="10" Reference="Effect,C10CanisterRifle2,Amount" Value="1"/>
+        <EffectArray index="11" removed="1"/>
+        <EffectArray index="12" removed="1"/>
+        <EffectArray index="13" removed="1"/>
+        <EffectArray index="14" removed="1"/>
+        <EffectArray index="15" removed="1"/>
+        <EffectArray index="16" removed="1"/>
+        <AffectedUnitArray index="1" value="Marine"/>
+        <AffectedUnitArray index="2" value="Firebat"/>
+        <AffectedUnitArray index="3" removed="1"/>
+    </CUpgrade>
+    <CUpgrade id="TerranInfantryWeaponsLevel2">
+        <EffectArray index="2" Reference="Weapon,C10CanisterRifle,Level" Value="1"/>
+        <EffectArray index="3" Reference="Effect,C10CanisterRifle,Amount" Value="1.000000"/>
+        <EffectArray index="4" Operation="Set" Reference="Weapon,GuassRifle,Icon" Value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel2.dds"/>
+        <EffectArray index="5" Operation="Set" Reference="Weapon,C10CanisterRifle,Icon" Value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel2.dds"/>
+        <EffectArray index="6" Reference="Weapon,Firebat,Level" Value="1"/>
+        <EffectArray index="7" Reference="Effect,FirebatUFull,Amount" Value="2"/>
+        <EffectArray index="8" Operation="Set" Reference="Weapon,Firebat,Icon" Value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel2.dds"/>
+        <EffectArray index="9" Reference="Effect,FirebatUFull2,Amount" Value="2"/>
+        <EffectArray index="10" Reference="Effect,C10CanisterRifle2,Amount" Value="1"/>
+        <EffectArray index="11" removed="1"/>
+        <EffectArray index="12" removed="1"/>
+        <EffectArray index="13" removed="1"/>
+        <EffectArray index="14" removed="1"/>
+        <EffectArray index="15" removed="1"/>
+        <EffectArray index="16" removed="1"/>
+        <AffectedUnitArray index="1" value="Marine"/>
+        <AffectedUnitArray index="2" value="Firebat"/>
+        <AffectedUnitArray index="3" removed="1"/>
+    </CUpgrade>
+    <CUpgrade id="TerranInfantryWeaponsLevel3">
+        <EffectArray index="2" Reference="Weapon,C10CanisterRifle,Level" Value="1"/>
+        <EffectArray index="3" Reference="Effect,C10CanisterRifle,Amount" Value="1.000000"/>
+        <EffectArray index="4" Operation="Set" Reference="Weapon,GuassRifle,Icon" Value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel3.dds"/>
+        <EffectArray index="5" Operation="Set" Reference="Weapon,C10CanisterRifle,Icon" Value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel3.dds"/>
+        <EffectArray index="6" Reference="Weapon,Firebat,Level" Value="1"/>
+        <EffectArray index="7" Reference="Effect,FirebatUFull,Amount" Value="2"/>
+        <EffectArray index="8" Operation="Set" Reference="Weapon,Firebat,Icon" Value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel3.dds"/>
+        <EffectArray index="9" Reference="Effect,FirebatUFull2,Amount" Value="2"/>
+        <EffectArray index="10" Reference="Effect,C10CanisterRifle2,Amount" Value="1"/>
+        <EffectArray index="11" removed="1"/>
+        <EffectArray index="12" removed="1"/>
+        <EffectArray index="13" removed="1"/>
+        <EffectArray index="14" removed="1"/>
+        <EffectArray index="15" removed="1"/>
+        <EffectArray index="16" removed="1"/>
+        <AffectedUnitArray index="1" value="Marine"/>
+        <AffectedUnitArray index="2" value="Firebat"/>
+        <AffectedUnitArray index="3" removed="1"/>
+    </CUpgrade>
+    <CUpgrade id="TerranShipArmorsLevel1">
+        <EffectArray index="0" Reference="Unit,Battlecruiser,LifeArmorLevel" Value="1"/>
+        <EffectArray index="1" Reference="Unit,Battlecruiser,LifeArmor" Value="1"/>
+        <EffectArray index="2" Reference="Unit,Medivac,LifeArmorLevel" Value="1"/>
+        <EffectArray index="3" Reference="Unit,Medivac,LifeArmor" Value="1"/>
+        <EffectArray index="4" Operation="Set" Reference="Actor,Battlecruiser,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-shipplatinglevel1.dds"/>
+        <EffectArray index="5" Operation="Set" Reference="Actor,Medivac,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-shipplatinglevel1.dds"/>
+        <EffectArray index="6" Reference="Unit,Wraith,LifeArmor" Value="1.000000"/>
+        <EffectArray index="7" Reference="Unit,Wraith,LifeArmorLevel" Value="1"/>
+        <EffectArray index="8" Reference="Unit,ScienceVessel,LifeArmor" Value="1.000000"/>
+        <EffectArray index="9" Reference="Unit,ScienceVessel,LifeArmorLevel" Value="1"/>
+        <EffectArray index="10" Operation="Set" Reference="Actor,Wraith,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-shipplatinglevel1.dds"/>
+        <EffectArray index="11" Operation="Set" Reference="Actor,ScienceVessel,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-shipplatinglevel1.dds"/>
+        <EffectArray index="12" Operation="Set" Reference="Actor,VikingFighter,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-shipplatinglevel1.dds"/>
+        <EffectArray index="13" Operation="Add" Reference="Unit,VikingFighter,LifeArmorLevel" Value="1"/>
+        <EffectArray index="14" Operation="Add" Reference="Unit,VikingFighter,LifeArmor" Value="1"/>
+        <EffectArray index="15" removed="1"/>
+        <EffectArray index="16" removed="1"/>
+        <EffectArray index="17" removed="1"/>
+        <AffectedUnitArray index="0" value="Battlecruiser"/>
+        <AffectedUnitArray index="1" value="Medivac"/>
+        <AffectedUnitArray index="2" value="Wraith"/>
+        <AffectedUnitArray index="3" value="ScienceVessel"/>
+        <AffectedUnitArray index="4" value="VikingFighter"/>
+        <AffectedUnitArray index="5" removed="1"/>
+    </CUpgrade>
+    <CUpgrade id="TerranShipArmorsLevel2">
+        <EffectArray index="0" Reference="Unit,Battlecruiser,LifeArmorLevel" Value="1"/>
+        <EffectArray index="1" Reference="Unit,Battlecruiser,LifeArmor" Value="1"/>
+        <EffectArray index="2" Reference="Unit,Medivac,LifeArmorLevel" Value="1"/>
+        <EffectArray index="3" Reference="Unit,Medivac,LifeArmor" Value="1"/>
+        <EffectArray index="4" Operation="Set" Reference="Actor,Battlecruiser,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-shipplatinglevel2.dds"/>
+        <EffectArray index="5" Operation="Set" Reference="Actor,Medivac,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-shipplatinglevel2.dds"/>
+        <EffectArray index="6" Reference="Unit,Wraith,LifeArmor" Value="1.000000"/>
+        <EffectArray index="7" Reference="Unit,Wraith,LifeArmorLevel" Value="1"/>
+        <EffectArray index="8" Reference="Unit,ScienceVessel,LifeArmor" Value="1.000000"/>
+        <EffectArray index="9" Reference="Unit,ScienceVessel,LifeArmorLevel" Value="1"/>
+        <EffectArray index="10" Operation="Set" Reference="Actor,Wraith,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-shipplatinglevel2.dds"/>
+        <EffectArray index="11" Operation="Set" Reference="Actor,ScienceVessel,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-shipplatinglevel2.dds"/>
+        <EffectArray index="12" Operation="Set" Reference="Actor,VikingFighter,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-shipplatinglevel2.dds"/>
+        <EffectArray index="13" Operation="Add" Reference="Unit,VikingFighter,LifeArmorLevel" Value="1"/>
+        <EffectArray index="14" Operation="Add" Reference="Unit,VikingFighter,LifeArmor" Value="1"/>
+        <EffectArray index="15" removed="1"/>
+        <EffectArray index="16" removed="1"/>
+        <EffectArray index="17" removed="1"/>
+        <AffectedUnitArray index="0" value="Battlecruiser"/>
+        <AffectedUnitArray index="1" value="Medivac"/>
+        <AffectedUnitArray index="2" value="Wraith"/>
+        <AffectedUnitArray index="3" value="ScienceVessel"/>
+        <AffectedUnitArray index="4" value="VikingFighter"/>
+        <AffectedUnitArray index="5" removed="1"/>
+    </CUpgrade>
+    <CUpgrade id="TerranShipArmorsLevel3">
+        <EffectArray index="0" Reference="Unit,Battlecruiser,LifeArmorLevel" Value="1"/>
+        <EffectArray index="1" Reference="Unit,Battlecruiser,LifeArmor" Value="1"/>
+        <EffectArray index="2" Reference="Unit,Medivac,LifeArmorLevel" Value="1"/>
+        <EffectArray index="3" Reference="Unit,Medivac,LifeArmor" Value="1"/>
+        <EffectArray index="4" Operation="Set" Reference="Actor,Battlecruiser,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-shipplatinglevel3.dds"/>
+        <EffectArray index="5" Operation="Set" Reference="Actor,Medivac,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-shipplatinglevel3.dds"/>
+        <EffectArray index="6" Reference="Unit,Wraith,LifeArmor" Value="1.000000"/>
+        <EffectArray index="7" Reference="Unit,Wraith,LifeArmorLevel" Value="1"/>
+        <EffectArray index="8" Reference="Unit,ScienceVessel,LifeArmor" Value="1.000000"/>
+        <EffectArray index="9" Reference="Unit,ScienceVessel,LifeArmorLevel" Value="1"/>
+        <EffectArray index="10" Operation="Set" Reference="Actor,Wraith,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-shipplatinglevel3.dds"/>
+        <EffectArray index="11" Operation="Set" Reference="Actor,ScienceVessel,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-shipplatinglevel3.dds"/>
+        <EffectArray index="12" Operation="Set" Reference="Actor,VikingFighter,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-shipplatinglevel3.dds"/>
+        <EffectArray index="13" Operation="Add" Reference="Unit,VikingFighter,LifeArmorLevel" Value="1"/>
+        <EffectArray index="14" Operation="Add" Reference="Unit,VikingFighter,LifeArmor" Value="1"/>
+        <EffectArray index="15" removed="1"/>
+        <EffectArray index="16" removed="1"/>
+        <EffectArray index="17" removed="1"/>
+        <AffectedUnitArray index="0" value="Battlecruiser"/>
+        <AffectedUnitArray index="1" value="Medivac"/>
+        <AffectedUnitArray index="2" value="Wraith"/>
+        <AffectedUnitArray index="3" value="ScienceVessel"/>
+        <AffectedUnitArray index="4" value="VikingFighter"/>
+        <AffectedUnitArray index="5" removed="1"/>
+    </CUpgrade>
+    <CUpgrade id="TerranShipWeaponsLevel1">
+        <EffectArray index="0" Reference="Weapon,ATALaserBattery,Level" Value="1"/>
+        <EffectArray index="1" Reference="Effect,ATALaserBatteryU,Amount" Value="3"/>
+        <EffectArray index="2" Operation="Set" Reference="Weapon,ATALaserBattery,Icon" Value="Assets\Textures\btn-upgrade-terran-shipweaponslevel1.dds"/>
+        <EffectArray index="3" Reference="Weapon,WraithG,Level" Value="1"/>
+        <EffectArray index="4" Reference="Effect,WraithGU,Amount" Value="1"/>
+        <EffectArray index="5" Reference="Weapon,WraithA,Level" Value="1"/>
+        <EffectArray index="6" Reference="Effect,WraithAU,Amount" Value="1"/>
+        <EffectArray index="7" Operation="Set" Reference="Weapon,WraithG,Icon" Value="Assets\Textures\btn-upgrade-terran-shipweaponslevel1.dds"/>
+        <EffectArray index="8" Operation="Set" Reference="Weapon,WraithA,Icon" Value="Assets\Textures\btn-upgrade-terran-shipweaponslevel1.dds"/>
+        <EffectArray index="9" Reference="Effect,LanzerTorpedoesDamage,Amount" Value="1"/>
+        <EffectArray index="10" Operation="Set" Reference="Weapon,LanzerTorpedoes,Icon" Value="Assets\Textures\btn-upgrade-terran-shipweaponslevel1.dds"/>
+        <EffectArray index="11" Operation="Add" Reference="Weapon,LanzerTorpedoes,Level" Value="1"/>
+        <EffectArray index="12" Operation="Add" Reference="Effect,WraithAU2,Amount" Value="1"/>
+        <EffectArray index="13" removed="1"/>
+        <EffectArray index="14" removed="1"/>
+        <AffectedUnitArray index="0" value="VikingFighter"/>
+        <AffectedUnitArray index="2" value="Wraith"/>
+        <AffectedUnitArray index="3" removed="1"/>
+        <AffectedUnitArray index="4" removed="1"/>
+        <AffectedUnitArray index="5" removed="1"/>
+        <AffectedUnitArray index="6" removed="1"/>
+    </CUpgrade>
+    <CUpgrade id="TerranShipWeaponsLevel2">
+        <EffectArray index="0" Reference="Weapon,ATALaserBattery,Level" Value="1"/>
+        <EffectArray index="1" Reference="Effect,ATALaserBatteryU,Amount" Value="3"/>
+        <EffectArray index="2" Operation="Set" Reference="Weapon,ATALaserBattery,Icon" Value="Assets\Textures\btn-upgrade-terran-shipweaponslevel2.dds"/>
+        <EffectArray index="3" Reference="Weapon,WraithG,Level" Value="1"/>
+        <EffectArray index="4" Reference="Effect,WraithGU,Amount" Value="1"/>
+        <EffectArray index="5" Reference="Weapon,WraithA,Level" Value="1"/>
+        <EffectArray index="6" Reference="Effect,WraithAU,Amount" Value="1"/>
+        <EffectArray index="7" Operation="Set" Reference="Weapon,WraithG,Icon" Value="Assets\Textures\btn-upgrade-terran-shipweaponslevel2.dds"/>
+        <EffectArray index="8" Operation="Set" Reference="Weapon,WraithA,Icon" Value="Assets\Textures\btn-upgrade-terran-shipweaponslevel2.dds"/>
+        <EffectArray index="9" Reference="Effect,LanzerTorpedoesDamage,Amount" Value="1"/>
+        <EffectArray index="10" Operation="Set" Reference="Weapon,LanzerTorpedoes,Icon" Value="Assets\Textures\btn-upgrade-terran-shipweaponslevel2.dds"/>
+        <EffectArray index="11" Operation="Add" Reference="Weapon,LanzerTorpedoes,Level" Value="1"/>
+        <EffectArray index="12" Operation="Add" Reference="Effect,WraithAU2,Amount" Value="1"/>
+        <EffectArray index="13" removed="1"/>
+        <EffectArray index="14" removed="1"/>
+        <AffectedUnitArray index="0" value="VikingFighter"/>
+        <AffectedUnitArray index="2" value="Wraith"/>
+        <AffectedUnitArray index="3" removed="1"/>
+        <AffectedUnitArray index="4" removed="1"/>
+        <AffectedUnitArray index="5" removed="1"/>
+        <AffectedUnitArray index="6" removed="1"/>
+    </CUpgrade>
+    <CUpgrade id="TerranShipWeaponsLevel3">
+        <EffectArray index="0" Reference="Weapon,ATALaserBattery,Level" Value="1"/>
+        <EffectArray index="1" Reference="Effect,ATALaserBatteryU,Amount" Value="3"/>
+        <EffectArray index="2" Operation="Set" Reference="Weapon,ATALaserBattery,Icon" Value="Assets\Textures\btn-upgrade-terran-shipweaponslevel3.dds"/>
+        <EffectArray index="3" Reference="Weapon,WraithG,Level" Value="1"/>
+        <EffectArray index="4" Reference="Effect,WraithGU,Amount" Value="1"/>
+        <EffectArray index="5" Reference="Weapon,WraithA,Level" Value="1"/>
+        <EffectArray index="6" Reference="Effect,WraithAU,Amount" Value="1"/>
+        <EffectArray index="7" Operation="Set" Reference="Weapon,WraithG,Icon" Value="Assets\Textures\btn-upgrade-terran-shipweaponslevel3.dds"/>
+        <EffectArray index="8" Operation="Set" Reference="Weapon,WraithA,Icon" Value="Assets\Textures\btn-upgrade-terran-shipweaponslevel3.dds"/>
+        <EffectArray index="9" Reference="Effect,LanzerTorpedoesDamage,Amount" Value="1"/>
+        <EffectArray index="10" Operation="Set" Reference="Weapon,LanzerTorpedoes,Icon" Value="Assets\Textures\btn-upgrade-terran-shipweaponslevel3.dds"/>
+        <EffectArray index="11" Operation="Add" Reference="Weapon,LanzerTorpedoes,Level" Value="1"/>
+        <EffectArray index="12" Operation="Add" Reference="Effect,WraithAU2,Amount" Value="1"/>
+        <EffectArray index="13" removed="1"/>
+        <EffectArray index="14" removed="1"/>
+        <AffectedUnitArray index="0" value="VikingFighter"/>
+        <AffectedUnitArray index="2" value="Wraith"/>
+        <AffectedUnitArray index="3" removed="1"/>
+        <AffectedUnitArray index="4" removed="1"/>
+        <AffectedUnitArray index="5" removed="1"/>
+        <AffectedUnitArray index="6" removed="1"/>
+    </CUpgrade>
+    <CUpgrade id="TerranVehicleArmorsLevel1">
+        <EffectArray index="0" Reference="Unit,SiegeTank,LifeArmorLevel"/>
+        <EffectArray index="1" Reference="Unit,SiegeTank,LifeArmor"/>
+        <EffectArray index="2" Reference="Unit,SiegeTankSieged,LifeArmorLevel"/>
+        <EffectArray index="3" Reference="Unit,SiegeTankSieged,LifeArmor"/>
+        <EffectArray index="4" Operation="Set" Reference="Actor,Thor,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel1.dds"/>
+        <EffectArray index="5" Operation="Set" Reference="Actor,SiegeTank,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel1.dds"/>
+        <EffectArray index="6" Operation="Set" Reference="Actor,SiegeTankSieged,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel1.dds"/>
+        <EffectArray index="7" Reference="Unit,Vulture,LifeArmor" Value="1.000000"/>
+        <EffectArray index="8" Operation="Add" Reference="Unit,Vulture,LifeArmorLevel" Value="1"/>
+        <EffectArray index="9" Operation="Add" Reference="Unit,Goliath,LifeArmor" Value="1.000000"/>
+        <EffectArray index="10" Operation="Add" Reference="Unit,Goliath,LifeArmorLevel" Value="1"/>
+        <EffectArray index="11" Reference="Actor,Vulture,LifeArmorIcon"/>
+        <EffectArray Operation="Set" Reference="Actor,Goliath,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel1.dds"/>
+        <AffectedUnitArray index="0" value="SiegeTankSieged"/>
+        <AffectedUnitArray index="1" value="SiegeTank"/>
+        <AffectedUnitArray index="2" value="Goliath"/>
+        <AffectedUnitArray index="3" value="Vulture"/>
+    </CUpgrade>
+    <CUpgrade id="TerranVehicleArmorsLevel2">
+        <EffectArray index="0" Reference="Unit,SiegeTank,LifeArmorLevel"/>
+        <EffectArray index="1" Reference="Unit,SiegeTank,LifeArmor"/>
+        <EffectArray index="2" Reference="Unit,SiegeTankSieged,LifeArmorLevel"/>
+        <EffectArray index="3" Reference="Unit,SiegeTankSieged,LifeArmor"/>
+        <EffectArray index="4" Operation="Set" Reference="Actor,SiegeTank,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel2.dds"/>
+        <EffectArray index="5" Operation="Set" Reference="Actor,SiegeTankSieged,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel2.dds"/>
+        <EffectArray index="6" Reference="Unit,Vulture,LifeArmor"/>
+        <EffectArray index="7" Reference="Unit,Vulture,LifeArmorLevel"/>
+        <EffectArray index="8" Operation="Add" Reference="Unit,Goliath,LifeArmor" Value="1.000000"/>
+        <EffectArray index="9" Operation="Add" Reference="Unit,Goliath,LifeArmorLevel" Value="1"/>
+        <EffectArray index="10" Reference="Actor,Vulture,LifeArmorIcon"/>
+        <EffectArray index="11" Reference="Actor,Goliath,LifeArmorIcon"/>
+        <AffectedUnitArray index="0" value="SiegeTankSieged"/>
+        <AffectedUnitArray index="1" value="SiegeTank"/>
+        <AffectedUnitArray index="2" value="Goliath"/>
+        <AffectedUnitArray index="3" value="Vulture"/>
+    </CUpgrade>
+    <CUpgrade id="TerranVehicleArmorsLevel3">
+        <EffectArray index="0" Reference="Unit,SiegeTank,LifeArmorLevel"/>
+        <EffectArray index="1" Reference="Unit,SiegeTank,LifeArmor"/>
+        <EffectArray index="2" Reference="Unit,SiegeTankSieged,LifeArmorLevel"/>
+        <EffectArray index="3" Reference="Unit,SiegeTankSieged,LifeArmor"/>
+        <EffectArray index="4" Operation="Set" Reference="Actor,SiegeTank,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel3.dds"/>
+        <EffectArray index="5" Operation="Set" Reference="Actor,SiegeTankSieged,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel3.dds"/>
+        <EffectArray index="6" Reference="Unit,Vulture,LifeArmor"/>
+        <EffectArray index="7" Reference="Unit,Vulture,LifeArmorLevel"/>
+        <EffectArray index="8" Operation="Add" Reference="Unit,Goliath,LifeArmor" Value="1.000000"/>
+        <EffectArray index="9" Operation="Add" Reference="Unit,Goliath,LifeArmorLevel" Value="1"/>
+        <EffectArray index="10" Reference="Actor,Vulture,LifeArmorIcon"/>
+        <EffectArray index="11" Reference="Actor,Goliath,LifeArmorIcon"/>
+        <AffectedUnitArray index="0" value="SiegeTankSieged"/>
+        <AffectedUnitArray index="1" value="SiegeTank"/>
+        <AffectedUnitArray index="2" value="Goliath"/>
+        <AffectedUnitArray index="3" value="Vulture"/>
+    </CUpgrade>
+    <CUpgrade id="TerranVehicleWeaponsLevel1">
+        <EffectArray index="0" Reference="Weapon,90mmCannons,Level"/>
+        <EffectArray index="1" Reference="Effect,90mmCannons,Amount" Value="2"/>
+        <EffectArray index="2" Reference="Weapon,CrucioShockCannon,Level" Value="1"/>
+        <EffectArray index="3" Operation="Set" Reference="Weapon,90mmCannons,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel1.dds"/>
+        <EffectArray index="4" Operation="Set" Reference="Weapon,CrucioShockCannon,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel1.dds"/>
+        <EffectArray index="5" Reference="Effect,ThorsHammerDamage,Amount"/>
+        <EffectArray index="6" Reference="Weapon,Vulture,Level"/>
+        <EffectArray index="7" Reference="Effect,VultureU,Amount" Value="2"/>
+        <EffectArray index="8" Reference="Weapon,GoliathG,Level" Value="1"/>
+        <EffectArray index="9" Reference="Weapon,GoliathGUpgraded,Level" Value="1"/>
+        <EffectArray index="10" Reference="Effect,GoliathG,Amount" Value="1"/>
+        <EffectArray index="11" Reference="Weapon,GoliathA,Level"/>
+        <EffectArray index="12" Reference="Weapon,GoliathAUpgraded,Level" Value="1"/>
+        <EffectArray index="13" Reference="Effect,GoliathAU,Amount" Value="2"/>
+        <EffectArray index="14" Reference="Effect,CrucioShockCannonBlast,Amount" Value="5"/>
+        <EffectArray index="15" Reference="Weapon,Vulture,Icon"/>
+        <EffectArray index="16" Reference="Weapon,GoliathG,Icon"/>
+        <EffectArray index="17" Reference="Weapon,GoliathA,Icon"/>
+        <EffectArray index="18" Reference="Weapon,GoliathGUpgraded,Icon"/>
+        <EffectArray index="19" Operation="Add" Reference="Weapon,WarHound,Level" Value="1"/>
+        <EffectArray index="20" Operation="Set" Reference="Weapon,WarHound,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel1.dds"/>
+        <EffectArray index="21" Reference="Effect,WarHoundMelee,Amount" Value="2"/>
+        <EffectArray index="22" Reference="Effect,WarHound,Amount" Value="2"/>
+        <EffectArray index="23" Reference="Weapon,WidowMineDummy,Level" Value="1"/>
+        <EffectArray index="24" Operation="Set" Reference="Weapon,WidowMineDummy,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel1.dds"/>
+        <EffectArray index="25" Reference="Effect,MineDroneDirectDamage,Amount" Value="5"/>
+        <EffectArray index="26" Reference="Effect,MineDroneExplodeDamage,Amount" Value="1"/>
+        <EffectArray index="27" Operation="Set" Reference="Weapon,HellionTank,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel1.dds"/>
+        <EffectArray index="28" Operation="Add" Reference="Effect,HellionTankDamage,Amount" Value="1.000000"/>
+        <EffectArray index="29" Reference="Weapon,HellionTank,Level" Value="1"/>
+        <EffectArray index="30" Reference="Effect,HellionTankDamage,AttributeBonus[Light]" Value="1.000000"/>
+        <EffectArray index="31" Operation="Set" Reference="Weapon,GoliathAUpgraded,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel1.dds"/>
+        <EffectArray index="32" Reference="Effect,GoliathAU2,Amount" Value="2"/>
+        <EffectArray index="33" Reference="Effect,90mmCannons2,Amount" Value="2"/>
+        <EffectArray index="34" Reference="Effect,VultureUNull,Amount" Value="2"/>
+        <EffectArray Reference="Effect,CrucioShockCannonDummy,Amount" Value="5"/>
+        <AffectedUnitArray index="0" value="SiegeTankSieged"/>
+        <AffectedUnitArray index="1" value="SiegeTank"/>
+        <AffectedUnitArray index="2" value="Goliath"/>
+        <AffectedUnitArray index="3" value="Vulture"/>
+    </CUpgrade>
+    <CUpgrade id="TerranVehicleWeaponsLevel2">
+        <EffectArray index="0" Reference="Weapon,90mmCannons,Level"/>
+        <EffectArray index="1" Reference="Effect,90mmCannons,Amount" Value="2"/>
+        <EffectArray index="2" Reference="Weapon,CrucioShockCannon,Level" Value="1"/>
+        <EffectArray index="3" Operation="Set" Reference="Weapon,90mmCannons,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel2.dds"/>
+        <EffectArray index="4" Operation="Set" Reference="Weapon,CrucioShockCannon,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel2.dds"/>
+        <EffectArray index="5" Reference="Weapon,Vulture,Level" Value="1"/>
+        <EffectArray index="6" Reference="Effect,VultureU,Amount" Value="2"/>
+        <EffectArray index="7" Reference="Weapon,GoliathG,Level" Value="1"/>
+        <EffectArray index="8" Reference="Weapon,GoliathGUpgraded,Level" Value="1"/>
+        <EffectArray index="9" Reference="Effect,GoliathG,Amount" Value="1"/>
+        <EffectArray index="10" Reference="Weapon,GoliathA,Level" Value="1"/>
+        <EffectArray index="11" Reference="Effect,GoliathAU,Amount" Value="2"/>
+        <EffectArray index="12" Reference="Effect,CrucioShockCannonBlast,Amount" Value="5"/>
+        <EffectArray index="13" Operation="Set" Reference="Weapon,Vulture,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel2.dds"/>
+        <EffectArray index="14" Operation="Set" Reference="Weapon,GoliathG,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel2.dds"/>
+        <EffectArray index="15" Reference="Weapon,GoliathA,Icon"/>
+        <EffectArray index="16" Reference="Weapon,GoliathGUpgraded,Icon"/>
+        <EffectArray index="17" Operation="Add" Reference="Effect,GoliathAU2,Amount" Value="2"/>
+        <EffectArray index="18" Operation="Add" Reference="Weapon,WarHound,Level" Value="1"/>
+        <EffectArray index="19" Reference="Weapon,WarHound,Icon"/>
+        <EffectArray index="20" Reference="Effect,WarHoundMelee,Amount" Value="2"/>
+        <EffectArray index="21" Reference="Effect,WarHound,Amount" Value="2"/>
+        <EffectArray index="22" Reference="Weapon,WidowMineDummy,Level" Value="1"/>
+        <EffectArray index="23" Operation="Set" Reference="Weapon,WidowMineDummy,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel2.dds"/>
+        <EffectArray index="24" Operation="Add" Reference="Effect,MineDroneDirectDamage,Amount" Value="5"/>
+        <EffectArray index="25" Reference="Effect,MineDroneExplodeDamage,Amount" Value="1"/>
+        <EffectArray index="26" Operation="Set" Reference="Weapon,HellionTank,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel2.dds"/>
+        <EffectArray index="27" Reference="Effect,HellionTankDamage,Amount" Value="1.000000"/>
+        <EffectArray index="28" Operation="Add" Reference="Weapon,HellionTank,Level" Value="1"/>
+        <EffectArray index="29" Reference="Effect,HellionTankDamage,AttributeBonus[Light]" Value="1.000000"/>
+        <EffectArray index="30" Reference="Effect,90mmCannons2,Amount" Value="2"/>
+        <EffectArray index="31" Operation="Add" Reference="Effect,VultureUNull,Amount" Value="2"/>
+        <EffectArray index="32" Reference="Effect,CrucioShockCannonDummy,Amount" Value="5"/>
+        <EffectArray index="33" removed="1"/>
+        <EffectArray index="34" removed="1"/>
+        <EffectArray index="35" removed="1"/>
+        <EffectArray index="36" removed="1"/>
+        <EffectArray index="37" removed="1"/>
+        <AffectedUnitArray index="0" value="SiegeTankSieged"/>
+        <AffectedUnitArray index="1" value="SiegeTank"/>
+        <AffectedUnitArray index="2" value="Goliath"/>
+        <AffectedUnitArray index="3" value="Vulture"/>
+    </CUpgrade>
+    <CUpgrade id="TerranVehicleWeaponsLevel3">
+        <EffectArray index="0" Reference="Weapon,90mmCannons,Level"/>
+        <EffectArray index="1" Reference="Effect,90mmCannons,Amount" Value="2"/>
+        <EffectArray index="2" Reference="Weapon,CrucioShockCannon,Level" Value="1"/>
+        <EffectArray index="3" Operation="Set" Reference="Weapon,90mmCannons,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel3.dds"/>
+        <EffectArray index="4" Operation="Set" Reference="Weapon,CrucioShockCannon,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel3.dds"/>
+        <EffectArray index="5" Reference="Weapon,Vulture,Level" Value="1"/>
+        <EffectArray index="6" Reference="Effect,VultureU,Amount" Value="2"/>
+        <EffectArray index="7" Reference="Weapon,GoliathG,Level" Value="1"/>
+        <EffectArray index="8" Reference="Weapon,GoliathGUpgraded,Level" Value="1"/>
+        <EffectArray index="9" Reference="Effect,GoliathG,Amount" Value="1"/>
+        <EffectArray index="10" Reference="Weapon,GoliathA,Level" Value="1"/>
+        <EffectArray index="11" Reference="Effect,GoliathAU,Amount" Value="2"/>
+        <EffectArray index="12" Reference="Effect,CrucioShockCannonBlast,Amount" Value="5"/>
+        <EffectArray index="13" Operation="Set" Reference="Weapon,Vulture,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel3.dds"/>
+        <EffectArray index="14" Operation="Set" Reference="Weapon,GoliathG,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel3.dds"/>
+        <EffectArray index="15" Reference="Weapon,GoliathA,Icon"/>
+        <EffectArray index="16" Reference="Weapon,GoliathGUpgraded,Icon"/>
+        <EffectArray index="17" Operation="Add" Reference="Effect,GoliathAU2,Amount" Value="2"/>
+        <EffectArray index="18" Operation="Add" Reference="Weapon,WarHound,Level" Value="1"/>
+        <EffectArray index="19" Reference="Weapon,WarHound,Icon"/>
+        <EffectArray index="20" Reference="Effect,WarHoundMelee,Amount" Value="2"/>
+        <EffectArray index="21" Reference="Effect,WarHound,Amount" Value="2"/>
+        <EffectArray index="22" Reference="Weapon,WidowMineDummy,Level" Value="1"/>
+        <EffectArray index="23" Operation="Set" Reference="Weapon,WidowMineDummy,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel3.dds"/>
+        <EffectArray index="24" Operation="Add" Reference="Effect,MineDroneDirectDamage,Amount" Value="5"/>
+        <EffectArray index="25" Reference="Effect,MineDroneExplodeDamage,Amount" Value="1"/>
+        <EffectArray index="26" Operation="Set" Reference="Weapon,HellionTank,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel3.dds"/>
+        <EffectArray index="27" Reference="Effect,HellionTankDamage,Amount" Value="1.000000"/>
+        <EffectArray index="28" Operation="Add" Reference="Weapon,HellionTank,Level" Value="1"/>
+        <EffectArray index="29" Reference="Effect,HellionTankDamage,AttributeBonus[Light]" Value="1.000000"/>
+        <EffectArray index="30" Reference="Effect,90mmCannons2,Amount" Value="2"/>
+        <EffectArray index="31" Operation="Add" Reference="Effect,VultureUNull,Amount" Value="2"/>
+        <EffectArray index="32" Reference="Effect,CrucioShockCannonDummy,Amount" Value="5"/>
+        <EffectArray index="33" removed="1"/>
+        <EffectArray index="34" removed="1"/>
+        <EffectArray index="35" removed="1"/>
+        <EffectArray index="36" removed="1"/>
+        <EffectArray index="37" removed="1"/>
+        <AffectedUnitArray index="0" value="SiegeTankSieged"/>
+        <AffectedUnitArray index="1" value="SiegeTank"/>
+        <AffectedUnitArray index="2" value="Goliath"/>
+        <AffectedUnitArray index="3" value="Vulture"/>
+    </CUpgrade>
+    <CUpgrade id="U238Shells">
+        <Icon value="Assets\Textures\btn-upgrade-terran-u238.dds"/>
+        <EffectArray Reference="Weapon,GuassRifle,Range" Value="1"/>
+        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+        <AffectedUnitArray value="Marine"/>
+    </CUpgrade>
+    <CUpgrade id="ScienceVesselTitanReactor">
+        <Flags index="TechTreeCheat" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-corvidreactor.dds"/>
+        <Alert value="ResearchComplete"/>
+        <Race value="Terr"/>
+        <ScoreAmount value="300"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArray Reference="Unit,ScienceVessel,EnergyMax" Value="50"/>
+        <EffectArray Reference="Unit,ScienceVessel,EnergyStart" Value="12"/>
+        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+        <AffectedUnitArray value="ScienceVessel"/>
+    </CUpgrade>
+    <CUpgrade id="ArgusTalisman">
+        <Flags index="TechTreeCheat" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-protoss-ArgusTalisman.dds"/>
+        <Alert value="ResearchComplete"/>
+        <Race value="Prot"/>
+        <ScoreAmount value="300"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArray Reference="Unit,Archon2,EnergyMax" Value="50"/>
+        <EffectArray Reference="Unit,Archon2,EnergyStart" Value="12"/>
+        <EditorCategories value="Race:Protoss,UpgradeType:Talents"/>
+        <AffectedUnitArray value="Archon2"/>
+    </CUpgrade>
+    <CUpgrade id="WraithCloak">
+        <Icon value="Assets\Textures\btn-ability-terran-cloak-color.dds"/>
+        <AffectedUnitArray value="Wraith"/>
+    </CUpgrade>
+    <CUpgrade id="ZergFlyerArmorsLevel1">
+        <EffectArray index="4" Reference="Unit,BroodLord,LifeArmorLevel"/>
+        <EffectArray index="5" Reference="Unit,BroodLord,LifeArmor"/>
+        <EffectArray index="6" Reference="Unit,BroodLordCocoon,LifeArmorLevel"/>
+        <EffectArray index="7" Reference="Unit,BroodLordCocoon,LifeArmor"/>
+        <EffectArray index="8" Operation="Set" Reference="Actor,Mutalisk,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-zerg-flyercarapace-level1.dds"/>
+        <EffectArray index="9" Operation="Set" Reference="Actor,Overlord,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-zerg-flyercarapace-level1.dds"/>
+        <EffectArray index="10" Operation="Set" Reference="Actor,BroodLord,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-zerg-flyercarapace-level1.dds"/>
+        <EffectArray index="11" Operation="Set" Reference="Actor,BroodLordCocoon,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-zerg-flyercarapace-level1.dds"/>
+        <EffectArray index="12" Reference="Unit,Scourge,LifeArmor" Value="1.000000"/>
+        <EffectArray index="13" Reference="Unit,Scourge,LifeArmorLevel"/>
+        <EffectArray index="14" Operation="Set" Reference="Actor,Scourge,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-zerg-flyercarapace-level1.dds"/>
+        <EffectArray index="15" Operation="Set" Reference="Actor,Devourer,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-zerg-flyercarapace-level1.dds"/>
+        <EffectArray index="16" Operation="Add" Reference="Unit,BroodLord2,LifeArmorLevel" Value="1"/>
+        <EffectArray index="17" Operation="Add" Reference="Unit,BroodLord2,LifeArmor" Value="1"/>
+        <EffectArray index="18" Operation="Set" Reference="Actor,SS_SwarmGuardian,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-zerg-flyercarapace-level1.dds"/>
+        <EffectArray index="19" Operation="Add" Reference="Unit,QueenBW,LifeArmorLevel" Value="1"/>
+        <EffectArray index="20" Operation="Add" Reference="Unit,QueenBW,LifeArmor" Value="1"/>
+        <AffectedUnitArray index="0" value="QueenBW"/>
+        <AffectedUnitArray index="1" value="BroodLord2"/>
+        <AffectedUnitArray index="2" value="BroodLord"/>
+        <AffectedUnitArray index="3" value="Mutalisk"/>
+        <AffectedUnitArray index="4" value="Overlord"/>
+    </CUpgrade>
+    <CUpgrade id="ZergFlyerArmorsLevel2">
+        <EffectArray index="4" Reference="Unit,BroodLord,LifeArmorLevel"/>
+        <EffectArray index="5" Reference="Unit,BroodLord,LifeArmor"/>
+        <EffectArray index="6" Reference="Unit,BroodLordCocoon,LifeArmorLevel"/>
+        <EffectArray index="7" Reference="Unit,BroodLordCocoon,LifeArmor"/>
+        <EffectArray index="8" Operation="Set" Reference="Actor,Mutalisk,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-zerg-flyercarapace-level2.dds"/>
+        <EffectArray index="9" Operation="Set" Reference="Actor,Overlord,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-zerg-flyercarapace-level2.dds"/>
+        <EffectArray index="10" Operation="Set" Reference="Actor,BroodLord,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-zerg-flyercarapace-level2.dds"/>
+        <EffectArray index="11" Operation="Set" Reference="Actor,BroodLordCocoon,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-zerg-flyercarapace-level2.dds"/>
+        <EffectArray index="12" Reference="Unit,Scourge,LifeArmor" Value="1.000000"/>
+        <EffectArray index="13" Reference="Unit,Scourge,LifeArmorLevel"/>
+        <EffectArray index="14" Operation="Set" Reference="Actor,Scourge,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-zerg-flyercarapace-level2.dds"/>
+        <EffectArray index="15" Operation="Set" Reference="Actor,Devourer,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-zerg-flyercarapace-level2.dds"/>
+        <EffectArray index="16" Operation="Add" Reference="Unit,BroodLord2,LifeArmorLevel" Value="1"/>
+        <EffectArray index="17" Operation="Add" Reference="Unit,BroodLord2,LifeArmor" Value="1"/>
+        <EffectArray index="18" Operation="Set" Reference="Actor,SS_SwarmGuardian,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-zerg-flyercarapace-level2.dds"/>
+        <EffectArray index="19" Operation="Add" Reference="Unit,QueenBW,LifeArmorLevel" Value="1"/>
+        <EffectArray index="20" Operation="Add" Reference="Unit,QueenBW,LifeArmor" Value="1"/>
+        <AffectedUnitArray index="0" value="QueenBW"/>
+        <AffectedUnitArray index="1" value="BroodLord2"/>
+        <AffectedUnitArray index="2" value="BroodLord"/>
+        <AffectedUnitArray index="3" value="Mutalisk"/>
+        <AffectedUnitArray index="4" value="Overlord"/>
+    </CUpgrade>
+    <CUpgrade id="ZergFlyerArmorsLevel3">
+        <EffectArray index="4" Reference="Unit,BroodLord,LifeArmorLevel"/>
+        <EffectArray index="5" Reference="Unit,BroodLord,LifeArmor"/>
+        <EffectArray index="6" Reference="Unit,BroodLordCocoon,LifeArmorLevel"/>
+        <EffectArray index="7" Reference="Unit,BroodLordCocoon,LifeArmor"/>
+        <EffectArray index="8" Operation="Set" Reference="Actor,Mutalisk,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-zerg-flyercarapace-level3.dds"/>
+        <EffectArray index="9" Operation="Set" Reference="Actor,Overlord,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-zerg-flyercarapace-level3.dds"/>
+        <EffectArray index="10" Operation="Set" Reference="Actor,BroodLord,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-zerg-flyercarapace-level3.dds"/>
+        <EffectArray index="11" Operation="Set" Reference="Actor,BroodLordCocoon,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-zerg-flyercarapace-level3.dds"/>
+        <EffectArray index="12" Reference="Unit,Scourge,LifeArmor" Value="1.000000"/>
+        <EffectArray index="13" Reference="Unit,Scourge,LifeArmorLevel"/>
+        <EffectArray index="14" Operation="Set" Reference="Actor,Scourge,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-zerg-flyercarapace-level3.dds"/>
+        <EffectArray index="15" Operation="Set" Reference="Actor,Devourer,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-zerg-flyercarapace-level3.dds"/>
+        <EffectArray index="16" Operation="Add" Reference="Unit,BroodLord2,LifeArmorLevel" Value="1"/>
+        <EffectArray index="17" Operation="Add" Reference="Unit,BroodLord2,LifeArmor" Value="1"/>
+        <EffectArray index="18" Operation="Set" Reference="Actor,SS_SwarmGuardian,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-zerg-flyercarapace-level3.dds"/>
+        <EffectArray index="19" Operation="Add" Reference="Unit,QueenBW,LifeArmorLevel" Value="1"/>
+        <EffectArray index="20" Operation="Add" Reference="Unit,QueenBW,LifeArmor" Value="1"/>
+        <AffectedUnitArray index="0" value="QueenBW"/>
+        <AffectedUnitArray index="1" value="BroodLord2"/>
+        <AffectedUnitArray index="2" value="BroodLord"/>
+        <AffectedUnitArray index="3" value="Mutalisk"/>
+        <AffectedUnitArray index="4" value="Overlord"/>
+    </CUpgrade>
+    <CUpgrade id="ZergFlyerWeaponsLevel1">
+        <EffectArray index="2" Value="1"/>
+        <EffectArray index="3" Value="1"/>
+        <EffectArray index="4" Reference="Weapon,BroodlingEscort,Level"/>
+        <EffectArray index="5" Reference="Effect,BroodlordU,Amount" Value="2"/>
+        <EffectArray index="6" Operation="Set" Reference="Weapon,GlaiveWurm,Icon" Value="Assets\Textures\btn-upgrade-zerg-airattacks-level1.dds"/>
+        <EffectArray index="7" Operation="Set" Reference="Weapon,BroodlingEscort,Icon" Value="Assets\Textures\btn-upgrade-zerg-airattacks-level1.dds"/>
+        <EffectArray index="8" Operation="Set" Reference="Weapon,BroodlingEscort2,Icon" Value="Assets\Textures\btn-upgrade-zerg-airattacks-level1.dds"/>
+        <EffectArray index="9" Reference="Effect,DevourerU,Amount" Value="2"/>
+        <EffectArray index="10" Operation="Add" Reference="Weapon,BroodlingEscort2,Level" Value="1"/>
+        <EffectArray index="11" Operation="Add" Reference="Effect,DevourerShieldU,Amount" Value="2"/>
+        <AffectedUnitArray index="1" value="BroodLord2"/>
+    </CUpgrade>
+    <CUpgrade id="ZergFlyerWeaponsLevel2">
+        <EffectArray index="2" Value="1"/>
+        <EffectArray index="3" Value="1"/>
+        <EffectArray index="4" Reference="Weapon,BroodlingEscort,Level"/>
+        <EffectArray index="5" Reference="Effect,BroodlordU,Amount" Value="2"/>
+        <EffectArray index="6" Operation="Set" Reference="Weapon,GlaiveWurm,Icon" Value="Assets\Textures\btn-upgrade-zerg-airattacks-level2.dds"/>
+        <EffectArray index="7" Operation="Set" Reference="Weapon,BroodlingEscort,Icon" Value="Assets\Textures\btn-upgrade-zerg-airattacks-level2.dds"/>
+        <EffectArray index="8" Operation="Set" Reference="Weapon,BroodlingEscort2,Icon" Value="Assets\Textures\btn-upgrade-zerg-airattacks-level2.dds"/>
+        <EffectArray index="9" Reference="Weapon,BroodlingEscort2,Level"/>
+        <EffectArray index="10" Operation="Add" Reference="Effect,DevourerU,Amount" Value="2"/>
+        <EffectArray index="11" Operation="Add" Reference="Effect,DevourerShieldU,Amount" Value="2"/>
+        <AffectedUnitArray index="1" value="BroodLord2"/>
+    </CUpgrade>
+    <CUpgrade id="ZergFlyerWeaponsLevel3">
+        <EffectArray index="2" Value="1"/>
+        <EffectArray index="3" Value="1"/>
+        <EffectArray index="4" Reference="Weapon,BroodlingEscort,Level"/>
+        <EffectArray index="5" Reference="Effect,BroodlordU,Amount" Value="2"/>
+        <EffectArray index="6" Operation="Set" Reference="Weapon,GlaiveWurm,Icon" Value="Assets\Textures\btn-upgrade-zerg-airattacks-level3.dds"/>
+        <EffectArray index="7" Operation="Set" Reference="Weapon,BroodlingEscort,Icon" Value="Assets\Textures\btn-upgrade-zerg-airattacks-level3.dds"/>
+        <EffectArray index="8" Operation="Set" Reference="Weapon,BroodlingEscort2,Icon" Value="Assets\Textures\btn-upgrade-zerg-airattacks-level3.dds"/>
+        <EffectArray index="9" Reference="Weapon,BroodlingEscort2,Level"/>
+        <EffectArray index="10" Operation="Add" Reference="Effect,DevourerU,Amount" Value="2"/>
+        <EffectArray index="11" Operation="Add" Reference="Effect,DevourerShieldU,Amount" Value="2"/>
+        <AffectedUnitArray index="1" value="BroodLord2"/>
+    </CUpgrade>
+    <CUpgrade id="ZergGroundArmorsLevel1">
+        <EffectArray index="12" Reference="Unit,Ultralisk,LifeArmorLevel"/>
+        <EffectArray index="13" Reference="Unit,Ultralisk,LifeArmor"/>
+        <EffectArray index="14" Reference="Unit,UltraliskBurrowed,LifeArmorLevel"/>
+        <EffectArray index="15" Reference="Unit,UltraliskBurrowed,LifeArmor"/>
+        <EffectArray index="16" Operation="Set" Reference="Actor,Drone,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level1.dds"/>
+        <EffectArray index="17" Operation="Set" Reference="Actor,Zergling,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level1.dds"/>
+        <EffectArray index="18" Operation="Set" Reference="Actor,Hydralisk,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level1.dds"/>
+        <EffectArray index="19" Operation="Set" Reference="Actor,Ultralisk,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level1.dds"/>
+        <EffectArray index="20" Reference="Unit,Lurker,LifeArmor" Value="1.000000"/>
+        <EffectArray index="21" Reference="Unit,Lurker,LifeArmorLevel"/>
+        <EffectArray index="22" Reference="Unit,LurkerBurrowed,LifeArmor" Value="1.000000"/>
+        <EffectArray index="23" Reference="Unit,LurkerBurrowed,LifeArmorLevel"/>
+        <EffectArray index="24" Operation="Set" Reference="Actor,Lurker,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level1.dds"/>
+        <EffectArray index="25" Operation="Set" Reference="Actor,Defiler,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level1.dds"/>
+        <EffectArray index="26" Reference="Unit,Defiler,LifeArmorLevel"/>
+        <EffectArray index="27" Reference="Unit,Defiler,LifeArmor"/>
+        <EffectArray index="28" Reference="Unit,DefilerBurrowed,LifeArmorLevel"/>
+        <EffectArray index="29" Reference="Unit,DefilerBurrowed,LifeArmor"/>
+        <EffectArray index="30" removed="1"/>
+        <EffectArray index="31" removed="1"/>
+        <EffectArray index="32" removed="1"/>
+        <EffectArray index="33" removed="1"/>
+        <EffectArray index="34" removed="1"/>
+        <EffectArray index="35" removed="1"/>
+        <EffectArray index="36" removed="1"/>
+        <EffectArray index="37" removed="1"/>
+        <EffectArray index="38" removed="1"/>
+        <EffectArray index="39" removed="1"/>
+        <EffectArray index="40" removed="1"/>
+        <EffectArray index="41" removed="1"/>
+        <EffectArray index="42" removed="1"/>
+        <EffectArray index="43" removed="1"/>
+        <EffectArray index="44" removed="1"/>
+        <EffectArray index="45" removed="1"/>
+        <EffectArray index="46" removed="1"/>
+        <EffectArray index="47" removed="1"/>
+        <EffectArray index="48" removed="1"/>
+        <EffectArray index="49" removed="1"/>
+        <EffectArray index="50" removed="1"/>
+        <EffectArray index="51" removed="1"/>
+        <EffectArray index="52" removed="1"/>
+        <EffectArray index="53" removed="1"/>
+        <EffectArray index="54" removed="1"/>
+        <EffectArray index="55" removed="1"/>
+        <EffectArray index="56" removed="1"/>
+        <EffectArray index="57" removed="1"/>
+        <EffectArray index="58" removed="1"/>
+        <AffectedUnitArray index="0" value="Drone"/>
+        <AffectedUnitArray index="1" value="DroneBurrowed"/>
+        <AffectedUnitArray index="2" value="Hydralisk"/>
+        <AffectedUnitArray index="3" value="HydraliskBurrowed"/>
+        <AffectedUnitArray index="4" value="Ultralisk"/>
+        <AffectedUnitArray index="5" value="Lurker"/>
+        <AffectedUnitArray index="6" value="LurkerBurrowed"/>
+        <AffectedUnitArray index="7" value="Defiler"/>
+        <AffectedUnitArray index="8" value="DefilerBurrowed"/>
+        <AffectedUnitArray index="9" value="UltraliskBurrowed"/>
+        <AffectedUnitArray index="10" value="Zergling"/>
+        <AffectedUnitArray index="11" value="ZerglingBurrowed"/>
+        <AffectedUnitArray index="12" removed="1"/>
+        <AffectedUnitArray index="13" removed="1"/>
+        <AffectedUnitArray index="14" removed="1"/>
+        <AffectedUnitArray index="15" removed="1"/>
+        <AffectedUnitArray index="16" removed="1"/>
+        <AffectedUnitArray index="17" removed="1"/>
+        <AffectedUnitArray index="18" removed="1"/>
+        <AffectedUnitArray index="19" removed="1"/>
+    </CUpgrade>
+    <CUpgrade id="ZergGroundArmorsLevel2">
+        <EffectArray index="12" Reference="Unit,Ultralisk,LifeArmorLevel"/>
+        <EffectArray index="13" Reference="Unit,Ultralisk,LifeArmor"/>
+        <EffectArray index="14" Reference="Unit,UltraliskBurrowed,LifeArmorLevel"/>
+        <EffectArray index="15" Reference="Unit,UltraliskBurrowed,LifeArmor"/>
+        <EffectArray index="16" Operation="Set" Reference="Actor,Drone,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level2.dds"/>
+        <EffectArray index="17" Operation="Set" Reference="Actor,Zergling,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level2.dds"/>
+        <EffectArray index="18" Operation="Set" Reference="Actor,Hydralisk,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level2.dds"/>
+        <EffectArray index="19" Operation="Set" Reference="Actor,Ultralisk,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level2.dds"/>
+        <EffectArray index="20" Reference="Unit,Lurker,LifeArmor" Value="1.000000"/>
+        <EffectArray index="21" Reference="Unit,Lurker,LifeArmorLevel"/>
+        <EffectArray index="22" Reference="Unit,LurkerBurrowed,LifeArmor" Value="1.000000"/>
+        <EffectArray index="23" Reference="Unit,LurkerBurrowed,LifeArmorLevel"/>
+        <EffectArray index="24" Operation="Set" Reference="Actor,Lurker,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level2.dds"/>
+        <EffectArray index="25" Operation="Set" Reference="Actor,Defiler,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level2.dds"/>
+        <EffectArray index="26" Reference="Unit,Defiler,LifeArmorLevel"/>
+        <EffectArray index="27" Reference="Unit,Defiler,LifeArmor"/>
+        <EffectArray index="28" Reference="Unit,DefilerBurrowed,LifeArmorLevel"/>
+        <EffectArray index="29" Reference="Unit,DefilerBurrowed,LifeArmor"/>
+        <EffectArray index="30" removed="1"/>
+        <EffectArray index="31" removed="1"/>
+        <EffectArray index="32" removed="1"/>
+        <EffectArray index="33" removed="1"/>
+        <EffectArray index="34" removed="1"/>
+        <EffectArray index="35" removed="1"/>
+        <EffectArray index="36" removed="1"/>
+        <EffectArray index="37" removed="1"/>
+        <EffectArray index="38" removed="1"/>
+        <EffectArray index="39" removed="1"/>
+        <EffectArray index="40" removed="1"/>
+        <EffectArray index="41" removed="1"/>
+        <EffectArray index="42" removed="1"/>
+        <EffectArray index="43" removed="1"/>
+        <EffectArray index="44" removed="1"/>
+        <EffectArray index="45" removed="1"/>
+        <EffectArray index="46" removed="1"/>
+        <EffectArray index="47" removed="1"/>
+        <EffectArray index="48" removed="1"/>
+        <EffectArray index="49" removed="1"/>
+        <EffectArray index="50" removed="1"/>
+        <EffectArray index="51" removed="1"/>
+        <EffectArray index="52" removed="1"/>
+        <EffectArray index="53" removed="1"/>
+        <EffectArray index="54" removed="1"/>
+        <EffectArray index="55" removed="1"/>
+        <EffectArray index="56" removed="1"/>
+        <EffectArray index="57" removed="1"/>
+        <EffectArray index="58" removed="1"/>
+        <AffectedUnitArray index="0" value="Drone"/>
+        <AffectedUnitArray index="1" value="DroneBurrowed"/>
+        <AffectedUnitArray index="2" value="Hydralisk"/>
+        <AffectedUnitArray index="3" value="HydraliskBurrowed"/>
+        <AffectedUnitArray index="4" value="Ultralisk"/>
+        <AffectedUnitArray index="5" value="Lurker"/>
+        <AffectedUnitArray index="6" value="LurkerBurrowed"/>
+        <AffectedUnitArray index="7" value="Defiler"/>
+        <AffectedUnitArray index="8" value="DefilerBurrowed"/>
+        <AffectedUnitArray index="9" value="UltraliskBurrowed"/>
+        <AffectedUnitArray index="10" value="Zergling"/>
+        <AffectedUnitArray index="11" value="ZerglingBurrowed"/>
+        <AffectedUnitArray index="12" removed="1"/>
+        <AffectedUnitArray index="13" removed="1"/>
+        <AffectedUnitArray index="14" removed="1"/>
+        <AffectedUnitArray index="15" removed="1"/>
+        <AffectedUnitArray index="16" removed="1"/>
+        <AffectedUnitArray index="17" removed="1"/>
+        <AffectedUnitArray index="18" removed="1"/>
+        <AffectedUnitArray index="19" removed="1"/>
+    </CUpgrade>
+    <CUpgrade id="ZergGroundArmorsLevel3">
+        <EffectArray index="12" Reference="Unit,Ultralisk,LifeArmorLevel"/>
+        <EffectArray index="13" Reference="Unit,Ultralisk,LifeArmor"/>
+        <EffectArray index="14" Reference="Unit,UltraliskBurrowed,LifeArmorLevel"/>
+        <EffectArray index="15" Reference="Unit,UltraliskBurrowed,LifeArmor"/>
+        <EffectArray index="16" Operation="Set" Reference="Actor,Drone,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level3.dds"/>
+        <EffectArray index="17" Operation="Set" Reference="Actor,Zergling,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level3.dds"/>
+        <EffectArray index="18" Operation="Set" Reference="Actor,Hydralisk,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level3.dds"/>
+        <EffectArray index="19" Operation="Set" Reference="Actor,Ultralisk,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level3.dds"/>
+        <EffectArray index="20" Reference="Unit,Lurker,LifeArmor" Value="1.000000"/>
+        <EffectArray index="21" Reference="Unit,Lurker,LifeArmorLevel"/>
+        <EffectArray index="22" Reference="Unit,LurkerBurrowed,LifeArmor" Value="1.000000"/>
+        <EffectArray index="23" Reference="Unit,LurkerBurrowed,LifeArmorLevel"/>
+        <EffectArray index="24" Operation="Set" Reference="Actor,Lurker,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level3.dds"/>
+        <EffectArray index="25" Operation="Set" Reference="Actor,Defiler,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level3.dds"/>
+        <EffectArray index="26" Reference="Unit,Defiler,LifeArmorLevel"/>
+        <EffectArray index="27" Reference="Unit,Defiler,LifeArmor"/>
+        <EffectArray index="28" Reference="Unit,DefilerBurrowed,LifeArmorLevel"/>
+        <EffectArray index="29" Reference="Unit,DefilerBurrowed,LifeArmor"/>
+        <EffectArray index="30" removed="1"/>
+        <EffectArray index="31" removed="1"/>
+        <EffectArray index="32" removed="1"/>
+        <EffectArray index="33" removed="1"/>
+        <EffectArray index="34" removed="1"/>
+        <EffectArray index="35" removed="1"/>
+        <EffectArray index="36" removed="1"/>
+        <EffectArray index="37" removed="1"/>
+        <EffectArray index="38" removed="1"/>
+        <EffectArray index="39" removed="1"/>
+        <EffectArray index="40" removed="1"/>
+        <EffectArray index="41" removed="1"/>
+        <EffectArray index="42" removed="1"/>
+        <EffectArray index="43" removed="1"/>
+        <EffectArray index="44" removed="1"/>
+        <EffectArray index="45" removed="1"/>
+        <EffectArray index="46" removed="1"/>
+        <EffectArray index="47" removed="1"/>
+        <EffectArray index="48" removed="1"/>
+        <EffectArray index="49" removed="1"/>
+        <EffectArray index="50" removed="1"/>
+        <EffectArray index="51" removed="1"/>
+        <EffectArray index="52" removed="1"/>
+        <EffectArray index="53" removed="1"/>
+        <EffectArray index="54" removed="1"/>
+        <EffectArray index="55" removed="1"/>
+        <EffectArray index="56" removed="1"/>
+        <EffectArray index="57" removed="1"/>
+        <EffectArray index="58" removed="1"/>
+        <AffectedUnitArray index="0" value="Drone"/>
+        <AffectedUnitArray index="1" value="DroneBurrowed"/>
+        <AffectedUnitArray index="2" value="Hydralisk"/>
+        <AffectedUnitArray index="3" value="HydraliskBurrowed"/>
+        <AffectedUnitArray index="4" value="Ultralisk"/>
+        <AffectedUnitArray index="5" value="Lurker"/>
+        <AffectedUnitArray index="6" value="LurkerBurrowed"/>
+        <AffectedUnitArray index="7" value="Defiler"/>
+        <AffectedUnitArray index="8" value="DefilerBurrowed"/>
+        <AffectedUnitArray index="9" value="UltraliskBurrowed"/>
+        <AffectedUnitArray index="10" value="Zergling"/>
+        <AffectedUnitArray index="11" value="ZerglingBurrowed"/>
+        <AffectedUnitArray index="12" removed="1"/>
+        <AffectedUnitArray index="13" removed="1"/>
+        <AffectedUnitArray index="14" removed="1"/>
+        <AffectedUnitArray index="15" removed="1"/>
+        <AffectedUnitArray index="16" removed="1"/>
+        <AffectedUnitArray index="17" removed="1"/>
+        <AffectedUnitArray index="18" removed="1"/>
+        <AffectedUnitArray index="19" removed="1"/>
+    </CUpgrade>
+    <CUpgrade id="ZergMeleeWeaponsLevel1">
+        <EffectArray index="3" Reference="Effect,KaiserBladesDamage2,Amount" Value="3"/>
+        <EffectArray index="4" Operation="Set" Reference="Weapon,Claws,Icon" Value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level1.dds"/>
+        <EffectArray index="5" Operation="Set" Reference="Weapon,KaiserBlades,Icon" Value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level1.dds"/>
+        <EffectArray index="6" Reference="Effect,InfestedClawsDamage,Amount"/>
+        <EffectArray index="7" Reference="Weapon,InfestedClaws,Level"/>
+        <EffectArray index="8" Operation="Set" Reference="Weapon,InfestedClaws,Icon" Value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level1.dds"/>
+        <EffectArray index="9" removed="1"/>
+        <EffectArray index="10" removed="1"/>
+        <EffectArray index="11" removed="1"/>
+        <EffectArray index="12" removed="1"/>
+        <EffectArray index="13" removed="1"/>
+        <EffectArray index="14" removed="1"/>
+        <EffectArray index="15" removed="1"/>
+        <EffectArray index="16" removed="1"/>
+        <EffectArray index="17" removed="1"/>
+        <EffectArray index="18" removed="1"/>
+        <EffectArray index="19" removed="1"/>
+        <EffectArray index="20" removed="1"/>
+        <AffectedUnitArray index="0" value="Ultralisk"/>
+        <AffectedUnitArray index="1" value="UltraliskBurrowed"/>
+        <AffectedUnitArray index="2" value="Zergling"/>
+        <AffectedUnitArray index="3" value="ZerglingBurrowed"/>
+        <AffectedUnitArray index="4" removed="1"/>
+        <AffectedUnitArray index="5" removed="1"/>
+        <AffectedUnitArray index="6" removed="1"/>
+        <AffectedUnitArray index="7" removed="1"/>
+    </CUpgrade>
+    <CUpgrade id="ZergMeleeWeaponsLevel2">
+        <EffectArray index="3" Reference="Effect,KaiserBladesDamage2,Amount" Value="3"/>
+        <EffectArray index="4" Operation="Set" Reference="Weapon,Claws,Icon" Value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level2.dds"/>
+        <EffectArray index="5" Operation="Set" Reference="Weapon,KaiserBlades,Icon" Value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level2.dds"/>
+        <EffectArray index="6" Reference="Effect,InfestedClawsDamage,Amount"/>
+        <EffectArray index="7" Reference="Weapon,InfestedClaws,Level"/>
+        <EffectArray index="8" Operation="Set" Reference="Weapon,InfestedClaws,Icon" Value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level2.dds"/>
+        <EffectArray index="9" removed="1"/>
+        <EffectArray index="10" removed="1"/>
+        <EffectArray index="11" removed="1"/>
+        <EffectArray index="12" removed="1"/>
+        <EffectArray index="13" removed="1"/>
+        <EffectArray index="14" removed="1"/>
+        <EffectArray index="15" removed="1"/>
+        <EffectArray index="16" removed="1"/>
+        <EffectArray index="17" removed="1"/>
+        <EffectArray index="18" removed="1"/>
+        <EffectArray index="19" removed="1"/>
+        <EffectArray index="20" removed="1"/>
+        <AffectedUnitArray index="0" value="Ultralisk"/>
+        <AffectedUnitArray index="1" value="UltraliskBurrowed"/>
+        <AffectedUnitArray index="2" value="Zergling"/>
+        <AffectedUnitArray index="3" value="ZerglingBurrowed"/>
+        <AffectedUnitArray index="4" removed="1"/>
+        <AffectedUnitArray index="5" removed="1"/>
+        <AffectedUnitArray index="6" removed="1"/>
+        <AffectedUnitArray index="7" removed="1"/>
+    </CUpgrade>
+    <CUpgrade id="ZergMeleeWeaponsLevel3">
+        <EffectArray index="3" Reference="Effect,KaiserBladesDamage2,Amount" Value="3"/>
+        <EffectArray index="4" Operation="Set" Reference="Weapon,Claws,Icon" Value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level3.dds"/>
+        <EffectArray index="5" Operation="Set" Reference="Weapon,KaiserBlades,Icon" Value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level3.dds"/>
+        <EffectArray index="6" Reference="Effect,InfestedClawsDamage,Amount"/>
+        <EffectArray index="7" Reference="Weapon,InfestedClaws,Level"/>
+        <EffectArray index="8" Operation="Set" Reference="Weapon,InfestedClaws,Icon" Value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level3.dds"/>
+        <EffectArray index="9" removed="1"/>
+        <EffectArray index="10" removed="1"/>
+        <EffectArray index="11" removed="1"/>
+        <EffectArray index="12" removed="1"/>
+        <EffectArray index="13" removed="1"/>
+        <EffectArray index="14" removed="1"/>
+        <EffectArray index="15" removed="1"/>
+        <EffectArray index="16" removed="1"/>
+        <EffectArray index="17" removed="1"/>
+        <EffectArray index="18" removed="1"/>
+        <EffectArray index="19" removed="1"/>
+        <EffectArray index="20" removed="1"/>
+        <AffectedUnitArray index="0" value="Ultralisk"/>
+        <AffectedUnitArray index="1" value="UltraliskBurrowed"/>
+        <AffectedUnitArray index="2" value="Zergling"/>
+        <AffectedUnitArray index="3" value="ZerglingBurrowed"/>
+        <AffectedUnitArray index="4" removed="1"/>
+        <AffectedUnitArray index="5" removed="1"/>
+        <AffectedUnitArray index="6" removed="1"/>
+        <AffectedUnitArray index="7" removed="1"/>
+    </CUpgrade>
+    <CUpgrade id="ZergMissileWeaponsLevel1">
+        <EffectArray index="2" Reference="Effect,HydraliskMelee,Amount"/>
+        <EffectArray index="3" Operation="Set" Reference="Weapon,NeedleSpines,Icon" Value="Assets\Textures\btn-upgrade-zerg-missileattacks-level1.dds"/>
+        <EffectArray index="4" Reference="Weapon,Lurker,Level" Value="1"/>
+        <EffectArray index="5" Reference="Effect,LurkerU,Amount" Value="2"/>
+        <EffectArray index="6" Operation="Set" Reference="Weapon,Lurker,Icon" Value="Assets\Textures\btn-upgrade-zerg-missileattacks-level1.dds"/>
+        <EffectArray index="7" Reference="Effect,NeedleSpinesDamage2,Amount"/>
+        <EffectArray index="8" removed="1"/>
+        <EffectArray index="9" removed="1"/>
+        <EffectArray index="10" removed="1"/>
+        <EffectArray index="11" removed="1"/>
+        <EffectArray index="12" removed="1"/>
+        <EffectArray index="13" removed="1"/>
+        <EffectArray index="14" removed="1"/>
+        <EffectArray index="15" removed="1"/>
+        <EffectArray index="16" removed="1"/>
+        <EffectArray index="17" removed="1"/>
+        <EffectArray index="18" removed="1"/>
+        <EffectArray index="19" removed="1"/>
+        <EffectArray index="20" removed="1"/>
+        <EffectArray index="21" removed="1"/>
+        <EffectArray index="22" removed="1"/>
+        <EffectArray index="23" removed="1"/>
+        <EffectArray index="24" removed="1"/>
+        <EffectArray index="25" removed="1"/>
+        <AffectedUnitArray index="2" value="Lurker"/>
+        <AffectedUnitArray index="3" value="LurkerBurrowed"/>
+        <AffectedUnitArray index="4" removed="1"/>
+        <AffectedUnitArray index="5" removed="1"/>
+        <AffectedUnitArray index="6" removed="1"/>
+    </CUpgrade>
+    <CUpgrade id="ZergMissileWeaponsLevel2">
+        <EffectArray index="2" Reference="Effect,HydraliskMelee,Amount"/>
+        <EffectArray index="3" Operation="Set" Reference="Weapon,NeedleSpines,Icon" Value="Assets\Textures\btn-upgrade-zerg-missileattacks-level2.dds"/>
+        <EffectArray index="4" Reference="Weapon,Lurker,Level" Value="1"/>
+        <EffectArray index="5" Reference="Effect,LurkerU,Amount" Value="2"/>
+        <EffectArray index="6" Operation="Set" Reference="Weapon,Lurker,Icon" Value="Assets\Textures\btn-upgrade-zerg-missileattacks-level2.dds"/>
+        <EffectArray index="7" Reference="Effect,NeedleSpinesDamage2,Amount"/>
+        <EffectArray index="8" removed="1"/>
+        <EffectArray index="9" removed="1"/>
+        <EffectArray index="10" removed="1"/>
+        <EffectArray index="11" removed="1"/>
+        <EffectArray index="12" removed="1"/>
+        <EffectArray index="13" removed="1"/>
+        <EffectArray index="14" removed="1"/>
+        <EffectArray index="15" removed="1"/>
+        <EffectArray index="16" removed="1"/>
+        <EffectArray index="17" removed="1"/>
+        <EffectArray index="18" removed="1"/>
+        <EffectArray index="19" removed="1"/>
+        <EffectArray index="20" removed="1"/>
+        <EffectArray index="21" removed="1"/>
+        <EffectArray index="22" removed="1"/>
+        <EffectArray index="23" removed="1"/>
+        <EffectArray index="24" removed="1"/>
+        <EffectArray index="25" removed="1"/>
+    </CUpgrade>
+    <CUpgrade id="ZergMissileWeaponsLevel3">
+        <EffectArray index="2" Reference="Effect,HydraliskMelee,Amount"/>
+        <EffectArray index="3" Operation="Set" Reference="Weapon,NeedleSpines,Icon" Value="Assets\Textures\btn-upgrade-zerg-missileattacks-level3.dds"/>
+        <EffectArray index="4" Reference="Weapon,Lurker,Level" Value="1"/>
+        <EffectArray index="5" Reference="Effect,LurkerU,Amount" Value="2"/>
+        <EffectArray index="6" Operation="Set" Reference="Weapon,Lurker,Icon" Value="Assets\Textures\btn-upgrade-zerg-missileattacks-level3.dds"/>
+        <EffectArray index="7" Reference="Effect,NeedleSpinesDamage2,Amount"/>
+        <EffectArray index="8" removed="1"/>
+        <EffectArray index="9" removed="1"/>
+        <EffectArray index="10" removed="1"/>
+        <EffectArray index="11" removed="1"/>
+        <EffectArray index="12" removed="1"/>
+        <EffectArray index="13" removed="1"/>
+        <EffectArray index="14" removed="1"/>
+        <EffectArray index="15" removed="1"/>
+        <EffectArray index="16" removed="1"/>
+        <EffectArray index="17" removed="1"/>
+        <EffectArray index="18" removed="1"/>
+        <EffectArray index="19" removed="1"/>
+        <EffectArray index="20" removed="1"/>
+        <EffectArray index="21" removed="1"/>
+        <EffectArray index="22" removed="1"/>
+        <EffectArray index="23" removed="1"/>
+        <EffectArray index="24" removed="1"/>
+        <EffectArray index="25" removed="1"/>
+    </CUpgrade>
+    <CUpgrade id="hydraliskspeed2">
+        <Flags index="UpgradeCheat" value="0"/>
+        <Icon value="Assets\Textures\btn-upgrade-zerg-muscularaugments.dds"/>
+        <Alert value="ResearchComplete"/>
+        <Race value="Zerg"/>
+        <ScoreAmount value="300"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArray Reference="Unit,Hydralisk,Speed" Value="1.043000"/>
+        <EditorCategories value="Race:Zerg,UpgradeType:Talents"/>
+        <AffectedUnitArray value="Hydralisk"/>
+        <AffectedUnitArray value="HydraliskBurrowed"/>
+    </CUpgrade>
+    <CUpgrade id="zerglingattackspeed">
+        <EffectArray index="0" Operation="Subtract" Reference="Weapon,Claws,Period" Value="0.152500"/>
+        <EffectArray Operation="Subtract" Reference="Behavior,ZerglingDisableMovement,Duration[0]" Value="0.152500"/>
+    </CUpgrade>
+    <CUpgrade id="zerglingmovementspeed">
+        <EffectArray index="0" Operation="Set" Reference="Unit,Zergling,Speed" Value="4.578100"/>
+        <EffectArray index="1" removed="1"/>
+        <EffectArray index="2" removed="1"/>
+    </CUpgrade>
+</Catalog>

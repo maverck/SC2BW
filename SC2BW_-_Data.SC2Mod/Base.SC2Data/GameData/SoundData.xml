@@ -1,0 +1,2474 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CSound id="Alert_ZergBaseUnderAttack">
+        <AssetArray index="0" File="Assets\Sounds\Misc\Zerg Advisor\ZAdUpd00.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="Alert_ZergCalldownLaunch">
+        <AssetArray index="0" File="Assets\Sounds\Misc\Zerg Advisor\ZAdUpd04.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="Alert_ZergEvolutionComplete">
+        <AssetArray index="0" File="Assets\Sounds\Misc\Zerg Advisor\ZAdUpd02.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="Alert_ZergForcesUnderAttack">
+        <AssetArray index="0" File="Assets\Sounds\Misc\Zerg Advisor\ZAdUpd01.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="Arbiter_Explode" parent="Death">
+        <AssetArray File="Assets\Sounds\Arbiter\pabDth00.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="Armory_What">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Terran\tclWht00.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="Assimilator_What">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Protoss\pasWht00.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="Battlecruiser_Attack">
+        <AssetArray index="0" File="Assets\Sounds\Battlecruiser\tbayes00.ogg" FacialAnim="Battlecruiser_Yes03"/>
+        <AssetArray index="1" File="Assets\Sounds\Battlecruiser\tbayes01.ogg" FacialAnim="Battlecruiser_Yes03"/>
+        <AssetArray index="2" File="Assets\Sounds\Battlecruiser\tbayes02.ogg" FacialAnim="Battlecruiser_Yes03"/>
+        <AssetArray index="3" File="Assets\Sounds\Battlecruiser\tbayes03.ogg" FacialAnim="Battlecruiser_Yes03"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+    </CSound>
+    <CSound id="Battlecruiser_Help">
+        <AssetArray index="0" removed="1"/>
+    </CSound>
+    <CSound id="Battlecruiser_Help2">
+        <AssetArray index="0" removed="1"/>
+    </CSound>
+    <CSound id="Battlecruiser_Pissed">
+        <AssetArray index="0" File="Assets\Sounds\Battlecruiser\tbapss00.ogg" FacialAnim="Battlecruiser_Yes03"/>
+        <AssetArray index="1" File="Assets\Sounds\Battlecruiser\tbapss01.ogg" FacialAnim="Battlecruiser_Attack00"/>
+        <AssetArray index="2" File="Assets\Sounds\Battlecruiser\tbapss02.ogg" FacialAnim="Battlecruiser_Pissed03"/>
+        <AssetArray index="3" File="Assets\Sounds\Battlecruiser\tbapss03.ogg" FacialAnim="Battlecruiser_Pissed01"/>
+        <AssetArray index="4" File="Assets\Sounds\Battlecruiser\tbapss04.ogg" FacialAnim="Battlecruiser_Pissed03"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <AssetArray index="7" removed="1"/>
+        <AssetArray index="8" removed="1"/>
+        <AssetArray index="9" removed="1"/>
+        <AssetArray index="10" removed="1"/>
+        <AssetArray index="11" removed="1"/>
+        <AssetArray index="12" removed="1"/>
+        <AssetArray index="13" removed="1"/>
+        <AssetArray index="14" removed="1"/>
+    </CSound>
+    <CSound id="Battlecruiser_Ready">
+        <AssetArray index="0" File="Assets\Sounds\Battlecruiser\tbardy00.ogg" FacialAnim="Battlecruiser_Attack00"/>
+    </CSound>
+    <CSound id="Battlecruiser_What">
+        <AssetArray index="0" File="Assets\Sounds\Battlecruiser\tbawht00.ogg" FacialAnim="Battlecruiser_Attack02"/>
+        <AssetArray index="1" File="Assets\Sounds\Battlecruiser\tbawht01.ogg" FacialAnim="Battlecruiser_Attack00"/>
+        <AssetArray index="2" File="Assets/Sounds/Battlecruiser/tbawht02.ogg" FacialAnim="Battlecruiser_Attack02"/>
+        <AssetArray index="3" File="Assets\Sounds\Battlecruiser\tbawht03.ogg" FacialAnim="Battlecruiser_Attack02"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+    </CSound>
+    <CSound id="Battlecruiser_YamatoAttackChargeUp">
+        <AssetArray index="0" File="Assets\Sounds\Battlecruiser\TBaYam01.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="Battlecruiser_YamatoAttackLaunch">
+        <AssetArray index="0" File="Assets\Sounds\Battlecruiser\TBaYam02.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="Battlecruiser_Yes">
+        <AssetArray index="0" File="Assets\Sounds\Battlecruiser\tbayes00.ogg" FacialAnim="Battlecruiser_Yes03"/>
+        <AssetArray index="1" File="Assets\Sounds\Battlecruiser\tbayes01.ogg" FacialAnim="Battlecruiser_Yes03"/>
+        <AssetArray index="2" File="Assets\Sounds\Battlecruiser\tbayes02.ogg" FacialAnim="Battlecruiser_Yes03"/>
+        <AssetArray index="3" File="Assets\Sounds\Battlecruiser\tbayes03.ogg" FacialAnim="Battlecruiser_Yes03"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <AssetArray index="7" removed="1"/>
+        <AssetArray index="8" removed="1"/>
+        <AssetArray index="9" removed="1"/>
+        <AssetArray index="10" removed="1"/>
+        <AssetArray index="11" removed="1"/>
+        <AssetArray index="12" removed="1"/>
+    </CSound>
+    <CSound id="ColonistVehicleUnit_Movement" parent="Movement">
+        <EditorCategories value="Race:Neutral"/>
+        <AssetArray File="Assets\Sounds\Protoss\Scout\Scout_Movement0.wav"/>
+        <AssetArray File="Assets\Sounds\Protoss\Scout\Scout_Movement1.wav"/>
+        <AssetArray File="Assets\Sounds\Protoss\Scout\Scout_Movement2.wav"/>
+        <AssetArray File="Assets\Sounds\Protoss\Scout\Scout_Movement3.wav"/>
+        <DupeMuteCount value="3"/>
+        <Pitch value="3.000000,3.000000"/>
+        <Volume value="-6.000000,-6.000000"/>
+    </CSound>
+    <CSound id="CyberneticsCore_What">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Protoss\pgcWht00.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="DarkTemplar_Attack">
+        <AssetArray index="0" File="Assets\Sounds\Dark Templar\PDTYes00.ogg" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\Dark Templar\PDTYes01.ogg" FacialGroup=""/>
+        <AssetArray index="2" File="Assets\Sounds\Dark Templar\PDTYes02.ogg" FacialGroup=""/>
+        <AssetArray index="3" File="Assets\Sounds\Dark Templar\PDTYes03.ogg" FacialGroup=""/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+    </CSound>
+    <CSound id="DarkTemplar_AttackLaunch">
+        <AssetArray index="0" File="Assets\Sounds\Dark Templar\PDTAttk00.ogg" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+    </CSound>
+    <CSound id="DarkTemplar_Death">
+        <AssetArray index="0" File="Assets\Sounds\Dark Templar\PDTDth00.ogg" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+    </CSound>
+    <CSound id="DarkTemplar_DeathFX">
+        <AssetArray index="0" File="Assets\Sounds\Dark Templar\PDTDth00.ogg" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+    </CSound>
+    <CSound id="DarkTemplar_Help">
+        <AssetArray index="0" removed="1"/>
+    </CSound>
+    <CSound id="DarkTemplar_Pissed">
+        <AssetArray index="0" File="Assets\Sounds\Dark Templar\PDTPss00.ogg" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\Dark Templar\PDTPss01.ogg" FacialGroup=""/>
+        <AssetArray index="2" File="Assets\Sounds\Dark Templar\PDTPss02.ogg" FacialGroup=""/>
+        <AssetArray index="3" File="Assets\Sounds\Dark Templar\PDTPss03.ogg" FacialGroup=""/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+    </CSound>
+    <CSound id="DarkTemplar_Ready">
+        <AssetArray index="0" File="Assets\Sounds\Dark Templar\PDtRdy00.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="DarkTemplar_What">
+        <AssetArray index="0" File="Assets\Sounds\Dark Templar\PDTWht00.ogg" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\Dark Templar\PDTWht01.ogg" FacialGroup=""/>
+        <AssetArray index="2" File="Assets\Sounds\Dark Templar\PDTWht02.ogg" FacialGroup=""/>
+        <AssetArray index="3" File="Assets\Sounds\Dark Templar\PDTWht03.ogg" FacialGroup=""/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+    </CSound>
+    <CSound id="DarkTemplar_Yes">
+        <AssetArray index="0" File="Assets\Sounds\Dark Templar\PDTYes00.ogg" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\Dark Templar\PDTYes01.ogg" FacialGroup=""/>
+        <AssetArray index="2" File="Assets\Sounds\Dark Templar\PDTYes02.ogg" FacialGroup=""/>
+        <AssetArray index="3" File="Assets\Sounds\Dark Templar\PDTYes03.ogg" FacialGroup=""/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+    </CSound>
+    <CSound id="Firebat_Attack">
+        <AssetArray File="Assets\Sounds\Firebat\tfbYes00.ogg" FacialAnim="Firebat_Yes01"/>
+        <AssetArray File="Assets\Sounds\Firebat\tfbYes01.ogg" FacialAnim="Firebat_Yes01"/>
+        <AssetArray File="Assets\Sounds\Firebat\tfbYes02.ogg" FacialAnim="Firebat_What04"/>
+        <AssetArray File="Assets\Sounds\Firebat\tfbYes03.ogg" FacialAnim="Firebat_Attack01"/>
+    </CSound>
+    <CSound id="FleetBeacon_What">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Protoss\pwaWht00.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="ForgeWhat">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Protoss\pfoWht00.ogg"/>
+    </CSound>
+    <CSound id="GameMusicProt">
+        <AssetArray index="0" File="Assets\Sounds\Music\protoss1.ogg" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\Music\protoss2.ogg" FacialGroup=""/>
+        <AssetArray index="2" File="Assets\Sounds\Music\protoss3.ogg" FacialGroup=""/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <AssetArray index="7" removed="1"/>
+        <AssetArray index="8" removed="1"/>
+        <AssetArray index="9" removed="1"/>
+        <AssetArray index="10" removed="1"/>
+    </CSound>
+    <CSound id="Gateway_What">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Protoss\pgaWht00.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="Ghost_Attack">
+        <AssetArray index="0" File="Assets\Sounds\Ghost\tghyes00.ogg" FacialAnim="Ghost_Yes09"/>
+        <AssetArray index="1" File="Assets\Sounds\Ghost\tghyes01.ogg" FacialAnim="Ghost_What00"/>
+        <AssetArray index="2" File="Assets\Sounds\Ghost\tghyes02.ogg" FacialAnim="Ghost_What02"/>
+        <AssetArray index="3" File="Assets\Sounds\Ghost\tghyes03.ogg" FacialAnim="Ghost_Yes10"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+    </CSound>
+    <CSound id="Ghost_Death">
+        <AssetArray index="0" File="Assets\Sounds\Ghost\TGhDth00.ogg" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\Ghost\TGhDth01.ogg" FacialGroup=""/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+    </CSound>
+    <CSound id="Ghost_Help">
+        <AssetArray index="0" removed="1"/>
+    </CSound>
+    <CSound id="Ghost_NukeLaunch">
+        <AssetArray index="0" File="Assets\Sounds\Ghost\TGhLas00.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="Ghost_Pissed">
+        <AssetArray index="0" File="Assets\Sounds\Ghost\tghpss00.ogg" FacialAnim="Ghost_What02"/>
+        <AssetArray index="1" File="Assets\Sounds\Ghost\tghpss01.ogg" FacialAnim="Ghost_Yes10"/>
+        <AssetArray index="2" File="Assets\Sounds\Ghost\tghpss02.ogg" FacialAnim="Ghost_What02"/>
+        <AssetArray index="3" File="Assets\Sounds\Ghost\tghpss03.ogg" FacialAnim="Ghost_Pissed05"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <AssetArray index="7" removed="1"/>
+        <AssetArray index="8" removed="1"/>
+        <AssetArray index="9" removed="1"/>
+        <AssetArray index="10" removed="1"/>
+        <AssetArray index="11" removed="1"/>
+        <AssetArray index="12" removed="1"/>
+        <AssetArray index="13" removed="1"/>
+        <AssetArray index="14" removed="1"/>
+    </CSound>
+    <CSound id="Ghost_Ready">
+        <AssetArray index="0" File="Assets\Sounds\Ghost\tghrdy00.ogg" FacialAnim="Ghost_What02"/>
+    </CSound>
+    <CSound id="Ghost_What">
+        <AssetArray index="0" File="Assets\Sounds\Ghost\tghwht00.ogg" FacialAnim="Ghost_What00"/>
+        <AssetArray index="1" File="Assets\Sounds\Ghost\tghwht01.ogg" FacialAnim="Ghost_What00"/>
+        <AssetArray index="2" File="Assets\Sounds\Ghost\tghwht02.ogg" FacialAnim="Ghost_What00"/>
+        <AssetArray index="3" File="Assets\Sounds\Ghost\tghwht03.ogg" FacialAnim="Ghost_What00"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+    </CSound>
+    <CSound id="Ghost_Yes">
+        <AssetArray index="0" File="Assets\Sounds\Ghost\tghyes00.ogg" FacialAnim="Ghost_Yes09"/>
+        <AssetArray index="1" File="Assets\Sounds\Ghost\tghyes01.ogg" FacialAnim="Ghost_What00"/>
+        <AssetArray index="2" File="Assets\Sounds\Ghost\tghyes02.ogg" FacialAnim="Ghost_What02"/>
+        <AssetArray index="3" File="Assets\Sounds\Ghost\tghyes03.ogg" FacialAnim="Ghost_Yes10"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <AssetArray index="7" removed="1"/>
+        <AssetArray index="8" removed="1"/>
+        <AssetArray index="9" removed="1"/>
+        <AssetArray index="10" removed="1"/>
+    </CSound>
+    <CSound id="GoliathGroundAttackLaunch">
+        <AssetArray File="Assets\Sounds\Goliath\TGoFir00.ogg" FacialGroup=""/>
+        <Category value="Combat"/>
+        <Mode value="3DWorld"/>
+    </CSound>
+    <CSound id="Goliath_Attack">
+        <AssetArray File="Assets\Sounds\Goliath\TGoYes00.ogg" FacialAnim="Goliath_Yes00"/>
+        <AssetArray File="Assets\Sounds\Goliath\TGoYes01.ogg" FacialAnim="Goliath_Yes03"/>
+        <AssetArray File="Assets\Sounds\Goliath\TGoYes02.ogg" FacialAnim="Goliath_Yes02"/>
+        <AssetArray File="Assets\Sounds\Goliath\TGoYes03.ogg" FacialAnim="Goliath_Yes01"/>
+    </CSound>
+    <CSound id="Goliath_Explode">
+        <AssetArray File="Assets\Sounds\Goliath\TGoDth00.ogg" FacialGroup=""/>
+        <Category value="Combat"/>
+        <Mode value="3DWorld"/>
+    </CSound>
+    <CSound id="Goliath_Help"/>
+    <CSound id="Goliath_Pissed">
+        <AssetArray File="Assets\Sounds\Goliath\TGoPss00.ogg" FacialAnim="Goliath_Pissed02"/>
+        <AssetArray File="Assets\Sounds\Goliath\TGoPss01.ogg" FacialAnim="Goliath_Pissed01"/>
+        <AssetArray File="Assets\Sounds\Goliath\TGoPss02.ogg" FacialAnim="Goliath_Pissed02"/>
+        <AssetArray File="Assets\Sounds\Goliath\TGoPss03.ogg" FacialAnim="Goliath_Pissed03"/>
+        <AssetArray File="Assets\Sounds\Goliath\TGoPss04.ogg" FacialAnim="Goliath_Pissed04"/>
+        <AssetArray File="Assets\Sounds\Goliath\TGoPss05.ogg" FacialAnim="Goliath_Pissed05"/>
+    </CSound>
+    <CSound id="Goliath_Ready">
+        <AssetArray File="Assets\Sounds\Goliath\TGoRdy00.ogg" FacialAnim="Goliath_Ready00"/>
+    </CSound>
+    <CSound id="Goliath_What">
+        <AssetArray File="Assets\Sounds\Goliath\TGoWht00.ogg" FacialAnim="Goliath_What02"/>
+        <AssetArray File="Assets\Sounds\Goliath\TGoWht01.ogg" FacialAnim="Goliath_What01"/>
+        <AssetArray File="Assets\Sounds\Goliath\TGoWht02.ogg" FacialAnim="Goliath_What02"/>
+        <AssetArray File="Assets\Sounds\Goliath\TGoWht03.ogg" FacialAnim="Goliath_What02"/>
+    </CSound>
+    <CSound id="Goliath_Yes">
+        <AssetArray File="Assets\Sounds\Goliath\TGoYes00.ogg" FacialAnim="Goliath_Yes00"/>
+        <AssetArray File="Assets\Sounds\Goliath\TGoYes01.ogg" FacialAnim="Goliath_Yes03"/>
+        <AssetArray File="Assets\Sounds\Goliath\TGoYes02.ogg" FacialAnim="Goliath_Yes02"/>
+        <AssetArray File="Assets\Sounds\Goliath\TGoYes03.ogg" FacialAnim="Goliath_Yes01"/>
+    </CSound>
+    <CSound id="Lurker_Explode">
+        <AssetArray index="0" File="Assets\Sounds\Lurker\ZLuDth00.ogg" Pitch="0.000000,0.000000" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+    </CSound>
+    <CSound id="Marine_Attack">
+        <AssetArray index="0" File="Assets\Sounds\Marine\TMaYes00.ogg" FacialAnim="Marine_Yes21"/>
+        <AssetArray index="1" File="Assets\Sounds\Marine\TMaYes01.ogg" FacialAnim="Marine_Attack05"/>
+        <AssetArray index="2" File="Assets\Sounds\Marine\TMaYes02.ogg" FacialAnim="Marine_Attack05"/>
+        <AssetArray index="3" File="Assets\Sounds\Marine\TMaYes03.ogg" FacialAnim="Marine_Yes04"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <AssetArray index="7" removed="1"/>
+        <AssetArray index="8" removed="1"/>
+    </CSound>
+    <CSound id="Medivac_Attack">
+        <AssetArray index="0" File="Assets\Sounds\Dropship\TDrYes00.ogg" FacialAnim="Banshee_Pissed01"/>
+        <AssetArray index="1" File="Assets\Sounds\Dropship\TDrYes01.ogg" FacialAnim="Banshee_Pissed04"/>
+        <AssetArray index="2" File="Assets\Sounds\Dropship\TDrYes02.ogg" FacialAnim="Banshee_What01"/>
+        <AssetArray index="3" File="Assets\Sounds\Dropship\TDrYes03.ogg" FacialAnim="Banshee_What03"/>
+        <AssetArray index="4" File="Assets\Sounds\Dropship\TDrYes04.ogg" FacialAnim="Banshee_Attack01"/>
+        <AssetArray index="5" File="Assets\Sounds\Dropship\TDrYes05.ogg" FacialAnim="Banshee_Yes05"/>
+    </CSound>
+    <CSound id="Nexus_What">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Protoss\pneWht00.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="NydusWorm_Ready">
+        <Category value="Voice"/>
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Zerg\znyWht00.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="PhotonCannon_What">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Protoss\PPbWht00.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="Protoss_BuildingWarpIn">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Protoss\Warp In\pshBld03.ogg" FacialGroup=""/>
+        <Category value="Build"/>
+    </CSound>
+    <CSound id="Protoss_BuildingWarpStart">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Protoss\Warp In\pshBld00.ogg" FacialGroup=""/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="Protoss_BuildingWarp" parent="Build">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="Assets\Sounds\Buildings\Protoss\Warp In\pshBld04.ogg" FacialGroup=""/>
+        <LoopCount value="-1"/>
+        <Volume value="-0.080000,0.000000"/>
+    </CSound>
+    <CSound id="Pylon_What">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Protoss\ppyWht00.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="RoboticsFacility_What">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Protoss\proWht00.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="ArbiterTribunal_What" parent="Voice">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="Assets\Sounds\Buildings\Protoss\PTrWht00.ogg" FacialGroup=""/>
+        <Volume value="-3.000000,-3.000000"/>
+    </CSound>
+    <CSound id="ScienceVessel_Attack">
+        <AssetArray File="Assets/Sounds/Science Vessel/tveyes00.ogg" FacialAnim="ScienceVessel_Yes01"/>
+        <AssetArray File="Assets/Sounds/Science Vessel/tveyes01.ogg" FacialAnim="ScienceVessel_Yes01"/>
+        <AssetArray File="Assets/Sounds/Science Vessel/tveyes02.ogg" FacialAnim="ScienceVessel_Yes01"/>
+        <AssetArray File="Assets/Sounds/Science Vessel/tveyes03.ogg" FacialAnim="ScienceVessel_Yes01"/>
+    </CSound>
+    <CSound id="ScienceVessel_Help"/>
+    <CSound id="ScienceVessel_Pissed">
+        <AssetArray File="Assets/Sounds/Science Vessel/tvepss00.ogg" FacialAnim="ScienceVessel_Help00"/>
+        <AssetArray File="Assets/Sounds/Science Vessel/tvepss01.ogg" FacialAnim="ScienceVessel_Pissed02"/>
+        <AssetArray File="Assets/Sounds/Science Vessel/tvepss02.ogg" FacialAnim="ScienceVessel_NanoRepair00"/>
+        <AssetArray File="Assets/Sounds/Science Vessel/tvepss03.ogg" FacialAnim="ScienceVessel_EnergyLow00"/>
+        <AssetArray File="Assets/Sounds/Science Vessel/tvepss04.ogg" FacialAnim="ScienceVessel_Pissed00"/>
+        <AssetArray File="Assets/Sounds/Science Vessel/tvepss05.ogg" FacialAnim="ScienceVessel_NanoRepair00"/>
+        <AssetArray File="Assets/Sounds/Science Vessel/tvepss06.ogg" FacialAnim="ScienceVessel_Irradiate00"/>
+        <EditorCategories value="Race:Terran"/>
+    </CSound>
+    <CSound id="ScienceVessel_Ready">
+        <AssetArray File="Assets/Sounds/Science Vessel/TVeRdy00.ogg" FacialAnim="ScienceVessel_Ready00"/>
+    </CSound>
+    <CSound id="ScienceVessel_What">
+        <AssetArray File="Assets/Sounds/Science Vessel/tvewht00.ogg" FacialAnim="ScienceVessel_What02"/>
+        <AssetArray File="Assets/Sounds/Science Vessel/tvewht01.ogg" FacialAnim="ScienceVessel_Yes01"/>
+        <AssetArray File="Assets/Sounds/Science Vessel/tvewht02.ogg" FacialAnim="ScienceVessel_What02"/>
+        <AssetArray File="Assets/Sounds/Science Vessel/tvewht03.ogg" FacialAnim="ScienceVessel_What02"/>
+    </CSound>
+    <CSound id="ScienceVessel_Yes">
+        <AssetArray File="Assets/Sounds/Science Vessel/tveyes00.ogg" FacialAnim="ScienceVessel_Yes01"/>
+        <AssetArray File="Assets/Sounds/Science Vessel/tveyes01.ogg" FacialAnim="ScienceVessel_Yes01"/>
+        <AssetArray File="Assets/Sounds/Science Vessel/tveyes02.ogg" FacialAnim="ScienceVessel_Yes01"/>
+        <AssetArray File="Assets/Sounds/Science Vessel/tveyes03.ogg" FacialAnim="ScienceVessel_Yes01"/>
+    </CSound>
+    <CSound id="ScoutGroundAttackLaunch" parent="Combat">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="Assets\Sounds\Bullet\blastgn2.ogg" FacialGroup=""/>
+        <Pitch value="-1.000000,2.000000"/>
+        <Volume value="-3.000000,-3.000000"/>
+    </CSound>
+    <CSound id="Scout_AirAttackImpact" parent="Combat">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="Assets\Sounds\Bullet\PSaHit00.ogg" FacialGroup=""/>
+        <Pitch value="-1.000000,1.000000"/>
+        <Volume value="-3.000000,-3.000000"/>
+    </CSound>
+    <CSound id="Scout_AirAttackLaunch" parent="Combat">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="Assets\Sounds\Bullet\PTrFir00.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Bullet\PTrFir01.ogg" FacialGroup=""/>
+        <DupeMuteCount value="4"/>
+        <Pitch value="-1.000000,1.500000"/>
+        <Volume value="-3.000000,-3.000000"/>
+    </CSound>
+    <CSound id="Scout_AirLeftAttackLaunch">
+        <AssetArray index="0" File="Assets\Sounds\Bullet\PTrFir00.ogg" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+    </CSound>
+    <CSound id="Scout_Attack" parent="ProtossAck">
+        <AssetArray File="LocalizedData\Sounds\ProtossVO\CampaignUnits\Scout\Scout_Attack00.ogg"/>
+        <AssetArray File="LocalizedData\Sounds\ProtossVO\CampaignUnits\Scout\Scout_Attack01.ogg"/>
+        <AssetArray File="LocalizedData\Sounds\ProtossVO\CampaignUnits\Scout\Scout_Attack02.ogg"/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="Scout_Attack_NP" parent="ProtossAck">
+        <AssetArray File="LocalizedData\Sounds\ProtossVO\CampaignUnits\Scout\Scout_NeuralParasiteAttack00.ogg" PortraitModel="ScoutPortrait" Speaker="ConversationState/Characters/CharScout"/>
+        <AssetArray File="LocalizedData\Sounds\ProtossVO\CampaignUnits\Scout\Scout_NeuralParasiteAttack01.ogg"/>
+        <Volume value="-1.000000,-1.000000"/>
+    </CSound>
+    <CSound id="Scout_Death" parent="Death">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="LocalizedData\Sounds\ProtossVO\CampaignUnits\Scout\Scout_Death00.wav"/>
+        <AssetArray File="LocalizedData\Sounds\ProtossVO\CampaignUnits\Scout\Scout_Death01.wav"/>
+        <AssetArray File="LocalizedData\Sounds\ProtossVO\CampaignUnits\Scout\Scout_Death02.wav"/>
+        <AssetArray File="LocalizedData\Sounds\ProtossVO\CampaignUnits\Scout\Scout_Death03.wav"/>
+        <AssetArray File="LocalizedData\Sounds\ProtossVO\CampaignUnits\Scout\Scout_Death04.wav"/>
+    </CSound>
+    <CSound id="Scout_Death_NP" parent="Death">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="LocalizedData\Sounds\ProtossVO\CampaignUnits\Scout\Scout_NeuralParasiteDeath00.wav"/>
+    </CSound>
+    <CSound id="Scout_Explode" parent="Protoss_ExplosionMedium"/>
+    <CSound id="Scout_GroundAttackImpact" parent="Combat">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="Assets\Sounds\Protoss\Scout\Scout_GroundAttackImpact0.wav"/>
+        <AssetArray File="Assets\Sounds\Protoss\Scout\Scout_GroundAttackImpact1.wav"/>
+        <AssetArray File="Assets\Sounds\Protoss\Scout\Scout_GroundAttackImpact2.wav"/>
+        <Pitch value="0.000000,3.000000"/>
+        <Volume value="-3.000000,-3.000000"/>
+    </CSound>
+    <CSound id="Scout_Help" parent="ProtossAck">
+        <AssetArray File="LocalizedData\Sounds\ProtossVO\CampaignUnits\Scout\Scout_Help00.ogg"/>
+        <Volume value="-1.000000,-1.000000"/>
+    </CSound>
+    <CSound id="Scout_Movement" parent="Movement">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="Assets\Sounds\Protoss\Scout\Scout_Movement0.wav"/>
+        <AssetArray File="Assets\Sounds\Protoss\Scout\Scout_Movement1.wav"/>
+        <AssetArray File="Assets\Sounds\Protoss\Scout\Scout_Movement2.wav"/>
+        <AssetArray File="Assets\Sounds\Protoss\Scout\Scout_Movement3.wav"/>
+        <DupeMuteCount value="3"/>
+        <Volume value="-6.000000,-6.000000"/>
+    </CSound>
+    <CSound id="Scout_Pissed" parent="Pissed">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="LocalizedData\Sounds\ProtossVO\CampaignUnits\Scout\Scout_Pissed00.ogg"/>
+        <AssetArray File="LocalizedData\Sounds\ProtossVO\CampaignUnits\Scout\Scout_Pissed01.ogg"/>
+        <AssetArray File="LocalizedData\Sounds\ProtossVO\CampaignUnits\Scout\Scout_Pissed02.ogg"/>
+        <AssetArray File="LocalizedData\Sounds\ProtossVO\CampaignUnits\Scout\Scout_Pissed03.ogg"/>
+        <AssetArray File="LocalizedData\Sounds\ProtossVO\CampaignUnits\Scout\Scout_Pissed04.ogg"/>
+        <AssetArray File="LocalizedData\Sounds\ProtossVO\CampaignUnits\Scout\Scout_Pissed05.ogg"/>
+        <Volume value="-1.000000,-1.000000"/>
+    </CSound>
+    <CSound id="Scout_Ready" parent="Ready">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="LocalizedData\Sounds\ProtossVO\CampaignUnits\Scout\Scout_Ready00.ogg"/>
+        <Volume value="-1.000000,-1.000000"/>
+    </CSound>
+    <CSound id="Scout_Ready_NP" parent="Ready">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="LocalizedData\Sounds\ProtossVO\CampaignUnits\Scout\Scout_NeuralParasiteReady00.ogg"/>
+    </CSound>
+    <CSound id="Scout_What" parent="ProtossAck">
+        <AssetArray File="LocalizedData\Sounds\ProtossVO\CampaignUnits\Scout\Scout_What00.ogg"/>
+        <AssetArray File="LocalizedData\Sounds\ProtossVO\CampaignUnits\Scout\Scout_What01.ogg"/>
+        <AssetArray File="LocalizedData\Sounds\ProtossVO\CampaignUnits\Scout\Scout_What02.ogg"/>
+        <AssetArray File="LocalizedData\Sounds\ProtossVO\CampaignUnits\Scout\Scout_What03.ogg"/>
+        <Volume value="-1.000000,-1.000000"/>
+    </CSound>
+    <CSound id="Scout_What_NP" parent="ProtossAck">
+        <AssetArray File="LocalizedData\Sounds\ProtossVO\CampaignUnits\Scout\Scout_NeuralParasiteWhat00.ogg" PortraitModel="ScoutPortrait" Speaker="ConversationState/Characters/CharScout"/>
+        <AssetArray File="LocalizedData\Sounds\ProtossVO\CampaignUnits\Scout\Scout_NeuralParasiteWhat01.ogg"/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="Scout_Yes" parent="ProtossAck">
+        <AssetArray File="LocalizedData\Sounds\ProtossVO\CampaignUnits\Scout\Scout_Yes00.ogg"/>
+        <AssetArray File="LocalizedData\Sounds\ProtossVO\CampaignUnits\Scout\Scout_Yes01.ogg"/>
+        <AssetArray File="LocalizedData\Sounds\ProtossVO\CampaignUnits\Scout\Scout_Yes02.ogg"/>
+        <AssetArray File="LocalizedData\Sounds\ProtossVO\CampaignUnits\Scout\Scout_Yes03.ogg"/>
+        <AssetArray File="LocalizedData\Sounds\ProtossVO\CampaignUnits\Scout\Scout_Yes04.ogg"/>
+        <AssetArray File="LocalizedData\Sounds\ProtossVO\CampaignUnits\Scout\Scout_Yes05.ogg"/>
+        <Volume value="-1.000000,-1.000000"/>
+    </CSound>
+    <CSound id="ShieldBattery_What" parent="Voice">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="Assets\Sounds\Buildings\Protoss\pbaWht00.ogg" FacialGroup=""/>
+        <Volume value="-4.500000,-4.500000"/>
+    </CSound>
+    <CSound id="BanelingNest_Explode">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Zerg\ZBldgDth.ogg" Pitch="0.000000,0.000000" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+    </CSound>
+    <CSound id="BanelingNest_What">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Zerg\zmhWht00.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="Carrier_InterceptorLaunch">
+        <AssetArray index="0" File="Assets\Sounds\Interceptor\PInLau00.ogg" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="Carrier_Pissed">
+        <AssetArray index="0" File="Assets\Sounds\Carrier\PCaPss00.ogg" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\Carrier\PCaPss01.ogg" FacialGroup=""/>
+        <AssetArray index="2" File="Assets\Sounds\Carrier\PCaPss02.ogg" FacialGroup=""/>
+        <AssetArray index="3" File="Assets\Sounds\Carrier\PCaPss03.ogg" FacialGroup=""/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="Arbiter_Pissed" parent="ProtossAck">
+        <AssetArray File="Assets\Sounds\Arbiter\pabPss00.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Arbiter\pabPss01.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Arbiter\pabPss02.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Arbiter\pabPss03.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Arbiter\pabPss04.ogg" FacialGroup=""/>
+        <Select value="Sequential"/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="Carrier_Ready">
+        <AssetArray index="0" File="Assets\Sounds\Carrier\pcaRdy00.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="Arbiter_Ready" parent="Ready">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="Assets\Sounds\Arbiter\pabRdy00.ogg" FacialGroup=""/>
+        <Volume value="-2.000000,-2.000000"/>
+    </CSound>
+    <CSound id="Carrier_What">
+        <AssetArray index="0" File="Assets\Sounds\Carrier\PCaWht00.ogg" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\Carrier\PCaWht01.ogg" FacialGroup=""/>
+        <AssetArray index="2" File="Assets\Sounds\Carrier\PCaWht02.ogg" FacialGroup=""/>
+        <AssetArray index="3" File="Assets\Sounds\Carrier\PCaWht03.ogg" FacialGroup=""/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+    </CSound>
+    <CSound id="Arbiter_What" parent="ProtossAck">
+        <AssetArray File="Assets\Sounds\Arbiter\pabWht00.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Arbiter\pabWht01.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Arbiter\pabWht02.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Arbiter\pabWht03.ogg" FacialGroup=""/>
+        <Volume value="-2.000000,-2.000000"/>
+    </CSound>
+    <CSound id="Carrier_Yes">
+        <AssetArray index="0" File="Assets\Sounds\Carrier\PCaYes00.ogg" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\Carrier\PCaYes01.ogg" FacialGroup=""/>
+        <AssetArray index="2" File="Assets\Sounds\Carrier\PCaYes02.ogg" FacialGroup=""/>
+        <AssetArray index="3" File="Assets\Sounds\Carrier\PCaYes03.ogg" FacialGroup=""/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <AssetArray index="7" removed="1"/>
+    </CSound>
+    <CSound id="Arbiter_Yes" parent="ProtossAck">
+        <AssetArray File="Assets\Sounds\Arbiter\pabYes00.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Arbiter\pabYes01.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Arbiter\pabYes02.ogg" FacialGroup=""/>
+        <Volume value="-2.000000,-2.000000"/>
+    </CSound>
+    <CSound id="CorsairAttack">
+        <AssetArray File="Assets\Sounds\Corsair\pcorlasr1.ogg" FacialGroup=""/>
+        <DupeMuteCount value="16"/>
+        <Category value="Combat"/>
+        <Mode value="3DWorld"/>
+    </CSound>
+    <CSound id="Corsair_Death">
+        <AssetArray File="Assets\Sounds\Protoss\SharedEffects\Explosions\Protoss_ExplosionSmall0.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Protoss\SharedEffects\Explosions\Protoss_ExplosionSmall1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Protoss\SharedEffects\Explosions\Protoss_ExplosionSmall2.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Protoss\SharedEffects\Explosions\Protoss_ExplosionSmall3.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Protoss\SharedEffects\Explosions\Protoss_ExplosionSmall4.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Protoss\SharedEffects\Explosions\Protoss_ExplosionSmall5.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Protoss\SharedEffects\Explosions\Protoss_ExplosionSmall6.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Protoss\SharedEffects\Explosions\Protoss_ExplosionSmall7.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Protoss\SharedEffects\Explosions\Protoss_ExplosionSmall8.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Protoss\SharedEffects\Explosions\Protoss_ExplosionSmall9.wav" FacialGroup=""/>
+        <Category value="Combat"/>
+        <Mode value="3DWorld"/>
+    </CSound>
+    <CSound id="Corsair_Pissed">
+        <AssetArray File="Assets\Sounds\Corsair\pcopss00.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Corsair\pcopss01.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Corsair\pcopss02.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Corsair\pcopss03.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Corsair\pcopss04.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Corsair\pcopss05.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Corsair\pcopss06.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="Corsair_Ready">
+        <AssetArray File="Assets\Sounds\Corsair\pcordy00.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="Corsair_What">
+        <AssetArray File="Assets\Sounds\Corsair\pcowht00.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Corsair\pcowht01.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Corsair\pcowht02.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Corsair\pcowht03.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="Corsair_Yes">
+        <AssetArray File="Assets\Sounds\Corsair\pcoyes00.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Corsair\pcoyes01.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Corsair\pcoyes02.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Corsair\pcoyes03.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="CreepTumor_Explode">
+        <AssetArray index="0">
+            <File value="Assets\Sounds\Buildings\Zerg\ZBldgDth.ogg"/>
+            <Pitch value="0.000000,0.000000"/>
+            <Volume value="0.000000,0.000000"/>
+            <FacialGroup value=""/>
+        </AssetArray>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+    </CSound>
+    <CSound id="CreepTumor_What">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Zerg\zfcWht00.ogg" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+    </CSound>
+    <CSound id="DarkArchonPissed">
+        <AssetArray File="Assets\Sounds\Dark Archon\pdapss00.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Dark Archon\pdapss01.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Dark Archon\pdapss02.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Dark Archon\pdapss03.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="DarkArchonReady">
+        <AssetArray File="Assets\Sounds\Dark Archon\pdardy00.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="DarkArchonWhat">
+        <AssetArray File="Assets\Sounds\Dark Archon\pdawht00.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Dark Archon\pdawht01.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Dark Archon\pdawht02.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Dark Archon\pdawht03.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="DarkArchonYes">
+        <AssetArray File="Assets\Sounds\Dark Archon\pdayes00.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Dark Archon\pdayes01.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Dark Archon\pdayes02.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Dark Archon\pdayes03.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="Defiler_Consume">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Defiler\ZDeCon00.ogg" FacialGroup=""/>
+        <Mode value="3DWorld"/>
+        <Category value="Spell"/>
+    </CSound>
+    <CSound id="Defiler_DarkSwarm">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Defiler\ZQuSwm00.ogg" FacialGroup=""/>
+        <Mode value="3DWorld"/>
+        <Category value="Spell"/>
+    </CSound>
+    <CSound id="DisruptionWeb" parent="Spell">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="Assets\Sounds\Corsair\pcorweb1.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="DragoonAttack">
+        <AssetArray File="LocalizedData\Sounds\ImportedSounds\Dragoon_Attack.wav"/>
+        <Category value="Combat"/>
+        <Mode value="3DWorld"/>
+    </CSound>
+    <CSound id="DragoonDeath">
+        <AssetArray File="Assets\Sounds\Dragoon\pdrDth00.ogg" Volume="-6.170000,-6.170000" FacialGroup=""/>
+        <Category value="Combat"/>
+        <Mode value="3DWorld"/>
+    </CSound>
+    <CSound id="Drone_Error">
+        <AssetArray index="0" File="Assets\Sounds\Drone\zdrErr00.ogg" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="Drone_Explode">
+        <AssetArray index="0">
+            <File value="Assets\Sounds\Drone\zdrDth00.ogg"/>
+            <Pitch value="0.000000,0.000000"/>
+            <Volume value="0.000000,0.000000"/>
+            <FacialGroup value=""/>
+        </AssetArray>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+    </CSound>
+    <CSound id="Drone_Mine">
+        <AssetArray index="0" File="Assets\Sounds\Drone\ZDrMin00.ogg" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <Pitch value="0.000000,0.000000"/>
+        <Volume value="0.000000,0.000000"/>
+        <LoopCount value="-1"/>
+    </CSound>
+    <CSound id="Drone_Pissed">
+        <AssetArray index="0" File="Assets\Sounds\Drone\zdrPss00.ogg" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\Drone\zdrPss01.ogg" FacialGroup=""/>
+        <AssetArray index="2" File="Assets\Sounds\Drone\zdrPss02.ogg" FacialGroup=""/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <AssetArray index="7" removed="1"/>
+        <AssetArray index="8" removed="1"/>
+        <AssetArray index="9" removed="1"/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="Drone_Ready">
+        <AssetArray index="0" File="Assets\Sounds\Drone\zdrRdy00.ogg" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="Drone_What">
+        <AssetArray index="0" File="Assets\Sounds\Drone\zdrWht00.ogg" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\Drone\zdrWht01.ogg" FacialGroup=""/>
+        <AssetArray index="2" File="Assets\Sounds\Drone\zdrWht02.ogg" FacialGroup=""/>
+        <AssetArray index="3" File="Assets\Sounds\Drone\zdrWht03.ogg" FacialGroup=""/>
+        <AssetArray index="4" File="Assets\Sounds\Drone\zdrWht04.ogg" FacialGroup=""/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <AssetArray index="7" removed="1"/>
+        <AssetArray index="8" removed="1"/>
+        <AssetArray index="9" removed="1"/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="Drone_Yes">
+        <AssetArray index="0" File="Assets\Sounds\Drone\zdrYes00.ogg" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\Drone\zdrYes01.ogg" FacialGroup=""/>
+        <AssetArray index="2" File="Assets\Sounds\Drone\zdrYes02.ogg" FacialGroup=""/>
+        <AssetArray index="3" File="Assets\Sounds\Drone\zdrYes03.ogg" FacialGroup=""/>
+        <AssetArray index="4" File="Assets\Sounds\Drone\zdrYes04.ogg" FacialGroup=""/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <AssetArray index="7" removed="1"/>
+        <AssetArray index="8" removed="1"/>
+        <AssetArray index="9" removed="1"/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="EngineeringBay_What">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Terran\twpWht00.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="EvolutionChamber_Explode">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Zerg\ZBldgDth.ogg" Pitch="0.000000,0.000000" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+    </CSound>
+    <CSound id="EvolutionChamber_What">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Zerg\ZEvWht00.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="Extractor_Explode">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Zerg\ZBldgDth.ogg" Pitch="0.000000,0.000000" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+    </CSound>
+    <CSound id="Extractor_What">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Zerg\zigWht00.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="FirebatAttackLaunch">
+        <AssetArray File="Assets\Sounds\Firebat\tfbFir00.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Firebat\tfbFir01.ogg" FacialGroup=""/>
+        <Category value="Combat"/>
+        <Mode value="3DWorld"/>
+    </CSound>
+    <CSound id="FirebatBunkerAttackLaunch">
+        <AssetArray File="Assets\Sounds\Firebat\tfbFir00.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Firebat\tfbFir01.ogg" FacialGroup=""/>
+        <Category value="Combat"/>
+        <Mode value="3DWorld"/>
+    </CSound>
+    <CSound id="Firebat_Explode">
+        <AssetArray File="Assets\Sounds\Firebat\TFbDth00.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Firebat\TFbDth01.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Firebat\TFbDth02.ogg" FacialGroup=""/>
+        <Category value="Combat"/>
+        <Mode value="3DWorld"/>
+    </CSound>
+    <CSound id="Firebat_Pissed">
+        <AssetArray File="Assets\Sounds\Firebat\tfbPss00.ogg" FacialAnim="Firebat_What04"/>
+        <AssetArray File="Assets\Sounds\Firebat\tfbPss01.ogg" FacialAnim="Firebat_What02"/>
+        <AssetArray File="Assets\Sounds\Firebat\tfbPss02.ogg" FacialAnim="Firebat_Help00"/>
+        <AssetArray File="Assets\Sounds\Firebat\tfbPss03.ogg" FacialAnim="Firebat_Pissed10"/>
+        <AssetArray File="Assets\Sounds\Firebat\tfbPss04.ogg" FacialAnim="Firebat_Pissed05"/>
+        <AssetArray File="Assets\Sounds\Firebat\tfbPss05.ogg" FacialAnim="Firebat_Pissed10"/>
+        <AssetArray File="Assets\Sounds\Firebat\tfbPss06.ogg" FacialAnim="Firebat_Yes04"/>
+    </CSound>
+    <CSound id="Firebat_Ready">
+        <AssetArray File="Assets\Sounds\Firebat\tfbRdy00.ogg" FacialAnim="Firebat_What04"/>
+    </CSound>
+    <CSound id="Firebat_What">
+        <AssetArray File="Assets\Sounds\Firebat\tfbWht00.ogg" FacialAnim="Firebat_What04"/>
+        <AssetArray File="Assets\Sounds\Firebat\tfbWht01.ogg" FacialAnim="THorner05SFirebat00034"/>
+        <AssetArray File="Assets\Sounds\Firebat\tfbWht02.ogg" FacialAnim="Firebat_What02"/>
+        <AssetArray File="Assets\Sounds\Firebat\tfbWht03.ogg" FacialAnim="Firebat_What02"/>
+    </CSound>
+    <CSound id="Firebat_Yes">
+        <AssetArray File="Assets\Sounds\Firebat\tfbYes00.ogg" FacialAnim="Firebat_Yes01"/>
+        <AssetArray File="Assets\Sounds\Firebat\tfbYes01.ogg" FacialAnim="Firebat_Yes01"/>
+        <AssetArray File="Assets\Sounds\Firebat\tfbYes02.ogg" FacialAnim="Firebat_What04"/>
+        <AssetArray File="Assets\Sounds\Firebat\tfbYes03.ogg" FacialAnim="Firebat_Attack01"/>
+    </CSound>
+    <CSound id="GameMusicTerr">
+        <AssetArray index="0" File="Assets\Sounds\Music\terran1.ogg" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\Music\terran2.ogg" FacialGroup=""/>
+        <AssetArray index="2" File="Assets\Sounds\Music\terran3.ogg" FacialGroup=""/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <AssetArray index="7" removed="1"/>
+        <AssetArray index="8" removed="1"/>
+        <AssetArray index="9" removed="1"/>
+        <AssetArray index="10" removed="1"/>
+        <AssetArray index="11" removed="1"/>
+        <AssetArray index="12" removed="1"/>
+        <AssetArray index="13" removed="1"/>
+        <AssetArray index="14" removed="1"/>
+        <AssetArray index="15" removed="1"/>
+        <AssetArray index="16" removed="1"/>
+        <AssetArray index="17" removed="1"/>
+        <AssetArray index="18" removed="1"/>
+        <AssetArray index="19" removed="1"/>
+        <AssetArray index="20" removed="1"/>
+        <AssetArray index="21" removed="1"/>
+        <AssetArray index="22" removed="1"/>
+        <AssetArray index="23" removed="1"/>
+        <AssetArray index="24" removed="1"/>
+        <AssetArray index="25" removed="1"/>
+        <AssetArray index="26" removed="1"/>
+        <AssetArray index="27" removed="1"/>
+        <AssetArray index="28" removed="1"/>
+        <AssetArray index="29" removed="1"/>
+        <AssetArray index="30" removed="1"/>
+        <AssetArray index="31" removed="1"/>
+        <AssetArray index="32" removed="1"/>
+        <AssetArray index="33" removed="1"/>
+    </CSound>
+    <CSound id="GameMusicZerg">
+        <AssetArray index="0" File="Assets\Sounds\Music\zerg1.ogg" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\Music\zerg2.ogg" FacialGroup=""/>
+        <AssetArray index="2" File="Assets\Sounds\Music\zerg3.ogg" FacialGroup=""/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <AssetArray index="7" removed="1"/>
+        <AssetArray index="8" removed="1"/>
+        <AssetArray index="9" removed="1"/>
+        <AssetArray index="10" removed="1"/>
+        <AssetArray index="11" removed="1"/>
+        <AssetArray index="12" removed="1"/>
+        <AssetArray index="13" removed="1"/>
+        <AssetArray index="14" removed="1"/>
+        <AssetArray index="15" removed="1"/>
+        <AssetArray index="16" removed="1"/>
+        <AssetArray index="17" removed="1"/>
+        <AssetArray index="18" removed="1"/>
+        <AssetArray index="19" removed="1"/>
+        <AssetArray index="20" removed="1"/>
+        <AssetArray index="21" removed="1"/>
+        <AssetArray index="22" removed="1"/>
+        <AssetArray index="23" removed="1"/>
+        <AssetArray index="24" removed="1"/>
+        <AssetArray index="25" removed="1"/>
+        <AssetArray index="26" removed="1"/>
+        <AssetArray index="27" removed="1"/>
+        <AssetArray index="28" removed="1"/>
+        <AssetArray index="29" removed="1"/>
+        <AssetArray index="30" removed="1"/>
+        <AssetArray index="31" removed="1"/>
+        <AssetArray index="32" removed="1"/>
+        <AssetArray index="33" removed="1"/>
+        <AssetArray index="34" removed="1"/>
+        <AssetArray index="35" removed="1"/>
+        <AssetArray index="36" removed="1"/>
+        <AssetArray index="37" removed="1"/>
+        <AssetArray index="38" removed="1"/>
+        <AssetArray index="39" removed="1"/>
+        <AssetArray index="40" removed="1"/>
+        <AssetArray index="41" removed="1"/>
+        <AssetArray index="42" removed="1"/>
+        <AssetArray index="43" removed="1"/>
+        <AssetArray index="44" removed="1"/>
+        <AssetArray index="45" removed="1"/>
+    </CSound>
+    <CSound id="GreaterSpire_Explode">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Zerg\ZBldgDth.ogg" Pitch="0.000000,0.000000" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+    </CSound>
+    <CSound id="GreaterSpire_What">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Zerg\zspWht00.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="Hatchery_Explode">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Zerg\ZBldgDth.ogg" Pitch="0.000000,0.000000" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+    </CSound>
+    <CSound id="Hatchery_What">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Zerg\zhaWht00.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="Hive_What">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Zerg\zhiWht00.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="HydraliskDen_Explode">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Zerg\ZBldgDth.ogg" Pitch="0.000000,0.000000" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+    </CSound>
+    <CSound id="HydraliskDen_What">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Zerg\zsbWht00.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="Hydralisk_Death">
+        <AssetArray index="0" File="LocalizedData\Sounds\ImportedSounds\Hydralisk_Death.wav"/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="Hydralisk_Explode">
+        <AssetArray index="0" File="LocalizedData\Sounds\ImportedSounds\Hydralisk_Death.wav" Pitch="0.000000,0.000000"/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+    </CSound>
+    <CSound id="Hydralisk_GroundAttackLaunch">
+        <AssetArray index="0" File="LocalizedData\Sounds\ImportedSounds\Hydralisk_Attack.WAV"/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <DupeDestroyCount value="10"/>
+    </CSound>
+    <CSound id="Hydralisk_Pissed">
+        <AssetArray index="0" File="Assets\Sounds\Hydra\zhyPss00.ogg" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\Hydra\zhyPss01.ogg" FacialGroup=""/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <AssetArray index="7" removed="1"/>
+    </CSound>
+    <CSound id="Hydralisk_Ready">
+        <AssetArray index="0" File="Assets\Sounds\Hydra\zhyRdy00.ogg" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+    </CSound>
+    <CSound id="Hydralisk_What">
+        <AssetArray index="0" File="Assets\Sounds\Hydra\zhyWht00.ogg" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\Hydra\zhyWht01.ogg" FacialGroup=""/>
+        <AssetArray index="2" File="Assets\Sounds\Hydra\zhyWht02.ogg" FacialGroup=""/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+    </CSound>
+    <CSound id="Hydralisk_Yes">
+        <AssetArray index="0" File="Assets\Sounds\Hydra\zhyYes00.ogg" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\Hydra\zhyYes01.ogg" FacialGroup=""/>
+        <AssetArray index="2" File="Assets\Sounds\Hydra\zhyYes02.ogg" FacialGroup=""/>
+        <AssetArray index="3" File="Assets\Sounds\Hydra\zhyYes03.ogg" FacialGroup=""/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <AssetArray index="7" removed="1"/>
+    </CSound>
+    <CSound id="Defiler_Death" parent="Death">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Defiler\ZDeDth00.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="Defiler_Pissed" parent="Pissed">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Defiler\zdePss00.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Defiler\zdePss01.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Defiler\zdePss02.ogg" FacialGroup=""/>
+        <Volume value="-1.000000,-1.000000"/>
+    </CSound>
+    <CSound id="Defiler_Ready" parent="Ready">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Defiler\zdeRdy00.ogg" FacialGroup=""/>
+        <Volume value="-1.000000,-1.000000"/>
+    </CSound>
+    <CSound id="Defiler_What" parent="Voice">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Defiler\zdeWht00.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Defiler\zdeWht01.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Defiler\zdeWht02.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Defiler\ZDeWht03.ogg" FacialGroup=""/>
+        <Volume value="-1.000000,-1.000000"/>
+    </CSound>
+    <CSound id="Defiler_Yes" parent="Voice">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Defiler\ZDeYes03.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Defiler\zdeYes00.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Defiler\zdeYes01.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Defiler\zdeYes02.ogg" FacialGroup=""/>
+        <Volume value="-1.000000,-1.000000"/>
+    </CSound>
+    <CSound id="InfestationPit_Explode">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Zerg\ZBldgDth.ogg" Pitch="0.000000,0.000000" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+    </CSound>
+    <CSound id="InfestationPit_What">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Zerg\zneWht00.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="Lair_What">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Zerg\zlrWht00.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="LockdownLaunch">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Ghost\Lockdown effect.ogg" FacialGroup=""/>
+        <Category value="Spell"/>
+        <Mode value="3DWorld"/>
+    </CSound>
+    <CSound id="Marine_BunkerAttackLaunch">
+        <AssetArray index="0" File="Assets\Sounds\Marine\TMaFir00.ogg" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <AssetArray index="7" removed="1"/>
+        <AssetArray index="8" removed="1"/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="MercCompound_What">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Terran\tacWht00.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="MindControlImpact">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="Assets\Sounds\Dark Archon\mind.ogg" FacialGroup=""/>
+        <Category value="Spell"/>
+        <Mode value="3DWorld"/>
+    </CSound>
+    <CSound id="MissileTurret_What">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Terran\tmtWht00.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="OrbitalCommand_ScannerSweep">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Terran\TCsSca00.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="Refinery_What">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Terran\treWht00.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="ScienceFacility_What" parent="Voice">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Buildings\Terran\TRlWht00.ogg" FacialGroup=""/>
+        <Volume value="-9.000000,-9.000000"/>
+    </CSound>
+    <CSound id="Mothership_CloakFieldOff">
+        <AssetArray index="0" File="Assets\Sounds\Arbiter\TPhClo01.ogg" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <DupeDestroyCount value="5"/>
+        <OverlapTimeDelta value="100"/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="Mothership_CloakFieldOn">
+        <AssetArray index="0" File="Assets\Sounds\Arbiter\TPhClo00.ogg" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <DupeDestroyCount value="5"/>
+        <OverlapTimeDelta value="100"/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="Mutalisk_Attack">
+        <AssetArray index="0" File="Assets\Sounds\Mutalisk\zmuYes00.ogg" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\Mutalisk\zmuYes01.ogg" FacialGroup=""/>
+        <AssetArray index="2" File="Assets\Sounds\Mutalisk\zmuYes02.ogg" FacialGroup=""/>
+        <AssetArray index="3" File="Assets\Sounds\Mutalisk\zmuYes03.ogg" FacialGroup=""/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <AssetArray index="7" removed="1"/>
+        <AssetArray index="8" removed="1"/>
+        <AssetArray index="9" removed="1"/>
+        <AssetArray index="10" removed="1"/>
+    </CSound>
+    <CSound id="Mutalisk_Death">
+        <AssetArray index="0" File="Assets\Sounds\Mutalisk\zmuDth00.ogg" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+    </CSound>
+    <CSound id="Mutalisk_Explode">
+        <AssetArray index="0" File="Assets\Sounds\Mutalisk\zmuDth00.ogg" Pitch="0.000000,0.000000" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+    </CSound>
+    <CSound id="Mutalisk_Pissed">
+        <AssetArray index="0" File="Assets\Sounds\Mutalisk\zmuPss00.ogg" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\Mutalisk\zmuPss01.ogg" FacialGroup=""/>
+        <AssetArray index="2" File="Assets\Sounds\Mutalisk\zmuPss02.ogg" FacialGroup=""/>
+        <AssetArray index="3" File="Assets\Sounds\Mutalisk\zmuPss03.ogg" FacialGroup=""/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <AssetArray index="7" removed="1"/>
+        <AssetArray index="8" removed="1"/>
+        <AssetArray index="9" removed="1"/>
+    </CSound>
+    <CSound id="Mutalisk_Ready">
+        <AssetArray index="0" File="Assets\Sounds\Mutalisk\zmuRdy00.ogg" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+    </CSound>
+    <CSound id="Mutalisk_Segment1AttackImpact">
+        <Volume value="0.000000,0.000000"/>
+        <AssetArray index="0" File="Assets\Sounds\Mutalisk\ZQuHit00.ogg" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+    </CSound>
+    <CSound id="Mutalisk_Segment2AttackImpact">
+        <AssetArray index="0" File="Assets\Sounds\Mutalisk\ZQuHit01.ogg" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="Mutalisk_Segment3AttackImpact">
+        <AssetArray index="0" File="Assets\Sounds\Mutalisk\ZQuHit02.ogg" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="Mutalisk_What">
+        <AssetArray index="0" File="Assets\Sounds\Mutalisk\zmuWht00.ogg" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\Mutalisk\zmuWht01.ogg" FacialGroup=""/>
+        <AssetArray index="2" File="Assets\Sounds\Mutalisk\zmuWht02.ogg" FacialGroup=""/>
+        <AssetArray index="3" File="Assets\Sounds\Mutalisk\zmuWht03.ogg" FacialGroup=""/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <AssetArray index="7" removed="1"/>
+        <AssetArray index="8" removed="1"/>
+        <AssetArray index="9" removed="1"/>
+    </CSound>
+    <CSound id="Mutalisk_Yes">
+        <AssetArray index="0" File="Assets\Sounds\Mutalisk\zmuYes00.ogg" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\Mutalisk\zmuYes01.ogg" FacialGroup=""/>
+        <AssetArray index="2" File="Assets\Sounds\Mutalisk\zmuYes02.ogg" FacialGroup=""/>
+        <AssetArray index="3" File="Assets\Sounds\Mutalisk\zmuYes03.ogg" FacialGroup=""/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <AssetArray index="7" removed="1"/>
+        <AssetArray index="8" removed="1"/>
+        <AssetArray index="9" removed="1"/>
+        <AssetArray index="10" removed="1"/>
+    </CSound>
+    <CSound id="NydusNetwork_Explode">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Zerg\ZBldgDth.ogg" Pitch="0.000000,0.000000" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+    </CSound>
+    <CSound id="NydusNetwork_What">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Zerg\znyWht00.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="NydusWorm_Death">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Zerg\ZBldgDth.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="NydusWorm_What">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Zerg\znyWht00.ogg" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+    </CSound>
+    <CSound id="Overlord_Death">
+        <AssetArray index="0" File="Assets\Sounds\Overlord\zovDth00.ogg" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="Overlord_Pissed">
+        <AssetArray index="0" File="Assets\Sounds\Overlord\zovPss00.ogg" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\Overlord\zovPss01.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Overlord\zovPss02.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Overlord\zovPss03.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="Overlord_Ready">
+        <AssetArray index="0" File="Assets\Sounds\Overlord\zovRdy00.ogg" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+    </CSound>
+    <CSound id="Overlord_What">
+        <AssetArray index="0" File="Assets\Sounds\Overlord\zovWht00.ogg" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\Overlord\zovWht01.ogg" FacialGroup=""/>
+        <AssetArray index="2" File="Assets\Sounds\Overlord\zovWht02.ogg" FacialGroup=""/>
+        <AssetArray index="3" File="Assets\Sounds\Overlord\zovWht03.ogg" FacialGroup=""/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <AssetArray index="7" removed="1"/>
+        <AssetArray index="8" removed="1"/>
+    </CSound>
+    <CSound id="Overlord_Yes">
+        <AssetArray index="0" File="Assets\Sounds\Overlord\zovYes00.ogg" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\Overlord\zovYes01.ogg" FacialGroup=""/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <AssetArray index="7" removed="1"/>
+        <AssetArray index="8" removed="1"/>
+        <AssetArray index="9" removed="1"/>
+    </CSound>
+    <CSound id="Reaver_Pissed" parent="ProtossAck">
+        <AssetArray File="Assets\Sounds\Reaver\PtrPss00.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Reaver\PtrPss01.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Reaver\PtrPss02.ogg" FacialGroup=""/>
+        <Select value="Sequential"/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="Reaver_Ready" parent="Ready">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="Assets\Sounds\Reaver\PTrRdy00.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="Reaver_What" parent="ProtossAck">
+        <AssetArray File="Assets\Sounds\Reaver\PTrWht00.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Reaver\PTrWht01.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Reaver\PTrWht02.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Reaver\PTrWht03.ogg" FacialGroup=""/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="Reaver_Yes" parent="ProtossAck">
+        <AssetArray File="Assets\Sounds\Reaver\PTrYes00.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Reaver\PTrYes01.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Reaver\PTrYes02.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Reaver\PTrYes03.ogg" FacialGroup=""/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="Reaver_Death" parent="ProtossAck">
+        <AssetArray File="Assets\Sounds\Reaver\ptrDth00.ogg" FacialGroup=""/>
+        <Volume value="0.000000,0.000000"/>
+        <Category value="Death"/>
+    </CSound>
+    <CSound id="Scarab_Explode" parent="Protoss_ExplosionSmall">
+        <AssetArray index="0" File="Assets\Sounds\Reaver\PSaHit00.ogg" Pitch="0.000000,0.000000" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <AssetArray index="7" removed="1"/>
+        <AssetArray index="8" removed="1"/>
+        <AssetArray index="9" removed="1"/>
+    </CSound>
+    <CSound id="Lurker_AttackLaunch">
+        <AssetArray index="0" File="Assets\Sounds\Lurker\ZLrkFir1.ogg" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+        <Volume value="0.000000,0.000000"/>
+        <Pitch value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="Lurker_AttackImpact" parent="Combat">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Lurker\ZLrkHit1.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Lurker\ZLrkHit2.ogg" FacialGroup=""/>
+        <DupeDestroyCount value="10"/>
+        <Pitch value="-1.000000,1.000000"/>
+        <Volume value="-1.560000,0.000000"/>
+    </CSound>
+    <CSound id="Lurker_Burrow">
+        <AssetArray index="0" File="Assets\Sounds\Lurker\ZLUBURRW.ogg" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+        <Pitch value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="Lurker_Death">
+        <AssetArray index="0" File="Assets\Sounds\Lurker\ZLuDth00.ogg" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+    </CSound>
+    <CSound id="Marine_AttackLaunch">
+        <AssetArray index="0" File="Assets\Sounds\Marine\TMaFir00.ogg" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <AssetArray index="7" removed="1"/>
+        <AssetArray index="8" removed="1"/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="Marine_Death">
+        <AssetArray index="0" File="Assets\Sounds\Marine\TMaDth00.ogg" Weight="100" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\Marine\TMaDth01.ogg" FacialGroup=""/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <AssetArray index="7" removed="1"/>
+    </CSound>
+    <CSound id="Marine_DeathFXBlast">
+        <AssetArray index="0" File="Assets\Sounds\Marine\TMaDth00.ogg" Pitch="0.000000,0.000000" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\Marine\TMaDth01.ogg" Pitch="0.000000,0.000000" FacialGroup=""/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <AssetArray index="7" removed="1"/>
+        <AssetArray index="8" removed="1"/>
+        <AssetArray index="9" removed="1"/>
+    </CSound>
+    <CSound id="Marine_DeathFXBloodSpray">
+        <AssetArray index="0">
+            <File value="Assets\Sounds\Marine\TMaDth00.ogg"/>
+            <Pitch value="0.000000,0.000000"/>
+            <Volume value="0.000000,0.000000"/>
+            <FacialGroup value=""/>
+        </AssetArray>
+        <AssetArray index="1">
+            <File value="Assets\Sounds\Marine\TMaDth01.ogg"/>
+            <Pitch value="0.000000,0.000000"/>
+            <Volume value="0.000000,0.000000"/>
+            <FacialGroup value=""/>
+        </AssetArray>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+    </CSound>
+    <CSound id="Marine_DeathFXEat">
+        <AssetArray index="0" File="Assets\Sounds\Marine\TMaDth00.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Marine\TMaDth01.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="Marine_DeathFXEviscerate">
+        <AssetArray index="0" File="Assets\Sounds\Marine\TMaDth00.ogg" FacialGroup=""/>
+        <AssetArray>
+            <File value="Assets\Sounds\Marine\TMaDth01.ogg"/>
+            <LoopCount value="0"/>
+            <LoopTime value="0,0"/>
+            <Offset value="0,0"/>
+            <Pitch value="0.000000,0.000000"/>
+            <Volume value="0.000000,0.000000"/>
+            <Weight value="100"/>
+            <FacialAnim value=""/>
+            <FacialGroup value=""/>
+            <PortraitAnim value=""/>
+            <FacialFile value=""/>
+            <PortraitModel value=""/>
+            <PortraitActor value=""/>
+            <Speaker value=""/>
+            <Subtitle value=""/>
+        </AssetArray>
+    </CSound>
+    <CSound id="Marine_DeathFXFire">
+        <AssetArray index="0" File="Assets\Sounds\Marine\TMaDth00.ogg" FacialGroup=""/>
+        <AssetArray>
+            <File value="Assets\Sounds\Marine\TMaDth01.ogg"/>
+            <LoopCount value="0"/>
+            <LoopTime value="0,0"/>
+            <Offset value="0,0"/>
+            <Pitch value="0.000000,0.000000"/>
+            <Volume value="0.000000,0.000000"/>
+            <Weight value="100"/>
+            <FacialAnim value=""/>
+            <FacialGroup value=""/>
+            <PortraitAnim value=""/>
+            <FacialFile value=""/>
+            <PortraitModel value=""/>
+            <PortraitActor value=""/>
+            <Speaker value=""/>
+            <Subtitle value=""/>
+        </AssetArray>
+    </CSound>
+    <CSound id="Marine_DeathFXSilentKill">
+        <AssetArray index="0" File="Assets\Sounds\Marine\TMaDth00.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Marine\TMaDth01.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="Marine_Pissed">
+        <AssetArray index="0" File="Assets\Sounds\Marine\TMaPss00.ogg" FacialAnim="Marine_Yes20"/>
+        <AssetArray index="1" File="Assets\Sounds\Marine\TMaPss01.ogg" FacialAnim="Marine_What00"/>
+        <AssetArray index="2" File="Assets\Sounds\Marine\TMaPss02.ogg" FacialAnim="Marine_Ready00"/>
+        <AssetArray index="3" File="Assets\Sounds\Marine\TMaPss03.ogg" FacialAnim="Marine_Ready00"/>
+        <AssetArray index="4" File="Assets\Sounds\Marine\TMaPss04.ogg" FacialAnim="Marine_Pissed05"/>
+        <AssetArray index="5" File="Assets\Sounds\Marine\TMaPss05.ogg" FacialAnim="Marine_Pissed05"/>
+        <AssetArray index="6" File="Assets\Sounds\Marine\TMaPss06.ogg" FacialAnim="Marine_Pissed07"/>
+        <AssetArray index="7" removed="1"/>
+        <AssetArray index="8" removed="1"/>
+        <AssetArray index="9" removed="1"/>
+        <AssetArray index="10" removed="1"/>
+    </CSound>
+    <CSound id="Marine_Ready">
+        <AssetArray index="0" File="Assets\Sounds\Marine\TMaRdy00.ogg" FacialAnim="Marine_What00"/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+    </CSound>
+    <CSound id="Marine_Stimpack">
+        <AssetArray index="0" File="Assets\Sounds\Marine\tmaSti00.ogg" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\Marine\tmaSti01.ogg" FacialGroup=""/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <AssetArray index="7" removed="1"/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="Marine_What">
+        <AssetArray index="0" File="Assets\Sounds\Marine\TMaWht00.ogg" FacialAnim="Marine_Attack05"/>
+        <AssetArray index="1" File="Assets\Sounds\Marine\TMaWht01.ogg" FacialAnim="Marine_Attack05"/>
+        <AssetArray index="2" File="Assets\Sounds\Marine\TMaWht02.ogg" FacialAnim="Marine_What00"/>
+        <AssetArray index="3" File="Assets\Sounds\Marine\TMaWht03.ogg" FacialAnim="Marine_What00"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+    </CSound>
+    <CSound id="Marine_Yes">
+        <AssetArray index="0" File="Assets\Sounds\Marine\TMaYes00.ogg" FacialAnim="Marine_Yes21"/>
+        <AssetArray index="1" File="Assets\Sounds\Marine\TMaYes01.ogg" FacialAnim="Marine_Attack05"/>
+        <AssetArray index="2" File="Assets\Sounds\Marine\TMaYes02.ogg" FacialAnim="Marine_Attack05"/>
+        <AssetArray index="3" File="Assets\Sounds\Marine\TMaYes03.ogg" FacialAnim="Marine_Yes04"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <AssetArray index="7" removed="1"/>
+        <AssetArray index="8" removed="1"/>
+        <AssetArray index="9" removed="1"/>
+        <AssetArray index="10" removed="1"/>
+        <AssetArray index="11" removed="1"/>
+        <AssetArray index="12" removed="1"/>
+        <AssetArray index="13" removed="1"/>
+        <AssetArray index="14" removed="1"/>
+        <AssetArray index="15" removed="1"/>
+        <AssetArray index="16" removed="1"/>
+        <AssetArray index="17" removed="1"/>
+        <AssetArray index="18" removed="1"/>
+        <AssetArray index="19" removed="1"/>
+        <AssetArray index="20" removed="1"/>
+        <AssetArray index="21" removed="1"/>
+        <AssetArray index="22" removed="1"/>
+    </CSound>
+    <CSound id="Medic_Death">
+        <AssetArray File="Assets\Sounds\Medic\TMdDth00.ogg" FacialGroup=""/>
+        <Category value="Combat"/>
+        <Mode value="3DWorld"/>
+    </CSound>
+    <CSound id="Medic_Heal">
+        <AssetArray File="Assets\Sounds\Medic\Tmedheal.ogg"/>
+        <Mode value="3DWorld"/>
+    </CSound>
+    <CSound id="Medic_OpticalFlare">
+        <AssetArray File="Assets\Sounds\Medic\TMedflsh.ogg" FacialGroup=""/>
+        <Mode value="3DWorld"/>
+        <Category value="Combat"/>
+    </CSound>
+    <CSound id="Medic_Restoration">
+        <AssetArray File="Assets\Sounds\Medic\TMedRest.ogg" FacialGroup=""/>
+        <Mode value="3DWorld"/>
+        <Category value="Combat"/>
+    </CSound>
+    <CSound id="Medic_Pissed">
+        <AssetArray File="Assets/Sounds/Medic/TMdPss00.ogg" FacialAnim="Medic_Yes04"/>
+        <AssetArray File="Assets/Sounds/Medic/TMdPss01.ogg" FacialAnim="Medic_Yes05"/>
+        <AssetArray File="Assets/Sounds/Medic/TMdPss02.ogg" FacialAnim="Medic_Heal01"/>
+        <AssetArray File="Assets/Sounds/Medic/TMdPss03.ogg" FacialAnim="Medic_Heal00"/>
+        <AssetArray File="Assets/Sounds/Medic/TMdPss04.ogg" FacialAnim="Medic_Pissed01"/>
+        <AssetArray File="Assets/Sounds/Medic/TMdPss05.ogg" FacialAnim="Medic_Flare00"/>
+        <AssetArray File="Assets/Sounds/Medic/TMdPss06.ogg" FacialAnim="Medic_What05"/>
+    </CSound>
+    <CSound id="Medic_Ready">
+        <AssetArray File="Assets/Sounds/Medic/TMdRdy00.ogg" FacialAnim="Medic_What01"/>
+    </CSound>
+    <CSound id="Medic_What">
+        <AssetArray File="Assets/Sounds/Medic/TMdWht00.ogg" FacialAnim="Medic_Yes01"/>
+        <AssetArray File="Assets/Sounds/Medic/TMdWht01.ogg" FacialAnim="Medic_Yes01"/>
+        <AssetArray File="Assets/Sounds/Medic/TMdWht02.ogg" FacialAnim="Medic_Attack06"/>
+        <AssetArray File="Assets/Sounds/Medic/TMdWht03.ogg" FacialAnim="Medic_Ready00"/>
+    </CSound>
+    <CSound id="Medic_Yes">
+        <AssetArray File="Assets/Sounds/Medic/TMdYes00.ogg" FacialAnim="Medic_Flare00"/>
+        <AssetArray File="Assets/Sounds/Medic/TMdYes01.ogg" FacialAnim="Medic_Flare00"/>
+        <AssetArray File="Assets/Sounds/Medic/TMdYes02.ogg" FacialAnim="Medic_Ready00"/>
+        <AssetArray File="Assets/Sounds/Medic/TMdYes03.ogg" FacialAnim="Medic_Ready00"/>
+    </CSound>
+    <CSound id="Medivac_Pissed">
+        <AssetArray index="0" File="Assets\Sounds\Dropship\TDrPss00.ogg" FacialAnim="Banshee_Pissed01"/>
+        <AssetArray index="1" File="Assets\Sounds\Dropship\TDrPss01.ogg" FacialAnim="Banshee_Pissed09"/>
+        <AssetArray index="2" File="Assets\Sounds\Dropship\TDrPss02.ogg" FacialAnim="Banshee_Pissed09"/>
+        <AssetArray index="3" File="Assets\Sounds\Dropship\TDrPss03.ogg" FacialAnim="Banshee_Pissed09"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <AssetArray index="7" removed="1"/>
+        <AssetArray index="8" removed="1"/>
+        <AssetArray index="9" removed="1"/>
+        <AssetArray index="10" removed="1"/>
+        <AssetArray index="11" removed="1"/>
+    </CSound>
+    <CSound id="Medivac_Ready">
+        <AssetArray index="0" File="Assets\Sounds\Dropship\TDrRdy00.ogg" FacialAnim="Banshee_Attack01"/>
+    </CSound>
+    <CSound id="Medivac_What">
+        <AssetArray index="0" File="Assets\Sounds\Dropship\TDrWht00.ogg" FacialAnim="Banshee_What03"/>
+        <AssetArray index="1" File="Assets\Sounds\Dropship\TDrWht01.ogg" FacialAnim="Banshee_What03"/>
+        <AssetArray index="2" File="Assets\Sounds\Dropship\TDrWht02.ogg" FacialAnim="Banshee_What03"/>
+        <AssetArray index="3" File="Assets\Sounds\Dropship\TDrWht03.ogg" FacialAnim="Banshee_What03"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+    </CSound>
+    <CSound id="Medivac_Yes">
+        <AssetArray index="0" File="Assets\Sounds\Dropship\TDrYes00.ogg" FacialAnim="Banshee_Pissed01"/>
+        <AssetArray index="1" File="Assets\Sounds\Dropship\TDrYes01.ogg" FacialAnim="Banshee_Pissed04"/>
+        <AssetArray index="2" File="Assets\Sounds\Dropship\TDrYes02.ogg" FacialAnim="Banshee_What01"/>
+        <AssetArray index="3" File="Assets\Sounds\Dropship\TDrYes03.ogg" FacialAnim="Banshee_What03"/>
+        <AssetArray index="4" File="Assets\Sounds\Dropship\TDrYes04.ogg" FacialAnim="Banshee_Attack01"/>
+        <AssetArray index="5" File="Assets\Sounds\Dropship\TDrYes05.ogg" FacialAnim="Banshee_Yes05"/>
+        <AssetArray index="6" removed="1"/>
+        <AssetArray index="7" removed="1"/>
+        <AssetArray index="8" removed="1"/>
+        <AssetArray index="9" removed="1"/>
+        <AssetArray index="10" removed="1"/>
+        <AssetArray index="11" removed="1"/>
+        <AssetArray index="12" removed="1"/>
+    </CSound>
+    <CSound id="MissileTurret_AttackLaunch">
+        <AssetArray index="0" File="Assets\Sounds\Bullet\HKMISSLE.ogg" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="Mutalisk_Segment1AttackLaunch">
+        <AssetArray index="0" File="LocalizedData\Sounds\ImportedSounds\Mutalisk_Attack.wav"/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="Probe_Explode">
+        <AssetArray index="0" File="Assets\Sounds\Probe\pprDth00.ogg" Pitch="0.000000,0.000000" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <AssetArray index="7" removed="1"/>
+        <AssetArray index="8" removed="1"/>
+        <AssetArray index="9" removed="1"/>
+    </CSound>
+    <CSound id="Probe_Mine">
+        <AssetArray index="0" File="Assets\Sounds\Probe\pprMin00.ogg" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="Probe_Pissed">
+        <AssetArray index="0" File="Assets\Sounds\Probe\pprPss00.ogg" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\Probe\pprPss01.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Probe\pprPss02.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Probe\pprPss03.ogg" FacialGroup=""/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="Probe_Ready">
+        <AssetArray index="0" File="Assets\Sounds\Probe\pprRdy00.ogg" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="Probe_What">
+        <AssetArray index="0" File="Assets\Sounds\Probe\pprWht00.ogg" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\Probe\pprWht01.ogg" FacialGroup=""/>
+        <AssetArray index="2" File="Assets\Sounds\Probe\pprWht02.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Probe\pprWht03.ogg" FacialGroup=""/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="Probe_Yes">
+        <AssetArray index="0" File="Assets\Sounds\Probe\pprYes00.ogg" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\Probe\pprYes01.ogg" FacialGroup=""/>
+        <AssetArray index="2" File="Assets\Sounds\Probe\pprYes02.ogg" FacialGroup=""/>
+        <AssetArray index="3" File="Assets\Sounds\Probe\pprYes03.ogg" FacialGroup=""/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="SCV_AlertJobFinished">
+        <AssetArray index="0" File="Assets\Sounds\SCV\TSCUpd00.ogg" FacialAnim="" FacialGroup=""/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="SCV_AttackLaunch">
+        <AssetArray index="0" File="Assets\Sounds\SCV\EDrRep00.ogg" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\SCV\EDrRep01.ogg" FacialGroup=""/>
+        <AssetArray index="2" File="Assets\Sounds\SCV\EDrRep02.ogg" FacialGroup=""/>
+        <AssetArray index="3" File="Assets\Sounds\SCV\EDrRep03.ogg" FacialGroup=""/>
+        <AssetArray index="4" File="Assets\Sounds\SCV\EDrRep04.ogg" FacialGroup=""/>
+        <AssetArray index="5" removed="1"/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="SCV_CantBuildAlert">
+        <AssetArray index="0" File="Assets\Sounds\SCV\TSCErr00.ogg" FacialAnim="" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\SCV\TSCErr01.ogg" FacialAnim="" FacialGroup=""/>
+        <AssetArray index="2" removed="1"/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="SCV_Death">
+        <AssetArray index="0" File="Assets\Sounds\SCV\TSCDth00.ogg" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <AssetArray index="7" removed="1"/>
+        <AssetArray index="8" removed="1"/>
+        <AssetArray index="9" removed="1"/>
+    </CSound>
+    <CSound id="SCV_Explode">
+        <AssetArray index="0" File="Assets\Sounds\SCV\TSCDth00.ogg" Pitch="0.000000,0.000000" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <AssetArray index="7" removed="1"/>
+        <AssetArray index="8" removed="1"/>
+        <AssetArray index="9" removed="1"/>
+    </CSound>
+    <CSound id="SCV_Mine">
+        <AssetArray index="0" File="Assets\Sounds\SCV\EDrRep00.ogg" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\SCV\EDrRep01.ogg" FacialGroup=""/>
+        <AssetArray index="2" File="Assets\Sounds\SCV\EDrRep02.ogg" FacialGroup=""/>
+        <AssetArray index="3" File="Assets\Sounds\SCV\EDrRep03.ogg" FacialGroup=""/>
+        <AssetArray index="4" File="Assets\Sounds\SCV\EDrRep04.ogg" FacialGroup=""/>
+        <AssetArray index="5" removed="1"/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="SCV_Pissed">
+        <AssetArray index="0" File="Assets/Sounds/SCV/TSCPss00.ogg" FacialAnim="SCV_Yes10"/>
+        <AssetArray index="1" File="Assets/Sounds/SCV/TSCPss01.ogg" FacialAnim="SCV_Attack01"/>
+        <AssetArray index="2" File="Assets/Sounds/SCV/TSCPss02.ogg" FacialAnim="SCV_Attack01"/>
+        <AssetArray index="3" File="Assets/Sounds/SCV/TSCPss03.ogg" FacialAnim="SCV_Attack02"/>
+        <AssetArray index="4" File="Assets/Sounds/SCV/TSCPss04.ogg" FacialAnim="SCV_Attack02"/>
+        <AssetArray index="5" File="Assets/Sounds/SCV/TSCPss05.ogg" FacialAnim="SCV_Pissed04"/>
+        <AssetArray index="6" File="Assets/Sounds/SCV/TSCPss06.ogg" FacialAnim="SCV_Pissed06"/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="SCV_Ready">
+        <AssetArray index="0" File="Assets/Sounds/SCV/TSCRdy00.ogg" FacialAnim="SCV_Attack01"/>
+        <AssetArray index="1" removed="1"/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="SCV_Repair">
+        <AssetArray index="0" File="Assets\Sounds\SCV\EDrRep00.ogg" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\SCV\EDrRep01.ogg" FacialGroup=""/>
+        <AssetArray index="2" File="Assets\Sounds\SCV\EDrRep02.ogg" FacialGroup=""/>
+        <AssetArray index="3" File="Assets\Sounds\SCV\EDrRep03.ogg" FacialGroup=""/>
+        <AssetArray index="4" File="Assets\Sounds\SCV\EDrRep04.ogg" FacialGroup=""/>
+        <AssetArray index="5" removed="1"/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="SCV_What">
+        <AssetArray index="0" File="Assets/Sounds/SCV/TSCWht00.ogg" FacialAnim="SCV_What00"/>
+        <AssetArray index="1" File="Assets/Sounds/SCV/TSCWht01.ogg" FacialAnim="SCV_Yes10"/>
+        <AssetArray index="2" File="Assets/Sounds/SCV/TSCWht02.ogg" FacialAnim="SCV_Yes10"/>
+        <AssetArray index="3" File="Assets/Sounds/SCV/TSCWht03.ogg" FacialAnim="SCV_Yes10"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="SCV_Yes">
+        <AssetArray index="0" File="Assets/Sounds/SCV/TSCYes00.ogg" FacialAnim="SCV_Yes10"/>
+        <AssetArray index="1" File="Assets/Sounds/SCV/TSCYes01.ogg" FacialAnim="SCV_Yes10"/>
+        <AssetArray index="2" File="Assets/Sounds/SCV/TSCYes02.ogg" FacialAnim="SCV_Yes10"/>
+        <AssetArray index="3" File="Assets/Sounds/SCV/TSCYes03.ogg" FacialAnim="SCV_Yes10"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <AssetArray index="7" removed="1"/>
+        <AssetArray index="8" removed="1"/>
+        <AssetArray index="9" removed="1"/>
+        <AssetArray index="10" removed="1"/>
+        <AssetArray index="11" removed="1"/>
+        <AssetArray index="12" removed="1"/>
+        <AssetArray index="13" removed="1"/>
+        <AssetArray index="14" removed="1"/>
+        <AssetArray index="15" removed="1"/>
+        <AssetArray index="16" removed="1"/>
+        <AssetArray index="17" removed="1"/>
+        <AssetArray index="18" removed="1"/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="ScienceVessel_Death">
+        <AssetArray File="Assets\Sounds\ScienceVessel\ScienceVesselDeath.ogg"/>
+        <Category value="Combat"/>
+        <Mode value="3DWorld"/>
+    </CSound>
+    <CSound id="ScienceVessel_IrradiateImpact">
+        <AssetArray File="Assets\Sounds\ScienceVessel\IrradiateCast.ogg"/>
+        <Mode value="3DWorld"/>
+    </CSound>
+    <CSound id="ScienceVessel_Movement">
+        <Volume value="-12.000000,-12.000000"/>
+    </CSound>
+    <CSound id="ScourgeAttackDeath">
+        <AssetArray File="LocalizedData\Sounds\ImportedSounds\Scourge_Death_Attack.wav" FacialGroup=""/>
+        <Category value="Combat"/>
+        <Mode value="3DWorld"/>
+    </CSound>
+    <CSound id="Scourge_Pissed">
+        <AssetArray File="Assets\Sounds\Scourge\ZAvPss00.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Scourge\ZAvPss01.ogg" FacialGroup=""/>
+        <Mode value="3DWorld"/>
+    </CSound>
+    <CSound id="Scourge_Ready">
+        <AssetArray File="Assets\Sounds\Scourge\ZAvRdy00.ogg" FacialGroup=""/>
+        <Mode value="3DWorld"/>
+    </CSound>
+    <CSound id="Scourge_What">
+        <AssetArray File="Assets\Sounds\Scourge\ZAvWht00.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Scourge\ZAvWht01.ogg" FacialGroup=""/>
+        <Mode value="3DWorld"/>
+    </CSound>
+    <CSound id="Scourge_Yes">
+        <AssetArray File="Assets\Sounds\Scourge\ZAvYes00.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Scourge\ZAvYes01.ogg" FacialGroup=""/>
+        <Mode value="3DWorld"/>
+    </CSound>
+    <CSound id="Observatory_What" parent="Voice">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="Assets\Sounds\Buildings\Protoss\pbeWht00.ogg" FacialGroup=""/>
+        <Volume value="-4.500000,-4.500000"/>
+    </CSound>
+    <CSound id="SiegeTank_Attack">
+        <AssetArray index="0" File="Assets/Sounds/Siege Tank/ttayes00.ogg" FacialAnim="SiegeTank_What00"/>
+        <AssetArray index="1" File="Assets/Sounds/Siege Tank/ttayes01.ogg" FacialAnim="SiegeTank_What04"/>
+        <AssetArray index="2" File="Assets/Sounds/Siege Tank/ttayes02.ogg" FacialAnim="SiegeTank_What04"/>
+        <AssetArray index="3" File="Assets/Sounds/Siege Tank/ttayes03.ogg" FacialAnim="SiegeTank_What04"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <AssetArray index="7" removed="1"/>
+        <AssetArray index="8" removed="1"/>
+        <AssetArray index="9" removed="1"/>
+    </CSound>
+    <CSound id="SiegeTank_AttackImpact">
+        <AssetArray index="0" File="Assets\Sounds\Siege Tank\TTaHit00.ogg" Pitch="0.000000,0.000000" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <AssetArray index="7" removed="1"/>
+        <AssetArray index="8" removed="1"/>
+        <AssetArray index="9" removed="1"/>
+    </CSound>
+    <CSound id="SiegeTank_AttackLaunch">
+        <AssetArray index="0" removed="1"/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+    </CSound>
+    <CSound id="SiegeTank_Explode">
+        <AssetArray index="0" File="Assets\Sounds\Siege Tank\TTaDth00.ogg" Pitch="0.000000,0.000000" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <AssetArray index="7" removed="1"/>
+        <AssetArray index="8" removed="1"/>
+        <AssetArray index="9" removed="1"/>
+    </CSound>
+    <CSound id="SiegeTank_Help">
+        <AssetArray index="0" removed="1"/>
+    </CSound>
+    <CSound id="SiegeTank_MorphToSiege">
+        <AssetArray index="0" File="Assets\Sounds\Siege Tank\ttatra01.ogg" FacialGroup=""/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="SiegeTank_MorphToSiege2" parent="Build">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Siege Tank\ttatra00.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="SiegeTank_Pissed">
+        <AssetArray index="0" File="Assets/Sounds/Siege Tank/ttapss00.ogg" FacialAnim="SiegeTank_Pissed00"/>
+        <AssetArray index="1" File="Assets/Sounds/Siege Tank/ttapss01.ogg" FacialAnim="SiegeTank_What04"/>
+        <AssetArray index="2" File="Assets/Sounds/Siege Tank/ttapss02.ogg" FacialAnim="SiegeTank_Pissed00"/>
+        <AssetArray index="3" File="Assets/Sounds/Siege Tank/ttapss03.ogg" FacialAnim="SiegeTank_What07"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <AssetArray index="7" removed="1"/>
+        <AssetArray index="8" removed="1"/>
+        <AssetArray index="9" removed="1"/>
+    </CSound>
+    <CSound id="SiegeTank_Ready">
+        <AssetArray index="0" File="Assets/Sounds/Siege Tank/ttardy00.ogg" FacialAnim="SiegeTank_What04"/>
+        <AssetArray index="1" removed="1"/>
+    </CSound>
+    <CSound id="SiegeTank_SiegedAttackImpact">
+        <AssetArray index="0" File="Assets\Sounds\Siege Tank\TTaHit00.ogg" Pitch="0.000000,0.000000" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <AssetArray index="7" removed="1"/>
+        <AssetArray index="8" removed="1"/>
+        <AssetArray index="9" removed="1"/>
+    </CSound>
+    <CSound id="SiegeTank_SiegedAttackLaunch">
+        <AssetArray index="0" File="Assets\Sounds\Siege Tank\TMaFir00.ogg" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <AssetArray index="7" removed="1"/>
+        <AssetArray index="8" removed="1"/>
+        <AssetArray index="9" removed="1"/>
+        <Pitch value="0.000000,0.000000"/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="SiegeTank_What">
+        <AssetArray index="0" File="Assets/Sounds/Siege Tank/ttawht00.ogg" FacialAnim="SiegeTank_What00"/>
+        <AssetArray index="1" File="Assets/Sounds/Siege Tank/ttawht01.ogg" FacialAnim="SiegeTank_What00"/>
+        <AssetArray index="2" File="Assets/Sounds/Siege Tank/ttawht02.ogg" FacialAnim="SiegeTank_What04"/>
+        <AssetArray index="3" File="Assets/Sounds/Siege Tank/ttawht03.ogg" FacialAnim="SiegeTank_What00"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <AssetArray index="7" removed="1"/>
+    </CSound>
+    <CSound id="SiegeTank_Yes">
+        <AssetArray index="0" File="Assets/Sounds/Siege Tank/ttayes00.ogg" FacialAnim="SiegeTank_What00"/>
+        <AssetArray index="1" File="Assets/Sounds/Siege Tank/ttayes01.ogg" FacialAnim="SiegeTank_What04"/>
+        <AssetArray index="2" File="Assets/Sounds/Siege Tank/ttayes02.ogg" FacialAnim="SiegeTank_What04"/>
+        <AssetArray index="3" File="Assets/Sounds/Siege Tank/ttayes03.ogg" FacialAnim="SiegeTank_What04"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <AssetArray index="7" removed="1"/>
+        <AssetArray index="8" removed="1"/>
+        <AssetArray index="9" removed="1"/>
+        <AssetArray index="10" removed="1"/>
+        <AssetArray index="11" removed="1"/>
+        <AssetArray index="12" removed="1"/>
+        <AssetArray index="13" removed="1"/>
+        <AssetArray index="14" removed="1"/>
+        <AssetArray index="15" removed="1"/>
+        <AssetArray index="16" removed="1"/>
+    </CSound>
+    <CSound id="SpawningPool_Explode">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Zerg\ZBldgDth.ogg" Pitch="0.000000,0.000000" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+    </CSound>
+    <CSound id="SpawningPool_What">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Zerg\zchWht00.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="SpineCrawler_Death">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Zerg\ZBldgDth.ogg" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+    </CSound>
+    <CSound id="SpineCrawler_Explode">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Zerg\ZBldgDth.ogg" Pitch="0.000000,0.000000" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+    </CSound>
+    <CSound id="SpineCrawler_Ready">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Zerg\zchRdy00.ogg" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+    </CSound>
+    <CSound id="SpineCrawler_What">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Zerg\zluWht00.ogg" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <AssetArray index="7" removed="1"/>
+        <AssetArray index="8" removed="1"/>
+        <AssetArray index="9" removed="1"/>
+        <AssetArray index="10" removed="1"/>
+    </CSound>
+    <CSound id="Spire_Explode">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Zerg\ZBldgDth.ogg" Pitch="0.000000,0.000000" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+    </CSound>
+    <CSound id="Spire_What">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Zerg\zspWht00.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="SporeCrawler_Death">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Zerg\ZBldgDth.ogg" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+    </CSound>
+    <CSound id="SporeCrawler_Explode">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Zerg\ZBldgDth.ogg" Pitch="0.000000,0.000000" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+    </CSound>
+    <CSound id="SporeCrawler_Ready">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Zerg\zchRdy00.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="SporeCrawler_What">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Zerg\zscWht00.ogg" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <AssetArray index="7" removed="1"/>
+    </CSound>
+    <CSound id="Stalker_AttackImpact">
+        <AssetArray index="0" File="Assets\Sounds\Dragoon\DragoonAttackImpact.ogg"/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="Stalker_AttackLaunch">
+        <AssetArray index="0" File="LocalizedData\Sounds\ImportedSounds\Dragoon_Attack.wav"/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+        <Pitch value="0.000000,0.000000"/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="Stalker_Pissed">
+        <AssetArray index="0" File="Assets\Sounds\Dragoon\PDrPss00.ogg" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\Dragoon\PDrPss01.ogg" FacialGroup=""/>
+        <AssetArray index="2" File="Assets\Sounds\Dragoon\PDrPss02.ogg" FacialGroup=""/>
+        <AssetArray index="3" File="Assets\Sounds\Dragoon\PDrPss03.ogg" FacialGroup=""/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <AssetArray index="7" removed="1"/>
+        <AssetArray index="8" removed="1"/>
+        <AssetArray index="9" removed="1"/>
+        <AssetArray index="10" removed="1"/>
+        <AssetArray index="11" removed="1"/>
+        <AssetArray index="12" removed="1"/>
+        <AssetArray index="13" removed="1"/>
+        <AssetArray index="14" removed="1"/>
+    </CSound>
+    <CSound id="Stalker_Ready">
+        <AssetArray index="0" File="Assets\Sounds\Dragoon\pdrRdy00.ogg"/>
+    </CSound>
+    <CSound id="Stalker_What">
+        <AssetArray index="0" File="Assets\Sounds\Dragoon\PDrWht00.ogg" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\Dragoon\PDrWht01.ogg" FacialGroup=""/>
+        <AssetArray index="2" File="Assets\Sounds\Dragoon\PDrWht02.ogg" FacialGroup=""/>
+        <AssetArray index="3" File="Assets\Sounds\Dragoon\PDrWht03.ogg" FacialGroup=""/>
+        <AssetArray index="4" File="Assets\Sounds\Dragoon\PDrWht04.ogg" FacialGroup=""/>
+        <AssetArray index="5" File="Assets\Sounds\Dragoon\PDrWht05.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Dragoon\PDrWht06.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Dragoon\PDrWht07.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="Stalker_Yes">
+        <AssetArray index="0" File="Assets\Sounds\Dragoon\PDrYes00.ogg" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\Dragoon\PDrYes01.ogg" FacialGroup=""/>
+        <AssetArray index="2" File="Assets\Sounds\Dragoon\PDrYes02.ogg" FacialGroup=""/>
+        <AssetArray index="3" File="Assets\Sounds\Dragoon\PDrYes03.ogg" FacialGroup=""/>
+        <AssetArray index="4" File="Assets\Sounds\Dragoon\PDrYes04.ogg" FacialGroup=""/>
+        <AssetArray index="5" File="Assets\Sounds\Dragoon\PDrYes05.ogg" FacialGroup=""/>
+        <AssetArray index="6" File="Assets\Sounds\Dragoon\PDrYes06.ogg" FacialGroup=""/>
+        <AssetArray index="7" removed="1"/>
+    </CSound>
+    <CSound id="SupplyDepot_What">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Terran\tpgWht00.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="TemplarArchive_What">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Protoss\pacWht00.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="TerranNuclearLaunchDetected">
+        <AssetArray File="Assets\Sounds\NuclearLaunchDetected\tadUPD04.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="Wraith_Impact">
+        <AssetArray File="Assets\Sounds\Bullet\TTaHit00.ogg" FacialGroup=""/>
+        <Category value="Combat"/>
+        <Mode value="3DWorld"/>
+        <Volume value="-5.000000,-5.000000"/>
+    </CSound>
+    <CSound id="ZergNuclearLaunchDetected">
+        <AssetArray File="Assets\Sounds\NuclearLaunchDetected\ZAdUpd04.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="ProtossNuclearLaunchDetected">
+        <AssetArray File="Assets\Sounds\NuclearLaunchDetected\PAdUpd04.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="TwilightCouncil_What">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Protoss\pciWht00.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="UltraliskCavern_Explode">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Zerg\ZBldgDth.ogg" Pitch="0.000000,0.000000" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+    </CSound>
+    <CSound id="UltraliskCavern_What">
+        <AssetArray index="0" File="Assets\Sounds\Buildings\Zerg\zrcWht00.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="Ultralisk_AttackImpact">
+        <AssetArray index="0" File="Assets\Sounds\Ultralisk\zulHit00.ogg" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\Ultralisk\zulHit01.ogg" FacialGroup=""/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <Volume value="-3.000000,-3.000000"/>
+    </CSound>
+    <CSound id="Ultralisk_AttackLaunch">
+        <AssetArray index="0" File="Assets\Sounds\Ultralisk\zulAtt00.ogg" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\Ultralisk\zulAtt01.ogg" FacialGroup=""/>
+        <AssetArray index="2" File="Assets\Sounds\Ultralisk\zulAtt02.ogg" FacialGroup=""/>
+        <DupeDestroyCount value="3"/>
+        <DupeMuteCount value="3"/>
+    </CSound>
+    <CSound id="Ultralisk_Explode">
+        <AssetArray index="0" File="Assets\Sounds\Ultralisk\zulDth00.ogg" Pitch="0.000000,0.000000" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+    </CSound>
+    <CSound id="Ultralisk_Pissed">
+        <AssetArray index="0" File="Assets\Sounds\Ultralisk\zulPss00.ogg" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\Ultralisk\zulPss01.ogg" FacialGroup=""/>
+        <AssetArray index="2" File="Assets\Sounds\Ultralisk\zulPss02.ogg" FacialGroup=""/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+    </CSound>
+    <CSound id="Ultralisk_Ready">
+        <AssetArray index="0" File="Assets\Sounds\Ultralisk\zulRdy00.ogg" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+    </CSound>
+    <CSound id="Ultralisk_What">
+        <AssetArray index="0" File="Assets\Sounds\Ultralisk\zulWht00.ogg" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\Ultralisk\zulWht01.ogg" FacialGroup=""/>
+        <AssetArray index="2" File="Assets\Sounds\Ultralisk\zulWht02.ogg" FacialGroup=""/>
+        <AssetArray index="3" File="Assets\Sounds\Ultralisk\zulWht03.ogg" FacialGroup=""/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+    </CSound>
+    <CSound id="Ultralisk_Yes">
+        <AssetArray index="0" File="Assets\Sounds\Ultralisk\zulYes00.ogg" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\Ultralisk\zulYes01.ogg" FacialGroup=""/>
+        <AssetArray index="2" File="Assets\Sounds\Ultralisk\zulYes02.ogg" FacialGroup=""/>
+        <AssetArray index="3" File="Assets\Sounds\Ultralisk\zulYes03.ogg" FacialGroup=""/>
+        <AssetArray index="4" removed="1"/>
+    </CSound>
+    <CSound id="Uni_DeathFXFireLarge">
+        <AssetArray index="0" File="Assets\Sounds\Ultralisk\zulDth00.ogg" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+    </CSound>
+    <CSound id="VikingFighter_AttackImpact">
+        <AssetArray index="0" File="Assets\Sounds\Valkyrie\Valkhit.ogg" Pitch="0.000000,0.000000" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <AssetArray index="7" removed="1"/>
+        <AssetArray index="8" removed="1"/>
+        <AssetArray index="9" removed="1"/>
+        <Volume value="0.000000,0.000000"/>
+        <DupeDestroyCount value="15"/>
+        <DupeMuteCount value="20"/>
+        <DupeMaximumMethod value="Replace"/>
+        <OverlapTimeDelta value="50"/>
+    </CSound>
+    <CSound id="VikingFighter_AttackLaunch">
+        <AssetArray index="0" File="Assets\Sounds\Valkyrie\Valkshoot.ogg" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="Viking_Explode">
+        <AssetArray index="0" File="Assets\Sounds\Valkyrie\TVkDth00.ogg" Pitch="0.000000,0.000000" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <AssetArray index="7" removed="1"/>
+        <AssetArray index="8" removed="1"/>
+        <AssetArray index="9" removed="1"/>
+    </CSound>
+    <CSound id="Viking_Pissed">
+        <AssetArray index="0" File="Assets/Sounds/Valkyrie/TVkPss00.ogg" FacialAnim="Banshee_Pissed10"/>
+        <AssetArray index="1" File="Assets/Sounds/Valkyrie/TVkPss01.ogg" FacialAnim="Banshee_Pissed10"/>
+        <AssetArray index="2" File="Assets/Sounds/Valkyrie/TVkPss02.ogg" FacialAnim="Banshee_Attack01"/>
+        <AssetArray index="3" File="Assets/Sounds/Valkyrie/TVkPss03.ogg" FacialAnim="Banshee_What02"/>
+        <AssetArray index="4" File="Assets/Sounds/Valkyrie/TVkPss04.ogg" FacialAnim="Banshee_What05"/>
+        <AssetArray index="5" File="Assets/Sounds/Valkyrie/TVkPss05.ogg" FacialAnim="Banshee_Yes11"/>
+        <AssetArray index="6" removed="1"/>
+        <AssetArray index="7" removed="1"/>
+        <AssetArray index="8" removed="1"/>
+        <AssetArray index="9" removed="1"/>
+        <AssetArray index="10" removed="1"/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="Viking_Ready">
+        <AssetArray index="0" File="Assets/Sounds/Valkyrie/TVkRdy00.ogg" FacialAnim="Banshee_Help00"/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="Viking_What">
+        <AssetArray index="0" File="Assets/Sounds/Valkyrie/TVkWht00.ogg" FacialAnim="Banshee_Attack01"/>
+        <AssetArray index="1" File="Assets/Sounds/Valkyrie/TVkWht01.ogg" FacialAnim="Banshee_Attack01"/>
+        <AssetArray index="2" File="Assets/Sounds/Valkyrie/TVkWht02.ogg" FacialAnim="Banshee_Attack01"/>
+        <AssetArray index="3" File="Assets/Sounds/Valkyrie/TVkWht03.ogg" FacialAnim="Banshee_What05"/>
+        <AssetArray index="4" removed="1"/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="Viking_Yes">
+        <AssetArray index="0" File="Assets/Sounds/Valkyrie/TVkYes00.ogg" FacialAnim="Banshee_Attack01"/>
+        <AssetArray index="1" File="Assets/Sounds/Valkyrie/TVkYes01.ogg" FacialAnim="Banshee_What05"/>
+        <AssetArray index="2" File="Assets/Sounds/Valkyrie/TVkYes02.ogg" FacialAnim="Banshee_Attack01"/>
+        <AssetArray index="3" File="Assets/Sounds/Valkyrie/TVkYes03.ogg" FacialAnim="Banshee_What05"/>
+        <AssetArray index="4" File="Assets/Sounds/Valkyrie/TVkYes04.ogg" FacialAnim="Banshee_What05"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <AssetArray index="7" removed="1"/>
+        <AssetArray index="8" removed="1"/>
+        <AssetArray index="9" removed="1"/>
+        <AssetArray index="10" removed="1"/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="VultureAttackImpact">
+        <AssetArray File="Assets\Sounds\Vulture\TVuHit00.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Vulture\TVuHit01.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Vulture\TVuHit02.ogg" FacialGroup=""/>
+        <Category value="Combat"/>
+        <Mode value="3DWorld"/>
+    </CSound>
+    <CSound id="VultureAttackLaunch">
+        <AssetArray File="Assets\Sounds\Vulture\TVuFir00.ogg" FacialGroup=""/>
+        <Category value="Combat"/>
+        <Mode value="3DWorld"/>
+    </CSound>
+    <CSound id="Vulture_Attack">
+        <AssetArray File="Assets/Sounds/Vulture/tvuyes00.ogg" FacialAnim="Vulture_Yes01"/>
+        <AssetArray File="Assets/Sounds/Vulture/tvuyes01.ogg" FacialAnim="Vulture_Yes01"/>
+        <AssetArray File="Assets/Sounds/Vulture/tvuyes02.ogg" FacialAnim="Vulture_Yes01"/>
+        <AssetArray File="Assets/Sounds/Vulture/tvuyes03.ogg" FacialAnim="Vulture_Yes03"/>
+    </CSound>
+    <CSound id="Vulture_Help"/>
+    <CSound id="Vulture_Pissed">
+        <AssetArray File="Assets/Sounds/Vulture/tvupss00.ogg" FacialAnim="Vulture_Pissed00"/>
+        <AssetArray File="Assets/Sounds/Vulture/tvupss01.ogg" FacialAnim="Vulture_Pissed01"/>
+        <AssetArray File="Assets/Sounds/Vulture/tvupss02.ogg" FacialAnim="Vulture_Pissed02"/>
+        <AssetArray File="Assets/Sounds/Vulture/tvupss03.ogg" FacialAnim="Vulture_Pissed03"/>
+    </CSound>
+    <CSound id="Vulture_Ready">
+        <AssetArray File="Assets/Sounds/Vulture/tvurdy00.ogg" FacialAnim="Vulture_Ready00"/>
+    </CSound>
+    <CSound id="Vulture_SpiderMineBurrow">
+        <AssetArray File="Assets\Sounds\Vulture\TVuMin01.ogg" FacialGroup=""/>
+        <Category value="Combat"/>
+        <Mode value="3DWorld"/>
+    </CSound>
+    <CSound id="Vulture_SpiderMinePlace">
+        <AssetArray File="Assets\Sounds\Vulture\TVuMin01.ogg" FacialGroup=""/>
+        <Category value="Combat"/>
+        <Mode value="3DWorld"/>
+    </CSound>
+    <CSound id="Vulture_SpiderMineSeek">
+        <AssetArray File="Assets\Sounds\Vulture\TVuMin00.ogg" FacialGroup=""/>
+        <LoopCount value="1"/>
+        <Category value="Combat"/>
+        <DupeDestroyCount value="3"/>
+        <DupeMuteCount value="3"/>
+        <Mode value="3DWorld"/>
+    </CSound>
+    <CSound id="Vulture_What">
+        <AssetArray File="Assets/Sounds/Vulture/TVuWht00.ogg" FacialAnim="Vulture_Yes05"/>
+        <AssetArray File="Assets/Sounds/Vulture/tvuwht01.ogg" FacialAnim="Vulture_What00"/>
+        <AssetArray File="Assets/Sounds/Vulture/tvuwht02.ogg" FacialAnim="Vulture_What02"/>
+        <AssetArray File="Assets/Sounds/Vulture/tvuwht03.ogg" FacialAnim="Vulture_What03"/>
+    </CSound>
+    <CSound id="Vulture_Yes">
+        <AssetArray File="Assets/Sounds/Vulture/tvuyes00.ogg" FacialAnim="Vulture_Yes01"/>
+        <AssetArray File="Assets/Sounds/Vulture/tvuyes01.ogg" FacialAnim="Vulture_Yes01"/>
+        <AssetArray File="Assets/Sounds/Vulture/tvuyes02.ogg" FacialAnim="Vulture_Yes01"/>
+        <AssetArray File="Assets/Sounds/Vulture/tvuyes03.ogg" FacialAnim="Vulture_Yes03"/>
+    </CSound>
+    <CSound id="Wraith_AShoot">
+        <AssetArray File="Assets\Sounds\Wraith\TPhFi200.ogg" FacialGroup=""/>
+        <Category value="Combat"/>
+        <DupeDestroyCount value="5"/>
+        <DupeMaximumMethod value="Replace"/>
+        <Mode value="3DWorld"/>
+    </CSound>
+    <CSound id="Wraith_Attack">
+        <AssetArray File="Assets/Sounds/Wraith/TPhYes00.ogg" FacialAnim="Wraith_Yes00"/>
+        <AssetArray File="Assets/Sounds/Wraith/TPhYes01.ogg" FacialAnim="Wraith_Yes01"/>
+        <AssetArray File="Assets/Sounds/Wraith/TPhYes02.ogg" FacialAnim="Wraith_Yes02"/>
+        <AssetArray File="Assets/Sounds/Wraith/TPhYes03.ogg" FacialAnim="Wraith_Yes04"/>
+    </CSound>
+    <CSound id="Wraith_Explode">
+        <AssetArray File="Assets\Sounds\Wraith\TPhDth00.ogg" FacialGroup=""/>
+        <Category value="Combat"/>
+        <Mode value="3DWorld"/>
+    </CSound>
+    <CSound id="Wraith_GShoot">
+        <AssetArray File="Assets\Sounds\Wraith\TPhFi100.ogg" FacialGroup=""/>
+        <Category value="Combat"/>
+        <Mode value="3DWorld"/>
+    </CSound>
+    <CSound id="Wraith_Help"/>
+    <CSound id="Wraith_Pissed">
+        <AssetArray File="Assets/Sounds/Wraith/TPhPss00.ogg" FacialAnim="Wraith_Pissed00"/>
+        <AssetArray File="Assets/Sounds/Wraith/TPhPss01.ogg" FacialAnim="Wraith_Pissed01"/>
+        <AssetArray File="Assets/Sounds/Wraith/TPhPss02.ogg" FacialAnim="Wraith_Pissed02"/>
+        <AssetArray File="Assets/Sounds/Wraith/TPhPss03.ogg" FacialAnim="Wraith_Pissed03"/>
+        <AssetArray File="Assets/Sounds/Wraith/TPhPss04.ogg" FacialAnim="Wraith_Pissed04"/>
+        <AssetArray File="Assets/Sounds/Wraith/TPhPss05.ogg" FacialAnim="Wraith_Pissed05"/>
+        <AssetArray File="Assets/Sounds/Wraith/TPhPss06.ogg" FacialAnim="Wraith_Pissed06"/>
+    </CSound>
+    <CSound id="Wraith_Ready">
+        <AssetArray File="Assets/Sounds/Wraith/TPhRdy00.ogg" FacialAnim="Wraith_Ready00"/>
+    </CSound>
+    <CSound id="Wraith_What">
+        <AssetArray File="Assets/Sounds/Wraith/TPhWht00.ogg" FacialAnim="Wraith_What00"/>
+        <AssetArray File="Assets/Sounds/Wraith/TPhWht01.ogg" FacialAnim="Wraith_What01"/>
+        <AssetArray File="Assets/Sounds/Wraith/TPhWht02.ogg" FacialAnim="Wraith_What02"/>
+        <AssetArray File="Assets/Sounds/Wraith/TPhWht03.ogg" FacialAnim="Wraith_What03"/>
+    </CSound>
+    <CSound id="Wraith_Yes">
+        <AssetArray File="Assets/Sounds/Wraith/TPhYes00.ogg" FacialAnim="Wraith_Yes00"/>
+        <AssetArray File="Assets/Sounds/Wraith/TPhYes01.ogg" FacialAnim="Wraith_Yes01"/>
+        <AssetArray File="Assets/Sounds/Wraith/TPhYes02.ogg" FacialAnim="Wraith_Yes02"/>
+        <AssetArray File="Assets/Sounds/Wraith/TPhYes03.ogg" FacialAnim="Wraith_Yes04"/>
+    </CSound>
+    <CSound id="Zealot_Attack">
+        <AssetArray index="0" File="Assets\Sounds\Zealot\PZeYes00.ogg" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\Zealot\PZeYes01.ogg" FacialGroup=""/>
+        <AssetArray index="2" File="Assets\Sounds\Zealot\PZeYes02.ogg" FacialGroup=""/>
+        <AssetArray index="3" File="Assets\Sounds\Zealot\PZeYes03.ogg" FacialGroup=""/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+    </CSound>
+    <CSound id="Zealot_AttackImpact">
+        <AssetArray index="0" File="Assets\Sounds\Zealot\pzeHit00.ogg" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <Pitch value="0.000000,0.000000"/>
+        <DupeDestroyCount value="8"/>
+        <OverlapTimeDelta value="125"/>
+    </CSound>
+    <CSound id="Zealot_AttackLaunch">
+        <AssetArray index="0" File="Assets\Sounds\Zealot\pzeAtt00.ogg" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\Zealot\pzeAtt01.ogg" FacialGroup=""/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <Volume value="-4.000000,-4.000000"/>
+        <DupeDestroyCount value="2"/>
+    </CSound>
+    <CSound id="Zealot_Death">
+        <AssetArray index="0" File="Assets\Sounds\Zealot\pzeDth00.ogg" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+    </CSound>
+    <CSound id="Zealot_DeathFX">
+        <AssetArray index="0" removed="1"/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+    </CSound>
+    <CSound id="Zealot_Help">
+        <AssetArray index="0" removed="1"/>
+    </CSound>
+    <CSound id="Zealot_Pissed">
+        <AssetArray index="0" File="Assets\Sounds\Zealot\PZePss00.ogg" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\Zealot\PZePss01.ogg" FacialGroup=""/>
+        <AssetArray index="2" File="Assets\Sounds\Zealot\PZePss02.ogg" FacialGroup=""/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <AssetArray index="7" removed="1"/>
+    </CSound>
+    <CSound id="Zealot_Ready">
+        <AssetArray index="0" File="Assets\Sounds\Zealot\pzeRdy00.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="Zealot_What">
+        <AssetArray index="0" File="Assets\Sounds\Zealot\PZeWht00.ogg" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\Zealot\PZeWht01.ogg" FacialGroup=""/>
+        <AssetArray index="2" File="Assets\Sounds\Zealot\PZeWht02.ogg" FacialGroup=""/>
+        <AssetArray index="3" File="Assets\Sounds\Zealot\PZeWht03.ogg" FacialGroup=""/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+    </CSound>
+    <CSound id="Zealot_Yes">
+        <AssetArray index="0" File="Assets\Sounds\Zealot\PZeYes00.ogg" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\Zealot\PZeYes01.ogg" FacialGroup=""/>
+        <AssetArray index="2" File="Assets\Sounds\Zealot\PZeYes02.ogg" FacialGroup=""/>
+        <AssetArray index="3" File="Assets\Sounds\Zealot\PZeYes03.ogg" FacialGroup=""/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+    </CSound>
+    <CSound id="Zergling_AttackImpact">
+        <AssetArray index="0" File="Assets\Sounds\Zergling\zulHit00.ogg" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+        <DupeDestroyCount value="30"/>
+        <DupeMuteCount value="30"/>
+        <Volume value="-3.000000,-3.000000"/>
+        <DupeMaximumMethod value="Replace"/>
+    </CSound>
+    <CSound id="Zergling_Death">
+        <AssetArray index="0" File="Assets\Sounds\Zergling\ZZeDth00.ogg" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="Zergling_Explode">
+        <AssetArray index="0">
+            <File value="Assets\Sounds\Zergling\ZZeDth00.ogg"/>
+            <Pitch value="0.000000,0.000000"/>
+            <Volume value="0.000000,0.000000"/>
+            <FacialGroup value=""/>
+        </AssetArray>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <AssetArray index="3" removed="1"/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+    </CSound>
+    <CSound id="Zergling_Pissed">
+        <AssetArray index="0" File="Assets\Sounds\Zergling\ZZePss00.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Zergling\ZZePss01.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Zergling\ZZePss02.ogg" FacialGroup=""/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="Zergling_Ready">
+        <AssetArray index="0" File="Assets\Sounds\Zergling\ZZeRdy00.ogg" FacialGroup=""/>
+        <AssetArray index="1" removed="1"/>
+        <AssetArray index="2" removed="1"/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="Zergling_What">
+        <AssetArray index="0" File="Assets\Sounds\Zergling\ZZeWht00.ogg" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\Zergling\ZZeWht01.ogg" FacialGroup=""/>
+        <AssetArray index="2" File="Assets\Sounds\Zergling\ZZeWht02.ogg" FacialGroup=""/>
+        <AssetArray index="3" File="Assets\Sounds\Zergling\ZZeWht03.ogg" FacialGroup=""/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="Zergling_Yes">
+        <AssetArray index="0" File="Assets\Sounds\Zergling\ZZeYes00.ogg" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\Zergling\ZZeYes01.ogg" FacialGroup=""/>
+        <AssetArray index="2" File="Assets\Sounds\Zergling\ZZeYes02.ogg" FacialGroup=""/>
+        <AssetArray index="3" File="Assets\Sounds\Zergling\ZZeYes03.ogg" FacialGroup=""/>
+        <AssetArray index="4" removed="1"/>
+        <AssetArray index="5" removed="1"/>
+        <AssetArray index="6" removed="1"/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+    <CSound id="e_cmdNotEnoughEnergy_Zerg">
+        <AssetArray index="0" File="Assets\Sounds\Misc\Zerg Advisor\ZAdErr06.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="e_cmdNotEnoughFood_Zerg">
+        <AssetArray index="0" File="Assets\Sounds\Misc\Zerg Advisor\ZAdErr02.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="e_cmdNotEnoughMinerals_Zerg">
+        <AssetArray index="0" File="Assets\Sounds\Misc\Zerg Advisor\ZAdErr00.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="e_cmdNotEnoughVespene_Zerg">
+        <AssetArray index="0" File="Assets\Sounds\Misc\Zerg Advisor\ZAdErr01.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="prescue">
+        <AssetArray File="PRescue.wav" FacialGroup=""/>
+    </CSound>
+</Catalog>

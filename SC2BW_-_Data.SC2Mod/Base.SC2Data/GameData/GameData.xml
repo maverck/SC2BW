@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CGame id="Dflt">
+        <TriggerLibs Id="SCBW" IncludePath="Base.SC2Data/LibSCBW"/>
+        <MixedFormationDiameter value="10"/>
+    </CGame>
+</Catalog>

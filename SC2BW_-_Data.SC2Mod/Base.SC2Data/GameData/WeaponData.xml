@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CWeaponLegacy id="90mmCannons">
+        <Period value="2.1445"/>
+        <Effect value="ArcliteCannonSet"/>
+        <Options index="LinkedCooldown" value="0"/>
+        <DamagePoint value="0.0588"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ATALaserBattery">
+        <Period value="1.7387"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Arc value="11.25"/>
+        <DamagePoint value="0.0588"/>
+        <AcquirePrioritization value="ByDistance"/>
+        <RandomDelayMax value="0.125"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="AcidSpew">
+        <Period value="0.8693"/>
+        <DamagePoint value="0.0588"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ArcliteCannonNull">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="Hidden" value="1"/>
+        <Options index="CanInitiateAttackOrder" value="0"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Options index="LinkedCooldown" value="0"/>
+        <Options index="RequireEnabledAttackAbil" value="0"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="7"/>
+        <Period value="9999"/>
+        <DamagePoint value="9999"/>
+        <Effect value=""/>
+        <AllowedMovement value="Moving"/>
+        <RandomDelayMin value="9999"/>
+        <RandomDelayMax value="9999"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="BroodlingEscort">
+        <Range value="8"/>
+        <Arc value="0"/>
+        <Period value="1.698"/>
+        <Effect value="BroodlordLM"/>
+        <Options index="Hidden" value="0"/>
+        <DisplayEffect value="BroodlordU"/>
+        <DamagePoint value="0"/>
+        <AllowedMovement value="Slowing"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="BroodlingEscort2">
+        <EditorCategories value="Race:Zerg"/>
+        <Icon value="Assets\Textures\btn-upgrade-zerg-airattacks-level0.dds"/>
+        <DisplayEffect value="DevourerU"/>
+        <TargetFilters value="Air,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="6"/>
+        <Period value="5.74"/>
+        <Effect value="DevourerLM"/>
+        <AllowedMovement value="Slowing"/>
+        <DamagePoint value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="C10CanisterRifle">
+        <Effect value="C10CanisterRifleSet"/>
+        <Period value="1.2751"/>
+        <DamagePoint value="0.0588"/>
+        <Range value="7"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Claws">
+        <Period value="0.4636"/>
+        <DamagePoint value="0.1176"/>
+        <Effect value="ZerglingClawsSet"/>
+        <Backswing value="0.1765"/>
+        <Range value="0.5"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="CorsairNeutronFlare">
+        <EditorCategories value=""/>
+        <Icon value="Assets\Textures\btn-upgrade-protoss-airweaponslevel0.dds"/>
+        <DisplayEffect value="CorsairDamage"/>
+        <TargetFilters value="Air,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Arc value="11.25"/>
+        <Period value="0.4636"/>
+        <DamagePoint value="0.0588"/>
+        <Backswing value="0"/>
+        <Effect value="CorsairSwitch"/>
+        <AllowedMovement value="Slowing"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="CrucioShockCannon">
+        <Period value="4.347"/>
+        <Effect value="CrucioShockCannonSet"/>
+        <Range value="12"/>
+        <DamagePoint value="0.0588"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Firebat">
+        <Period value="1.2751"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="FusionCutter">
+        <Period value="0.8693"/>
+        <RangeSlop value="0"/>
+        <DamagePoint value="0.3"/>
+        <Backswing value="0.861"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="GlaiveWurm">
+        <Period value="1.7387"/>
+        <ArcSlop value="11.25"/>
+        <DamagePoint value="0.0588"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="GoliathA">
+        <Period value="1.2751"/>
+        <DisplayEffect value="GoliathAU"/>
+        <TargetFilters value="Air,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Effect value="GoliathAPersistent"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel0.dds"/>
+        <DisplayAttackCount value="2"/>
+        <DamagePoint value="0.0588"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="HellfireMissilePackNull">
+        <Options index="Hidden" value="1"/>
+        <Options index="CanInitiateAttackOrder" value="0"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Options index="LinkedCooldown" value="0"/>
+        <Options index="RequireEnabledAttackAbil" value="0"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel0.dds"/>
+        <DisplayEffect value="GoliathAU"/>
+        <DisplayAttackCount value="2"/>
+        <TargetFilters value="Air,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Period value="9999"/>
+        <DamagePoint value="9999"/>
+        <Effect value=""/>
+        <RandomDelayMin value="9999"/>
+        <RandomDelayMax value="9999"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="GoliathG">
+        <Range value="5"/>
+        <Period value="1.2751"/>
+        <Effect value="GoliathGSet"/>
+        <DamagePoint value="0.0588"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="TwinAutocannonsNull">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="Hidden" value="1"/>
+        <Options index="CanInitiateAttackOrder" value="0"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Options index="LinkedCooldown" value="0"/>
+        <Options index="RequireEnabledAttackAbil" value="0"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel0.dds"/>
+        <DisplayEffect value="GoliathG"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Arc value="29.9926"/>
+        <Period value="9999"/>
+        <DamagePoint value="9999"/>
+        <Effect value=""/>
+        <RandomDelayMin value="9999"/>
+        <RandomDelayMax value="9999"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="GuassRifle">
+        <Range value="4"/>
+        <Period value="0.8693"/>
+        <Effect value="GuassRifleSet"/>
+        <DamagePoint value="0.1765"/>
+        <Backswing value="0.4707"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="HydraliskMelee">
+        <Period value="0.8693"/>
+        <DamagePoint value="0.208"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ImpalerTentacle">
+        <Period value="1.8547"/>
+        <Arc value="360"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="InfestedTerranExplode">
+        <EditorCategories value=""/>
+        <Options index="Melee" value="1"/>
+        <Range value="0.1"/>
+        <Effect value="InfestedTerranSet"/>
+        <Icon value="Assets\Textures\btn-ability-zerg-explode-color.dds"/>
+        <DisplayEffect value="InfestedTerranDamage"/>
+        <TargetFilters value="Visible;Air,RawResource,HarvestableResource,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <DamagePoint value="0.0588"/>
+    </CWeaponLegacy>
+    <CWeaponStrafe id="InterceptorBeam">
+        <DisplayAttackCount value="1"/>
+        <Effect value="InterceptorBeamDamage"/>
+        <Period value="2.0993"/>
+        <LoiterInnerRadius value="4"/>
+        <LoiterRadius value="8"/>
+        <DamagePoint value="0.0588"/>
+    </CWeaponStrafe>
+    <CWeaponLegacy id="InterceptorLaunch">
+        <MinScanRange value="16"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="InterceptorsDummy">
+        <DisplayAttackCount value="1"/>
+        <DamagePoint value="0.0588"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ParticleBeamMoving">
+        <EditorCategories value="Race:Protoss"/>
+        <Options index="Disabled" value="1"/>
+        <Options index="Hidden" value="1"/>
+        <Options index="CanInitiateAttackOrder" value="0"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Icon value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel0.dds"/>
+        <DisplayEffect value="ParticleBeam"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="0.5"/>
+        <ArcSlop value="180"/>
+        <Marker Link="Weapon/ParticleBeam"/>
+        <Cost>
+            <Cooldown Link="Weapon/ParticleBeam"/>
+        </Cost>
+        <Period value="1.2751"/>
+        <DamagePoint value="0"/>
+        <AllowedMovement value="Moving"/>
+        <Effect value="ParticleBeam"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="PhaseDisruptorCannon">
+        <EditorCategories value=""/>
+        <Icon value="Assets\Textures\btn-upgrade-protoss-airweaponslevel0.dds"/>
+        <DisplayEffect value="ArbiterDamage"/>
+        <Period value="2.6081"/>
+        <Effect value="ArbiterLM"/>
+        <Arc value="11.25"/>
+        <DamagePoint value="0.0588"/>
+        <TargetFilters value="Visible;Stasis,Invulnerable"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Scarabs">
+        <EditorCategories value="Race:Protoss"/>
+        <Icon value="Assets\Textures\UpgradeScarabDamage.dds"/>
+        <DisplayEffect value="ScarabDamage"/>
+        <TargetFilters value="Visible;Air,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="8"/>
+        <Arc value="360"/>
+        <Marker Link="Weapon/InterceptorsDummy"/>
+        <Cost>
+            <Cooldown Link="Weapon/InterceptorsDummy"/>
+        </Cost>
+        <Period value="3.4147"/>
+        <Effect value="LaunchScarabMagazine"/>
+        <DamagePoint value="0.0588"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="LanzerTorpedoes">
+        <DisplayAttackCount value="8"/>
+        <Range value="6"/>
+        <Period value="3.7094"/>
+        <Effect value="HaloRocketsSet"/>
+        <TargetFilters value="Air;Missile,Stasis,Dead,Invulnerable"/>
+        <RangeSlop value="100"/>
+        <Backswing value="0"/>
+        <DamagePoint value="0.25"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="LongboltMissile">
+        <Period value="0.8693"/>
+        <Effect value="LongboltMissileLM"/>
+        <DamagePoint value="0.0588"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="NeedleClaws">
+        <MinScanRange value="5"/>
+        <Period value="0.8693"/>
+        <DamagePoint value="0.0588"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ParticleBeam">
+        <Options index="Melee" value="0"/>
+        <Range value="0.5"/>
+        <DamagePoint value="0.0588"/>
+        <AllowedMovement value="Slowing"/>
+        <Period value="1.2751"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ParticleDisruptors">
+        <Range value="4"/>
+        <Period value="1.7387"/>
+        <Arc value="360"/>
+        <DamagePoint value="0.353"/>
+        <Effect value="EntropyLancePers"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="PhotonCannon">
+        <Period value="1.2751"/>
+        <DamagePoint value="0.0588"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="PsiBlades">
+        <DamagePoint value="0.2353"/>
+        <Period value="1.2751"/>
+        <Effect value="ZealotPsiBladesSet"/>
+        <Range value="0.5"/>
+        <RangeSlop value="0.5"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="PsionicShockwave">
+        <Period value="1.1591"/>
+        <AllowedMovement value="Slowing"/>
+        <Arc value="11.25"/>
+        <DamagePoint value="0.0588"/>
+        <Backswing value="1"/>
+        <Range value="2"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ScarabLaunch">
+        <EditorCategories value="Race:Protoss"/>
+        <Icon value="Assets\Textures\Import\btn-upgrade-protoss-scarabdamage-color.dds"/>
+        <DisplayEffect value="ScarabDamage"/>
+        <TargetFilters value="Visible;Air,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="8"/>
+        <Arc value="90"/>
+        <Marker Link="Weapon/InterceptorLaunch"/>
+        <Cost>
+            <Cooldown Link="Weapon/InterceptorLaunch"/>
+        </Cost>
+        <Period value="3.4147"/>
+        <DamagePoint value="0.0588"/>
+        <Backswing value="0"/>
+        <Effect value="Scarabs"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="KaiserBlades">
+        <Effect value="KaiserBladesDamage2"/>
+        <DisplayEffect value="KaiserBladesDamage2"/>
+        <Period value="0.8693"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="NeedleSpines">
+        <Range value="4"/>
+        <Period value="0.8693"/>
+        <DamagePoint value="0.2353"/>
+        <Backswing value="0.2353"/>
+        <Effect value="HydraliskNeedleSpinesPersistent"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Scarab">
+        <EditorCategories value="Race:Protoss"/>
+        <Options index="Melee" value="1"/>
+        <Icon value="Assets\Textures\btn-ability-zerg-banelingspooge.dds"/>
+        <DisplayEffect value="ScarabDamage"/>
+        <TargetFilters value="Visible;Air,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="0.5"/>
+        <RangeSlop value="0.25"/>
+        <Arc value="360"/>
+        <Marker Link="Weapon/Suicide"/>
+        <Cost>
+            <Cooldown Link="Weapon/Suicide"/>
+        </Cost>
+        <Period value="0"/>
+        <DamagePoint value="0.5"/>
+        <Effect value="ScarabSet"/>
+        <AllowedMovement value="Slowing"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Scourge">
+        <EditorCategories value=""/>
+        <DisplayEffect value="SuicideDamage"/>
+        <TargetFilters value="Air,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="0.25"/>
+        <AllowedMovement value="Slowing"/>
+        <Effect value="SuicidePersistent"/>
+        <DamagePoint value="0.0588"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ScoutAir">
+        <Arc value="11.25"/>
+        <Period value="1.2751"/>
+        <DamagePoint value="0.0588"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ScoutGround">
+        <Arc value="11.25"/>
+        <Period value="1.7387"/>
+        <DamagePoint value="0.0588"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Spines">
+        <Range value="0.5"/>
+        <Options index="Melee" value="0"/>
+        <DamagePoint value="0.0588"/>
+        <AllowedMovement value="Slowing"/>
+        <Effect value="SpinesLM"/>
+        <Arc value="11.25"/>
+        <Backswing value="0"/>
+        <Period value="1.2751"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Spines2">
+        <EditorCategories value="Race:Zerg"/>
+        <Options index="Disabled" value="1"/>
+        <Options index="Hidden" value="1"/>
+        <Options index="CanInitiateAttackOrder" value="0"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Icon value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level0.dds"/>
+        <DisplayEffect value="Spines"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="0.5"/>
+        <Marker Link="Weapon/Spines"/>
+        <Cost>
+            <Cooldown Link="Weapon/Spines"/>
+        </Cost>
+        <Period value="1.2751"/>
+        <DamagePoint value="0"/>
+        <Backswing value="0"/>
+        <AllowedMovement value="Moving"/>
+        <Effect value="SpinesLM"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Suicide">
+        <AllowedMovement value="Slowing"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Vulture">
+        <Range value="5"/>
+        <DamagePoint value="0.0588"/>
+        <Period value="1.7387"/>
+        <AllowedMovement value="Slowing"/>
+        <Arc value="90"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Vulture2">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="Disabled" value="1"/>
+        <Options index="Hidden" value="1"/>
+        <Options index="CanInitiateAttackOrder" value="0"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel0.dds"/>
+        <DisplayEffect value="VultureU"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <ArcSlop value="0"/>
+        <Marker Link="Weapon/Vulture"/>
+        <Cost>
+            <Cooldown Link="Weapon/Vulture"/>
+        </Cost>
+        <Period value="1.7387"/>
+        <DamagePoint value="0.0588"/>
+        <Backswing value="0"/>
+        <AllowedMovement value="Moving"/>
+        <Effect value="Vulture"/>
+        <Arc value="90"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="VultureSpiderMines">
+        <DisplayEffect value="SpiderMineDamage"/>
+        <TargetFilters value="Ground;Player,Ally,Neutral,Structure,Hover,Missile,Stasis,Dead,Invulnerable"/>
+        <Range value="0.1"/>
+        <RangeSlop value="0.5"/>
+        <Effect value="VultureSpiderMinesSet"/>
+        <DamagePoint value="0.0588"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="WarpBlades">
+        <Period value="1.7387"/>
+        <Effect value="WarpBladesSwitch"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="WraithA">
+        <Arc value="11.25"/>
+        <Period value="1.2751"/>
+        <DamagePoint value="0.0588"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="WraithG">
+        <Arc value="11.25"/>
+        <Period value="1.7387"/>
+        <DamagePoint value="0.0588"/>
+    </CWeaponLegacy>
+</Catalog>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CCamera id="SpectatorCamera">
+        <ParamInitial index="ShadowClip" value="200.000000"/>
+        <ZoomTable index="0">
+            <Param index="Distance" Value="65.000000"/>
+        </ZoomTable>
+        <ZoomTable index="1">
+            <Param index="Distance" Value="50.000000"/>
+            <Param index="Pitch" Value="56.000000"/>
+        </ZoomTable>
+        <ZoomTable index="2">
+            <Param index="Distance" Value="34.000000"/>
+            <Param index="Pitch" Value="56.000000"/>
+        </ZoomTable>
+        <ZoomTable index="3">
+            <Param index="Distance" Value="30.000000"/>
+            <Param index="Pitch" Value="52.000000"/>
+        </ZoomTable>
+        <ZoomTable index="4">
+            <Param index="Distance" Value="26.000000"/>
+            <Param index="Pitch" Value="48.000000"/>
+        </ZoomTable>
+        <ZoomTable>
+            <Param index="Distance" Modify="1" Value="22.000000"/>
+            <Param index="Pitch" Modify="1" Value="44.000000"/>
+        </ZoomTable>
+        <ZoomTable>
+            <Param index="Distance" Modify="1" Value="18.000000"/>
+            <Param index="Pitch" Modify="1" Value="40.000000"/>
+        </ZoomTable>
+        <ParamSmooth index="Distance" SmoothTimeMax="2.000000"/>
+    </CCamera>
+</Catalog>

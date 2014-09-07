@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CRequirement id="AntennaeResearched">
+        <NodeArray index="Use" Link="CountUpgradeAntennaeCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="ArmInterceptor">
+        <NodeArray index="Use" Link="LT2210218377CountUnitInterceptorQueuedOrBetterAtUnit4"/>
+    </CRequirement>
+    <CRequirement id="ArmInterceptor8">
+        <EditorCategories value="Race:Protoss,TechType:Unit"/>
+        <NodeArray index="Use" Link="LT172494085CountUnitInterceptorQueuedOrBetterAtUnit8"/>
+    </CRequirement>
+    <CRequirement id="CanAttackNotOverStacked">
+        <NodeArray index="Use" Link="NECountBehaviorMutaliskWanderRequirementBuffCompleteOnlyAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="ConnectedtoCC">
+        <NodeArray index="Use" Link="CountBehaviorComsatStationCommandCenterCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="ConnectedtoSF">
+        <NodeArray index="Use" Link="CountBehaviorFactoryTechLab2CompleteOnlyAtUnitTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="ConsumeCompleted">
+        <NodeArray index="Use" Link="CountUpgradeEvolveConsumeCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="EvolveEnsnare">
+        <EditorCategories value="Race:Zerg,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeQueenEnsnareQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="EvolveSpawnBroodling">
+        <NodeArray index="Show" Link="NotCountUpgradeSpawnBroodlingQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="HaveAcademyandScienceFacility">
+        <NodeArray index="Use" Link="AndCountUnitGhostAcademyCompleteOnlyCountUnitScienceFacilityCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveArmoryAndAttachedTechLabStarport">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <NodeArray index="Use" Link="AndCountUnitStarportTechLab2CompleteOnlyAtUnit3264271386TechTreeCheatCountUnitArmoryCompleteOnlyTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="HaveAcademy">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <NodeArray index="Use" Link="CountUnitAcademyCompleteOnlyTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="HaveArmoryandAttachedControlTower">
+        <NodeArray index="Use" Link="AndCountUnitControlTower2CompleteOnlyAtUnitCountUnitArmoryCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveAttachedControlTower">
+        <NodeArray index="Use" Link="CountUnitControlTower2CompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="HaveEngineeringBay">
+        <NodeArray index="Use" Link="Or700323805CountUnitEngineeringBayCompleteOnlyCountUnitEngineeringBayFlyingCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveInfestationPit"/>
+    <CRequirement id="HaveLairorHive">
+        <EditorCategories value="Race:Zerg,TechType:Unit"/>
+        <NodeArray index="Use" Link="Or1515591279CountUnitAlias_LairCompleteOnlyCountUnitHiveCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveLurkerDen">
+        <NodeArray index="Use" Link="Or1515591279CountUnitLairCompleteOnlyCountUnitHiveCompleteOnly"/>
+        <NodeArray index="Show" Link="NotCountUpgradeEvolveLurkerAspectQueuedOrBetterTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="HaveNuke">
+        <NodeArray index="Use" Link="CountUnitNukeCompleteOnly1384835438"/>
+    </CRequirement>
+    <CRequirement id="HaveObservatory">
+        <NodeArray index="Use" Link="CountUnitObservatoryCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveScienceFacilityandControlTower">
+        <NodeArray index="Use" Link="AndOr3841654916CountUnitScienceFacilityCompleteOnlyCountUnitScienceFacilityFlyingCompleteOnlyCountBehaviorStarportTechLabCompleteOnlyAtUnit675558016"/>
+    </CRequirement>
+    <CRequirement id="HaveScienceFacilitywithAttachedCovertOps">
+        <NodeArray index="Use" Link="CountBehaviorFactoryTechLab2CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveScienceFacilitywithAttachedPhysicsLab2">
+        <NodeArray index="Use" Link="CountBehaviorPhysicsLabAttachedtoScienceFacilityCompleteOnlyTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="HaveScienceFacilitywithAttachedPhysicsLab">
+        <NodeArray index="Use" Link="AndOr3841654916CountUnitScienceFacilityCompleteOnlyCountUnitScienceFacilityFlyingCompleteOnlyCountBehaviorPhysicsLabAttachedtoScienceFacilityCompleteOnlyTechTreeCheatCountBehaviorStarportTechLabCompleteOnlyAtUnit675558016"/>
+    </CRequirement>
+    <CRequirement id="HaveStargateandTemplarArchives">
+        <EditorCategories value="Race:Protoss,TechType:Unit"/>
+        <NodeArray index="Use" Link="AndTechTreeCheatCountUnitStargateCompleteOnlyTechTreeCheatCountUnitTemplarArchiveCompleteOnlyTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="LearnApialSensors">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeApialSensorsQueuedOrBetterTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="LearnApolloReactor">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeWraithApolloReactorQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnCaduceusReactor">
+        <NodeArray index="Show" Link="NotCountUpgradeMedicCaduceusReactorQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnCharonBoosters">
+        <NodeArray index="Use" Link="AndCountUnitArmoryCompleteOnly"/>
+        <NodeArray index="Show" Link="NotCountUpgradeAresClassWeaponsSystemQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnCloakingField">
+        <NodeArray index="Show" Link="NotCountUpgradeWraithCloakQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnOcularImplants">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeOcularImplants2QueuedOrBetterTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="LearnKhaydarinCore">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeKhaydarinCoreQueuedOrBetterTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="LearnArgusTalisman">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeArgusTalismanQueuedOrBetterTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="LearnArgusJewel">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeArgusJewelQueuedOrBetterTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="LearnMoebiusReactor">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeGhostMoebiusReactorQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnAntennae">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountBehaviorIdentifyasLairCompleteOnlyAtUnit1515591279"/>
+        <NodeArray index="Show" Link="NotCountUpgradeAntennaeQueuedOrBetterTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="LearnPneumatizedCarapace">
+        <NodeArray index="Use" Link="CountBehaviorIdentifyasLairCompleteOnlyAtUnit1515591279"/>
+    </CRequirement>
+    <CRequirement id="LearnProtossGroundArmor2">
+        <NodeArray index="Use" Link="AndEq3569156689CountUpgradeProtossGroundArmorsLevel1CompleteOnly1CountUnitTemplarArchiveCompleteOnlyTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="LearnProtossGroundArmor3">
+        <NodeArray index="Use" Link="AndEq419273267CountUpgradeProtossGroundArmorsLevel2CompleteOnly1CountUnitTemplarArchiveCompleteOnlyTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="LearnProtossGroundWeapon2">
+        <NodeArray index="Use" Link="AndEq1740904084CountUpgradeProtossGroundWeaponsLevel1CompleteOnly1CountUnitTemplarArchiveCompleteOnlyTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="LearnProtossGroundWeapon3">
+        <NodeArray index="Use" Link="AndEq629999927CountUpgradeProtossGroundWeaponsLevel2CompleteOnly1CountUnitTemplarArchiveCompleteOnlyTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="LearnSiegeTech">
+        <NodeArray index="Show" Link="NotCountUpgradeSiegeTechSC2BWQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnTerranInfantryArmor2">
+        <NodeArray index="Use" Link="AndEq3446134918CountUpgradeTerranInfantryArmorsLevel1CompleteOnly1Or2661977898CountUnitScienceFacilityCompleteOnlyTechTreeCheatCountUnitScienceFacilityFlyingCompleteOnlyTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="LearnTerranInfantryArmor3">
+        <NodeArray index="Use" Link="AndEq3722837715CountUpgradeTerranInfantryArmorsLevel2CompleteOnly1Or2661977898CountUnitScienceFacilityCompleteOnlyTechTreeCheatCountUnitScienceFacilityFlyingCompleteOnlyTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="LearnTerranInfantryWeapon2">
+        <NodeArray index="Use" Link="AndEq1429793488CountUpgradeTerranInfantryWeaponsLevel1CompleteOnly1Or2661977898CountUnitScienceFacilityCompleteOnlyTechTreeCheatCountUnitScienceFacilityFlyingCompleteOnlyTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="LearnTerranInfantryWeapon3">
+        <NodeArray index="Use" Link="AndEq3342497887CountUpgradeTerranInfantryWeaponsLevel2CompleteOnly1Or2661977898CountUnitScienceFacilityCompleteOnlyTechTreeCheatCountUnitScienceFacilityFlyingCompleteOnlyTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="LearnTerranShipArmor2">
+        <NodeArray index="Use" Link="AndEq3052852033CountUpgradeTerranShipArmorsLevel1CompleteOnly1Or2661977898CountUnitScienceFacilityCompleteOnlyCountUnitScienceFacilityFlyingCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="LearnTerranShipArmor3">
+        <NodeArray index="Use" Link="AndEq1864353859CountUpgradeTerranShipArmorsLevel2CompleteOnly1Or2661977898CountUnitScienceFacilityCompleteOnlyCountUnitScienceFacilityFlyingCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="LearnTerranShipWeapon2">
+        <NodeArray index="Use" Link="AndEq285961020CountUpgradeTerranShipWeaponsLevel1CompleteOnly1Or2661977898CountUnitScienceFacilityCompleteOnlyCountUnitScienceFacilityFlyingCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="LearnTerranShipWeapon3">
+        <NodeArray index="Use" Link="AndEq1004646809CountUpgradeTerranShipWeaponsLevel2CompleteOnly1Or2661977898CountUnitScienceFacilityCompleteOnlyCountUnitScienceFacilityFlyingCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="LearnTerranVehicleArmor2">
+        <NodeArray index="Use" Link="AndEq1121594928CountUpgradeTerranVehicleArmorsLevel1CompleteOnly1Or2661977898CountUnitScienceFacilityCompleteOnlyCountUnitScienceFacilityFlyingCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="LearnTerranVehicleArmor3">
+        <NodeArray index="Use" Link="AndEq2517918925CountUpgradeTerranVehicleArmorsLevel2CompleteOnly1Or2661977898CountUnitScienceFacilityCompleteOnlyCountUnitScienceFacilityFlyingCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="LearnTerranVehicleWeapon2">
+        <NodeArray index="Use" Link="AndEq1834932227CountUpgradeTerranVehicleWeaponsLevel1CompleteOnly1Or2661977898CountUnitScienceFacilityCompleteOnlyCountUnitScienceFacilityFlyingCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="LearnTerranVehicleWeapon3">
+        <NodeArray index="Use" Link="AndEq894233239CountUpgradeTerranVehicleWeaponsLevel2CompleteOnly1Or2661977898CountUnitScienceFacilityCompleteOnlyCountUnitScienceFacilityFlyingCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="LearnTitanReactor">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeScienceVesselTitanReactorQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnVentralSacs">
+        <NodeArray index="Use" Link="CountBehaviorIdentifyasLairCompleteOnlyAtUnit1515591279"/>
+    </CRequirement>
+    <CRequirement id="LearnWeaponRefit">
+        <NodeArray index="Use" Link="CountBehaviorPhysicsLabAttachedtoScienceFacilityCompleteOnlyAtUnitTechTreeCheat"/>
+        <NodeArray index="Show" Link="NotCountUpgradeBattlecruiserEnableSpecializationsQueuedOrBetterTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="IrradiateCompleted">
+        <EditorCategories value="Race:Zerg,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeResearchIrradiateCompleteOnlyTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="HaveArbiterTribunal">
+        <NodeArray index="Use" Link="CountUnitFleetBeacon2CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveScienceFacility">
+        <NodeArray index="Use" Link="CountUnitScienceFacilityCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="LearnBattlecruiserEnergyUpgrade">
+        <NodeArray index="Use" Link="CountBehaviorPhysicsLabAttachedtoScienceFacilityCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="LearnBattlecruiserSpecializations">
+        <NodeArray index="Use" Link="CountBehaviorPhysicsLabAttachedtoScienceFacilityCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="LearnBurrow">
+        <NodeArray index="Use" Link=""/>
+    </CRequirement>
+    <CRequirement id="LearnHallucination2">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeHallucinationHighTemplarQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnOpticalFlare">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Show" Link="NotTechTreeCheatCountUpgradeOpticalFlareQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnPersonnelCloaking">
+        <NodeArray index="Use" Link="CountBehaviorFactoryTechLab2CompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="LearnColossusReactor2">
+        <NodeArray index="Use" Link="CountBehaviorPhysicsLabAttachedtoScienceFacilityCompleteOnlyAtUnitTechTreeCheat"/>
+        <NodeArray index="Show" Link="NotCountUpgradeBattlecruiserBehemothReactorQueuedOrBetterTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="MaelstromResearched">
+        <NodeArray index="Use" Link="CountUpgradeMaelstromCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="MaelstromNotResearched">
+        <NodeArray index="Show" Link="NotCountUpgradeMaelstromQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="MindControlResearched">
+        <NodeArray index="Use" Link="CountUpgradeMindControlCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="MindControlNotResearched">
+        <NodeArray index="Show" Link="NotCountUpgradeMindControlQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="MutaliskWander">
+        <NodeArray index="Use" Link="EqCountBehaviorMutaliskWanderRequirementBuffCompleteOnlyAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="PlagueCompleted">
+        <NodeArray index="Use" Link="CountUpgradeEvolvePlagueCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="EvolvePlague">
+        <EditorCategories value="Race:Zerg,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeEvolvePlagueQueuedOrBetterTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="EvolveDefilerEnergy">
+        <EditorCategories value="Race:Zerg,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeResearchMetasynapticNodeQueuedOrBetterTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="HaveAcademyandCovertOps">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <NodeArray index="Use" Link="AndCountUnitAcademyCompleteOnlyCountBehaviorFactoryTechLab2CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveDefilerMound">
+        <EditorCategories value="Race:Zerg,TechType:Unit"/>
+        <NodeArray index="Use" Link="CountUnitDefilerMoundCompleteOnlyTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="EvolveConsume">
+        <EditorCategories value="Race:Zerg,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeEvolveConsumeQueuedOrBetterTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="EMPCompleted">
+        <EditorCategories value="Race:Zerg,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeResearchEMPShockwaveCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="DisruptionWebCompleted">
+        <NodeArray index="Use" Link="CountUpgradeResearchDisruptionWebCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="ResearchDisruptionWeb">
+        <EditorCategories value="Race:Zerg,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeResearchDisruptionWebQueuedOrBetterTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="ResearchGraviticThrusters">
+        <NodeArray index="Show" Link="NotCountUpgradeGraviticThrustersQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="ResearchIrradiate">
+        <EditorCategories value="Race:Zerg,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeResearchIrradiateQueuedOrBetterTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="ResearchLockdown">
+        <NodeArray index="Use" Link="CountBehaviorFactoryTechLab2CompleteOnlyAtUnit"/>
+        <NodeArray index="Show" Link="NotCountUpgradeLockdownQueuedOrBetterTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="ResearchRestoration">
+        <NodeArray index="Show" Link="NotCountUpgradeRestorationQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="SpawnBroodlingUpgraded">
+        <NodeArray index="Use" Link="CountUpgradeSpawnBroodlingCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseCloakingField">
+        <NodeArray index="Use" Link="CountUpgradeWraithCloakCompleteOnly758801471TechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="UseEnsnare">
+        <EditorCategories value="Race:Zerg,TechType:Ability"/>
+        <NodeArray index="Use" Link="CountUpgradeQueenEnsnareCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseLurkerAspect">
+        <NodeArray index="Use" Link="CountUpgradeEvolveLurkerAspectCompleteOnlyTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="UseRestoration">
+        <NodeArray index="Use" Link="CountUpgradeRestorationCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="ResearchSensorArray">
+        <NodeArray index="Show" Link="NotCountUpgradeSensorArrayQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="ResearchSingularityCharge">
+        <NodeArray index="Show" Link="NotCountUpgradeDragoonRangeQueuedOrBetterTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="ResearchStasis">
+        <EditorCategories value="Race:Zerg,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeResearchStasisQueuedOrBetterTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="ResearchScarabDamage">
+        <EditorCategories value="Race:Zerg,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeScarabDamageQueuedOrBetterTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="Lessthan5Scarabs">
+        <EditorCategories value="Race:Protoss,TechType:Unit"/>
+        <NodeArray index="Use" Link="LT2210218377CountUnitWeaponReaverScarabDumbQueuedOrBetterAtUnitTechTreeCheat5"/>
+    </CRequirement>
+    <CRequirement id="LearnMuscularAugments22">
+        <EditorCategories value="Race:Zerg,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradehydraliskspeed2QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="Lessthan10Scarabs">
+        <EditorCategories value="Race:Protoss,TechType:Unit"/>
+        <NodeArray index="Use" Link="LT2210218377CountUnitWeaponReaverScarabDumbQueuedOrBetterAtUnitTechTreeCheat10"/>
+    </CRequirement>
+    <CRequirement id="IncreasedReaverCapacity">
+        <EditorCategories value="Race:Zerg,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeIncreasedReaverCapacityQueuedOrBetterTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="ResearchRecall">
+        <EditorCategories value="Race:Zerg,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeResearchRecallQueuedOrBetterTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="ResearchSpiderMines">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeResearchSpiderMinesQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="ResearchIonThrusters">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeIonThrustersQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="ResearchEMP">
+        <EditorCategories value="Race:Zerg,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeResearchEMPShockwaveQueuedOrBetterTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="SensorArrayResearched">
+        <NodeArray index="Use" Link="CountUpgradeSensorArrayCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="ShowIfHaveCCAddOnParent">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <NodeArray index="Show" Link="CountUnitAlias_CommandCenterCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="ShowIfHaveNoSF">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <NodeArray index="Show" Link="NotOrCountUnitScienceFacilityCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="ShowIfHaveSFAddOnParent">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <NodeArray index="Show" Link="CountUnitScienceFacilityCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="ShowIfHaveNoCC">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <NodeArray index="Show" Link="NotOrCountUnitAlias_CommandCenterCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="StasisCompleted">
+        <NodeArray index="Use" Link="CountUpgradeResearchStasisCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="RecallCompleted">
+        <NodeArray index="Use" Link="CountUpgradeResearchRecallCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="TrainNuke">
+        <NodeArray index="Use" Link="AndNot866976074CountUnitNukeQueuedOrBetterAtUnit488655332CountBehaviorFactoryTechLab2CompleteOnlyOr3841654916CountUnitScienceFacilityCompleteOnlyCountUnitScienceFacilityFlyingCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="U238Shells">
+        <NodeArray index="Show" Link="NotCountUpgradeU238ShellsQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="UseBattlecruiserSpecializations">
+        <NodeArray index="Use" Link="CountUpgradeBattlecruiserEnableSpecializationsCompleteOnly2680002831TechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="UseHallucination2">
+        <EditorCategories value="Race:Protoss,TechType:Ability"/>
+        <NodeArray index="Use" Link="CountUpgradeHallucinationHighTemplarCompleteOnly1774117129"/>
+    </CRequirement>
+    <CRequirement id="UseLockdown">
+        <NodeArray index="Use" Link="CountUpgradeLockdownCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseOpticalFlare">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="CountUpgradeOpticalFlareCompleteOnly3817322346"/>
+    </CRequirement>
+    <CRequirement id="UseResearchSpiderMines">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeResearchSpiderMinesCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseSiegeModeSC2BW">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="CountUpgradeSiegeTechSC2BWCompleteOnly1316718431TechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="UseYamato">
+        <NodeArray index="Use" Link="CountUpgradeBattlecruiserEnableSpecializationsCompleteOnly"/>
+    </CRequirement>
+</Catalog>

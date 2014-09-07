@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CAlert id="TrainingCompletePing">
+        <Flags index="Hide" value="1"/>
+        <Flags index="Ping" value="1"/>
+        <PingColor value="255,0,255,0"/>
+        <PingTime value="1.350000"/>
+        <Voice value="Ready"/>
+        <PingModel value="PingWarning"/>
+    </CAlert>
+</Catalog>

@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CValidatorUnitCompareBehaviorCount id="AirUnitBeingSpread">
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="AirBeingSpread"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="AirUnitNotBeingSpread">
+        <Behavior value="AirBeingSpread"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareVital id="CasterEnergyFull" parent="CasterEnergyLT50">
+        <Type value="Fraction"/>
+        <Value value="1"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorLocationEnumArea id="CollisionCheckNoUnitWithin03">
+        <WhichLocation Value="SourceUnit"/>
+        <AreaArray Radius="0.31" Validator="IsNotFlying"/>
+        <Compare value="LE"/>
+        <Count value="1"/>
+        <LaunchLocation Value="OuterPoint"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorLocationEnumArea id="AIrUnitStackCheck">
+        <WhichLocation Value="SourceUnit"/>
+        <AreaArray Radius="0.31" Validator="IsFlying"/>
+        <Compare value="LE"/>
+        <Count value="1"/>
+        <LaunchLocation Value="OuterPoint"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorUnitCompareVitality id="DarkTemplarDamageTargetHP">
+        <Compare value="GT"/>
+        <Value value="40"/>
+    </CValidatorUnitCompareVitality>
+    <CValidatorCombine id="DelayDeathExclude">
+        <CombineArray value="DelayDeathExcludeSpiderMine"/>
+    </CValidatorCombine>
+    <CValidatorUnitType id="DelayDeathExcludeSpiderMine">
+        <Value value="SpiderMine"/>
+        <Find value="0"/>
+    </CValidatorUnitType>
+    <CValidatorUnitOrderQueue id="DroneIsGathering">
+        <AbilLink value="DroneHarvest"/>
+    </CValidatorUnitOrderQueue>
+    <CValidatorUnitOrderQueue id="DroneIsReturningCargo">
+        <AbilLink value="DroneHarvest"/>
+        <AbilCmdIndex value="1"/>
+    </CValidatorUnitOrderQueue>
+    <CValidatorUnitCompareBehaviorCount id="HasMovingShot">
+        <WhichUnit Value="Caster"/>
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="MovingShotActivateTurret"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="HasMovingShotFalse">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="MovingShotActivateTurret"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="IsMarineNotStimmed">
+        <WhichUnit Value="Source"/>
+        <Behavior value="Stimpack"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitType id="IsNotCarrier">
+        <Value value="Carrier"/>
+        <Find value="0"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="IsNotDragoon">
+        <Value value="Stalker"/>
+        <Find value="0"/>
+    </CValidatorUnitType>
+    <CValidatorCombine id="IsNotProtoss">
+        <CombineArray value="IsNotCarrier"/>
+        <CombineArray value="IsNotCorsair"/>
+        <CombineArray value="IsNotDragoon"/>
+        <CombineArray value="IsNotScout"/>
+        <Type value="And"/>
+    </CValidatorCombine>
+    <CValidatorUnitType id="IsNotScout">
+        <Value value="Scout"/>
+        <Find value="0"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="IsNotCorsair">
+        <Value value="Phoenix"/>
+        <Find value="0"/>
+    </CValidatorUnitType>
+    <CValidatorUnitOrder id="IsSpiderMineAttackOrder">
+        <WhichUnit Value="Source"/>
+        <AbilLink value="SpiderMineAttack"/>
+    </CValidatorUnitOrder>
+    <CValidatorUnitOrder id="IsSpiderMineMoveOrder">
+        <WhichUnit Value="Source"/>
+        <AbilLink value="move"/>
+    </CValidatorUnitOrder>
+    <CValidatorCombine id="IsMovingSpiderMine3">
+        <CombineArray value="IsSpiderMineAttackOrder"/>
+        <CombineArray value="IsSpiderMineMoveOrder"/>
+    </CValidatorCombine>
+    <CValidatorUnitFilters id="IsWorker">
+        <Filters value="Worker;-"/>
+    </CValidatorUnitFilters>
+    <CValidatorUnitOrderQueue id="IsnotAttacking">
+        <WhichUnit Value="Source"/>
+        <AbilLink value="attack"/>
+        <Find value="0"/>
+    </CValidatorUnitOrderQueue>
+    <CValidatorUnitCompareBehaviorCount id="MarineHasStimpack">
+        <WhichUnit Value="Source"/>
+        <Compare value="GT"/>
+        <Behavior value="Stimpack"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitType id="NotDumbScarab">
+        <Value value="WeaponReaverScarabDumb"/>
+        <Find value="0"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="NotSmartScarab">
+        <Value value="WeaponReaverScarabSmart"/>
+        <Find value="0"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="NotSpiderMineBurrowed">
+        <Value value="SpiderMineBurrowed"/>
+        <Find value="0"/>
+    </CValidatorUnitType>
+    <CValidatorUnitOrderQueue id="ProbeIsGathering">
+        <AbilLink value="ProbeHarvest"/>
+    </CValidatorUnitOrderQueue>
+    <CValidatorUnitOrderQueue id="ProbeIsReturningCargo">
+        <AbilLink value="ProbeHarvest"/>
+        <AbilCmdIndex value="1"/>
+    </CValidatorUnitOrderQueue>
+    <CValidatorPlayerCompareRace id="RaceIsProtossSC2BW">
+        <Value value="Prot"/>
+    </CValidatorPlayerCompareRace>
+    <CValidatorPlayerCompareRace id="RaceIsZergSC2BW">
+        <Value value="Zerg"/>
+    </CValidatorPlayerCompareRace>
+    <CValidatorPlayerCompareRace id="RaceIsTerranSC2BW">
+        <Value value="Terr"/>
+    </CValidatorPlayerCompareRace>
+    <CValidatorUnitOrderQueue id="SCVIsGathering">
+        <AbilLink value="SCVHarvest"/>
+    </CValidatorUnitOrderQueue>
+    <CValidatorUnitOrderQueue id="SCVIsReturningCargo">
+        <AbilLink value="SCVHarvest"/>
+        <AbilCmdIndex value="1"/>
+    </CValidatorUnitOrderQueue>
+    <CValidatorUnitCompareBehaviorCount id="UnderDarkSwarm">
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="DarkSwarm"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorLocationEnumArea id="ScarabCheckNoUnitWithin035">
+        <WhichLocation Value="SourceUnit"/>
+        <AreaArray Radius="0.35" Validator="TargetIsGround"/>
+        <Compare value="LE"/>
+        <Count value="1"/>
+        <LaunchLocation Value="SourceUnit"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorLocationEnumArea id="ScarabCheckCollided">
+        <WhichLocation Value="SourceUnit"/>
+        <AreaArray Arc="135" Radius="0.45" Validator="IsWorker"/>
+        <LaunchLocation Value="SourceUnit"/>
+        <SearchFilters value="-;Player,Ally"/>
+        <ExcludeArray Value="Source"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorUnitCompareOrderCount id="SourceHasnoOrders">
+        <WhichUnit Value="Source"/>
+    </CValidatorUnitCompareOrderCount>
+    <CValidatorLocationEnumArea id="CollisionCheckNoUnitWithin05">
+        <WhichLocation Value="SourceUnit"/>
+        <AreaArray Radius="0.4" Validator="IsNotFlying"/>
+        <Compare value="LE"/>
+        <Count value="1"/>
+        <LaunchLocation Value="OuterPoint"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorUnitCompareResourceContents id="GasisEmptyExtractor">
+        <Behavior value="HarvestableVespeneGeyserGasZerg"/>
+    </CValidatorUnitCompareResourceContents>
+    <CValidatorUnitCompareResourceContents id="GasisEmptyAssimilator">
+        <Behavior value="HarvestableVespeneGeyserGasProtoss"/>
+    </CValidatorUnitCompareResourceContents>
+    <CValidatorUnitCompareResourceContents id="GasisEmptyVespene">
+        <Behavior value="RawVespeneGeyserGas"/>
+        <WhichUnit Value="Source"/>
+    </CValidatorUnitCompareResourceContents>
+    <CValidatorUnitCompareResourceContents id="GasisEmptyRefinery">
+        <Behavior value="HarvestableVespeneGeyserGas"/>
+    </CValidatorUnitCompareResourceContents>
+    <CValidatorUnitCompareBehaviorCount id="IsHallucination">
+        <Behavior value="HallucinationHighTemplar"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareSpeed id="IsMoving">
+        <WhichUnit Value="Source"/>
+        <Compare value="GT"/>
+    </CValidatorUnitCompareSpeed>
+    <CValidatorUnitCompareBehaviorCount id="IsNotHallucination">
+        <Behavior value="HallucinationHighTemplar"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitOrderQueue id="TargetIsnotAttacking">
+        <WhichUnit Value="Target"/>
+        <AbilLink value="attack"/>
+        <Find value="0"/>
+    </CValidatorUnitOrderQueue>
+    <CValidatorLocationEnumArea id="MutaliskStackedAllowWander">
+        <ResultFailed value="Error,Error/TooManyMutas,Mutalisk_Pissed"/>
+        <WhichLocation Value="SourcePoint"/>
+        <AreaArray Radius="0.5" Validator="IsFlying"/>
+        <Compare value="GE"/>
+        <Count value="2"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorUnitCompareBehaviorCount id="NoDefensiveMatrix">
+        <Behavior value="DefensiveMatrix"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitType id="NotArbiter">
+        <Value value="Arbiter"/>
+        <Find value="0"/>
+    </CValidatorUnitType>
+    <CValidatorUnitCompareBehaviorCount id="RestorationCheckforBuff">
+        <Compare value="GT"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitFilters id="SourceNotBurrowed">
+        <WhichUnit Value="Source"/>
+        <Filters value="-;Buried"/>
+    </CValidatorUnitFilters>
+    <CValidatorUnitType id="NotSpiderMine2">
+        <Value value="SpiderMine"/>
+        <Find value="0"/>
+    </CValidatorUnitType>
+    <CValidatorCombine id="NotSpiderMineCombined">
+        <CombineArray value="NotSpiderMineBurrowed"/>
+        <CombineArray value="NotSpiderMine2"/>
+        <Type value="And"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareVital id="Plague1HP">
+        <Compare value="GT"/>
+        <Value value="1"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorUnitCompareBehaviorCount id="NotUnderDarkSwarm">
+        <Behavior value="DarkSwarm"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareVital id="Shield0">
+        <ResultFailed value="TooMuchLife"/>
+        <Vital value="Shields"/>
+        <Compare value="LT"/>
+        <Value value="1"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorLocationEnumArea id="StackLimit">
+        <ResultFailed value="Error,Error/TooManyUnits,Mutalisk_Pissed"/>
+        <WhichLocation Value="SourcePoint"/>
+        <AreaArray Radius="1" Validator="IsFlying"/>
+        <Compare value="LE"/>
+        <Count value="11"/>
+        <SearchFilters value="-;Ally,Neutral,Enemy"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorUnitCompareVital id="ShieldGZero">
+        <Type value="Current"/>
+        <Compare value="GE"/>
+        <Value value="1"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorUnitFilters id="NotBurrowed">
+        <Filters value="-;Buried"/>
+    </CValidatorUnitFilters>
+    <CValidatorUnitCompareVitality id="TargetHPGT750">
+        <Compare value="GE"/>
+        <Type value="Maximum"/>
+        <Value value="750"/>
+    </CValidatorUnitCompareVitality>
+    <CValidatorUnitCompareVitality id="TargetHPLT750">
+        <Compare value="LT"/>
+        <Type value="Maximum"/>
+        <Value value="750"/>
+    </CValidatorUnitCompareVitality>
+    <CValidatorUnitFilters id="TargetIsNotEnemy">
+        <Filters value="-;Neutral,Enemy"/>
+    </CValidatorUnitFilters>
+    <CValidatorUnitType id="TargetisCommandCenter">
+        <Value value="CommandCenter"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="TargetisCommandCenterFlying">
+        <Value value="CommandCenterFlying"/>
+    </CValidatorUnitType>
+    <CValidatorUnitFilters id="UnitisBiological">
+        <Filters value="Biological;-"/>
+    </CValidatorUnitFilters>
+    <CValidatorUnitCompareSpeed id="UnitisnotMoving">
+        <WhichUnit Value="Source"/>
+    </CValidatorUnitCompareSpeed>
+    <CValidatorCombine id="TargetisCommandCenterCombined">
+        <ResultFailed value="Error,Error/NotCC"/>
+        <CombineArray value="TargetisCommandCenter"/>
+        <CombineArray value="TargetisCommandCenterFlying"/>
+    </CValidatorCombine>
+    <CValidatorUnitOrder id="VultureisPlantingMines">
+        <WhichUnit Value="Source"/>
+        <AbilLink value="UseSpiderMinesTarget"/>
+        <AbilCmdIndex value="1"/>
+    </CValidatorUnitOrder>
+    <CValidatorCombine id="WorkerIsMining">
+        <CombineArray value="SCVIsGathering"/>
+        <CombineArray value="SCVIsReturningCargo"/>
+        <CombineArray value="ProbeIsGathering"/>
+        <CombineArray value="ProbeIsReturningCargo"/>
+        <CombineArray value="DroneIsGathering"/>
+        <CombineArray value="DroneIsReturningCargo"/>
+    </CValidatorCombine>
+    <CValidatorLocationCompareRange id="ZerglingRangeCheck">
+        <WhichLocation Value="TargetUnit"/>
+        <Compare value="LE"/>
+        <Range value="0.25"/>
+    </CValidatorLocationCompareRange>
+    <CValidatorLocationCompareRange id="ZealotRangeCheck">
+        <WhichLocation Value="TargetUnit"/>
+        <Compare value="LE"/>
+        <Range value="0.5"/>
+    </CValidatorLocationCompareRange>
+    <CValidatorUnitCompareBehaviorCount id="nydusCanalBuilt">
+        <Compare value="GT"/>
+        <Behavior value="NydusExitBuilt"/>
+        <WhichUnit Value="Source"/>
+    </CValidatorUnitCompareBehaviorCount>
+</Catalog>
