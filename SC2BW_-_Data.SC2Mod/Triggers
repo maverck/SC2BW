@@ -98,6 +98,8 @@
             <Item Type="Category" Library="SCBW" Id="800B06A8"/>
             <Item Type="Category" Library="SCBW" Id="D557F36D"/>
             <Item Type="Trigger" Library="SCBW" Id="07B9F092"/>
+            <Item Type="Trigger" Library="SCBW" Id="3F64D18D"/>
+            <Item Type="Trigger" Library="SCBW" Id="AAD246D6"/>
             <Item Type="Trigger" Library="SCBW" Id="CED891E6"/>
             <Item Type="Trigger" Library="SCBW" Id="07D52053"/>
             <Item Type="Trigger" Library="SCBW" Id="DB3F084C"/>
@@ -908,6 +910,11 @@
             <Event Type="FunctionCall" Library="SCBW" Id="A3C4CB52"/>
             <Action Type="FunctionCall" Library="SCBW" Id="E1E2BE97"/>
         </Element>
+        <Element Type="Trigger" Id="3F64D18D">
+            <Event Type="FunctionCall" Library="SCBW" Id="7F031A75"/>
+            <Action Type="FunctionCall" Library="SCBW" Id="83E14E01"/>
+            <Action Type="FunctionCall" Library="SCBW" Id="62611185"/>
+        </Element>
         <Element Type="Trigger" Id="41ADD004">
             <Variable Type="Variable" Library="SCBW" Id="E3DF6B0A"/>
             <Event Type="FunctionCall" Library="SCBW" Id="98E73A41"/>
@@ -1333,6 +1340,12 @@
             <Variable Type="Variable" Library="SCBW" Id="B6284BC8"/>
             <Event Type="FunctionCall" Library="SCBW" Id="76802412"/>
             <Action Type="FunctionCall" Library="SCBW" Id="382C6BD0"/>
+        </Element>
+        <Element Type="Trigger" Id="AAD246D6">
+            <Event Type="FunctionCall" Library="SCBW" Id="96599164"/>
+            <Condition Type="FunctionCall" Library="SCBW" Id="07EDBBD9"/>
+            <Action Type="FunctionCall" Library="SCBW" Id="2A338A7D"/>
+            <Action Type="FunctionCall" Library="SCBW" Id="87AFC644"/>
         </Element>
         <Element Type="Trigger" Id="ACD6C872">
             <Disabled/>
@@ -3288,6 +3301,12 @@
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000079"/>
             <Parameter Type="Param" Library="SCBW" Id="F2F81A6D"/>
         </Element>
+        <Element Type="FunctionCall" Id="07EDBBD9">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="C439C375"/>
+            <Parameter Type="Param" Library="SCBW" Id="DA08F18D"/>
+            <Parameter Type="Param" Library="SCBW" Id="FC34443B"/>
+            <Parameter Type="Param" Library="SCBW" Id="CD526BBB"/>
+        </Element>
         <Element Type="FunctionCall" Id="08051635">
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000279"/>
         </Element>
@@ -3857,6 +3876,9 @@
             <Parameter Type="Param" Library="SCBW" Id="94DF6BCC"/>
             <Parameter Type="Param" Library="SCBW" Id="49DB208A"/>
         </Element>
+        <Element Type="FunctionCall" Id="0E7F503D">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000092"/>
+        </Element>
         <Element Type="FunctionCall" Id="0E80E768">
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000136"/>
             <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000004"/>
@@ -4261,6 +4283,10 @@
         <Element Type="FunctionCall" Id="1340A02E">
             <FunctionDef Type="FunctionDef" Library="SCBW" Id="2233081B"/>
             <Parameter Type="Param" Library="SCBW" Id="706E4541"/>
+        </Element>
+        <Element Type="FunctionCall" Id="134E068D">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000081"/>
+            <Parameter Type="Param" Library="SCBW" Id="F42DEBF6"/>
         </Element>
         <Element Type="FunctionCall" Id="135B5F84">
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="BADA9C08"/>
@@ -6147,6 +6173,11 @@
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="9FFA06A7"/>
             <Parameter Type="Param" Library="SCBW" Id="B6F476EB"/>
             <Parameter Type="Param" Library="SCBW" Id="22D1F370"/>
+        </Element>
+        <Element Type="FunctionCall" Id="2A338A7D">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="E1552C18"/>
+            <Parameter Type="Param" Library="SCBW" Id="2B90FC4B"/>
+            <Parameter Type="Param" Library="SCBW" Id="AD2F7479"/>
         </Element>
         <Element Type="FunctionCall" Id="2A3CF6A7">
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000215"/>
@@ -8633,6 +8664,9 @@
             <Parameter Type="Param" Library="SCBW" Id="941806AC"/>
             <Parameter Type="Param" Library="SCBW" Id="29393B23"/>
         </Element>
+        <Element Type="FunctionCall" Id="4B13A0DD">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000092"/>
+        </Element>
         <Element Type="FunctionCall" Id="4B1CF570">
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000136"/>
             <SubFunctionType Type="SubFuncType" Library="Ntve" Id="BF750C3C"/>
@@ -10413,6 +10447,11 @@
             <Parameter Type="Param" Library="SCBW" Id="733C10D3"/>
             <Parameter Type="Param" Library="SCBW" Id="8798D115"/>
         </Element>
+        <Element Type="FunctionCall" Id="62611185">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="E1552C18"/>
+            <Parameter Type="Param" Library="SCBW" Id="F2A87C82"/>
+            <Parameter Type="Param" Library="SCBW" Id="15BB695B"/>
+        </Element>
         <Element Type="FunctionCall" Id="6265F383">
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="0F7C3248"/>
             <SubFunctionType Type="SubFuncType" Library="Ntve" Id="DEA91B62"/>
@@ -11659,6 +11698,9 @@
             <Parameter Type="Param" Library="SCBW" Id="0E1EC76D"/>
             <Parameter Type="Param" Library="SCBW" Id="30F50476"/>
         </Element>
+        <Element Type="FunctionCall" Id="71EA6652">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000092"/>
+        </Element>
         <Element Type="FunctionCall" Id="71F02685">
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000007"/>
             <Parameter Type="Param" Library="SCBW" Id="965709D3"/>
@@ -12689,6 +12731,13 @@
         <Element Type="FunctionCall" Id="7EF2D43F">
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000092"/>
         </Element>
+        <Element Type="FunctionCall" Id="7F031A75">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="5C010D48"/>
+            <Parameter Type="Param" Library="SCBW" Id="0F484AF1"/>
+            <Parameter Type="Param" Library="SCBW" Id="91ADAB62"/>
+            <Parameter Type="Param" Library="SCBW" Id="721B1235"/>
+            <Parameter Type="Param" Library="SCBW" Id="31F1D073"/>
+        </Element>
         <Element Type="FunctionCall" Id="7F0CCDA5">
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000081"/>
             <Parameter Type="Param" Library="SCBW" Id="2D46638A"/>
@@ -13112,6 +13161,11 @@
             <Parameter Type="Param" Library="SCBW" Id="11C18C55"/>
             <Parameter Type="Param" Library="SCBW" Id="10D3DD17"/>
         </Element>
+        <Element Type="FunctionCall" Id="83E14E01">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="E1552C18"/>
+            <Parameter Type="Param" Library="SCBW" Id="8B36A202"/>
+            <Parameter Type="Param" Library="SCBW" Id="83859FC3"/>
+        </Element>
         <Element Type="FunctionCall" Id="83E46A78">
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000136"/>
             <Parameter Type="Param" Library="SCBW" Id="698111D7"/>
@@ -13367,6 +13421,11 @@
             <Parameter Type="Param" Library="SCBW" Id="C8BC0F2C"/>
             <Parameter Type="Param" Library="SCBW" Id="D9902023"/>
         </Element>
+        <Element Type="FunctionCall" Id="87AFC644">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="E1552C18"/>
+            <Parameter Type="Param" Library="SCBW" Id="920BDE7D"/>
+            <Parameter Type="Param" Library="SCBW" Id="8C120246"/>
+        </Element>
         <Element Type="FunctionCall" Id="87BFE044">
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000087"/>
             <Parameter Type="Param" Library="SCBW" Id="7CC6F837"/>
@@ -13407,6 +13466,9 @@
             <Parameter Type="Param" Library="SCBW" Id="900128AE"/>
             <Parameter Type="Param" Library="SCBW" Id="17C74FEA"/>
             <Parameter Type="Param" Library="SCBW" Id="6778506A"/>
+        </Element>
+        <Element Type="FunctionCall" Id="8834C20C">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000092"/>
         </Element>
         <Element Type="FunctionCall" Id="88411002">
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="C439C375"/>
@@ -14551,6 +14613,12 @@
             <SubFunctionType Type="SubFuncType" Library="Ntve" Id="9441B8B5"/>
             <Parameter Type="Param" Library="SCBW" Id="35EC3453"/>
             <Parameter Type="Param" Library="SCBW" Id="FF2CD2BA"/>
+        </Element>
+        <Element Type="FunctionCall" Id="96599164">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000222"/>
+            <Parameter Type="Param" Library="SCBW" Id="8593E59D"/>
+            <Parameter Type="Param" Library="SCBW" Id="34DD98AA"/>
+            <Parameter Type="Param" Library="SCBW" Id="9AF73A81"/>
         </Element>
         <Element Type="FunctionCall" Id="96B634C8">
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="C65CC121"/>
@@ -17568,6 +17636,9 @@
             <SubFunctionType Type="SubFuncType" Library="Ntve" Id="363CE97C"/>
             <Parameter Type="Param" Library="SCBW" Id="730A139B"/>
             <Parameter Type="Param" Library="SCBW" Id="08F56088"/>
+        </Element>
+        <Element Type="FunctionCall" Id="BCC458E1">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000053"/>
         </Element>
         <Element Type="FunctionCall" Id="BCE68DF1">
             <FunctionDef Type="FunctionDef" Library="SCBW" Id="0A79698D"/>
@@ -21445,6 +21516,9 @@
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="5C9C427F"/>
             <Parameter Type="Param" Library="SCBW" Id="A5CB186D"/>
         </Element>
+        <Element Type="FunctionCall" Id="F01AE3D4">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000092"/>
+        </Element>
         <Element Type="FunctionCall" Id="F0220332">
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000123"/>
             <ScriptCode>
@@ -25021,6 +25095,10 @@
             <Array Type="Param" Library="SCBW" Id="AAA51BC8"/>
             <Array Type="Param" Library="SCBW" Id="668E0B40"/>
         </Element>
+        <Element Type="Param" Id="0F484AF1">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4421C93A"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="C84C7A78"/>
+        </Element>
         <Element Type="Param" Id="0F506636">
             <ParameterDef Type="ParamDef" Library="Ntve" Id="00000206"/>
             <Preset Type="PresetValue" Library="Ntve" Id="00000086"/>
@@ -25846,6 +25924,11 @@
             <ParameterDef Type="ParamDef" Library="Ntve" Id="7F7EC340"/>
             <Value>300</Value>
             <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="15BB695B">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="8FF77F87"/>
+            <Value>SetTintColor 255,255,255 0.200000</Value>
+            <ValueType Type="actormsg"/>
         </Element>
         <Element Type="Param" Id="15DEC2A3">
             <ParameterDef Type="ParamDef" Library="Ntve" Id="09B7BAEA"/>
@@ -28846,6 +28929,10 @@
             <ParameterDef Type="ParamDef" Library="Ntve" Id="00000220"/>
             <FunctionCall Type="FunctionCall" Library="SCBW" Id="AD601A06"/>
         </Element>
+        <Element Type="Param" Id="2B90FC4B">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="5A8D5B9F"/>
+            <FunctionCall Type="FunctionCall" Library="SCBW" Id="4B13A0DD"/>
+        </Element>
         <Element Type="Param" Id="2B918875">
             <ParameterDef Type="ParamDef" Library="Ntve" Id="00000212"/>
             <Value>PlayerPoints</Value>
@@ -29780,6 +29867,10 @@
             <ParameterDef Type="ParamDef" Library="Ntve" Id="ABB380C4"/>
             <Variable Type="Variable" Library="SCBW" Id="E8ED4C25"/>
         </Element>
+        <Element Type="Param" Id="31F1D073">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="3F9C41F8"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="00000231"/>
+        </Element>
         <Element Type="Param" Id="31F29A0B">
             <ParameterDef Type="ParamDef" Library="SCBW" Id="7D766C1E"/>
             <FunctionCall Type="FunctionCall" Library="SCBW" Id="DCD03B3F"/>
@@ -30179,6 +30270,10 @@
         <Element Type="Param" Id="34DAAEB2">
             <Value>0</Value>
             <ValueType Type="fixed"/>
+        </Element>
+        <Element Type="Param" Id="34DD98AA">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000385"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="2999701E"/>
         </Element>
         <Element Type="Param" Id="34E268B3">
             <ParameterDef Type="ParamDef" Library="Ntve" Id="00000219"/>
@@ -38665,6 +38760,10 @@
             <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
             <Preset Type="PresetValue" Library="Ntve" Id="1E7A4625"/>
         </Element>
+        <Element Type="Param" Id="721B1235">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="68EEADB6"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="D33DD35C"/>
+        </Element>
         <Element Type="Param" Id="722BD068">
             <ParameterDef Type="ParamDef" Library="Ntve" Id="2F2BFE5E"/>
             <FunctionCall Type="FunctionCall" Library="SCBW" Id="0681A798"/>
@@ -41143,6 +41242,11 @@
             <ParameterDef Type="ParamDef" Library="Ntve" Id="D1035B0C"/>
             <Preset Type="PresetValue" Library="Ntve" Id="00000033"/>
         </Element>
+        <Element Type="Param" Id="83859FC3">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="8FF77F87"/>
+            <Value>SetTintColor {255,0,0 7.500000}</Value>
+            <ValueType Type="actormsg"/>
+        </Element>
         <Element Type="Param" Id="83876A8F">
             <ParameterDef Type="ParamDef" Library="Ntve" Id="962C924D"/>
             <Preset Type="PresetValue" Library="Ntve" Id="3A57447B"/>
@@ -41382,6 +41486,10 @@
         <Element Type="Param" Id="85933C4A">
             <ParameterDef Type="ParamDef" Library="SCBW" Id="5B0B83D2"/>
             <Variable Type="Variable" Library="SCBW" Id="6F27F875"/>
+        </Element>
+        <Element Type="Param" Id="8593E59D">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000383"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="C84C7A78"/>
         </Element>
         <Element Type="Param" Id="85A4FFDD">
             <ParameterDef Type="ParamDef" Library="Ntve" Id="00000220"/>
@@ -42176,6 +42284,10 @@
             <Value>15.0</Value>
             <ValueType Type="fixed"/>
         </Element>
+        <Element Type="Param" Id="8B36A202">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="5A8D5B9F"/>
+            <FunctionCall Type="FunctionCall" Library="SCBW" Id="8834C20C"/>
+        </Element>
         <Element Type="Param" Id="8B3F3A62">
             <ParameterDef Type="ParamDef" Library="Ntve" Id="00000219"/>
             <Variable Type="Variable" Library="SCBW" Id="879BBD92"/>
@@ -42298,6 +42410,11 @@
         </Element>
         <Element Type="Param" Id="8C09740B">
             <FunctionCall Type="FunctionCall" Library="SCBW" Id="A99113D0"/>
+        </Element>
+        <Element Type="Param" Id="8C120246">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="8FF77F87"/>
+            <Value>SetLocalTintColor 255,255,255 0.200000</Value>
+            <ValueType Type="actormsg"/>
         </Element>
         <Element Type="Param" Id="8C179A86">
             <ParameterDef Type="ParamDef" Library="SCBW" Id="118D41FD"/>
@@ -43059,6 +43176,10 @@
             <ParameterDef Type="ParamDef" Library="Ntve" Id="00000219"/>
             <Variable Type="Variable" Library="SCBW" Id="79B38399"/>
         </Element>
+        <Element Type="Param" Id="91ADAB62">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="1B5BFFA8"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="9F9C00A9"/>
+        </Element>
         <Element Type="Param" Id="91B455A7">
             <ParameterDef Type="ParamDef" Library="Ntve" Id="6342B1C3"/>
             <Variable Type="Variable" Library="SCBW" Id="D58B1FDF"/>
@@ -43100,6 +43221,10 @@
         <Element Type="Param" Id="9206EF84">
             <ParameterDef Type="ParamDef" Library="SCBW" Id="8721F936"/>
             <FunctionCall Type="FunctionCall" Library="SCBW" Id="93609958"/>
+        </Element>
+        <Element Type="Param" Id="920BDE7D">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="5A8D5B9F"/>
+            <FunctionCall Type="FunctionCall" Library="SCBW" Id="0E7F503D"/>
         </Element>
         <Element Type="Param" Id="9220DCAA">
             <ParameterDef Type="ParamDef" Library="SCBW" Id="A7163B17"/>
@@ -44361,6 +44486,10 @@
             <ParameterDef Type="ParamDef" Library="Ntve" Id="5CA94A45"/>
             <Value>0.5</Value>
             <ValueType Type="fixed"/>
+        </Element>
+        <Element Type="Param" Id="9AF73A81">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000384"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="00000136"/>
         </Element>
         <Element Type="Param" Id="9B0DF422">
             <ParameterDef Type="ParamDef" Library="Ntve" Id="A65F9E6D"/>
@@ -46778,6 +46907,11 @@
             <Value>Ladder</Value>
             <ValueType Type="string"/>
         </Element>
+        <Element Type="Param" Id="AD2F7479">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="8FF77F87"/>
+            <Value>SetLocalTintColor {0,255,0 7.500000}</Value>
+            <ValueType Type="actormsg"/>
+        </Element>
         <Element Type="Param" Id="AD34E35E">
             <ParameterDef Type="ParamDef" Library="Ntve" Id="C8203405"/>
             <Preset Type="PresetValue" Library="Ntve" Id="EAC5B561"/>
@@ -46988,7 +47122,7 @@
             <FunctionCall Type="FunctionCall" Library="SCBW" Id="7FA2B864"/>
         </Element>
         <Element Type="Param" Id="AE8C43A1">
-            <Value>false</Value>
+            <Value>true</Value>
             <ValueType Type="bool"/>
         </Element>
         <Element Type="Param" Id="AE9145A5">
@@ -51234,6 +51368,10 @@
             <ParameterDef Type="ParamDef" Library="Ntve" Id="00000206"/>
             <Preset Type="PresetValue" Library="Ntve" Id="00000086"/>
         </Element>
+        <Element Type="Param" Id="CD526BBB">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
+            <FunctionCall Type="FunctionCall" Library="SCBW" Id="BCC458E1"/>
+        </Element>
         <Element Type="Param" Id="CD57EB97">
             <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
             <Preset Type="PresetValue" Library="Ntve" Id="1E7A4625"/>
@@ -52856,6 +52994,10 @@
             <ParameterDef Type="ParamDef" Library="Ntve" Id="4E26503A"/>
             <Value>true</Value>
             <ValueType Type="bool"/>
+        </Element>
+        <Element Type="Param" Id="DA08F18D">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="ABB380C4"/>
+            <FunctionCall Type="FunctionCall" Library="SCBW" Id="134E068D"/>
         </Element>
         <Element Type="Param" Id="DA0B7D03">
             <Parameter Type="ParamDef" Library="SCBW" Id="BFE18CB8"/>
@@ -56331,6 +56473,10 @@
             <Variable Type="Variable" Library="SCBW" Id="E2DA077D"/>
             <StructMember Type="Param" Library="SCBW" Id="987B6E2A"/>
         </Element>
+        <Element Type="Param" Id="F2A87C82">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="5A8D5B9F"/>
+            <FunctionCall Type="FunctionCall" Library="SCBW" Id="F01AE3D4"/>
+        </Element>
         <Element Type="Param" Id="F2AB0251">
             <ParameterDef Type="ParamDef" Library="Ntve" Id="D4705EA2"/>
             <Preset Type="PresetValue" Library="Ntve" Id="7ADC9421"/>
@@ -56500,6 +56646,10 @@
         <Element Type="Param" Id="F42A6058">
             <ParameterDef Type="ParamDef" Library="Ntve" Id="00000209"/>
             <Preset Type="PresetValue" Library="Ntve" Id="00000088"/>
+        </Element>
+        <Element Type="Param" Id="F42DEBF6">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000140"/>
+            <FunctionCall Type="FunctionCall" Library="SCBW" Id="71EA6652"/>
         </Element>
         <Element Type="Param" Id="F42ED4A4">
             <ValueType Type="string"/>
@@ -57717,6 +57867,10 @@
         <Element Type="Param" Id="FC272962">
             <ParameterDef Type="ParamDef" Library="Ntve" Id="ABB380C4"/>
             <Variable Type="Variable" Library="SCBW" Id="A7CF7916"/>
+        </Element>
+        <Element Type="Param" Id="FC34443B">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="51567265"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="1E7A4625"/>
         </Element>
         <Element Type="Param" Id="FC51D6D4">
             <Parameter Type="ParamDef" Library="SCBW" Id="F8897081"/>

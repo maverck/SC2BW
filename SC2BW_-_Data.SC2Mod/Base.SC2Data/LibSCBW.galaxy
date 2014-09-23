@@ -108,6 +108,7 @@ void libSCBW_InitVariables () {
     int init_i1;
     int init_j1;
 
+    libSCBW_gv_usingSC2BWTestMap = true;
     libSCBW_gv_version = StringExternal("Param/Value/lib_SCBW_E9AAE7CB");
     libSCBW_gv_gamemodeDialog = c_invalidDialogId;
     libSCBW_gv_gamemodeListbox = c_invalidDialogControlId;
@@ -346,6 +347,8 @@ trigger libSCBW_gt_ZergForcedRally;
 trigger libSCBW_gt_DisableBestUnitLarvaMorphAbility;
 trigger libSCBW_gt_AirUnitCreated;
 trigger libSCBW_gt_ComsatGains50EnergyonCompletion;
+trigger libSCBW_gt_UnitTakesDamage;
+trigger libSCBW_gt_UnitSelected;
 trigger libSCBW_gt_DisablePushing;
 trigger libSCBW_gt_CheckMovementThreads;
 trigger libSCBW_gt_LadderInit;
@@ -5071,6 +5074,53 @@ void libSCBW_gt_ComsatGains50EnergyonCompletion_Init () {
 }
 
 //--------------------------------------------------------------------------------------------------
+// Trigger: UnitTakesDamage
+//--------------------------------------------------------------------------------------------------
+bool libSCBW_gt_UnitTakesDamage_Func (bool testConds, bool runActions) {
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    libNtve_gf_SendActorMessageToUnit(EventUnit(), "SetTintColor {255,0,0 7.500000}");
+    libNtve_gf_SendActorMessageToUnit(EventUnit(), "SetTintColor 255,255,255 0.200000");
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libSCBW_gt_UnitTakesDamage_Init () {
+    libSCBW_gt_UnitTakesDamage = TriggerCreate("libSCBW_gt_UnitTakesDamage_Func");
+    TriggerAddEventUnitDamaged(libSCBW_gt_UnitTakesDamage, null, c_unitDamageTypeAny, c_unitDamageEither, null);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: UnitSelected
+//--------------------------------------------------------------------------------------------------
+bool libSCBW_gt_UnitSelected_Func (bool testConds, bool runActions) {
+    // Conditions
+    if (testConds) {
+        if (!((UnitGetOwner(EventUnit()) == EventPlayer()))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    libNtve_gf_SendActorMessageToUnit(EventUnit(), "SetLocalTintColor {0,255,0 7.500000}");
+    libNtve_gf_SendActorMessageToUnit(EventUnit(), "SetLocalTintColor 255,255,255 0.200000");
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libSCBW_gt_UnitSelected_Init () {
+    libSCBW_gt_UnitSelected = TriggerCreate("libSCBW_gt_UnitSelected_Func");
+    TriggerAddEventUnitSelected(libSCBW_gt_UnitSelected, null, c_playerAny, true);
+}
+
+//--------------------------------------------------------------------------------------------------
 // Trigger: Disable "Pushing"
 //--------------------------------------------------------------------------------------------------
 bool libSCBW_gt_DisablePushing_Func (bool testConds, bool runActions) {
@@ -5424,6 +5474,8 @@ void libSCBW_InitTriggers () {
     libSCBW_gt_DisableBestUnitLarvaMorphAbility_Init();
     libSCBW_gt_AirUnitCreated_Init();
     libSCBW_gt_ComsatGains50EnergyonCompletion_Init();
+    libSCBW_gt_UnitTakesDamage_Init();
+    libSCBW_gt_UnitSelected_Init();
     libSCBW_gt_DisablePushing_Init();
     libSCBW_gt_CheckMovementThreads_Init();
     libSCBW_gt_LadderInit_Init();
