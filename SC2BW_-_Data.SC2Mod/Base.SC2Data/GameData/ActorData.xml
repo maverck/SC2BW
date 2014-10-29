@@ -3752,7 +3752,7 @@
         <On index="62" removed="1"/>
         <On index="63" removed="1"/>
         <On index="64" removed="1"/>
-        <DeathArray index="Normal" ModelLink="DragoonDeath" SoundLink="DragoonDeath"/>
+        <DeathArray index="Normal" ModelLink="ProtossMediumUnitDeath" SoundLink="DragoonDeath"/>
         <DeathCustoms index="5" removed="1"/>
         <DeathCustoms index="6" removed="1"/>
         <DeathCustoms index="7" removed="1"/>
