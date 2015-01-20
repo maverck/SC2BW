@@ -291,6 +291,7 @@
         <WeaponArray index="0" Link="BroodlingEscort"/>
         <CardLayouts index="0">
             <LayoutButtons index="5" removed="1"/>
+            <LayoutButtons index="6" removed="1"/>
         </CardLayouts>
         <CostResource index="Minerals" value="150"/>
         <CostResource index="Vespene" value="200"/>
@@ -1414,8 +1415,7 @@
         <Attributes index="Massive" value="1"/>
         <AbilArray Link="BarracksTechLabResearch"/>
         <CardLayouts index="0">
-            <LayoutButtons index="3" Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
-            <LayoutButtons index="6" removed="1"/>
+            <LayoutButtons index="3" Face="CancelBuilding" AbilCmd="BuildInProgress,Cancel" Column="4"/>
         </CardLayouts>
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Campaign"/>
         <HotkeyAlias value=""/>
@@ -3037,16 +3037,40 @@
         <Race value="Terr"/>
         <Mover value="GoliathMissile"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
+        <FlagArray index="Turnable" value="0"/>
+        <FlagArray index="Uncommandable" value="1"/>
+        <FlagArray index="Unselectable" value="1"/>
+        <FlagArray index="Untargetable" value="1"/>
+        <FlagArray index="Missile" value="1"/>
+        <FlagArray index="KillCredit" value="0"/>
+        <FlagArray index="NoScore" value="1"/>
+        <FlagArray index="NoDeathEvent" value="1"/>
     </CUnit>
     <CUnit id="WeaponGoliathAirMissileU">
         <Race value="Terr"/>
         <Mover value="GoliathMissile"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
+        <FlagArray index="Turnable" value="0"/>
+        <FlagArray index="Uncommandable" value="1"/>
+        <FlagArray index="Unselectable" value="1"/>
+        <FlagArray index="Untargetable" value="1"/>
+        <FlagArray index="Missile" value="1"/>
+        <FlagArray index="KillCredit" value="0"/>
+        <FlagArray index="NoScore" value="1"/>
+        <FlagArray index="NoDeathEvent" value="1"/>
     </CUnit>
     <CUnit id="WeaponGoliathAirMissileUpgraded">
         <Race value="Terr"/>
         <Mover value="GoliathMissile"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
+        <FlagArray index="Turnable" value="0"/>
+        <FlagArray index="Uncommandable" value="1"/>
+        <FlagArray index="Unselectable" value="1"/>
+        <FlagArray index="Untargetable" value="1"/>
+        <FlagArray index="Missile" value="1"/>
+        <FlagArray index="KillCredit" value="0"/>
+        <FlagArray index="NoScore" value="1"/>
+        <FlagArray index="NoDeathEvent" value="1"/>
     </CUnit>
     <CUnit id="WeaponReaverScarabDumb">
         <Race value="Prot"/>
@@ -3685,7 +3709,7 @@
         <Speed value="2.8125"/>
         <AttackTargetPriority value="15"/>
         <Acceleration value="2.625"/>
-        <Deceleration value="2.625"/>
+        <Deceleration value="4"/>
         <LateralAcceleration value="1000"/>
         <HotkeyCategory value="Unit/Category/TerranUnits"/>
         <ScoreMake value="625"/>

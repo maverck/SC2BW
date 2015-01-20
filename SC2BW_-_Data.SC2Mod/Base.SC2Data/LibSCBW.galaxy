@@ -1356,7 +1356,11 @@ void libSCBW_gf_SpreadStackedAir (unit lp_unit) {
     // Implementation
     if ((UnitIsAlive(lp_unit) == true)) {
         if ((libSCBW_gf_UnitatArrivedOrderPoint(lp_unit, UnitOrder(lp_unit, 0)) == true)) {
-            UnitIssueOrder(lp_unit, Order(AbilityCommand("stop", 0)), c_orderQueueReplace);
+            if ((UnitOrder(lp_unit, 0) == Order(AbilityCommand("move", 2)))) {
+            }
+            else {
+                UnitIssueOrder(lp_unit, Order(AbilityCommand("stop", 0)), c_orderQueueReplace);
+            }
         }
         else {
         }
@@ -1427,7 +1431,7 @@ bool auto_libSCBW_gf_CheckMovement_TriggerFunc (bool testConds, bool runActions)
 
 void libSCBW_gf_CreateRealTimeTimer () {
     // Implementation
-    DialogCreate(libSCBW_gv_dialogconstants.lv_dialogStatsButtonWidth, libSCBW_gv_dialogconstants.lv_dialogStatsButtonHeight, c_anchorBottomLeft, 175, 297, true);
+    DialogCreate(libSCBW_gv_dialogconstants.lv_dialogStatsButtonWidth, libSCBW_gv_dialogconstants.lv_dialogStatsButtonHeight, c_anchorBottomLeft, 175, 290, true);
     libSCBW_gv_dialogs.lv_realTimeMissionTimerDialog = DialogLastCreated();
     DialogSetImageVisible(DialogLastCreated(), false);
     libNtve_gf_CreateDialogItemLabel(libSCBW_gv_dialogs.lv_realTimeMissionTimerDialog, libSCBW_gv_dialogconstants.lv_dialogStatsButtonWidth, libSCBW_gv_dialogconstants.lv_dialogStatsButtonHeight, c_anchorCenter, 10, 7, FormatDuration(FixedToInt(TimerGetElapsed(libSCBW_gv_otherStats.lv_osMissionTime))), Color(100,100,100), false, 2.0);
@@ -1435,7 +1439,6 @@ void libSCBW_gf_CreateRealTimeTimer () {
     libNtve_gf_SetDialogItemRenderPriority(DialogControlLastCreated(), 1024, PlayerGroupAll());
     DialogSetVisible(libSCBW_gv_dialogs.lv_realTimeMissionTimerDialog, PlayerGroupAll(), true);
     libNtve_gf_CreateDialogItemImage(libSCBW_gv_dialogs.lv_realTimeMissionTimerDialog, 90, 30, c_anchorTopLeft, 0, 0, StringExternal("Param/Value/lib_SCBW_095A2CF8"), "Assets\\Textures\\black.dds", c_triggerImageTypeNone, true, ColorWithAlpha(0.00, 0.00, 0.00, 49.80), c_triggerBlendModeNormal);
-    UISetFrameVisible(PlayerGroupAll(), c_syncFrameTypeMissionTimePanel, false);
 }
 
 void libSCBW_gf_InitiateSpectatorCamera (int lp_player) {
@@ -3277,6 +3280,12 @@ void libSCBW_gt_FinishedHarvesting_Init () {
 // Trigger: Disable Wait at Resource
 //--------------------------------------------------------------------------------------------------
 bool libSCBW_gt_DisableWaitatResource_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    fixed lv_mineralSearchRadius;
+
+    // Variable Initialization
+    lv_mineralSearchRadius = 8.0;
+
     // Conditions
     if (testConds) {
         if (!((UnitGetType(EventUnitTargetUnit()) == "MineralField"))) {
@@ -3292,13 +3301,13 @@ bool libSCBW_gt_DisableWaitatResource_Func (bool testConds, bool runActions) {
     Wait(0.0625, c_timeGame);
     if (((UnitHasBehavior(EventUnit(), "IdentifyHarvesting") == false) && (libSCBW_gf_FreeMineralPatchNearby(EventUnit()) == true))) {
         if ((UnitGetType(EventUnit()) == "SCV")) {
-            UnitIssueOrder(EventUnit(), OrderTargetingUnit(AbilityCommand("SCVHarvest", 0), UnitGroupRandomUnit(UnitGroup("MineralField", c_playerAny, RegionCircle(UnitGetPosition(EventUnit()), 10.0), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAll)), c_orderQueueReplace);
+            UnitIssueOrder(EventUnit(), OrderTargetingUnit(AbilityCommand("SCVHarvest", 0), UnitGroupRandomUnit(UnitGroup("MineralField", c_playerAny, RegionCircle(UnitGetPosition(EventUnit()), lv_mineralSearchRadius), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAll)), c_orderQueueReplace);
         }
         else if ((UnitGetType(EventUnit()) == "Drone")) {
-            UnitIssueOrder(EventUnit(), OrderTargetingUnit(AbilityCommand("DroneHarvest", 0), UnitGroupRandomUnit(UnitGroup("MineralField", c_playerAny, RegionCircle(UnitGetPosition(EventUnit()), 10.0), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAll)), c_orderQueueReplace);
+            UnitIssueOrder(EventUnit(), OrderTargetingUnit(AbilityCommand("DroneHarvest", 0), UnitGroupRandomUnit(UnitGroup("MineralField", c_playerAny, RegionCircle(UnitGetPosition(EventUnit()), lv_mineralSearchRadius), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAll)), c_orderQueueReplace);
         }
         else if ((UnitGetType(EventUnit()) == "Probe")) {
-            UnitIssueOrder(EventUnit(), OrderTargetingUnit(AbilityCommand("ProbeHarvest", 0), UnitGroupRandomUnit(UnitGroup("MineralField", c_playerAny, RegionCircle(UnitGetPosition(EventUnit()), 10.0), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAll)), c_orderQueueReplace);
+            UnitIssueOrder(EventUnit(), OrderTargetingUnit(AbilityCommand("ProbeHarvest", 0), UnitGroupRandomUnit(UnitGroup("MineralField", c_playerAny, RegionCircle(UnitGetPosition(EventUnit()), lv_mineralSearchRadius), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAll)), c_orderQueueReplace);
         }
     }
     else {
@@ -3318,6 +3327,12 @@ void libSCBW_gt_DisableWaitatResource_Init () {
 // Trigger: MineralFieldSpecial
 //--------------------------------------------------------------------------------------------------
 bool libSCBW_gt_MineralFieldSpecial_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    fixed lv_mineralSearchRadius;
+
+    // Variable Initialization
+    lv_mineralSearchRadius = 8.0;
+
     // Actions
     if (!runActions) {
         return true;
@@ -3326,13 +3341,13 @@ bool libSCBW_gt_MineralFieldSpecial_Func (bool testConds, bool runActions) {
     UnitBehaviorRemove(EventUnit(), "CarryMineralFieldMineralsSpecial", 1);
     UnitSetPropertyFixed(EventUnit(), c_unitPropCarriedMinerals, 0.0);
     if ((UnitGetType(EventUnit()) == "SCV")) {
-        UnitIssueOrder(EventUnit(), OrderTargetingUnit(AbilityCommand("SCVHarvest", 0), UnitGroupRandomUnit(UnitGroup("MineralFieldSpecial", c_playerAny, RegionCircle(UnitGetPosition(EventUnit()), 10.0), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAll)), c_orderQueueReplace);
+        UnitIssueOrder(EventUnit(), OrderTargetingUnit(AbilityCommand("SCVHarvest", 0), UnitGroupRandomUnit(UnitGroup("MineralFieldSpecial", c_playerAny, RegionCircle(UnitGetPosition(EventUnit()), lv_mineralSearchRadius), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAll)), c_orderQueueReplace);
     }
     else if ((UnitGetType(EventUnit()) == "Drone")) {
-        UnitIssueOrder(EventUnit(), OrderTargetingUnit(AbilityCommand("DroneHarvest", 0), UnitGroupRandomUnit(UnitGroup("MineralFieldSpecial", c_playerAny, RegionCircle(UnitGetPosition(EventUnit()), 10.0), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAll)), c_orderQueueReplace);
+        UnitIssueOrder(EventUnit(), OrderTargetingUnit(AbilityCommand("DroneHarvest", 0), UnitGroupRandomUnit(UnitGroup("MineralFieldSpecial", c_playerAny, RegionCircle(UnitGetPosition(EventUnit()), lv_mineralSearchRadius), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAll)), c_orderQueueReplace);
     }
     else if ((UnitGetType(EventUnit()) == "Probe")) {
-        UnitIssueOrder(EventUnit(), OrderTargetingUnit(AbilityCommand("ProbeHarvest", 0), UnitGroupRandomUnit(UnitGroup("MineralFieldSpecial", c_playerAny, RegionCircle(UnitGetPosition(EventUnit()), 10.0), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAll)), c_orderQueueReplace);
+        UnitIssueOrder(EventUnit(), OrderTargetingUnit(AbilityCommand("ProbeHarvest", 0), UnitGroupRandomUnit(UnitGroup("MineralFieldSpecial", c_playerAny, RegionCircle(UnitGetPosition(EventUnit()), lv_mineralSearchRadius), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAll)), c_orderQueueReplace);
     }
     return true;
 }
@@ -4485,7 +4500,7 @@ void libSCBW_gt_SpiderMineDetectCloaked_Init () {
 bool libSCBW_gt_Scarabbecomesidle_Func (bool testConds, bool runActions) {
     // Conditions
     if (testConds) {
-        if (!((UnitGetType(EventUnit()) == "WeaponReaverScarabDumb"))) {
+        if (!(((UnitGetType(EventUnit()) == "WeaponReaverScarabDumb") || (UnitGetType(EventUnit()) == "WeaponReaverScarabSmart")))) {
             return false;
         }
     }
@@ -5083,7 +5098,7 @@ bool libSCBW_gt_UnitTakesDamage_Func (bool testConds, bool runActions) {
     }
 
     libNtve_gf_SendActorMessageToUnit(EventUnit(), "SetTintColor {255,0,0 7.500000}");
-    libNtve_gf_SendActorMessageToUnit(EventUnit(), "SetTintColor 255,255,255 0.200000");
+    libNtve_gf_SendActorMessageToUnit(EventUnit(), "SetTintColor 255,255,255 0.300000");
     return true;
 }
 
@@ -5109,8 +5124,8 @@ bool libSCBW_gt_UnitSelected_Func (bool testConds, bool runActions) {
         return true;
     }
 
-    libNtve_gf_SendActorMessageToUnit(EventUnit(), "SetLocalTintColor {0,255,0 7.500000}");
-    libNtve_gf_SendActorMessageToUnit(EventUnit(), "SetLocalTintColor 255,255,255 0.200000");
+    libNtve_gf_SendActorMessageToUnit(EventUnit(), "SetLocalTintColor {0,255,0 4.000000}");
+    libNtve_gf_SendActorMessageToUnit(EventUnit(), "SetLocalTintColor 255,255,255 0.500000");
     return true;
 }
 
