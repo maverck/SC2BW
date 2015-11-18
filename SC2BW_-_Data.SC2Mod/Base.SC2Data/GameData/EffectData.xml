@@ -1071,28 +1071,33 @@
     <CEffectCreatePersistent id="ScannerSweep">
         <RevealRadius value="10"/>
     </CEffectCreatePersistent>
+    <CEffectDamage id="ScarabDamageDummy">
+        <EditorCategories value=""/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <ArmorReduction value="1"/>
+        <Flags index="Notification" value="1"/>
+        <Kind value="Splash"/>
+        <AreaArray Radius="0.625" Fraction="1"/>
+        <AreaArray Radius="1.25" Fraction="0.5" Validator="NotBurrowed"/>
+        <AreaArray Radius="1.875" Fraction="0.25" Validator="NotBurrowed"/>
+        <SearchFilters value="Visible;Player,Ally,Air,RawResource,HarvestableResource,Missile,Dead"/>
+    </CEffectDamage>
     <CEffectApplyBehavior id="ScarabFiredApply">
         <EditorCategories value=""/>
         <WhichUnit Value="Caster"/>
         <Behavior value="ScarabFired"/>
     </CEffectApplyBehavior>
     <CEffectApplyBehavior id="ScarabFiredApplyIdentify">
-        <ValidatorArray index="0" value="ScarabFiredApplyTargetFilters"/>
-        <EditorCategories value=""/>
-        <Marker Link="Effect/ScarabFiredApply"/>
         <Behavior value="IdentifyScarab"/>
     </CEffectApplyBehavior>
     <CEffectSet id="ScarabFiredSet">
-        <ValidatorArray value="ScarabFiredApplyTargetFilters"/>
-        <EditorCategories value=""/>
-        <Marker Link="Effect/ScarabFiredApply"/>
         <EffectArray value="ScarabFiredApply"/>
         <EffectArray value="ScarabFiredApplyIdentify"/>
         <EffectArray value="KillsToCaster"/>
     </CEffectSet>
     <CEffectCreatePersistent id="Scarabs">
         <EditorCategories value="Race:Protoss"/>
-        <Marker Link="ReaverScarabPersistent"/>
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <PeriodCount value="1"/>
@@ -1132,7 +1137,6 @@
         <AreaArray Radius="1.875" Fraction="0.25" Validator="NotBurrowed"/>
         <SearchFilters value="Visible;Player,Ally,Air,RawResource,HarvestableResource,Missile,Dead"/>
         <ArmorReduction value="1"/>
-        <ExcludeArray Value="Target"/>
         <Flags index="Notification" value="1"/>
         <ResponseFlags index="Acquire" value="1"/>
         <ResponseFlags index="Flee" value="1"/>
@@ -1150,14 +1154,26 @@
         <Abil value="attack"/>
         <Target Effect="Scarabs" Value="TargetUnitOrPoint"/>
     </CEffectIssueOrder>
+    <CEffectLaunchMissile id="ScoutAirLMLeft">
+        <ImpactEffect value="ScoutMPAirU"/>
+        <Movers index="1" Link="ScoutMPAirWeaponLeft" IfRangeLTE="4"/>
+    </CEffectLaunchMissile>
+    <CEffectLaunchMissile id="ScoutAirLMRight">
+        <ImpactEffect value="ScoutMPAirU"/>
+        <Movers index="1" Link="ScoutMPAirWeaponRight" IfRangeLTE="4"/>
+    </CEffectLaunchMissile>
+    <CEffectDamage id="ScoutMPAirU">
+        <AttributeBonus index="Armored" value="0"/>
+        <AttributeFactor index="Light" value="-0.5"/>
+        <AttributeFactor index="Armored" value="-0.25"/>
+        <Amount value="14"/>
+    </CEffectDamage>
     <CEffectSwitch id="SiegeTankArcliteCannonSwitch">
         <EditorCategories value=""/>
         <CaseArray Validator="Shield0" Effect="Null"/>
         <CaseArray Validator="ShieldGZero" Effect="Null"/>
     </CEffectSwitch>
     <CEffectSet id="ScarabSet">
-        <EditorCategories value=""/>
-        <EffectArray value="ScarabDamage"/>
         <EffectArray value="Suicide"/>
     </CEffectSet>
     <CEffectDamage id="ScoutAirU" parent="DU_WEAP">

@@ -42,27 +42,9 @@
     </CAbilResearch>
     <CAbilResearch id="ArmoryResearchSC2BW" parent="ArmoryResearch">
         <Name value="Abil/Name/ArmoryResearchSC2BW"/>
-        <InfoArray index="Research3" Upgrade="TerranVehicleArmorsLevel1">
-            <Button DefaultButtonFace="TerranVehiclePlatingLevel1" State="Restricted" Requirements="LearnTerranVehicleArmor1"/>
-        </InfoArray>
-        <InfoArray index="Research4" Upgrade="TerranVehicleArmorsLevel2">
-            <Button DefaultButtonFace="TerranVehiclePlatingLevel2" State="Restricted" Requirements="LearnTerranVehicleArmor2"/>
-        </InfoArray>
-        <InfoArray index="Research5" Upgrade="TerranVehicleArmorsLevel3">
-            <Button DefaultButtonFace="TerranVehiclePlatingLevel3" State="Restricted" Requirements="LearnTerranVehicleArmor3"/>
-        </InfoArray>
-        <InfoArray index="Research9" Upgrade="TerranShipArmorsLevel1">
-            <Button DefaultButtonFace="TerranShipPlatingLevel1" State="Restricted" Requirements="LearnTerranShipArmor1"/>
-        </InfoArray>
-        <InfoArray index="Research10" Upgrade="TerranShipArmorsLevel2">
-            <Button DefaultButtonFace="TerranShipPlatingLevel2" State="Restricted" Requirements="LearnTerranShipArmor2"/>
-        </InfoArray>
-        <InfoArray index="Research11" Upgrade="TerranShipArmorsLevel3">
-            <Button DefaultButtonFace="TerranShipPlatingLevel3" State="Restricted" Requirements="LearnTerranShipArmor3"/>
-        </InfoArray>
     </CAbilResearch>
     <CAbilMorphPlacement id="BarracksLand">
-        <InfoArray index="0" Unit="Barracks" CollideRange="0">
+        <InfoArray index="0">
             <SectionArray index="Mover">
                 <DurationArray index="Duration" value="1.25"/>
             </SectionArray>
@@ -134,7 +116,7 @@
         <BehaviorArray value="Cloak"/>
     </CAbilBehavior>
     <CAbilMorphPlacement id="CommandCenterLand">
-        <InfoArray index="0" Unit="CommandCenter" CollideRange="0">
+        <InfoArray index="0">
             <SectionArray index="Mover">
                 <DurationArray index="Duration" value="1.25"/>
             </SectionArray>
@@ -153,7 +135,7 @@
         <InfoArray index="Train1" Time="17.2807"/>
     </CAbilTrain>
     <CAbilMorphPlacement id="FactoryLand">
-        <InfoArray index="0" Unit="Factory" CollideRange="0">
+        <InfoArray index="0">
             <SectionArray index="Mover">
                 <DurationArray index="Duration" value="1.25"/>
             </SectionArray>
@@ -346,7 +328,7 @@
             <Charge Link="Abil/CommandCenterLand"/>
             <Cooldown Link="Abil/CommandCenterLand"/>
         </Cost>
-        <InfoArray index="0" Unit="InfestedCommandCenter" CollideRange="0">
+        <InfoArray index="0">
             <SectionArray index="Mover">
                 <DurationArray index="Duration" value="1.25"/>
             </SectionArray>
@@ -358,7 +340,7 @@
             <Charge Link="Abil/CommandCenterLiftOff"/>
             <Cooldown Link="Abil/CommandCenterLiftOff"/>
         </Cost>
-        <InfoArray index="0" Unit="InfestedCommandCenterFlying">
+        <InfoArray index="0">
             <SectionArray index="Mover">
                 <DurationArray index="Duration" value="1.5"/>
             </SectionArray>
@@ -711,13 +693,13 @@
         <OrderArray index="0">
             <Color value="255,245,140,70"/>
             <Model value="Assets\UI\Feedback\WayPointRally\WayPointRally.m3"/>
-            <Scale value="0"/>
+            <Scale value="0.000000"/>
             <LineTexture value="Assets\Textures\WayPointLine.dds"/>
         </OrderArray>
         <OrderArray index="1">
             <Color value="255,200,200,200"/>
             <Model value="Assets\UI\Feedback\WayPointRally\WayPointRally.m3"/>
-            <Scale value="0.75"/>
+            <Scale value="0.750000"/>
             <LineTexture value="Assets\Textures\WayPointLine.dds"/>
         </OrderArray>
         <EditorCategories value="Race:Zerg,AbilityorEffectType:Structures"/>
@@ -1009,7 +991,7 @@
         <CmdButtonArray index="Execute" DefaultButtonFace="SpawnBroodling" State="Restricted" Requirements="SpawnBroodlingUpgraded"/>
     </CAbilEffectTarget>
     <CAbilMorphPlacement id="StarportLand">
-        <InfoArray index="0" Unit="Starport" CollideRange="0">
+        <InfoArray index="0">
             <SectionArray index="Mover">
                 <DurationArray index="Duration" value="1.25"/>
             </SectionArray>
@@ -1857,7 +1839,7 @@
             <Charge Link="Abil/FactoryLand"/>
             <Cooldown Link="Abil/FactoryLand"/>
         </Cost>
-        <InfoArray index="0" Unit="ScienceFacility" CollideRange="0">
+        <InfoArray index="0">
             <SectionArray index="Mover">
                 <DurationArray index="Duration" value="1.25"/>
             </SectionArray>
@@ -1869,7 +1851,7 @@
             <Charge Link="Abil/FactoryLand"/>
             <Cooldown Link="Abil/FactoryLand"/>
         </Cost>
-        <InfoArray index="0" Unit="EngineeringBay" CollideRange="0">
+        <InfoArray index="0">
             <SectionArray index="Mover">
                 <DurationArray index="Duration" value="1.25"/>
             </SectionArray>
@@ -1881,7 +1863,7 @@
             <Charge Link="Abil/FactoryLiftOff"/>
             <Cooldown Link="Abil/FactoryLiftOff"/>
         </Cost>
-        <InfoArray index="0" Unit="ScienceFacilityFlying">
+        <InfoArray index="0">
             <SectionArray index="Mover">
                 <DurationArray index="Duration" value="1.5"/>
             </SectionArray>
@@ -2252,6 +2234,49 @@
         <Activity value="UI/Building"/>
         <Alert value="TrainingCompletePing"/>
     </CAbilTrain>
+    <CAbilTrain id="BarracksTrainSC2BW" parent="BarracksTrain">
+        <Name value="Abil/Name/BarracksTrainSC2BW"/>
+        <InfoArray index="Train1" Time="45">
+            <Button DefaultButtonFace="Reaper"/>
+            <Unit index="0" value="Reaper"/>
+        </InfoArray>
+        <InfoArray index="Train2" Time="30">
+            <Button DefaultButtonFace="Marauder" Requirements="HaveAttachedTechLab"/>
+            <Unit index="0" value="Marauder"/>
+        </InfoArray>
+        <InfoArray index="Train3" Time="0">
+            <Button DefaultButtonFace="" State="Available" Requirements=""/>
+            <Unit index="0" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train4" Time="0">
+            <Button DefaultButtonFace="" State="Available" Requirements=""/>
+            <Unit index="0" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train5" Time="0">
+            <Button DefaultButtonFace="" State="Available" Requirements=""/>
+            <Unit index="0" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train6" Time="0">
+            <Button DefaultButtonFace="" State="Available" Requirements=""/>
+            <Unit index="0" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train9" Time="20.664">
+            <Button DefaultButtonFace="Marine" State="Restricted"/>
+            <Unit value="Marine"/>
+        </InfoArray>
+        <InfoArray index="Train10" Time="20.664">
+            <Button DefaultButtonFace="Firebat" State="Restricted" Requirements="HaveAcademy"/>
+            <Unit value="Firebat"/>
+        </InfoArray>
+        <InfoArray index="Train11" Time="25.83">
+            <Button DefaultButtonFace="Medic" State="Restricted" Requirements="HaveAcademy"/>
+            <Unit value="Medic"/>
+        </InfoArray>
+        <InfoArray index="Train12" Time="43.05">
+            <Button DefaultButtonFace="Ghost" State="Restricted" Requirements="HaveAcademyandCovertOps"/>
+            <Unit value="Ghost"/>
+        </InfoArray>
+    </CAbilTrain>
     <CAbilMorph id="BurrowDefiler">
         <AbilSetId value="BrwD"/>
         <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
@@ -2381,7 +2406,7 @@
             <Charge Link="Abil/FactoryLiftOff"/>
             <Cooldown Link="Abil/FactoryLiftOff"/>
         </Cost>
-        <InfoArray index="0" Unit="EngineeringBayFlying">
+        <InfoArray index="0">
             <SectionArray index="Mover">
                 <DurationArray index="Duration" value="1.5"/>
             </SectionArray>
@@ -2889,8 +2914,6 @@
             <Button DefaultButtonFace="ResearchSpiderMinesSC1" State="Restricted" Requirements="ResearchSpiderMines"/>
         </InfoArray>
         <InfoArray index="Research7" Time="86.1" Upgrade="IonThrusters">
-            <Resource index="Minerals" value="100"/>
-            <Resource index="Vespene" value="100"/>
             <Button DefaultButtonFace="ResearchIonThrusters" State="Restricted" Requirements="ResearchIonThrusters"/>
         </InfoArray>
         <Activity value="UI/Upgrading"/>
@@ -2914,6 +2937,30 @@
             <Button DefaultButtonFace=""/>
             <Unit index="0" removed="1"/>
             <Unit index="1" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train8" Time="30">
+            <Button DefaultButtonFace="" State="Available" Requirements=""/>
+            <Unit index="0" removed="1"/>
+            <Unit index="1" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train9" Time="0"/>
+        <InfoArray index="Train12" Time="45">
+            <Button Requirements="HaveAttachedTechLab"/>
+        </InfoArray>
+        <InfoArray index="Train13" Time="0">
+            <Button Requirements=""/>
+        </InfoArray>
+        <InfoArray index="Train24" Time="40">
+            <Button DefaultButtonFace="WidowMine"/>
+            <Unit value="WidowMine"/>
+        </InfoArray>
+        <InfoArray index="Train25" Time="0">
+            <Button DefaultButtonFace=""/>
+            <Unit index="0" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train29" Time="34.44">
+            <Button DefaultButtonFace="Goliath" State="Restricted" Requirements="HaveArmory"/>
+            <Unit value="Goliath"/>
         </InfoArray>
         <InfoArray index="Train30" Time="25.83">
             <Button DefaultButtonFace="Vulture"/>
@@ -3011,19 +3058,29 @@
     </CAbilTrain>
     <CAbilTrain id="StargateTrainSC2BW" parent="StargateTrain">
         <Name value="Abil/Name/StargateTrainSC2BW"/>
-        <InfoArray index="Train2">
-            <Unit index="0" value="Arbiter"/>
-            <Unit index="1" removed="1"/>
-        </InfoArray>
-        <InfoArray index="Train5" Time="80" Effect="">
+        <InfoArray index="Train1" Time="0">
             <Button DefaultButtonFace="" State="Available"/>
             <Unit index="0" removed="1"/>
         </InfoArray>
-        <InfoArray index="Train8" Time="123.5385">
-            <Button DefaultButtonFace="Carrier" Requirements="HaveFleetBeacon">
-                <Flags index="ToSelection" value="1"/>
-            </Button>
-            <Unit index="0" value="Carrier"/>
+        <InfoArray index="Train2" Time="80">
+            <Button DefaultButtonFace="" State="Available" Requirements=""/>
+            <Unit index="0" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train3" Time="80" Effect="">
+            <Button DefaultButtonFace="" State="Available" Requirements=""/>
+            <Unit index="0" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train5" Time="0" Effect="">
+            <Button DefaultButtonFace="" State="Available"/>
+            <Unit index="0" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train7" Time="0">
+            <Button DefaultButtonFace=""/>
+            <Unit index="0" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train8" Time="0">
+            <Button DefaultButtonFace=""/>
+            <Unit index="0" removed="1"/>
         </InfoArray>
         <InfoArray index="Train9" Time="0" Effect="">
             <Button DefaultButtonFace=""/>
@@ -3032,6 +3089,24 @@
         <InfoArray index="Train10" Time="0" Effect="">
             <Button DefaultButtonFace="" Requirements=""/>
             <Unit index="0" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train11" Time="123.5385">
+            <Button DefaultButtonFace="Carrier" Requirements="HaveFleetBeacon">
+                <Flags index="ToSelection" value="1"/>
+            </Button>
+            <Unit value="Carrier"/>
+        </InfoArray>
+        <InfoArray index="Train12" Time="68.88">
+            <Button DefaultButtonFace="WarpInScout"/>
+            <Unit value="Scout"/>
+        </InfoArray>
+        <InfoArray index="Train13" Time="137.76">
+            <Button DefaultButtonFace="WarpinArbiter" State="Restricted" Requirements="HaveArbiterTribunal"/>
+            <Unit value="Arbiter"/>
+        </InfoArray>
+        <InfoArray index="Train14" Time="34.44">
+            <Button DefaultButtonFace="Phoenix" State="Restricted"/>
+            <Unit value="Phoenix"/>
         </InfoArray>
     </CAbilTrain>
     <CAbilResearch id="StarportTechLabResearch">
@@ -3074,6 +3149,62 @@
         </InfoArray>
         <Activity value="UI/Building"/>
         <Alert value="TrainingCompletePing"/>
+    </CAbilTrain>
+    <CAbilTrain id="StarportTrainSC2BW" parent="StarportTrain">
+        <Name value="Abil/Name/StarportTrainSC2BW"/>
+        <InfoArray index="Train1" Time="60">
+            <Button DefaultButtonFace="Banshee" Requirements="HaveAttachedTechLab"/>
+            <Unit index="0" value="Banshee"/>
+        </InfoArray>
+        <InfoArray index="Train2">
+            <Button DefaultButtonFace="Raven"/>
+            <Unit index="0" value="Raven"/>
+        </InfoArray>
+        <InfoArray index="Train3" Time="43.05">
+            <Button DefaultButtonFace="VikingFighter" Requirements=""/>
+            <Unit index="0" value="VikingFighter"/>
+        </InfoArray>
+        <InfoArray index="Train4" Time="0">
+            <Button DefaultButtonFace="" State="Available" Requirements=""/>
+            <Unit index="0" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train5" Time="0">
+            <Button DefaultButtonFace="" State="Available"/>
+            <Unit index="0" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train6" Time="0">
+            <Button DefaultButtonFace=""/>
+            <Unit index="0" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train7" Time="0">
+            <Button DefaultButtonFace="" Requirements=""/>
+            <Unit index="0" removed="1"/>
+            <Unit index="1" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train8" Time="0">
+            <Button DefaultButtonFace="" State="Available" Requirements=""/>
+            <Unit index="0" removed="1"/>
+        </InfoArray>
+        <InfoArray index="Train9" Time="43.05">
+            <Button DefaultButtonFace="Medivac" State="Restricted" Requirements="HaveAttachedControlTower"/>
+            <Unit value="Medivac"/>
+        </InfoArray>
+        <InfoArray index="Train10" Time="51.66">
+            <Button DefaultButtonFace="Wraith"/>
+            <Unit value="Wraith"/>
+        </InfoArray>
+        <InfoArray index="Train11" Time="43.05">
+            <Button DefaultButtonFace="BuildValkyrie" State="Restricted" Requirements="HaveArmoryandAttachedControlTower"/>
+            <Unit value="VikingFighter"/>
+        </InfoArray>
+        <InfoArray index="Train12" Time="68.88">
+            <Button DefaultButtonFace="BuildScienceVessel" Requirements="HaveScienceFacilityandControlTower"/>
+            <Unit value="ScienceVessel"/>
+        </InfoArray>
+        <InfoArray index="Train13" Time="114.513">
+            <Button DefaultButtonFace="Battlecruiser" State="Restricted" Requirements="HaveScienceFacilitywithAttachedPhysicsLab"/>
+            <Unit value="Battlecruiser"/>
+        </InfoArray>
     </CAbilTrain>
     <CAbilEffectTarget id="StasisField">
         <EditorCategories value="AbilityorEffectType:Units"/>
@@ -3122,7 +3253,7 @@
         <EditorCategories value="AbilityorEffectType:Units"/>
     </CAbilEffectInstant>
     <CAbilMorph id="Unsiege">
-        <InfoArray index="0" Unit="SiegeTank" RandomDelayMax="0.5">
+        <InfoArray index="0">
             <SectionArray index="Abils">
                 <DurationArray index="Delay" value="3.5417"/>
             </SectionArray>
@@ -3134,7 +3265,7 @@
             <Resource index="Minerals" value="50"/>
             <Resource index="Vespene" value="50"/>
         </Cost>
-        <InfoArray index="0" Score="1" Unit="OrbitalCommand">
+        <InfoArray index="0">
             <SectionArray index="Abils">
                 <DurationArray index="Delay" value="40"/>
             </SectionArray>
@@ -3250,7 +3381,6 @@
         <Flags index="NoDeceleration" value="1"/>
         <Flags index="ReExecutable" value="1"/>
         <Flags index="Smart" value="1"/>
-        <Flags index="WaitToSpend" value="0"/>
         <Flags index="UpdateChargesOnLevelChange" value="0"/>
         <TargetFilters value="Biological,Visible;Self,Enemy,Structure,Missile,Uncommandable,Dead,Hidden,Invulnerable"/>
         <TargetSorts RequestCount="1">

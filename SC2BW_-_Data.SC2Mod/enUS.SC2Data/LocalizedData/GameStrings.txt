@@ -1,4 +1,5 @@
-Abil/Name/ArmoryResearchSC2BW=Research (Armory)
+﻿Abil/Name/ArmoryResearchSC2BW=Research (Armory)
+Abil/Name/BarracksTrainSC2BW=Train
 Abil/Name/BurrowLurkerDown=BurrowLurkerDown (Unnamed)
 Abil/Name/BurrowLurkerUp=BurrowLurkerUp (Unnamed)
 Abil/Name/CloakingField=Cloaking Field
@@ -14,6 +15,7 @@ Abil/Name/ScarabDumb=Scarab Dumb
 Abil/Name/ScarabSmart=Scarab Smart
 Abil/Name/SiegeModeSC2BW=Siege
 Abil/Name/StargateTrainSC2BW=Train (Stargate)
+Abil/Name/StarportTrainSC2BW=Train
 Abil/Name/UnknownAbility=Unknown Ability
 Abil/Name/VulturePatrol=Vulture - Patrol
 Abil/Name/heal=Heal
@@ -315,6 +317,7 @@ Button/Tooltip/Zergling=Fast melee creature.<n/><n/>HP - <c val="FF0000"><d ref=
 DocInfo/Author=MavercK
 DocInfo/Name=SC2 - Brood War ( SC2BW )
 DocInfo/Website=http://www.teamliquid.net/forum/viewmessage.php?topic_id=145316
+Effect/Name/ScarabDamageDummy=ScarabDamage (Dummy)
 LoadingScreen/Help03=Attacking Units on Higher Ground results in a 50% chance to Miss.
 LoadingScreen/Help04=Units attacking from fog reveal themselves to their enemy for 1.5 seconds.
 LoadingScreen/Help09=The key to a strong economy is constantly training SCVs, Probes, or (not really) Drones.

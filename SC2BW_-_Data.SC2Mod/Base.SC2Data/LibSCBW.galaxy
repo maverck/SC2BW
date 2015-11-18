@@ -1,112 +1,29 @@
 include "TriggerLibs/NativeLib"
 
+include "LibSCBW_h"
+
 //--------------------------------------------------------------------------------------------------
 // Library: SC2BW
 //--------------------------------------------------------------------------------------------------
-// Structures
-struct libSCBW_gs_GlobalPlayerVariables {
-    int lv_cameraMode;
-};
+// External Library Initialization
+void libSCBW_InitLibraries () {
+    libNtve_InitVariables();
+}
 
-struct libSCBW_gs_Dialogconstants {
-    int lv_dialogWindowHeight;
-    int lv_dialogWindowWidth;
-    int lv_dialogBorder;
-    int lv_dialogLogoHeight;
-    int lv_dialogLogoWidth;
-    string lv_dialogLogo;
-    string lv_dialogStatsButtonStyle;
-    int lv_dialogStatsButtonWidth;
-    int lv_dialogStatsButtonHeight;
-    int lv_dialogStatsButtonAmount;
-    int lv_dialogEditBoxWidth;
-    int lv_dialogEditBoxHeight;
-    text[5] lv_statsRaceButtonText;
-    int[16] lv_statsSelectedRace;
-    int[16] lv_statsSelectedPlayer;
-    bool[16] lv_statsDialogOpen;
-    int lv_statsDialogInformationSeperator;
-    int lv_openStatsDialogSize;
-};
-
-struct libSCBW_gs_Dialogs {
-    int[16] lv_statsDialog;
-    int[16] lv_rankingDialog;
-    int[16] lv_openStatsDialog;
-    int[16] lv_openStatsButton;
-    int[5][16] lv_statsDialogRaceButtons;
-    int[4][16] lv_statsDialogPlayerButtons;
-    int lv_realTimeMissionTimerDialog;
-    int lv_realTimeMissionTimer;
-};
-
-struct libSCBW_gs_OtherStats {
-    int[4][5] lv_osAPM;
-    int[4][5] lv_osAverageGameLength;
-    int[4][5] lv_osAverageGameLengthNEW;
-    int[4][5] lv_osTotalEnemyUnitsKilled;
-    int[4][5] lv_osTotalEnemyUnitsKilledNEW;
-    int[4][5] lv_osTotalUnitsLost;
-    int[4][5] lv_osTotalUnitsLostNEW;
-    int[4][5] lv_osTotalDamageDealt;
-    int[4][5] lv_osTotalDamageDealtNEW;
-    int[4][5] lv_osTotalDamageTaken;
-    int[4][5] lv_osTotalDamageTakenNEW;
-    int[4][5] lv_osAverageWorkersTrained;
-    int[4][5] lv_osAverageWorkersTrainedNEW;
-    timer lv_osMissionTime;
-};
-
-struct libSCBW_gs_LadderRecord {
-    string lv_encryptKey;
-    string[4] lv_playerID;
-    string lv_bankName;
-    bank[4] lv_playerBanks;
-    int[4][5] lv_playerPoints;
-    int[4][5] lv_playerWins;
-    int[4][5] lv_playerLosses;
-    int[4] lv_playerRace;
-    int[4][5][5][4] lv_playerMatchupStats;
-    string lv_gamemodeName;
-    string[4][14] lv_playerRatingName;
-    fixed[4] lv_winnerPoints;
-    fixed[4] lv_loserPoints;
-    bool lv_victoryDecided;
-    bool lv_ladderInitialized;
-};
-
-// Variables
-bool libSCBW_gv_usingSC2BWTestMap;
-text libSCBW_gv_version;
-libSCBW_gs_GlobalPlayerVariables libSCBW_gv_globalPlayerVars;
-int libSCBW_gv_gamemodeDialog;
-int libSCBW_gv_gamemodeListbox;
-int libSCBW_gv_gamemodeDialogSetButton;
-int libSCBW_gv_gamemode;
-point[51] libSCBW_gv_bases;
-int libSCBW_gv_baseCount;
-unitgroup libSCBW_gv_playerStartingUnits;
-playergroup libSCBW_gv_players;
-unitgroup libSCBW_gv_beingHarvested;
-unitgroup libSCBW_gv_workers;
-unit[257][9] libSCBW_gv_carriers;
-unit[101][2] libSCBW_gv_nydusLink;
-unitgroup libSCBW_gv_mineralFields;
-unitgroup[11][15] libSCBW_gv_controlGroups;
-unitgroup libSCBW_gv_breakForcedRallyInfiniteLoop;
-unitgroup libSCBW_gv_airUnits;
-unitgroup libSCBW_gv_ausMonitoredUnits;
-unitgroup libSCBW_gv_ausBeingSpread;
-libSCBW_gs_Dialogs libSCBW_gv_dialogs;
-libSCBW_gs_Dialogconstants libSCBW_gv_dialogconstants;
-libSCBW_gs_OtherStats libSCBW_gv_otherStats;
-libSCBW_gs_LadderRecord libSCBW_gv_ladderRecord;
+// Variable Initialization
+bool libSCBW_InitVariables_completed = false;
 
 void libSCBW_InitVariables () {
     int init_i;
     int init_j;
     int init_i1;
     int init_j1;
+
+    if (libSCBW_InitVariables_completed) {
+        return;
+    }
+
+    libSCBW_InitVariables_completed = true;
 
     libSCBW_gv_usingSC2BWTestMap = true;
     libSCBW_gv_version = StringExternal("Param/Value/lib_SCBW_E9AAE7CB");
@@ -185,177 +102,6 @@ void libSCBW_InitVariables () {
         }
     }
 }
-
-// Function Declarations
-void libSCBW_gf_StarcodeStartCode ();
-void libSCBW_gf_StarcodeStoreIntegerValue (int lp_value, int lp_maximumValue);
-void libSCBW_gf_StarcodeSetCode (string lp_code);
-void libSCBW_gf_StarcodeSetEncryptionAlphabet (string lp_string);
-string libSCBW_gf_StarcodeGetCode ();
-int libSCBW_gf_StarcodeGetIntegerValue (int lp_maximumValue);
-string libSCBW_gf_StarcodeEncryptString (string lp_toEncrypt, string lp_key);
-string libSCBW_gf_StarcodeCompressString (string lp_toCompress);
-string libSCBW_gf_StarcodeHashString (string lp_toHash, int lp_securityLevel);
-string libSCBW_gf_StarcodeRemoveHashfromString (string lp_string, int lp_securityLevel);
-bool libSCBW_gf_StarcodeValidateString (string lp_toCheck, int lp_securityLevel);
-string libSCBW_gf_StarcodeDecryptString (string lp_toDecrypt, string lp_key);
-string libSCBW_gf_StarcodeDecompressString (string lp_toDecompress);
-void libSCBW_gf_InitSC2BW ();
-void libSCBW_gf_FixMinimap ();
-void libSCBW_gf_FindBases ();
-void libSCBW_gf_FixBases ();
-void libSCBW_gf_FixSpawnPointsAndSpawnPlayers ();
-void libSCBW_gf_OverrideMeleeInitMoveStartingUnits ();
-void libSCBW_gf_RemoveMovedStartingUnits ();
-fixed libSCBW_gf_getDamageAmt (unit lp_source, unit lp_target, fixed lp_damage, int lp_damageModifier);
-void libSCBW_gf_ApplyDamage (unit lp_source, unit lp_target, string lp_sourceDamageEffect, string lp_damageApplyEffect, int lp_damageType, bool lp_miss);
-bool libSCBW_gf_Miss (unit lp_source, unit lp_target);
-point libSCBW_gf_getMissOffset (point lp_source, point lp_target);
-fixed libSCBW_gf_getExplosiveDamage (fixed lp_originalDamage, unit lp_target);
-fixed libSCBW_gf_getExplosiveDamageModifier (unit lp_target);
-fixed libSCBW_gf_getConcussiveDamage (fixed lp_originalDamage, unit lp_target);
-fixed libSCBW_gf_getConcussiveDamageModifier (unit lp_target);
-fixed libSCBW_gf_getModifiedDamage (fixed lp_damage, unit lp_target, int lp_modifier);
-void libSCBW_gf_AddStartingWorkersToGroup ();
-void libSCBW_gf_WorkerVariableSpeed ();
-bool libSCBW_gf_FreeMineralPatchNearby (unit lp_sourceUnit);
-void libSCBW_gf_CheckBuildingLarvaEgg (int lp_player, int lp_group);
-void libSCBW_gf_SetControlGrouptoBuilding (int lp_player, int lp_group, unit lp_unit);
-void libSCBW_gf_Deselect12Units (int lp_player);
-void libSCBW_gf_Deselect1Building (int lp_player);
-bool libSCBW_gf_CheckUnitStackingRestrictions (unitgroup lp_selectedUnits);
-bool libSCBW_gf_UnitatArrivedOrderPoint (unit lp_unit, order lp_order);
-void libSCBW_gf_CheckAirUnitsToSpread ();
-void libSCBW_gf_SpreadStackedAir (unit lp_unit);
-void libSCBW_gf_CheckMovement (int lp_player, int lp_startindex, unitgroup lp_allunits);
-void libSCBW_gf_CreateRealTimeTimer ();
-void libSCBW_gf_InitiateSpectatorCamera (int lp_player);
-void libSCBW_gf_CheckPlayersForSpectators ();
-void libSCBW_gf_sSetArrays ();
-void libSCBW_gf_sStatsInit ();
-void libSCBW_gf_sCreateStatsDialog (int lp_xOffset, int lp_yOffset, int lp_anchor, int lp_uIPlayer, int lp_statsPlayer, bool lp_skip);
-void libSCBW_gf_sCreateStatsDialogButtons (int lp_uIPlayer);
-void libSCBW_gf_sCreateStatsInformation (int lp_uIPlayer, int lp_statsPlayer, int lp_statsRace);
-void libSCBW_gf_sCreateOpenStatsButton (int lp_xOffset, int lp_yOffset, int lp_anchor);
-text libSCBW_gf_sGetMatchupStat (int lp_statsPlayer, int lp_statsRace, int lp_statsRace2, int lp_winLose, bool lp_getLose);
-int libSCBW_gf_sGetMatchupWinPercent (int lp_statsPlayer, int lp_statsRace2);
-void libSCBW_gf_osLoadBankValues (int lp_player);
-void libSCBW_gf_osUpdateStats (int lp_player);
-void libSCBW_gf_osUpdateAPM (int lp_player);
-void libSCBW_gf_osUpdateAverageGameLength (int lp_player);
-void libSCBW_gf_osUpdateWorkersTrained (int lp_player);
-void libSCBW_gf_osUpdateEnemyKilled (int lp_player);
-void libSCBW_gf_osUpdateUnitsLost (int lp_player);
-void libSCBW_gf_osUpdateDamageDealt (int lp_player);
-void libSCBW_gf_osUpdateDamageTaken (int lp_player);
-void libSCBW_gf_osSaveStats (int lp_player);
-void libSCBW_gf_lInit (int lp_player);
-void libSCBW_gf_lSetVariables ();
-bool libSCBW_gf_lCheckLadderConditions ();
-void libSCBW_gf_lLadderErrors ();
-void libSCBW_gf_lPreloadBanks ();
-void libSCBW_gf_lLoadBank (int lp_player);
-void libSCBW_gf_lDisplayLadderRating (int lp_player);
-int libSCBW_gf_lCheckNumberofPlayers ();
-bool libSCBW_gf_lCheckforUsers ();
-void libSCBW_gf_lLoadLadderStats (int lp_player);
-void libSCBW_gf_lLoadMatchupStats (int lp_player);
-int libSCBW_gf_lCheckGameMode ();
-void libSCBW_gf_lSetGameMode ();
-void libSCBW_gf_lCheckPlayerPointsNotBelowThreshold (int lp_player);
-int libSCBW_gf_lGetRating (int lp_player);
-int libSCBW_gf_lGetRatingSelectedRace (int lp_player, int lp_uIPlayer);
-int libSCBW_gf_lGetRace (int lp_player);
-text libSCBW_gf_lGetRaceLetter (int lp_player);
-text libSCBW_gf_lGetRaceLetterFromInteger (int lp_race);
-int libSCBW_gf_lGetOpponent (int lp_player);
-string libSCBW_gf_lGetPlayerID (int lp_player);
-void libSCBW_gf_lLoadPlayerID (int lp_player);
-string libSCBW_gf_lCreateNewPlayerID ();
-void libSCBW_gf_lSetInitialLose ();
-void libSCBW_gf_lSetAdjustPointsRank (int lp_player);
-void libSCBW_gf_lSetAdjustPointsRankD (int lp_player);
-void libSCBW_gf_lSetAdjustPointsRankC (int lp_player);
-void libSCBW_gf_lSetAdjustPointsRankB (int lp_player);
-void libSCBW_gf_lSetAdjustPointsRankA (int lp_player);
-bool libSCBW_gf_lCheckPlayerStatus (int lp_player);
-void libSCBW_gf_lAwardWinner (int lp_player);
-void libSCBW_gf_lLoseforLoser (int lp_player);
-void libSCBW_gf_lSaveLadder (int lp_player);
-void libSCBW_gf_lSaveLadderStats (int lp_player);
-void libSCBW_gf_lSaveMatchupStats (int lp_player);
-void libSCBW_gf_lSaveStartingStats (int lp_player);
-
-// Trigger Declarations
-trigger libSCBW_gt_Init;
-trigger libSCBW_gt_GameModeText;
-trigger libSCBW_gt_Updateevery1second;
-trigger libSCBW_gt_Updateevery00625;
-trigger libSCBW_gt_DroppedFromTransport;
-trigger libSCBW_gt_DamageHydralisk;
-trigger libSCBW_gt_DamageDragoon;
-trigger libSCBW_gt_DamageMarine;
-trigger libSCBW_gt_DamageGhost;
-trigger libSCBW_gt_DamageVulture;
-trigger libSCBW_gt_DamageGoliath;
-trigger libSCBW_gt_DamageSiegeTank;
-trigger libSCBW_gt_DamageSiegeTankSieged;
-trigger libSCBW_gt_DamageSpiderMine;
-trigger libSCBW_gt_DamageYamato;
-trigger libSCBW_gt_WorkerIsCreated;
-trigger libSCBW_gt_IdentifyHarvesting;
-trigger libSCBW_gt_FinishedHarvesting;
-trigger libSCBW_gt_DisableWaitatResource;
-trigger libSCBW_gt_MineralFieldSpecial;
-trigger libSCBW_gt_AttackReveal;
-trigger libSCBW_gt_PatrolIssued;
-trigger libSCBW_gt_ScarabPathing;
-trigger libSCBW_gt_LimitActiveScarabs;
-trigger libSCBW_gt_CarrierCreated;
-trigger libSCBW_gt_InterceptorCreated;
-trigger libSCBW_gt_CarrierOrderedToAttack;
-trigger libSCBW_gt_CarrierLoop;
-trigger libSCBW_gt_NydusCreatesExit;
-trigger libSCBW_gt_UnitEntersNydus;
-trigger libSCBW_gt_ExitDies;
-trigger libSCBW_gt_UnitUsesBattery;
-trigger libSCBW_gt_Corsair;
-trigger libSCBW_gt_Devourer;
-trigger libSCBW_gt_Firebat;
-trigger libSCBW_gt_Ghost;
-trigger libSCBW_gt_GoliathMissiles;
-trigger libSCBW_gt_Hydralisk;
-trigger libSCBW_gt_InfestedTerran;
-trigger libSCBW_gt_MissileTurret;
-trigger libSCBW_gt_SunkenColony;
-trigger libSCBW_gt_VultureGrenade;
-trigger libSCBW_gt_WraithMissiles;
-trigger libSCBW_gt_MovingShot;
-trigger libSCBW_gt_SpiderMineDetectCloaked;
-trigger libSCBW_gt_Scarabbecomesidle;
-trigger libSCBW_gt_RemovewhenShieldDepleted;
-trigger libSCBW_gt_InfestUsed;
-trigger libSCBW_gt_GrantVision;
-trigger libSCBW_gt_Hallucination;
-trigger libSCBW_gt_LimitSelection;
-trigger libSCBW_gt_CTRL12UnitLimitonControlGroups;
-trigger libSCBW_gt_SHIFT12UnitLimitonControlGroups;
-trigger libSCBW_gt_DisableAutomine;
-trigger libSCBW_gt_DisableRallyIdleWorkerButton;
-trigger libSCBW_gt_DisableSmartCast;
-trigger libSCBW_gt_ZergForcedRally;
-trigger libSCBW_gt_DisableBestUnitLarvaMorphAbility;
-trigger libSCBW_gt_AirUnitCreated;
-trigger libSCBW_gt_ComsatGains50EnergyonCompletion;
-trigger libSCBW_gt_UnitTakesDamage;
-trigger libSCBW_gt_UnitSelected;
-trigger libSCBW_gt_DisablePushing;
-trigger libSCBW_gt_CheckMovementThreads;
-trigger libSCBW_gt_LadderInit;
-trigger libSCBW_gt_sOpenStatsButtonPressed;
-trigger libSCBW_gt_sStatsDialogButtonPressed;
-trigger libSCBW_gt_osUpdateStats;
-trigger libSCBW_gt_CheckPlayerStatus;
 
 // Custom Script
 //--------------------------------------------------------------------------------------------------
@@ -673,6 +419,7 @@ string STARCODE_Hash(string toHash, int keyLength){
 void libSCBW_InitCustomScript () {
 }
 
+// Presets
 // Functions
 void libSCBW_gf_StarcodeStartCode () {
     // Implementation
@@ -1073,13 +820,13 @@ fixed libSCBW_gf_getModifiedDamage (fixed lp_damage, unit lp_target, int lp_modi
 
     // Implementation
     auto02C75EC9_val = lp_modifier;
-    if (auto02C75EC9_val == 0) {
+    if (auto02C75EC9_val == libSCBW_ge_DamageModifier_None) {
         return lp_damage;
     }
-    else if (auto02C75EC9_val == 1) {
+    else if (auto02C75EC9_val == libSCBW_ge_DamageModifier_Explosive) {
         return libSCBW_gf_getExplosiveDamage(lp_damage, lp_target);
     }
-    else if (auto02C75EC9_val == 2) {
+    else if (auto02C75EC9_val == libSCBW_ge_DamageModifier_Concussive) {
         return libSCBW_gf_getConcussiveDamage(lp_damage, lp_target);
     }
     else {
@@ -1356,11 +1103,7 @@ void libSCBW_gf_SpreadStackedAir (unit lp_unit) {
     // Implementation
     if ((UnitIsAlive(lp_unit) == true)) {
         if ((libSCBW_gf_UnitatArrivedOrderPoint(lp_unit, UnitOrder(lp_unit, 0)) == true)) {
-            if ((UnitOrder(lp_unit, 0) == Order(AbilityCommand("move", 2)))) {
-            }
-            else {
-                UnitIssueOrder(lp_unit, Order(AbilityCommand("stop", 0)), c_orderQueueReplace);
-            }
+            UnitIssueOrder(lp_unit, Order(AbilityCommand("stop", 0)), c_orderQueueReplace);
         }
         else {
         }
@@ -1408,8 +1151,8 @@ bool auto_libSCBW_gf_CheckMovement_TriggerFunc (bool testConds, bool runActions)
     // Implementation
     while ((lv_index < lv_endindex)) {
         lv_pickedunit = UnitGroupUnit(lv_allunits, lv_index);
-        if ((((UnitGetType(lv_pickedunit) != "Stalker") && (UnitGetType(lv_pickedunit) != "WeaponReaverScarabSmart") && (UnitGetType(lv_pickedunit) != "WeaponReaverScarabDumb")) && (UnitOrderCount(lv_pickedunit) > 0) && (UnitHasBehavior(lv_pickedunit, "WorkerIsMining") == false) && (UnitGroupCount(UnitGroup(null, lp_player, RegionCircle(PointWithOffsetPolar(UnitGetPosition(lv_pickedunit), (UnitGetPropertyFixed(lv_pickedunit, c_unitPropRadius, c_unitPropCurrent) * 0.75), UnitGetFacing(lv_pickedunit)), (UnitGetPropertyFixed(lv_pickedunit, c_unitPropRadius, c_unitPropCurrent) * 1.5)), UnitFilter((1 << c_targetFilterGround), 0, (1 << c_targetFilterAir) | (1 << c_targetFilterRawResource) | (1 << c_targetFilterHarvestableResource) | (1 << c_targetFilterMissile) | (1 << c_targetFilterItem) | (1 << c_targetFilterBuried) | (1 << c_targetFilterStasis), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAlive) > 0))) {
-            UnitGroupAddUnitGroup(lv_unitsinfront, UnitGroup(null, c_playerAny, RegionCircle(PointWithOffsetPolar(UnitGetPosition(lv_pickedunit), (UnitGetPropertyFixed(lv_pickedunit, c_unitPropRadius, c_unitPropCurrent) * 0.75), UnitGetFacing(lv_pickedunit)), (UnitGetPropertyFixed(lv_pickedunit, c_unitPropRadius, c_unitPropCurrent) * 1.5)), UnitFilter((1 << c_targetFilterGround), 0, (1 << c_targetFilterAir) | (1 << c_targetFilterRawResource) | (1 << c_targetFilterHarvestableResource) | (1 << c_targetFilterMissile) | (1 << c_targetFilterItem) | (1 << c_targetFilterBuried) | (1 << c_targetFilterStasis), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0));
+        if ((((UnitGetType(lv_pickedunit) != "Stalker") && (UnitGetType(lv_pickedunit) != "WeaponReaverScarabSmart") && (UnitGetType(lv_pickedunit) != "WeaponReaverScarabDumb")) && (UnitOrderCount(lv_pickedunit) > 0) && (UnitHasBehavior(lv_pickedunit, "WorkerIsMining") == false) && (UnitGroupCount(UnitGroup(null, lp_player, RegionCircle(PointWithOffsetPolar(UnitGetPosition(lv_pickedunit), (UnitGetPropertyFixed(lv_pickedunit, c_unitPropRadius, c_unitPropCurrent) * 0.75), UnitGetFacing(lv_pickedunit)), (UnitGetPropertyFixed(lv_pickedunit, c_unitPropRadius, c_unitPropCurrent) * 1.5)), UnitFilter((1 << c_targetFilterGround), 0, (1 << c_targetFilterAir) | (1 << c_targetFilterRawResource) | (1 << c_targetFilterHarvestableResource) | (1 << c_targetFilterMissile) | (1 << c_targetFilterItem) | (1 << c_targetFilterBuried), (1 << (c_targetFilterStasis - 32)) | (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAlive) > 0))) {
+            UnitGroupAddUnitGroup(lv_unitsinfront, UnitGroup(null, c_playerAny, RegionCircle(PointWithOffsetPolar(UnitGetPosition(lv_pickedunit), (UnitGetPropertyFixed(lv_pickedunit, c_unitPropRadius, c_unitPropCurrent) * 0.75), UnitGetFacing(lv_pickedunit)), (UnitGetPropertyFixed(lv_pickedunit, c_unitPropRadius, c_unitPropCurrent) * 1.5)), UnitFilter((1 << c_targetFilterGround), 0, (1 << c_targetFilterAir) | (1 << c_targetFilterRawResource) | (1 << c_targetFilterHarvestableResource) | (1 << c_targetFilterMissile) | (1 << c_targetFilterItem) | (1 << c_targetFilterBuried), (1 << (c_targetFilterStasis - 32)) | (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0));
             UnitGroupRemove(lv_unitsinfront, lv_pickedunit);
             if ((UnitHasBehavior(UnitGroupRandomUnit(lv_unitsinfront, c_unitCountAlive), "WorkerIsMining") == false) && (UnitOrderCount(UnitGroupRandomUnit(lv_unitsinfront, c_unitCountAlive)) != 0) && (UnitHasBehavior(UnitGroupRandomUnit(lv_unitsinfront, c_unitCountAlive), "StopMovement") == false) && (UnitHasBehavior(lv_pickedunit, "StopMovement") == false)) {
                 UnitSetCustomValue(lv_pickedunit, 47, (UnitGetCustomValue(lv_pickedunit, 47) + 1.0));
@@ -1431,14 +1174,15 @@ bool auto_libSCBW_gf_CheckMovement_TriggerFunc (bool testConds, bool runActions)
 
 void libSCBW_gf_CreateRealTimeTimer () {
     // Implementation
-    DialogCreate(libSCBW_gv_dialogconstants.lv_dialogStatsButtonWidth, libSCBW_gv_dialogconstants.lv_dialogStatsButtonHeight, c_anchorBottomLeft, 175, 290, true);
+    DialogCreate(libSCBW_gv_dialogconstants.lv_dialogStatsButtonWidth, libSCBW_gv_dialogconstants.lv_dialogStatsButtonHeight, c_anchorBottomLeft, 175, 297, true);
     libSCBW_gv_dialogs.lv_realTimeMissionTimerDialog = DialogLastCreated();
     DialogSetImageVisible(DialogLastCreated(), false);
     libNtve_gf_CreateDialogItemLabel(libSCBW_gv_dialogs.lv_realTimeMissionTimerDialog, libSCBW_gv_dialogconstants.lv_dialogStatsButtonWidth, libSCBW_gv_dialogconstants.lv_dialogStatsButtonHeight, c_anchorCenter, 10, 7, FormatDuration(FixedToInt(TimerGetElapsed(libSCBW_gv_otherStats.lv_osMissionTime))), Color(100,100,100), false, 2.0);
     libSCBW_gv_dialogs.lv_realTimeMissionTimer = DialogControlLastCreated();
     libNtve_gf_SetDialogItemRenderPriority(DialogControlLastCreated(), 1024, PlayerGroupAll());
     DialogSetVisible(libSCBW_gv_dialogs.lv_realTimeMissionTimerDialog, PlayerGroupAll(), true);
-    libNtve_gf_CreateDialogItemImage(libSCBW_gv_dialogs.lv_realTimeMissionTimerDialog, 90, 30, c_anchorTopLeft, 0, 0, StringExternal("Param/Value/lib_SCBW_095A2CF8"), "Assets\\Textures\\black.dds", c_triggerImageTypeNone, true, ColorWithAlpha(0.00, 0.00, 0.00, 49.80), c_triggerBlendModeNormal);
+    libNtve_gf_CreateDialogItemImage(libSCBW_gv_dialogs.lv_realTimeMissionTimerDialog, 90, 30, c_anchorTopLeft, 0, 0, StringToText(""), "Assets\\Textures\\black.dds", c_triggerImageTypeNone, true, ColorWithAlpha(0.00, 0.00, 0.00, 49.80), c_triggerBlendModeNormal);
+    UISetFrameVisible(PlayerGroupAll(), c_syncFrameTypeMissionTimePanel, false);
 }
 
 void libSCBW_gf_InitiateSpectatorCamera (int lp_player) {
@@ -1558,7 +1302,7 @@ void libSCBW_gf_sCreateStatsDialogButtons (int lp_uIPlayer) {
     autoAB115BD7_n = 2;
     for (autoAB115BD7_i = 1; autoAB115BD7_i <= autoAB115BD7_n; autoAB115BD7_i += 1) {
         lv_offset = (lv_n * libSCBW_gv_dialogconstants.lv_dialogStatsButtonWidth);
-        libNtve_gf_CreateDialogItemButton(libSCBW_gv_dialogs.lv_statsDialog[lp_uIPlayer], libSCBW_gv_dialogconstants.lv_dialogStatsButtonWidth, libSCBW_gv_dialogconstants.lv_dialogStatsButtonHeight, c_anchorTopLeft, (libSCBW_gv_dialogconstants.lv_dialogBorder + lv_offset), libSCBW_gv_dialogconstants.lv_dialogBorder, StringExternal("Param/Value/lib_SCBW_8903E40A"), PlayerName(lv_i), "");
+        libNtve_gf_CreateDialogItemButton(libSCBW_gv_dialogs.lv_statsDialog[lp_uIPlayer], libSCBW_gv_dialogconstants.lv_dialogStatsButtonWidth, libSCBW_gv_dialogconstants.lv_dialogStatsButtonHeight, c_anchorTopLeft, (libSCBW_gv_dialogconstants.lv_dialogBorder + lv_offset), libSCBW_gv_dialogconstants.lv_dialogBorder, StringToText(""), PlayerName(lv_i), "");
         libSCBW_gv_dialogs.lv_statsDialogPlayerButtons[lv_i][lp_uIPlayer] = DialogControlLastCreated();
         DialogControlFadeTransparency(DialogControlLastCreated(), PlayerGroupSingle(lp_uIPlayer), 0.0, 100.0);
         DialogControlFadeTransparency(DialogControlLastCreated(), PlayerGroupSingle(lp_uIPlayer), 0.5, 0.0);
@@ -1570,7 +1314,7 @@ void libSCBW_gf_sCreateStatsDialogButtons (int lp_uIPlayer) {
     autoB47AC7C1_n = 3;
     for (autoB47AC7C1_i = 1; autoB47AC7C1_i <= autoB47AC7C1_n; autoB47AC7C1_i += 1) {
         lv_offset = (lv_n * libSCBW_gv_dialogconstants.lv_dialogStatsButtonWidth);
-        libNtve_gf_CreateDialogItemButton(libSCBW_gv_dialogs.lv_statsDialog[lp_uIPlayer], libSCBW_gv_dialogconstants.lv_dialogStatsButtonWidth, libSCBW_gv_dialogconstants.lv_dialogStatsButtonHeight, c_anchorTopLeft, (libSCBW_gv_dialogconstants.lv_dialogBorder + lv_offset), (libSCBW_gv_dialogconstants.lv_dialogBorder + libSCBW_gv_dialogconstants.lv_dialogStatsButtonHeight), StringExternal("Param/Value/lib_SCBW_5FB6C471"), libSCBW_gv_dialogconstants.lv_statsRaceButtonText[lv_i], "");
+        libNtve_gf_CreateDialogItemButton(libSCBW_gv_dialogs.lv_statsDialog[lp_uIPlayer], libSCBW_gv_dialogconstants.lv_dialogStatsButtonWidth, libSCBW_gv_dialogconstants.lv_dialogStatsButtonHeight, c_anchorTopLeft, (libSCBW_gv_dialogconstants.lv_dialogBorder + lv_offset), (libSCBW_gv_dialogconstants.lv_dialogBorder + libSCBW_gv_dialogconstants.lv_dialogStatsButtonHeight), StringToText(""), libSCBW_gv_dialogconstants.lv_statsRaceButtonText[lv_i], "");
         libSCBW_gv_dialogs.lv_statsDialogRaceButtons[lv_i][lp_uIPlayer] = DialogControlLastCreated();
         DialogControlFadeTransparency(DialogControlLastCreated(), PlayerGroupSingle(lp_uIPlayer), 0.0, 100.0);
         DialogControlFadeTransparency(DialogControlLastCreated(), PlayerGroupSingle(lp_uIPlayer), 0.5, 0.0);
@@ -2940,7 +2684,7 @@ bool libSCBW_gt_DamageHydralisk_Func (bool testConds, bool runActions) {
         return true;
     }
 
-    libSCBW_gf_ApplyDamage(lv_source, lv_target, "NeedleSpinesDamage", "NeedleSpinesNull", 1, libSCBW_gf_Miss(lv_source, lv_target));
+    libSCBW_gf_ApplyDamage(lv_source, lv_target, "NeedleSpinesDamage", "NeedleSpinesNull", libSCBW_ge_DamageModifier_Explosive, libSCBW_gf_Miss(lv_source, lv_target));
     return true;
 }
 
@@ -2967,7 +2711,7 @@ bool libSCBW_gt_DamageDragoon_Func (bool testConds, bool runActions) {
         return true;
     }
 
-    libSCBW_gf_ApplyDamage(lv_source, lv_target, "ParticleDisruptorsU", "ParticleDisruptorsU3", 1, libSCBW_gf_Miss(lv_source, lv_target));
+    libSCBW_gf_ApplyDamage(lv_source, lv_target, "ParticleDisruptorsU", "ParticleDisruptorsU3", libSCBW_ge_DamageModifier_Explosive, libSCBW_gf_Miss(lv_source, lv_target));
     return true;
 }
 
@@ -2975,6 +2719,33 @@ bool libSCBW_gt_DamageDragoon_Func (bool testConds, bool runActions) {
 void libSCBW_gt_DamageDragoon_Init () {
     libSCBW_gt_DamageDragoon = TriggerCreate("libSCBW_gt_DamageDragoon_Func");
     TriggerAddEventPlayerEffectUsed(libSCBW_gt_DamageDragoon, c_playerAny, "EntropyLanceSet");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: DamageScarab
+//--------------------------------------------------------------------------------------------------
+bool libSCBW_gt_DamageScarab_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    unit lv_source;
+    unit lv_target;
+
+    // Variable Initialization
+    lv_source = EventPlayerEffectUsedUnit(c_effectUnitCaster);
+    lv_target = EventPlayerEffectUsedUnit(c_effectUnitTarget);
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    libSCBW_gf_ApplyDamage(lv_source, lv_target, "ScarabDamage", "ScarabDamageDummy", libSCBW_ge_DamageModifier_Explosive, false);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libSCBW_gt_DamageScarab_Init () {
+    libSCBW_gt_DamageScarab = TriggerCreate("libSCBW_gt_DamageScarab_Func");
+    TriggerAddEventPlayerEffectUsed(libSCBW_gt_DamageScarab, c_playerAny, "ScarabSet");
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -2994,7 +2765,7 @@ bool libSCBW_gt_DamageMarine_Func (bool testConds, bool runActions) {
         return true;
     }
 
-    libSCBW_gf_ApplyDamage(lv_source, lv_target, "GuassRifle", "GuassRifleNull", 0, libSCBW_gf_Miss(lv_source, lv_target));
+    libSCBW_gf_ApplyDamage(lv_source, lv_target, "GuassRifle", "GuassRifleNull", libSCBW_ge_DamageModifier_None, libSCBW_gf_Miss(lv_source, lv_target));
     return true;
 }
 
@@ -3021,7 +2792,7 @@ bool libSCBW_gt_DamageGhost_Func (bool testConds, bool runActions) {
         return true;
     }
 
-    libSCBW_gf_ApplyDamage(lv_source, lv_target, "C10CanisterRifle", "C10CanisterRifleNull", 2, libSCBW_gf_Miss(lv_source, lv_target));
+    libSCBW_gf_ApplyDamage(lv_source, lv_target, "C10CanisterRifle", "C10CanisterRifleNull", libSCBW_ge_DamageModifier_Concussive, libSCBW_gf_Miss(lv_source, lv_target));
     return true;
 }
 
@@ -3048,7 +2819,7 @@ bool libSCBW_gt_DamageVulture_Func (bool testConds, bool runActions) {
         return true;
     }
 
-    libSCBW_gf_ApplyDamage(lv_source, lv_target, "VultureU", "VultureUNull", 2, libSCBW_gf_Miss(lv_source, lv_target));
+    libSCBW_gf_ApplyDamage(lv_source, lv_target, "VultureU", "VultureUNull", libSCBW_ge_DamageModifier_Concussive, libSCBW_gf_Miss(lv_source, lv_target));
     return true;
 }
 
@@ -3075,7 +2846,7 @@ bool libSCBW_gt_DamageGoliath_Func (bool testConds, bool runActions) {
         return true;
     }
 
-    libSCBW_gf_ApplyDamage(lv_source, lv_target, "GoliathG", "GoliathGNull", 0, libSCBW_gf_Miss(lv_source, lv_target));
+    libSCBW_gf_ApplyDamage(lv_source, lv_target, "GoliathG", "GoliathGNull", libSCBW_ge_DamageModifier_None, libSCBW_gf_Miss(lv_source, lv_target));
     return true;
 }
 
@@ -3102,7 +2873,7 @@ bool libSCBW_gt_DamageSiegeTank_Func (bool testConds, bool runActions) {
         return true;
     }
 
-    libSCBW_gf_ApplyDamage(lv_source, lv_target, "90mmCannons", "ArcliteCannonNullDamage", 1, libSCBW_gf_Miss(lv_source, lv_target));
+    libSCBW_gf_ApplyDamage(lv_source, lv_target, "90mmCannons", "ArcliteCannonNullDamage", libSCBW_ge_DamageModifier_Explosive, libSCBW_gf_Miss(lv_source, lv_target));
     return true;
 }
 
@@ -3129,7 +2900,7 @@ bool libSCBW_gt_DamageSiegeTankSieged_Func (bool testConds, bool runActions) {
         return true;
     }
 
-    libSCBW_gf_ApplyDamage(lv_source, lv_target, "CrucioShockCannonDummy", "CrucioShockCannonBlast", 1, libSCBW_gf_Miss(lv_source, lv_target));
+    libSCBW_gf_ApplyDamage(lv_source, lv_target, "CrucioShockCannonDummy", "CrucioShockCannonBlast", libSCBW_ge_DamageModifier_Explosive, libSCBW_gf_Miss(lv_source, lv_target));
     return true;
 }
 
@@ -3156,7 +2927,7 @@ bool libSCBW_gt_DamageSpiderMine_Func (bool testConds, bool runActions) {
         return true;
     }
 
-    libSCBW_gf_ApplyDamage(lv_source, lv_target, "SpiderMineDamage", "SpiderMineNullDamage", 1, libSCBW_gf_Miss(lv_source, lv_target));
+    libSCBW_gf_ApplyDamage(lv_source, lv_target, "SpiderMineDamage", "SpiderMineNullDamage", libSCBW_ge_DamageModifier_Explosive, libSCBW_gf_Miss(lv_source, lv_target));
     UnitKill(lv_source);
     return true;
 }
@@ -3184,7 +2955,7 @@ bool libSCBW_gt_DamageYamato_Func (bool testConds, bool runActions) {
         return true;
     }
 
-    libSCBW_gf_ApplyDamage(lv_source, lv_target, "YamatoU", "YamatoU2", 1, libSCBW_gf_Miss(lv_source, lv_target));
+    libSCBW_gf_ApplyDamage(lv_source, lv_target, "YamatoU", "YamatoU2", libSCBW_ge_DamageModifier_Explosive, libSCBW_gf_Miss(lv_source, lv_target));
     return true;
 }
 
@@ -3280,12 +3051,6 @@ void libSCBW_gt_FinishedHarvesting_Init () {
 // Trigger: Disable Wait at Resource
 //--------------------------------------------------------------------------------------------------
 bool libSCBW_gt_DisableWaitatResource_Func (bool testConds, bool runActions) {
-    // Variable Declarations
-    fixed lv_mineralSearchRadius;
-
-    // Variable Initialization
-    lv_mineralSearchRadius = 8.0;
-
     // Conditions
     if (testConds) {
         if (!((UnitGetType(EventUnitTargetUnit()) == "MineralField"))) {
@@ -3301,13 +3066,13 @@ bool libSCBW_gt_DisableWaitatResource_Func (bool testConds, bool runActions) {
     Wait(0.0625, c_timeGame);
     if (((UnitHasBehavior(EventUnit(), "IdentifyHarvesting") == false) && (libSCBW_gf_FreeMineralPatchNearby(EventUnit()) == true))) {
         if ((UnitGetType(EventUnit()) == "SCV")) {
-            UnitIssueOrder(EventUnit(), OrderTargetingUnit(AbilityCommand("SCVHarvest", 0), UnitGroupRandomUnit(UnitGroup("MineralField", c_playerAny, RegionCircle(UnitGetPosition(EventUnit()), lv_mineralSearchRadius), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAll)), c_orderQueueReplace);
+            UnitIssueOrder(EventUnit(), OrderTargetingUnit(AbilityCommand("SCVHarvest", 0), UnitGroupRandomUnit(UnitGroup("MineralField", c_playerAny, RegionCircle(UnitGetPosition(EventUnit()), 10.0), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAll)), c_orderQueueReplace);
         }
         else if ((UnitGetType(EventUnit()) == "Drone")) {
-            UnitIssueOrder(EventUnit(), OrderTargetingUnit(AbilityCommand("DroneHarvest", 0), UnitGroupRandomUnit(UnitGroup("MineralField", c_playerAny, RegionCircle(UnitGetPosition(EventUnit()), lv_mineralSearchRadius), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAll)), c_orderQueueReplace);
+            UnitIssueOrder(EventUnit(), OrderTargetingUnit(AbilityCommand("DroneHarvest", 0), UnitGroupRandomUnit(UnitGroup("MineralField", c_playerAny, RegionCircle(UnitGetPosition(EventUnit()), 10.0), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAll)), c_orderQueueReplace);
         }
         else if ((UnitGetType(EventUnit()) == "Probe")) {
-            UnitIssueOrder(EventUnit(), OrderTargetingUnit(AbilityCommand("ProbeHarvest", 0), UnitGroupRandomUnit(UnitGroup("MineralField", c_playerAny, RegionCircle(UnitGetPosition(EventUnit()), lv_mineralSearchRadius), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAll)), c_orderQueueReplace);
+            UnitIssueOrder(EventUnit(), OrderTargetingUnit(AbilityCommand("ProbeHarvest", 0), UnitGroupRandomUnit(UnitGroup("MineralField", c_playerAny, RegionCircle(UnitGetPosition(EventUnit()), 10.0), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAll)), c_orderQueueReplace);
         }
     }
     else {
@@ -3327,12 +3092,6 @@ void libSCBW_gt_DisableWaitatResource_Init () {
 // Trigger: MineralFieldSpecial
 //--------------------------------------------------------------------------------------------------
 bool libSCBW_gt_MineralFieldSpecial_Func (bool testConds, bool runActions) {
-    // Variable Declarations
-    fixed lv_mineralSearchRadius;
-
-    // Variable Initialization
-    lv_mineralSearchRadius = 8.0;
-
     // Actions
     if (!runActions) {
         return true;
@@ -3341,13 +3100,13 @@ bool libSCBW_gt_MineralFieldSpecial_Func (bool testConds, bool runActions) {
     UnitBehaviorRemove(EventUnit(), "CarryMineralFieldMineralsSpecial", 1);
     UnitSetPropertyFixed(EventUnit(), c_unitPropCarriedMinerals, 0.0);
     if ((UnitGetType(EventUnit()) == "SCV")) {
-        UnitIssueOrder(EventUnit(), OrderTargetingUnit(AbilityCommand("SCVHarvest", 0), UnitGroupRandomUnit(UnitGroup("MineralFieldSpecial", c_playerAny, RegionCircle(UnitGetPosition(EventUnit()), lv_mineralSearchRadius), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAll)), c_orderQueueReplace);
+        UnitIssueOrder(EventUnit(), OrderTargetingUnit(AbilityCommand("SCVHarvest", 0), UnitGroupRandomUnit(UnitGroup("MineralFieldSpecial", c_playerAny, RegionCircle(UnitGetPosition(EventUnit()), 10.0), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAll)), c_orderQueueReplace);
     }
     else if ((UnitGetType(EventUnit()) == "Drone")) {
-        UnitIssueOrder(EventUnit(), OrderTargetingUnit(AbilityCommand("DroneHarvest", 0), UnitGroupRandomUnit(UnitGroup("MineralFieldSpecial", c_playerAny, RegionCircle(UnitGetPosition(EventUnit()), lv_mineralSearchRadius), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAll)), c_orderQueueReplace);
+        UnitIssueOrder(EventUnit(), OrderTargetingUnit(AbilityCommand("DroneHarvest", 0), UnitGroupRandomUnit(UnitGroup("MineralFieldSpecial", c_playerAny, RegionCircle(UnitGetPosition(EventUnit()), 10.0), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAll)), c_orderQueueReplace);
     }
     else if ((UnitGetType(EventUnit()) == "Probe")) {
-        UnitIssueOrder(EventUnit(), OrderTargetingUnit(AbilityCommand("ProbeHarvest", 0), UnitGroupRandomUnit(UnitGroup("MineralFieldSpecial", c_playerAny, RegionCircle(UnitGetPosition(EventUnit()), lv_mineralSearchRadius), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAll)), c_orderQueueReplace);
+        UnitIssueOrder(EventUnit(), OrderTargetingUnit(AbilityCommand("ProbeHarvest", 0), UnitGroupRandomUnit(UnitGroup("MineralFieldSpecial", c_playerAny, RegionCircle(UnitGetPosition(EventUnit()), 10.0), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAll)), c_orderQueueReplace);
     }
     return true;
 }
@@ -3364,7 +3123,7 @@ void libSCBW_gt_MineralFieldSpecial_Init () {
 bool libSCBW_gt_AttackReveal_Func (bool testConds, bool runActions) {
     // Conditions
     if (testConds) {
-        if (!((libNtve_gf_PlayerIsEnemy(UnitGetOwner(EventUnit()), UnitGetOwner(EventUnitTarget()), 4) == true))) {
+        if (!((libNtve_gf_PlayerIsEnemy(UnitGetOwner(EventUnit()), UnitGetOwner(EventUnitTarget()), libNtve_ge_PlayerRelation_Enemy) == true))) {
             return false;
         }
 
@@ -4500,7 +4259,7 @@ void libSCBW_gt_SpiderMineDetectCloaked_Init () {
 bool libSCBW_gt_Scarabbecomesidle_Func (bool testConds, bool runActions) {
     // Conditions
     if (testConds) {
-        if (!(((UnitGetType(EventUnit()) == "WeaponReaverScarabDumb") || (UnitGetType(EventUnit()) == "WeaponReaverScarabSmart")))) {
+        if (!((UnitGetType(EventUnit()) == "WeaponReaverScarabDumb"))) {
             return false;
         }
     }
@@ -4553,10 +4312,10 @@ bool libSCBW_gt_InfestUsed_Func (bool testConds, bool runActions) {
     }
 
     if ((UnitGetType(EventUnitTargetUnit()) == "CommandCenterFlying")) {
-        libNtve_gf_ReplaceUnit(EventUnitTargetUnit(), "InfestedCommandCenterFlying", 2);
+        libNtve_gf_ReplaceUnit(EventUnitTargetUnit(), "InfestedCommandCenterFlying", libNtve_ge_ReplaceUnitOptions_NewUnitsDefault);
     }
     else {
-        libNtve_gf_ReplaceUnit(EventUnitTargetUnit(), "InfestedCommandCenter", 2);
+        libNtve_gf_ReplaceUnit(EventUnitTargetUnit(), "InfestedCommandCenter", libNtve_ge_ReplaceUnitOptions_NewUnitsDefault);
     }
     UnitBehaviorAdd(libNtve_gf_LastReplacedUnit(), "Infest", EventUnit(), 1);
     return true;
@@ -5097,8 +4856,7 @@ bool libSCBW_gt_UnitTakesDamage_Func (bool testConds, bool runActions) {
         return true;
     }
 
-    libNtve_gf_SendActorMessageToUnit(EventUnit(), "SetTintColor {255,0,0 7.500000}");
-    libNtve_gf_SendActorMessageToUnit(EventUnit(), "SetTintColor 255,255,255 0.300000");
+    UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, FixedToText(EventUnitDamageAmount(), c_fixedPrecisionAny));
     return true;
 }
 
@@ -5106,33 +4864,6 @@ bool libSCBW_gt_UnitTakesDamage_Func (bool testConds, bool runActions) {
 void libSCBW_gt_UnitTakesDamage_Init () {
     libSCBW_gt_UnitTakesDamage = TriggerCreate("libSCBW_gt_UnitTakesDamage_Func");
     TriggerAddEventUnitDamaged(libSCBW_gt_UnitTakesDamage, null, c_unitDamageTypeAny, c_unitDamageEither, null);
-}
-
-//--------------------------------------------------------------------------------------------------
-// Trigger: UnitSelected
-//--------------------------------------------------------------------------------------------------
-bool libSCBW_gt_UnitSelected_Func (bool testConds, bool runActions) {
-    // Conditions
-    if (testConds) {
-        if (!((UnitGetOwner(EventUnit()) == EventPlayer()))) {
-            return false;
-        }
-    }
-
-    // Actions
-    if (!runActions) {
-        return true;
-    }
-
-    libNtve_gf_SendActorMessageToUnit(EventUnit(), "SetLocalTintColor {0,255,0 4.000000}");
-    libNtve_gf_SendActorMessageToUnit(EventUnit(), "SetLocalTintColor 255,255,255 0.500000");
-    return true;
-}
-
-//--------------------------------------------------------------------------------------------------
-void libSCBW_gt_UnitSelected_Init () {
-    libSCBW_gt_UnitSelected = TriggerCreate("libSCBW_gt_UnitSelected_Func");
-    TriggerAddEventUnitSelected(libSCBW_gt_UnitSelected, null, c_playerAny, true);
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -5196,7 +4927,7 @@ bool libSCBW_gt_CheckMovementThreads_Func (bool testConds, bool runActions) {
 
     PlayerGroupLoopBegin(PlayerGroupAll());
     for ( ; !PlayerGroupLoopDone() ; PlayerGroupLoopStep() ) {
-        lv_allunits = UnitGroup(null, PlayerGroupLoopCurrent(), RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterAir) | (1 << c_targetFilterStructure) | (1 << c_targetFilterRawResource) | (1 << c_targetFilterHarvestableResource) | (1 << c_targetFilterMissile) | (1 << c_targetFilterItem) | (1 << c_targetFilterBuried) | (1 << c_targetFilterStasis), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0);
+        lv_allunits = UnitGroup(null, PlayerGroupLoopCurrent(), RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterAir) | (1 << c_targetFilterStructure) | (1 << c_targetFilterRawResource) | (1 << c_targetFilterHarvestableResource) | (1 << c_targetFilterMissile) | (1 << c_targetFilterItem) | (1 << c_targetFilterBuried), (1 << (c_targetFilterStasis - 32)) | (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0);
         autoCCE4E436_n = libNtve_gf_ArithmeticIntClamp(CeilingI((UnitGroupCount(lv_allunits, c_unitCountAlive) / 25.0)), 1, 100);
         for (autoCCE4E436_i = 1; autoCCE4E436_i <= autoCCE4E436_n; autoCCE4E436_i += 1) {
             libSCBW_gf_CheckMovement(PlayerGroupLoopCurrent(), lv_start, lv_allunits);
@@ -5436,6 +5167,7 @@ void libSCBW_InitTriggers () {
     libSCBW_gt_DroppedFromTransport_Init();
     libSCBW_gt_DamageHydralisk_Init();
     libSCBW_gt_DamageDragoon_Init();
+    libSCBW_gt_DamageScarab_Init();
     libSCBW_gt_DamageMarine_Init();
     libSCBW_gt_DamageGhost_Init();
     libSCBW_gt_DamageVulture_Init();
@@ -5490,7 +5222,6 @@ void libSCBW_InitTriggers () {
     libSCBW_gt_AirUnitCreated_Init();
     libSCBW_gt_ComsatGains50EnergyonCompletion_Init();
     libSCBW_gt_UnitTakesDamage_Init();
-    libSCBW_gt_UnitSelected_Init();
     libSCBW_gt_DisablePushing_Init();
     libSCBW_gt_CheckMovementThreads_Init();
     libSCBW_gt_LadderInit_Init();
@@ -5510,10 +5241,11 @@ void libSCBW_InitLib () {
         return;
     }
 
+    libSCBW_InitLib_completed = true;
+
+    libSCBW_InitLibraries();
     libSCBW_InitVariables();
     libSCBW_InitCustomScript();
     libSCBW_InitTriggers();
-
-    libSCBW_InitLib_completed = true;
 }
 

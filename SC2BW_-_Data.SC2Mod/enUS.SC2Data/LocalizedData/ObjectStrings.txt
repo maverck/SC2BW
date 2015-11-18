@@ -1,4 +1,5 @@
-Abil/EditorPrefix/ArmoryResearchSC2BW=Armory -
+﻿Abil/EditorPrefix/ArmoryResearchSC2BW=Armory -
+Abil/EditorPrefix/BarracksTrainSC2BW=(SC2BW) Barracks -
 Abil/EditorPrefix/CloakingField=Wraith -
 Abil/EditorPrefix/Consume=Defiler -
 Abil/EditorPrefix/FactoryTrainSC2BW=Factory -
@@ -8,6 +9,7 @@ Abil/EditorPrefix/ScarabDumb=Scarab -
 Abil/EditorPrefix/ScarabSmart=Scarab -
 Abil/EditorPrefix/SiegeModeSC2BW=Siege Tank -
 Abil/EditorPrefix/StargateTrainSC2BW=Stargate -
+Abil/EditorPrefix/StarportTrainSC2BW=(SC2BW) Starport -
 Abil/EditorSuffix/ArmoryResearchSC2BW=(SC2BW)
 Abil/EditorSuffix/CloakingField=
 Abil/EditorSuffix/FactoryTrainSC2BW=(SC2BW)

@@ -19,9 +19,7 @@
         <Lighting value="ATALaserBatteryLMWeapon"/>
     </CModel>
     <CModel id="Arbiter">
-        <Model value="Assets\Units\Protoss\Arbiter\Arbiter0.2.m3"/>
-        <ScaleMax value="2.000000,2.000000,2.000000"/>
-        <ScaleMin value="2.000000,2.000000,2.000000"/>
+        <Model value="Assets\Units\Protoss\Arbiter_EX2\Arbiter_EX2.m3"/>
     </CModel>
     <CModel id="ArbiterAttackImpact" parent="ImpactFX">
         <Model value="Assets\Effects\Protoss\DragoonMissileImpact\DragoonMissileImpact.m3"/>
@@ -30,11 +28,10 @@
     </CModel>
     <CModel id="Battlecruiser">
         <Model value="Assets\Units\Terran\Battlecruiser\BehemothBattlecruiserCampaign.m3"/>
-        <AttachProps index="2" Id="Ref_Weapon 09">
-            <Keys index="CustomA" value="0"/>
+        <AttachProps index="2">
             <Keys index="SetA" value="1"/>
         </AttachProps>
-        <AttachProps index="3" Id="Ref_Weapon 10">
+        <AttachProps index="3">
             <Keys index="SetA" value="2"/>
         </AttachProps>
     </CModel>
@@ -218,10 +215,7 @@
         <Model value="Assets\Units\Test\HitTestSphere\HitTestSphere.m3"/>
     </CModel>
     <CModel id="DragoonDeath" parent="UnitDeath" Race="Protoss">
-        <Model value="Assets\Models\dragoondeath\dragoondeath.m3"/>
-        <Occlusion value="Show"/>
-        <VariationCount value="2"/>
-        <AnimSpeed value="2.000000"/>
+        <Model value="Assets\Units\Protoss\Dragoon_Void_Death\Dragoon_Void_Death.m3"/>
     </CModel>
     <CModel id="Infestation" parent="PersistentSpellFX">
         <Model value="Assets\Effects\Zerg\InfestationCommandCenter\InfestationCommandCenter.m3"/>
@@ -252,6 +246,10 @@
         <SelectionRadius value="1.500000"/>
         <ShadowRadius value="1.000000"/>
     </CModel>
+    <CModel id="PhoenixDeath">
+        <Model value="Assets\Units\Protoss\Corsair_Death\Corsair_Death_00.m3"/>
+        <VariationCount value="2"/>
+    </CModel>
     <CModel id="PhysicsExplosionSmallStrong">
         <Model value="Assets\Models\forceEffect\forceEffect.m3"/>
     </CModel>
@@ -268,6 +266,9 @@
         <Model value="Assets\Effects\Terran\MissileTurretMissileImpact\MissileTurretMissileImpact.m3"/>
     </CModel>
     <CModel id="ScienceVesselPortrait" parent="FXAPortrait" Race="Terran"/>
+    <CModel id="ScoutAirLeftAttackImpact">
+        <Model value="Assets\Effects\Protoss\ScoutAirMissileImpact\ScoutAirMissileImpact.m3"/>
+    </CModel>
     <CModel id="SiegeTankLightTest">
         <Model value="Assets\testlight.m3"/>
     </CModel>
@@ -328,8 +329,7 @@
         <ShadowRadius value="1.666500"/>
     </CModel>
     <CModel id="ReaverDeath" parent="UnitDeath" Race="Protoss">
-        <Model value="Assets\Models\reaver_death\reaver_death.m3"/>
-        <Occlusion value="Show"/>
+        <Model value="Assets\Units\Protoss\Reaver_Death\Reaver_Death_00.m3"/>
         <AnimSpeed value="0.500000"/>
     </CModel>
     <CModel id="Devourer" parent="Unit" Race="Zerg">
@@ -389,7 +389,7 @@
         <Model value="Assets\Effects\Zerg\SlimeMissile\SlimeMissile.m3"/>
     </CModel>
     <CModel id="DisruptionWeb" parent="PersistentSpellFX">
-        <Model value="Assets\Effects\Protoss\NullField\NullField.m3"/>
+        <Model value="Assets\Effects\Protoss\Corsair_DisruptionWeb\Corsair_DisruptionWeb.m3"/>
         <ScaleMax value="0.850000,0.850000,0.850000"/>
         <ScaleMin value="0.850000,0.850000,0.850000"/>
     </CModel>
@@ -558,10 +558,10 @@
         <ScaleMin value="0.500000,0.500000,0.500000"/>
     </CModel>
     <CModel id="Phoenix">
-        <ScaleMax value="0.650000,0.650000,0.650000"/>
-        <ScaleMin value="0.750000,0.750000,0.750000"/>
+        <ScaleMax value="1.000000,1.000000,1.000000"/>
+        <ScaleMin value="1.000000,1.000000,1.000000"/>
         <SelectionOffset value="0.000000,0.000000,0.000000"/>
-        <Model value="Assets\Units\Protoss\Corsair\corsair0.3.m3"/>
+        <Model value="Assets\Units\Protoss\Corsair_Void\Corsair_Void.m3"/>
         <AttachProps index="0" removed="1"/>
         <AttachProps index="1" removed="1"/>
     </CModel>
@@ -595,10 +595,7 @@
         <ScaleMin value="0.650000,0.650000,0.650000"/>
     </CModel>
     <CModel id="ArbiterDeath" parent="UnitDeath" Race="Protoss">
-        <Model value="Assets\Units\Protoss\Arbiter\Arbiter_Death.m3"/>
-        <Occlusion value="Show"/>
-        <ScaleMax value="0.250000,0.250000,0.250000"/>
-        <ScaleMin value="0.250000,0.250000,0.250000"/>
+        <Model value="Assets\Units\Protoss\ArbiterEX2_Death\ArbiterEX2_Death.m3"/>
     </CModel>
     <CModel id="DeathModelTest" parent="UnitDeath" Race="Protoss">
         <Model value="Assets\Reaver_Death.m3"/>
@@ -671,7 +668,7 @@
         <ShadowRadius value="0.150000"/>
     </CModel>
     <CModel id="Stalker">
-        <Model value="Assets\Models\dragoon\dragoon.m3"/>
+        <Model value="Assets\Units\Protoss\Dragoon_Void\Dragoon_Void.m3"/>
         <Lighting value="Immortal"/>
         <TechPurchaseCamera value="Star2CameraHigh08"/>
         <UnitGlossaryCamera value="Star2CameraHigh08"/>
@@ -682,14 +679,12 @@
         <ShadowRadius value="0.866400"/>
     </CModel>
     <CModel id="StalkerAttackImpact">
-        <Model value="Assets\Effects\Protoss\DragoonMissileImpact\DragoonMissileImpact.m3"/>
-        <ScaleMax value="1.500000,1.500000,1.500000"/>
-        <ScaleMin value="1.500000,1.500000,1.500000"/>
+        <Model value="Assets\Effects\Protoss\DragoonEX2_Missile_Impact\DragoonEX2_Missile_Impact.m3"/>
     </CModel>
     <CModel id="StalkerWeapon">
-        <Model value="Assets\Effects\Protoss\PhotonMissile\PhotonMissile.m3"/>
-        <ScaleMax value="1.500000,1.500000,1.500000"/>
-        <ScaleMin value="1.500000,1.500000,1.500000"/>
+        <Model value="Assets\Effects\Protoss\DragoonEX2_Missile\DragoonEX2_Missile.m3"/>
+        <ScaleMax value="1.000000,1.000000,1.000000"/>
+        <ScaleMin value="1.000000,1.000000,1.000000"/>
     </CModel>
     <CModel id="ScienceFacilityPlacement" parent="Placement" Race="Protoss">
         <Model value="Assets\Buildings\Terran\ScienceFacility\ScienceFacilityPlacement.m3"/>

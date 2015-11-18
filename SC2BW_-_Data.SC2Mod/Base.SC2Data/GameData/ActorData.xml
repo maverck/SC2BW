@@ -109,6 +109,33 @@
         <On Terms="Signal.*.Clear" Send="ClearTintColor 0.000000 Check"/>
     </CActorDoodad>
     <!--                                                                                         -->
+    <!-- Arbiter ........................................................................... -->
+    <!--                                                                                         -->
+    <CActorUnit id="ArbiterMP" unitName="Arbiter">
+        <On index="0" Terms="UnitBirth.Arbiter" Send="Create SoundEmitter Arbiter_Ambience"/>
+        <On index="1" Terms="UnitBirth.Arbiter"/>
+        <On index="2" Terms="UnitRevive.Arbiter"/>
+        <On index="3" Terms="UnitRevive.Arbiter"/>
+        <On index="4" Terms="UnitConstruction.Arbiter.Start"/>
+        <On index="5" Terms="UnitConstruction.Arbiter.Finish"/>
+        <Scale value="0.800000"/>
+        <DeathArray index="Normal" VoiceLink="ArbiterDeathVoice"/>
+        <GroupSoundArray index="What" value="Arbiter_GroupWhat"/>
+        <GroupSoundArray index="Yes" value="Arbiter_GroupYes"/>
+        <GroupSoundArray index="Attack" value="Arbiter_GroupAttack"/>
+        <GroupSoundArray index="Board" value="Arbiter_GroupBoard"/>
+        <SoundArray index="Birth" value="Arbiter_Birth"/>
+        <SoundArray index="Ready" value="Arbiter_Ready"/>
+        <SoundArray index="What" value="Arbiter_What"/>
+        <SoundArray index="Yes" value="Arbiter_Yes"/>
+        <SoundArray index="Pissed" value="Arbiter_Pissed"/>
+        <SoundArray index="Turning" value="Arbiter_Turning"/>
+        <SoundArray index="Board" value="Arbiter_Board"/>
+        <SoundArray index="Click" value="Arbiter_Click"/>
+        <SoundArray index="ClickError" value="Arbiter_ClickError"/>
+        <SoundArray index="Highlight" value="Arbiter_Highlight"/>
+    </CActorUnit>
+    <!--                                                                                         -->
     <!-- Archon ................................................................................ -->
     <!--                                                                                         -->
     <CActorUnit id="Archon">
@@ -1080,6 +1107,16 @@
         <On Terms="Effect.OpticalFlareApplyBehavior.Start" Send="Create"/>
         <Scale value="0.500000"/>
     </CActorModel>
+    <CActorAction id="ScoutAirLeftAttack" effectImpact="ScoutMPAirU">
+        <On index="1" Terms="Effect.ScoutMPAirU.Start; FromEffectTreeDescendant"/>
+        <On index="2" Terms="Effect.ScoutMPAirU.Stop; FromEffectTreeDescendant"/>
+        <ImpactMap index="None" Model="ScoutAirMissileImpact"/>
+    </CActorAction>
+    <CActorAction id="ScoutAirRightAttack" effectImpact="ScoutMPAirU">
+        <On index="1" Terms="Effect.ScoutMPAirU.Start; FromEffectTreeDescendant"/>
+        <On index="2" Terms="Effect.ScoutMPAirU.Stop; FromEffectTreeDescendant"/>
+        <ImpactMap index="None" Model="ScoutAirMissileImpact" Sound="Scout_AirAttackImpact"/>
+    </CActorAction>
     <CActorModel id="StasisImpact">
         <EditorCategories value=""/>
         <On Terms="ActorCreation" Send="AnimBracketStart BSD Birth Stand Death ContentPlayOnce"/>
@@ -1380,11 +1417,11 @@
         <On index="69" Terms="UnitBirth.Hydralisk" Send="TerrainSquibActivateGroup RippleStandard"/>
         <On index="70" Terms="AbilMorph.*.Finish; MorphTo Hydralisk; MorphFrom HydraliskBurrowed" Send="TerrainSquibActivateGroup RippleStandard"/>
         <On index="71" Terms="AbilMorph.*.Finish; MorphTo HydraliskBurrowed; MorphFrom Hydralisk" Send="TerrainSquibDeactivate"/>
-        <On index="72" Terms="AbilMorph.LurkerAspectMP.Finish; MorphTo Hydralisk; !AbilKey BurrowUp" Send="Create"/>
-        <On index="73" Terms="AbilMorph.LurkerAspectMP.Start; MorphFrom Hydralisk; !AbilKey BurrowDown" Send="Destroy"/>
-        <On index="74" Terms="AbilMorph.LurkerAspectMPFromHydraliskBurrowed.Finish; MorphTo Hydralisk; !AbilKey BurrowUp" Send="Create"/>
-        <On index="75" Terms="AbilMorph.LurkerAspectMPFromHydraliskBurrowed.Finish; MorphTo HydraliskBurrowed; !AbilKey BurrowUp" Send="Create"/>
-        <On index="76" Terms="AbilMorph.LurkerAspectMPFromHydraliskBurrowed.Start; MorphFrom Hydralisk; !AbilKey BurrowDown" Send="Destroy"/>
+        <On index="72" Terms="AbilMorph.LurkerAspectMP.Finish; MorphTo Hydralisk; !AbilKey BurrowUp"/>
+        <On index="73" Terms="AbilMorph.LurkerAspectMP.Start; MorphFrom Hydralisk; !AbilKey BurrowDown"/>
+        <On index="74" Terms="AbilMorph.LurkerAspectMPFromHydraliskBurrowed.Finish; MorphTo Hydralisk; !AbilKey BurrowUp"/>
+        <On index="75" Terms="AbilMorph.LurkerAspectMPFromHydraliskBurrowed.Finish; MorphTo HydraliskBurrowed; !AbilKey BurrowUp"/>
+        <On index="76" Terms="AbilMorph.LurkerAspectMPFromHydraliskBurrowed.Start; MorphFrom Hydralisk; !AbilKey BurrowDown"/>
         <On index="77" Terms="UnitHeightUpdate.*.Land" Send="Create Hydra_Land"/>
         <On index="78" removed="1"/>
         <On index="79" removed="1"/>
@@ -1397,6 +1434,12 @@
         <On index="86" removed="1"/>
         <On index="87" removed="1"/>
         <On index="88" removed="1"/>
+        <On index="89" removed="1"/>
+        <On index="90" removed="1"/>
+        <On index="91" removed="1"/>
+        <On index="92" removed="1"/>
+        <On index="93" removed="1"/>
+        <On index="94" removed="1"/>
     </CActorUnit>
     <!--                                                                                         -->
     <!-- Immortal .............................................................................. -->
@@ -1754,12 +1797,12 @@
         <BarHeight value="3"/>
     </CActorUnit>
     <CActorModel id="NydusPlacementModel" parent="PlacementModel">
-        <On index="6" Terms="ActorCreation" Send="SetOpacity 0.45"/>
-        <On index="7" Terms="ActorCreation" Send="SetCastShadows 0"/>
+        <On index="6" Terms="ActorCreation" Send="SetOpacity 0.450000"/>
+        <On index="7" Terms="ActorCreation" Send="SetCastShadows"/>
         <On index="8" Terms="ActorCreation; ModelName SporeCrawlerPlacement" Target="" Send="Create SporeCrawlerProtectRange"/>
         <On index="9" Terms="ActorDestruction" Target="SporeCrawlerProtectRange" Send="Destroy"/>
         <On index="10" Terms="ActorCreation; ModelName SpineCrawlerPlacement" Send="Create SpineCrawlerProtectRange"/>
-        <On index="11" Terms="ActorDestruction" Target="SpineCrawlerProtectRange" Send="Destroy"/>
+        <On index="11" Target="SpineCrawlerProtectRange"/>
         <Scale value="0.800000"/>
     </CActorModel>
     <CActorModel id="NydusRumble">
@@ -1933,7 +1976,7 @@
         </WireframeShield>
         <HeroIcon value="Assets\Textures\btn-unit-protoss-reaver.dds"/>
         <UnitIcon value="Assets\Textures\btn-unit-protoss-reaver.dds"/>
-        <WalkAnimMoveSpeed value="1"/>
+        <WalkAnimMoveSpeed value="1.5"/>
         <LifeArmorIcon value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel0.dds"/>
     </CActorUnit>
     <!-- Redstone Lava Critter                                                                   -->
@@ -2410,6 +2453,9 @@
         <On index="109" removed="1"/>
         <On index="110" removed="1"/>
         <On index="111" removed="1"/>
+        <On index="112" removed="1"/>
+        <On index="113" removed="1"/>
+        <On index="114" removed="1"/>
         <HostedAttaches index="0" removed="1"/>
         <PortraitModel value="OvermindPortrait"/>
         <HighlightTooltip value="Unit/Name/SpineCrawler2"/>
@@ -2673,6 +2719,10 @@
         <On index="83" removed="1"/>
         <On index="84" removed="1"/>
         <On index="85" removed="1"/>
+        <On index="86" removed="1"/>
+        <On index="87" removed="1"/>
+        <On index="88" removed="1"/>
+        <On index="89" removed="1"/>
         <Model value="SS_SwarmGuardian"/>
         <BuildModel value="SS_SwarmGuardian"/>
         <DeathArray index="Normal" ModelLink="ZergLargeUnitDeath" SoundLink="SS_SwarmGuardian_Explode" VoiceLink="QueenBWDeathVoice"/>
@@ -2723,9 +2773,7 @@
     <CActorSplat id="RoboticsSupportBaySplat">
         <Scale value="0.900000,0.800000,1.000000"/>
     </CActorSplat>
-    <CActorSiteOpLocalOffset id="SOpHigherBy1">
-        <LocalOffset value="0.000000,0.000000,1.000000"/>
-    </CActorSiteOpLocalOffset>
+    <CActorSiteOpLocalOffset id="SOpHigherBy1"/>
     <CActorUnit id="ScienceFacilityCovertOps" parent="TerranBuilding" unitName="CovertOps2">
         <Macros value="QueueAnimAddon"/>
         <Macros value="TerranAttachmentAnims"/>
@@ -2981,6 +3029,10 @@
         <On index="76" removed="1"/>
         <On index="77" removed="1"/>
         <On index="78" removed="1"/>
+        <On index="79" removed="1"/>
+        <On index="80" removed="1"/>
+        <On index="81" removed="1"/>
+        <On index="82" removed="1"/>
         <BarHeight value="3"/>
     </CActorUnit>
     <CActorUnit id="EvolutionChamber">
@@ -3094,7 +3146,7 @@
         <On index="23" Terms="ActorCreation; FlyerHelper All; ValidateUnit IsFlying" Send="Create FlyerHelperSplat"/>
         <On index="24" Terms="ActorDestruction; FlyerHelper All; !HasStatus FlyerHelper" Target="FlyerHelperSplat" Send="Destroy"/>
         <On index="25" Terms="FlyerHelperChange; FlyerHelper None"/>
-        <On index="26" Terms="FlyerHelperChange; FlyerHelper Selected; HasStatus FlyerHelper; !ScopeContains FlyerHelperSplat" Target="" Send="Create FlyerHelperSplat"/>
+        <On index="26" Terms="FlyerHelperChange; FlyerHelper Selected; HasStatus FlyerHelper; !ScopeContains FlyerHelperSplat"/>
         <On index="27" Terms="FlyerHelperChange; FlyerHelper Selected; !HasStatus FlyerHelper" Target="FlyerHelperSplat" Send="Destroy"/>
         <On index="28" Terms="FlyerHelperChange; FlyerHelper All; ValidateUnit IsFlying; !ScopeContains FlyerHelperSplat" Target="" Send="Create FlyerHelperSplat"/>
         <On index="29" Terms="UnitBirth.*.Normal" Send="$Birth 0 0.000000"/>
@@ -3136,6 +3188,17 @@
         <On index="65" removed="1"/>
         <On index="66" removed="1"/>
         <On index="67" removed="1"/>
+        <On index="68" removed="1"/>
+        <On index="69" removed="1"/>
+        <On index="70" removed="1"/>
+        <On index="71" removed="1"/>
+        <On index="72" removed="1"/>
+        <On index="73" removed="1"/>
+        <On index="74" removed="1"/>
+        <On index="75" removed="1"/>
+        <On index="76" removed="1"/>
+        <On index="77" removed="1"/>
+        <On index="78" removed="1"/>
         <BarHeight value="3"/>
         <Model value="NydusNetwork"/>
         <Scale value="0.800000"/>
@@ -3500,12 +3563,12 @@
         <SoundArray index="ClickError" value=""/>
         <SoundArray index="Highlight" value=""/>
         <GroupIcon>
-            <Image index="0" value="Assets\Textures\wireframe-protoss-corsair-large.dds"/>
+            <Image index="0" value="Assets\Textures\wireframe-protoss-corsair.dds"/>
         </GroupIcon>
         <HeroIcon value="Assets\Textures\btn-unit-protoss-corsair.dds"/>
         <UnitIcon value="Assets\Textures\btn-unit-protoss-corsair.dds"/>
         <Wireframe>
-            <Image index="0" value="Assets\Textures\wireframe-protoss-corsair-large.dds"/>
+            <Image index="0" value="Assets\Textures\wireframe-protoss-corsair.dds"/>
         </Wireframe>
         <WireframeShield>
             <Image index="0" value="Assets\Textures\wireframe-protoss-corsair-shield01.dds"/>
@@ -3516,8 +3579,8 @@
         <On index="44" Terms="Behavior.Hallucination.On" Send="Create HallucinationBirthSoundMedium"/>
         <On index="45" Terms="UnitDeathCustomize; ValidateUnit IsHallucination" Send="DeathCustomize Hallucination"/>
         <On index="46" Terms="Abil.attack.ReadyStart" Send="AnimGroupApply Ready"/>
-        <On index="47" Terms="WeaponStart.*.AttackStart" Send="AnimBracketStart Attack Attack"/>
-        <On index="48" Terms="WeaponStop.*.AttackStop" Send="AnimBracketStop Attack"/>
+        <On index="47" Terms="WeaponStart.*.AttackStart" Send="AnimBracketStart Spell Spell"/>
+        <On index="48" Terms="WeaponStop.*.AttackStop" Send="AnimBracketStop Spell"/>
         <On index="49" Terms="Abil.attack.ReadyStop" Send="AnimGroupRemove Ready"/>
         <On index="50" removed="1"/>
         <On index="51" removed="1"/>
@@ -3537,7 +3600,13 @@
         <On index="65" removed="1"/>
         <On index="66" removed="1"/>
         <On index="67" removed="1"/>
+        <On index="68" removed="1"/>
+        <On index="69" removed="1"/>
+        <On index="70" removed="1"/>
+        <On index="71" removed="1"/>
+        <On index="72" removed="1"/>
         <BarHeight value="3"/>
+        <Scale value="0.700000"/>
     </CActorUnit>
     <CActorModel id="PlagueImpact" parent="ModelAnimationStyleOneShot">
         <On Terms="Effect.PlagueSearch.Start" Send="Create"/>
@@ -3584,78 +3653,6 @@
         <Inherits index="Scale" value="0"/>
         <AcceptedHostedPropTransfers index="Scale" value="0"/>
     </CActorModel>
-    <CActorUnit id="Arbiter" parent="GenericUnitStandard" unitName="Arbiter">
-        <Macros value="ZergBurrowMobileAnimMacro"/>
-        <Macros value="ZergMediumBurrowEffects"/>
-        <Macros value="UnloadDropAnim"/>
-        <On index="42" removed="1"/>
-        <On index="43" removed="1"/>
-        <On index="44" removed="1"/>
-        <On index="45" removed="1"/>
-        <On index="46" removed="1"/>
-        <On index="47" removed="1"/>
-        <On index="48" removed="1"/>
-        <On index="49" removed="1"/>
-        <On index="50" removed="1"/>
-        <On index="51" removed="1"/>
-        <On index="52" removed="1"/>
-        <On index="53" removed="1"/>
-        <On index="54" removed="1"/>
-        <On index="55" removed="1"/>
-        <On index="56" removed="1"/>
-        <On index="57" removed="1"/>
-        <On index="58" removed="1"/>
-        <On index="59" removed="1"/>
-        <On index="60" removed="1"/>
-        <DeathArray index="Normal" ModelLink="ArbiterDeath" SoundLink="Arbiter_Explode" VoiceLink="InfestorDeathVoice"/>
-        <DeathArray index="Eat" AnimProps=""/>
-        <DeathArray index="Eviscerate" AnimProps=""/>
-        <DeathArray index="Fire" AnimProps=""/>
-        <DeathArray index="Silentkill" AnimProps=""/>
-        <DeathArray index="Squish" AnimProps=""/>
-        <DeathArray index="UnderConstruction" AnimProps=""/>
-        <PortraitModel value="CarrierPortrait"/>
-        <WalkAnimMoveSpeed value="1.5976"/>
-        <BarOffset value="70"/>
-        <GroupIcon>
-            <Image value="Assets\Textures\wireframe-protoss-arbiter.dds"/>
-        </GroupIcon>
-        <GroupSoundArray index="Birth" value="PuMothershipWarpIn"/>
-        <GroupSoundArray index="Ready" value="Arbiter_Ready"/>
-        <GroupSoundArray index="Help" value="Artanis_UnderAttack"/>
-        <GroupSoundArray index="What" value="Arbiter_What"/>
-        <GroupSoundArray index="Yes" value="Arbiter_Yes"/>
-        <GroupSoundArray index="Attack" value="Arbiter_Yes"/>
-        <GroupSoundArray index="Pissed" value="Arbiter_Pissed"/>
-        <GroupSoundArray index="Movement" value="Artanis_Movement"/>
-        <GroupSoundArray index="Turning" value="Artanis_Turning"/>
-        <GroupSoundArray index="Board" value="Artanis_Board"/>
-        <GroupSoundArray index="Click" value="Artanis_Click"/>
-        <GroupSoundArray index="ClickError" value="Artanis_ClickError"/>
-        <GroupSoundArray index="Highlight" value="Artanis_Highlight"/>
-        <HeroIcon value="Assets\Textures\btn-unit-protoss-arbiter.dds"/>
-        <LifeArmorIcon value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel1.dds"/>
-        <NameOffset value="40"/>
-        <SoundArray index="Birth" value="PuMothershipWarpIn"/>
-        <SoundArray index="Help" value="Artanis_UnderAttack"/>
-        <SoundArray index="Attack" value="Arbiter_Yes"/>
-        <SoundArray index="Movement" value="Artanis_Movement"/>
-        <SoundArray index="Turning" value="Artanis_Turning"/>
-        <SoundArray index="Board" value="Artanis_Board"/>
-        <SoundArray index="Click" value="Artanis_Click"/>
-        <SoundArray index="ClickError" value="Artanis_ClickError"/>
-        <SoundArray index="Highlight" value="Artanis_Highlight"/>
-        <UnitIcon value="Assets\Textures\btn-unit-protoss-arbiter.dds"/>
-        <Wireframe>
-            <Image value="Assets\Textures\wireframe-protoss-arbiter.dds"/>
-        </Wireframe>
-        <WireframeShield>
-            <Image value="Assets\Textures\wireframe-protoss-arbiter-shield01.dds"/>
-            <Image value="Assets\Textures\wireframe-protoss-arbiter-shield02.dds"/>
-            <Image value="Assets\Textures\wireframe-protoss-arbiter-shield03.dds"/>
-        </WireframeShield>
-        <Scale value="0.600000"/>
-    </CActorUnit>
     <CActorMissile id="ReaverScarab" parent="GenericAttackMissile" unitName="WeaponReaverScarabDumb">
         <EditorCategories value=""/>
         <Model value="ReaverScarab"/>
@@ -3727,43 +3724,21 @@
         <On index="98" removed="1"/>
         <On index="99" removed="1"/>
         <On index="100" removed="1"/>
+        <On index="101" removed="1"/>
+        <On index="102" removed="1"/>
         <PortraitModel value="OvermindPortrait"/>
         <BarHeight value="3"/>
         <Baselines index="Stand" AnimProps="Burrow,Stand"/>
     </CActorUnit>
     <CActorUnit id="Stalker">
-        <On index="45" Terms="WeaponStart.*.AttackStart" Send="AnimBracketStart Attack Attack Stand,Channel {} OpeningPlayForever"/>
-        <On index="46" Terms="WeaponStop.*.AttackStop" Send="AnimBracketStop Attack 0 0.000000 AsDuration"/>
-        <On index="47" Terms="Abil.attack.ReadyStart" Send="AnimGroupRemove Ready"/>
-        <On index="48" removed="1"/>
-        <On index="49" removed="1"/>
-        <On index="50" removed="1"/>
-        <On index="51" removed="1"/>
-        <On index="52" removed="1"/>
-        <On index="53" removed="1"/>
-        <On index="54" removed="1"/>
-        <On index="55" removed="1"/>
-        <On index="56" removed="1"/>
-        <On index="57" removed="1"/>
-        <On index="58" removed="1"/>
-        <On index="59" removed="1"/>
-        <On index="60" removed="1"/>
-        <On index="61" removed="1"/>
-        <On index="62" removed="1"/>
-        <On index="63" removed="1"/>
+        <On index="62" Terms="WeaponStart.*.AttackStart" Send="AnimBracketStart Cover Cover,Start Cover Cover,End"/>
+        <On index="63" Terms="WeaponStop.*.AttackStop" Send="AnimBracketStop Cover"/>
         <On index="64" removed="1"/>
-        <DeathArray index="Normal" ModelLink="ProtossMediumUnitDeath" SoundLink="DragoonDeath"/>
-        <DeathCustoms index="5" removed="1"/>
-        <DeathCustoms index="6" removed="1"/>
-        <DeathCustoms index="7" removed="1"/>
-        <DeathCustoms index="8" removed="1"/>
-        <DeathCustoms index="9" removed="1"/>
-        <DeathCustoms index="10" removed="1"/>
-        <DeathCustoms index="11" removed="1"/>
-        <DeathCustoms index="12" removed="1"/>
-        <DeathCustoms index="13" removed="1"/>
-        <DeathCustoms index="14" removed="1"/>
-        <DeathCustoms index="15" removed="1"/>
+        <On index="65" removed="1"/>
+        <On index="66" removed="1"/>
+        <On index="67" removed="1"/>
+        <On index="68" removed="1"/>
+        <DeathArray index="Normal" ModelLink="DragoonDeath" SoundLink="DragoonDeath"/>
         <GroupIcon>
             <Image index="0" value="Assets\Textures\wireframe-protoss-dragoon.dds"/>
         </GroupIcon>
@@ -3783,12 +3758,11 @@
         <BarWidth value="90"/>
         <HeroIcon value="Assets\Textures\btn-unit-protoss-dragoon.dds"/>
         <UnitIcon value="Assets\Textures\btn-unit-protoss-dragoon.dds"/>
-        <Scale value="0.950000"/>
         <SoundArray index="Attack" value="Stalker_Yes"/>
         <BarHeight value="3"/>
+        <DeathCustoms index="6" ModelLink="DragoonDeath" Name="RagdollBasic"/>
     </CActorUnit>
     <CActorMissile id="StalkerAttackMissile">
-        <Scale value="1.250000"/>
         <BarHeight value="1"/>
         <BarWidth value="1"/>
     </CActorMissile>
@@ -4138,33 +4112,6 @@
         <IconArcLength value="0.500000"/>
     </CActorRange>
     <CActorUnit id="Zealot">
-        <On index="43" Terms="Abil.attack.ReadyStart" Send="AnimGroupApply Ready"/>
-        <On index="44" Terms="WeaponStart.*.AttackStart" Send="TimerSet 0.250000 ZealotAttackDelay"/>
-        <On index="45" Terms="WeaponStart.*.AttackStart; AnimPlaying Birth" Send="AnimClear Birth"/>
-        <On index="46" Terms="WeaponStop.*.AttackStop" Send="AnimBracketStop Attack"/>
-        <On index="47" Terms="Abil.attack.ReadyStop" Send="AnimGroupRemove Ready"/>
-        <On index="48" Terms="Behavior.Charging.On" Send="ModelSuddenMotionStart"/>
-        <On index="49" Terms="Behavior.Charging.Off" Send="ModelSuddenMotionStop"/>
-        <On index="50" Terms="Behavior.Hallucination.On" Send="Create HallucinationBirthSoundSmall"/>
-        <On index="51" Terms="UnitDeathCustomize; ValidateUnit IsHallucination" Send="DeathCustomize Hallucination"/>
-        <On index="52" Terms="TimerExpired; TimerName ZealotAttackDelay" Send="AnimBracketStart Attack Attack {} {} 0 2.000000 AsTimeScale"/>
-        <On index="53" Terms="UnitDeathCustomize; ValidateUnit IsHallucination" Send="DeathCustomize Hallucination"/>
-        <On index="54" Terms="WeaponStop.*.AttackStop" Send="TimerKill ZealotAttackDelay"/>
-        <On index="55" removed="1"/>
-        <On index="56" removed="1"/>
-        <On index="57" removed="1"/>
-        <On index="58" removed="1"/>
-        <On index="59" removed="1"/>
-        <On index="60" removed="1"/>
-        <On index="61" removed="1"/>
-        <On index="62" removed="1"/>
-        <On index="63" removed="1"/>
-        <On index="64" removed="1"/>
-        <On index="65" removed="1"/>
-        <On index="66" removed="1"/>
-        <On index="67" removed="1"/>
-        <On index="68" removed="1"/>
-        <On index="69" removed="1"/>
         <BarHeight value="3"/>
     </CActorUnit>
     <CActorAction id="ZealotAttack" effectAttack="ZealotPsiBladesSet" effectImpact="" effectLaunch="">

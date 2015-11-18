@@ -280,7 +280,6 @@
     <CWeaponLegacy id="PsiBlades">
         <DamagePoint value="0.2353"/>
         <Period value="1.2751"/>
-        <Effect value="ZealotPsiBladesSet"/>
         <Range value="0.5"/>
         <RangeSlop value="0.5"/>
     </CWeaponLegacy>
@@ -299,10 +298,6 @@
         <TargetFilters value="Visible;Air,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <Range value="8"/>
         <Arc value="90"/>
-        <Marker Link="Weapon/InterceptorLaunch"/>
-        <Cost>
-            <Cooldown Link="Weapon/InterceptorLaunch"/>
-        </Cost>
         <Period value="3.4147"/>
         <DamagePoint value="0.0588"/>
         <Backswing value="0"/>
@@ -322,18 +317,11 @@
     </CWeaponLegacy>
     <CWeaponLegacy id="Scarab">
         <EditorCategories value="Race:Protoss"/>
-        <Options index="Melee" value="1"/>
-        <Icon value="Assets\Textures\btn-ability-zerg-banelingspooge.dds"/>
         <DisplayEffect value="ScarabDamage"/>
         <TargetFilters value="Visible;Air,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <Range value="0.5"/>
         <RangeSlop value="0.25"/>
         <Arc value="360"/>
-        <Marker Link="Weapon/Suicide"/>
-        <Cost>
-            <Cooldown Link="Weapon/Suicide"/>
-        </Cost>
-        <Period value="0"/>
         <DamagePoint value="0.5"/>
         <Effect value="ScarabSet"/>
         <AllowedMovement value="Slowing"/>
