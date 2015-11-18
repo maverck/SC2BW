@@ -97,6 +97,12 @@
             </SectionArray>
         </InfoArray>
     </CAbilMorph>
+    <!--CAbilBehavior id="GenerateCreep">-->
+    <!--        <CmdButtonArray index="On" Requirements="HaveEvolutionChamber"/>-->
+    <!--    </CAbilBehavior-->
+    <CAbilArmMagazine id="CarrierHangar">
+        <InfoArray index="Ammo1" CountStart="0"/>
+    </CAbilArmMagazine>
     <CAbilBehavior id="CloakingField">
         <AbilSetId value="Clok"/>
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
@@ -131,7 +137,6 @@
     </CAbilMorph>
     <CAbilTrain id="CommandCenterTrain">
         <Activity value="UI/Building"/>
-        <Alert value="TrainingCompletePing"/>
         <InfoArray index="Train1" Time="17.2807"/>
     </CAbilTrain>
     <CAbilMorphPlacement id="FactoryLand">
@@ -384,87 +389,68 @@
         <Flags index="Select" value="1"/>
         <Flags index="WaitForFood" value="0"/>
         <MorphUnit value="Egg"/>
-        <InfoArray index="Train1" Time="17" Alert="TrainWorkerComplete" Effect="DroneAlert">
+        <InfoArray index="Train1" Time="35">
             <Charge Link="Abil/LarvaTrain"/>
             <Cooldown Link="Abil/LarvaTrain"/>
-            <Button DefaultButtonFace="Drone"/>
-            <Unit value="Drone"/>
+            <Button DefaultButtonFace="Baneling" Requirements="HaveBanelingNest"/>
+            <Unit value="Baneling"/>
         </InfoArray>
-        <InfoArray index="Train2" Time="24.108">
-            <Charge Link="Abil/LarvaTrain"/>
-            <Cooldown Link="Abil/LarvaTrain"/>
-            <Button DefaultButtonFace="Zergling" Requirements="HaveSpawningPool"/>
-            <Unit value="Zergling"/>
-            <Unit value="Zergling"/>
-        </InfoArray>
-        <InfoArray index="Train3" Time="34.44">
-            <Charge Link="Abil/LarvaTrain"/>
-            <Cooldown Link="Abil/LarvaTrain"/>
-            <Button DefaultButtonFace="Overlord"/>
-            <Unit value="Overlord"/>
-        </InfoArray>
-        <InfoArray index="Train4" Time="24.108">
-            <Charge Link="Abil/LarvaTrain"/>
-            <Cooldown Link="Abil/LarvaTrain"/>
-            <Button DefaultButtonFace="Hydralisk" Requirements="HaveHydraliskDen"/>
-            <Unit value="Hydralisk"/>
-        </InfoArray>
-        <InfoArray index="Train5" Time="34.44">
-            <Charge Link="Abil/LarvaTrain"/>
-            <Cooldown Link="Abil/LarvaTrain"/>
-            <Button DefaultButtonFace="Mutalisk" Requirements="HaveSpire"/>
-            <Unit value="Mutalisk"/>
-        </InfoArray>
-        <InfoArray index="Train6" Time="51.66">
-            <Charge Link="Abil/LarvaTrain"/>
-            <Cooldown Link="Abil/LarvaTrain"/>
-            <Button DefaultButtonFace="Ultralisk" Requirements="HaveUltraliskCavern"/>
-            <Unit value="Ultralisk"/>
-        </InfoArray>
-        <InfoArray index="Train7" Time="35">
-            <Charge Link="Abil/LarvaTrain"/>
-            <Cooldown Link="Abil/LarvaTrain"/>
-            <Button Requirements="HaveBanelingNest"/>
-        </InfoArray>
-        <InfoArray index="Train8" Time="43.05">
-            <Charge Link="Abil/LarvaTrain"/>
-            <Cooldown Link="Abil/LarvaTrain"/>
-            <Button DefaultButtonFace="Defiler" State="Restricted" Requirements="HaveDefilerMound"/>
-            <Unit value="Defiler"/>
-        </InfoArray>
-        <InfoArray index="Train9" Time="43.05">
-            <Charge Link="Abil/LarvaTrain"/>
-            <Cooldown Link="Abil/LarvaTrain"/>
-            <Button DefaultButtonFace="Queen" State="Restricted" Requirements="HaveInfestationPit"/>
-            <Unit value="QueenBW"/>
-        </InfoArray>
-        <InfoArray index="Train10" Time="27">
+        <InfoArray index="Train2" Time="27">
             <Charge Link="Abil/LarvaTrain"/>
             <Cooldown Link="Abil/LarvaTrain"/>
             <Button Requirements="HaveBanelingNest2"/>
         </InfoArray>
-        <InfoArray index="Train11" Time="50">
+        <InfoArray index="Train3" Time="50">
             <Charge Link="Abil/LarvaTrain"/>
             <Cooldown Link="Abil/LarvaTrain"/>
             <Button Requirements="HaveInfestationPit"/>
         </InfoArray>
-        <InfoArray index="Train12" Time="40">
+        <InfoArray index="Train4" Time="40">
             <Charge Link="Abil/LarvaTrain"/>
             <Cooldown Link="Abil/LarvaTrain"/>
             <Button Requirements="HaveSpire"/>
+        </InfoArray>
+        <InfoArray index="Train5" Time="40">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+            <Button Requirements="HaveHive"/>
+        </InfoArray>
+        <InfoArray index="Train6" Time="40">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+            <Button Requirements="HaveInfestationPit"/>
+        </InfoArray>
+        <InfoArray index="Train7">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+        </InfoArray>
+        <InfoArray index="Train8">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+        </InfoArray>
+        <InfoArray index="Train9">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+        </InfoArray>
+        <InfoArray index="Train10">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+        </InfoArray>
+        <InfoArray index="Train11">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+        </InfoArray>
+        <InfoArray index="Train12">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
         </InfoArray>
         <InfoArray index="Train13">
             <Charge Link="Abil/LarvaTrain"/>
             <Cooldown Link="Abil/LarvaTrain"/>
         </InfoArray>
-        <InfoArray index="Train14" Time="25.83">
-            <Resource index="Minerals" value="25"/>
-            <Resource index="Vespene" value="75"/>
+        <InfoArray index="Train14">
             <Charge Link="Abil/LarvaTrain"/>
             <Cooldown Link="Abil/LarvaTrain"/>
-            <Button DefaultButtonFace="Scourge" State="Restricted" Requirements="HaveSpire"/>
-            <Unit value="Scourge"/>
-            <Unit value="Scourge"/>
         </InfoArray>
         <InfoArray index="Train15">
             <Charge Link="Abil/LarvaTrain"/>
@@ -494,43 +480,223 @@
             <Charge Link="Abil/LarvaTrain"/>
             <Cooldown Link="Abil/LarvaTrain"/>
         </InfoArray>
-        <InfoArray index="Train22">
+        <InfoArray index="Train22" Time="17" Alert="TrainWorkerComplete" Effect="DroneAlert">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+            <Button DefaultButtonFace="Drone"/>
+            <Unit value="Drone"/>
+        </InfoArray>
+        <InfoArray index="Train23" Time="24.108">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+            <Button DefaultButtonFace="Zergling" Requirements="HaveSpawningPool"/>
+            <Unit value="Zergling"/>
+            <Unit value="Zergling"/>
+        </InfoArray>
+        <InfoArray index="Train24" Time="34.44">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+            <Button DefaultButtonFace="Overlord"/>
+            <Unit value="Overlord"/>
+        </InfoArray>
+        <InfoArray index="Train25" Time="24.108">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+            <Button DefaultButtonFace="Hydralisk" Requirements="HaveHydraliskDen"/>
+            <Unit value="Hydralisk"/>
+        </InfoArray>
+        <InfoArray index="Train26" Time="34.44">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+            <Button DefaultButtonFace="Mutalisk" Requirements="HaveSpire"/>
+            <Unit value="Mutalisk"/>
+        </InfoArray>
+        <InfoArray index="Train27" Time="51.66">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+            <Button DefaultButtonFace="Ultralisk" Requirements="HaveUltraliskCavern"/>
+            <Unit value="Ultralisk"/>
+        </InfoArray>
+        <InfoArray index="Train28" Time="43.05">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+            <Button DefaultButtonFace="Defiler" State="Restricted" Requirements="HaveDefilerMound"/>
+            <Unit value="Defiler"/>
+        </InfoArray>
+        <InfoArray index="Train29" Time="43.05">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+            <Button DefaultButtonFace="Queen" State="Restricted" Requirements="HaveInfestationPit"/>
+            <Unit value="QueenBW"/>
+        </InfoArray>
+        <InfoArray index="Train30" Time="25.83">
+            <Resource index="Minerals" value="25"/>
+            <Resource index="Vespene" value="75"/>
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+            <Button DefaultButtonFace="Scourge" State="Restricted" Requirements="HaveSpire"/>
+            <Unit value="Scourge"/>
+            <Unit value="Scourge"/>
+        </InfoArray>
+    </CAbilTrain>
+    <CAbilTrain id="LarvaTrainSC2BW">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
+        <Activity value="UI/Morphing"/>
+        <Flags index="DisableCollision" value="1"/>
+        <Flags index="KillOnCancel" value="1"/>
+        <Flags index="KillOnFinish" value="1"/>
+        <Flags index="Select" value="1"/>
+        <Flags index="WaitForFood" value="0"/>
+        <MorphUnit value="Egg"/>
+        <InfoArray index="Train1" Time="35">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+            <Button DefaultButtonFace="Baneling" Requirements="HaveBanelingNest"/>
+            <Unit value="Baneling"/>
+        </InfoArray>
+        <InfoArray index="Train2" Time="27">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+            <Button Requirements="HaveBanelingNest2"/>
+        </InfoArray>
+        <InfoArray index="Train3" Time="50">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+            <Button Requirements="HaveInfestationPit"/>
+        </InfoArray>
+        <InfoArray index="Train4" Time="40">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+            <Button Requirements="HaveSpire"/>
+        </InfoArray>
+        <InfoArray index="Train5" Time="40">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+            <Button Requirements="HaveHive"/>
+        </InfoArray>
+        <InfoArray index="Train6" Time="40">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+            <Button Requirements="HaveInfestationPit"/>
+        </InfoArray>
+        <InfoArray index="Train7">
             <Charge Link="Abil/LarvaTrain"/>
             <Cooldown Link="Abil/LarvaTrain"/>
         </InfoArray>
-        <InfoArray index="Train23">
+        <InfoArray index="Train8">
             <Charge Link="Abil/LarvaTrain"/>
             <Cooldown Link="Abil/LarvaTrain"/>
         </InfoArray>
-        <InfoArray index="Train24">
+        <InfoArray index="Train9">
             <Charge Link="Abil/LarvaTrain"/>
             <Cooldown Link="Abil/LarvaTrain"/>
         </InfoArray>
-        <InfoArray index="Train25">
+        <InfoArray index="Train10">
             <Charge Link="Abil/LarvaTrain"/>
             <Cooldown Link="Abil/LarvaTrain"/>
         </InfoArray>
-        <InfoArray index="Train26">
+        <InfoArray index="Train11">
             <Charge Link="Abil/LarvaTrain"/>
             <Cooldown Link="Abil/LarvaTrain"/>
         </InfoArray>
-        <InfoArray index="Train27">
+        <InfoArray index="Train12">
             <Charge Link="Abil/LarvaTrain"/>
             <Cooldown Link="Abil/LarvaTrain"/>
         </InfoArray>
-        <InfoArray index="Train28">
+        <InfoArray index="Train13">
             <Charge Link="Abil/LarvaTrain"/>
             <Cooldown Link="Abil/LarvaTrain"/>
         </InfoArray>
-        <InfoArray index="Train29">
+        <InfoArray index="Train14">
             <Charge Link="Abil/LarvaTrain"/>
             <Cooldown Link="Abil/LarvaTrain"/>
         </InfoArray>
-        <InfoArray index="Train30">
+        <InfoArray index="Train15">
             <Charge Link="Abil/LarvaTrain"/>
             <Cooldown Link="Abil/LarvaTrain"/>
         </InfoArray>
-        <Alert value="TrainingCompletePing"/>
+        <InfoArray index="Train16">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+        </InfoArray>
+        <InfoArray index="Train17">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+        </InfoArray>
+        <InfoArray index="Train18">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+        </InfoArray>
+        <InfoArray index="Train19">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+        </InfoArray>
+        <InfoArray index="Train20">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+        </InfoArray>
+        <InfoArray index="Train21">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+        </InfoArray>
+        <InfoArray index="Train22" Time="17" Alert="TrainWorkerComplete" Effect="DroneAlert">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+            <Button DefaultButtonFace="Drone"/>
+            <Unit value="Drone"/>
+        </InfoArray>
+        <InfoArray index="Train23" Time="24.108">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+            <Button DefaultButtonFace="Zergling" Requirements="HaveSpawningPool"/>
+            <Unit value="Zergling"/>
+            <Unit value="Zergling"/>
+        </InfoArray>
+        <InfoArray index="Train24" Time="34.44">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+            <Button DefaultButtonFace="Overlord"/>
+            <Unit value="Overlord"/>
+        </InfoArray>
+        <InfoArray index="Train25" Time="24.108">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+            <Button DefaultButtonFace="Hydralisk" Requirements="HaveHydraliskDen"/>
+            <Unit value="Hydralisk"/>
+        </InfoArray>
+        <InfoArray index="Train26" Time="34.44">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+            <Button DefaultButtonFace="Mutalisk" Requirements="HaveSpire"/>
+            <Unit value="Mutalisk"/>
+        </InfoArray>
+        <InfoArray index="Train27" Time="51.66">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+            <Button DefaultButtonFace="Ultralisk" Requirements="HaveUltraliskCavern"/>
+            <Unit value="Ultralisk"/>
+        </InfoArray>
+        <InfoArray index="Train28" Time="43.05">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+            <Button DefaultButtonFace="Defiler" State="Restricted" Requirements="HaveDefilerMound"/>
+            <Unit value="Defiler"/>
+        </InfoArray>
+        <InfoArray index="Train29" Time="43.05">
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+            <Button DefaultButtonFace="Queen" State="Restricted" Requirements="HaveInfestationPit"/>
+            <Unit value="QueenBW"/>
+        </InfoArray>
+        <InfoArray index="Train30" Time="25.83">
+            <Resource index="Minerals" value="25"/>
+            <Resource index="Vespene" value="75"/>
+            <Charge Link="Abil/LarvaTrain"/>
+            <Cooldown Link="Abil/LarvaTrain"/>
+            <Button DefaultButtonFace="Scourge" State="Restricted" Requirements="HaveSpire"/>
+            <Unit value="Scourge"/>
+            <Unit value="Scourge"/>
+        </InfoArray>
     </CAbilTrain>
     <CAbilEffectTarget id="LockdownHardcore">
         <EditorCategories value="AbilityorEffectType:Units"/>
@@ -1159,7 +1325,6 @@
             <Charge Link="Abil/CommandCenterTrain"/>
             <Cooldown Link="Abil/CommandCenterTrain"/>
         </InfoArray>
-        <Alert value="TrainingCompletePing"/>
         <Activity value="UI/Mutating"/>
     </CAbilTrain>
     <CAbilEffectTarget id="DefensiveMatrix2">
@@ -1561,11 +1726,6 @@
             <Cooldown Link="Abil/BarracksAddOns"/>
         </InfoArray>
     </CAbilBuild>
-    <CAbilArmMagazine id="CarrierHangar">
-        <InfoArray index="Ammo1" Time="17" CountStart="0"/>
-        <ReturnLifeFraction value="0.25"/>
-        <EffectArray index="Launch" value="CarrierCeptorLaunched"/>
-    </CAbilArmMagazine>
     <CAbilMorph id="NuclearSiloMorph">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="TechLabBarracks" Requirements="ShowIfHaveCCAddOnParent"/>
@@ -2232,7 +2392,6 @@
             <Unit value="Medic"/>
         </InfoArray>
         <Activity value="UI/Building"/>
-        <Alert value="TrainingCompletePing"/>
     </CAbilTrain>
     <CAbilTrain id="BarracksTrainSC2BW" parent="BarracksTrain">
         <Name value="Abil/Name/BarracksTrainSC2BW"/>
@@ -2398,7 +2557,6 @@
     </CAbilMorph>
     <CAbilTrain id="NexusTrain">
         <Activity value="UI/Building"/>
-        <Alert value="TrainingCompletePing"/>
     </CAbilTrain>
     <CAbilMorph id="EngineeringBayLiftOff" parent="TerranBuildingLiftOff" unit="EngineeringBayFlying">
         <Name value="Abil/Name/EngineeringBayLiftOff"/>
@@ -2663,7 +2821,6 @@
             <Button Requirements="HaveTemplarArchives"/>
         </InfoArray>
         <Activity value="UI/TrainingProtoss"/>
-        <Alert value="TrainingCompletePing"/>
     </CAbilTrain>
     <CAbilResearch id="DefilerMoundResearch">
         <EditorCategories value="Race:Zerg,AbilityorEffectType:Structures"/>
@@ -2876,7 +3033,6 @@
             <Unit index="0" removed="1"/>
         </InfoArray>
         <Activity value="UI/Building"/>
-        <Alert value="TrainingCompletePing"/>
     </CAbilTrain>
     <!--    <CAbilEffectTarget id="ScannerSweep">-->
     <!--        <CmdButtonArray index="Execute" Requirements="UseScannerSweep"/>-->
@@ -2929,7 +3085,6 @@
             <Unit value="Goliath"/>
         </InfoArray>
         <InfoArray index="Train9" Time="30"/>
-        <Alert value="TrainingCompletePing"/>
     </CAbilTrain>
     <CAbilTrain id="FactoryTrainSC2BW" parent="FactoryTrain">
         <Name value="Abil/Name/FactoryTrainSC2BW"/>
@@ -2981,57 +3136,6 @@
         <InfoArray index="Research3" Time="86.1"/>
         <Activity value="UI/Evolving"/>
     </CAbilResearch>
-    <CAbilTrain id="LarvaTrain">
-        <InfoArray index="Train1" Effect="DroneAlert"/>
-        <InfoArray index="Train2" Time="24.108"/>
-        <InfoArray index="Train3" Time="34.44"/>
-        <InfoArray index="Train4" Time="24.108"/>
-        <InfoArray index="Train5" Time="34.44"/>
-        <InfoArray index="Train6" Time="51.66">
-            <Button DefaultButtonFace="Ultralisk" Requirements="HaveUltraliskCavern"/>
-            <Unit value="Ultralisk"/>
-        </InfoArray>
-        <InfoArray index="Train7" Time="35">
-            <Button DefaultButtonFace="Baneling" Requirements="HaveBanelingNest"/>
-            <Unit index="0" value="Baneling"/>
-        </InfoArray>
-        <InfoArray index="Train8" Time="43.05">
-            <Button DefaultButtonFace="Defiler" State="Restricted" Requirements="HaveDefilerMound"/>
-            <Unit value="Defiler"/>
-        </InfoArray>
-        <InfoArray index="Train9" Time="43.05">
-            <Button DefaultButtonFace="Queen" State="Restricted" Requirements="HaveInfestationPit"/>
-            <Unit value="QueenBW"/>
-        </InfoArray>
-        <InfoArray index="Train10">
-            <Button DefaultButtonFace=""/>
-            <Unit index="0" removed="1"/>
-        </InfoArray>
-        <InfoArray index="Train11">
-            <Button DefaultButtonFace=""/>
-            <Unit index="0" removed="1"/>
-        </InfoArray>
-        <InfoArray index="Train12">
-            <Button DefaultButtonFace=""/>
-            <Unit index="0" removed="1"/>
-        </InfoArray>
-        <InfoArray index="Train13">
-            <Button DefaultButtonFace=""/>
-            <Unit index="0" removed="1"/>
-        </InfoArray>
-        <InfoArray index="Train14" Time="25.83">
-            <Resource index="Minerals" value="25"/>
-            <Resource index="Vespene" value="75"/>
-            <Button DefaultButtonFace="Scourge" State="Restricted" Requirements="HaveSpire"/>
-            <Unit value="Scourge"/>
-            <Unit value="Scourge"/>
-        </InfoArray>
-        <InfoArray index="Train15">
-            <Button DefaultButtonFace=""/>
-            <Unit index="0" removed="1"/>
-        </InfoArray>
-        <Alert value="TrainingCompletePing"/>
-    </CAbilTrain>
     <CAbilResearch id="SpawningPoolResearch">
         <InfoArray index="Research1" Time="86.1"/>
         <InfoArray index="Research2" Time="86.1"/>
@@ -3054,7 +3158,6 @@
             <Unit value="Phoenix"/>
         </InfoArray>
         <Activity value="UI/TrainingProtoss"/>
-        <Alert value="TrainingCompletePing"/>
     </CAbilTrain>
     <CAbilTrain id="StargateTrainSC2BW" parent="StargateTrain">
         <Name value="Abil/Name/StargateTrainSC2BW"/>
@@ -3094,7 +3197,7 @@
             <Button DefaultButtonFace="Carrier" Requirements="HaveFleetBeacon">
                 <Flags index="ToSelection" value="1"/>
             </Button>
-            <Unit value="Carrier"/>
+            <Unit value="CarrierSC2BW"/>
         </InfoArray>
         <InfoArray index="Train12" Time="68.88">
             <Button DefaultButtonFace="WarpInScout"/>
@@ -3148,7 +3251,6 @@
             <Unit value="VikingFighter"/>
         </InfoArray>
         <Activity value="UI/Building"/>
-        <Alert value="TrainingCompletePing"/>
     </CAbilTrain>
     <CAbilTrain id="StarportTrainSC2BW" parent="StarportTrain">
         <Name value="Abil/Name/StarportTrainSC2BW"/>

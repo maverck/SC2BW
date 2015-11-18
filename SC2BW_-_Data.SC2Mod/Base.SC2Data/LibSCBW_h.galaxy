@@ -269,7 +269,6 @@ trigger libSCBW_gt_ZergForcedRally;
 trigger libSCBW_gt_DisableBestUnitLarvaMorphAbility;
 trigger libSCBW_gt_AirUnitCreated;
 trigger libSCBW_gt_ComsatGains50EnergyonCompletion;
-trigger libSCBW_gt_UnitTakesDamage;
 trigger libSCBW_gt_DisablePushing;
 trigger libSCBW_gt_CheckMovementThreads;
 trigger libSCBW_gt_LadderInit;

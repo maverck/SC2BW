@@ -44,16 +44,183 @@
         <VariationCount value="1"/>
         <AnimSpeed value="2.000000"/>
     </CModel>
-    <CModel id="Carrier">
+    <CModel id="CarrierSC2BW" parent="Unit" Race="Protoss">
         <Model value="Assets\Units\Protoss\Carrier\CarrierNew.m3"/>
-        <ScaleMax value="0.500000,0.500000,0.500000"/>
-        <ScaleMin value="0.500000,0.500000,0.500000"/>
-        <SelectionRadius value="3.000000"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraLow11"/>
+        <Radius value="1.375000"/>
+        <SelectionOffset value="0.000000,0.000000,-0.750000"/>
+        <SelectionRadius value="1.718700"/>
+        <ShadowRadius value="1.718700"/>
+        <SquibTypeDefault value="Metal"/>
+        <TechPurchaseCamera value="Star2CameraLow11"/>
+        <UnitGlossaryCamera value="Star2CameraLow11"/>
     </CModel>
-    <CModel id="CarrierDeath">
-        <Model value="Assets\Units\Protoss\ScoutDeath\ScoutDeath.m3"/>
-        <ScaleMax value="3.000000,3.000000,3.000000"/>
-        <ScaleMin value="3.000000,3.000000,3.000000"/>
+    <CModel id="CarrierDeathSC2BW" parent="UnitDeath" Race="Protoss">
+        <Model value="Assets\Effects\Protoss\ProtossLargeUnitDeath\ProtossLargeUnitDeath.m3"/>
+        <LowQualityModel value="ProtossLargeUnitDeathLow"/>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="ProtossPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.190000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="ProtossPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.400000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="ProtossPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.600000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="ProtossPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.720000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="ProtossPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="1.040000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="ProtossExplosionLarge"/>
+            <Type value="Sound"/>
+            <Time value="1.780000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="ProtossPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.140000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="ProtossPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.270000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="ProtossPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.430000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="ProtossPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.500000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="ProtossPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.770000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="ProtossExplosionLarge"/>
+            <Type value="Sound"/>
+            <Time value="1.300000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,02"/>
+            <Name value="ProtossPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.140000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,02"/>
+            <Name value="ProtossExplosionLarge"/>
+            <Type value="Sound"/>
+            <Time value="0.210000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Explosion01"/>
+            <Type value="Sound"/>
+            <Time value="0.200000"/>
+            <Payload value="Protoss_ExplosionSmall"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Explosion02"/>
+            <Type value="Sound"/>
+            <Time value="0.360000"/>
+            <Payload value="Protoss_ExplosionSmall"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Explosion03"/>
+            <Type value="Sound"/>
+            <Time value="0.660000"/>
+            <Payload value="Protoss_ExplosionSmall"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Explosion04"/>
+            <Type value="Sound"/>
+            <Time value="0.800000"/>
+            <Payload value="Protoss_ExplosionSmall"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="FinalExplosion"/>
+            <Type value="Sound"/>
+            <Time value="1.950000"/>
+            <Payload value="Protoss_ExplosionLarge"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="Explosion01"/>
+            <Type value="Sound"/>
+            <Time value="0.200000"/>
+            <Payload value="Protoss_ExplosionSmall"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="Explosion02"/>
+            <Type value="Sound"/>
+            <Time value="0.360000"/>
+            <Payload value="Protoss_ExplosionSmall"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="Explosion03"/>
+            <Type value="Sound"/>
+            <Time value="0.660000"/>
+            <Payload value="Protoss_ExplosionSmall"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="Explosion04"/>
+            <Type value="Sound"/>
+            <Time value="0.800000"/>
+            <Payload value="Protoss_ExplosionSmall"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="FinalExplosion"/>
+            <Type value="Sound"/>
+            <Time value="1.460000"/>
+            <Payload value="Protoss_ExplosionLarge"/>
+        </Events>
+        <Events>
+            <Anim value="Death,02"/>
+            <Name value="FinalExplosion"/>
+            <Type value="Sound"/>
+            <Time value="0.270000"/>
+            <Payload value="Protoss_ExplosionLarge"/>
+        </Events>
+        <Occlusion value="Show"/>
     </CModel>
     <CModel id="CommandCenterPlacement">
         <ScaleMax value="0.700000,0.750000,0.750000"/>

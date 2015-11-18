@@ -455,6 +455,20 @@
     <CActorUnit id="BraxisAlphaTruckStopUnit">
         <BarHeight value="3"/>
     </CActorUnit>
+    <CActorUnit id="CarrierSC2BW" parent="Carrier" unitName="CarrierSC2BW">
+        <On index="0" Terms="UnitBirth.CarrierSC2BW"/>
+        <On index="1" Terms="UnitBirth.CarrierSC2BW"/>
+        <On index="2" Terms="UnitRevive.CarrierSC2BW"/>
+        <On index="3" Terms="UnitRevive.CarrierSC2BW"/>
+        <On index="4" Terms="UnitConstruction.CarrierSC2BW.Start"/>
+        <On index="5" Terms="UnitConstruction.CarrierSC2BW.Finish"/>
+        <Model value="CarrierSC2BW"/>
+        <Scale value="0.500000"/>
+        <DeathArray index="Normal" ModelLink="CarrierDeathSC2BW"/>
+        <DeathCustoms index="5" ModelLink="ProtossLargeUnitDeath"/>
+        <PlacementModel value="CarrierSC2BW"/>
+        <HighlightTooltip value="Unit/Name/CarrierSC2BW"/>
+    </CActorUnit>
     <CActorUnit id="Devourer" parent="GenericUnitMorph" unitName="BroodLord2">
         <AcceptedHostedPropTransfers index="Scale" value="0"/>
         <On Terms="ActorCreation" Send="$Birth 0 0.000000 -1.000000 0.000000"/>
@@ -507,25 +521,6 @@
         <Scale value="0.900000,0.900000,1.000000"/>
         <BarHeight value="3"/>
     </CActorUnit>
-    <CActorUnit id="Carrier">
-        <Scale value="0.800000"/>
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorSound id="CarrierInterceptorLaunch">
-        <On Terms="Abil.HangarHardcore.Launch" Send="Create"/>
-    </CActorSound>
-    <CActorRange id="CarrierTest12">
-        <Inherits index="Visibility" value="0"/>
-        <FogVisibility value="Visible"/>
-        <Range value="12.000000"/>
-        <RangeFlags index="Minimap" value="1"/>
-    </CActorRange>
-    <CActorRange id="CarrierTest8">
-        <Inherits index="Visibility" value="0"/>
-        <FogVisibility value="Visible"/>
-        <Range value="8.000000"/>
-        <RangeFlags index="Minimap" value="1"/>
-    </CActorRange>
     <!-- Carrion Bird                                                                            -->
     <CActorUnit id="CarrionBird">
         <BarHeight value="3"/>

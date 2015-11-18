@@ -178,21 +178,6 @@
         <TargetFilters value="Visible;Air,RawResource,HarvestableResource,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <DamagePoint value="0.0588"/>
     </CWeaponLegacy>
-    <CWeaponStrafe id="InterceptorBeam">
-        <DisplayAttackCount value="1"/>
-        <Effect value="InterceptorBeamDamage"/>
-        <Period value="2.0993"/>
-        <LoiterInnerRadius value="4"/>
-        <LoiterRadius value="8"/>
-        <DamagePoint value="0.0588"/>
-    </CWeaponStrafe>
-    <CWeaponLegacy id="InterceptorLaunch">
-        <MinScanRange value="16"/>
-    </CWeaponLegacy>
-    <CWeaponLegacy id="InterceptorsDummy">
-        <DisplayAttackCount value="1"/>
-        <DamagePoint value="0.0588"/>
-    </CWeaponLegacy>
     <CWeaponLegacy id="ParticleBeamMoving">
         <EditorCategories value="Race:Protoss"/>
         <Options index="Disabled" value="1"/>

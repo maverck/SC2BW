@@ -3250,7 +3250,7 @@ bool libSCBW_gt_CarrierCreated_Func (bool testConds, bool runActions) {
 
     // Conditions
     if (testConds) {
-        if (!((UnitGetType(EventUnitCreatedUnit()) == "Carrier"))) {
+        if (!((UnitGetType(EventUnitCreatedUnit()) == "CarrierSC2BW"))) {
             return false;
         }
     }
@@ -3346,7 +3346,7 @@ bool libSCBW_gt_CarrierOrderedToAttack_Func (bool testConds, bool runActions) {
 
     // Conditions
     if (testConds) {
-        if (!((UnitGetType(EventUnit()) == "Carrier"))) {
+        if (!((UnitGetType(EventUnit()) == "CarrierSC2BW"))) {
             return false;
         }
     }
@@ -3385,6 +3385,7 @@ bool libSCBW_gt_CarrierLoop_Func (bool testConds, bool runActions) {
     int lv_o;
     int lv_carrierArrayIndex;
     unit lv_selectedInterceptor;
+    unit lv_selectedCarrier;
 
     // Variable Initialization
     lv_o = 1;
@@ -3395,14 +3396,15 @@ bool libSCBW_gt_CarrierLoop_Func (bool testConds, bool runActions) {
     }
 
     while (true) {
-        UnitGroupLoopBegin(UnitGroup("Carrier", c_playerAny, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0));
+        UnitGroupLoopBegin(UnitGroup("CarrierSC2BW", c_playerAny, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0));
         for ( ; !UnitGroupLoopDone() ; UnitGroupLoopStep() ) {
-            lv_carrierArrayIndex = FixedToInt(UnitGetCustomValue(UnitGroupLoopCurrent(), 3));
             lv_o = 1;
+            lv_carrierArrayIndex = FixedToInt(UnitGetCustomValue(UnitGroupLoopCurrent(), 3));
+            lv_selectedCarrier = libSCBW_gv_carriers[lv_carrierArrayIndex][0];
             while ((lv_o <= 8)) {
                 lv_selectedInterceptor = libSCBW_gv_carriers[lv_carrierArrayIndex][lv_o];
-                if ((DistanceBetweenPoints(UnitGetPosition(UnitGroupLoopCurrent()), UnitGetPosition(lv_selectedInterceptor)) <= 1.5) && (UnitHasBehavior(libSCBW_gv_carriers[lv_carrierArrayIndex][0], "CarrierIsMoving") == true)) {
-                    UnitSetPosition(lv_selectedInterceptor, PointWithOffsetPolar(UnitGetPosition(libSCBW_gv_carriers[lv_carrierArrayIndex][0]), 1.8, AngleBetweenPoints(UnitGetPosition(UnitGroupLoopCurrent()), UnitGetPosition(lv_selectedInterceptor))), true);
+                if ((libSCBW_gv_carriers[lv_carrierArrayIndex][lv_o] != null) && (DistanceBetweenPoints(UnitGetPosition(lv_selectedCarrier), UnitGetPosition(lv_selectedInterceptor)) <= 1.5) && (UnitHasBehavior(lv_selectedCarrier, "CarrierIsMoving") == true)) {
+                    UnitSetPosition(lv_selectedInterceptor, PointWithOffsetPolar(UnitGetPosition(lv_selectedCarrier), 1.8, AngleBetweenPoints(UnitGetPosition(lv_selectedCarrier), UnitGetPosition(lv_selectedInterceptor))), true);
                 }
                 else {
                 }
@@ -4848,25 +4850,6 @@ void libSCBW_gt_ComsatGains50EnergyonCompletion_Init () {
 }
 
 //--------------------------------------------------------------------------------------------------
-// Trigger: UnitTakesDamage
-//--------------------------------------------------------------------------------------------------
-bool libSCBW_gt_UnitTakesDamage_Func (bool testConds, bool runActions) {
-    // Actions
-    if (!runActions) {
-        return true;
-    }
-
-    UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, FixedToText(EventUnitDamageAmount(), c_fixedPrecisionAny));
-    return true;
-}
-
-//--------------------------------------------------------------------------------------------------
-void libSCBW_gt_UnitTakesDamage_Init () {
-    libSCBW_gt_UnitTakesDamage = TriggerCreate("libSCBW_gt_UnitTakesDamage_Func");
-    TriggerAddEventUnitDamaged(libSCBW_gt_UnitTakesDamage, null, c_unitDamageTypeAny, c_unitDamageEither, null);
-}
-
-//--------------------------------------------------------------------------------------------------
 // Trigger: Disable "Pushing"
 //--------------------------------------------------------------------------------------------------
 bool libSCBW_gt_DisablePushing_Func (bool testConds, bool runActions) {
@@ -5221,7 +5204,6 @@ void libSCBW_InitTriggers () {
     libSCBW_gt_DisableBestUnitLarvaMorphAbility_Init();
     libSCBW_gt_AirUnitCreated_Init();
     libSCBW_gt_ComsatGains50EnergyonCompletion_Init();
-    libSCBW_gt_UnitTakesDamage_Init();
     libSCBW_gt_DisablePushing_Init();
     libSCBW_gt_CheckMovementThreads_Init();
     libSCBW_gt_LadderInit_Init();

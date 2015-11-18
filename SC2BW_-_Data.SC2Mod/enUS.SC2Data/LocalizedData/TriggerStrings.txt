@@ -506,6 +506,7 @@ Variable/Name/lib_SCBW_5AB9F1B3=PlayerID
 Variable/Name/lib_SCBW_5AC2518F=osTotalEnemyUnitsKilledNEW
 Variable/Name/lib_SCBW_5CD39BD7=Total Damage
 Variable/Name/lib_SCBW_5CDE3E74=AllUnits
+Variable/Name/lib_SCBW_5D576424=SelectedCarrier
 Variable/Name/lib_SCBW_5D94CB37=i
 Variable/Name/lib_SCBW_5DDEC056=Rating
 Variable/Name/lib_SCBW_5E090D4E=index

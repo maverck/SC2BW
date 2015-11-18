@@ -44,11 +44,6 @@
             <StateFlags index="Stun" value="1"/>
         </Modification>
     </CBehaviorBuff>
-    <CBehaviorBuff id="CarrierInterceptorInAir">
-        <EditorCategories value="AbilityorEffectType:Units"/>
-        <MaxStackCount value="8"/>
-        <InfoFlags index="Hidden" value="1"/>
-    </CBehaviorBuff>
     <CBehaviorBuff id="CarryMineralFieldMineralsSpecial">
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
@@ -762,10 +757,6 @@
         <Modification SightMaximum="1" DetectArc="0">
             <StateFlags index="SuppressDetection" value="1"/>
             <DeathResponse>
-                <Cost>
-                    <Charge Link="" Location="Abil"/>
-                    <Cooldown Link="" Location="Abil"/>
-                </Cost>
                 <Type index="Remove" value="1"/>
             </DeathResponse>
         </Modification>

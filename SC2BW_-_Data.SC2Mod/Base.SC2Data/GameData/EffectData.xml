@@ -6,20 +6,6 @@
         <AttributeFactor index="Armored" value="-0.25"/>
         <Amount value="30"/>
     </CEffectDamage>
-    <CEffectApplyBehavior id="CarrierPushCeptorApply">
-        <ValidatorArray index="0" value="IsInterceptor"/>
-        <EditorCategories value=""/>
-        <Behavior value="StopMovement00625"/>
-    </CEffectApplyBehavior>
-    <CEffectEnumArea id="CarrierPushCeptorSearch">
-        <EditorCategories value=""/>
-        <AreaArray Radius="3" Effect="CarrierPushCeptorSet"/>
-    </CEffectEnumArea>
-    <CEffectApplyForce id="CarrierPushCeptorForce">
-        <ValidatorArray value="IsInterceptor"/>
-        <EditorCategories value=""/>
-        <Amount value="0.25"/>
-    </CEffectApplyForce>
     <CEffectSet id="ArcliteCannonNullSet">
         <EditorCategories value=""/>
     </CEffectSet>
@@ -92,22 +78,6 @@
     </CEffectDamage>
     <CEffectSet id="C10CanisterRifleSet">
         <EditorCategories value=""/>
-    </CEffectSet>
-    <CEffectApplyBehavior id="CarrierCeptorLaunched">
-        <EditorCategories value=""/>
-        <WhichUnit Value="Source"/>
-        <Behavior value="CarrierInterceptorInAir"/>
-    </CEffectApplyBehavior>
-    <CEffectRemoveBehavior id="CarrierCeptorReturned">
-        <EditorCategories value=""/>
-        <WhichUnit Value="Source"/>
-        <BehaviorLink value="CarrierInterceptorInAir"/>
-        <Count value="1"/>
-    </CEffectRemoveBehavior>
-    <CEffectSet id="CarrierPushCeptorSet">
-        <EditorCategories value=""/>
-        <EffectArray value="CarrierPushCeptorApply"/>
-        <EffectArray value="CarrierPushCeptorForce"/>
     </CEffectSet>
     <CEffectApplyBehavior id="ClawsApply">
         <EditorCategories value=""/>
@@ -780,9 +750,6 @@
     <CEffectDamage id="InterceptorBeamDamage">
         <Amount value="6"/>
     </CEffectDamage>
-    <CEffectCreatePersistent id="InterceptorLaunchPersistent">
-        <WhichLocation Value="TargetPoint"/>
-    </CEffectCreatePersistent>
     <CEffectDamage id="KaiserBladesDamage2" parent="DU_WEAP">
         <EditorCategories value="Race:Zerg"/>
         <Marker Link="Effect/KaiserBladesDamage"/>
