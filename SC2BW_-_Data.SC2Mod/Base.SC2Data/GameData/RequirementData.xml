@@ -22,6 +22,9 @@
     <CRequirement id="ConsumeCompleted">
         <NodeArray index="Use" Link="CountUpgradeEvolveConsumeCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="OverlordVentralSacsCompleted">
+        <NodeArray index="Use" Link="CountUpgradeoverlordtransportCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="EvolveEnsnare">
         <EditorCategories value="Race:Zerg,TechType:Upgrade"/>
         <NodeArray index="Show" Link="NotCountUpgradeQueenEnsnareQueuedOrBetter"/>
@@ -204,9 +207,7 @@
     <CRequirement id="LearnBattlecruiserSpecializations">
         <NodeArray index="Use" Link="CountBehaviorPhysicsLabAttachedtoScienceFacilityCompleteOnlyAtUnit"/>
     </CRequirement>
-    <CRequirement id="LearnBurrow">
-        <NodeArray index="Use" Link=""/>
-    </CRequirement>
+    <CRequirement id="LearnBurrow"/>
     <CRequirement id="LearnHallucination2">
         <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
         <NodeArray index="Show" Link="NotCountUpgradeHallucinationHighTemplarQueuedOrBetter"/>

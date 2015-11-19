@@ -50,7 +50,7 @@
         <PlanetPanelCamera value="Star2CameraLow11"/>
         <Radius value="1.375000"/>
         <SelectionOffset value="0.000000,0.000000,-0.750000"/>
-        <SelectionRadius value="1.718700"/>
+        <SelectionRadius value="3.000000"/>
         <ShadowRadius value="1.718700"/>
         <SquibTypeDefault value="Metal"/>
         <TechPurchaseCamera value="Star2CameraLow11"/>
@@ -462,7 +462,9 @@
         <Model value="Assets\Buildings\Terran\ControlTower\ControlTower.m3"/>
     </CModel>
     <CModel id="StasisImpact">
-        <Model value="Assets\Effects\Protoss\TimeWarpLaunch\TimeWarpLaunch.m3"/>
+        <Model value="Assets\Effects\Protoss\Arbiter_StasisField_Shockwave\Arbiter_StasisField_Shockwave.m3"/>
+        <ScaleMax value="0.500000,0.500000,0.500000"/>
+        <ScaleMin value="0.500000,0.500000,0.500000"/>
     </CModel>
     <CModel id="TechLab">
         <Model value="Assets\Buildings\Terran\CovertOps\CovertOps.m3"/>
@@ -783,12 +785,11 @@
         <TipabilityWidth value="0.800000"/>
     </CModel>
     <CModel id="ReaverScarab" parent="Unit">
-        <Model value="Assets\Effects\Protoss\ArcadePlasmaMissile\ArcadePlasmaMissile.m3"/>
+        <Model value="Assets\Effects\Protoss\Reaver_Missile\Reaver_Missile.m3"/>
         <EditorCategories value=""/>
     </CModel>
     <CModel id="ReaverScarabImpact" parent="ImpactFX">
-        <Model value="Assets\Effects\Protoss\TempestPlasmaMissileImpact\TempestPlasmaMissileImpact.m3"/>
-        <AnimSpeed value="3.000000"/>
+        <Model value="Assets\Effects\Protoss\Reaver_Missile_Impact\Reaver_Missile_Impact.m3"/>
     </CModel>
     <CModel id="CorsairAttackImpact" parent="ImpactFX">
         <Model value="Assets\Effects\Custom\corsair_attack_impact.m3"/>
@@ -863,7 +864,7 @@
         <ShadowRadius value="2.000000"/>
     </CModel>
     <CModel id="StasisField" parent="BuffFX">
-        <Model value="Assets\Effects\Protoss\TractorBeamImpactBubble\TractorBeamImpactBubble.m3"/>
+        <Model value="Assets\Effects\Protoss\Arbiter_StasisField_Impact\Arbiter_StasisField_Impact.m3"/>
     </CModel>
     <CModel id="SunkenColonyAttackImpact" parent="ImpactFX">
         <Model value="Assets\Effects\Zerg\SunkenColonyMissile\SunkenColonyMissile.m3"/>

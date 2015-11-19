@@ -539,21 +539,13 @@
             <Unit value="Scourge"/>
         </InfoArray>
     </CAbilTrain>
-    <CAbilTrain id="LarvaTrainSC2BW">
-        <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
-        <Activity value="UI/Morphing"/>
+    <CAbilTrain id="LarvaTrainSC2BW2">
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Flags index="DisableCollision" value="1"/>
         <Flags index="KillOnCancel" value="1"/>
         <Flags index="KillOnFinish" value="1"/>
         <Flags index="Select" value="1"/>
         <Flags index="WaitForFood" value="0"/>
-        <MorphUnit value="Egg"/>
-        <InfoArray index="Train1" Time="35">
-            <Charge Link="Abil/LarvaTrain"/>
-            <Cooldown Link="Abil/LarvaTrain"/>
-            <Button DefaultButtonFace="Baneling" Requirements="HaveBanelingNest"/>
-            <Unit value="Baneling"/>
-        </InfoArray>
         <InfoArray index="Train2" Time="27">
             <Charge Link="Abil/LarvaTrain"/>
             <Cooldown Link="Abil/LarvaTrain"/>
@@ -802,6 +794,13 @@
         <CmdButtonArray index="Execute" DefaultButtonFace="OpticalFlare" Requirements="UseOpticalFlare"/>
         <TargetFilters value="Visible;Player,Ally,Structure,RawResource,HarvestableResource,Stasis,Dead,Hidden,Invulnerable"/>
     </CAbilEffectTarget>
+    <CAbilTransport id="OverlordTransport">
+        <CmdButtonArray index="Load" State="Restricted" Requirements="OverlordVentralSacsCompleted"/>
+        <CmdButtonArray index="UnloadAll" State="Restricted" Requirements="OverlordVentralSacsCompleted"/>
+        <CmdButtonArray index="UnloadAt" State="Restricted" Requirements="OverlordVentralSacsCompleted"/>
+        <CmdButtonArray index="UnloadUnit" State="Restricted" Requirements="OverlordVentralSacsCompleted"/>
+        <CmdButtonArray index="LoadAll" State="Restricted" Requirements="OverlordVentralSacsCompleted"/>
+    </CAbilTransport>
     <CAbilEffectTarget id="ParasiteHardcore">
         <EditorCategories value="AbilityorEffectType:Units,Race:Zerg"/>
         <Effect index="0" value="ParasiteLM"/>

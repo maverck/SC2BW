@@ -98,7 +98,7 @@
     </CEffectSet>
     <CEffectDamage id="CrucioShockCannonBlast">
         <AttributeBonus index="Armored" value="0"/>
-        <Amount value="70"/>
+        <Amount value="0"/>
         <AreaArray index="0" Radius="0.3125" Fraction="1" Validator="NotUnderDarkSwarm"/>
         <AreaArray index="1" Radius="0.7812" Fraction="0.5" Validator="IsNotBuried"/>
         <AreaArray index="2" Radius="1.25" Fraction="0.25" Validator="IsNotBuried"/>
@@ -189,7 +189,9 @@
         <WhichLocation Value="TargetUnitOrPoint"/>
         <PeriodCount value="2"/>
         <PeriodicEffectArray value="GoliathALM"/>
+        <PeriodicEffectArray value="GoliathALM"/>
         <PeriodicPeriodArray value="0"/>
+        <PeriodicPeriodArray value="0.0625"/>
     </CEffectCreatePersistent>
     <CEffectDamage id="GoliathAU">
         <EditorCategories value=""/>
@@ -1040,15 +1042,16 @@
     </CEffectCreatePersistent>
     <CEffectDamage id="ScarabDamageDummy">
         <EditorCategories value=""/>
-        <ResponseFlags index="Acquire" value="1"/>
-        <ResponseFlags index="Flee" value="1"/>
-        <ArmorReduction value="1"/>
-        <Flags index="Notification" value="1"/>
-        <Kind value="Splash"/>
+        <Kind value="Ranged"/>
         <AreaArray Radius="0.625" Fraction="1"/>
         <AreaArray Radius="1.25" Fraction="0.5" Validator="NotBurrowed"/>
         <AreaArray Radius="1.875" Fraction="0.25" Validator="NotBurrowed"/>
-        <SearchFilters value="Visible;Player,Ally,Air,RawResource,HarvestableResource,Missile,Dead"/>
+        <SearchFilters value="Ground;Self,Player,Ally,Air,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <KindSplash value="Splash"/>
+        <Death value="Blast"/>
+        <ExcludeArray Value="Target"/>
+        <SearchFlags index="CallForHelp" value="1"/>
+        <SearchFlags index="OffsetAreaByAngle" value="1"/>
     </CEffectDamage>
     <CEffectApplyBehavior id="ScarabFiredApply">
         <EditorCategories value=""/>
@@ -1140,9 +1143,7 @@
         <CaseArray Validator="Shield0" Effect="Null"/>
         <CaseArray Validator="ShieldGZero" Effect="Null"/>
     </CEffectSwitch>
-    <CEffectSet id="ScarabSet">
-        <EffectArray value="Suicide"/>
-    </CEffectSet>
+    <CEffectSet id="ScarabSet"/>
     <CEffectDamage id="ScoutAirU" parent="DU_WEAP">
         <EditorCategories value="Race:Protoss"/>
         <AttributeFactor index="Light" value="-0.5"/>

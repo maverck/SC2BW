@@ -1182,7 +1182,7 @@
     <CBehaviorBuff id="StarportTechLab"/>
     <CBehaviorBuff id="StasisField">
         <Alignment value="Negative"/>
-        <InfoIcon value="Assets\Textures\btn-ability-protoss-gravitonbeam.dds"/>
+        <InfoIcon value="Assets\Textures\btn-ability-protoss-stasisfield.dds"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
         <TimeScaleSource Value="Global"/>
         <Duration value="40"/>
@@ -1230,6 +1230,10 @@
             <AbilClassDisableArray index="CAbilWarpTrain" value="1"/>
         </Modification>
         <DamageResponse Chance="1" ModifyFraction="0" ModifyMinimumDamage="1"/>
+        <DisplayDuration index="Self" value="1"/>
+        <DisplayDuration index="Ally" value="1"/>
+        <DisplayDuration index="Neutral" value="1"/>
+        <DisplayDuration index="Enemy" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="Stimpack">
         <Modification AttackSpeedMultiplier="1.9"/>

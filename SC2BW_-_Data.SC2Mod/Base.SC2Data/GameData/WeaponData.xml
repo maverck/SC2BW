@@ -135,6 +135,15 @@
         <Effect value="GoliathGSet"/>
         <DamagePoint value="0.0588"/>
     </CWeaponLegacy>
+    <CWeaponLegacy id="Scarab">
+        <EditorCategories value=""/>
+        <Range value="0.5"/>
+        <Effect value="ScarabSet"/>
+        <Arc value="360"/>
+        <Period value="0.25"/>
+        <Backswing value="0"/>
+        <AllowedMovement value="Slowing"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="TwinAutocannonsNull">
         <EditorCategories value="Race:Terran"/>
         <Options index="Hidden" value="1"/>
@@ -299,17 +308,6 @@
         <DamagePoint value="0.2353"/>
         <Backswing value="0.2353"/>
         <Effect value="HydraliskNeedleSpinesPersistent"/>
-    </CWeaponLegacy>
-    <CWeaponLegacy id="Scarab">
-        <EditorCategories value="Race:Protoss"/>
-        <DisplayEffect value="ScarabDamage"/>
-        <TargetFilters value="Visible;Air,Missile,Stasis,Dead,Hidden,Invulnerable"/>
-        <Range value="0.5"/>
-        <RangeSlop value="0.25"/>
-        <Arc value="360"/>
-        <DamagePoint value="0.5"/>
-        <Effect value="ScarabSet"/>
-        <AllowedMovement value="Slowing"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="Scourge">
         <EditorCategories value=""/>

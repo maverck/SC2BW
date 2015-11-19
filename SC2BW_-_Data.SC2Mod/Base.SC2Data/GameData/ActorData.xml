@@ -1076,6 +1076,13 @@
         <LaunchAssets Model="" Sound="CorsairAttack"/>
         <ImpactMap index="None" Sound=""/>
     </CActorAction>
+    <CActorAction id="GoliathAirAttackU" parent="GenericAttack" effectImpact="GoliathAU" effectLaunch="GoliathALMU">
+        <EditorCategories value=""/>
+        <LaunchAttachQuery Methods="AMPatternGoliathU"/>
+        <LaunchAssets Model="ThorAAAttackLaunch" Sound="MissileTurret_AttackLaunch"/>
+        <Missile value="GoliathAirAttackMissileU"/>
+        <ImpactMap index="None" Model="GoliathAirAttackImpact" Sound="MissileTurret_AttackImpact"/>
+    </CActorAction>
     <CActorSound id="IrradiateSound" parent="SoundOneShot">
         <EditorCategories value=""/>
         <On Terms="Effect.IrradiateApplyBehavior.Start" Send="Create"/>
@@ -1112,6 +1119,38 @@
         <On index="2" Terms="Effect.ScoutMPAirU.Stop; FromEffectTreeDescendant"/>
         <ImpactMap index="None" Model="ScoutAirMissileImpact" Sound="Scout_AirAttackImpact"/>
     </CActorAction>
+    <CActorUnit id="Stalker">
+        <On index="62" Terms="WeaponStart.*.AttackStart" Send="AnimBracketStart Cover Cover,Start Cover Cover,End"/>
+        <On index="63" Terms="WeaponStop.*.AttackStop" Send="AnimBracketStop Cover"/>
+        <On index="64" removed="1"/>
+        <On index="65" removed="1"/>
+        <On index="66" removed="1"/>
+        <On index="67" removed="1"/>
+        <On index="68" removed="1"/>
+        <BuildModel value="ImmortalWarpIn"/>
+        <DeathArray index="Normal" ModelLink="DragoonDeath" SoundLink="DragoonDeath"/>
+        <DeathCustoms index="6" ModelLink="DragoonDeath" Name="RagdollBasic"/>
+        <PlacementModel value="ImmortalPlacement"/>
+        <PortraitModel value="ImmortalPortrait"/>
+        <WalkAnimMoveSpeed value="1.8007"/>
+        <BarHeight value="3"/>
+        <BarOffset value="80"/>
+        <BarWidth value="90"/>
+        <GroupIcon>
+            <Image index="0" value="Assets\Textures\wireframe-void-dragoon.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-protoss-dragoon-void.dds"/>
+        <SoundArray index="Attack" value="Stalker_Yes"/>
+        <UnitIcon value="Assets\Textures\btn-unit-protoss-dragoon-void.dds"/>
+        <Wireframe>
+            <Image index="0" value="Assets\Textures\wireframe-protoss-dragoon.dds"/>
+        </Wireframe>
+        <WireframeShield>
+            <Image index="0" value="Assets\Textures\wireframe-protoss-dragoon-shield01.dds"/>
+            <Image index="1" value="Assets\Textures\wireframe-protoss-dragoon-shield02.dds"/>
+            <Image index="2" value="Assets\Textures\wireframe-protoss-dragoon-shield03.dds"/>
+        </WireframeShield>
+    </CActorUnit>
     <CActorModel id="StasisImpact">
         <EditorCategories value=""/>
         <On Terms="ActorCreation" Send="AnimBracketStart BSD Birth Stand Death ContentPlayOnce"/>
@@ -1195,7 +1234,7 @@
         <ImpactMap index="LightArmor" Sound="SiegeTankAttackImpactLightArmor" ModelReaction="SiegeTankAttackImpactReactionLightArmor"/>
         <ImpactMap index="Metal" Sound="SiegeTankAttackImpactMetal" ModelReaction="SiegeTankAttackImpactReactionMetal"/>
         <ImpactMap index="Shield" Sound="SiegeTankAttackImpactShield" ModelReaction="SiegeTankAttackImpactReactionShield"/>
-        <ImpactPhysics Name="ScarabImpact" MatchKeys="Basic" Physics="SiegeTankSiegedForce"/>
+        <ImpactPhysics Name="Explosion" MatchKeys="Basic" Physics="SiegeTankSiegedForce"/>
     </CActorAction>
     <CActorAction id="SiegeTankAttack">
         <On index="0" Terms="Effect.ArcliteCannonNullDamage.Stop; FromEffectTreeDescendant"/>
@@ -1347,13 +1386,6 @@
         <EditorCategories value=""/>
         <Model value="GoliathAWeaponU2"/>
     </CActorMissile>
-    <CActorAction id="GoliathAirAttackU" parent="GenericAttack" effectImpact="GoliathAU" effectLaunch="GoliathALMU">
-        <EditorCategories value=""/>
-        <LaunchAttachQuery Methods="AMPatternGoliathU"/>
-        <LaunchAssets Model="ThorAAAttackLaunch" Sound="MissileTurret_AttackLaunch"/>
-        <Missile value="GoliathAirAttackMissileU"/>
-        <ImpactMap index="None" Model="GoliathAirAttackImpact" Sound="MissileTurret_AttackImpact"/>
-    </CActorAction>
     <!-- Ground attack.                                                                          -->
     <CActorAction id="GoliathGroundAttack" effectAttack="GoliathGNull">
         <LaunchAttachQuery Methods="AMFilterWeaponSetA0"/>
@@ -1971,8 +2003,8 @@
         </WireframeShield>
         <HeroIcon value="Assets\Textures\btn-unit-protoss-reaver.dds"/>
         <UnitIcon value="Assets\Textures\btn-unit-protoss-reaver.dds"/>
-        <WalkAnimMoveSpeed value="1.5"/>
         <LifeArmorIcon value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel0.dds"/>
+        <WalkAnimMoveSpeed value="1.5"/>
     </CActorUnit>
     <!-- Redstone Lava Critter                                                                   -->
     <CActorUnit id="RedstoneLavaCritter">
@@ -3654,8 +3686,7 @@
         <BarHeight value="1"/>
         <BarWidth value="1"/>
         <On index="1" Terms="UnitBirth" Send="AnimBracketStart Lifetime Birth Stand {} OpeningPlayForever"/>
-        <Scale value="2.000000"/>
-        <DeathArray index="Normal" AnimProps="Death" ModelLink="ReaverScarabImpact"/>
+        <DeathArray index="Normal" AnimProps="Death" ModelLink="ReaverScarabImpact" SoundLink="Scarab_Explode"/>
         <DeathActorModel value="UnitDeathModel"/>
         <DeathActorModelLow value="UnitDeathModelUnscaled"/>
         <DeathActorSound value="UnitDeathSound"/>
@@ -3724,38 +3755,6 @@
         <PortraitModel value="OvermindPortrait"/>
         <BarHeight value="3"/>
         <Baselines index="Stand" AnimProps="Burrow,Stand"/>
-    </CActorUnit>
-    <CActorUnit id="Stalker">
-        <On index="62" Terms="WeaponStart.*.AttackStart" Send="AnimBracketStart Cover Cover,Start Cover Cover,End"/>
-        <On index="63" Terms="WeaponStop.*.AttackStop" Send="AnimBracketStop Cover"/>
-        <On index="64" removed="1"/>
-        <On index="65" removed="1"/>
-        <On index="66" removed="1"/>
-        <On index="67" removed="1"/>
-        <On index="68" removed="1"/>
-        <DeathArray index="Normal" ModelLink="DragoonDeath" SoundLink="DragoonDeath"/>
-        <GroupIcon>
-            <Image index="0" value="Assets\Textures\wireframe-protoss-dragoon.dds"/>
-        </GroupIcon>
-        <Wireframe>
-            <Image index="0" value="Assets\Textures\wireframe-protoss-dragoon.dds"/>
-        </Wireframe>
-        <WireframeShield>
-            <Image index="0" value="Assets\Textures\wireframe-protoss-dragoon-shield01.dds"/>
-            <Image index="1" value="Assets\Textures\wireframe-protoss-dragoon-shield02.dds"/>
-            <Image index="2" value="Assets\Textures\wireframe-protoss-dragoon-shield03.dds"/>
-        </WireframeShield>
-        <BuildModel value="ImmortalWarpIn"/>
-        <PlacementModel value="ImmortalPlacement"/>
-        <PortraitModel value="ImmortalPortrait"/>
-        <WalkAnimMoveSpeed value="1.8007"/>
-        <BarOffset value="80"/>
-        <BarWidth value="90"/>
-        <HeroIcon value="Assets\Textures\btn-unit-protoss-dragoon.dds"/>
-        <UnitIcon value="Assets\Textures\btn-unit-protoss-dragoon.dds"/>
-        <SoundArray index="Attack" value="Stalker_Yes"/>
-        <BarHeight value="3"/>
-        <DeathCustoms index="6" ModelLink="DragoonDeath" Name="RagdollBasic"/>
     </CActorUnit>
     <CActorMissile id="StalkerAttackMissile">
         <BarHeight value="1"/>
