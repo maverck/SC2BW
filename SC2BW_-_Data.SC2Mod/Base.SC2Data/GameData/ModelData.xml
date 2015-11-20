@@ -253,6 +253,12 @@
         <ScaleMax value="0.250000,0.250000,0.250000"/>
         <ScaleMin value="0.250000,0.250000,0.250000"/>
     </CModel>
+    <CModel id="MachineShopSplat" parent="Splat">
+        <Model value="Assets\Splats\Splat_TechLab\Splat_TechLab.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="0.850000,0.850000,0.850000"/>
+        <ScaleMin value="0.850000,0.850000,0.850000"/>
+    </CModel>
     <CModel id="FeedbackImpact">
         <Model value="Assets\Effects\Zerg\KerriganRespawnImpact\KerriganRespawnImpact.m3"/>
     </CModel>
@@ -387,6 +393,23 @@
     <CModel id="Infestation" parent="PersistentSpellFX">
         <Model value="Assets\Effects\Zerg\InfestationCommandCenter\InfestationCommandCenter.m3"/>
     </CModel>
+    <CModel id="LarvaSC2BW" parent="Unit" Race="Zerg">
+        <Model value="Assets\Units\Zerg\Larva\Larva.m3"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraLow04"/>
+        <Radius value="0.250000"/>
+        <SelectionLayer value="1"/>
+        <SelectionRadius value="0.250000"/>
+        <ShadowRadius value="0.250000"/>
+        <SquibTypeDefault value="Flesh"/>
+        <TechPurchaseCamera value="Star2CameraLow04"/>
+        <UnitGlossaryCamera value="Star2CameraLow04"/>
+    </CModel>
+    <CModel id="LarvaPortraitSC2BW" parent="Portrait" Race="Zerg">
+        <Model value="Assets\Portraits\Zerg\LarvaPortrait\LarvaPortrait.m3"/>
+        <Image value="Assets\Textures\LarvaPortrait_Static.dds"/>
+        <Lighting value="LarvaPortrait"/>
+    </CModel>
     <CModel id="Lurker" parent="Unit" Race="Zerg">
         <Model value="Assets\Units\Zerg\Lurker\BW-Lurker.m3"/>
         <Occlusion value="Show"/>
@@ -421,10 +444,10 @@
         <Model value="Assets\Models\forceEffect\forceEffect.m3"/>
     </CModel>
     <CModel id="Reactor">
-        <Model value="Assets\Buildings\Terran\ControlTower\ControlTower.m3"/>
+        <Model value="Assets\Buildings\Terran\Control Tower\ControlTower.m3"/>
     </CModel>
     <CModel id="ReactorPlacement">
-        <Model value="Assets\Buildings\Terran\ControlTower\ControlTowerPlacement.m3"/>
+        <Model value="Assets\Buildings\Terran\Control Tower\ControlTowerPlacement.m3"/>
     </CModel>
     <CModel id="RestorationImpact">
         <Model value="Assets\Effects\Protoss\BlinkIn\BlinkIn.m3"/>
@@ -466,11 +489,47 @@
         <ScaleMax value="0.500000,0.500000,0.500000"/>
         <ScaleMin value="0.500000,0.500000,0.500000"/>
     </CModel>
-    <CModel id="TechLab">
-        <Model value="Assets\Buildings\Terran\CovertOps\CovertOps.m3"/>
+    <CModel id="MachineShop2" parent="Building" Race="Terran">
+        <Model value="Assets\Buildings\Terran\Machine Shop\MachineShop.m3"/>
+        <Radius value="1.000000"/>
+        <ScaleMax value="0.850000,0.850000,0.850000"/>
+        <ScaleMin value="0.850000,0.850000,0.850000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="1.176200"/>
+        <ShadowRadius value="1.176200"/>
+        <SquibTypeDefault value="Metal"/>
     </CModel>
-    <CModel id="TechLabPlacement">
-        <Model value="Assets\Buildings\Terran\CovertOps\CovertOpsPlacement.m3"/>
+    <CModel id="MachineShopDeath" parent="Building" Race="Terran">
+        <Model value="Assets\Buildings\Terran\Machine Shop\MachineShopDeath.m3"/>
+        <LowQualityModel value="TerranBuildingDeathLow"/>
+        <Lighting value="TechLab"/>
+        <Radius value="1.000000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="1.000000"/>
+        <ShadowRadius value="1.000000"/>
+    </CModel>
+    <CModel id="MachineShopDeathDetached" parent="Building" Race="Terran">
+        <Model value="Assets\Buildings\Terran\Machine Shop\MachineShopDeathDetached.m3"/>
+        <LowQualityModel value="TerranBuildingDeathLow"/>
+        <Lighting value="TechLab"/>
+        <Radius value="1.000000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="1.000000"/>
+        <ShadowRadius value="1.000000"/>
+    </CModel>
+    <CModel id="MachineShopPlacement" parent="Placement" Race="Terran">
+        <Model value="Assets\Buildings\Terran\Machine Shop\MachineShopPlacement.m3"/>
+        <LowQualityModel value="TechLab"/>
+        <Lighting value="TechLab"/>
+        <Radius value="-1.000000"/>
+        <ScaleMax value="0.850000,0.850000,0.850000"/>
+        <ScaleMin value="0.850000,0.850000,0.850000"/>
+        <SelectionRadius value="0.000000"/>
+        <ShadowRadius value="0.000000"/>
+    </CModel>
+    <CModel id="MachineShopBuild" parent="TerranBuildingBuildSmall">
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
     </CModel>
     <CModel id="ThorAAAttackImpact">
         <ScaleMax value="0.750000,0.750000,0.750000"/>
@@ -483,11 +542,6 @@
         <EditorCategories value="Race:Zerg"/>
         <ScaleMax value="1.000000,1.000000,1.750000"/>
         <ScaleMin value="1.000000,1.000000,1.750000"/>
-    </CModel>
-    <CModel id="MachineShopPlacement">
-        <Model value="Assets\Buildings\Terran\TechReactorPlacement\TechReactorPlacement.m3"/>
-        <SelectionLayer value="2"/>
-        <SelectionRadius value="1.000000"/>
     </CModel>
     <CModel id="NukeSiloNova" parent="Building" Race="Terran">
         <Model value="Assets\Buildings\Terran\Silo\Silo.m3"/>
@@ -675,15 +729,6 @@
     <CModel id="HydraliskGroundAttackLaunch">
         <ScaleMax value="2.500000,2.500000,2.500000"/>
         <ScaleMin value="2.500000,2.500000,2.500000"/>
-    </CModel>
-    <CModel id="MachineShop">
-        <Model value="Assets\Buildings\Terran\TechReactor\TechReactor.m3"/>
-        <SelectionRadius value="1.000000"/>
-        <SelectionLayer value="2"/>
-    </CModel>
-    <CModel id="MachineShopAttached">
-        <Model value="Assets\Buildings\Terran\TechReactor\TechReactor.m3"/>
-        <SelectionLayer value="2"/>
     </CModel>
     <CModel id="MaelstromEffect" parent="BuffFX">
         <Model value="Assets\Effects\Protoss\NullifierBeamImpact\NullifierBeamImpact.m3"/>

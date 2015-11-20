@@ -5,9 +5,10 @@
     </CRequirementConst>
     <CRequirementConst id="4"/>
     <CRequirementConst id="5"/>
-    <CRequirementAnd id="AndCountUnitAcademyCompleteOnlyCountBehaviorFactoryTechLab2CompleteOnly">
-        <OperandArray value="CountUnitAcademyCompleteOnly"/>
-        <OperandArray value="CountBehaviorFactoryTechLab2CompleteOnly"/>
+    <CRequirementAnd id="AndCountUnitAcademyCompleteOnlyTechTreeCheatCountBehaviorMachineShopCompleteOnlyTechTreeCheat">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray value="CountUnitAcademyCompleteOnlyTechTreeCheat"/>
+        <OperandArray value="CountBehaviorMachineShopCompleteOnlyTechTreeCheat"/>
     </CRequirementAnd>
     <CRequirementAnd id="AndCountUnitArmoryCompleteOnly">
         <Tooltip value=""/>
@@ -90,10 +91,11 @@
         <OperandArray value="Eq894233239CountUpgradeTerranVehicleWeaponsLevel2CompleteOnly1"/>
         <OperandArray value="Or2661977898CountUnitScienceFacilityCompleteOnlyCountUnitScienceFacilityFlyingCompleteOnly"/>
     </CRequirementAnd>
-    <CRequirementAnd id="AndNot866976074CountUnitNukeQueuedOrBetterAtUnit488655332CountBehaviorFactoryTechLab2CompleteOnlyOr3841654916CountUnitScienceFacilityCompleteOnlyCountUnitScienceFacilityFlyingCompleteOnly">
-        <OperandArray value="Not866976074CountUnitNukeQueuedOrBetterAtUnit488655332"/>
-        <OperandArray value="CountBehaviorFactoryTechLab2CompleteOnly"/>
-        <OperandArray value="Or3841654916CountUnitScienceFacilityCompleteOnlyCountUnitScienceFacilityFlyingCompleteOnly"/>
+    <CRequirementAnd id="AndNotCountUnitNukeQueuedOrBetterAtUnitTechTreeCheatCountBehaviorMachineShopCompleteOnlyTechTreeCheatOrCountUnitScienceFacilityCompleteOnlyCountUnitScienceFacilityFlyingCompleteOnly">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray value="NotCountUnitNukeQueuedOrBetterAtUnitTechTreeCheat"/>
+        <OperandArray value="CountBehaviorMachineShopCompleteOnlyTechTreeCheat"/>
+        <OperandArray value="OrCountUnitScienceFacilityCompleteOnlyCountUnitScienceFacilityFlyingCompleteOnly"/>
     </CRequirementAnd>
     <CRequirementAnd id="AndOr3841654916CountUnitScienceFacilityCompleteOnlyCountUnitScienceFacilityFlyingCompleteOnlyCountBehaviorPhysicsLabAttachedtoScienceFacilityCompleteOnlyTechTreeCheatCountBehaviorStarportTechLabCompleteOnlyAtUnit675558016">
         <OperandArray value="Or3841654916CountUnitScienceFacilityCompleteOnlyCountUnitScienceFacilityFlyingCompleteOnly"/>
@@ -112,17 +114,16 @@
     <CRequirementCountBehavior id="CountBehaviorComsatStationCommandCenterCompleteOnlyAtUnit">
         <Count Link="ComsatStationCommandCenter" State="CompleteOnlyAtUnit"/>
     </CRequirementCountBehavior>
-    <CRequirementCountBehavior id="CountBehaviorFactoryTechLab2CompleteOnly">
-        <Count Link="FactoryTechLab2" State="CompleteOnly"/>
-    </CRequirementCountBehavior>
-    <CRequirementCountBehavior id="CountBehaviorFactoryTechLab2CompleteOnlyAtUnit">
-        <Count Link="FactoryTechLab2" State="CompleteOnlyAtUnit"/>
-    </CRequirementCountBehavior>
-    <CRequirementCountBehavior id="CountBehaviorFactoryTechLab2CompleteOnlyAtUnitTechTreeCheat">
-        <Count Link="FactoryTechLab2" State="CompleteOnlyAtUnit"/>
-    </CRequirementCountBehavior>
     <CRequirementCountBehavior id="CountBehaviorIdentifyasLairCompleteOnlyAtUnit1515591279">
         <Count Link="IdentifyasLair" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorMachineShopCompleteOnlyAtUnitTechTreeCheat">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="MachineShop" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorMachineShopCompleteOnlyTechTreeCheat">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="MachineShop" State="CompleteOnly"/>
     </CRequirementCountBehavior>
     <CRequirementCountBehavior id="CountBehaviorMutaliskWanderRequirementBuffCompleteOnlyAtUnit">
         <Count Link="MutaliskWanderRequirementBuff" State="CompleteOnlyAtUnit"/>
@@ -140,9 +141,6 @@
     <CRequirementCountBehavior id="CountBehaviorStarportTechLabCompleteOnlyAtUnit675558016">
         <Count Link="StarportTechLab" State="CompleteOnlyAtUnit"/>
     </CRequirementCountBehavior>
-    <CRequirementCountUnit id="CountUnitAcademyCompleteOnly">
-        <Count Link="Academy" State="CompleteOnly"/>
-    </CRequirementCountUnit>
     <CRequirementCountUnit id="CountUnitAcademyCompleteOnlyTechTreeCheat">
         <Count Link="Academy" State="CompleteOnly"/>
     </CRequirementCountUnit>
@@ -186,10 +184,14 @@
     <CRequirementCountUnit id="CountUnitLairCompleteOnly">
         <Flags index="TechTreeCheat" value="0"/>
     </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitMachineShopCompleteOnlyAtUnit2589852481TechTreeCheat">
+        <Count Link="MachineShop" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountUnit>
     <CRequirementCountUnit id="CountUnitNukeCompleteOnly1384835438">
         <Count Link="Nuke" State="CompleteOnly"/>
     </CRequirementCountUnit>
-    <CRequirementCountUnit id="CountUnitNukeQueuedOrBetterAtUnit488655332">
+    <CRequirementCountUnit id="CountUnitNukeQueuedOrBetterAtUnitTechTreeCheat">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <Count Link="Nuke" State="QueuedOrBetterAtUnit"/>
     </CRequirementCountUnit>
     <CRequirementCountUnit id="CountUnitObservatoryCompleteOnly">
@@ -420,7 +422,6 @@
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeoverlordtransportCompleteOnly">
         <Flags index="TechTreeCheat" value="0"/>
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <Count Link="overlordtransport" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementEq id="EqCountBehaviorMutaliskWanderRequirementBuffCompleteOnlyAtUnit1">
@@ -450,8 +451,9 @@
     <CRequirementNot id="Not866976074CountUnitNukeQueuedOrBetterAtUnit">
         <Tooltip value="RequirementNode/Tooltip/Not866976074CountUnitNukeQueuedOrBetterAtUnit"/>
     </CRequirementNot>
-    <CRequirementNot id="Not866976074CountUnitNukeQueuedOrBetterAtUnit488655332">
-        <OperandArray index="0" value="CountUnitNukeQueuedOrBetterAtUnit488655332"/>
+    <CRequirementNot id="NotCountUnitNukeQueuedOrBetterAtUnitTechTreeCheat">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray index="0" value="CountUnitNukeQueuedOrBetterAtUnitTechTreeCheat"/>
     </CRequirementNot>
     <CRequirementNot id="NotCountUpgradeAntennaeQueuedOrBetterTechTreeCheat">
         <OperandArray index="0" value="CountUpgradeAntennaeQueuedOrBetterTechTreeCheat"/>
@@ -613,6 +615,11 @@
     </CRequirementOr>
     <CRequirementOr id="OrCountUnitScienceFacilityCompleteOnlyAtUnit">
         <OperandArray value="CountUnitScienceFacilityCompleteOnlyAtUnit"/>
+    </CRequirementOr>
+    <CRequirementOr id="OrCountUnitScienceFacilityCompleteOnlyCountUnitScienceFacilityFlyingCompleteOnly">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray value="CountUnitScienceFacilityCompleteOnly"/>
+        <OperandArray value="CountUnitScienceFacilityFlyingCompleteOnly"/>
     </CRequirementOr>
     <CRequirementCountUpgrade id="UpgradeLurker2CompleteOnly">
         <Count Link="Lurker"/>

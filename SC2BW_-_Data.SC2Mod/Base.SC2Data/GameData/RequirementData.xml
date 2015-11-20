@@ -17,10 +17,15 @@
         <NodeArray index="Use" Link="CountBehaviorComsatStationCommandCenterCompleteOnlyAtUnit"/>
     </CRequirement>
     <CRequirement id="ConnectedtoSF">
-        <NodeArray index="Use" Link="CountBehaviorFactoryTechLab2CompleteOnlyAtUnitTechTreeCheat"/>
+        <NodeArray index="Use" Link="CountBehaviorMachineShopCompleteOnlyAtUnitTechTreeCheat"/>
     </CRequirement>
     <CRequirement id="ConsumeCompleted">
         <NodeArray index="Use" Link="CountUpgradeEvolveConsumeCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveAttachedMachineShop">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <CanBeSuppressed index="Use" value="0"/>
+        <NodeArray index="Use" Link="CountUnitMachineShopCompleteOnlyAtUnit2589852481TechTreeCheat"/>
     </CRequirement>
     <CRequirement id="OverlordVentralSacsCompleted">
         <NodeArray index="Use" Link="CountUpgradeoverlordtransportCompleteOnly"/>
@@ -71,7 +76,7 @@
         <NodeArray index="Use" Link="AndOr3841654916CountUnitScienceFacilityCompleteOnlyCountUnitScienceFacilityFlyingCompleteOnlyCountBehaviorStarportTechLabCompleteOnlyAtUnit675558016"/>
     </CRequirement>
     <CRequirement id="HaveScienceFacilitywithAttachedCovertOps">
-        <NodeArray index="Use" Link="CountBehaviorFactoryTechLab2CompleteOnly"/>
+        <NodeArray index="Use" Link="CountBehaviorMachineShopCompleteOnlyTechTreeCheat"/>
     </CRequirement>
     <CRequirement id="HaveScienceFacilitywithAttachedPhysicsLab2">
         <NodeArray index="Use" Link="CountBehaviorPhysicsLabAttachedtoScienceFacilityCompleteOnlyTechTreeCheat"/>
@@ -217,7 +222,7 @@
         <NodeArray index="Show" Link="NotTechTreeCheatCountUpgradeOpticalFlareQueuedOrBetter"/>
     </CRequirement>
     <CRequirement id="LearnPersonnelCloaking">
-        <NodeArray index="Use" Link="CountBehaviorFactoryTechLab2CompleteOnlyAtUnit"/>
+        <NodeArray index="Use" Link="CountBehaviorMachineShopCompleteOnlyAtUnitTechTreeCheat"/>
     </CRequirement>
     <CRequirement id="LearnColossusReactor2">
         <NodeArray index="Use" Link="CountBehaviorPhysicsLabAttachedtoScienceFacilityCompleteOnlyAtUnitTechTreeCheat"/>
@@ -251,7 +256,7 @@
     </CRequirement>
     <CRequirement id="HaveAcademyandCovertOps">
         <EditorCategories value="Race:Terran,TechType:Unit"/>
-        <NodeArray index="Use" Link="AndCountUnitAcademyCompleteOnlyCountBehaviorFactoryTechLab2CompleteOnly"/>
+        <NodeArray index="Use" Link="AndCountUnitAcademyCompleteOnlyTechTreeCheatCountBehaviorMachineShopCompleteOnlyTechTreeCheat"/>
     </CRequirement>
     <CRequirement id="HaveDefilerMound">
         <EditorCategories value="Race:Zerg,TechType:Unit"/>
@@ -280,7 +285,7 @@
         <NodeArray index="Show" Link="NotCountUpgradeResearchIrradiateQueuedOrBetterTechTreeCheat"/>
     </CRequirement>
     <CRequirement id="ResearchLockdown">
-        <NodeArray index="Use" Link="CountBehaviorFactoryTechLab2CompleteOnlyAtUnit"/>
+        <NodeArray index="Use" Link="CountBehaviorMachineShopCompleteOnlyAtUnitTechTreeCheat"/>
         <NodeArray index="Show" Link="NotCountUpgradeLockdownQueuedOrBetterTechTreeCheat"/>
     </CRequirement>
     <CRequirement id="ResearchRestoration">
@@ -374,7 +379,7 @@
         <NodeArray index="Use" Link="CountUpgradeResearchRecallCompleteOnly"/>
     </CRequirement>
     <CRequirement id="TrainNuke">
-        <NodeArray index="Use" Link="AndNot866976074CountUnitNukeQueuedOrBetterAtUnit488655332CountBehaviorFactoryTechLab2CompleteOnlyOr3841654916CountUnitScienceFacilityCompleteOnlyCountUnitScienceFacilityFlyingCompleteOnly"/>
+        <NodeArray index="Use" Link="AndNotCountUnitNukeQueuedOrBetterAtUnitTechTreeCheatCountBehaviorMachineShopCompleteOnlyTechTreeCheatOrCountUnitScienceFacilityCompleteOnlyCountUnitScienceFacilityFlyingCompleteOnly"/>
     </CRequirement>
     <CRequirement id="U238Shells">
         <NodeArray index="Show" Link="NotCountUpgradeU238ShellsQueuedOrBetter"/>

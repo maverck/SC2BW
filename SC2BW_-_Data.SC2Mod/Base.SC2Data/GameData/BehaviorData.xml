@@ -132,6 +132,10 @@
             <AbilClassDisableArray index="CAbilEffectTarget" value="1"/>
         </Modification>
     </CBehaviorBuff>
+    <CBehaviorBuff id="MachineShop">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="HydraliskDisableMovement">
         <Cost>
             <Charge Link="Behavior/MarineDisableMovement"/>
@@ -701,31 +705,6 @@
             <AbilClassDisableArray index="CAbilAttack" value="1"/>
         </Modification>
     </CBehaviorBuff>
-    <CBehaviorBuff id="FactoryTechLab">
-        <Name value="Behavior/Name/FactoryMachineShop"/>
-    </CBehaviorBuff>
-    <CBehaviorBuff id="FactoryTechLab2">
-        <Cost>
-            <Charge Link="Behavior/FactoryTechLab"/>
-            <Cooldown Link="Behavior/FactoryTechLab"/>
-        </Cost>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
-        <Modification>
-            <DeathResponse>
-                <Cost>
-                    <Charge Link="Behavior/FactoryTechLab"/>
-                    <Cooldown Link="Behavior/FactoryTechLab"/>
-                </Cost>
-            </DeathResponse>
-        </Modification>
-        <DamageResponse>
-            <Cost>
-                <Charge Link="Behavior/FactoryTechLab"/>
-                <Cooldown Link="Behavior/FactoryTechLab"/>
-            </Cost>
-        </DamageResponse>
-        <InfoFlags index="Hidden" value="1"/>
-    </CBehaviorBuff>
     <CBehaviorBuff id="ComsatStationCommandCenter">
         <Cost>
             <Charge Link="Behavior/FactoryTechLab"/>
@@ -1123,7 +1102,7 @@
     </CBehaviorBuff>
     <CBehaviorSpawn id="SpawnLarva">
         <InfoArray index="0">
-            <Unit value="Larva"/>
+            <Unit value="LarvaSC2BW"/>
             <MaxCount value="3"/>
             <Requirements value="HatcherySpawnLarva"/>
             <Delay value="17.22"/>
@@ -1179,7 +1158,6 @@
             <SoundArray index="Movement" value="Vulture_SpiderMineSeek"/>
         </Modification>
     </CBehaviorBuff>
-    <CBehaviorBuff id="StarportTechLab"/>
     <CBehaviorBuff id="StasisField">
         <Alignment value="Negative"/>
         <InfoIcon value="Assets\Textures\btn-ability-protoss-stasisfield.dds"/>
