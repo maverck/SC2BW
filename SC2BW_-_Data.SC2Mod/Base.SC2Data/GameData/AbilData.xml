@@ -155,14 +155,14 @@
     </CAbilMorph>
     <CAbilResearch id="MachineShopResearchFactory" parent="FactoryTechLabResearch">
         <Name value="Abil/Name/MachineShopResearchFactory"/>
-        <InfoArray index="Research27" Upgrade="SiegeTechSC2BW">
-            <Button DefaultButtonFace="ResearchSiegeTech"/>
+        <InfoArray index="Research27" Time="70.5935" Upgrade="SiegeTechSC2BW">
+            <Button DefaultButtonFace="ResearchSiegeTech" Requirements="LearnSiegeTech"/>
         </InfoArray>
         <InfoArray index="Research28" Time="117.6557" Upgrade="AresClassWeaponsSystem">
-            <Button DefaultButtonFace="CharonBoosters"/>
+            <Button DefaultButtonFace="CharonBoosters" Requirements="LearnCharonBoosters"/>
         </InfoArray>
-        <InfoArray index="Research29" Upgrade="ResearchSpiderMines">
-            <Button DefaultButtonFace="ResearchSpiderMinesSC1"/>
+        <InfoArray index="Research29" Time="70.5935" Upgrade="ResearchSpiderMines">
+            <Button DefaultButtonFace="ResearchSpiderMinesSC1" Requirements="ResearchSpiderMines"/>
         </InfoArray>
         <InfoArray index="Research30" Time="88.2416" Upgrade="IonThrusters">
             <Button DefaultButtonFace="ResearchIonThrusters" Requirements="ResearchIonThrusters"/>
@@ -1205,6 +1205,7 @@
     </CAbilEffectTarget>
     <CAbilMorph id="MachineShopMorphDetached" parent="TechLabMorph">
         <Name value="Abil/Name/MachineShopMorphDetached"/>
+        <InfoArray index="0" Unit="MachineShop"/>
     </CAbilMorph>
     <CAbilEffectTarget id="NuclearStrikeHardcore">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>

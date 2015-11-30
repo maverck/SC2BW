@@ -124,8 +124,8 @@
         <AlertIcon value="Assets\Textures\btn-building-terran-nukesilo.dds"/>
     </CButton>
     <CButton id="BuildMachineShop">
-        <Icon value="Assets\Textures\btn-building-terran-techreactor.dds"/>
-        <AlertIcon value="Assets\Textures\btn-building-terran-techreactor.dds"/>
+        <Icon value="Assets\Textures\btn-building-terran-machineshop.dds"/>
+        <AlertIcon value="Assets\Textures\btn-building-terran-machineshop.dds"/>
     </CButton>
     <CButton id="BuildCovertOps">
         <Icon value="Assets\Textures\btn-building-terran-techlab.dds"/>

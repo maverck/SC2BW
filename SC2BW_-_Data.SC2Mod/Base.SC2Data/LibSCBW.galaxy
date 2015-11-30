@@ -713,12 +713,12 @@ void libSCBW_gf_ApplyDamage (unit lp_source, unit lp_target, string lp_sourceDam
     fixed lv_damage;
 
     // Variable Initialization
-    lv_damage = libSCBW_gf_getDamageAmt(lp_source, lp_target, CatalogFieldValueGetAsInt(c_gameCatalogEffect, lp_sourceDamageEffect, "Amount", UnitGetOwner(lp_source)), lp_damageType);
 
     // Implementation
-    lv_damage = MaxF(lv_damage, 0.5);
     Wait(0.0625, c_timeGame);
     if ((UnitIsAlive(lp_source) == true) && (UnitIsAlive(lp_target) == true)) {
+        lv_damage = libSCBW_gf_getDamageAmt(lp_source, lp_target, CatalogFieldValueGetAsInt(c_gameCatalogEffect, lp_sourceDamageEffect, "Amount", UnitGetOwner(lp_source)), lp_damageType);
+        lv_damage = MaxF(lv_damage, 0.5);
         CatalogFieldValueSet(c_gameCatalogEffect, lp_damageApplyEffect, "Amount", UnitGetOwner(lp_source), FixedToString(lv_damage, c_fixedPrecisionAny));
         if ((lp_miss == true)) {
             UnitCreateEffectPoint(lp_source, lp_damageApplyEffect, libSCBW_gf_getMissOffset(UnitGetPosition(lp_source), UnitGetPosition(lp_target)));

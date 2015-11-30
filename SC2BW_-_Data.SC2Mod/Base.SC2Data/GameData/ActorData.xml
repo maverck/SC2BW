@@ -604,6 +604,9 @@
         <On index="2" Terms="Effect.ScoutMPAirU.Stop; FromEffectTreeDescendant"/>
         <ImpactMap index="None" Model="ScoutAirMissileImpact" Sound="Scout_AirAttackImpact"/>
     </CActorAction>
+    <CActorAction id="SiegeTankSiegedAttack">
+        <ImpactSiteOps Ops="SOpActionCenter SOpTargetUnitZ SOpTargetPoint"/>
+    </CActorAction>
     <CActorUnit id="Stalker">
         <On index="62" Terms="WeaponStart.*.AttackStart" Send="AnimBracketStart Cover Cover,Start Cover Cover,End"/>
         <On index="63" Terms="WeaponStop.*.AttackStop" Send="AnimBracketStop Cover"/>
