@@ -3,6 +3,9 @@
     <CUnit default="1" id="BroodlingDefault">
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Campaign"/>
     </CUnit>
+    <CUnit id="Adept">
+        <HotkeyAlias value=""/>
+    </CUnit>
     <CUnit id="Archon">
         <ShieldRegenDelay value="0"/>
         <ShieldRegenRate value="0.457"/>
@@ -247,10 +250,6 @@
         <Speed value="0.6015"/>
         <BehaviorArray Link="UnitFilterLarge"/>
         <Facing value="326.997"/>
-    </CUnit>
-    <CUnit id="BarracksReactor">
-        <EditorCategories value="ObjectType:Structure,ObjectFamily:Campaign"/>
-        <HotkeyAlias value=""/>
     </CUnit>
     <CUnit id="Battlecruiser">
         <Attributes index="Armored" value="0"/>
@@ -568,6 +567,9 @@
     <CUnit id="CreepTumor">
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Campaign"/>
     </CUnit>
+    <CUnit id="Cyclone">
+        <HotkeyAlias value=""/>
+    </CUnit>
     <CUnit id="DarkShrine">
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Campaign"/>
         <HotkeyAlias value=""/>
@@ -685,6 +687,9 @@
             <Cooldown Link="Defiler/Revive"/>
         </ReviveInfoBase>
     </CUnit>
+    <CUnit id="Disruptor">
+        <HotkeyAlias value=""/>
+    </CUnit>
     <CUnit id="Drone">
         <LifeRegenRate value="0.2617"/>
         <AIOverideTargetPriority value="0"/>
@@ -757,8 +762,19 @@
         </CardLayouts>
         <BehaviorArray Link="UnitFilterLarge"/>
     </CUnit>
-    <CUnit id="FactoryReactor">
-        <EditorCategories value="ObjectType:Structure,ObjectFamily:Campaign"/>
+    <CUnit id="Liberator">
+        <HotkeyAlias value=""/>
+    </CUnit>
+    <CUnit id="LiberatorAG">
+        <HotkeyAlias value=""/>
+    </CUnit>
+    <CUnit id="LocustMP">
+        <HotkeyAlias value=""/>
+    </CUnit>
+    <CUnit id="LocustMPFlying">
+        <HotkeyAlias value=""/>
+    </CUnit>
+    <CUnit id="LurkerDenMP">
         <HotkeyAlias value=""/>
     </CUnit>
     <CUnit id="MachineShop" parent="FactoryTechLab">
@@ -1343,12 +1359,13 @@
     </CUnit>
     <CUnit id="Ghost">
         <CardLayouts index="0">
-            <LayoutButtons index="2" Face="CriusSuit" Type="Undefined" AbilCmd="255,0" Requirements="UseGhostCriusSuit" Column="1"/>
+            <LayoutButtons index="2" Face="CriusSuit" Type="Undefined" AbilCmd="255,255" Requirements="UseGhostCriusSuit" Column="1"/>
             <LayoutButtons index="3" Face="MoveHoldPosition" AbilCmd="move,HoldPos" Column="2"/>
             <LayoutButtons index="4" Face="MovePatrol" AbilCmd="move,Patrol" Row="0" Column="3"/>
             <LayoutButtons index="5" Face="GhostHoldFire" AbilCmd="GhostHoldFire,Execute" Row="1" Column="2"/>
             <LayoutButtons index="6" Face="Cancel" AbilCmd="TacNukeStrike,Cancel" Row="2"/>
             <LayoutButtons index="7" Face="Attack" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons index="8" Face="CloakOnGhostSC2BW" AbilCmd="GhostCloak,On" Row="2" Column="2"/>
             <LayoutButtons index="9" Face="CloakOff" AbilCmd="GhostCloak,Off" Column="0"/>
             <LayoutButtons index="10" Face="NukeCalldown" AbilCmd="TacNukeStrike,Execute" Row="1" Column="0"/>
             <LayoutButtons index="11" Face="HeroNukeCalldown" AbilCmd="NuclearStrikeHardcore,Execute" Row="1" Column="0"/>
@@ -1826,6 +1843,7 @@
                 <Row value="0"/>
                 <Column value="0"/>
             </LayoutButtons>
+            <LayoutButtons Face="ResearchAntennae" Type="AbilCmd" AbilCmd="LairResearch,Research5" Row="1" Column="1"/>
         </CardLayouts>
         <LifeRegenRate value="0.2617"/>
         <AbilArray index="1" Link="que1"/>
@@ -1910,7 +1928,7 @@
         <AttackTargetPriority value="11"/>
         <AbilArray Link="BuildInProgress"/>
         <AbilArray Link="que1Addon"/>
-        <AbilArray Link="StarportTechLabMorph"/>
+        <AbilArray Link="ControlTowerMorphStarport"/>
         <BehaviorArray Link="TerranBuildingBurnDown"/>
         <BehaviorArray Link="UnitFilterLarge"/>
         <CardLayouts>
@@ -1934,7 +1952,6 @@
         <GlossaryCategory value="Unit/Category/TerranUnits"/>
         <GlossaryPriority value="26"/>
         <HotkeyCategory value="Unit/Category/TerranUnits"/>
-        <AIEvaluateAlias value="MachineShop"/>
     </CUnit>
     <CUnit id="Lurker">
         <DeathRevealRadius value="3"/>
@@ -2632,11 +2649,16 @@
     <CUnit id="QueenBurrowed">
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Campaign"/>
     </CUnit>
-    <CUnit id="Raven">
-        <EditorCategories value="ObjectType:Structure,ObjectFamily:Campaign"/>
+    <CUnit id="Ravager">
         <HotkeyAlias value=""/>
     </CUnit>
-    <CUnit id="Reactor">
+    <CUnit id="RavagerBurrowed">
+        <HotkeyAlias value=""/>
+    </CUnit>
+    <CUnit id="RavagerCocoon">
+        <HotkeyAlias value=""/>
+    </CUnit>
+    <CUnit id="Raven">
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Campaign"/>
         <HotkeyAlias value=""/>
     </CUnit>
@@ -2887,8 +2909,10 @@
         <EquipmentArray Weapon="VultureSpiderMines"/>
     </CUnit>
     <CUnit id="StalkerWeapon"/>
-    <CUnit id="StarportReactor">
-        <EditorCategories value="ObjectType:Structure,ObjectFamily:Campaign"/>
+    <CUnit id="SwarmHostBurrowedMP">
+        <HotkeyAlias value=""/>
+    </CUnit>
+    <CUnit id="SwarmHostMP">
         <HotkeyAlias value=""/>
     </CUnit>
     <CUnit id="Tempest">
@@ -2906,6 +2930,9 @@
     </CUnit>
     <CUnit id="VikingAssault">
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Campaign"/>
+        <HotkeyAlias value=""/>
+    </CUnit>
+    <CUnit id="Viper">
         <HotkeyAlias value=""/>
     </CUnit>
     <CUnit id="VoidRay">
@@ -4000,35 +4027,6 @@
         <Attributes index="Armored" value="0"/>
         <Attributes index="Massive" value="1"/>
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Campaign"/>
-        <HotkeyAlias value=""/>
-    </CUnit>
-    <CUnit id="ControlTower2" parent="TechLab">
-        <Mob value="None"/>
-        <Attributes index="Armored" value="0"/>
-        <Attributes index="Massive" value="1"/>
-        <AbilArray index="1" Link="que1Addon"/>
-        <AbilArray index="2" Link="MachineShopMorphDetached"/>
-        <AbilArray index="3" Link="StarportTechLabResearch"/>
-        <AbilArray index="4" removed="1"/>
-        <CardLayouts index="0">
-            <LayoutButtons index="0" Face="Cancel" Type="AbilCmd" AbilCmd="que1Addon,CancelLast" Row="2" Column="4"/>
-            <LayoutButtons Face="ResearchCloakingField" Type="AbilCmd" AbilCmd="StarportTechLabResearch,Research10" Row="0" Column="0"/>
-            <LayoutButtons Face="ResearchWraithEnergyUpgrade" Type="AbilCmd" AbilCmd="StarportTechLabResearch,Research11" Row="0" Column="1"/>
-        </CardLayouts>
-        <AddedOnArray index="0" UnitLink="Starport" BehaviorLink="StarportTechLab"/>
-        <AddedOnArray index="1" removed="1"/>
-        <AddedOnArray index="2" removed="1"/>
-        <LeaderAlias value="ControlTower"/>
-        <SubgroupAlias value="ControlTower"/>
-        <GlossaryPriority value="0"/>
-        <Name value="Unit/Name/ControlTower2"/>
-        <LifeStart value="500"/>
-        <LifeMax value="500"/>
-        <CostResource index="Vespene" value="50"/>
-        <Description value="Button/Tooltip/ControlTower"/>
-        <FlagArray index="PreventReveal" value="1"/>
-        <AddOnOffsetX value="3"/>
-        <BehaviorArray Link="UnitFilterLarge"/>
         <HotkeyAlias value=""/>
     </CUnit>
     <CUnit id="ComsatStation2" parent="TechLab">

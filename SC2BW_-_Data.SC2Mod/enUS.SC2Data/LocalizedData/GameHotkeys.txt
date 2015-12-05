@@ -1,4 +1,4 @@
-Button/Hotkey/AWrp=R
+﻿Button/Hotkey/AWrp=R
 Button/Hotkey/ArchonWarpTarget=R
 Button/Hotkey/BroodLord=G
 Button/Hotkey/BroodLord2=D
@@ -17,6 +17,7 @@ Button/Hotkey/BurrowLurkerMP=U
 Button/Hotkey/BurrowUp=U
 Button/Hotkey/CharonBoosters=C
 Button/Hotkey/CloakOff=C
+Button/Hotkey/CloakOnGhostSC2BW=C
 Button/Hotkey/CloakOnWraith=C
 Button/Hotkey/ConstructScarab=R
 Button/Hotkey/Consume=C

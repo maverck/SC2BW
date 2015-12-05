@@ -49,10 +49,10 @@
         <NodeArray index="Use" Link="CountUnitAcademyCompleteOnlyTechTreeCheat"/>
     </CRequirement>
     <CRequirement id="HaveArmoryandAttachedControlTower">
-        <NodeArray index="Use" Link="AndCountUnitControlTower2CompleteOnlyAtUnitCountUnitArmoryCompleteOnly"/>
+        <NodeArray index="Use" Link="AndCountUnitControlTowerCompleteOnlyAtUnitCountUnitArmoryCompleteOnly"/>
     </CRequirement>
     <CRequirement id="HaveAttachedControlTower">
-        <NodeArray index="Use" Link="CountUnitControlTower2CompleteOnlyAtUnit"/>
+        <NodeArray index="Use" Link="CountUnitControlTowerCompleteOnlyAtUnit"/>
     </CRequirement>
     <CRequirement id="HaveEngineeringBay">
         <NodeArray index="Use" Link="Or700323805CountUnitEngineeringBayCompleteOnlyCountUnitEngineeringBayFlyingCompleteOnly"/>
@@ -73,7 +73,7 @@
         <NodeArray index="Use" Link="CountUnitObservatoryCompleteOnly"/>
     </CRequirement>
     <CRequirement id="HaveScienceFacilityandControlTower">
-        <NodeArray index="Use" Link="AndOr3841654916CountUnitScienceFacilityCompleteOnlyCountUnitScienceFacilityFlyingCompleteOnlyCountBehaviorStarportTechLabCompleteOnlyAtUnit675558016"/>
+        <NodeArray index="Use" Link="AndOrCountUnitScienceFacilityCompleteOnlyCountUnitScienceFacilityFlyingCompleteOnlyCountBehaviorStarportTechLabCompleteOnlyAtUnitTechTreeCheat"/>
     </CRequirement>
     <CRequirement id="HaveScienceFacilitywithAttachedCovertOps">
         <NodeArray index="Use" Link="CountBehaviorMachineShopCompleteOnlyTechTreeCheat"/>

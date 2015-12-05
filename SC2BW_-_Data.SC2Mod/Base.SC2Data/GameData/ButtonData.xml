@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="us-ascii"?>
 <Catalog>
     <CButton id="BroodLord">
-        <Icon value="Assets\Textures\btn-unit-zerg-guardian.dds"/>
-        <AlertIcon value="Assets\Textures\btn-unit-zerg-guardian.dds"/>
+        <Icon value="Assets\Textures\btn-unit-zerg-primalguardian.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-zerg-primalguardian.dds"/>
+    </CButton>
+    <CButton id="CloakOnGhostSC2BW">
+        <Icon value="Assets\Textures\btn-ability-terran-cloak-color.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-terran-cloak-color.dds"/>
+        <EditorCategories value="Race:Terran"/>
+        <HotkeyAlias value="CloakOnBanshee"/>
+        <HotkeySet value="Cloak"/>
     </CButton>
     <CButton id="CloakOnWraith">
         <Icon value="Assets\Textures\btn-ability-terran-cloak-color.dds"/>
@@ -74,8 +81,8 @@
         <AlertIcon value="Assets\Textures\btn-unit-protoss-corsair.dds"/>
     </CButton>
     <CButton id="Queen">
-        <Icon value="Assets\Textures\btn-unit-zerg-Queen.dds"/>
-        <AlertIcon value="Assets\Textures\btn-unit-zerg-Queen.dds"/>
+        <Icon value="Assets\Textures\btn-unit-zerg-queenclassic.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-zerg-queenclassic.dds"/>
     </CButton>
     <CButton id="Rally2">
         <Icon value="Assets\Textures\btn-ability-terran-setrallypoint.dds"/>

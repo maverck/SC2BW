@@ -253,6 +253,10 @@
         <ScaleMax value="0.250000,0.250000,0.250000"/>
         <ScaleMin value="0.250000,0.250000,0.250000"/>
     </CModel>
+    <CModel id="ControlTowerBuild" parent="TerranBuildingBuildSmall">
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
+    </CModel>
     <CModel id="MachineShopSplat" parent="Splat">
         <Model value="Assets\Splats\Splat_TechLab\Splat_TechLab.m3"/>
         <EditorCategories value="Race:Terran"/>
@@ -443,11 +447,36 @@
     <CModel id="PhysicsExplosionSmallStrong">
         <Model value="Assets\Models\forceEffect\forceEffect.m3"/>
     </CModel>
-    <CModel id="Reactor">
+    <CModel id="ControlTower" parent="Reactor">
         <Model value="Assets\Buildings\Terran\Control Tower\ControlTower.m3"/>
     </CModel>
-    <CModel id="ReactorPlacement">
+    <CModel id="ControlTowerDeath" parent="Building" Race="Terran">
+        <Model value="Assets\Buildings\Terran\Control Tower\ControlTowerDeath.m3"/>
+        <LowQualityModel value="TerranBuildingDeathLow"/>
+        <Lighting value="Reactor"/>
+        <Radius value="1.000000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="1.000000"/>
+        <ShadowRadius value="1.000000"/>
+    </CModel>
+    <CModel id="ControlTowerDeathDetached" parent="Building" Race="Terran">
+        <Model value="Assets\Buildings\Terran\Control Tower\ControlTowerDeathDetached.m3"/>
+        <LowQualityModel value="TerranBuildingDeathLow"/>
+        <Lighting value="Reactor"/>
+        <Radius value="1.000000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="1.000000"/>
+        <ShadowRadius value="1.000000"/>
+    </CModel>
+    <CModel id="ControlTowerPlacement" parent="Placement" Race="Terran">
         <Model value="Assets\Buildings\Terran\Control Tower\ControlTowerPlacement.m3"/>
+        <LowQualityModel value="Reactor"/>
+        <Lighting value="Reactor"/>
+        <Radius value="-1.000000"/>
+        <ScaleMax value="0.850000,0.850000,0.850000"/>
+        <ScaleMin value="0.850000,0.850000,0.850000"/>
+        <SelectionRadius value="0.000000"/>
+        <ShadowRadius value="0.000000"/>
     </CModel>
     <CModel id="RestorationImpact">
         <Model value="Assets\Effects\Protoss\BlinkIn\BlinkIn.m3"/>
@@ -480,9 +509,6 @@
         <Model value="Assets\Units\Zerg\PrimalSunkenColony\PrimalSunkenColony.m3"/>
         <ScaleMax value="0.650000,0.650000,0.650000"/>
         <ScaleMin value="0.650000,0.650000,0.650000"/>
-    </CModel>
-    <CModel id="StarportReactor">
-        <Model value="Assets\Buildings\Terran\ControlTower\ControlTower.m3"/>
     </CModel>
     <CModel id="StasisImpact">
         <Model value="Assets\Effects\Protoss\Arbiter_StasisField_Shockwave\Arbiter_StasisField_Shockwave.m3"/>

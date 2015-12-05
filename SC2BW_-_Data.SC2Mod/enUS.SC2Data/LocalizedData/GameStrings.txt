@@ -3,6 +3,7 @@ Abil/Name/BarracksTrainSC2BW=Train
 Abil/Name/BurrowLurkerDown=BurrowLurkerDown (Unnamed)
 Abil/Name/BurrowLurkerUp=BurrowLurkerUp (Unnamed)
 Abil/Name/CloakingField=Cloaking Field
+Abil/Name/ControlTowerMorphStarport=Control Tower Morph (Starport)
 Abil/Name/DefensiveMatrixHardcore=Defensive Matrix (Hardcore)
 Abil/Name/EggRally=Egg Rally
 Abil/Name/FactoryTrainSC2BW=Train (Factory)
@@ -23,6 +24,7 @@ Abil/Name/UnknownAbility=Unknown Ability
 Abil/Name/VulturePatrol=Vulture - Patrol
 Abil/Name/heal=Heal
 Abil/Name/que1Addon=Queue (1) Addon
+Actor/AddonIndicator/ControlTower=C
 Actor/AddonIndicator/CovertOps=C
 Actor/AddonIndicator/PhysicsLab=P
 Alert/Text/TrainingCompletePing=
@@ -117,6 +119,7 @@ Button/Name/BuildScienceVessel=Build Science Vessel
 Button/Name/BuildValkyrie=Build Valkyrie
 Button/Name/BurrowLurker=Burrow
 Button/Name/CharonBoosters=Research Charon Boosters
+Button/Name/CloakOnGhostSC2BW=Cloak
 Button/Name/CloakOnWraith=Cloak
 Button/Name/ConstructScarab=Construct Scarab
 Button/Name/Consume=Consume
@@ -223,6 +226,7 @@ Button/Tooltip/BuildValkyrie=
 Button/Tooltip/BurrowLurker=
 Button/Tooltip/CarrierSC2BW=Capital ship. Can build and launch Interceptors to make attacks.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
 Button/Tooltip/CharonBoosters=
+Button/Tooltip/CloakOnGhostSC2BW=Cloaks the unit, preventing enemy units from seeing or attacking it. A cloaked unit will only be revealed by detectors or effects.<n/><n/><c val="f078ff">Drains <d ref="-1 * (Behavior,GhostCloak,Modification.VitalRegenArray[2] + Unit,Ghost,EnergyRegenRate)" precision="1"/> energy per second.</c>
 Button/Tooltip/CloakOnWraith=Cloaks the unit, preventing enemy units from seeing or attacking it. A cloaked unit will only be revealed by detectors or effects.<n/><n/><c val="f078ff">Drains <d ref="-1 * (Behavior,BansheeCloak,Modification.VitalRegenArray[2] + Unit,Banshee,EnergyRegenRate)" precision="1"/> energy per second.</c>
 Button/Tooltip/ConstructScarab=
 Button/Tooltip/Consume=
@@ -318,6 +322,7 @@ Button/Tooltip/WarpinReaver=
 Button/Tooltip/WarpinShieldBattery=
 Button/Tooltip/Wraith=Fast Moving Air-to-Air Fighter with a Ground Attack.
 Button/Tooltip/Zergling=Fast melee creature.<n/><n/>HP - <c val="FF0000"><d ref="Unit,Zergling,LifeMax[0]"/></c><n/>Damage - <c val="FF0000"><d ref="Effect,Claws,Amount[0]"/></c> (<c val="00FF00">+1</c>)<n/>Armor - <c val="FF0000"><d ref="Unit,Zergling,LifeArmor[0]"/></c> (<c val="00FF00">+1</c>)<n/>Attack Speed - <c val="FF0000"><d ref="Weapon,Claws,Period[0]" precision="2"/></c><n/>Range - <c val="FF0000">Melee</c><n/>Size - <c val="FF0000">Small</c><n/><n/><c val="FFFF8A">Can attack ground units.</c>
+DOCSTR_0000=Terran Valkyrie
 DocInfo/Author=MavercK
 DocInfo/Name=SC2 - Brood War ( SC2BW )
 DocInfo/Website=http://www.teamliquid.net/forum/viewmessage.php?topic_id=145316
@@ -503,7 +508,6 @@ Unit/Name/CommandCenter=Terran Command Center
 Unit/Name/ComsatStation=Terran Comsat Station
 Unit/Name/ComsatStation2=Terran Comsat Station
 Unit/Name/ControlTower=Terran Control Tower
-Unit/Name/ControlTower2=TerranControlTower2
 Unit/Name/CovertOps=Terran Covert Ops
 Unit/Name/CreepColony=Zerg Creep Colony
 Unit/Name/CreepTumor=Creep Tumor

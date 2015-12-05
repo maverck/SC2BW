@@ -402,6 +402,15 @@
         <On Terms="Abil.EMPHardcore.TargetOff" Send="Destroy"/>
         <IconArcLength value="0.500000"/>
     </CActorRange>
+    <!--                                                                                         -->
+    <!-- Egg ................................................................................... -->
+    <!--                                                                                         -->
+    <CActorUnit id="Egg">
+        <On Terms="AbilMorph.*.Start; MorphTo Egg" Send="$Birth 0 0.000000"/>
+        <On Terms="ActorDestruction; ModelVariation 0" Send="Create EggsplosionGeneric0"/>
+        <On Terms="ActorDestruction; ModelVariation 1" Send="Create EggsplosionGeneric1"/>
+        <On Terms="ActorDestruction; ModelVariation 2" Send="Create EggsplosionGeneric2"/>
+    </CActorUnit>
     <CActorSplat id="EngineeringBaySplat">
         <Scale value="1.100000"/>
     </CActorSplat>
@@ -459,6 +468,9 @@
             <Image value="Assets\Textures\Wireframe-Terran-TechLab.dds"/>
         </Wireframe>
     </CActorUnit>
+    <CActorModel id="ControlTowerBuild" parent="TerranBuildingBuildSmall">
+        <On Terms="ActorCreation" Send="SetScale 1.350000"/>
+    </CActorModel>
     <CActorSplat id="MachineShopSplat" parent="GenericUnitSplat" unitName="MachineShop"/>
     <CActorModel id="FeedbackImpact">
         <Scale value="0.500000"/>
@@ -580,6 +592,43 @@
     <CActorSound id="Medic_Death">
         <On index="1" Terms="UnitDeath.Medic" Send="Create"/>
     </CActorSound>
+    <CActorUnit id="ControlTower" parent="TerranBuilding" unitName="ControlTower">
+        <Macros value="TerranAttachmentAnims"/>
+        <Macros value="QueueAnim"/>
+        <On index="53" Terms="UnitConstruction.ControlTower.Start" Send="Create ControlTowerBuild"/>
+        <On index="54" Terms="UnitConstruction.ControlTower.Start" Send="Create BuildingTerrainFlatten"/>
+        <On index="55" Terms="UnitConstruction.ControlTower.Cancel" Target="_BuildingTerrainFlatten" Send="Destroy"/>
+        <On index="56" Terms="UnitConstruction.ControlTower.Finish" Target="_BuildingTerrainFlatten" Send="Destroy"/>
+        <On index="57" Terms="UnitConstruction.ControlTower.Start" Send="QueryRadius 1.750000 BuildingCrushQueryResponse"/>
+        <On index="58" Terms="UnitBirth.ControlTower.Normal" Send="Create BuildingTerrainFlatten"/>
+        <On index="59" Terms="UnitBirth.ControlTower.Suppressed" Send="Create BuildingTerrainFlattenInstant"/>
+        <On index="60" Terms="UnitBirth.ControlTower.EditorPlaced" Send="Create BuildingTerrainFlattenEditor"/>
+        <On index="61" Terms="UnitDeath.ControlTower" Target="_BuildingTerrainFlatten" Send="Destroy"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit ReactorIsDetached" Send="DeathCustomize Detached"/>
+        <CreepHeightClass value="Small"/>
+        <DeathArray index="Normal" ModelLink="ControlTowerDeath" SoundLink="Reactor_Explode"/>
+        <DeathArray index="UnderConstruction" ModelLink="TerranBuildingDeath" SoundLink="Reactor_Explode"/>
+        <DeathCustoms ModelLink="ControlTowerDeathDetached" Name="Detached"/>
+        <PlacementModel value="ControlTowerPlacement"/>
+        <PlacementSound value="Terran_BuildingPlacement"/>
+        <PortraitModel value="AdjutantPortrait"/>
+        <AddonIndicator value="Actor/AddonIndicator/ControlTower"/>
+        <BarOffset value="65"/>
+        <BarWidth value="75"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-Reactor.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-building-terran-reactor.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-buildingarmor.dds"/>
+        <SoundArray index="Birth" value="Reactor_Birth"/>
+        <SoundArray index="Ready" value="Reactor_Ready"/>
+        <SoundArray index="What" value="Reactor_What"/>
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+        <UnitIcon value="Assets\Textures\btn-building-terran-reactor.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-Reactor.dds"/>
+        </Wireframe>
+    </CActorUnit>
     <CActorModel id="RestorationImpact">
         <EditorCategories value=""/>
         <On Terms="ActorCreation" Send="AnimBracketStart BSD Birth Stand Death ContentPlayOnce"/>
@@ -1257,42 +1306,6 @@
         <On index="0" Terms="Abil.que1Addon.Start" Send="StatusIncrement Queuing"/>
         <On index="1" Terms="Abil.que1Addon.Stop" Send="StatusDecrement Queuing"/>
     </CActorEventMacro>
-    <!--                                                                                         -->
-    <!-- Nuclear Reactor ....................................................................... -->
-    <!--                                                                                         -->
-    <CActorUnit id="Reactor" unitName="ControlTower">
-        <On index="0" Terms="UnitBirth.ControlTower" Send="Create SoundEmitter ControlTower_Ambience"/>
-        <On index="1" Terms="UnitBirth.ControlTower"/>
-        <On index="2" Terms="UnitRevive.ControlTower"/>
-        <On index="3" Terms="UnitRevive.ControlTower"/>
-        <On index="4" Terms="UnitConstruction.ControlTower.Start"/>
-        <On index="5" Terms="UnitConstruction.ControlTower.Finish"/>
-        <On index="53" Terms="UnitConstruction.ControlTower.Start" Send="Create ControlTowerBuild"/>
-        <On index="54" Terms="UnitConstruction.ControlTower.Start" Send="Create BuildingTerrainFlatten"/>
-        <On index="55" Terms="UnitConstruction.ControlTower.Cancel" Target="_BuildingTerrainFlatten" Send="Destroy"/>
-        <On index="56" Terms="UnitConstruction.ControlTower.Finish" Target="_BuildingTerrainFlatten" Send="Destroy"/>
-        <On index="57" Terms="UnitConstruction.ControlTower.Start" Send="QueryRadius 1.750000 BuildingCrushQueryResponse"/>
-        <On index="58" Terms="UnitBirth.ControlTower.Normal" Send="Create BuildingTerrainFlatten"/>
-        <On index="59" Terms="UnitBirth.ControlTower.Suppressed" Send="Create BuildingTerrainFlattenInstant"/>
-        <On index="60" Terms="UnitBirth.ControlTower.EditorPlaced" Send="Create BuildingTerrainFlattenEditor"/>
-        <On index="61" Terms="UnitDeath.ControlTower" Target="_BuildingTerrainFlatten" Send="Destroy"/>
-        <EventDataFootprint index="0" Model="ControlTowerFootprint"/>
-        <DeathArray index="Normal" VoiceLink="ControlTowerDeathVoice"/>
-        <GroupSoundArray index="What" value="ControlTower_GroupWhat"/>
-        <GroupSoundArray index="Yes" value="ControlTower_GroupYes"/>
-        <GroupSoundArray index="Attack" value="ControlTower_GroupAttack"/>
-        <GroupSoundArray index="Board" value="ControlTower_GroupBoard"/>
-        <SoundArray index="Help" value="ControlTower_Help"/>
-        <SoundArray index="Yes" value="ControlTower_Yes"/>
-        <SoundArray index="Attack" value="ControlTower_Attack"/>
-        <SoundArray index="Pissed" value="ControlTower_Pissed"/>
-        <SoundArray index="Movement" value="ControlTower_Movement"/>
-        <SoundArray index="Turning" value="ControlTower_Turning"/>
-        <SoundArray index="Board" value="ControlTower_Board"/>
-        <SoundArray index="Click" value="ControlTower_Click"/>
-        <SoundArray index="ClickError" value="ControlTower_ClickError"/>
-        <SoundArray index="Highlight" value="ControlTower_Highlight"/>
-    </CActorUnit>
     <CActorUnit id="Reaver" parent="GenericUnitStandard" unitName="Reaver">
         <EditorCategories value=""/>
         <EditorModel value="Reaver"/>
@@ -1515,25 +1528,6 @@
     <CActorRange id="SporeCrawlerProtectRange">
         <IconArcLength value="0.500000"/>
     </CActorRange>
-    <CActorUnit id="StarportReactor" unitName="ControlTower2">
-        <On index="0" Terms="UnitBirth.ControlTower2" Send="Create SoundEmitter ControlTower2_Ambience"/>
-        <On index="1" Terms="UnitBirth.ControlTower2"/>
-        <On index="2" Terms="UnitRevive.ControlTower2"/>
-        <On index="3" Terms="UnitRevive.ControlTower2"/>
-        <On index="4" Terms="UnitConstruction.ControlTower2.Start"/>
-        <On index="5" Terms="UnitConstruction.ControlTower2.Finish"/>
-        <On index="53" Terms="UnitConstruction.ControlTower2.Start" Send="Create ReactorBuild"/>
-        <On index="54" Terms="UnitConstruction.ControlTower2.Start" Send="Create BuildingTerrainFlatten"/>
-        <On index="55" Terms="UnitConstruction.ControlTower2.Cancel" Target="_BuildingTerrainFlatten" Send="Destroy"/>
-        <On index="56" Terms="UnitConstruction.ControlTower2.Finish" Target="_BuildingTerrainFlatten" Send="Destroy"/>
-        <On index="57" Terms="UnitConstruction.ControlTower2.Start" Send="QueryRadius 1.750000 BuildingCrushQueryResponse"/>
-        <On index="58" Terms="UnitBirth.ControlTower2.Normal" Send="Create BuildingTerrainFlatten"/>
-        <On index="59" Terms="UnitBirth.ControlTower2.Suppressed" Send="Create BuildingTerrainFlattenInstant"/>
-        <On index="60" Terms="UnitBirth.ControlTower2.EditorPlaced" Send="Create BuildingTerrainFlattenEditor"/>
-        <On index="61" Terms="UnitDeath.ControlTower2" Target="_BuildingTerrainFlatten" Send="Destroy"/>
-        <EventDataFootprint index="0" Model="ControlTower2Footprint"/>
-        <DeathArray index="Normal" VoiceLink="ControlTower2DeathVoice"/>
-    </CActorUnit>
     <!--                                                                                         -->
     <CActorSound id="TankModeSound">
         <On index="1" removed="1"/>
@@ -1738,10 +1732,10 @@
         <GroupIcon>
             <Image index="0" value="Assets\Textures\wireframe-zerg-queen.dds"/>
         </GroupIcon>
-        <HeroIcon value="Assets\Textures\btn-unit-zerg-Queen.dds"/>
-        <UnitIcon value="Assets\Textures\btn-unit-zerg-Queen.dds"/>
+        <HeroIcon value="Assets\Textures\btn-unit-zerg-queenclassic.dds"/>
+        <UnitIcon value="Assets\Textures\btn-unit-zerg-queenclassic.dds"/>
         <Wireframe>
-            <Image index="0" value="Assets\Textures\wireframe-zerg-queen.dds"/>
+            <Image index="0" value="Assets\Textures\wireframe-zerg-queenclassic.dds"/>
         </Wireframe>
         <HostSiteOps Ops="SOpBankerMutalisk"/>
         <EventDataFootprint index="0" Model="QueenBWFootprint"/>
@@ -1962,12 +1956,12 @@
     </CActorSplat>
     <CActorUnit id="BroodLord">
         <GroupIcon>
-            <Image index="0" value="Assets\Textures\wireframe-zerg-guardian.dds"/>
+            <Image index="0" value="Assets\Textures\wireframe-zerg-primalzergguardian.dds"/>
         </GroupIcon>
-        <HeroIcon value="Assets\Textures\btn-unit-zerg-guardian.dds"/>
-        <UnitIcon value="Assets\Textures\btn-unit-zerg-guardian.dds"/>
+        <HeroIcon value="Assets\Textures\btn-unit-zerg-primalguardian.dds"/>
+        <UnitIcon value="Assets\Textures\btn-unit-zerg-primalguardian.dds"/>
         <Wireframe>
-            <Image index="0" value="Assets\Textures\wireframe-zerg-guardian.dds"/>
+            <Image index="0" value="Assets\Textures\wireframe-zerg-primalzergguardian.dds"/>
         </Wireframe>
         <HostSiteOps Ops=""/>
     </CActorUnit>

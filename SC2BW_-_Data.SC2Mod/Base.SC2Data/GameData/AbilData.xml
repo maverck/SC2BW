@@ -1174,6 +1174,11 @@
         <AINotifyEffect value="SpawnBroodling"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="SpawnBroodling" State="Restricted" Requirements="SpawnBroodlingUpgraded"/>
     </CAbilEffectTarget>
+    <CAbilBuild id="StarportAddOns">
+        <InfoArray index="Build1" Unit="ControlTower" Time="34.44">
+            <Button DefaultButtonFace="BuildControlTower"/>
+        </InfoArray>
+    </CAbilBuild>
     <CAbilMorphPlacement id="StarportLand">
         <InfoArray index="0">
             <SectionArray index="Mover">
@@ -1187,6 +1192,10 @@
                 <DurationArray index="Duration" value="1.5"/>
             </SectionArray>
         </InfoArray>
+    </CAbilMorph>
+    <CAbilMorph id="ControlTowerMorphStarport" parent="StarportTechLabMorph">
+        <Name value="Abil/Name/ControlTowerMorphStarport"/>
+        <InfoArray index="0" Unit="ControlTower"/>
     </CAbilMorph>
     <CAbilEffectTarget id="StasisFieldHardcore">
         <EditorCategories value="AbilityorEffectType:Units"/>
@@ -2464,11 +2473,6 @@
         <InfoArray index="Research6" Time="284.704"/>
         <Activity value="UI/Evolving"/>
     </CAbilResearch>
-    <CAbilBuild id="StarportAddOns">
-        <InfoArray index="Build1" Unit="ControlTower2" Time="34.44">
-            <Button DefaultButtonFace="BuildControlTower"/>
-        </InfoArray>
-    </CAbilBuild>
     <CAbilEffectTarget id="TacNukeStrike">
         <Range index="0" value="8"/>
         <CursorEffect index="0" value="NukeSearch"/>
