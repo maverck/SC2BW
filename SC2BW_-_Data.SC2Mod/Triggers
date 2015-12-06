@@ -34394,7 +34394,7 @@
         </Element>
         <Element Type="Param" Id="546092B3">
             <ParameterDef Type="ParamDef" Library="Ntve" Id="B6D9C7C9"/>
-            <Value>CCAddOns</Value>
+            <Value>CommandCenterAddons</Value>
             <ValueType Type="gamelink"/>
             <ValueGameType Type="Abil"/>
         </Element>

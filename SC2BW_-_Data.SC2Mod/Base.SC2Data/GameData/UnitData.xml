@@ -265,6 +265,10 @@
         <StationaryTurningRate value="2879.8242"/>
         <TurningRate value="2879.8242"/>
         <Speed value="1.4062"/>
+        <AbilArray index="5" removed="1"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="6" removed="1"/>
+        </CardLayouts>
     </CUnit>
     <CUnit id="BroodLord">
         <Attributes index="Armored" value="0"/>
@@ -472,17 +476,17 @@
     </CUnit>
     <CUnit id="CommandCenter">
         <AbilArray index="4" Link="CommandCenterLiftOff"/>
-        <AbilArray index="5" Link="CCAddOns"/>
+        <AbilArray index="5" Link="CommandCenterAddons"/>
         <AbilArray index="6" removed="1"/>
         <AbilArray index="7" removed="1"/>
         <CardLayouts index="0">
             <LayoutButtons index="1" Face="Rally" AbilCmd="RallyCommand,Rally1" Column="4"/>
-            <LayoutButtons index="2" Face="OrbitalCommand" AbilCmd="CCAddOns,Build1" Row="2" Column="0"/>
+            <LayoutButtons index="2" Face="OrbitalCommand" AbilCmd="CommandCenterAddons,Build1" Row="2" Column="0"/>
             <LayoutButtons index="3" Face="Lift" AbilCmd="CommandCenterLiftOff,Execute" Row="2" Column="3"/>
             <LayoutButtons index="4" Face="Cancel" AbilCmd="que5CancelToSelection,CancelLast" Column="4"/>
-            <LayoutButtons index="5" Face="Cancel" AbilCmd="CCAddOns,Halt" Column="4"/>
+            <LayoutButtons index="5" Face="Cancel" AbilCmd="CommandCenterAddons,255" Column="4"/>
             <LayoutButtons index="6" Face="CancelBuilding" AbilCmd="BuildInProgress,Cancel" Column="4"/>
-            <LayoutButtons index="7" Face="BuildNuclearSilo" AbilCmd="CCAddOns,Build2" Column="1"/>
+            <LayoutButtons index="7" Face="BuildNuclearSilo" AbilCmd="CommandCenterAddons,Build2" Column="1"/>
             <LayoutButtons index="8" removed="1"/>
             <LayoutButtons index="9" removed="1"/>
             <LayoutButtons index="10" removed="1"/>
@@ -958,12 +962,12 @@
     <CUnit id="CommandCenterFlying">
         <Attributes index="Armored" value="0"/>
         <Attributes index="Massive" value="1"/>
-        <AbilArray index="3" Link="CCAddOns"/>
+        <AbilArray index="3" Link="CommandCenterAddons"/>
         <CardLayouts index="0">
-            <LayoutButtons index="3" Face="OrbitalCommand" AbilCmd="CCAddOns,Build1"/>
+            <LayoutButtons index="3" Face="OrbitalCommand" AbilCmd="CommandCenterAddons,Build1"/>
             <LayoutButtons index="4" Face="MoveHoldPosition" AbilCmd="move,HoldPos" Row="0" Column="2"/>
             <LayoutButtons index="5" Face="MovePatrol" AbilCmd="move,Patrol" Column="3"/>
-            <LayoutButtons index="6" Face="BuildNuclearSilo" AbilCmd="CCAddOns,Build2" Row="2" Column="1"/>
+            <LayoutButtons index="6" Face="BuildNuclearSilo" AbilCmd="CommandCenterAddons,Build2" Row="2" Column="1"/>
         </CardLayouts>
         <Speed value="0.6015"/>
         <BehaviorArray Link="UnitFilterLarge"/>
@@ -1929,17 +1933,20 @@
         <AbilArray Link="BuildInProgress"/>
         <AbilArray Link="que1Addon"/>
         <AbilArray Link="ControlTowerMorphStarport"/>
+        <AbilArray Link="ControlTowerResearch"/>
         <BehaviorArray Link="TerranBuildingBurnDown"/>
         <BehaviorArray Link="UnitFilterLarge"/>
         <CardLayouts>
             <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="que1Addon,CancelLast" Row="2" Column="4"/>
             <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
+            <LayoutButtons Face="ResearchCloakingField" Type="AbilCmd" AbilCmd="ControlTowerResearch,Research1" Row="0" Column="0"/>
+            <LayoutButtons Face="ResearchWraithEnergyUpgrade" Type="AbilCmd" AbilCmd="ControlTowerResearch,Research2" Row="0" Column="1"/>
         </CardLayouts>
         <Radius value="1"/>
         <SeparationRadius value="1"/>
         <Footprint value="Footprint2x2Contour"/>
         <PlacementFootprint value="Footprint3x3AddOn2x2"/>
-        <AddedOnArray UnitLink="Starport" BehaviorLink="StarportTechLab"/>
+        <AddedOnArray UnitLink="Starport" BehaviorLink="ControlTower"/>
         <AddOnOffsetX value="3"/>
         <AddOnOffsetY value="-0.5"/>
         <ScoreMake value="50"/>
@@ -2124,103 +2131,88 @@
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Campaign"/>
         <HotkeyAlias value=""/>
     </CUnit>
-    <CUnit id="CovertOps">
-        <DeathRevealRadius value="3"/>
-        <ReviveType value="MachineShop"/>
-        <Facing value="315"/>
-        <Race value="Terr"/>
-        <Mob value="Multiplayer"/>
-        <FlagArray index="Turnable" value="0"/>
-        <FlagArray index="PreventReveal" value="1"/>
-        <FlagArray index="PreventDefeat" value="1"/>
-        <FlagArray index="PreventDestroy" value="1"/>
-        <FlagArray index="PenaltyRevealed" value="1"/>
-        <FlagArray index="UseLineOfSight" value="1"/>
-        <FlagArray index="TownAlert" value="1"/>
-        <FlagArray index="NoPortraitTalk" value="1"/>
-        <FlagArray index="ArmorDisabledWhileConstructing" value="1"/>
-        <FogVisibility value="Snapshot"/>
-        <PlaneArray index="Ground" value="1"/>
-        <Collide index="Burrow" value="1"/>
-        <Collide index="Ground" value="1"/>
-        <Collide index="Structure" value="1"/>
-        <Collide index="ForceField" value="1"/>
-        <Attributes index="Mechanical" value="1"/>
-        <Attributes index="Massive" value="1"/>
-        <Attributes index="Structure" value="1"/>
-        <LifeStart value="750"/>
-        <LifeMax value="750"/>
-        <LifeArmor value="1"/>
-        <LifeArmorName value="Unit/LifeArmorName/TerranBuildingPlating"/>
-        <StationaryTurningRate value="719.4726"/>
-        <TurningRate value="719.4726"/>
-        <Sight value="9"/>
-        <CostCategory value="Technology"/>
-        <CostResource index="Minerals" value="50"/>
-        <CostResource index="Vespene" value="50"/>
-        <RepairTime value="25"/>
-        <AttackTargetPriority value="11"/>
-        <AbilArray Link="BuildInProgress"/>
-        <AbilArray Link="que1Addon"/>
-        <AbilArray Link="FactoryTechLabMorph2"/>
-        <BehaviorArray Link="TerranBuildingBurnDown"/>
-        <BehaviorArray Link="UnitFilterLarge"/>
-        <CardLayouts>
-            <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="que1Addon,CancelLast" Row="2" Column="4"/>
-            <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
-        </CardLayouts>
-        <Radius value="1"/>
-        <SeparationRadius value="1"/>
-        <Footprint value="Footprint2x2Contour"/>
-        <PlacementFootprint value="Footprint3x3AddOn2x2"/>
-        <AddedOnArray UnitLink="ScienceFacility" BehaviorLink="MachineShop"/>
-        <AddOnOffsetX value="3"/>
-        <AddOnOffsetY value="-0.5"/>
-        <ScoreMake value="50"/>
-        <ScoreKill value="150"/>
-        <ScoreResult value="BuildOrder"/>
-        <SubgroupPriority value="2"/>
-        <MinimapRadius value="1"/>
-        <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
-        <TacticalAI value="TechLab"/>
-        <LeaderAlias value="CovertOps2"/>
-        <SelectAlias value="CovertOps2"/>
-        <SubgroupAlias value="CovertOps2"/>
-        <GlossaryPriority value="26"/>
-        <AIEvaluateAlias value="MachineShop"/>
-        <Description value="Button/Tooltip/TechLab"/>
-    </CUnit>
-    <CUnit id="CovertOps2" parent="TechLab">
-        <Name value="Unit/Name/CovertOps"/>
-        <Mob value="None"/>
-        <LifeStart value="750"/>
-        <LifeMax value="750"/>
-        <CostResource index="Vespene" value="50"/>
-        <AbilArray index="1" Link="que1Addon"/>
-        <AbilArray index="2" Link="FactoryTechLabMorph2"/>
-        <AbilArray index="3" Link="TechLabMorph3"/>
-        <AbilArray index="4" Link="MachineShopResearchFactory"/>
-        <CardLayouts index="0">
-            <LayoutButtons index="0" Face="Cancel" Type="AbilCmd" AbilCmd="que1Addon,CancelLast" Row="2" Column="4"/>
-            <LayoutButtons Face="ResearchLockdown" Type="AbilCmd" AbilCmd="MachineShopResearchFactory,255" Row="0" Column="1"/>
-            <LayoutButtons Face="ResearchPersonalCloaking" Type="AbilCmd" AbilCmd="MachineShopResearchFactory,255" Row="0" Column="0"/>
-            <LayoutButtons Face="ResearchGhostEnergyUpgrade" Type="AbilCmd" AbilCmd="MachineShopResearchFactory,255" Row="1" Column="1"/>
-            <LayoutButtons Face="ResearchOcularImplants" Type="AbilCmd" AbilCmd="MachineShopResearchFactory,255" Row="1" Column="0"/>
-        </CardLayouts>
-        <LeaderAlias value="CovertOps2"/>
-        <SubgroupAlias value="CovertOps2"/>
-        <GlossaryPriority value="26"/>
-        <AddedOnArray index="0" UnitLink="ScienceFacility" BehaviorLink="MachineShop"/>
-        <AddedOnArray index="1" removed="1"/>
-        <AddedOnArray index="2" removed="1"/>
+    <CUnit id="TerranNuclearSilo" parent="FactoryTechLab">
+        <Name value="Unit/Name/TerranNuclearSilo"/>
         <Attributes index="Armored" value="0"/>
         <Attributes index="Massive" value="1"/>
-        <FlagArray index="PreventReveal" value="1"/>
-        <AddOnOffsetX value="3"/>
-        <HotkeyAlias value="CovertOps2"/>
+        <CostResource index="Minerals" value="100"/>
+        <CostResource index="Vespene" value="100"/>
+        <AbilArray index="1" Link="que1Addon"/>
+        <AbilArray index="2" Link="NuclearSiloMorphDetached"/>
+        <AbilArray index="3" Link="ArmSiloWithNuke"/>
+        <AbilArray index="4" removed="1"/>
+        <AbilArray index="5" removed="1"/>
         <BehaviorArray Link="UnitFilterLarge"/>
-        <GlossaryCategory value="Unit/Category/TerranUnits"/>
-        <SelectAlias value="CovertOps2"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="0" AbilCmd="que1Addon,CancelLast"/>
+            <LayoutButtons index="1" Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
+            <LayoutButtons index="2" Face="NukeArm" Type="AbilCmd" AbilCmd="ArmSiloWithNuke,Ammo1" Row="2" Column="0"/>
+            <LayoutButtons index="3" removed="1"/>
+            <LayoutButtons index="4" removed="1"/>
+        </CardLayouts>
+        <AddedOnArray index="0" UnitLink="CommandCenter" BehaviorLink="NuclearSilo"/>
+        <AddedOnArray index="1" removed="1"/>
+        <AddedOnArray index="2" removed="1"/>
+        <AddOnOffsetX value="3"/>
+        <LeaderAlias value="TerranNuclearSilo"/>
+        <HotkeyAlias value="TerranNuclearSilo"/>
+        <SelectAlias value="TerranNuclearSilo"/>
+        <SubgroupAlias value="TerranNuclearSilo"/>
+    </CUnit>
+    <CUnit id="TerranPhysicsLab" parent="FactoryTechLab">
+        <Name value="Unit/Name/TerranPhysicsLab"/>
+        <Attributes index="Armored" value="0"/>
+        <Attributes index="Massive" value="1"/>
+        <CostResource index="Vespene" value="50"/>
+        <AbilArray index="1" Link="que1Addon"/>
+        <AbilArray index="2" Link="PhysicsLabMorphDetached"/>
+        <AbilArray index="3" Link="PhysicsLabResearch"/>
+        <AbilArray index="4" removed="1"/>
+        <AbilArray index="5" removed="1"/>
+        <BehaviorArray Link="UnitFilterLarge"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="0" AbilCmd="que1Addon,CancelLast"/>
+            <LayoutButtons index="1" Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
+            <LayoutButtons index="2" Face="ResearchBattlecruiserSpecializations" Type="AbilCmd" AbilCmd="PhysicsLabResearch,Research1" Row="0" Column="0"/>
+            <LayoutButtons index="3" Face="ResearchBattlecruiserEnergyUpgrade" Type="AbilCmd" AbilCmd="PhysicsLabResearch,Research2" Row="0" Column="1"/>
+            <LayoutButtons index="4" removed="1"/>
+        </CardLayouts>
+        <AddedOnArray index="0" UnitLink="ScienceFacility" BehaviorLink="PhysicsLab"/>
+        <AddedOnArray index="1" removed="1"/>
+        <AddedOnArray index="2" removed="1"/>
+        <AddOnOffsetX value="3"/>
+        <LeaderAlias value="TerranPhysicsLab"/>
+        <HotkeyAlias value="TerranPhysicsLab"/>
+        <SelectAlias value="TerranPhysicsLab"/>
+        <SubgroupAlias value="TerranPhysicsLab"/>
+    </CUnit>
+    <CUnit id="TerranCovertOps" parent="FactoryTechLab">
+        <Name value="Unit/Name/TerranCovertOps"/>
+        <Attributes index="Armored" value="0"/>
+        <Attributes index="Massive" value="1"/>
+        <CostResource index="Vespene" value="50"/>
+        <AbilArray index="1" Link="que1Addon"/>
+        <AbilArray index="2" Link="CovertOpsMorphDetached"/>
+        <AbilArray index="3" Link="CovertOpsResearch"/>
+        <AbilArray index="4" removed="1"/>
+        <AbilArray index="5" removed="1"/>
+        <BehaviorArray Link="UnitFilterLarge"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="0" AbilCmd="que1Addon,CancelLast"/>
+            <LayoutButtons index="1" Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
+            <LayoutButtons index="2" Face="ResearchPersonalCloaking" Type="AbilCmd" AbilCmd="CovertOpsResearch,Research1" Row="0" Column="0"/>
+            <LayoutButtons index="3" Face="ResearchLockdown" Type="AbilCmd" AbilCmd="CovertOpsResearch,Research5" Row="0" Column="1"/>
+            <LayoutButtons index="4" Face="ResearchOcularImplants" Type="AbilCmd" AbilCmd="CovertOpsResearch,Research3" Row="1" Column="0"/>
+            <LayoutButtons Face="ResearchGhostEnergyUpgrade" Type="AbilCmd" AbilCmd="CovertOpsResearch,Research2" Row="1" Column="1"/>
+        </CardLayouts>
+        <AddedOnArray index="0" UnitLink="ScienceFacility" BehaviorLink="CovertOps"/>
+        <AddedOnArray index="1" removed="1"/>
+        <AddedOnArray index="2" removed="1"/>
+        <AddOnOffsetX value="3"/>
+        <LeaderAlias value="TerranCovertOps"/>
+        <HotkeyAlias value="TerranCovertOps"/>
+        <SelectAlias value="TerranCovertOps"/>
+        <SubgroupAlias value="TerranCovertOps"/>
     </CUnit>
     <CUnit id="Marauder">
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Campaign"/>
@@ -2486,64 +2478,6 @@
         <Mover value="MissileDefault"/>
         <EditorCategories value="ObjectFamily:Melee,ObjectType:Projectile"/>
         <FlagArray index="Missile" value="1"/>
-    </CUnit>
-    <CUnit id="PhysicsLab">
-        <LifeStart value="600"/>
-        <LifeMax value="600"/>
-        <CostResource index="Minerals" value="50"/>
-        <CostResource index="Vespene" value="50"/>
-        <AbilArray Link="BuildInProgress"/>
-        <AbilArray Link="que1Addon"/>
-        <AbilArray Link="PhysicsLabMorph"/>
-        <AbilArray Link="MorphToTechReactor"/>
-        <AddedOnArray UnitLink="ScienceFacility" BehaviorLink="PhysicsLabAttachedtoScienceFacility"/>
-        <LeaderAlias value="PhysicsLab2"/>
-        <SubgroupAlias value="PhysicsLab2"/>
-        <Attributes index="Mechanical" value="1"/>
-        <Attributes index="Massive" value="1"/>
-        <Attributes index="Structure" value="1"/>
-        <FlagArray index="Turnable" value="0"/>
-        <FlagArray index="PreventReveal" value="1"/>
-        <FlagArray index="PreventDefeat" value="1"/>
-        <FlagArray index="PreventDestroy" value="1"/>
-        <FlagArray index="PenaltyRevealed" value="1"/>
-        <FlagArray index="UseLineOfSight" value="1"/>
-        <FlagArray index="TownAlert" value="1"/>
-        <FlagArray index="NoPortraitTalk" value="1"/>
-        <FlagArray index="ArmorDisabledWhileConstructing" value="1"/>
-        <AddOnOffsetX value="3"/>
-        <Race value="Terr"/>
-        <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
-        <Facing value="315"/>
-        <FogVisibility value="Snapshot"/>
-        <PlaneArray index="Ground" value="1"/>
-        <Collide index="Burrow" value="1"/>
-        <Collide index="Ground" value="1"/>
-        <Collide index="Structure" value="1"/>
-        <Collide index="RoachBurrow" value="1"/>
-        <Collide index="ForceField" value="1"/>
-        <LifeArmor value="1"/>
-        <LifeArmorName value="Unit/LifeArmorName/TerranBuildingPlating"/>
-        <Sight value="9"/>
-        <CostCategory value="Technology"/>
-        <RepairTime value="25"/>
-        <AttackTargetPriority value="11"/>
-        <BehaviorArray Link="TerranBuildingBurnDown"/>
-        <BehaviorArray Link="UnitFilterLarge"/>
-        <CardLayouts>
-            <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="que1Addon,CancelLast" Row="2" Column="4"/>
-            <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
-        </CardLayouts>
-        <Radius value="1"/>
-        <SeparationRadius value="1"/>
-        <Footprint value="Footprint2x2Contour"/>
-        <PlacementFootprint value="Footprint3x3AddOn2x2"/>
-        <AddOnOffsetY value="-0.5"/>
-        <ScoreMake value="50"/>
-        <ScoreKill value="150"/>
-        <ScoreResult value="BuildOrder"/>
-        <SubgroupPriority value="2"/>
-        <GlossaryPriority value="26"/>
     </CUnit>
     <CUnit id="PlanetaryFortress">
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Campaign"/>
@@ -3513,46 +3447,6 @@
         <Acceleration value="1.5"/>
         <Deceleration value="1.5"/>
     </CUnit>
-    <CUnit id="ScienceFacility">
-        <CostResource index="Minerals" value="100"/>
-        <CostResource index="Vespene" value="150"/>
-        <AbilArray Link="BuildInProgress"/>
-        <AbilArray Link="ScienceFacilityResearch"/>
-        <AbilArray Link="que1"/>
-        <AbilArray Link="FactoryAddOns2"/>
-        <AbilArray Link="ScienceLiftOff"/>
-        <Attributes index="Mechanical" value="1"/>
-        <Attributes index="Massive" value="1"/>
-        <LifeStart value="850"/>
-        <LifeMax value="850"/>
-        <BehaviorArray Link="TerranBuildingBurnDown"/>
-        <BehaviorArray Link="UnitFilterLarge"/>
-        <CardLayouts>
-            <LayoutButtons Face="ResearchEMPShockwave" Type="AbilCmd" AbilCmd="ScienceFacilityResearch,Research1" Row="0" Column="0"/>
-            <LayoutButtons Face="ResearchIrradiate" Type="AbilCmd" AbilCmd="ScienceFacilityResearch,Research2" Row="0" Column="1"/>
-            <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="que1,CancelLast" Row="2" Column="4"/>
-            <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="FactoryAddOns2,Halt" Row="2" Column="4"/>
-            <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
-            <LayoutButtons Face="Lift" Type="AbilCmd" AbilCmd="ScienceLiftOff,Execute" Row="2" Column="3"/>
-            <LayoutButtons Face="BuildCovertOps" Type="AbilCmd" AbilCmd="FactoryAddOns2,Build1" Row="2" Column="0"/>
-            <LayoutButtons Face="BuildPhysicsLab" Type="AbilCmd" AbilCmd="FactoryAddOns2,Build2" Row="2" Column="1"/>
-            <LayoutButtons Face="ResearchScienceVesselEnergyUpgrade" Type="AbilCmd" AbilCmd="ScienceFacilityResearch,Research3" Row="0" Column="2"/>
-        </CardLayouts>
-        <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
-        <Facing value="304.9914"/>
-        <FlagArray index="Turnable" value="0"/>
-        <FlagArray index="PreventReveal" value="1"/>
-        <FlagArray index="PreventDefeat" value="1"/>
-        <FlagArray index="PreventDestroy" value="0"/>
-        <Footprint value="Footprint4x3ScienceFacility"/>
-        <PlacementFootprint value="Footprint4x3NR"/>
-        <HotkeyCategory value="Unit/Category/TerranUnits"/>
-        <ScoreMake value="275"/>
-        <ScoreKill value="825"/>
-        <LifeArmor value="1"/>
-        <Sight value="9"/>
-        <GlossaryPriority value="200"/>
-    </CUnit>
     <CUnit id="ScienceFacilityFlying">
         <DeathRevealRadius value="3"/>
         <ReviveType value="ScienceFacility"/>
@@ -3580,6 +3474,7 @@
         <LifeArmorName value="Unit/LifeArmorName/TerranBuildingPlating"/>
         <Mover value="Fly"/>
         <Speed value="0.6015"/>
+        <Acceleration value="1.3125"/>
         <Sight value="10"/>
         <Height value="3.75"/>
         <VisionHeight value="4"/>
@@ -3587,19 +3482,19 @@
         <CostResource index="Vespene" value="150"/>
         <RepairTime value="100"/>
         <AttackTargetPriority value="11"/>
-        <AbilArray Link="FactoryAddOns2"/>
+        <AbilArray Link="ScienceFacilityAddons"/>
         <AbilArray Link="ScienceLand"/>
         <AbilArray Link="move"/>
         <AbilArray Link="stop"/>
         <BehaviorArray Link="TerranBuildingBurnDown"/>
         <BehaviorArray Link="UnitFilterLarge"/>
         <CardLayouts>
-            <LayoutButtons Face="BuildCovertOps" Type="AbilCmd" AbilCmd="FactoryAddOns2,Build1" Row="2" Column="0"/>
+            <LayoutButtons Face="BuildCovertOps" Type="AbilCmd" AbilCmd="ScienceFacilityAddons,Build1" Row="2" Column="0"/>
             <LayoutButtons Face="Land" Type="AbilCmd" AbilCmd="ScienceLand,Execute" Row="2" Column="3"/>
             <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
             <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
             <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
-            <LayoutButtons Face="BuildPhysicsLab" Type="AbilCmd" AbilCmd="FactoryAddOns2,Build2" Row="2" Column="1"/>
+            <LayoutButtons Face="BuildPhysicsLab" Type="AbilCmd" AbilCmd="ScienceFacilityAddons,Build2" Row="2" Column="1"/>
         </CardLayouts>
         <Radius value="1.25"/>
         <SeparationRadius value="1.25"/>
@@ -3611,9 +3506,48 @@
         <LeaderAlias value="ScienceFacility"/>
         <SelectAlias value="ScienceFacility"/>
         <SubgroupAlias value="ScienceFacility"/>
-        <AIEvaluateAlias value="ScienceFacility"/>
-        <Acceleration value="1.3125"/>
         <TechAliasArray value="alias_ScienceFacility"/>
+        <AIEvaluateAlias value="ScienceFacility"/>
+    </CUnit>
+    <CUnit id="ScienceFacility">
+        <CostResource index="Minerals" value="100"/>
+        <CostResource index="Vespene" value="150"/>
+        <AbilArray Link="BuildInProgress"/>
+        <AbilArray Link="ScienceFacilityResearch"/>
+        <AbilArray Link="que1"/>
+        <AbilArray Link="ScienceFacilityAddons"/>
+        <AbilArray Link="ScienceLiftOff"/>
+        <Attributes index="Mechanical" value="1"/>
+        <Attributes index="Massive" value="1"/>
+        <LifeStart value="850"/>
+        <LifeMax value="850"/>
+        <BehaviorArray Link="TerranBuildingBurnDown"/>
+        <BehaviorArray Link="UnitFilterLarge"/>
+        <CardLayouts>
+            <LayoutButtons Face="ResearchEMPShockwave" Type="AbilCmd" AbilCmd="ScienceFacilityResearch,Research1" Row="0" Column="0"/>
+            <LayoutButtons Face="ResearchIrradiate" Type="AbilCmd" AbilCmd="ScienceFacilityResearch,Research2" Row="0" Column="1"/>
+            <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="que1,CancelLast" Row="2" Column="4"/>
+            <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="ScienceFacilityAddons,255" Row="2" Column="4"/>
+            <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
+            <LayoutButtons Face="Lift" Type="AbilCmd" AbilCmd="ScienceLiftOff,Execute" Row="2" Column="3"/>
+            <LayoutButtons Face="BuildCovertOps" Type="AbilCmd" AbilCmd="ScienceFacilityAddons,Build1" Row="2" Column="0"/>
+            <LayoutButtons Face="BuildPhysicsLab" Type="AbilCmd" AbilCmd="ScienceFacilityAddons,Build2" Row="2" Column="1"/>
+            <LayoutButtons Face="ResearchScienceVesselEnergyUpgrade" Type="AbilCmd" AbilCmd="ScienceFacilityResearch,Research3" Row="0" Column="2"/>
+        </CardLayouts>
+        <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
+        <Facing value="304.9914"/>
+        <FlagArray index="Turnable" value="0"/>
+        <FlagArray index="PreventReveal" value="1"/>
+        <FlagArray index="PreventDefeat" value="1"/>
+        <FlagArray index="PreventDestroy" value="0"/>
+        <Footprint value="Footprint4x3ScienceFacility"/>
+        <PlacementFootprint value="Footprint4x3NR"/>
+        <HotkeyCategory value="Unit/Category/TerranUnits"/>
+        <ScoreMake value="275"/>
+        <ScoreKill value="825"/>
+        <LifeArmor value="1"/>
+        <Sight value="9"/>
+        <GlossaryPriority value="200"/>
     </CUnit>
     <CUnit id="ScienceVessel">
         <AbilArray index="3" Link="IrradiateHardcore"/>
@@ -4060,67 +3994,6 @@
         <BehaviorArray Link="UnitFilterLarge"/>
         <SelectAlias value="ComsatStation2"/>
     </CUnit>
-    <CUnit id="PhysicsLab2" parent="TechLab">
-        <Name value="Unit/Name/PhysicsLab"/>
-        <Mob value="None"/>
-        <Attributes index="Armored" value="0"/>
-        <Attributes index="Massive" value="1"/>
-        <LifeStart value="600"/>
-        <LifeMax value="600"/>
-        <CostResource index="Vespene" value="50"/>
-        <AbilArray index="1" Link="que1Addon"/>
-        <AbilArray index="2" Link="PhysicsLabMorph"/>
-        <AbilArray index="3" Link="PhysicsLabMorphDetached"/>
-        <AbilArray index="4" Link="ScienceFacilityPhysicsLabResearch"/>
-        <AbilArray Link="MorphToTechReactor"/>
-        <CardLayouts index="0">
-            <LayoutButtons index="0" Face="Cancel" Type="AbilCmd" AbilCmd="que1Addon,CancelLast" Row="2" Column="4"/>
-            <LayoutButtons Face="ResearchBattlecruiserEnergyUpgrade" Type="AbilCmd" AbilCmd="ScienceFacilityPhysicsLabResearch,Research2" Row="0" Column="1"/>
-            <LayoutButtons Face="ResearchBattlecruiserSpecializations" Type="AbilCmd" AbilCmd="ScienceFacilityPhysicsLabResearch,Research1" Row="0" Column="0"/>
-        </CardLayouts>
-        <AddedOnArray index="0" UnitLink="ScienceFacility" BehaviorLink="PhysicsLabAttachedtoScienceFacility"/>
-        <AddedOnArray index="1" removed="1"/>
-        <AddedOnArray index="2" removed="1"/>
-        <LeaderAlias value="PhysicsLab2"/>
-        <SubgroupAlias value="PhysicsLab2"/>
-        <GlossaryPriority value="26"/>
-        <FlagArray index="PreventReveal" value="1"/>
-        <AddOnOffsetX value="3"/>
-        <HotkeyAlias value="PhysicsLab2"/>
-        <BehaviorArray Link="UnitFilterLarge"/>
-        <ReviveType value="PhysicsLab2"/>
-        <SelectAlias value="PhysicsLab2"/>
-    </CUnit>
-    <CUnit id="NuclearSilo2" parent="TechLab">
-        <Name value="Unit/Name/NuclearSilo2"/>
-        <Mob value="None"/>
-        <LifeStart value="600"/>
-        <LifeMax value="600"/>
-        <CostResource index="Minerals" value="100"/>
-        <CostResource index="Vespene" value="100"/>
-        <AbilArray index="1" Link="NuclearSiloMorph"/>
-        <AbilArray index="2" Link="NuclearSiloMorphDetached"/>
-        <AbilArray index="3" Link="ArmSiloWithNuke"/>
-        <AbilArray index="4" Link="que1"/>
-        <CardLayouts index="0">
-            <LayoutButtons index="0" Face="Cancel" Type="AbilCmd" AbilCmd="que1,CancelLast" Row="2" Column="4"/>
-            <LayoutButtons Face="NukeArm" Type="AbilCmd" AbilCmd="ArmSiloWithNuke,Ammo1" Row="0" Column="0"/>
-        </CardLayouts>
-        <PlacementFootprint value="Footprint4x32x2CC"/>
-        <AddedOnArray index="0" UnitLink="CommandCenter" BehaviorLink="NuclearSiloAttachedtoCommandCenter"/>
-        <AddedOnArray index="1" removed="1"/>
-        <AddedOnArray index="2" removed="1"/>
-        <AddOnOffsetX value="3"/>
-        <LeaderAlias value="NuclearSilo2"/>
-        <SubgroupAlias value="NuclearSilo2"/>
-        <GlossaryPriority value="26"/>
-        <Attributes index="Armored" value="0"/>
-        <Attributes index="Massive" value="1"/>
-        <FlagArray index="PreventReveal" value="1"/>
-        <HotkeyAlias value="NuclearSilo2"/>
-        <BehaviorArray Link="UnitFilterLarge"/>
-        <SelectAlias value="NuclearSilo2"/>
-    </CUnit>
     <CUnit id="ComsatStation" parent="TechLab">
         <Name value="Unit/Name/ComsatStation"/>
         <Mob value="None"/>
@@ -4149,33 +4022,7 @@
         <TacticalAI value="ComsatStation2"/>
         <SelectAlias value="ComsatStation2"/>
         <HotkeyAlias value=""/>
-    </CUnit>
-    <CUnit id="NuclearSilo" parent="TechLab">
-        <Name value="Unit/Name/NuclearSilo"/>
-        <Mob value="None"/>
-        <LifeStart value="600"/>
-        <LifeMax value="600"/>
-        <CostResource index="Minerals" value="100"/>
-        <CostResource index="Vespene" value="100"/>
-        <AbilArray index="1" Link="NuclearSiloMorph"/>
-        <AbilArray index="2" removed="1"/>
-        <AbilArray index="3" removed="1"/>
-        <AbilArray index="4" removed="1"/>
-        <PlacementFootprint value="Footprint4x32x2CC"/>
-        <AddedOnArray index="0" UnitLink="CommandCenter" BehaviorLink="NuclearSiloAttachedtoCommandCenter"/>
-        <AddedOnArray index="1" removed="1"/>
-        <AddedOnArray index="2" removed="1"/>
-        <AddOnOffsetX value="3"/>
-        <LeaderAlias value="NuclearSilo2"/>
-        <SubgroupAlias value="NuclearSilo2"/>
-        <GlossaryPriority value="0"/>
-        <FlagArray index="PreventReveal" value="1"/>
-        <Attributes index="Armored" value="0"/>
-        <Attributes index="Massive" value="1"/>
-        <HotkeyAlias value="NuclearSilo2"/>
-        <BehaviorArray Link="UnitFilterLarge"/>
-        <HotkeyCategory value=""/>
-        <SelectAlias value="NuclearSilo2"/>
+        <EnergyMax value="200"/>
     </CUnit>
     <CUnit id="TemplarArchive">
         <Attributes index="Armored" value="0"/>

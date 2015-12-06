@@ -4275,7 +4275,7 @@ bool libSCBW_gt_ComsatGains50EnergyonCompletion_Func (bool testConds, bool runAc
 //--------------------------------------------------------------------------------------------------
 void libSCBW_gt_ComsatGains50EnergyonCompletion_Init () {
     libSCBW_gt_ComsatGains50EnergyonCompletion = TriggerCreate("libSCBW_gt_ComsatGains50EnergyonCompletion_Func");
-    TriggerAddEventUnitCreated(libSCBW_gt_ComsatGains50EnergyonCompletion, null, "CCAddOns", null);
+    TriggerAddEventUnitCreated(libSCBW_gt_ComsatGains50EnergyonCompletion, null, "CommandCenterAddons", null);
 }
 
 //--------------------------------------------------------------------------------------------------

@@ -153,6 +153,10 @@
             </SectionArray>
         </InfoArray>
     </CAbilMorph>
+    <CAbilMorph id="CovertOpsMorphDetached" parent="TechLabMorph">
+        <Name value="Abil/Name/CovertOpsMorphDetached"/>
+        <InfoArray index="0" Unit="TerranCovertOps"/>
+    </CAbilMorph>
     <CAbilResearch id="MachineShopResearchFactory" parent="FactoryTechLabResearch">
         <Name value="Abil/Name/MachineShopResearchFactory"/>
         <InfoArray index="Research27" Time="70.5935" Upgrade="SiegeTechSC2BW">
@@ -767,6 +771,18 @@
         </InfoArray>
         <Flags index="BestUnit" value="0"/>
     </CAbilMorph>
+    <CAbilResearch id="ControlTowerResearch">
+        <InfoArray index="Research1" Time="88.2612" Upgrade="WraithCloak">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="CloakOnWraith" Requirements="LearnCloakingField"/>
+        </InfoArray>
+        <InfoArray index="Research2" Time="146.5136" Upgrade="WraithApolloReactor">
+            <Resource index="Minerals" value="200"/>
+            <Resource index="Vespene" value="200"/>
+            <Button DefaultButtonFace="ResearchWraithEnergyUpgrade" Requirements="LearnApolloReactor"/>
+        </InfoArray>
+    </CAbilResearch>
     <CAbilEffectTarget id="MaelstromHardcore">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="MaelstromSearch"/>
@@ -1468,30 +1484,20 @@
         <Effect index="0" value="RechargeShieldSet"/>
         <SmartValidatorArray value="TargetIsNotEnemy"/>
     </CAbilEffectTarget>
-    <CAbilEffectTarget id="Restoration">
-        <EditorCategories value="AbilityorEffectType:Units"/>
-        <Effect index="0" value="RestorationSet"/>
-        <Cost>
-            <Vital index="Energy" value="50"/>
-        </Cost>
-        <Range value="6"/>
-        <TargetFilters value="Visible;Neutral,Enemy,Structure,RawResource,HarvestableResource,Missile,Item,Stasis,Dead,Hidden,Invulnerable"/>
-        <AutoCastAcquireLevel value="Defensive"/>
-        <CmdButtonArray index="Execute" DefaultButtonFace="UseRestoration" State="Restricted" Requirements="UseRestoration"/>
-    </CAbilEffectTarget>
-    <CAbilResearch id="ScienceFacilityPhysicsLabResearch">
+    <CAbilResearch id="PhysicsLabResearch">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <Activity value="UI/Upgrading"/>
         <InfoArray index="Research1" Time="103.32" Upgrade="BattlecruiserEnableSpecializations">
             <Resource index="Minerals" value="100"/>
             <Resource index="Vespene" value="100"/>
-            <Button DefaultButtonFace="ResearchBattlecruiserSpecializations" Requirements="LearnWeaponRefit"/>
+            <Button DefaultButtonFace="ResearchBattlecruiserSpecializations" Requirements="ResearchYamato"/>
         </InfoArray>
         <InfoArray index="Research2" Time="143.5" Upgrade="BattlecruiserBehemothReactor">
             <Resource index="Minerals" value="150"/>
             <Resource index="Vespene" value="150"/>
             <Charge Link="Abil/Lockdown"/>
             <Cooldown Link="Abil/Lockdown"/>
-            <Button DefaultButtonFace="ResearchBattlecruiserEnergyUpgrade" State="Restricted" Requirements="LearnColossusReactor2"/>
+            <Button DefaultButtonFace="ResearchBattlecruiserEnergyUpgrade" State="Restricted" Requirements="ResearchColossusReactor"/>
         </InfoArray>
         <InfoArray index="Research3">
             <Charge Link="Abil/FactoryTechLabResearch2"/>
@@ -1605,8 +1611,18 @@
             <Charge Link="Abil/FactoryTechLabResearch"/>
             <Cooldown Link="Abil/FactoryTechLabResearch"/>
         </InfoArray>
-        <Activity value="UI/Upgrading"/>
     </CAbilResearch>
+    <CAbilEffectTarget id="Restoration">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="RestorationSet"/>
+        <Cost>
+            <Vital index="Energy" value="50"/>
+        </Cost>
+        <Range value="6"/>
+        <TargetFilters value="Visible;Neutral,Enemy,Structure,RawResource,HarvestableResource,Missile,Item,Stasis,Dead,Hidden,Invulnerable"/>
+        <AutoCastAcquireLevel value="Defensive"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="UseRestoration" State="Restricted" Requirements="UseRestoration"/>
+    </CAbilEffectTarget>
     <CAbilMorph id="NuclearSiloMorphDetached">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="TechLab" Requirements="ShowIfHaveNoCC"/>
@@ -1622,20 +1638,8 @@
             </SectionArray>
         </InfoArray>
     </CAbilMorph>
-    <CAbilMorph id="ComsatStationMorph">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
-        <CmdButtonArray index="Execute" DefaultButtonFace="TechLabBarracks" Requirements="ShowIfHaveCCAddOnParent"/>
-        <ActorKey value="ComsatMorph"/>
-        <Flags index="Automatic" value="1"/>
-        <Flags index="Produce" value="1"/>
-        <Cost>
-            <Charge Link="Abil/BarracksTechLabMorph"/>
-            <Cooldown Link="Abil/BarracksTechLabMorph"/>
-        </Cost>
-        <InfoArray Unit="ComsatStation2"/>
-    </CAbilMorph>
-    <CAbilBuild id="CCAddOns" parent="TerranAddOns">
-        <Name value="Abil/Name/CCAddOns"/>
+    <CAbilBuild id="CommandCenterAddons" parent="TerranAddOns">
+        <Name value="Abil/Name/CommandCenterAddons"/>
         <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
         <BuildMorphAbil value="CommandCenterLiftOff"/>
         <InfoArray index="Build1" Unit="ComsatStation2" Time="34.44">
@@ -1643,7 +1647,7 @@
             <Cooldown Link="Abil/BarracksAddOns"/>
             <Button DefaultButtonFace="OrbitalCommand" State="Restricted" Requirements="HaveAcademy"/>
         </InfoArray>
-        <InfoArray index="Build2" Unit="NuclearSilo2" Time="68.88">
+        <InfoArray index="Build2" Unit="TerranNuclearSilo" Time="68.88">
             <Charge Link="Abil/BarracksAddOns"/>
             <Cooldown Link="Abil/BarracksAddOns"/>
             <Button DefaultButtonFace="BuildNuclearSilo" Requirements="HaveScienceFacilitywithAttachedCovertOps"/>
@@ -1757,6 +1761,18 @@
             <Cooldown Link="Abil/BarracksAddOns"/>
         </InfoArray>
     </CAbilBuild>
+    <CAbilMorph id="ComsatStationMorph">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="TechLabBarracks" Requirements="ShowIfHaveCCAddOnParent"/>
+        <ActorKey value="ComsatMorph"/>
+        <Flags index="Automatic" value="1"/>
+        <Flags index="Produce" value="1"/>
+        <Cost>
+            <Charge Link="Abil/BarracksTechLabMorph"/>
+            <Cooldown Link="Abil/BarracksTechLabMorph"/>
+        </Cost>
+        <InfoArray Unit="ComsatStation2"/>
+    </CAbilMorph>
     <CAbilMorph id="NuclearSiloMorph">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="TechLabBarracks" Requirements="ShowIfHaveCCAddOnParent"/>
@@ -1791,25 +1807,16 @@
         <EffectArray index="Start" value=""/>
         <EffectArray index="Finish" value="NydusExitFinishedSet"/>
     </CAbilBuild>
-    <CAbilResearch id="EngineeringBayResearch">
-        <InfoArray index="Research3" Time="229.6"/>
-        <InfoArray index="Research4" Time="257.152"/>
-        <InfoArray index="Research5" Time="284.704"/>
-        <InfoArray index="Research7" Time="229.6"/>
-        <InfoArray index="Research8" Time="257.152"/>
-        <InfoArray index="Research9" Time="284.704"/>
-        <Activity value="UI/Upgrading"/>
-    </CAbilResearch>
-    <CAbilBuild id="FactoryAddOns2" parent="TerranAddOns">
-        <Name value="Abil/Name/FactoryAddOns2"/>
+    <CAbilBuild id="ScienceFacilityAddons" parent="TerranAddOns">
+        <Name value="Abil/Name/ScienceFacilityAddons"/>
         <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
         <BuildMorphAbil value="ScienceLiftOff"/>
-        <InfoArray index="Build1" Unit="CovertOps2" Time="34.44">
+        <InfoArray index="Build1" Unit="TerranCovertOps" Time="34.44">
             <Charge Link="Abil/FactoryAddOns"/>
             <Cooldown Link="Abil/FactoryAddOns"/>
             <Button DefaultButtonFace="BuildCovertOps" State="Available"/>
         </InfoArray>
-        <InfoArray index="Build2" Unit="PhysicsLab2" Time="34.44">
+        <InfoArray index="Build2" Unit="TerranPhysicsLab" Time="34.44">
             <Button DefaultButtonFace="BuildPhysicsLab" State="Available"/>
         </InfoArray>
         <InfoArray index="Build4">
@@ -1921,18 +1928,15 @@
             <Cooldown Link="Abil/FactoryAddOns"/>
         </InfoArray>
     </CAbilBuild>
-    <CAbilMorph id="PhysicsLabMorph">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
-        <CmdButtonArray index="Execute" DefaultButtonFace="TechLabFactory" Requirements="ShowIfHaveSFAddOnParent"/>
-        <ActorKey value="CovertOpsMorph"/>
-        <Flags index="Automatic" value="1"/>
-        <Flags index="Produce" value="1"/>
-        <Cost>
-            <Charge Link="Abil/FactoryTechLabMorph"/>
-            <Cooldown Link="Abil/FactoryTechLabMorph"/>
-        </Cost>
-        <InfoArray Unit="PhysicsLab2"/>
-    </CAbilMorph>
+    <CAbilResearch id="EngineeringBayResearch">
+        <InfoArray index="Research3" Time="229.6"/>
+        <InfoArray index="Research4" Time="257.152"/>
+        <InfoArray index="Research5" Time="284.704"/>
+        <InfoArray index="Research7" Time="229.6"/>
+        <InfoArray index="Research8" Time="257.152"/>
+        <InfoArray index="Research9" Time="284.704"/>
+        <Activity value="UI/Upgrading"/>
+    </CAbilResearch>
     <CAbilResearch id="ForgeResearch">
         <InfoArray index="Research1" Time="229.6"/>
         <InfoArray index="Research2" Time="257.152"/>
@@ -2060,15 +2064,21 @@
             </SectionArray>
         </InfoArray>
     </CAbilMorph>
-    <CAbilResearch id="GhostAcademyResearch">
+    <CAbilResearch id="CovertOpsResearch" parent="GhostAcademyResearch">
+        <Name value="Abil/Name/CovertOpsResearch"/>
+        <Activity value="UI/Upgrading"/>
         <InfoArray index="Research1" Time="68.88"/>
         <InfoArray index="Research2" Time="143.5"/>
+        <InfoArray index="Research3" Time="146.5136" Upgrade="OcularImplants2">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="ResearchOcularImplants" Requirements="LearnOcularImplants"/>
+        </InfoArray>
         <InfoArray index="Research5" Time="86.1" Upgrade="Lockdown">
             <Resource index="Minerals" value="200"/>
             <Resource index="Vespene" value="200"/>
             <Button DefaultButtonFace="ResearchLockdown" Requirements="ResearchLockdown"/>
         </InfoArray>
-        <Activity value="UI/Upgrading"/>
     </CAbilResearch>
     <CAbilEffectTarget id="Lockdown">
         <EditorCategories value="AbilityorEffectType:Units"/>
@@ -2081,39 +2091,6 @@
         <CmdButtonArray index="Execute" DefaultButtonFace="UseLockdown" State="Restricted" Requirements="UseLockdown"/>
         <CastIntroTime value="0.5"/>
     </CAbilEffectTarget>
-    <CAbilEffectTarget id="Maelstrom">
-        <EditorCategories value="AbilityorEffectType:Units"/>
-        <Effect index="0" value="MaelstromSearch"/>
-        <Cost>
-            <Vital index="Energy" value="100"/>
-        </Cost>
-        <Range value="10"/>
-        <CursorEffect value="MaelstromSearch"/>
-        <CmdButtonArray index="Execute" DefaultButtonFace="Maelstrom" State="Restricted" Requirements="MaelstromResearched"/>
-        <Flags index="AllowMovement" value="1"/>
-    </CAbilEffectTarget>
-    <CAbilEffectTarget id="MindControl2">
-        <EditorCategories value="AbilityorEffectType:Units"/>
-        <Effect index="0" value="MindControlSet"/>
-        <Cost>
-            <Vital index="Energy" value="150"/>
-        </Cost>
-        <TargetFilters value="Visible;Player,Ally,Neutral,Structure,RawResource,HarvestableResource,Missile,Stasis,UnderConstruction,Dead,Invulnerable"/>
-        <Range value="8"/>
-        <AINotifyEffect value="MindControlApplyTarget"/>
-        <CmdButtonArray index="Execute" DefaultButtonFace="MindControl" State="Restricted" Requirements="MindControlResearched"/>
-        <Flags index="AllowMovement" value="1"/>
-    </CAbilEffectTarget>
-    <CAbilTransport id="NydusCanalTransport">
-        <CmdButtonArray index="UnloadAll">
-            <Flags index="ToSelection" value="0"/>
-        </CmdButtonArray>
-        <InitialUnloadDelay value="0"/>
-        <LoadPeriod value="0.0625"/>
-        <UnloadPeriod value="0.0625"/>
-        <MaxUnloadRange value="5"/>
-        <LoadValidatorArray value="nydusCanalBuilt"/>
-    </CAbilTransport>
     <CAbilResearch id="ScienceFacilityResearch">
         <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
         <InfoArray index="Research1" Time="103.32" Upgrade="ResearchEMPShockwave">
@@ -2242,6 +2219,39 @@
             <Cooldown Link="Abil/ArbiterTribunalResearch"/>
         </InfoArray>
     </CAbilResearch>
+    <CAbilEffectTarget id="Maelstrom">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="MaelstromSearch"/>
+        <Cost>
+            <Vital index="Energy" value="100"/>
+        </Cost>
+        <Range value="10"/>
+        <CursorEffect value="MaelstromSearch"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Maelstrom" State="Restricted" Requirements="MaelstromResearched"/>
+        <Flags index="AllowMovement" value="1"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="MindControl2">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="MindControlSet"/>
+        <Cost>
+            <Vital index="Energy" value="150"/>
+        </Cost>
+        <TargetFilters value="Visible;Player,Ally,Neutral,Structure,RawResource,HarvestableResource,Missile,Stasis,UnderConstruction,Dead,Invulnerable"/>
+        <Range value="8"/>
+        <AINotifyEffect value="MindControlApplyTarget"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="MindControl" State="Restricted" Requirements="MindControlResearched"/>
+        <Flags index="AllowMovement" value="1"/>
+    </CAbilEffectTarget>
+    <CAbilTransport id="NydusCanalTransport">
+        <CmdButtonArray index="UnloadAll">
+            <Flags index="ToSelection" value="0"/>
+        </CmdButtonArray>
+        <InitialUnloadDelay value="0"/>
+        <LoadPeriod value="0.0625"/>
+        <UnloadPeriod value="0.0625"/>
+        <MaxUnloadRange value="5"/>
+        <LoadValidatorArray value="nydusCanalBuilt"/>
+    </CAbilTransport>
     <CAbilBuild id="BarracksAddOns">
         <InfoArray index="Build1" Time="40"/>
     </CAbilBuild>
@@ -2425,6 +2435,21 @@
     <CAbilTrain id="NexusTrain">
         <Activity value="UI/Building"/>
     </CAbilTrain>
+    <CAbilMorph id="PhysicsLabMorphDetached">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="TechLab" Requirements="ShowIfHaveNoSF"/>
+        <ActorKey value="CovertOpsMorph"/>
+        <Flags index="Automatic" value="1"/>
+        <Cost>
+            <Charge Link="Abil/TechLabMorph"/>
+            <Cooldown Link="Abil/TechLabMorph"/>
+        </Cost>
+        <InfoArray Unit="PhysicsLab">
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="0.125"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
     <CAbilMorph id="EngineeringBayLiftOff" parent="TerranBuildingLiftOff" unit="EngineeringBayFlying">
         <Name value="Abil/Name/EngineeringBayLiftOff"/>
         <Cost>
@@ -2487,21 +2512,6 @@
             <Cooldown Link="Abil/TechLabMorph"/>
         </Cost>
         <InfoArray Unit="ComsatStation">
-            <SectionArray index="Stats">
-                <DurationArray index="Delay" value="0.125"/>
-            </SectionArray>
-        </InfoArray>
-    </CAbilMorph>
-    <CAbilMorph id="PhysicsLabMorphDetached">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
-        <CmdButtonArray index="Execute" DefaultButtonFace="TechLab" Requirements="ShowIfHaveNoSF"/>
-        <ActorKey value="CovertOpsMorph"/>
-        <Flags index="Automatic" value="1"/>
-        <Cost>
-            <Charge Link="Abil/TechLabMorph"/>
-            <Cooldown Link="Abil/TechLabMorph"/>
-        </Cost>
-        <InfoArray Unit="PhysicsLab">
             <SectionArray index="Stats">
                 <DurationArray index="Delay" value="0.125"/>
             </SectionArray>
@@ -3069,7 +3079,7 @@
             <Unit value="ScienceVessel"/>
         </InfoArray>
         <InfoArray index="Train13" Time="114.513">
-            <Button DefaultButtonFace="Battlecruiser" State="Restricted" Requirements="HaveScienceFacilitywithAttachedPhysicsLab"/>
+            <Button DefaultButtonFace="Battlecruiser" State="Restricted" Requirements="ScienceFacilitywithattachedPhysicsLab"/>
             <Unit value="Battlecruiser"/>
         </InfoArray>
     </CAbilTrain>

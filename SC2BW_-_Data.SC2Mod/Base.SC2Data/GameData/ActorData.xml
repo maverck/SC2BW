@@ -471,6 +471,154 @@
     <CActorModel id="ControlTowerBuild" parent="TerranBuildingBuildSmall">
         <On Terms="ActorCreation" Send="SetScale 1.350000"/>
     </CActorModel>
+    <CActorUnit id="CovertOps" parent="TerranBuilding" unitName="TerranCovertOps">
+        <Macros value="QueueAnimAddon"/>
+        <Macros value="TerranAttachmentAnims"/>
+        <On index="65" Terms="UnitConstruction.TerranCovertOps.Start" Send="Create CovertOpsBuild"/>
+        <Model value="CovertOps"/>
+        <BuildModel value="CovertOpsBuild"/>
+        <DeathArray index="Normal" ModelLink="CovertOpsDeath" SoundLink="TechLab_Explode"/>
+        <DeathArray index="UnderConstruction" ModelLink="TerranBuildingDeath" SoundLink="TechLab_Explode"/>
+        <DeathCustoms ModelLink="CovertOpsDeathDetached" Name="Detached"/>
+        <PlacementModel value="CovertOpsPlacement"/>
+        <PlacementSound value="Terran_BuildingPlacement"/>
+        <PortraitModel value="AdjutantPortrait"/>
+        <AddonIndicator value="Actor/AddonIndicator/TechLab"/>
+        <BarOffset value="80"/>
+        <BarWidth value="75"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\wireframe-terran-covertops.dds"/>
+        </GroupIcon>
+        <GroupSoundArray index="What" value="TechLabGroupWhat"/>
+        <GroupSoundArray index="Yes" value="TechLabGroupYes"/>
+        <GroupSoundArray index="Attack" value="TechLabGroupAttack"/>
+        <GroupSoundArray index="Board" value="TechLabGroupBoard"/>
+        <HeroIcon value="Assets\Textures\btn-building-terran-covertops.dds"/>
+        <HighlightTooltip value="Unit/Name/TechLab"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-buildingarmor.dds"/>
+        <SoundArray index="Birth" value="TechLab_Birth"/>
+        <SoundArray index="Ready" value="TechLab_Ready"/>
+        <SoundArray index="Help" value="TechLabHelp"/>
+        <SoundArray index="What" value="TechLab_What"/>
+        <SoundArray index="Yes" value="TechLabYes"/>
+        <SoundArray index="Attack" value="TechLabAttack"/>
+        <SoundArray index="Pissed" value="TechLabPissed"/>
+        <SoundArray index="Movement" value="TechLabMovement"/>
+        <SoundArray index="Turning" value="TechLabTurning"/>
+        <SoundArray index="Board" value="TechLabBoard"/>
+        <SoundArray index="Construction" value="Terran_ConstructionWhat"/>
+        <SoundArray index="Click" value="TechLabClick"/>
+        <SoundArray index="ClickError" value="TechLabClickError"/>
+        <SoundArray index="Highlight" value="TechLabHighlight"/>
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+        <UnitIcon value="Assets\Textures\btn-building-terran-covertops.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-terran-covertops.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorModel id="CovertOpsBuild" parent="TerranBuildingBuildSmall">
+        <On Terms="ActorCreation" Send="SetScale 1.350000"/>
+    </CActorModel>
+    <CActorModel id="NuclearSiloBuild" parent="TerranBuildingBuildSmall">
+        <Inherits index="Scale" value="0"/>
+        <On Terms="ActorCreation" Send="SetScale 1.350000"/>
+    </CActorModel>
+    <CActorUnit id="NuclearSilo" parent="TerranBuilding" unitName="TerranNuclearSilo">
+        <Macros value="QueueAnimAddon"/>
+        <Macros value="TerranAttachmentAnims"/>
+        <On index="65" Terms="UnitConstruction.TerranNuclearSilo.Start" Send="Create NuclearSiloBuild"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit TechLabIsDetached" Send="DeathCustomize Detached"/>
+        <Model value="NuclearSilo"/>
+        <BuildModel value="NuclearSiloBuild"/>
+        <DeathArray index="Normal" ModelLink="NuclearSiloDeath" SoundLink="TechLab_Explode"/>
+        <DeathArray index="UnderConstruction" ModelLink="TerranBuildingDeath" SoundLink="TechLab_Explode"/>
+        <DeathCustoms ModelLink="NuclearSiloDeathDetached" Name="Detached"/>
+        <PlacementModel value="NuclearSiloPlacement"/>
+        <PlacementSound value="Terran_BuildingPlacement"/>
+        <PortraitModel value="AdjutantPortrait"/>
+        <AddonIndicator value="Actor/AddonIndicator/TechLab"/>
+        <BarOffset value="80"/>
+        <BarWidth value="75"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\wireframe-terran-nukesilo.dds"/>
+        </GroupIcon>
+        <GroupSoundArray index="What" value="TechLabGroupWhat"/>
+        <GroupSoundArray index="Yes" value="TechLabGroupYes"/>
+        <GroupSoundArray index="Attack" value="TechLabGroupAttack"/>
+        <GroupSoundArray index="Board" value="TechLabGroupBoard"/>
+        <HeroIcon value="Assets\Textures\btn-building-terran-nukesilo.dds"/>
+        <HighlightTooltip value="Unit/Name/TechLab"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-buildingarmor.dds"/>
+        <SoundArray index="Birth" value="TechLab_Birth"/>
+        <SoundArray index="Ready" value="TechLab_Ready"/>
+        <SoundArray index="Help" value="TechLabHelp"/>
+        <SoundArray index="What" value="TechLab_What"/>
+        <SoundArray index="Yes" value="TechLabYes"/>
+        <SoundArray index="Attack" value="TechLabAttack"/>
+        <SoundArray index="Pissed" value="TechLabPissed"/>
+        <SoundArray index="Movement" value="TechLabMovement"/>
+        <SoundArray index="Turning" value="TechLabTurning"/>
+        <SoundArray index="Board" value="TechLabBoard"/>
+        <SoundArray index="Construction" value="Terran_ConstructionWhat"/>
+        <SoundArray index="Click" value="TechLabClick"/>
+        <SoundArray index="ClickError" value="TechLabClickError"/>
+        <SoundArray index="Highlight" value="TechLabHighlight"/>
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+        <UnitIcon value="Assets\Textures\btn-building-terran-nukesilo.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-terran-nukesilo.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorSplat id="NuclearSiloSplat" parent="GenericUnitSplat" unitName="TerranNuclearSilo"/>
+    <CActorModel id="PhysicsLabBuild" parent="TerranBuildingBuildSmall">
+        <On Terms="ActorCreation" Send="SetScale 1.350000"/>
+    </CActorModel>
+    <CActorUnit id="PhysicsLab" parent="TerranBuilding" unitName="TerranPhysicsLab">
+        <Macros value="QueueAnimAddon"/>
+        <Macros value="TerranAttachmentAnims"/>
+        <On index="65" Terms="UnitConstruction.TerranPhysicsLab.Start" Send="Create PhysicsLabBuild"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit TechLabIsDetached" Send="DeathCustomize Detached"/>
+        <Model value="PhysicsLab"/>
+        <BuildModel value="PhysicsLabBuild"/>
+        <DeathArray index="Normal" ModelLink="PhysicsLabDeath" SoundLink="TechLab_Explode"/>
+        <DeathArray index="UnderConstruction" ModelLink="TerranBuildingDeath" SoundLink="TechLab_Explode"/>
+        <DeathCustoms ModelLink="PhysicsLabDeathDetached" Name="Detached"/>
+        <PlacementModel value="PhysicsLabPlacement"/>
+        <PlacementSound value="Terran_BuildingPlacement"/>
+        <PortraitModel value="AdjutantPortrait"/>
+        <AddonIndicator value="Actor/AddonIndicator/TechLab"/>
+        <BarOffset value="80"/>
+        <BarWidth value="75"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-TechLab.dds"/>
+        </GroupIcon>
+        <GroupSoundArray index="What" value="TechLabGroupWhat"/>
+        <GroupSoundArray index="Yes" value="TechLabGroupYes"/>
+        <GroupSoundArray index="Attack" value="TechLabGroupAttack"/>
+        <GroupSoundArray index="Board" value="TechLabGroupBoard"/>
+        <HeroIcon value="Assets\Textures\btn-building-terran-techlab.dds"/>
+        <HighlightTooltip value="Unit/Name/TechLab"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-buildingarmor.dds"/>
+        <SoundArray index="Birth" value="TechLab_Birth"/>
+        <SoundArray index="Ready" value="TechLab_Ready"/>
+        <SoundArray index="Help" value="TechLabHelp"/>
+        <SoundArray index="What" value="TechLab_What"/>
+        <SoundArray index="Yes" value="TechLabYes"/>
+        <SoundArray index="Attack" value="TechLabAttack"/>
+        <SoundArray index="Pissed" value="TechLabPissed"/>
+        <SoundArray index="Movement" value="TechLabMovement"/>
+        <SoundArray index="Turning" value="TechLabTurning"/>
+        <SoundArray index="Board" value="TechLabBoard"/>
+        <SoundArray index="Construction" value="Terran_ConstructionWhat"/>
+        <SoundArray index="Click" value="TechLabClick"/>
+        <SoundArray index="ClickError" value="TechLabClickError"/>
+        <SoundArray index="Highlight" value="TechLabHighlight"/>
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+        <UnitIcon value="Assets\Textures\btn-building-terran-techlab.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-TechLab.dds"/>
+        </Wireframe>
+    </CActorUnit>
     <CActorSplat id="MachineShopSplat" parent="GenericUnitSplat" unitName="MachineShop"/>
     <CActorModel id="FeedbackImpact">
         <Scale value="0.500000"/>
@@ -585,6 +733,8 @@
         <On Terms="UnitDeath.LarvaSC2BW; PassChance 25.000000" Send="Create"/>
         <Sound value="Larva_Death"/>
     </CActorSound>
+    <CActorSplat id="CovertOpsSplat" parent="GenericUnitSplat" unitName="TerranCovertOps"/>
+    <CActorSplat id="PhysicsLabSplat" parent="GenericUnitSplat" unitName="TerranPhysicsLab"/>
     <CActorAction id="MarineAttack">
         <On index="0" Terms="Effect.GuassRifleNull.Stop; FromEffectTreeDescendant"/>
         <On index="5" Terms="Effect.GuassRifleNull.Start; At Caster"/>
@@ -1596,59 +1746,6 @@
         <BarHeight value="1"/>
         <BarWidth value="1"/>
     </CActorMissile>
-    <CActorUnit id="NuclearSilo" parent="TerranBuilding" unitName="NuclearSilo">
-        <Macros value="QueueAnimAddon"/>
-        <Macros value="TerranAttachmentAnims"/>
-        <Macros value="BuildingFlattenTerrainMacro"/>
-        <On index="3" Terms="UnitConstruction.NuclearSilo"/>
-        <On index="4" Terms="UnitConstruction.NuclearSilo"/>
-        <On index="47" Terms="UnitConstruction.NuclearSilo" Send="AnimBracketStop Attack"/>
-        <On index="48" Terms="UnitConstruction.NuclearSilo" Send="AnimGroupRemove Ready"/>
-        <On index="49" Terms="UnitConstruction.NuclearSilo" Send="Create NuclearSiloBuild"/>
-        <On index="50" Terms="UnitConstruction.NuclearSilo" Send="Create BuildingTerrainFlatten"/>
-        <On index="51" Terms="UnitConstruction.NuclearSilo" Target="_BuildingTerrainFlatten" Send="Destroy"/>
-        <On index="52" Terms="UnitBirth.NuclearSilo" Target="_BuildingTerrainFlatten" Send="Destroy"/>
-        <On index="53" Terms="UnitBirth.NuclearSilo" Target="_BuildingTerrainFlatten" Send="QueryRadius 1.750000 BuildingCrushQueryResponse"/>
-        <On index="54" Terms="UnitBirth.NuclearSilo" Send="Create BuildingTerrainFlatten"/>
-        <On Terms="AbilMorph.NuclearSiloMorph; MorphTo NuclearSilo" Send="Create"/>
-        <Model value="NukeSiloNova"/>
-        <Scale value="0.550000"/>
-        <BuildModel value="TechLabBuild"/>
-        <DeathArray index="Normal" ModelLink="TechReactorDetachedDeath" SoundLink="Terran_ExplosionMedium"/>
-        <PlacementModel value="TechLabPlacement"/>
-        <PlacementSound value="Terran_BuildingPlacement"/>
-        <PortraitModel value="AdjutantPortrait"/>
-        <BarOffset value="80"/>
-        <BarWidth value="70"/>
-        <GroupIcon>
-            <Image value="Assets\Textures\wireframe-terran-nukesilo.dds"/>
-        </GroupIcon>
-        <GroupSoundArray index="What" value="TechLabGroupWhat"/>
-        <GroupSoundArray index="Yes" value="TechLabGroupYes"/>
-        <GroupSoundArray index="Attack" value="TechLabGroupAttack"/>
-        <GroupSoundArray index="Board" value="TechLabGroupBoard"/>
-        <HeroIcon value="Assets\Textures\btn-building-terran-nukesilo.dds"/>
-        <HighlightTooltip value="Unit/Name/TechLab"/>
-        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-buildingarmor.dds"/>
-        <SoundArray index="Birth" value="TechLab_Birth"/>
-        <SoundArray index="Ready" value="TechLab_Ready"/>
-        <SoundArray index="Help" value="TechLabHelp"/>
-        <SoundArray index="What" value="TechLab_What"/>
-        <SoundArray index="Yes" value="TechLabYes"/>
-        <SoundArray index="Attack" value="TechLabAttack"/>
-        <SoundArray index="Pissed" value="TechLabPissed"/>
-        <SoundArray index="Movement" value="TechLabMovement"/>
-        <SoundArray index="Turning" value="TechLabTurning"/>
-        <SoundArray index="Board" value="TechLabBoard"/>
-        <SoundArray index="Click" value="TechLabClick"/>
-        <SoundArray index="ClickError" value="TechLabClickError"/>
-        <SoundArray index="Highlight" value="TechLabHighlight"/>
-        <UnitFlags index="ShowBlobShadow" value="0"/>
-        <UnitIcon value="Assets\Textures\btn-building-terran-nukesilo.dds"/>
-        <Wireframe>
-            <Image value="Assets\Textures\wireframe-terran-nukesilo.dds"/>
-        </Wireframe>
-    </CActorUnit>
     <CActorModel id="EnsnareImpact" parent="ModelAnimationStyleOneShot">
         <On Terms="Effect.EnsnareSearch.Start" Send="Create"/>
         <On Terms="ActorCreation" Send="SetOpacity 0.500000"/>
@@ -1771,58 +1868,6 @@
         <Scale value="0.900000,0.800000,1.000000"/>
     </CActorSplat>
     <CActorSiteOpLocalOffset id="SOpHigherBy1"/>
-    <CActorUnit id="ScienceFacilityCovertOps" parent="TerranBuilding" unitName="CovertOps2">
-        <Macros value="QueueAnimAddon"/>
-        <Macros value="TerranAttachmentAnims"/>
-        <Macros value="BuildingFlattenTerrainMacro"/>
-        <On index="47" Terms="WeaponStop.*.AttackStop" Send="Create BarracksTechLabBuild"/>
-        <On index="49" Terms="UnitConstruction.CovertOps2.Start" Send="Create TechLabBuild"/>
-        <On Terms="UnitDeathCustomize; ValidateUnit TechLabIsDetached" Send="DeathCustomize Detached"/>
-        <On Terms="AbilMorph.*.Finish; MorphTo CovertOps2" Target="BarracksTechLabSplat" Send="Destroy"/>
-        <On Terms="AbilMorph.*.Finish; MorphTo TechReactor" Send="Destroy"/>
-        <On Terms="UnitConstruction.CovertOps2.Start" Send="Create TerranConstruction"/>
-        <Model value="TechLab"/>
-        <BuildModel value="TechLab"/>
-        <DeathArray index="Normal" ModelLink="TechLabDeath" SoundLink="TechLab_Explode"/>
-        <DeathArray index="UnderConstruction" ModelLink="TerranBuildingDeath" SoundLink="TechLab_Explode"/>
-        <DeathCustoms ModelLink="TechLabDeathDetached" Name="Detached"/>
-        <PlacementModel value="TechLabPlacement"/>
-        <PlacementSound value="Terran_BuildingPlacement"/>
-        <PortraitModel value="AdjutantPortrait"/>
-        <AddonIndicator value="Actor/AddonIndicator/CovertOps"/>
-        <BarOffset value="80"/>
-        <BarWidth value="75"/>
-        <GroupIcon>
-            <Image value="Assets\Textures\Wireframe-Terran-TechLab.dds"/>
-        </GroupIcon>
-        <GroupSoundArray index="What" value="TechLabGroupWhat"/>
-        <GroupSoundArray index="Yes" value="TechLabGroupYes"/>
-        <GroupSoundArray index="Attack" value="TechLabGroupAttack"/>
-        <GroupSoundArray index="Board" value="TechLabGroupBoard"/>
-        <HeroIcon value="Assets\Textures\btn-building-terran-techlab.dds"/>
-        <HighlightTooltip value="Unit/Name/TechLab"/>
-        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-buildingarmor.dds"/>
-        <SoundArray index="Birth" value="TechLab_Birth"/>
-        <SoundArray index="Ready" value="TechLab_Ready"/>
-        <SoundArray index="Help" value="TechLabHelp"/>
-        <SoundArray index="What" value="TechLab_What"/>
-        <SoundArray index="Yes" value="TechLabYes"/>
-        <SoundArray index="Attack" value="TechLabAttack"/>
-        <SoundArray index="Pissed" value="TechLabPissed"/>
-        <SoundArray index="Movement" value="TechLabMovement"/>
-        <SoundArray index="Turning" value="TechLabTurning"/>
-        <SoundArray index="Board" value="TechLabBoard"/>
-        <SoundArray index="Construction" value="Terran_ConstructionWhat"/>
-        <SoundArray index="Click" value="TechLabClick"/>
-        <SoundArray index="ClickError" value="TechLabClickError"/>
-        <SoundArray index="Highlight" value="TechLabHighlight"/>
-        <UnitFlags index="ShowBlobShadow" value="0"/>
-        <UnitIcon value="Assets\Textures\btn-building-terran-techlab.dds"/>
-        <Wireframe>
-            <Image value="Assets\Textures\Wireframe-Terran-TechLab.dds"/>
-        </Wireframe>
-        <EditorModel value="TechLab"/>
-    </CActorUnit>
     <CActorUnit id="CommandCenterComsatStation" parent="TerranBuilding" unitName="ComsatStation2">
         <Macros value="QueueAnim"/>
         <Macros value="TerranAttachmentAnims"/>
@@ -1899,58 +1944,6 @@
         <Host Subject="_Unit"/>
         <HostSiteOps Ops="SOpAttachCenter"/>
     </CActorModel>
-    <CActorUnit id="CommandCenterNuclearSilo" parent="TerranBuilding" unitName="NuclearSilo2">
-        <Macros value="QueueAnimAddon"/>
-        <Macros value="TerranAttachmentAnims"/>
-        <Macros value="BuildAnim"/>
-        <On index="47" Terms="WeaponStop.*.AttackStop" Send="Create TechLabBuild"/>
-        <On index="49" Terms="UnitConstruction.NuclearSilo2.Start" Send="Create TechLabBuild"/>
-        <On Terms="UnitDeathCustomize; ValidateUnit TechLabIsDetached" Send="DeathCustomize Detached"/>
-        <On Terms="AbilMorph.*.Finish; MorphTo TechReactor" Target="BarracksTechLabSplat" Send="Destroy"/>
-        <On Terms="AbilMorph.*.Finish; MorphTo TechReactor" Send="Destroy"/>
-        <On Terms="UnitConstruction.NuclearSilo2.Start" Send="Create TerranConstruction"/>
-        <Model value="NukeSiloNova"/>
-        <Scale value="0.600000"/>
-        <BuildModel value="NukeSiloNova"/>
-        <DeathArray index="Normal" ModelLink="TechLabDeath" SoundLink="TechLab_Explode"/>
-        <DeathArray index="UnderConstruction" ModelLink="TerranBuildingDeath" SoundLink="TechLab_Explode"/>
-        <DeathCustoms ModelLink="TechLabDeathDetached" Name="Detached"/>
-        <PlacementModel value="TechLabPlacement"/>
-        <PlacementSound value="Terran_BuildingPlacement"/>
-        <PortraitModel value="AdjutantPortrait"/>
-        <AddonIndicator value="Actor/AddonIndicator/NukeSilo"/>
-        <BarOffset value="80"/>
-        <BarWidth value="75"/>
-        <GroupIcon>
-            <Image value="Assets\Textures\wireframe-terran-nukesilo.dds"/>
-        </GroupIcon>
-        <GroupSoundArray index="What" value="TechLabGroupWhat"/>
-        <GroupSoundArray index="Yes" value="TechLabGroupYes"/>
-        <GroupSoundArray index="Attack" value="TechLabGroupAttack"/>
-        <GroupSoundArray index="Board" value="TechLabGroupBoard"/>
-        <HeroIcon value="Assets\Textures\btn-building-terran-nukesilo.dds"/>
-        <HighlightTooltip value="Unit/Name/TechLab"/>
-        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-buildingarmor.dds"/>
-        <SoundArray index="Birth" value="TechLab_Birth"/>
-        <SoundArray index="Ready" value="TechLab_Ready"/>
-        <SoundArray index="Help" value="TechLabHelp"/>
-        <SoundArray index="What" value="TechLab_What"/>
-        <SoundArray index="Yes" value="TechLabYes"/>
-        <SoundArray index="Attack" value="TechLabAttack"/>
-        <SoundArray index="Pissed" value="TechLabPissed"/>
-        <SoundArray index="Movement" value="TechLabMovement"/>
-        <SoundArray index="Turning" value="TechLabTurning"/>
-        <SoundArray index="Board" value="TechLabBoard"/>
-        <SoundArray index="Construction" value="Terran_ConstructionWhat"/>
-        <SoundArray index="Click" value="TechLabClick"/>
-        <SoundArray index="ClickError" value="TechLabClickError"/>
-        <SoundArray index="Highlight" value="TechLabHighlight"/>
-        <UnitFlags index="ShowBlobShadow" value="0"/>
-        <UnitIcon value="Assets\Textures\btn-building-terran-nukesilo.dds"/>
-        <Wireframe>
-            <Image value="Assets\Textures\wireframe-terran-nukesilo.dds"/>
-        </Wireframe>
-    </CActorUnit>
     <CActorSplat id="ComsatStationSplat" parent="GenericUnitSplat" unitName="ComsatStation2">
         <Model value="BarracksTechLabSplat"/>
     </CActorSplat>
@@ -2758,7 +2751,7 @@
         <On Terms="UnitCreation.ControlTower" Send="Create"/>
         <On Terms="UnitCreation.ControlTower2" Send="Create"/>
         <On Terms="UnitCreation.MachineShop" Send="Create"/>
-        <On Terms="UnitCreation.MachineShop2" Send="Create"/>
+        <On Terms="UnitCreation.TerranCovertOps" Send="Create"/>
         <On Terms="UnitCreation.NuclearSilo" Send="Create"/>
         <On Terms="UnitCreation.NuclearSilo2" Send="Create"/>
     </CActorStateMonitor>
@@ -2811,8 +2804,7 @@
     <!-- Viking ................................................................................ -->
     <!--                                                                                         -->
     <CActorAction id="VikingFighterAttack">
-        <LaunchSiteOps Ops="SOpAttachWeapon"/>
-        <LaunchAttachQuery Methods="AMPatternValkyrie"/>
+        <LaunchAttachQuery Methods="AMPatternValkyrie AMFilterValkyrie"/>
         <ImpactSiteOps Ops="SOpValkyrieAttack"/>
         <ShieldFlashType value="Full"/>
     </CActorAction>

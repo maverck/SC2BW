@@ -249,6 +249,19 @@
         <EffectArray value="IrradiateSearchArea"/>
         <EffectArray value="IrradiatePeriodicDamage"/>
     </CEffectSet>
+    <CEffectCreatePersistent id="LanzerTorpedoes">
+        <WhichLocation Value="TargetUnitOrPoint"/>
+        <OffsetVectorEndLocation Value="TargetUnitOrPoint"/>
+        <PeriodCount value="8"/>
+        <PeriodicEffectArray index="1" removed="1"/>
+        <PeriodicPeriodArray index="1" value="0"/>
+        <PeriodicPeriodArray value="0.5332"/>
+        <PeriodicPeriodArray value="0"/>
+        <PeriodicPeriodArray value="0.5332"/>
+        <PeriodicPeriodArray value="0"/>
+        <PeriodicPeriodArray value="0.5332"/>
+        <PeriodicPeriodArray value="0"/>
+    </CEffectCreatePersistent>
     <CEffectCreatePersistent id="Lurker">
         <EditorCategories value="Race:Zerg"/>
         <WhichLocation Value="SourcePoint"/>
@@ -759,21 +772,6 @@
         <Death value="Eviscerate"/>
         <Visibility value="Visible"/>
     </CEffectDamage>
-    <CEffectCreatePersistent id="LanzerTorpedoes">
-        <PeriodCount value="8"/>
-        <PeriodicEffectArray index="1" removed="1"/>
-        <PeriodicPeriodArray index="1" value="0"/>
-        <PeriodicPeriodArray value="0.5332"/>
-        <PeriodicPeriodArray value="0"/>
-        <PeriodicPeriodArray value="0.5332"/>
-        <PeriodicPeriodArray value="0"/>
-        <PeriodicPeriodArray value="0.5332"/>
-        <PeriodicPeriodArray value="0"/>
-        <WhichLocation Value="TargetUnitOrPoint"/>
-        <OffsetVectorEndLocation Value="TargetUnitOrPoint"/>
-        <Flags index="Channeled" value="1"/>
-        <Flags index="Channeling" value="1"/>
-    </CEffectCreatePersistent>
     <CEffectDamage id="LanzerTorpedoesDamage">
         <AttributeBonus index="Armored" value="0"/>
         <AttributeFactor index="Light" value="-0.5"/>
