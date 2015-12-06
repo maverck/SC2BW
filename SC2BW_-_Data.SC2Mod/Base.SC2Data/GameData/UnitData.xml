@@ -1445,18 +1445,18 @@
         <AttackTargetPriority value="11"/>
         <AbilArray Link="BuildInProgress"/>
         <AbilArray Link="que1"/>
-        <AbilArray Link="BarracksTechLabResearch"/>
+        <AbilArray Link="TerranAcademyResearch"/>
         <BehaviorArray Link="TerranBuildingBurnDown"/>
         <BehaviorArray Link="UnitFilterLarge"/>
         <CardLayouts>
-            <LayoutButtons Face="U238Shells" Type="AbilCmd" AbilCmd="BarracksTechLabResearch,Research2" Row="0" Column="0"/>
+            <LayoutButtons Face="U238Shells" Type="AbilCmd" AbilCmd="TerranAcademyResearch,Research29" Row="0" Column="0"/>
             <LayoutButtons Face="SelectBuilder" Type="SelectBuilder" Row="0" Column="0"/>
             <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="que1,CancelLast" Row="2" Column="4"/>
             <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
-            <LayoutButtons Face="Stimpack" Type="AbilCmd" AbilCmd="BarracksTechLabResearch,Research1" Row="0" Column="1"/>
-            <LayoutButtons Face="ResearchMedivacEnergyUpgrade" Type="AbilCmd" AbilCmd="BarracksTechLabResearch,Research5" Row="1" Column="2"/>
-            <LayoutButtons Face="ResearchOpticalFlare" Type="AbilCmd" AbilCmd="BarracksTechLabResearch,Research6" Row="1" Column="1"/>
-            <LayoutButtons Face="ResearchRestoration" Type="AbilCmd" AbilCmd="BarracksTechLabResearch,Research3" Row="1" Column="0"/>
+            <LayoutButtons Face="Stimpack" Type="AbilCmd" AbilCmd="TerranAcademyResearch,Research30" Row="0" Column="1"/>
+            <LayoutButtons Face="ResearchMedivacEnergyUpgrade" Type="AbilCmd" AbilCmd="TerranAcademyResearch,Research26" Row="1" Column="2"/>
+            <LayoutButtons Face="ResearchOpticalFlare" Type="AbilCmd" AbilCmd="TerranAcademyResearch,Research27" Row="1" Column="1"/>
+            <LayoutButtons Face="ResearchRestoration" Type="AbilCmd" AbilCmd="TerranAcademyResearch,Research28" Row="1" Column="0"/>
         </CardLayouts>
         <Radius value="1.5"/>
         <SeparationRadius value="1.5"/>
@@ -2131,6 +2131,13 @@
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Campaign"/>
         <HotkeyAlias value=""/>
     </CUnit>
+    <CUnit id="MarineSC2BW" parent="Marine">
+        <Name value="Unit/Name/MarineSC2BW"/>
+        <Description value="Button/Tooltip/MarineSC2BW"/>
+        <LifeStart value="40"/>
+        <LifeMax value="40"/>
+        <WeaponArray index="0" Link="GuassRifleSC2BW"/>
+    </CUnit>
     <CUnit id="TerranNuclearSilo" parent="FactoryTechLab">
         <Name value="Unit/Name/TerranNuclearSilo"/>
         <Attributes index="Armored" value="0"/>
@@ -2217,16 +2224,6 @@
     <CUnit id="Marauder">
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Campaign"/>
         <HotkeyAlias value=""/>
-    </CUnit>
-    <CUnit id="Marine">
-        <Sight value="8"/>
-        <LifeStart value="40"/>
-        <LifeMax value="40"/>
-        <SeparationRadius value="0.5"/>
-        <InnerRadius value="0.25"/>
-        <MinimapRadius value="0.5"/>
-        <BehaviorArray Link="UnitFilterSmall"/>
-        <BehaviorArray Link="MicroIsMoving"/>
     </CUnit>
     <CUnit id="Medic">
         <DeathRevealRadius value="3"/>
@@ -2579,6 +2576,7 @@
             <Charge Link="Queen/Revive"/>
             <Cooldown Link="Queen/Revive"/>
         </ReviveInfoBase>
+        <LifeArmorName value="Unit/LifeArmorName/ZergAirArmor"/>
     </CUnit>
     <CUnit id="QueenBurrowed">
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Campaign"/>

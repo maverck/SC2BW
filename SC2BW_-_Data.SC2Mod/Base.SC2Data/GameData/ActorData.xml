@@ -435,7 +435,7 @@
         <PlacementModel value="MachineShopPlacement"/>
         <PlacementSound value="Terran_BuildingPlacement"/>
         <PortraitModel value="AdjutantPortrait"/>
-        <AddonIndicator value="Actor/AddonIndicator/TechLab"/>
+        <AddonIndicator value="Actor/AddonIndicator/MachineShop"/>
         <BarOffset value="80"/>
         <BarWidth value="75"/>
         <GroupIcon>
@@ -483,7 +483,7 @@
         <PlacementModel value="CovertOpsPlacement"/>
         <PlacementSound value="Terran_BuildingPlacement"/>
         <PortraitModel value="AdjutantPortrait"/>
-        <AddonIndicator value="Actor/AddonIndicator/TechLab"/>
+        <AddonIndicator value="Actor/AddonIndicator/CovertOps"/>
         <BarOffset value="80"/>
         <BarWidth value="75"/>
         <GroupIcon>
@@ -519,6 +519,20 @@
     <CActorModel id="CovertOpsBuild" parent="TerranBuildingBuildSmall">
         <On Terms="ActorCreation" Send="SetScale 1.350000"/>
     </CActorModel>
+    <CActorUnit id="MarineSC2BW" parent="Marine">
+        <On index="0" Terms="UnitBirth.MarineSC2BW"/>
+        <On index="1" Terms="UnitBirth.MarineSC2BW"/>
+        <On index="2" Terms="UnitRevive.MarineSC2BW"/>
+        <On index="3" Terms="UnitRevive.MarineSC2BW"/>
+        <On index="4" Terms="UnitConstruction.MarineSC2BW.Start"/>
+        <On index="5" Terms="UnitConstruction.MarineSC2BW.Finish"/>
+        <On index="63" Terms="UnitDeath.MarineSC2BW; AnimPlaying Cover"/>
+        <HighlightTooltip value="Unit/Name/MarineSC2BW"/>
+    </CActorUnit>
+    <CActorSound id="Marine_DeathSC2BW" parent="SoundOneShot">
+        <On Terms="UnitDeath.MarineSC2BW; PassChance 100.000000" Send="Create"/>
+        <Sound value="Marine_Death"/>
+    </CActorSound>
     <CActorModel id="NuclearSiloBuild" parent="TerranBuildingBuildSmall">
         <Inherits index="Scale" value="0"/>
         <On Terms="ActorCreation" Send="SetScale 1.350000"/>
@@ -537,7 +551,7 @@
         <PlacementSound value="Terran_BuildingPlacement"/>
         <PortraitModel value="AdjutantPortrait"/>
         <AddonIndicator value="Actor/AddonIndicator/TechLab"/>
-        <BarOffset value="80"/>
+        <BarOffset value="90"/>
         <BarWidth value="75"/>
         <GroupIcon>
             <Image value="Assets\Textures\wireframe-terran-nukesilo.dds"/>
@@ -586,7 +600,7 @@
         <PlacementModel value="PhysicsLabPlacement"/>
         <PlacementSound value="Terran_BuildingPlacement"/>
         <PortraitModel value="AdjutantPortrait"/>
-        <AddonIndicator value="Actor/AddonIndicator/TechLab"/>
+        <AddonIndicator value="Actor/AddonIndicator/PhysicsLab"/>
         <BarOffset value="80"/>
         <BarWidth value="75"/>
         <GroupIcon>
@@ -1849,6 +1863,7 @@
         <SoundArray index="Click" value="QueenBW_Click"/>
         <SoundArray index="ClickError" value="QueenBW_ClickError"/>
         <SoundArray index="Highlight" value="QueenBW_Highlight"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-zerg-flyercarapace-level0.dds"/>
     </CActorUnit>
     <CActorSound id="Restoration">
         <EditorCategories value=""/>

@@ -123,7 +123,7 @@
         <AlertIcon value="Assets\Textures\btn-building-terran-reactor.dds"/>
     </CButton>
     <CButton id="BuildPhysicsLab">
-        <Icon value="Assets\Textures\btn-building-terran-fusioncore.dds"/>
+        <Icon value="Assets\Textures\btn-building-terran-techlab.dds"/>
         <AlertIcon value="Assets\Textures\btn-building-terran-techlab.dds"/>
     </CButton>
     <CButton id="BuildNuclearSilo">

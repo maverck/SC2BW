@@ -1167,10 +1167,12 @@
         <AffectedUnitArray value="Stalker"/>
     </CUpgrade>
     <CUpgrade id="TerranInfantryArmorsLevel1">
+        <EffectArray index="2" Reference="Unit,MarineSC2BW,LifeArmorLevel"/>
+        <EffectArray index="3" Reference="Unit,MarineSC2BW,LifeArmor"/>
         <EffectArray index="4" Reference="Unit,Ghost,LifeArmorLevel"/>
         <EffectArray index="5" Reference="Unit,Ghost,LifeArmor"/>
         <EffectArray index="6" Operation="Set" Reference="Actor,SCV,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel1.dds"/>
-        <EffectArray index="7" Operation="Set" Reference="Actor,Marine,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel1.dds"/>
+        <EffectArray index="7" Operation="Set" Reference="Actor,MarineSC2BW,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel1.dds"/>
         <EffectArray index="8" Operation="Set" Reference="Actor,Ghost,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel1.dds"/>
         <EffectArray index="9" Reference="Unit,Firebat,LifeArmorLevel"/>
         <EffectArray index="10" Reference="Unit,Firebat,LifeArmor"/>
@@ -1186,14 +1188,16 @@
         <EffectArray index="20" removed="1"/>
         <AffectedUnitArray index="1" value="Medic"/>
         <AffectedUnitArray index="2" value=""/>
-        <AffectedUnitArray index="3" value="Marine"/>
+        <AffectedUnitArray index="3" value="MarineSC2BW"/>
         <AffectedUnitArray index="4" value="Firebat"/>
     </CUpgrade>
     <CUpgrade id="TerranInfantryArmorsLevel2">
+        <EffectArray index="2" Reference="Unit,MarineSC2BW,LifeArmorLevel"/>
+        <EffectArray index="3" Reference="Unit,MarineSC2BW,LifeArmor"/>
         <EffectArray index="4" Reference="Unit,Ghost,LifeArmorLevel"/>
         <EffectArray index="5" Reference="Unit,Ghost,LifeArmor"/>
         <EffectArray index="6" Operation="Set" Reference="Actor,SCV,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel2.dds"/>
-        <EffectArray index="7" Operation="Set" Reference="Actor,Marine,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel2.dds"/>
+        <EffectArray index="7" Operation="Set" Reference="Actor,MarineSC2BW,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel2.dds"/>
         <EffectArray index="8" Operation="Set" Reference="Actor,Ghost,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel2.dds"/>
         <EffectArray index="9" Reference="Unit,Firebat,LifeArmorLevel"/>
         <EffectArray index="10" Reference="Unit,Firebat,LifeArmor"/>
@@ -1209,14 +1213,16 @@
         <EffectArray index="20" removed="1"/>
         <AffectedUnitArray index="1" value="Medic"/>
         <AffectedUnitArray index="2" value=""/>
-        <AffectedUnitArray index="3" value="Marine"/>
+        <AffectedUnitArray index="3" value="MarineSC2BW"/>
         <AffectedUnitArray index="4" value="Firebat"/>
     </CUpgrade>
     <CUpgrade id="TerranInfantryArmorsLevel3">
+        <EffectArray index="2" Reference="Unit,MarineSC2BW,LifeArmorLevel"/>
+        <EffectArray index="3" Reference="Unit,MarineSC2BW,LifeArmor"/>
         <EffectArray index="4" Reference="Unit,Ghost,LifeArmorLevel"/>
         <EffectArray index="5" Reference="Unit,Ghost,LifeArmor"/>
         <EffectArray index="6" Operation="Set" Reference="Actor,SCV,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel3.dds"/>
-        <EffectArray index="7" Operation="Set" Reference="Actor,Marine,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel3.dds"/>
+        <EffectArray index="7" Operation="Set" Reference="Actor,MarineSC2BW,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel3.dds"/>
         <EffectArray index="8" Operation="Set" Reference="Actor,Ghost,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel3.dds"/>
         <EffectArray index="9" Reference="Unit,Firebat,LifeArmorLevel"/>
         <EffectArray index="10" Reference="Unit,Firebat,LifeArmor"/>
@@ -1232,13 +1238,14 @@
         <EffectArray index="20" removed="1"/>
         <AffectedUnitArray index="1" value="Medic"/>
         <AffectedUnitArray index="2" value=""/>
-        <AffectedUnitArray index="3" value="Marine"/>
+        <AffectedUnitArray index="3" value="MarineSC2BW"/>
         <AffectedUnitArray index="4" value="Firebat"/>
     </CUpgrade>
     <CUpgrade id="TerranInfantryWeaponsLevel1">
+        <EffectArray index="0" Operation="Set" Reference="Weapon,GuassRifleSC2BW,Level"/>
         <EffectArray index="2" Reference="Weapon,C10CanisterRifle,Level"/>
         <EffectArray index="3" Reference="Effect,C10CanisterRifle,Amount" Value="1.000000"/>
-        <EffectArray index="4" Operation="Set" Reference="Weapon,GuassRifle,Icon" Value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel1.dds"/>
+        <EffectArray index="4" Operation="Set" Reference="Weapon,GuassRifleSC2BW,Icon" Value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel1.dds"/>
         <EffectArray index="5" Operation="Set" Reference="Weapon,C10CanisterRifle,Icon" Value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel1.dds"/>
         <EffectArray index="6" Reference="Weapon,Firebat,Level"/>
         <EffectArray index="7" Reference="Effect,FirebatUFull,Amount" Value="2"/>
@@ -1254,15 +1261,16 @@
         <EffectArray index="17" removed="1"/>
         <EffectArray index="18" removed="1"/>
         <EffectArray index="19" removed="1"/>
-        <AffectedUnitArray index="1" value="Marine"/>
+        <AffectedUnitArray index="1" value="MarineSC2BW"/>
         <AffectedUnitArray index="2" value="Firebat"/>
         <AffectedUnitArray index="3" removed="1"/>
         <AffectedUnitArray index="4" removed="1"/>
     </CUpgrade>
     <CUpgrade id="TerranInfantryWeaponsLevel2">
+        <EffectArray index="0" Operation="Set" Reference="Weapon,GuassRifleSC2BW,Level" Value="2"/>
         <EffectArray index="2" Reference="Weapon,C10CanisterRifle,Level"/>
         <EffectArray index="3" Reference="Effect,C10CanisterRifle,Amount" Value="1.000000"/>
-        <EffectArray index="4" Operation="Set" Reference="Weapon,GuassRifle,Icon" Value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel2.dds"/>
+        <EffectArray index="4" Operation="Set" Reference="Weapon,GuassRifleSC2BW,Icon" Value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel2.dds"/>
         <EffectArray index="5" Operation="Set" Reference="Weapon,C10CanisterRifle,Icon" Value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel2.dds"/>
         <EffectArray index="6" Reference="Weapon,Firebat,Level"/>
         <EffectArray index="7" Reference="Effect,FirebatUFull,Amount" Value="2"/>
@@ -1278,15 +1286,16 @@
         <EffectArray index="17" removed="1"/>
         <EffectArray index="18" removed="1"/>
         <EffectArray index="19" removed="1"/>
-        <AffectedUnitArray index="1" value="Marine"/>
+        <AffectedUnitArray index="1" value="MarineSC2BW"/>
         <AffectedUnitArray index="2" value="Firebat"/>
         <AffectedUnitArray index="3" removed="1"/>
         <AffectedUnitArray index="4" removed="1"/>
     </CUpgrade>
     <CUpgrade id="TerranInfantryWeaponsLevel3">
+        <EffectArray index="0" Operation="Set" Reference="Weapon,GuassRifleSC2BW,Level" Value="3"/>
         <EffectArray index="2" Reference="Weapon,C10CanisterRifle,Level"/>
         <EffectArray index="3" Reference="Effect,C10CanisterRifle,Amount" Value="1.000000"/>
-        <EffectArray index="4" Operation="Set" Reference="Weapon,GuassRifle,Icon" Value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel3.dds"/>
+        <EffectArray index="4" Operation="Set" Reference="Weapon,GuassRifleSC2BW,Icon" Value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel3.dds"/>
         <EffectArray index="5" Operation="Set" Reference="Weapon,C10CanisterRifle,Icon" Value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel3.dds"/>
         <EffectArray index="6" Reference="Weapon,Firebat,Level"/>
         <EffectArray index="7" Reference="Effect,FirebatUFull,Amount" Value="2"/>
@@ -1302,7 +1311,7 @@
         <EffectArray index="17" removed="1"/>
         <EffectArray index="18" removed="1"/>
         <EffectArray index="19" removed="1"/>
-        <AffectedUnitArray index="1" value="Marine"/>
+        <AffectedUnitArray index="1" value="MarineSC2BW"/>
         <AffectedUnitArray index="2" value="Firebat"/>
         <AffectedUnitArray index="3" removed="1"/>
         <AffectedUnitArray index="4" removed="1"/>
@@ -1683,9 +1692,9 @@
     </CUpgrade>
     <CUpgrade id="U238Shells">
         <Icon value="Assets\Textures\btn-upgrade-terran-u238.dds"/>
-        <EffectArray Reference="Weapon,GuassRifle,Range" Value="1"/>
+        <EffectArray Reference="Weapon,GuassRifleSC2BW,Range" Value="1"/>
         <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
-        <AffectedUnitArray value="Marine"/>
+        <AffectedUnitArray value="MarineSC2BW"/>
     </CUpgrade>
     <CUpgrade id="ScienceVesselTitanReactor">
         <Flags index="TechTreeCheat" value="1"/>
@@ -1730,7 +1739,7 @@
         <EffectArray index="15" Reference="Actor,Devourer,LifeArmorIcon"/>
         <EffectArray index="16" Operation="Add" Reference="Unit,BroodLord2,LifeArmorLevel" Value="1"/>
         <EffectArray index="17" Operation="Add" Reference="Unit,BroodLord2,LifeArmor" Value="1"/>
-        <EffectArray index="18" Reference="Actor,SS_SwarmGuardian,LifeArmorIcon"/>
+        <EffectArray index="18" Reference="Actor,Queen,LifeArmorIcon"/>
         <EffectArray index="19" Operation="Add" Reference="Unit,QueenBW,LifeArmorLevel" Value="1"/>
         <EffectArray index="20" Operation="Add" Reference="Unit,QueenBW,LifeArmor" Value="1"/>
         <AffectedUnitArray index="0" value="QueenBW"/>
@@ -1754,7 +1763,7 @@
         <EffectArray index="15" Reference="Actor,Devourer,LifeArmorIcon"/>
         <EffectArray index="16" Operation="Add" Reference="Unit,BroodLord2,LifeArmorLevel" Value="1"/>
         <EffectArray index="17" Operation="Add" Reference="Unit,BroodLord2,LifeArmor" Value="1"/>
-        <EffectArray index="18" Reference="Actor,SS_SwarmGuardian,LifeArmorIcon"/>
+        <EffectArray index="18" Reference="Actor,Queen,LifeArmorIcon"/>
         <EffectArray index="19" Operation="Add" Reference="Unit,QueenBW,LifeArmorLevel" Value="1"/>
         <EffectArray index="20" Operation="Add" Reference="Unit,QueenBW,LifeArmor" Value="1"/>
         <AffectedUnitArray index="0" value="QueenBW"/>
@@ -1778,7 +1787,7 @@
         <EffectArray index="15" Reference="Actor,Devourer,LifeArmorIcon"/>
         <EffectArray index="16" Operation="Add" Reference="Unit,BroodLord2,LifeArmorLevel" Value="1"/>
         <EffectArray index="17" Operation="Add" Reference="Unit,BroodLord2,LifeArmor" Value="1"/>
-        <EffectArray index="18" Reference="Actor,SS_SwarmGuardian,LifeArmorIcon"/>
+        <EffectArray index="18" Reference="Actor,Queen,LifeArmorIcon"/>
         <EffectArray index="19" Operation="Add" Reference="Unit,QueenBW,LifeArmorLevel" Value="1"/>
         <EffectArray index="20" Operation="Add" Reference="Unit,QueenBW,LifeArmor" Value="1"/>
         <AffectedUnitArray index="0" value="QueenBW"/>

@@ -57,6 +57,34 @@
             </SectionArray>
         </InfoArray>
     </CAbilMorph>
+    <CAbilResearch id="TerranAcademyResearch" parent="GhostAcademyResearch">
+        <Name value="Abil/Name/TerranAcademyResearch"/>
+        <InfoArray index="Research26" Time="146.5136" Upgrade="MedicCaduceusReactor">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="ResearchMedivacEnergyUpgrade" Requirements="LearnCaduceusReactor"/>
+        </InfoArray>
+        <InfoArray index="Research27" Time="70.609" Upgrade="OpticalFlare">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="ResearchOpticalFlare" Requirements="LearnOpticalFlare"/>
+        </InfoArray>
+        <InfoArray index="Research28" Time="70.609" Upgrade="Restoration">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="ResearchRestoration" Requirements="ResearchRestoration"/>
+        </InfoArray>
+        <InfoArray index="Research29" Time="88.2612" Upgrade="U238Shells">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="U238Shells" Requirements="U238Shells"/>
+        </InfoArray>
+        <InfoArray index="Research30" Time="70.609" Upgrade="Stimpack">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="Stimpack" Requirements="LearnStimpack"/>
+        </InfoArray>
+    </CAbilResearch>
     <CAbilMorph id="BurrowLurkerDown">
         <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="BurrowDown">
@@ -2298,7 +2326,7 @@
         </InfoArray>
         <InfoArray index="Train9" Time="20.664">
             <Button DefaultButtonFace="Marine" State="Restricted"/>
-            <Unit value="Marine"/>
+            <Unit value="MarineSC2BW"/>
         </InfoArray>
         <InfoArray index="Train10" Time="20.664">
             <Button DefaultButtonFace="Firebat" State="Restricted" Requirements="HaveAcademy"/>

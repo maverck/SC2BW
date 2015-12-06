@@ -162,12 +162,14 @@
         <RandomDelayMin value="9999"/>
         <RandomDelayMax value="9999"/>
     </CWeaponLegacy>
-    <CWeaponLegacy id="GuassRifle">
+    <CWeaponLegacy id="GuassRifleSC2BW" parent="GuassRifle">
+        <Name value="Weapon/Name/GuassRifleSC2BW"/>
+        <Tip value="Weapon/Tip/GuassRifleSC2BW"/>
         <Range value="4"/>
         <Period value="0.8693"/>
-        <Effect value="GuassRifleSet"/>
         <DamagePoint value="0.1765"/>
         <Backswing value="0.4707"/>
+        <Effect value="GuassRifleSet"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="HydraliskMelee">
         <Period value="0.8693"/>
