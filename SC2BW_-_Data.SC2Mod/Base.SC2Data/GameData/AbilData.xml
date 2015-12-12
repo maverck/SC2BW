@@ -3030,7 +3030,7 @@
         </InfoArray>
         <InfoArray index="Train14" Time="34.44">
             <Button DefaultButtonFace="Phoenix" State="Restricted"/>
-            <Unit value="Phoenix"/>
+            <Unit value="CorsairMP"/>
         </InfoArray>
     </CAbilTrain>
     <CAbilTrain id="StarportTrain">
@@ -3265,6 +3265,12 @@
             <Button DefaultButtonFace="MutateintoDefilerMound" State="Restricted" Requirements="HaveHive"/>
         </InfoArray>
     </CAbilBuild>
+    <CAbilRally id="ZergRally">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Rally2" DefaultButtonFace="RallyEgg"/>
+        <InfoArray index="0" UseFilters="-;Worker"/>
+        <InfoArray SetOnGround="0" UseFilters="Worker;-"/>
+    </CAbilRally>
     <CAbilResearch id="evolutionchamberresearch">
         <InfoArray index="Research1" Time="229.6"/>
         <InfoArray index="Research2" Time="257.152"/>

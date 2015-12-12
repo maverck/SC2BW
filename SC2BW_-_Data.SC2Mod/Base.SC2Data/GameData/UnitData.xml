@@ -504,6 +504,58 @@
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Campaign"/>
         <HotkeyAlias value=""/>
     </CUnit>
+    <!--                                                                                         -->
+    <!--                                                                                         -->
+    <!-- SC 1 Multiplayer Unit ~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!--                                                                                         -->
+    <!--                                                                                         -->
+    <!--                                                                                         -->
+    <!-- Corsair ........................................................................... -->
+    <!--                                                                                         -->
+    <CUnit id="CorsairMP">
+        <Mob value="Multiplayer"/>
+        <Attributes index="Light" value="0"/>
+        <Attributes index="Armored" value="1"/>
+        <LifeStart value="100"/>
+        <LifeMax value="100"/>
+        <EnergyStart value="50"/>
+        <EnergyMax value="200"/>
+        <EnergyRegenRate value="0.5234"/>
+        <ShieldsStart value="80"/>
+        <ShieldsMax value="80"/>
+        <ShieldRegenDelay value="0"/>
+        <ShieldRegenRate value="0.457"/>
+        <Speed value="3.75"/>
+        <Acceleration value="3.5"/>
+        <LateralAcceleration value="1000"/>
+        <StationaryTurningRate value="2879.8242"/>
+        <TurningRate value="2879.8242"/>
+        <RepairTime value="45"/>
+        <AbilArray index="3" Link="DisruptionWeb"/>
+        <AbilArray index="4" Link="DisruptionWebHardcore"/>
+        <BehaviorArray Link="MutaliskWanderRequirementBuff"/>
+        <BehaviorArray Link="MicroIsMoving"/>
+        <BehaviorArray Link="UnitFilterMedium"/>
+        <WeaponArray index="0" Link="CorsairNeutronFlare"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="1" Face="" Type="Undefined" AbilCmd="stop,Stop" Row="0" Column="0"/>
+            <LayoutButtons index="2" Face="DisruptionWeb" Type="Undefined" AbilCmd="DisruptionWeb,Execute" Row="0" Column="0"/>
+            <LayoutButtons index="3" Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons index="4" Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons index="5" Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="GravitonBeam,Cancel" Row="2" Column="4"/>
+            <LayoutButtons Face="DisruptionWeb" Type="AbilCmd" AbilCmd="DisruptionWeb,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="DisruptionWeb" Type="AbilCmd" AbilCmd="DisruptionWebHardcore,Execute" Row="2" Column="0"/>
+        </CardLayouts>
+        <Radius value="0.5"/>
+        <SeparationRadius value="0.001"/>
+        <ScoreResult value="BuildOrder"/>
+        <GlossaryPriority value="140"/>
+        <!--EnergyStart value="50"/>
+        <EnergyMax value="200"/>
+        <EnergyRegenRate value="0.5625"/-->
+    </CUnit>
     <CUnit id="CreepColony">
         <DeathRevealRadius value="3"/>
         <Race value="Zerg"/>
@@ -1516,8 +1568,8 @@
     <CUnit id="Hatchery">
         <CardLayouts index="0">
             <LayoutButtons index="1" AbilCmd="que1,CancelLast"/>
-            <LayoutButtons index="5" AbilCmd="RallyHatchery,Rally1"/>
-            <LayoutButtons index="6" Face="SetRallyPoint2" AbilCmd="RallyHatchery,Rally1" Row="1" Column="4"/>
+            <LayoutButtons index="5" AbilCmd="ZergRally,Rally2"/>
+            <LayoutButtons index="6" Face="SetRallyPoint2" AbilCmd="ZergRally,Rally1" Row="1" Column="4"/>
             <LayoutButtons index="7" Face="ResearchBurrow" AbilCmd="LairResearch,Research4" Row="0"/>
             <LayoutButtons index="8" removed="1"/>
             <LayoutButtons index="9" removed="1"/>
@@ -1528,7 +1580,9 @@
         <BehaviorArray index="2" Link="UnitFilterLarge"/>
         <LifeRegenRate value="0.2617"/>
         <AbilArray index="1" Link="que1"/>
-        <AbilArray index="4" Link="HatcheryRallyHC"/>
+        <AbilArray index="3" Link="LairResearch"/>
+        <AbilArray index="4" Link="ZergRally"/>
+        <AbilArray index="5" removed="1"/>
         <LifeStart value="1250"/>
         <LifeMax value="1250"/>
         <Facing value="315"/>
@@ -1563,6 +1617,8 @@
         <BehaviorArray Link="UnitFilterLarge"/>
         <CardLayouts index="0">
             <LayoutButtons index="2" AbilCmd="que1,CancelLast"/>
+            <LayoutButtons index="3" AbilCmd="ZergRally,Rally2"/>
+            <LayoutButtons index="4" AbilCmd="ZergRally,Rally1"/>
             <LayoutButtons index="5" Face="overlordspeed" AbilCmd="LairResearch,Research2" Row="1" Column="2"/>
             <LayoutButtons index="6" Face="ResearchBurrow" AbilCmd="LairResearch,Research4" Row="0" Column="4"/>
             <LayoutButtons index="7" Face="EvolveVentralSacks" AbilCmd="LairResearch,Research3" Row="1" Column="0"/>
@@ -1584,7 +1640,7 @@
         </CardLayouts>
         <LifeRegenRate value="0.2617"/>
         <AbilArray index="1" Link="que1"/>
-        <AbilArray Link="HatcheryWorkerRally"/>
+        <AbilArray index="3" Link="ZergRally"/>
         <Food value="1"/>
         <Facing value="315"/>
     </CUnit>
@@ -1830,6 +1886,8 @@
         <BehaviorArray Link="UnitFilterLarge"/>
         <CardLayouts index="0">
             <LayoutButtons index="2" AbilCmd="que1,CancelLast"/>
+            <LayoutButtons index="5" AbilCmd="ZergRally,Rally2"/>
+            <LayoutButtons index="6" AbilCmd="ZergRally,Rally1"/>
             <LayoutButtons index="7" Face="overlordspeed" AbilCmd="LairResearch,Research2" Row="1" Column="2"/>
             <LayoutButtons index="8" Face="ResearchBurrow" AbilCmd="LairResearch,Research4" Row="0" Column="4"/>
             <LayoutButtons index="9" Face="EvolveVentralSacks" AbilCmd="LairResearch,Research3" Row="1" Column="0"/>
@@ -1851,7 +1909,7 @@
         </CardLayouts>
         <LifeRegenRate value="0.2617"/>
         <AbilArray index="1" Link="que1"/>
-        <AbilArray Link="HatcheryWorkerRally"/>
+        <AbilArray index="4" Link="ZergRally"/>
         <Food value="1"/>
         <LifeStart value="1800"/>
         <LifeMax value="1800"/>
@@ -3146,43 +3204,6 @@
         <StationaryTurningRate value="2879.8242"/>
         <TurningRate value="2879.8242"/>
         <Speed value="0.4648"/>
-    </CUnit>
-    <CUnit id="Phoenix">
-        <WeaponArray index="0" Link="CorsairNeutronFlare" Turret=""/>
-        <CardLayouts index="0">
-            <LayoutButtons index="1" Face="" Type="Undefined" Column="0"/>
-            <LayoutButtons index="2" Face="DisruptionWeb" Type="Undefined" AbilCmd="DisruptionWeb,Execute" Column="0"/>
-            <LayoutButtons index="3" Face="Stop" AbilCmd="stop,Stop" Column="1"/>
-            <LayoutButtons index="4" Face="MoveHoldPosition" AbilCmd="move,HoldPos" Column="2"/>
-            <LayoutButtons index="5" Face="Attack" AbilCmd="attack,Execute" Row="0"/>
-            <LayoutButtons index="6" Face="MovePatrol" AbilCmd="move,Patrol" Row="0" Column="3"/>
-            <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="GravitonBeam,Cancel" Row="2" Column="4"/>
-            <LayoutButtons Face="DisruptionWeb" Type="AbilCmd" AbilCmd="DisruptionWeb,Execute" Row="2" Column="0"/>
-            <LayoutButtons Face="DisruptionWeb" Type="AbilCmd" AbilCmd="DisruptionWebHardcore,Execute" Row="2" Column="0"/>
-        </CardLayouts>
-        <AbilArray index="3" Link="DisruptionWeb"/>
-        <AbilArray Link="DisruptionWebHardcore"/>
-        <Attributes index="Light" value="0"/>
-        <Attributes index="Armored" value="1"/>
-        <Speed value="3.75"/>
-        <Deceleration value="3.5"/>
-        <ShieldRegenDelay value="0"/>
-        <ShieldRegenRate value="0.457"/>
-        <LateralAcceleration value="1000"/>
-        <BehaviorArray Link="MutaliskWanderRequirementBuff"/>
-        <BehaviorArray Link="MicroIsMoving"/>
-        <BehaviorArray Link="UnitFilterMedium"/>
-        <Radius value="0.5"/>
-        <SeparationRadius value="0.001"/>
-        <Acceleration value="3.5"/>
-        <StationaryTurningRate value="2879.8242"/>
-        <TurningRate value="2879.8242"/>
-        <LifeStart value="100"/>
-        <LifeMax value="100"/>
-        <ShieldsStart value="80"/>
-        <ShieldsMax value="80"/>
-        <EnergyRegenRate value="0.5234"/>
-        <LifeArmor value="1"/>
     </CUnit>
     <CUnit id="PhotonCannon">
         <Attributes index="Armored" value="0"/>

@@ -2676,15 +2676,19 @@ bool libSCBW_gt_DamageHydralisk_Func (bool testConds, bool runActions) {
     unit lv_target;
 
     // Variable Initialization
-    lv_source = EventPlayerEffectUsedUnit(c_effectUnitCaster);
-    lv_target = EventPlayerEffectUsedUnit(c_effectUnitTarget);
 
     // Actions
     if (!runActions) {
         return true;
     }
 
-    libSCBW_gf_ApplyDamage(lv_source, lv_target, "NeedleSpinesDamage", "NeedleSpinesNull", libSCBW_ge_DamageModifier_Explosive, libSCBW_gf_Miss(lv_source, lv_target));
+    if ((EventPlayerEffectUsedUnit(c_effectUnitCaster) != null) && (EventPlayerEffectUsedUnit(c_effectUnitTarget) != null)) {
+        lv_source = EventPlayerEffectUsedUnit(c_effectUnitCaster);
+        lv_target = EventPlayerEffectUsedUnit(c_effectUnitTarget);
+        libSCBW_gf_ApplyDamage(lv_source, lv_target, "NeedleSpinesDamage", "NeedleSpinesNull", libSCBW_ge_DamageModifier_Explosive, libSCBW_gf_Miss(lv_source, lv_target));
+    }
+    else {
+    }
     return true;
 }
 
@@ -2703,15 +2707,19 @@ bool libSCBW_gt_DamageDragoon_Func (bool testConds, bool runActions) {
     unit lv_target;
 
     // Variable Initialization
-    lv_source = EventPlayerEffectUsedUnit(c_effectUnitCaster);
-    lv_target = EventPlayerEffectUsedUnit(c_effectUnitTarget);
 
     // Actions
     if (!runActions) {
         return true;
     }
 
-    libSCBW_gf_ApplyDamage(lv_source, lv_target, "ParticleDisruptorsU", "ParticleDisruptorsU3", libSCBW_ge_DamageModifier_Explosive, libSCBW_gf_Miss(lv_source, lv_target));
+    if ((EventPlayerEffectUsedUnit(c_effectUnitCaster) != null) && (EventPlayerEffectUsedUnit(c_effectUnitTarget) != null)) {
+        lv_source = EventPlayerEffectUsedUnit(c_effectUnitCaster);
+        lv_target = EventPlayerEffectUsedUnit(c_effectUnitTarget);
+        libSCBW_gf_ApplyDamage(lv_source, lv_target, "ParticleDisruptorsU", "ParticleDisruptorsU3", libSCBW_ge_DamageModifier_Explosive, libSCBW_gf_Miss(lv_source, lv_target));
+    }
+    else {
+    }
     return true;
 }
 
@@ -2730,15 +2738,19 @@ bool libSCBW_gt_DamageScarab_Func (bool testConds, bool runActions) {
     unit lv_target;
 
     // Variable Initialization
-    lv_source = EventPlayerEffectUsedUnit(c_effectUnitCaster);
-    lv_target = EventPlayerEffectUsedUnit(c_effectUnitTarget);
 
     // Actions
     if (!runActions) {
         return true;
     }
 
-    libSCBW_gf_ApplyDamage(lv_source, lv_target, "ScarabDamage", "ScarabDamageDummy", libSCBW_ge_DamageModifier_Explosive, false);
+    if ((EventPlayerEffectUsedUnit(c_effectUnitCaster) != null) && (EventPlayerEffectUsedUnit(c_effectUnitTarget) != null)) {
+        lv_source = EventPlayerEffectUsedUnit(c_effectUnitCaster);
+        lv_target = EventPlayerEffectUsedUnit(c_effectUnitTarget);
+        libSCBW_gf_ApplyDamage(lv_source, lv_target, "ScarabDamage", "ScarabDamageDummy", libSCBW_ge_DamageModifier_Explosive, false);
+    }
+    else {
+    }
     UnitKill(lv_source);
     return true;
 }
@@ -2758,15 +2770,19 @@ bool libSCBW_gt_DamageMarine_Func (bool testConds, bool runActions) {
     unit lv_target;
 
     // Variable Initialization
-    lv_source = EventPlayerEffectUsedUnit(c_effectUnitCaster);
-    lv_target = EventPlayerEffectUsedUnit(c_effectUnitTarget);
 
     // Actions
     if (!runActions) {
         return true;
     }
 
-    libSCBW_gf_ApplyDamage(lv_source, lv_target, "GuassRifle", "GuassRifleNull", libSCBW_ge_DamageModifier_None, libSCBW_gf_Miss(lv_source, lv_target));
+    if ((EventPlayerEffectUsedUnit(c_effectUnitCaster) != null) && (EventPlayerEffectUsedUnit(c_effectUnitTarget) != null)) {
+        lv_source = EventPlayerEffectUsedUnit(c_effectUnitCaster);
+        lv_target = EventPlayerEffectUsedUnit(c_effectUnitTarget);
+        libSCBW_gf_ApplyDamage(lv_source, lv_target, "GuassRifle", "GuassRifleNull", libSCBW_ge_DamageModifier_None, libSCBW_gf_Miss(lv_source, lv_target));
+    }
+    else {
+    }
     return true;
 }
 
@@ -2785,15 +2801,19 @@ bool libSCBW_gt_DamageGhost_Func (bool testConds, bool runActions) {
     unit lv_target;
 
     // Variable Initialization
-    lv_source = EventPlayerEffectUsedUnit(c_effectUnitCaster);
-    lv_target = EventPlayerEffectUsedUnit(c_effectUnitTarget);
 
     // Actions
     if (!runActions) {
         return true;
     }
 
-    libSCBW_gf_ApplyDamage(lv_source, lv_target, "C10CanisterRifle", "C10CanisterRifleNull", libSCBW_ge_DamageModifier_Concussive, libSCBW_gf_Miss(lv_source, lv_target));
+    if ((EventPlayerEffectUsedUnit(c_effectUnitCaster) != null) && (EventPlayerEffectUsedUnit(c_effectUnitTarget) != null)) {
+        lv_source = EventPlayerEffectUsedUnit(c_effectUnitCaster);
+        lv_target = EventPlayerEffectUsedUnit(c_effectUnitTarget);
+        libSCBW_gf_ApplyDamage(lv_source, lv_target, "C10CanisterRifle", "C10CanisterRifleNull", libSCBW_ge_DamageModifier_Concussive, libSCBW_gf_Miss(lv_source, lv_target));
+    }
+    else {
+    }
     return true;
 }
 
@@ -2812,15 +2832,19 @@ bool libSCBW_gt_DamageVulture_Func (bool testConds, bool runActions) {
     unit lv_target;
 
     // Variable Initialization
-    lv_source = EventPlayerEffectUsedUnit(c_effectUnitCaster);
-    lv_target = EventPlayerEffectUsedUnit(c_effectUnitTarget);
 
     // Actions
     if (!runActions) {
         return true;
     }
 
-    libSCBW_gf_ApplyDamage(lv_source, lv_target, "VultureU", "VultureUNull", libSCBW_ge_DamageModifier_Concussive, libSCBW_gf_Miss(lv_source, lv_target));
+    if ((EventPlayerEffectUsedUnit(c_effectUnitCaster) != null) && (EventPlayerEffectUsedUnit(c_effectUnitTarget) != null)) {
+        lv_source = EventPlayerEffectUsedUnit(c_effectUnitCaster);
+        lv_target = EventPlayerEffectUsedUnit(c_effectUnitTarget);
+        libSCBW_gf_ApplyDamage(lv_source, lv_target, "VultureU", "VultureUNull", libSCBW_ge_DamageModifier_Concussive, libSCBW_gf_Miss(lv_source, lv_target));
+    }
+    else {
+    }
     return true;
 }
 
@@ -2839,15 +2863,19 @@ bool libSCBW_gt_DamageGoliath_Func (bool testConds, bool runActions) {
     unit lv_target;
 
     // Variable Initialization
-    lv_source = EventPlayerEffectUsedUnit(c_effectUnitCaster);
-    lv_target = EventPlayerEffectUsedUnit(c_effectUnitTarget);
 
     // Actions
     if (!runActions) {
         return true;
     }
 
-    libSCBW_gf_ApplyDamage(lv_source, lv_target, "GoliathG", "GoliathGNull", libSCBW_ge_DamageModifier_None, libSCBW_gf_Miss(lv_source, lv_target));
+    if ((EventPlayerEffectUsedUnit(c_effectUnitCaster) != null) && (EventPlayerEffectUsedUnit(c_effectUnitTarget) != null)) {
+        lv_source = EventPlayerEffectUsedUnit(c_effectUnitCaster);
+        lv_target = EventPlayerEffectUsedUnit(c_effectUnitTarget);
+        libSCBW_gf_ApplyDamage(lv_source, lv_target, "GoliathG", "GoliathGNull", libSCBW_ge_DamageModifier_None, libSCBW_gf_Miss(lv_source, lv_target));
+    }
+    else {
+    }
     return true;
 }
 
@@ -2866,15 +2894,19 @@ bool libSCBW_gt_DamageSiegeTank_Func (bool testConds, bool runActions) {
     unit lv_target;
 
     // Variable Initialization
-    lv_source = EventPlayerEffectUsedUnit(c_effectUnitCaster);
-    lv_target = EventPlayerEffectUsedUnit(c_effectUnitTarget);
 
     // Actions
     if (!runActions) {
         return true;
     }
 
-    libSCBW_gf_ApplyDamage(lv_source, lv_target, "90mmCannons", "ArcliteCannonNullDamage", libSCBW_ge_DamageModifier_Explosive, libSCBW_gf_Miss(lv_source, lv_target));
+    if ((EventPlayerEffectUsedUnit(c_effectUnitCaster) != null) && (EventPlayerEffectUsedUnit(c_effectUnitTarget) != null)) {
+        lv_source = EventPlayerEffectUsedUnit(c_effectUnitCaster);
+        lv_target = EventPlayerEffectUsedUnit(c_effectUnitTarget);
+        libSCBW_gf_ApplyDamage(lv_source, lv_target, "90mmCannons", "ArcliteCannonNullDamage", libSCBW_ge_DamageModifier_Explosive, libSCBW_gf_Miss(lv_source, lv_target));
+    }
+    else {
+    }
     return true;
 }
 
@@ -2893,15 +2925,19 @@ bool libSCBW_gt_DamageSiegeTankSieged_Func (bool testConds, bool runActions) {
     unit lv_target;
 
     // Variable Initialization
-    lv_source = EventPlayerEffectUsedUnit(c_effectUnitCaster);
-    lv_target = EventPlayerEffectUsedUnit(c_effectUnitTarget);
 
     // Actions
     if (!runActions) {
         return true;
     }
 
-    libSCBW_gf_ApplyDamage(lv_source, lv_target, "CrucioShockCannonDummy", "CrucioShockCannonBlast", libSCBW_ge_DamageModifier_Explosive, libSCBW_gf_Miss(lv_source, lv_target));
+    if ((EventPlayerEffectUsedUnit(c_effectUnitCaster) != null) && (EventPlayerEffectUsedUnit(c_effectUnitTarget) != null)) {
+        lv_source = EventPlayerEffectUsedUnit(c_effectUnitCaster);
+        lv_target = EventPlayerEffectUsedUnit(c_effectUnitTarget);
+        libSCBW_gf_ApplyDamage(lv_source, lv_target, "CrucioShockCannonDummy", "CrucioShockCannonBlast", libSCBW_ge_DamageModifier_Explosive, libSCBW_gf_Miss(lv_source, lv_target));
+    }
+    else {
+    }
     return true;
 }
 
@@ -2920,15 +2956,19 @@ bool libSCBW_gt_DamageSpiderMine_Func (bool testConds, bool runActions) {
     unit lv_target;
 
     // Variable Initialization
-    lv_source = EventPlayerEffectUsedUnit(c_effectUnitCaster);
-    lv_target = EventPlayerEffectUsedUnit(c_effectUnitTarget);
 
     // Actions
     if (!runActions) {
         return true;
     }
 
-    libSCBW_gf_ApplyDamage(lv_source, lv_target, "SpiderMineDamage", "SpiderMineNullDamage", libSCBW_ge_DamageModifier_Explosive, libSCBW_gf_Miss(lv_source, lv_target));
+    if ((EventPlayerEffectUsedUnit(c_effectUnitCaster) != null) && (EventPlayerEffectUsedUnit(c_effectUnitTarget) != null)) {
+        lv_source = EventPlayerEffectUsedUnit(c_effectUnitCaster);
+        lv_target = EventPlayerEffectUsedUnit(c_effectUnitTarget);
+        libSCBW_gf_ApplyDamage(lv_source, lv_target, "SpiderMineDamage", "SpiderMineNullDamage", libSCBW_ge_DamageModifier_Explosive, libSCBW_gf_Miss(lv_source, lv_target));
+    }
+    else {
+    }
     UnitKill(lv_source);
     return true;
 }
@@ -2948,15 +2988,19 @@ bool libSCBW_gt_DamageYamato_Func (bool testConds, bool runActions) {
     unit lv_target;
 
     // Variable Initialization
-    lv_source = EventPlayerEffectUsedUnit(c_effectUnitCaster);
-    lv_target = EventPlayerEffectUsedUnit(c_effectUnitTarget);
 
     // Actions
     if (!runActions) {
         return true;
     }
 
-    libSCBW_gf_ApplyDamage(lv_source, lv_target, "YamatoU", "YamatoU2", libSCBW_ge_DamageModifier_Explosive, libSCBW_gf_Miss(lv_source, lv_target));
+    if ((EventPlayerEffectUsedUnit(c_effectUnitCaster) != null) && (EventPlayerEffectUsedUnit(c_effectUnitTarget) != null)) {
+        lv_source = EventPlayerEffectUsedUnit(c_effectUnitCaster);
+        lv_target = EventPlayerEffectUsedUnit(c_effectUnitTarget);
+        libSCBW_gf_ApplyDamage(lv_source, lv_target, "YamatoU", "YamatoU2", libSCBW_ge_DamageModifier_Explosive, libSCBW_gf_Miss(lv_source, lv_target));
+    }
+    else {
+    }
     return true;
 }
 
@@ -4231,7 +4275,7 @@ void libSCBW_gt_DisableBestUnitLarvaMorphAbility_Init () {
 bool libSCBW_gt_AirUnitCreated_Func (bool testConds, bool runActions) {
     // Conditions
     if (testConds) {
-        if (!(((UnitGetType(EventUnitCreatedUnit()) == "Mutalisk") || (UnitGetType(EventUnitCreatedUnit()) == "Wraith") || (UnitGetType(EventUnitCreatedUnit()) == "VikingFighter") || (UnitGetType(EventUnitCreatedUnit()) == "Phoenix") || (UnitGetType(EventUnitCreatedUnit()) == "Scout") || (UnitGetType(EventUnitCreatedUnit()) == "Scourge")))) {
+        if (!(((UnitGetType(EventUnitCreatedUnit()) == "Mutalisk") || (UnitGetType(EventUnitCreatedUnit()) == "Wraith") || (UnitGetType(EventUnitCreatedUnit()) == "VikingFighter") || (UnitGetType(EventUnitCreatedUnit()) == "CorsairMP") || (UnitGetType(EventUnitCreatedUnit()) == "Scout") || (UnitGetType(EventUnitCreatedUnit()) == "Scourge")))) {
             return false;
         }
     }

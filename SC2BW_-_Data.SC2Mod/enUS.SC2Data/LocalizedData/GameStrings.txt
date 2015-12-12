@@ -31,6 +31,7 @@ Abil/Name/StarportTrainSC2BW=Train
 Abil/Name/TerranAcademyResearch=Terran Academy Research
 Abil/Name/UnknownAbility=Unknown Ability
 Abil/Name/VulturePatrol=Vulture - Patrol
+Abil/Name/ZergRally=Zerg Rally
 Abil/Name/heal=Heal
 Abil/Name/que1Addon=Queue (1) Addon
 Actor/AddonIndicator/Comsat=C
@@ -246,6 +247,7 @@ Button/Tooltip/CloakOnGhostSC2BW=Cloaks the unit, preventing enemy units from se
 Button/Tooltip/CloakOnWraith=Cloaks the unit, preventing enemy units from seeing or attacking it. A cloaked unit will only be revealed by detectors or effects.<n/><n/><c val="f078ff">Drains <d ref="-1 * (Behavior,BansheeCloak,Modification.VitalRegenArray[2] + Unit,Banshee,EnergyRegenRate)" precision="1"/> energy per second.</c>
 Button/Tooltip/ConstructScarab=
 Button/Tooltip/Consume=
+Button/Tooltip/CorsairMP=Air-superiority fighter. Has low Damage but fast Rate of Fire. Deals Damage in an AoE.<n/><n/><c val="ffff8a">Can attack air units.</c>
 Button/Tooltip/CreepColony=A creep generator. Creep feeds nearby Zerg structures. A Creep Colony can Mutate into Sunken or Spore Colonies.
 Button/Tooltip/DarkArchonWarpSelection=
 Button/Tooltip/DarkArchonWarpTarget=
@@ -284,7 +286,6 @@ Button/Tooltip/NydusNetwork=Friendly ground units can use the Nydus Canal to ins
 Button/Tooltip/OpticalFlare=
 Button/Tooltip/Overlord=Flying. Provides supply.<n/><n/>HP - <c val="FF0000"><d ref="Unit,Overlord,LifeMax[0]"/></c><n/>Armor - <c val="FF0000"><d ref="Unit,Overlord,LifeArmor[0]"/></c> (<c val="00FF00">+1</c>)<n/>Size - <c val="FF0000">Large</c><n/><n/><c val="FFFF8A">Can attack ground units.</c>
 Button/Tooltip/Parasite=
-Button/Tooltip/Phoenix=Air-superiority fighter. Has low Damage but fast Rate of Fire. Deals Damage in an AoE.<n/><n/><c val="ffff8a">Can attack air units.</c>
 Button/Tooltip/Plague=
 Button/Tooltip/PsiStorm=Creates a storm of psionic energy that lasts 4 seconds, causing up to 112 damage to all units in the target area.
 Button/Tooltip/Queen=A flying support caster.<n/><n/>HP - <c val="FF0000"><d ref="Unit,QueenBW,LifeMax[0]"/></c><n/>Armor - <c val="FF0000"><d ref="Unit,QueenBW,LifeArmor[0]"/></c> (<c val="00FF00">+1</c>)<n/>Size - <c val="FF0000">Medium</c><n/><n/>Spell - <c val="FFFF8A">Parasite</c><n/>Spell - <c val="FFFF8A">Spawn Broodling</c><n/>Spell - <c val="FFFF8A">Ensnare</c>
@@ -532,6 +533,8 @@ Unit/Name/CommandCenter=Terran Command Center
 Unit/Name/ComsatStation=Terran Comsat Station
 Unit/Name/ComsatStation2=Terran Comsat Station
 Unit/Name/ControlTower=Terran Control Tower
+Unit/Name/CorsairMP=Protoss Corsair
+Unit/Name/CorsairMP2=Corsair
 Unit/Name/CreepColony=Zerg Creep Colony
 Unit/Name/CreepTumor=Creep Tumor
 Unit/Name/CyberneticsCore=Protoss Cybernetics Core
@@ -581,7 +584,6 @@ Unit/Name/NydusNetwork=Zerg Nydus Canal
 Unit/Name/Observatory=Protoss Observatory
 Unit/Name/Observer=Protoss Observer
 Unit/Name/Overlord=Zerg Overlord
-Unit/Name/Phoenix=Protoss Corsair
 Unit/Name/PhotonCannon=Protoss Photon Cannon
 Unit/Name/Probe=Protoss Probe
 Unit/Name/Pylon=Protoss Pylon

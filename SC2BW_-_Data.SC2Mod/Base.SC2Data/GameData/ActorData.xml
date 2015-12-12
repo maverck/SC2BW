@@ -249,6 +249,36 @@
         <PlacementModel value="CarrierSC2BW"/>
         <HighlightTooltip value="Unit/Name/CarrierSC2BW"/>
     </CActorUnit>
+    <!--                                                                                         -->
+    <!--                                                                                         -->
+    <!-- SC 1 Unit ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!--                                                                                         -->
+    <!--                                                                                         -->
+    <!--                                                                                         -->
+    <!-- Corsair ............................................................................... -->
+    <!--                                                                                         -->
+    <CActorUnit id="CorsairMP">
+        <Scale value="0.850000"/>
+    </CActorUnit>
+    <CActorSplat id="CorsairMPDisruptionWebCursorSplat" abil="DisruptionWeb">
+        <On index="0" Terms="Abil.DisruptionWeb.Cursor"/>
+    </CActorSplat>
+    <CActorModel id="CorsairMPDisruptionWebImpact">
+        <On index="3" Terms="Effect.DisruptionWebPersistent.Start" Send="Create"/>
+        <On index="4" Terms="Effect.DisruptionWebPersistent.Stop" Send="AnimBracketStop BSD"/>
+        <HostSiteOps Ops="SOpMoveUpByDot5"/>
+        <Scale value="0.700000"/>
+    </CActorModel>
+    <CActorRange id="CorsairMPDisruptionWebRange" abil="DisruptionWeb">
+        <On index="1" Terms="Abil.DisruptionWeb.TargetOn" Send="Create"/>
+        <On index="2" Terms="Abil.DisruptionWeb.TargetOff" Send="Destroy"/>
+        <On index="3" Terms="Abil.DisruptionWeb.ButtonHoverOn" Send="Create"/>
+        <On index="4" Terms="Abil.DisruptionWeb.ButtonHoverOff" Send="Destroy"/>
+        <Abil Link="DisruptionWeb"/>
+    </CActorRange>
+    <CActorModel id="Corsair_DisruptionWeb_Cast">
+        <On index="3" Terms="Abil.DisruptionWeb.SourceFinishStop" Send="Create"/>
+    </CActorModel>
     <CActorUnit id="Devourer" parent="GenericUnitMorph" unitName="BroodLord2">
         <AcceptedHostedPropTransfers index="Scale" value="0"/>
         <On Terms="ActorCreation" Send="$Birth 0 0.000000 -1.000000 0.000000"/>
@@ -807,6 +837,9 @@
         <On Terms="Effect.OpticalFlareApplyBehavior.Start" Send="Create"/>
         <Scale value="0.500000"/>
     </CActorModel>
+    <CActorSiteOpLocalOffset id="SOpMoveUpBy10">
+        <LocalOffset value="0.000000,0.000000,1.000000"/>
+    </CActorSiteOpLocalOffset>
     <CActorAction id="ScoutAirLeftAttack" effectImpact="ScoutMPAirU">
         <On index="1" Terms="Effect.ScoutMPAirU.Start; FromEffectTreeDescendant"/>
         <On index="2" Terms="Effect.ScoutMPAirU.Stop; FromEffectTreeDescendant"/>
@@ -996,6 +1029,7 @@
     <CActorUnit id="TerranAcademy" parent="TerranBuildingFlyer" unitName="Academy">
         <Macros value="QueueAnim"/>
         <On index="61" Send="Create TerranAcademyBuild"/>
+        <On index="65" Terms="UnitConstruction.Academy.Start" Send="Create TerranAcademyBuild"/>
         <Model value="TerranAcademy"/>
         <BuildModel value="TerranAcademy"/>
         <DeathArray index="Normal" ModelLink="GhostAcademyDeath" SoundLink=""/>
@@ -1584,11 +1618,8 @@
     <CActorUnit id="SiegeTankSieged">
         <Scale value="0.900000"/>
     </CActorUnit>
-    <CActorRange id="SiegeTankSiegedRange">
-        <IconArcLength value="0.500000"/>
-    </CActorRange>
     <CActorRange id="DarkSwarmRange" parent="SiegeTankSiegedRange">
-        <On index="1" Terms="Effect.DarkSwarmPersistent.Start"/>
+        <On index="1" Terms="Effect.DarkSwarmPersistent.Start" Send="Create"/>
         <On index="2" Terms="Effect.DarkSwarmPersistent.Stop" Send="Destroy"/>
         <On index="3" removed="1"/>
         <On index="4" removed="1"/>
@@ -1598,6 +1629,7 @@
         <Weapon value=""/>
         <Range value="4.000000"/>
         <IconTint value="155,255,128,64"/>
+        <IconArcLength value="0.500000"/>
     </CActorRange>
     <!-- Siphon                                                                                  -->
     <CActorRange id="SiphonRange">
@@ -2195,7 +2227,7 @@
         <On index="78" removed="1"/>
         <Model value="NydusNetwork"/>
         <Scale value="0.800000"/>
-        <BuildModel value="NydusNetwork"/>
+        <BuildModel value="ZergBuildingBuild2x2"/>
         <DeathArray index="Normal" ModelLink="NydusNetworkDeath" SoundLink="NydusNetwork_Explode" VoiceLink="NydusNetworkDeathVoice"/>
         <DeathArray index="Disintegrate" ModelLink="" SoundLink=""/>
         <DeathArray index="Fire" ModelLink="" SoundLink=""/>
@@ -2282,13 +2314,6 @@
         </WireframeShield>
         <Scale value="1.250000"/>
     </CActorUnit>
-    <CActorModel id="DisruptionWebModel" parent="ModelAnimationStyleContinuous">
-        <On Terms="Effect.DisruptionWebPersistent.Start" Send="Create"/>
-        <On Terms="Effect.DisruptionWebPersistent.Stop" Send="AnimBracketStop BSD"/>
-        <HostSiteOps Ops="SOpShadow"/>
-        <Model value="DisruptionWeb"/>
-        <Scale value="0.450000,0.450000,0.250000"/>
-    </CActorModel>
     <CActorSplat id="DarkSwarmCursorSplat" parent="ZergCursorSplat" abil="DarkSwarm"/>
     <!--                                                                                         -->
     <!-- Ghost ................................................................................. -->
@@ -2512,80 +2537,6 @@
     <CActorAction id="MissileTurretAttack" effectImpact="MissileTurretLongboltMissileSwitch">
         <On index="0" Terms="Effect.MissileTurretLongboltMissileSwitch.Start; At Caster; FromEffectTreeDescendant"/>
     </CActorAction>
-    <!--                                                                                         -->
-    <!-- Phoenix ............................................................................... -->
-    <!--                                                                                         -->
-    <CActorUnit id="Phoenix">
-        <GroupSoundArray index="Birth" value="Corsair_Ready"/>
-        <GroupSoundArray index="Ready" value="Corsair_What"/>
-        <GroupSoundArray index="Help" value="Corsair_Help"/>
-        <GroupSoundArray index="What" value="Corsair_What"/>
-        <GroupSoundArray index="Yes" value="Corsair_Yes"/>
-        <GroupSoundArray index="Attack" value="Corsair_Attack"/>
-        <GroupSoundArray index="Pissed" value="Corsair_Pissed"/>
-        <GroupSoundArray index="Movement" value="Corsair_Yes"/>
-        <GroupSoundArray index="Turning" value="Phoenix_Movement"/>
-        <GroupSoundArray index="Board" value=""/>
-        <GroupSoundArray index="Click" value="Corsair_Yes"/>
-        <GroupSoundArray index="ClickError" value="Corsair_What"/>
-        <SoundArray index="Birth" value=""/>
-        <SoundArray index="Ready" value="Corsair_Ready"/>
-        <SoundArray index="Help" value="Corsair_Help"/>
-        <SoundArray index="What" value="Corsair_What"/>
-        <SoundArray index="Yes" value="Corsair_Yes"/>
-        <SoundArray index="Attack" value="Corsair_Attack"/>
-        <SoundArray index="Pissed" value="Corsair_Pissed"/>
-        <SoundArray index="Movement" value=""/>
-        <SoundArray index="Turning" value="Phoenix_Movement"/>
-        <SoundArray index="Board" value=""/>
-        <SoundArray index="Click" value=""/>
-        <SoundArray index="ClickError" value=""/>
-        <SoundArray index="Highlight" value=""/>
-        <GroupIcon>
-            <Image index="0" value="Assets\Textures\wireframe-protoss-corsair.dds"/>
-        </GroupIcon>
-        <HeroIcon value="Assets\Textures\btn-unit-protoss-corsair.dds"/>
-        <UnitIcon value="Assets\Textures\btn-unit-protoss-corsair.dds"/>
-        <Wireframe>
-            <Image index="0" value="Assets\Textures\wireframe-protoss-corsair.dds"/>
-        </Wireframe>
-        <WireframeShield>
-            <Image index="0" value="Assets\Textures\wireframe-protoss-corsair-shield01.dds"/>
-            <Image index="1" value="Assets\Textures\wireframe-protoss-corsair-shield02.dds"/>
-            <Image index="2" value="Assets\Textures\wireframe-protoss-corsair-shield03.dds"/>
-        </WireframeShield>
-        <BuildModel value="Phoenix"/>
-        <On index="44" Terms="Behavior.Hallucination.On" Send="Create HallucinationBirthSoundMedium"/>
-        <On index="45" Terms="UnitDeathCustomize; ValidateUnit IsHallucination" Send="DeathCustomize Hallucination"/>
-        <On index="46" Terms="Abil.attack.ReadyStart" Send="AnimGroupApply Ready"/>
-        <On index="47" Terms="WeaponStart.*.AttackStart" Send="AnimBracketStart Spell Spell"/>
-        <On index="48" Terms="WeaponStop.*.AttackStop" Send="AnimBracketStop Spell"/>
-        <On index="49" Terms="Abil.attack.ReadyStop" Send="AnimGroupRemove Ready"/>
-        <On index="50" removed="1"/>
-        <On index="51" removed="1"/>
-        <On index="52" removed="1"/>
-        <On index="53" removed="1"/>
-        <On index="54" removed="1"/>
-        <On index="55" removed="1"/>
-        <On index="56" removed="1"/>
-        <On index="57" removed="1"/>
-        <On index="58" removed="1"/>
-        <On index="59" removed="1"/>
-        <On index="60" removed="1"/>
-        <On index="61" removed="1"/>
-        <On index="62" removed="1"/>
-        <On index="63" removed="1"/>
-        <On index="64" removed="1"/>
-        <On index="65" removed="1"/>
-        <On index="66" removed="1"/>
-        <On index="67" removed="1"/>
-        <On index="68" removed="1"/>
-        <On index="69" removed="1"/>
-        <On index="70" removed="1"/>
-        <On index="71" removed="1"/>
-        <On index="72" removed="1"/>
-        <Scale value="0.700000"/>
-    </CActorUnit>
     <CActorModel id="PlagueImpact" parent="ModelAnimationStyleOneShot">
         <On Terms="Effect.PlagueSearch.Start" Send="Create"/>
         <On Terms="ActorCreation" Send="SetTintColor 255,0,0"/>
@@ -2709,7 +2660,6 @@
         <BarHeight value="1"/>
         <BarWidth value="1"/>
     </CActorMissile>
-    <CActorSplat id="DisruptionWebCursorSplat" parent="ProtossCursorSplat" abil="DisruptionWeb"/>
     <CActorModel id="StasisField" parent="ModelAddition">
         <EditorCategories value=""/>
         <On Terms="Behavior.StasisField.On" Send="Create"/>
@@ -3042,6 +2992,9 @@
             <Image value="Assets\Textures\Wireframe-Zerg-Lurker.dds"/>
         </Wireframe>
         <LifeArmorIcon value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level0.dds"/>
+        <Model value="LurkerMP"/>
+        <BuildModel value="LurkerMP"/>
+        <PlacementModel value="LurkerMP"/>
     </CActorUnit>
     <CActorSiteOpLocalOffset id="LurkerSOpOffset">
         <LocalOffset value="0.000000,0.100000,0.000000"/>
@@ -3170,13 +3123,4 @@
     <CActorSound id="LurkerEgg_Death" parent="SoundOneShot">
         <On Terms="UnitDeath.LurkerEgg; PassChance 25.000000" Send="Create"/>
     </CActorSound>
-    <CActorRange id="LurkerBurrowedRange">
-        <On Terms="SelectionLocalUpdate.LurkerBurrowed.Start" Send="Create"/>
-        <On Terms="SelectionLocalUpdate.LurkerBurrowed.StartEditorGround" Send="Create"/>
-        <On Terms="SelectionLocalUpdate.LurkerBurrowed.StartEditorFlyer" Send="Create"/>
-        <On Terms="SelectionLocalUpdate.LurkerBurrowed.Stop" Send="Destroy"/>
-        <On Terms="AbilMorph.*.Start; MorphTo LurkerBurrowed; Selected" Send="Create"/>
-        <On Terms="AbilMorph.*.Start; MorphTo Lurker" Send="Destroy"/>
-        <Weapon value="Lurker"/>
-    </CActorRange>
 </Catalog>

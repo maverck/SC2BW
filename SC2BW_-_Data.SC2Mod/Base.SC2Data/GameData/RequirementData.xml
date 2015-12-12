@@ -70,7 +70,7 @@
         <NodeArray index="Show" Link="NotCountUpgradeEvolveLurkerAspectQueuedOrBetterTechTreeCheat"/>
     </CRequirement>
     <CRequirement id="HaveNuke">
-        <NodeArray index="Use" Link="CountUnitNukeCompleteOnly1384835438"/>
+        <NodeArray index="Use" Link="CountUnitNukeCompleteOnlyTechTreeCheat"/>
     </CRequirement>
     <CRequirement id="HaveObservatory">
         <NodeArray index="Use" Link="CountUnitObservatoryCompleteOnly"/>
@@ -100,7 +100,7 @@
         <NodeArray index="Show" Link="NotCountUpgradeMedicCaduceusReactorQueuedOrBetter"/>
     </CRequirement>
     <CRequirement id="LearnCharonBoosters">
-        <NodeArray index="Use" Link="AndCountUnitArmoryCompleteOnly"/>
+        <NodeArray index="Use" Link="CountBehaviorMachineShopCompleteOnlyAtUnit"/>
         <NodeArray index="Show" Link="NotCountUpgradeAresClassWeaponsSystemQueuedOrBetter"/>
     </CRequirement>
     <CRequirement id="LearnCloakingField">
@@ -148,6 +148,7 @@
         <NodeArray index="Use" Link="AndEq629999927CountUpgradeProtossGroundWeaponsLevel2CompleteOnly1CountUnitTemplarArchiveCompleteOnlyTechTreeCheat"/>
     </CRequirement>
     <CRequirement id="LearnSiegeTech">
+        <NodeArray index="Use" Link="CountBehaviorMachineShopCompleteOnlyAtUnit"/>
         <NodeArray index="Show" Link="NotCountUpgradeSiegeTechSC2BWQueuedOrBetter"/>
     </CRequirement>
     <CRequirement id="LearnTerranInfantryArmor2">
@@ -344,10 +345,12 @@
     </CRequirement>
     <CRequirement id="ResearchSpiderMines">
         <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountBehaviorMachineShopCompleteOnlyAtUnit"/>
         <NodeArray index="Show" Link="NotCountUpgradeResearchSpiderMinesQueuedOrBetter"/>
     </CRequirement>
     <CRequirement id="ResearchIonThrusters">
         <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountBehaviorMachineShopCompleteOnlyAtUnit"/>
         <NodeArray index="Show" Link="NotCountUpgradeIonThrustersQueuedOrBetter"/>
     </CRequirement>
     <CRequirement id="ResearchEMP">
@@ -380,7 +383,7 @@
         <NodeArray index="Use" Link="CountUpgradeResearchRecallCompleteOnly"/>
     </CRequirement>
     <CRequirement id="TrainNuke">
-        <NodeArray index="Use" Link="AndNotCountUnitNukeQueuedOrBetterAtUnitTechTreeCheatOrCountUnitScienceFacilityCompleteOnly"/>
+        <NodeArray index="Use" Link="AndNotCountUnitNukeQueuedOrBetterAtUnitTechTreeCheatOrCountUnitScienceFacilityCompleteOnlyCountBehaviorNuclearSiloCompleteOnlyAtUnit"/>
     </CRequirement>
     <CRequirement id="U238Shells">
         <NodeArray index="Show" Link="NotCountUpgradeU238ShellsQueuedOrBetter"/>

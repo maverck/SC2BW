@@ -545,19 +545,6 @@
         <Image value="Assets\Textures\LarvaPortrait_Static.dds"/>
         <Lighting value="LarvaPortrait"/>
     </CModel>
-    <CModel id="Lurker" parent="Unit" Race="Zerg">
-        <Model value="Assets\Units\Zerg\Lurker\BW-Lurker.m3"/>
-        <Occlusion value="Show"/>
-        <PlanetPanelCamera value="Star2CameraMid07"/>
-        <Radius value="0.700000"/>
-        <ScaleMax value="1.100000,1.100000,1.100000"/>
-        <ScaleMin value="1.100000,1.100000,1.100000"/>
-        <SelectionRadius value="0.590500"/>
-        <ShadowRadius value="0.900000"/>
-        <SquibTypeDefault value="Flesh"/>
-        <TechPurchaseCamera value="Star2CameraMid07"/>
-        <UnitGlossaryCamera value="Star2CameraMid07"/>
-    </CModel>
     <CModel id="CovertOpsSplat" parent="Splat">
         <Model value="Assets\Splats\Splat_TechLab\Splat_TechLab.m3"/>
         <EditorCategories value="Race:Terran"/>
@@ -582,10 +569,6 @@
         <SelectionLayer value="3"/>
         <SelectionRadius value="1.500000"/>
         <ShadowRadius value="1.000000"/>
-    </CModel>
-    <CModel id="PhoenixDeath">
-        <Model value="Assets\Units\Protoss\Corsair_Death\Corsair_Death_00.m3"/>
-        <VariationCount value="2"/>
     </CModel>
     <CModel id="PhysicsExplosionSmallStrong">
         <Model value="Assets\Models\forceEffect\forceEffect.m3"/>
@@ -939,14 +922,6 @@
         <AnimSpeed value="0.500000"/>
         <ScaleMax value="0.500000,0.500000,0.500000"/>
         <ScaleMin value="0.500000,0.500000,0.500000"/>
-    </CModel>
-    <CModel id="Phoenix">
-        <ScaleMax value="1.000000,1.000000,1.000000"/>
-        <ScaleMin value="1.000000,1.000000,1.000000"/>
-        <SelectionOffset value="0.000000,0.000000,0.000000"/>
-        <Model value="Assets\Units\Protoss\Corsair_Void\Corsair_Void.m3"/>
-        <AttachProps index="0" removed="1"/>
-        <AttachProps index="1" removed="1"/>
     </CModel>
     <CModel id="PingWarning">
         <Model value="Assets\UI\Cursors\ProtossCursor1Geo\ProtossCursor1Geo.m3"/>

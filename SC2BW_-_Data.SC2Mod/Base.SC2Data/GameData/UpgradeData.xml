@@ -167,10 +167,10 @@
         <Race value="Prot"/>
         <ScoreAmount value="300"/>
         <ScoreResult value="BuildOrder"/>
-        <EffectArray Reference="Unit,Phoenix,EnergyMax" Value="50"/>
-        <EffectArray Reference="Unit,Phoenix,EnergyStart" Value="12"/>
+        <EffectArray Operation="Set" Reference="Unit,CorsairMP,EnergyMax" Value="250"/>
+        <EffectArray Reference="Unit,CorsairMP,EnergyStart" Value="12.5"/>
         <EditorCategories value="Race:Protoss,UpgradeType:Talents"/>
-        <AffectedUnitArray value="Phoenix"/>
+        <AffectedUnitArray value="CorsairMP"/>
     </CUpgrade>
     <CUpgrade id="Lockdown">
         <Icon value="Assets\Textures\btn-ability-terran-lockdown.dds"/>
@@ -250,14 +250,14 @@
         <AffectedUnitArray value="Archon2"/>
     </CUpgrade>
     <CUpgrade id="ProtossAirArmorsLevel1">
-        <EffectArray index="4" Reference="Unit,Phoenix,LifeArmorLevel"/>
-        <EffectArray index="5" Reference="Unit,Phoenix,LifeArmor"/>
+        <EffectArray index="4" Reference="Unit,CorsairMP,LifeArmorLevel"/>
+        <EffectArray index="5" Reference="Unit,CorsairMP,LifeArmorFormula.PositiveArmorMultiplier"/>
         <EffectArray index="6" Reference="Unit,Carrier,LifeArmorLevel"/>
         <EffectArray index="7" Reference="Unit,Carrier,LifeArmor"/>
         <EffectArray index="8" Reference="Unit,Interceptor,LifeArmorLevel"/>
         <EffectArray index="9" Reference="Unit,Interceptor,LifeArmor"/>
         <EffectArray index="10" Operation="Set" Reference="Actor,Observer,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-airarmorlevel1.dds"/>
-        <EffectArray index="11" Operation="Set" Reference="Actor,Phoenix,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-airarmorlevel1.dds"/>
+        <EffectArray index="11" Operation="Set" Reference="Actor,CorsairMP,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-airarmorlevel1.dds"/>
         <EffectArray index="12" Operation="Set" Reference="Actor,WarpPrism,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-airarmorlevel1.dds"/>
         <EffectArray index="13" Operation="Set" Reference="Actor,Carrier,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-airarmorlevel1.dds"/>
         <EffectArray index="14" Operation="Set" Reference="Actor,Interceptor,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-airarmorlevel1.dds"/>
@@ -280,21 +280,21 @@
         <EffectArray index="31" removed="1"/>
         <EffectArray index="32" removed="1"/>
         <AffectedUnitArray index="2" value="Observer"/>
-        <AffectedUnitArray index="3" value="Phoenix"/>
+        <AffectedUnitArray index="3" value="CorsairMP"/>
         <AffectedUnitArray index="4" value="WarpPrism"/>
         <AffectedUnitArray index="5" value="Arbiter"/>
         <AffectedUnitArray index="6" removed="1"/>
         <AffectedUnitArray index="7" removed="1"/>
     </CUpgrade>
     <CUpgrade id="ProtossAirArmorsLevel2">
-        <EffectArray index="4" Reference="Unit,Phoenix,LifeArmorLevel"/>
-        <EffectArray index="5" Reference="Unit,Phoenix,LifeArmor"/>
+        <EffectArray index="4" Reference="Unit,CorsairMP,LifeArmorLevel"/>
+        <EffectArray index="5" Reference="Unit,CorsairMP,LifeArmor"/>
         <EffectArray index="6" Reference="Unit,Carrier,LifeArmorLevel"/>
         <EffectArray index="7" Reference="Unit,Carrier,LifeArmor"/>
         <EffectArray index="8" Reference="Unit,Interceptor,LifeArmorLevel"/>
         <EffectArray index="9" Reference="Unit,Interceptor,LifeArmor"/>
         <EffectArray index="10" Operation="Set" Reference="Actor,Observer,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-airarmorlevel2.dds"/>
-        <EffectArray index="11" Operation="Set" Reference="Actor,Phoenix,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-airarmorlevel2.dds"/>
+        <EffectArray index="11" Operation="Set" Reference="Actor,CorsairMP,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-airarmorlevel2.dds"/>
         <EffectArray index="12" Operation="Set" Reference="Actor,WarpPrism,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-airarmorlevel2.dds"/>
         <EffectArray index="13" Operation="Set" Reference="Actor,Carrier,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-airarmorlevel2.dds"/>
         <EffectArray index="14" Operation="Set" Reference="Actor,Interceptor,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-airarmorlevel2.dds"/>
@@ -317,21 +317,21 @@
         <EffectArray index="31" removed="1"/>
         <EffectArray index="32" removed="1"/>
         <AffectedUnitArray index="2" value="Observer"/>
-        <AffectedUnitArray index="3" value="Phoenix"/>
+        <AffectedUnitArray index="3" value="CorsairMP"/>
         <AffectedUnitArray index="4" value="WarpPrism"/>
         <AffectedUnitArray index="5" value="Arbiter"/>
         <AffectedUnitArray index="6" removed="1"/>
         <AffectedUnitArray index="7" removed="1"/>
     </CUpgrade>
     <CUpgrade id="ProtossAirArmorsLevel3">
-        <EffectArray index="4" Reference="Unit,Phoenix,LifeArmorLevel"/>
-        <EffectArray index="5" Reference="Unit,Phoenix,LifeArmor"/>
+        <EffectArray index="4" Reference="Unit,CorsairMP,LifeArmorLevel"/>
+        <EffectArray index="5" Reference="Unit,CorsairMP,LifeArmor"/>
         <EffectArray index="6" Reference="Unit,Carrier,LifeArmorLevel"/>
         <EffectArray index="7" Reference="Unit,Carrier,LifeArmor"/>
         <EffectArray index="8" Reference="Unit,Interceptor,LifeArmorLevel"/>
         <EffectArray index="9" Reference="Unit,Interceptor,LifeArmor"/>
         <EffectArray index="10" Operation="Set" Reference="Actor,Observer,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-airarmorlevel3.dds"/>
-        <EffectArray index="11" Operation="Set" Reference="Actor,Phoenix,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-airarmorlevel3.dds"/>
+        <EffectArray index="11" Operation="Set" Reference="Actor,CorsairMP,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-airarmorlevel3.dds"/>
         <EffectArray index="12" Operation="Set" Reference="Actor,WarpPrism,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-airarmorlevel3.dds"/>
         <EffectArray index="13" Operation="Set" Reference="Actor,Carrier,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-airarmorlevel3.dds"/>
         <EffectArray index="14" Operation="Set" Reference="Actor,Interceptor,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-airarmorlevel3.dds"/>
@@ -354,7 +354,7 @@
         <EffectArray index="31" removed="1"/>
         <EffectArray index="32" removed="1"/>
         <AffectedUnitArray index="2" value="Observer"/>
-        <AffectedUnitArray index="3" value="Phoenix"/>
+        <AffectedUnitArray index="3" value="CorsairMP"/>
         <AffectedUnitArray index="4" value="WarpPrism"/>
         <AffectedUnitArray index="5" value="Arbiter"/>
         <AffectedUnitArray index="6" removed="1"/>
@@ -379,7 +379,7 @@
         <EffectArray index="15" Reference="Weapon,PhaseDisruptorCannon,Icon"/>
         <EffectArray index="16" Operation="Add" Reference="Weapon,PhaseDisruptorCannon,Level" Value="1"/>
         <EffectArray index="17" Operation="Add" Reference="Effect,CorsairShieldDamage,Amount" Value="1"/>
-        <AffectedUnitArray index="1" value="Phoenix"/>
+        <AffectedUnitArray index="1" value="CorsairMP"/>
         <AffectedUnitArray index="2" value="Scout"/>
         <AffectedUnitArray index="3" value="Arbiter"/>
     </CUpgrade>
@@ -402,7 +402,7 @@
         <EffectArray index="15" Reference="Weapon,PhaseDisruptorCannon,Icon"/>
         <EffectArray index="16" Operation="Add" Reference="Weapon,PhaseDisruptorCannon,Level" Value="1"/>
         <EffectArray index="17" Operation="Add" Reference="Effect,CorsairShieldDamage,Amount" Value="1"/>
-        <AffectedUnitArray index="1" value="Phoenix"/>
+        <AffectedUnitArray index="1" value="CorsairMP"/>
         <AffectedUnitArray index="2" value="Scout"/>
         <AffectedUnitArray index="3" value="Arbiter"/>
     </CUpgrade>
@@ -425,7 +425,7 @@
         <EffectArray index="15" Reference="Weapon,PhaseDisruptorCannon,Icon"/>
         <EffectArray index="16" Operation="Add" Reference="Weapon,PhaseDisruptorCannon,Level" Value="1"/>
         <EffectArray index="17" Operation="Add" Reference="Effect,CorsairShieldDamage,Amount" Value="1"/>
-        <AffectedUnitArray index="1" value="Phoenix"/>
+        <AffectedUnitArray index="1" value="CorsairMP"/>
         <AffectedUnitArray index="2" value="Scout"/>
         <AffectedUnitArray index="3" value="Arbiter"/>
     </CUpgrade>
@@ -703,8 +703,8 @@
         <EffectArray index="13" Reference="Unit,Observer,ShieldArmor"/>
         <EffectArray index="14" Reference="Unit,WarpPrism,ShieldArmorLevel"/>
         <EffectArray index="15" Reference="Unit,WarpPrism,ShieldArmor"/>
-        <EffectArray index="16" Reference="Unit,Phoenix,ShieldArmorLevel"/>
-        <EffectArray index="17" Reference="Unit,Phoenix,ShieldArmor"/>
+        <EffectArray index="16" Reference="Unit,CorsairMP,ShieldArmorLevel"/>
+        <EffectArray index="17" Reference="Unit,CorsairMP,ShieldArmor"/>
         <EffectArray index="18" Reference="Unit,Carrier,ShieldArmorLevel"/>
         <EffectArray index="19" Reference="Unit,Carrier,ShieldArmor"/>
         <EffectArray index="20" Reference="Unit,Interceptor,ShieldArmorLevel"/>
@@ -743,7 +743,7 @@
         <EffectArray index="53" Operation="Set" Reference="Actor,Archon,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
         <EffectArray index="54" Operation="Set" Reference="Actor,Observer,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
         <EffectArray index="55" Operation="Set" Reference="Actor,WarpPrism,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
-        <EffectArray index="56" Operation="Set" Reference="Actor,Phoenix,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray index="56" Operation="Set" Reference="Actor,CorsairMP,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
         <EffectArray index="57" Operation="Set" Reference="Actor,Carrier,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
         <EffectArray index="58" Operation="Set" Reference="Actor,Interceptor,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
         <EffectArray index="59" Operation="Set" Reference="Actor,Nexus,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
@@ -817,7 +817,7 @@
         <AffectedUnitArray index="12" value="HighTemplar"/>
         <AffectedUnitArray index="13" value="Interceptor"/>
         <AffectedUnitArray index="15" value="Observer"/>
-        <AffectedUnitArray index="16" value="Phoenix"/>
+        <AffectedUnitArray index="16" value="CorsairMP"/>
         <AffectedUnitArray index="17" value="PhotonCannon"/>
         <AffectedUnitArray index="18" value="Probe"/>
         <AffectedUnitArray index="19" value="Pylon"/>
@@ -850,8 +850,8 @@
         <EffectArray index="13" Reference="Unit,Observer,ShieldArmor"/>
         <EffectArray index="14" Reference="Unit,WarpPrism,ShieldArmorLevel"/>
         <EffectArray index="15" Reference="Unit,WarpPrism,ShieldArmor"/>
-        <EffectArray index="16" Reference="Unit,Phoenix,ShieldArmorLevel"/>
-        <EffectArray index="17" Reference="Unit,Phoenix,ShieldArmor"/>
+        <EffectArray index="16" Reference="Unit,CorsairMP,ShieldArmorLevel"/>
+        <EffectArray index="17" Reference="Unit,CorsairMP,ShieldArmor"/>
         <EffectArray index="18" Reference="Unit,Carrier,ShieldArmorLevel"/>
         <EffectArray index="19" Reference="Unit,Carrier,ShieldArmor"/>
         <EffectArray index="20" Reference="Unit,Interceptor,ShieldArmorLevel"/>
@@ -890,7 +890,7 @@
         <EffectArray index="53" Operation="Set" Reference="Actor,Archon,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
         <EffectArray index="54" Operation="Set" Reference="Actor,Observer,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
         <EffectArray index="55" Operation="Set" Reference="Actor,WarpPrism,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
-        <EffectArray index="56" Operation="Set" Reference="Actor,Phoenix,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray index="56" Operation="Set" Reference="Actor,CorsairMP,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
         <EffectArray index="57" Operation="Set" Reference="Actor,Carrier,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
         <EffectArray index="58" Operation="Set" Reference="Actor,Interceptor,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
         <EffectArray index="59" Operation="Set" Reference="Actor,Nexus,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
@@ -965,6 +965,7 @@
         <AffectedUnitArray index="13" value="HighTemplar"/>
         <AffectedUnitArray index="14" value="Interceptor"/>
         <AffectedUnitArray index="15" value="Nexus"/>
+        <AffectedUnitArray index="17" value="CorsairMP"/>
         <AffectedUnitArray index="27" value="WarpPrism"/>
         <AffectedUnitArray index="28" value="Zealot"/>
         <AffectedUnitArray index="29" removed="1"/>
@@ -987,8 +988,8 @@
         <EffectArray index="13" Reference="Unit,Observer,ShieldArmor"/>
         <EffectArray index="14" Reference="Unit,WarpPrism,ShieldArmorLevel"/>
         <EffectArray index="15" Reference="Unit,WarpPrism,ShieldArmor"/>
-        <EffectArray index="16" Reference="Unit,Phoenix,ShieldArmorLevel"/>
-        <EffectArray index="17" Reference="Unit,Phoenix,ShieldArmor"/>
+        <EffectArray index="16" Reference="Unit,CorsairMP,ShieldArmorLevel"/>
+        <EffectArray index="17" Reference="Unit,CorsairMP,ShieldArmor"/>
         <EffectArray index="18" Reference="Unit,Carrier,ShieldArmorLevel"/>
         <EffectArray index="19" Reference="Unit,Carrier,ShieldArmor"/>
         <EffectArray index="20" Reference="Unit,Interceptor,ShieldArmorLevel"/>
@@ -1027,7 +1028,7 @@
         <EffectArray index="53" Operation="Set" Reference="Actor,Archon,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
         <EffectArray index="54" Operation="Set" Reference="Actor,Observer,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
         <EffectArray index="55" Operation="Set" Reference="Actor,WarpPrism,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
-        <EffectArray index="56" Operation="Set" Reference="Actor,Phoenix,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray index="56" Operation="Set" Reference="Actor,CorsairMP,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
         <EffectArray index="57" Operation="Set" Reference="Actor,Carrier,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
         <EffectArray index="58" Operation="Set" Reference="Actor,Interceptor,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
         <EffectArray index="59" Operation="Set" Reference="Actor,Nexus,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
@@ -1102,6 +1103,7 @@
         <AffectedUnitArray index="13" value="HighTemplar"/>
         <AffectedUnitArray index="14" value="Interceptor"/>
         <AffectedUnitArray index="15" value="Nexus"/>
+        <AffectedUnitArray index="17" value="CorsairMP"/>
         <AffectedUnitArray index="27" value="WarpPrism"/>
         <AffectedUnitArray index="28" value="Zealot"/>
         <AffectedUnitArray index="29" removed="1"/>
@@ -1114,7 +1116,7 @@
     <CUpgrade id="ResearchDisruptionWeb">
         <Icon value="Assets\Textures\btn-ability-protoss-blackhole-color.dds"/>
         <EditorCategories value="Race:Protoss,UpgradeType:SpellResearch"/>
-        <AffectedUnitArray value="Phoenix"/>
+        <AffectedUnitArray value="CorsairMP"/>
     </CUpgrade>
     <CUpgrade id="ResearchEMPShockwave">
         <Icon value="Assets\Textures\btn-ability-terran-emp-color.dds"/>
