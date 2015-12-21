@@ -230,6 +230,7 @@ Button/Name/WarpinObservatory=Warp in Observatory
 Button/Name/WarpinReaver=Warp in Reaver
 Button/Name/WarpinShieldBattery=Warp in Shield Battery
 Button/Name/Wraith=Build Wraith
+Button/Name/hydraliskspeed=Evolve Grooved Spines
 Button/Tooltip/BroodLord2=
 Button/Tooltip/BuildAcademy=
 Button/Tooltip/BuildControlTower=
@@ -242,7 +243,7 @@ Button/Tooltip/BuildScienceVessel=
 Button/Tooltip/BuildValkyrie=
 Button/Tooltip/BurrowLurker=
 Button/Tooltip/CarrierSC2BW=Capital ship. Can build and launch Interceptors to make attacks.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
-Button/Tooltip/CharonBoosters=
+Button/Tooltip/CharonBoosters=Increases <c val="ffff8a">Goliath</c> air attack range by +3.
 Button/Tooltip/CloakOnGhostSC2BW=Cloaks the unit, preventing enemy units from seeing or attacking it. A cloaked unit will only be revealed by detectors or effects.<n/><n/><c val="f078ff">Drains <d ref="-1 * (Behavior,GhostCloak,Modification.VitalRegenArray[2] + Unit,Ghost,EnergyRegenRate)" precision="1"/> energy per second.</c>
 Button/Tooltip/CloakOnWraith=Cloaks the unit, preventing enemy units from seeing or attacking it. A cloaked unit will only be revealed by detectors or effects.<n/><n/><c val="f078ff">Drains <d ref="-1 * (Behavior,BansheeCloak,Modification.VitalRegenArray[2] + Unit,Banshee,EnergyRegenRate)" precision="1"/> energy per second.</c>
 Button/Tooltip/ConstructScarab=
@@ -258,9 +259,9 @@ Button/Tooltip/DefilerBurrowed=Spellcaster unit.<n/><n/>HP - <c val="FF0000"><d 
 Button/Tooltip/DisruptionWeb=
 Button/Tooltip/Drone=Basic worker unit. Can harvest minerals and vespene gas. Can mutate into structures.<n/><n/>HP - <c val="FF0000"><d ref="Unit,Drone,LifeMax[0]"/></c><n/>Damage - <c val="FF0000"><d ref="Effect,Spines,Amount[0]"/></c> (<c val="00FF00">+1</c>)<n/>Armor - <c val="FF0000"><d ref="Unit,Drone,LifeArmor[0]"/></c> (<c val="00FF00">+1</c>)<n/>Attack Speed - <c val="FF0000"><d ref="Weapon,Spines,Period[0]" precision="2"/></c><n/>Range - <c val="FF0000"><d ref="Weapon,Spines,Range[0]" precision="1"/></c><n/>Size - <c val="FF0000">Small</c><n/><n/><c val="ffff8a">Can attack ground units.</c>
 Button/Tooltip/Ensnare=
-Button/Tooltip/EvolveEnsnare=
-Button/Tooltip/EvolveInfestorEnergyUpgrade=Increases the maximum energy of Queens by 50.
-Button/Tooltip/EvolveSpawnBroodling=
+Button/Tooltip/EvolveEnsnare=Allows the <c val="ffff8a">Queen</c> to use the Ensnare ability.<n/>Units affected by Ensnare have a significantly reduced movement speed.
+Button/Tooltip/EvolveInfestorEnergyUpgrade=<c val="ffff8a">Queen</c> energy capacity increases to from 200 to 250 (+50) and increases <c val="ffff8a">Queen</c> starting energy form 50 to 62.
+Button/Tooltip/EvolveSpawnBroodling=Allows the <c val="ffff8a">Queen</c> to use the Spawn Broodling ability.<n/>Target unit is destroyed and spawns 2 <c val="ffff8a">Broodling</c>s with a timed life.
 Button/Tooltip/Firebat=Infantry equipped with a Flamethrower, does AoE damage. Can be upgraded with Stim Pack.
 Button/Tooltip/Goliath=Combat Mech, Powerful Air-to-Air and additional Ground Attack, can be upgraded with additional AtA Range.
 Button/Tooltip/HallucinationHighTemplar=
@@ -271,14 +272,15 @@ Button/Tooltip/InfestedTerran=An Infested Terran does moderate damage and lasts 
 Button/Tooltip/Irradiate=Cast on Target Unit.<n/>Damages Biological Units in an Area, dealing 250 damage over 30 seconds.
 Button/Tooltip/LarvaSC2BW=Morphs into Zerg units.
 Button/Tooltip/Lurker=
-Button/Tooltip/LurkerDen=
+Button/Tooltip/LurkerDen=Allows the <c val="ffff8a">Hydralisk</c> to morph into the <c val="ffff8a">Lurker</c>
 Button/Tooltip/Maelstrom=
 Button/Tooltip/MarineSC2BW=General-purpose infantry.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/Medic=Infantry with no Attack. Can Heal allied Biological Units. Can be upgraded with Restoration and Optic Flare.
 Button/Tooltip/MedicHeal=
 Button/Tooltip/MindControl=
-Button/Tooltip/MindControl2=
+Button/Tooltip/MindControl2=Allows the <c val="ffff8a">Dark Archon</c> to use the Mind Control ability.<n/>Takes control of target unit permenantly.
 Button/Tooltip/MineralFieldSpecial=Workers can harvest resources from this Mineral Field.
+Button/Tooltip/MuscularAugments=<c val="ffff8a">Hydralisks</c> movement speed increased by 1.043.
 Button/Tooltip/Mutalisk=Flying Attack Unit.<n/><n/>HP - <c val="FF0000"><d ref="Unit,Mutalisk,LifeMax[0]"/></c><n/>Damage - <c val="FF0000"><d ref="Effect,GlaiveWurmU1,Amount[0]"/></c> (<c val="00FF00">+1</c>)<n/>Armor - <c val="FF0000"><d ref="Unit,Mutalisk,LifeArmor[0]"/></c> (<c val="00FF00">+1</c>)<n/>Attack Speed - <c val="FF0000"><d ref="Weapon,GlaiveWurm,Period[0]" precision="2"/></c><n/>Range - <c val="FF0000"><d ref="Weapon,GlaiveWurm,Range[0]"/></c><n/>Size - <c val="FF0000">Small</c><n/><n/><c val="ffff8a">Can attack ground and air units.</c>
 Button/Tooltip/MutateintoDefilerMound=
 Button/Tooltip/NydusCanal=Friendly ground units can use a Nydus Canal to instantly travel to any other Nydus Canal owned by the player.
@@ -292,41 +294,52 @@ Button/Tooltip/Queen=A flying support caster.<n/><n/>HP - <c val="FF0000"><d ref
 Button/Tooltip/QueenBW=A flying support caster. can cast Parasite, Spawn Broodling and Ensnare.
 Button/Tooltip/Rally2=
 Button/Tooltip/RechargeShield=
-Button/Tooltip/ResearchAntennae=
-Button/Tooltip/ResearchApialSensors=
-Button/Tooltip/ResearchArgusJewel=
-Button/Tooltip/ResearchArgusTalisman=
-Button/Tooltip/ResearchCloakingField=Enables the Wraith to use the Cloak ability. Cloak renders the Wraith invisible to enemies unless the unit is revealed by detectors or effects.
-Button/Tooltip/ResearchConsume=
-Button/Tooltip/ResearchDisruptionWeb=
-Button/Tooltip/ResearchEMPShockwave=
-Button/Tooltip/ResearchGraviticThrusters=Increases the movement speed of the Scout.
+Button/Tooltip/ResearchAntennae=Increases <c val="ffff8a">Overlord</c> sight range by +2.
+Button/Tooltip/ResearchApialSensors=Increases the sight range of the <c val="ffff8a">Scout</c> by +2.
+Button/Tooltip/ResearchArgusJewel=<c val="ffff8a">Corsair</c> energy capacity increases to from 200 to 250 (+50) and increases <c val="ffff8a">Corsair</c> starting energy form 50 to 62.
+Button/Tooltip/ResearchArgusTalisman=<c val="ffff8a">Dark Archon</c> energy capacity increases to from 200 to 250 (+50) and increases <c val="ffff8a">Dark Archon</c> starting energy form 50 to 62.
+Button/Tooltip/ResearchBattlecruiserEnergyUpgrade=<c val="ffff8a">Battlecruiser</c> energy capacity increases to from 200 to 250 (+50) and increases <c val="ffff8a">Battlecruiser</c> starting energy form 50 to 62.
+Button/Tooltip/ResearchBattlecruiserSpecializations=Enables use of the <c val="ffff8a">Battlecruiser</c> Yamato Cannon.
+Button/Tooltip/ResearchCharge=Increases the movement speed of <c val="ffff8a">Zealots</c>.
+Button/Tooltip/ResearchCloakingField=Enables the <c val="ffff8a">Wraith</c> to use the Cloak ability. Cloak renders the <c val="ffff8a">Wraith</c> invisible to enemies unless the unit is revealed by detectors or effects.
+Button/Tooltip/ResearchConsume=Allows the <c val="ffff8a">Defiler</c> to use the Consume ability. <n/>Consume target unit to instantly gain 50 Energy.
+Button/Tooltip/ResearchDisruptionWeb=Allows the <c val="ffff8a">Corsair</c> to use the Disruption Web ability.<n/>Units and Structures in affected area cannot attack. Casters are still able to cast, but spider mines will not activate.
+Button/Tooltip/ResearchEMPShockwave=Allows the <c val="ffff8a">Science Vessel</c> to use the EMP ability.<n/>Depletes the energy and shields of all units and buildings within the target area.
+Button/Tooltip/ResearchGhostEnergyUpgrade=<c val="ffff8a">Ghost</c> energy capacity increases to from 200 to 250 (+50) and increases <c val="ffff8a">Ghost</c> starting energy form 50 to 62.
+Button/Tooltip/ResearchGraviticBooster=Increases the movement speed of <c val="ffff8a">Observers</c>.
+Button/Tooltip/ResearchGraviticDrive=Increases the movement speed of <c val="ffff8a">Shuttles</c>.
+Button/Tooltip/ResearchGraviticThrusters=Increases the movement speed of the <c val="ffff8a">Scout</c> by 0.938.
+Button/Tooltip/ResearchHallucination=Allows <c val="ffff8a">High Templar</c> to use the Hallucination ability.<n/>Hallucination creates two duplicates of the target unit that have a timed lifespan and take double damage.
 Button/Tooltip/ResearchHallucinationHighTemplar=
-Button/Tooltip/ResearchIncreasedReaverCapacity=
-Button/Tooltip/ResearchIonThrusters=
-Button/Tooltip/ResearchIrradiate=Cast on Target Unit.<n/>Damages Biological Units in an Area, dealing 250 damage over 30 seconds.
-Button/Tooltip/ResearchKhaydarinCore=
-Button/Tooltip/ResearchLockdown=
-Button/Tooltip/ResearchMaelstrom=
-Button/Tooltip/ResearchMetasynapticNode=
-Button/Tooltip/ResearchOcularImplants=
-Button/Tooltip/ResearchOpticalFlare=
-Button/Tooltip/ResearchPlague=
-Button/Tooltip/ResearchRecall=
-Button/Tooltip/ResearchRestoration=
-Button/Tooltip/ResearchScarabDamage=
-Button/Tooltip/ResearchScienceVesselEnergyUpgrade=
-Button/Tooltip/ResearchSensorArray=
-Button/Tooltip/ResearchSingularityCharge2=
-Button/Tooltip/ResearchSpiderMinesSC1=Allows the Vulture to deploy Spider Mines.
-Button/Tooltip/ResearchStasis=
-Button/Tooltip/ResearchWraithEnergyUpgrade=
+Button/Tooltip/ResearchHighTemplarEnergyUpgrade=<c val="ffff8a">High Templar</c> energy capacity increases to from 200 to 250 (+50) and increases <c val="ffff8a">High Templar</c> starting energy form 50 to 62.
+Button/Tooltip/ResearchIncreasedReaverCapacity=Increases the <c val="ffff8a">Scarab</c> capacity for <c val="ffff8a">Reavers</c>.
+Button/Tooltip/ResearchInterceptorLaunchSpeedUpgrade=Upgrade the <c val="ffff8a">Carrier</c> to have 8 <c val="ffff8a">Interceptor</c>s
+Button/Tooltip/ResearchIonThrusters=Increases <c val="ffff8a">Vulture</c> movement speed.
+Button/Tooltip/ResearchIrradiate=Allows the <c val="ffff8a">Science Vessel</c> to use the Irradiate ability.<n/>Damages a biological unit and adjacent biological units for 250 damage over time.
+Button/Tooltip/ResearchKhaydarinCore=<c val="ffff8a">Arbiter</c> energy capacity increases to from 200 to 250 (+50) and increases <c val="ffff8a">Arbiter</c> starting energy form 50 to 62.
+Button/Tooltip/ResearchLockdown=Allows the <c val="ffff8a">Ghost</c> to use the Lockdown ability. <n/>Disables targeted mechanical unit for 60 seconds.
+Button/Tooltip/ResearchMaelstrom=Allows the <c val="ffff8a">Dark Archon</c> to use the Maelstrom ability.<n/>Biological units in target area are frozen.
+Button/Tooltip/ResearchMedivacEnergyUpgrade=<c val="ffff8a">Medic</c> energy capacity increases to from 200 to 250 (+50) and increases <c val="ffff8a">Medic</c> starting energy form 50 to 62.
+Button/Tooltip/ResearchMetasynapticNode=<c val="ffff8a">Defiler</c> energy capacity increases to from 200 to 250 (+50) and increases <c val="ffff8a">Defiler</c> starting energy form 50 to 62.
+Button/Tooltip/ResearchOcularImplants=Increases <c val="ffff8a">Ghost</c> sight by 2 and range of Nuclear Strike by 2.
+Button/Tooltip/ResearchOpticalFlare=Allows the <c val="ffff8a">Medic</c> to use the Optical Flare ability.<n/>Target unit's sight range is reduced to 1 and any detection ability is disabled.
+Button/Tooltip/ResearchPlague=Allows the <c val="ffff8a">Defiler</c> to use the Plague ability. <n/>Units in target area become affected by Plague. Constantly taking non-fatal damage to the sum of 300.
+Button/Tooltip/ResearchRecall=Allows the <c val="ffff8a">Arbiter</c> to use the Recall Ability. Recall teleports friendly units to the location of the <c val="ffff8a">Arbiter</c>.
+Button/Tooltip/ResearchRestoration=Enables the <c val="ffff8a">Medic</c> to use the Restoration ability.<n/>Removes most negative effects from target unit.
+Button/Tooltip/ResearchScarabDamage=Increases the damage done by <c val="ffff8a">Scarabs</c> by +25.
+Button/Tooltip/ResearchScienceVesselEnergyUpgrade=<c val="ffff8a">Science Vessel</c> energy capacity increases to from 200 to 250 (+50) and increases <c val="ffff8a">Science Vessel</c> starting energy form 50 to 62.
+Button/Tooltip/ResearchSensorArray=Increases the sight and detection range of the <c val="ffff8a">Observer</c> by +2.
+Button/Tooltip/ResearchSingularityCharge2=Increases the attack range of the <c val="ffff8a">Dragoon</c> by +2.
+Button/Tooltip/ResearchSpiderMinesSC1=Allows the <c val="ffff8a">Vulture</c> to deploy <c val="ffff8a">Spider Mines</c>.
+Button/Tooltip/ResearchStasis=Allows the <c val="ffff8a">Arbiter</c> to use the Stasis ability. <n/>Freezes targeted units. Units in a Stasis Field cannot move, attack, be attacked or be affected by spells for the duration of the stasis.
+Button/Tooltip/ResearchWraithEnergyUpgrade=<c val="ffff8a">Wraith</c> energy capacity increases to from 200 to 250 (+50) and increases <c val="ffff8a">Wraith</c> starting energy form 50 to 62.
 Button/Tooltip/Scourge=Fast Suicide Flying Unit.<n/><n/>HP - <c val="FF0000"><d ref="Unit,Scourge,LifeMax[0]"/></c><n/>Damage - <c val="FF0000"><d ref="Effect,SuicideDamage,Amount[0]"/></c> (<c val="00FF00">+0</c>)<n/>Armor - <c val="FF0000"><d ref="Unit,Scourge,LifeArmor[0]"/></c> (<c val="00FF00">+1</c>)<n/>Attack Speed - (<c val="FF0000">Suicide</c>)<n/>Range - <c val="FF0000">Melee</c><n/>Size - <c val="FF0000">Small</c><n/><n/><c val="FFFF8A">Can attack Flying units.</c>
 Button/Tooltip/SiegeModeSC2BW=Deploys into Siege Mode. In this mode Siege Tanks have very long range and inflict area damage. Siege Tanks in this mode cannot move or attack targets at close range.
 Button/Tooltip/SpawnBroodling=
 Button/Tooltip/SpiderMine=
+Button/Tooltip/Stimpack=Enables <c val="ffff8a">Marines</c> and <c val="ffff8a">Firebats</c> to use the Stimpack ability. Stimpacks cause damage to a unit, but they increase its attack and movement speeds for a short time.
 Button/Tooltip/SummonNydusWorm=Summons a Nydus Canal at the target location.<n/>Friendly ground units can use a Nydus Canal to instantly travel to any other Nydus Canal owned by the player.
-Button/Tooltip/U238Shells=
+Button/Tooltip/U238Shells=Increases <c val="ffff8a">Marine</c> attack range by +1
 Button/Tooltip/Ultralisk=Heavy assault beast. Has an area-damage attack.<n/><n/>HP - <c val="FF0000"><d ref="Unit,Ultralisk,LifeMax[0]"/></c><n/>Damage - <c val="FF0000"><d ref="Effect,KaiserBladesDamage,Amount[0]"/></c> (<c val="00FF00">+3</c>)<n/>Armor - <c val="FF0000"><d ref="Unit,Ultralisk,LifeArmor[0]"/></c> (<c val="00FF00">+1</c>)<n/>Attack Speed - <c val="FF0000"><d ref="Weapon,KaiserBlades,Period[0]" precision="2"/></c><n/>Range - <c val="FF0000">Melee</c><n/>Size - <c val="FF0000">Large</c><n/><n/><c val="ffff8a">Can attack ground units.</c>
 Button/Tooltip/UseLockdown=
 Button/Tooltip/UseRestoration=
@@ -341,6 +354,8 @@ Button/Tooltip/WarpinReaver=
 Button/Tooltip/WarpinShieldBattery=
 Button/Tooltip/Wraith=Fast Moving Air-to-Air Fighter with a Ground Attack.
 Button/Tooltip/Zergling=Fast melee creature.<n/><n/>HP - <c val="FF0000"><d ref="Unit,Zergling,LifeMax[0]"/></c><n/>Damage - <c val="FF0000"><d ref="Effect,Claws,Amount[0]"/></c> (<c val="00FF00">+1</c>)<n/>Armor - <c val="FF0000"><d ref="Unit,Zergling,LifeArmor[0]"/></c> (<c val="00FF00">+1</c>)<n/>Attack Speed - <c val="FF0000"><d ref="Weapon,Claws,Period[0]" precision="2"/></c><n/>Range - <c val="FF0000">Melee</c><n/>Size - <c val="FF0000">Small</c><n/><n/><c val="FFFF8A">Can attack ground units.</c>
+Button/Tooltip/hydraliskspeed=Increases <c val="ffff8a">Hydralisk</c> attack range by +1.
+Button/Tooltip/overlordspeed=Increases the movement speed of <c val="ffff8a">Overlords</c>.
 DOCSTR_0000=Terran Valkyrie
 DocInfo/Author=MavercK
 DocInfo/Name=SC2 - Brood War ( SC2BW )
