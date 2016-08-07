@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="us-ascii"?>
 <Catalog>
     <CButton id="BroodLord">
-        <Icon value="Assets\Textures\btn-unit-zerg-guardian.dds"/>
-        <AlertIcon value="Assets\Textures\btn-unit-zerg-guardian.dds"/>
+        <Icon value="Assets\Textures\btn-unit-zerg-primalguardian.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-zerg-primalguardian.dds"/>
+    </CButton>
+    <CButton id="CloakOnGhostSC2BW">
+        <Icon value="Assets\Textures\btn-ability-terran-cloak-color.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-terran-cloak-color.dds"/>
+        <EditorCategories value="Race:Terran"/>
+        <HotkeyAlias value="CloakOnBanshee"/>
+        <HotkeySet value="Cloak"/>
     </CButton>
     <CButton id="CloakOnWraith">
         <Icon value="Assets\Textures\btn-ability-terran-cloak-color.dds"/>
@@ -19,11 +26,7 @@
         <Icon value="Assets\Textures\btn-building-zerg-creepcolony.dds"/>
         <AlertIcon value="Assets\Textures\btn-building-zerg-creepcolony.dds"/>
     </CButton>
-    <CButton id="Ensnare">
-        <Icon value="Assets\Textures\btn-ability-zerg-fungalgrowth-color.dds"/>
-        <AlertIcon value="Assets\Textures\btn-ability-zerg-fungalgrowth-color.dds"/>
-        <EditorCategories value="Race:Zerg"/>
-    </CButton>
+    <CButton id="Ensnare"/>
     <CButton id="EvolveInfestorEnergyUpgrade">
         <Icon value="Assets\Textures\btn-upgrade-zerg-tissueassimilation.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-zerg-tissueassimilation.dds"/>
@@ -78,8 +81,8 @@
         <AlertIcon value="Assets\Textures\btn-unit-protoss-corsair.dds"/>
     </CButton>
     <CButton id="Queen">
-        <Icon value="Assets\Textures\btn-unit-zerg-Queen.dds"/>
-        <AlertIcon value="Assets\Textures\btn-unit-zerg-Queen.dds"/>
+        <Icon value="Assets\Textures\btn-unit-zerg-queenclassic.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-zerg-queenclassic.dds"/>
     </CButton>
     <CButton id="Rally2">
         <Icon value="Assets\Textures\btn-ability-terran-setrallypoint.dds"/>
@@ -120,20 +123,20 @@
         <AlertIcon value="Assets\Textures\btn-building-terran-reactor.dds"/>
     </CButton>
     <CButton id="BuildPhysicsLab">
-        <Icon value="Assets\Textures\btn-building-terran-fusioncore.dds"/>
-        <AlertIcon value="Assets\Textures\btn-building-terran-fusioncore.dds"/>
+        <Icon value="Assets\Textures\btn-building-terran-techlab.dds"/>
+        <AlertIcon value="Assets\Textures\btn-building-terran-techlab.dds"/>
     </CButton>
     <CButton id="BuildNuclearSilo">
         <Icon value="Assets\Textures\btn-building-terran-nukesilo.dds"/>
         <AlertIcon value="Assets\Textures\btn-building-terran-nukesilo.dds"/>
     </CButton>
     <CButton id="BuildMachineShop">
-        <Icon value="Assets\Textures\btn-building-terran-techreactor.dds"/>
-        <AlertIcon value="Assets\Textures\btn-building-terran-techreactor.dds"/>
+        <Icon value="Assets\Textures\btn-building-terran-machineshop.dds"/>
+        <AlertIcon value="Assets\Textures\btn-building-terran-machineshop.dds"/>
     </CButton>
     <CButton id="BuildCovertOps">
-        <Icon value="Assets\Textures\btn-building-terran-techlab.dds"/>
-        <AlertIcon value="Assets\Textures\btn-building-terran-techlab.dds"/>
+        <Icon value="Assets\Textures\btn-building-terran-covertops.dds"/>
+        <AlertIcon value="Assets\Textures\btn-building-terran-covertops.dds"/>
     </CButton>
     <CButton id="DarkArchonWarpSelection">
         <Icon value="Assets\Textures\btn-unit-protoss-darkarchon.dds"/>
@@ -165,8 +168,8 @@
         <AlertIcon value="Assets\Textures\btn-ability-zerg-darkswarm.dds"/>
     </CButton>
     <CButton id="ConstructScarab">
-        <Icon value="Assets\Textures\Import\btn-upgrade-protoss-scarabdamage-color.dds"/>
-        <AlertIcon value="Assets\Textures\Import\btn-upgrade-protoss-scarabdamage-color.dds"/>
+        <Icon value="Assets\Textures\btn-ability-protoss-scarabshot.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-protoss-scarabshot.dds"/>
     </CButton>
     <CButton id="Maelstrom">
         <Icon value="Assets\Textures\btn-ability-protoss-maelstrom.dds"/>
@@ -287,8 +290,8 @@
         <EditorCategories value="Race:Protoss"/>
     </CButton>
     <CButton id="ResearchStasis">
-        <Icon value="Assets\Textures\btn-ability-protoss-gravitonbeam-color.dds"/>
-        <AlertIcon value="Assets\Textures\btn-ability-protoss-gravitonbeam-color.dds"/>
+        <Icon value="Assets\Textures\btn-ability-protoss-stasisfield.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-protoss-stasisfield.dds"/>
     </CButton>
     <CButton id="ResearchMetasynapticNode">
         <Icon value="Assets\Textures\btn-upgrade-zerg-pathogenglands.dds"/>
@@ -301,8 +304,8 @@
         <Hotkey value="Button/Hotkey/ProtossAirWeaponsLevel1"/>
     </CButton>
     <CButton id="ResearchScarabDamage">
-        <Icon value="Assets\Textures\Import\btn-upgrade-protoss-scarabdamage-color.dds"/>
-        <AlertIcon value="Assets\Textures\Import\btn-upgrade-protoss-scarabdamage-color.dds"/>
+        <Icon value="Assets\Textures\btn-upgrade-artanis-scarabsplashradius.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-artanis-scarabsplashradius.dds"/>
     </CButton>
     <CButton id="SiegeModeSC2BW">
         <Icon value="Assets\Textures\btn-unit-terran-siegetanksiegemode.dds"/>
@@ -319,8 +322,8 @@
         <AlertIcon value="Assets\Textures\Import\btn-advancedhealingaib.dds"/>
     </CButton>
     <CButton id="UseStasisField">
-        <Icon value="Assets\Textures\btn-ability-protoss-gravitonbeam-color.dds"/>
-        <AlertIcon value="Assets\Textures\btn-ability-protoss-gravitonbeam-color.dds"/>
+        <Icon value="Assets\Textures\btn-ability-protoss-stasisfield.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-protoss-stasisfield.dds"/>
     </CButton>
     <CButton id="U238Shells">
         <Icon value="Assets\Textures\btn-upgrade-terran-u238.dds"/>
@@ -386,8 +389,8 @@
         <EditorCategories value="Race:Zerg"/>
     </CButton>
     <CButton id="Stalker">
-        <Icon value="Assets\Textures\btn-unit-protoss-dragoon.dds"/>
-        <AlertIcon value="Assets\Textures\btn-unit-protoss-dragoon.dds"/>
+        <Icon value="Assets\Textures\btn-unit-protoss-dragoon-void.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-protoss-dragoon-void.dds"/>
     </CButton>
     <CButton id="WarpInScout">
         <Icon value="Assets\Textures\btn-unit-protoss-scout.dds"/>

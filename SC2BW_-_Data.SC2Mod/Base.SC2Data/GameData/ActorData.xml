@@ -1,68 +1,11 @@
 <?xml version="1.0" encoding="us-ascii"?>
 <Catalog>
     <const id="$LurkerSpineSiteOps" value="{LurkerSOpAoEVariancer SOpShadow SOpForwardCasterPoint SOp2DRotation LurkerSOpShadowSpine SOpRotVariancerUp15}"/>
-    <CActorUnit default="1" id="Beacon">
-        <BarHeight value="3"/>
-    </CActorUnit>
     <CActorRange default="1">
         <IconArcLength value="0.500000"/>
     </CActorRange>
-    <CActorUnit default="1" id="DestructibleUnitStandard">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit default="1" id="GenericBurrowerStandard">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit default="1" id="GenericUnitBase">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit default="1" id="GenericUnitBaseMorphTransition">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit default="1" id="GenericUnitCritter">
-        <BarHeight value="3"/>
-    </CActorUnit>
     <CActorUnit default="1" id="GenericUnitEmpty">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!-- Everything that is a unit derives from this.  This is a named default, instead of an-->
-    <!--         an unnamed one so that if we need to have units that don't need to have some of the-->
-    <!--         stuff that is here, we can just put them on a different name.  Otherwise, we'd have to-->
-    <!--         re-parent all the units that were relying on the unnamed default, which is a nightmare.-->
-    <!--         Removes are to be used as a last resort, b/c they are more complex.  They require an-->
-    <!--         add and a remove and can break if the add goes away, as opposed to having another-->
-    <!--         default and a lack of add.  (If that makes any sense.)-->
-    <!--         -->
-    <CActorUnit default="1" id="GenericUnitMinimal">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!-- For units that can be morphed into or out of. -->
-    <CActorUnit default="1" id="GenericUnitMorph">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!-- For anything that can be selected.  Primarily for cinematic doodads. -->
-    <CActorUnit default="1" id="GenericUnitSelectable">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!-- For any unit that might some day have an attack.  Probabably a good base class for all-->
-    <!--         main tech tree units and buildings. -->
-    <CActorUnit default="1" id="GenericUnitStandard">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- Resources                                                                               -->
-    <!--                                                                                         -->
-    <CActorUnit default="1" id="MineralBase">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit default="1" id="PathingBlocker">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit default="1" id="PolygonBase">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit default="1" id="ProtossBuilding">
-        <BarHeight value="3"/>
+        <BarHeight value="7"/>
     </CActorUnit>
     <CActorRange default="1" id="RangeAbil">
         <IconArcLength value="0.500000"/>
@@ -76,15 +19,6 @@
     <CActorRange default="1" id="RangeWeapon">
         <IconArcLength value="0.500000"/>
     </CActorRange>
-    <CActorUnit default="1" id="TerranBuilding">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit default="1" id="TerranBuildingFlyer">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit default="1" id="ZergBuilding">
-        <BarHeight value="3"/>
-    </CActorUnit>
     <CActorRange id="250mmStrikeCannonsRange">
         <IconArcLength value="0.500000"/>
     </CActorRange>
@@ -109,11 +43,37 @@
         <On Terms="Signal.*.Clear" Send="ClearTintColor 0.000000 Check"/>
     </CActorDoodad>
     <!--                                                                                         -->
+    <!-- Arbiter ........................................................................... -->
+    <!--                                                                                         -->
+    <CActorUnit id="ArbiterMP" unitName="Arbiter">
+        <On index="0" Terms="UnitBirth.Arbiter" Send="Create SoundEmitter Arbiter_Ambience"/>
+        <On index="1" Terms="UnitBirth.Arbiter"/>
+        <On index="2" Terms="UnitRevive.Arbiter"/>
+        <On index="3" Terms="UnitRevive.Arbiter"/>
+        <On index="4" Terms="UnitConstruction.Arbiter.Start"/>
+        <On index="5" Terms="UnitConstruction.Arbiter.Finish"/>
+        <Scale value="0.800000"/>
+        <DeathArray index="Normal" VoiceLink="ArbiterDeathVoice"/>
+        <GroupSoundArray index="What" value="Arbiter_GroupWhat"/>
+        <GroupSoundArray index="Yes" value="Arbiter_GroupYes"/>
+        <GroupSoundArray index="Attack" value="Arbiter_GroupAttack"/>
+        <GroupSoundArray index="Board" value="Arbiter_GroupBoard"/>
+        <SoundArray index="Birth" value="Arbiter_Birth"/>
+        <SoundArray index="Ready" value="Arbiter_Ready"/>
+        <SoundArray index="What" value="Arbiter_What"/>
+        <SoundArray index="Yes" value="Arbiter_Yes"/>
+        <SoundArray index="Pissed" value="Arbiter_Pissed"/>
+        <SoundArray index="Turning" value="Arbiter_Turning"/>
+        <SoundArray index="Board" value="Arbiter_Board"/>
+        <SoundArray index="Click" value="Arbiter_Click"/>
+        <SoundArray index="ClickError" value="Arbiter_ClickError"/>
+        <SoundArray index="Highlight" value="Arbiter_Highlight"/>
+    </CActorUnit>
+    <!--                                                                                         -->
     <!-- Archon ................................................................................ -->
     <!--                                                                                         -->
     <CActorUnit id="Archon">
         <Scale value="0.800000"/>
-        <BarHeight value="3"/>
     </CActorUnit>
     <CActorUnit id="Archon2" parent="GenericUnitBase" unitName="Archon2">
         <On Terms="Behavior.Hallucination.On" Send="Create HallucinationBirthSoundLarge"/>
@@ -178,68 +138,13 @@
     <!--                                                                                         -->
     <CActorUnit id="Armory">
         <Scale value="0.850000,0.850000,1.000000"/>
-        <BarHeight value="3"/>
     </CActorUnit>
     <CActorSplat id="ArmorySplat">
         <Scale value="0.850000,0.850000,1.000000"/>
     </CActorSplat>
-    <CActorUnit id="AssaultMorphModel">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- Assimilator ........................................................................... -->
-    <!--                                                                                         -->
-    <CActorUnit id="Assimilator">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- AutoTestAttackTargetAir ............................................................... -->
-    <!--                                                                                         -->
-    <CActorUnit id="AutoTestAttackTargetAir">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- AutoTestAttackTargetGround ............................................................ -->
-    <!--                                                                                         -->
-    <CActorUnit id="AutoTestAttackTargetGround">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!--                                                                                         -->
-    <!-- Auto Test Unit ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-    <!--                                                                                         -->
-    <!-- AutoTestAttacker ...................................................................... -->
-    <!--                                                                                         -->
-    <CActorUnit id="AutoTestAttacker">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- Auto Turret ........................................................................... -->
-    <!--                                                                                         -->
-    <CActorUnit id="AutoTurret">
-        <BarHeight value="3"/>
-    </CActorUnit>
     <CActorRange id="AutoTurretRange">
         <IconArcLength value="0.500000"/>
     </CActorRange>
-    <!--                                                                                         -->
-    <!-- Baneling .............................................................................. -->
-    <!--                                                                                         -->
-    <CActorUnit id="Baneling">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- Baneling Cocoon........................................................................ -->
-    <!--                                                                                         -->
-    <CActorUnit id="BanelingCocoon">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- Nest .................................................................................. -->
-    <!--                                                                                         -->
-    <CActorUnit id="BanelingNest">
-        <BarHeight value="3"/>
-    </CActorUnit>
     <CActorUnit id="BanelingNest2" parent="ZergBuilding" unitName="DefilerMound">
         <Macros value="QueueAnim"/>
         <On Terms="UnitDeathCustomize; ValidateUnit HasZergGenericDeath" Send="DeathCustomize Detached"/>
@@ -298,12 +203,6 @@
         <BarHeight value="1"/>
         <BarWidth value="1"/>
     </CActorMissile>
-    <!--                                                                                         -->
-    <!-- Banshee ............................................................................... -->
-    <!--                                                                                         -->
-    <CActorUnit id="Banshee">
-        <BarHeight value="3"/>
-    </CActorUnit>
     <CActorSound id="Banshee_CloakOff">
         <Sound value="Mothership_CloakFieldOff"/>
     </CActorSound>
@@ -315,24 +214,15 @@
     <!--                                                                                         -->
     <CActorUnit id="Barracks">
         <Scale value="0.950000,1.050000,1.000000"/>
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="BarracksReactor">
-        <BarHeight value="3"/>
     </CActorUnit>
     <CActorSplat id="BarracksSplat">
         <Scale value="0.950000,1.050000,1.000000"/>
     </CActorSplat>
-    <!-- Barracks Tech Lab -->
-    <CActorUnit id="BarracksTechLab">
-        <BarHeight value="3"/>
-    </CActorUnit>
     <!--                                                                                         -->
     <!-- Battlecruiser ......................................................................... -->
     <!--                                                                                         -->
     <CActorUnit id="Battlecruiser">
         <Scale value="0.900000"/>
-        <BarHeight value="3"/>
     </CActorUnit>
     <CActorAction id="BattlecruiserAirAttack">
         <LaunchAttachQuery Methods="Weapon 10"/>
@@ -345,89 +235,50 @@
     <CActorModel id="BattlecruiserYamatoAttackChargeModel">
         <HostSiteOps Ops="SOpAttachWeapon01"/>
     </CActorModel>
-    <CActorUnit id="BeaconAttack">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="BeaconDefend">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="BeaconDetect">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="BeaconExpand">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="BeaconHarass">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!--                                                                                         -->
-    <!-- Neutral ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-    <!--                                                                                         -->
-    <!--                                                                                         -->
-    <CActorUnit id="BeaconRally">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="BeaconScout">
-        <BarHeight value="3"/>
+    <CActorUnit id="CarrierSC2BW" parent="Carrier" unitName="CarrierSC2BW">
+        <On index="0" Terms="UnitBirth.CarrierSC2BW"/>
+        <On index="1" Terms="UnitBirth.CarrierSC2BW"/>
+        <On index="2" Terms="UnitRevive.CarrierSC2BW"/>
+        <On index="3" Terms="UnitRevive.CarrierSC2BW"/>
+        <On index="4" Terms="UnitConstruction.CarrierSC2BW.Start"/>
+        <On index="5" Terms="UnitConstruction.CarrierSC2BW.Finish"/>
+        <Model value="CarrierSC2BW"/>
+        <Scale value="0.500000"/>
+        <DeathArray index="Normal" ModelLink="CarrierDeathSC2BW"/>
+        <DeathCustoms index="5" ModelLink="ProtossLargeUnitDeath"/>
+        <PlacementModel value="CarrierSC2BW"/>
+        <HighlightTooltip value="Unit/Name/CarrierSC2BW"/>
     </CActorUnit>
     <!--                                                                                         -->
-    <!-- Circle(s) Of Power(s) ................................................................. -->
     <!--                                                                                         -->
-    <CActorUnit id="Beacon_Protoss">
-        <BarHeight value="3"/>
+    <!-- SC 1 Unit ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!--                                                                                         -->
+    <!--                                                                                         -->
+    <!--                                                                                         -->
+    <!-- Corsair ............................................................................... -->
+    <!--                                                                                         -->
+    <CActorUnit id="CorsairMP">
+        <Scale value="0.850000"/>
     </CActorUnit>
-    <CActorUnit id="Beacon_ProtossSmall">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="Beacon_Terran">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="Beacon_TerranSmall">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="Beacon_Zerg">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="Beacon_ZergSmall">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- BraxisAlphaDestructible1x1 ............................................................ -->
-    <!--                                                                                         -->
-    <CActorUnit id="BraxisAlphaDestructible1x1">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- BraxisAlphaDestructible1x2 ............................................................ -->
-    <!--                                                                                         -->
-    <CActorUnit id="BraxisAlphaDestructible1x2">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- BraxisAlphaDestructible2x2 ............................................................ -->
-    <!--                                                                                         -->
-    <CActorUnit id="BraxisAlphaDestructible2x2">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- BraxisAlphaSatelliteUnit .............................................................. -->
-    <!--                                                                                         -->
-    <CActorUnit id="BraxisAlphaSatelliteUnit">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- BraxisAlphaTruckStopFlippedUnit ....................................................... -->
-    <!--                                                                                         -->
-    <CActorUnit id="BraxisAlphaTruckStopFlippedUnit">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- BraxisAlphaTruckStopUnit .............................................................. -->
-    <!--                                                                                         -->
-    <CActorUnit id="BraxisAlphaTruckStopUnit">
-        <BarHeight value="3"/>
-    </CActorUnit>
+    <CActorSplat id="CorsairMPDisruptionWebCursorSplat" abil="DisruptionWeb">
+        <On index="0" Terms="Abil.DisruptionWeb.Cursor"/>
+    </CActorSplat>
+    <CActorModel id="CorsairMPDisruptionWebImpact">
+        <On index="3" Terms="Effect.DisruptionWebPersistent.Start" Send="Create"/>
+        <On index="4" Terms="Effect.DisruptionWebPersistent.Stop" Send="AnimBracketStop BSD"/>
+        <HostSiteOps Ops="SOpMoveUpByDot5"/>
+        <Scale value="0.700000"/>
+    </CActorModel>
+    <CActorRange id="CorsairMPDisruptionWebRange" abil="DisruptionWeb">
+        <On index="1" Terms="Abil.DisruptionWeb.TargetOn" Send="Create"/>
+        <On index="2" Terms="Abil.DisruptionWeb.TargetOff" Send="Destroy"/>
+        <On index="3" Terms="Abil.DisruptionWeb.ButtonHoverOn" Send="Create"/>
+        <On index="4" Terms="Abil.DisruptionWeb.ButtonHoverOff" Send="Destroy"/>
+        <Abil Link="DisruptionWeb"/>
+    </CActorRange>
+    <CActorModel id="Corsair_DisruptionWeb_Cast">
+        <On index="3" Terms="Abil.DisruptionWeb.SourceFinishStop" Send="Create"/>
+    </CActorModel>
     <CActorUnit id="Devourer" parent="GenericUnitMorph" unitName="BroodLord2">
         <AcceptedHostedPropTransfers index="Scale" value="0"/>
         <On Terms="ActorCreation" Send="$Birth 0 0.000000 -1.000000 0.000000"/>
@@ -462,67 +313,10 @@
         </Wireframe>
     </CActorUnit>
     <!--                                                                                         -->
-    <!-- Brood Lord Cocoon ..................................................................... -->
-    <!--                                                                                         -->
-    <CActorUnit id="BroodLordCocoon">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- Broodling ............................................................................. -->
-    <!--                                                                                         -->
-    <CActorUnit id="Broodling">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
     <!-- Bunker ................................................................................ -->
     <!--                                                                                         -->
     <CActorUnit id="Bunker">
         <Scale value="0.900000,0.900000,1.000000"/>
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="Carrier">
-        <Scale value="0.800000"/>
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorSound id="CarrierInterceptorLaunch">
-        <On Terms="Abil.HangarHardcore.Launch" Send="Create"/>
-    </CActorSound>
-    <CActorRange id="CarrierTest12">
-        <Inherits index="Visibility" value="0"/>
-        <FogVisibility value="Visible"/>
-        <Range value="12.000000"/>
-        <RangeFlags index="Minimap" value="1"/>
-    </CActorRange>
-    <CActorRange id="CarrierTest8">
-        <Inherits index="Visibility" value="0"/>
-        <FogVisibility value="Visible"/>
-        <Range value="8.000000"/>
-        <RangeFlags index="Minimap" value="1"/>
-    </CActorRange>
-    <!-- Carrion Bird                                                                            -->
-    <CActorUnit id="CarrionBird">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- Changeling                                                                              -->
-    <!--                                                                                         -->
-    <CActorUnit id="Changeling">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ChangelingMarine">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ChangelingMarineShield">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ChangelingZealot">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ChangelingZergling">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ChangelingZerglingWings">
-        <BarHeight value="3"/>
     </CActorUnit>
     <CActorSound id="CloakOff">
         <On index="1" Terms="Behavior.Cloak.Off" Send="Create"/>
@@ -532,42 +326,18 @@
         <On index="1" Terms="Behavior.Cloak.On" Send="Create"/>
         <Sound value="Mothership_CloakFieldOn"/>
     </CActorSound>
-    <!--                                                                                         -->
-    <!-- Colossus .............................................................................. -->
-    <!--                                                                                         -->
-    <CActorUnit id="Colossus">
-        <BarHeight value="3"/>
-    </CActorUnit>
     <CActorUnit id="CommandCenter">
         <Scale value="0.850000"/>
-        <BarHeight value="3"/>
     </CActorUnit>
     <CActorSplat id="CommandCenterSplat">
         <Scale value="0.800000,0.800000,0.900000"/>
     </CActorSplat>
-    <!-- CommentatorBots                                                            -->
-    <CActorUnit id="CommentatorBot1">
-        <BarHeight value="3"/>
-    </CActorUnit>
     <CActorRange id="ContaminateRange">
         <IconArcLength value="0.500000"/>
     </CActorRange>
     <CActorRange id="CorruptionRange">
         <IconArcLength value="0.500000"/>
     </CActorRange>
-    <!--                                                                                         -->
-    <!-- Corruptor ............................................................................. -->
-    <!--                                                                                         -->
-    <CActorUnit id="Corruptor">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!-- Cow                                                                                     -->
-    <CActorUnit id="Cow">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="CreepBlocker1x1">
-        <BarHeight value="3"/>
-    </CActorUnit>
     <CActorUnit id="CreepColony" parent="GenericUnitStandard" unitName="CreepColony">
         <EditorCategories value=""/>
         <On Terms="UnitConstruction.*.Start" Send="Create CreepColonyBuild"/>
@@ -606,31 +376,16 @@
     <!--                                                                                         -->
     <!-- Creep Tumor ........................................................................... -->
     <!--                                                                                         -->
-    <CActorUnit id="CreepTumor">
-        <BarHeight value="3"/>
-    </CActorUnit>
+    <CActorUnit id="CreepTumor"/>
     <CActorRange id="CreepTumorBuildRange">
         <IconArcLength value="0.500000"/>
     </CActorRange>
     <CActorUnit id="CyberneticsCore">
         <Scale value="0.850000,0.900000,1.000000"/>
-        <BarHeight value="3"/>
     </CActorUnit>
     <CActorSplat id="CyberneticsCoreSplat">
         <Scale value="0.850000,0.900000,1.000000"/>
     </CActorSplat>
-    <!--                                                                                         -->
-    <!-- Dark Shrine ........................................................................... -->
-    <!--                                                                                         -->
-    <CActorUnit id="DarkShrine">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- Dark Templar .......................................................................... -->
-    <!--                                                                                         -->
-    <CActorUnit id="DarkTemplar">
-        <BarHeight value="3"/>
-    </CActorUnit>
     <CActorAction id="DarkTemplarAttack">
         <On Terms="Effect.WarpBlades2.Start; At Caster" Send="Create"/>
     </CActorAction>
@@ -657,205 +412,12 @@
         <On index="5" Terms="AbilMorph.*.Start; MorphFrom DefilerBurrowed" Send="TimerSet 4.000000,2.000000 DelayDestroy"/>
         <Scale value="2.000000"/>
     </CActorSplat>
-    <!--                                                                                         -->
-    <!-- DestructibleBillboardScrollingText .................................................... -->
-    <!--                                                                                         -->
-    <CActorUnit id="DestructibleBillboardScrollingText">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- DestructibleBillboardTall ............................................................. -->
-    <!--                                                                                         -->
-    <CActorUnit id="DestructibleBillboardTall">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- DestructibleBullhornLights ............................................................ -->
-    <!--                                                                                         -->
-    <CActorUnit id="DestructibleBullhornLights">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- DestructibleDebris4x4 ................................................................. -->
-    <!--                                                                                         -->
-    <CActorUnit id="DestructibleDebris4x4">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- DestructibleDebris6x6 ................................................................. -->
-    <!--                                                                                         -->
-    <CActorUnit id="DestructibleDebris6x6">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- DestructibleDebrisRampDiagonalHugeULBR....................................................... -->
-    <!--                                                                                         -->
-    <CActorUnit id="DestructibleDebrisRampDiagonalHugeBLUR">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- DestructibleDebrisRampDiagonalHugeULBR....................................................... -->
-    <!--                                                                                         -->
-    <CActorUnit id="DestructibleDebrisRampDiagonalHugeULBR">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- DestructibleGarage .................................................................... -->
-    <!--                                                                                         -->
-    <CActorUnit id="DestructibleGarage">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- DestructibleGarageLarge ............................................................... -->
-    <!--                                                                                         -->
-    <CActorUnit id="DestructibleGarageLarge">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- DestructibleRampDiagonalHugeBLUR ...................................................... -->
-    <!--                                                                                         -->
-    <CActorUnit id="DestructibleRampDiagonalHugeBLUR">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- DestructibleRampDiagonalHugeULBR....................................................... -->
-    <!--                                                                                         -->
-    <CActorUnit id="DestructibleRampDiagonalHugeULBR">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- DestructibleRampHorizontalHuge ...................................................... -->
-    <!--                                                                                         -->
-    <CActorUnit id="DestructibleRampHorizontalHuge">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- DestructibleRampVerticalHuge ...................................................... -->
-    <!--                                                                                         -->
-    <CActorUnit id="DestructibleRampVerticalHuge">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- DestructibleRock2x4Horiztontal ........................................................ -->
-    <!--                                                                                         -->
-    <CActorUnit id="DestructibleRock2x4Horizontal">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- DestructibleRock2x4Vertical ........................................................... -->
-    <!--                                                                                         -->
-    <CActorUnit id="DestructibleRock2x4Vertical">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- DestructibleRock2x6Horiztontal ........................................................ -->
-    <!--                                                                                         -->
-    <CActorUnit id="DestructibleRock2x6Horizontal">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- DestructibleRock2x6Vertical ........................................................... -->
-    <!--                                                                                         -->
-    <CActorUnit id="DestructibleRock2x6Vertical">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- DestructibleRock4x4 ................................................................... -->
-    <!--                                                                                         -->
-    <CActorUnit id="DestructibleRock4x4">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- DestructibleRock6x6 ................................................................... -->
-    <!--                                                                                         -->
-    <CActorUnit id="DestructibleRock6x6">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!--                                                                                         -->
-    <!-- Destructible ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-    <!--                                                                                         -->
-    <!-- DestructibleSearchlight ............................................................... -->
-    <!--                                                                                         -->
-    <CActorUnit id="DestructibleSearchlight">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- DestructibleShadowFloodLights ......................................................... -->
-    <!--                                                                                         -->
-    <CActorUnit id="DestructibleShadowFloodLight">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- DestructibleSignsConstruction ......................................................... -->
-    <!--                                                                                         -->
-    <CActorUnit id="DestructibleSignsConstruction">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- DestructibleSignsDirectional .......................................................... -->
-    <!--                                                                                         -->
-    <CActorUnit id="DestructibleSignsDirectional">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- DestructibleSignsFunny ................................................................ -->
-    <!--                                                                                         -->
-    <CActorUnit id="DestructibleSignsFunny">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- DestructibleSignsIcons ................................................................ -->
-    <!--                                                                                         -->
-    <CActorUnit id="DestructibleSignsIcons">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- DestructibleSignsWarning .............................................................. -->
-    <!--                                                                                         -->
-    <CActorUnit id="DestructibleSignsWarning">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- DestructibleSpacePlatformBarrier ...................................................... -->
-    <!--                                                                                         -->
-    <CActorUnit id="DestructibleSpacePlatformBarrier">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- DestructibleSpacePlatformSign ......................................................... -->
-    <!--                                                                                         -->
-    <CActorUnit id="DestructibleSpacePlatformSign">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- DestructibleStoreFrontCityProps ....................................................... -->
-    <!--                                                                                         -->
-    <CActorUnit id="DestructibleStoreFrontCityProps">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- DestructibleStreetlight ............................................................... -->
-    <!--                                                                                         -->
-    <CActorUnit id="DestructibleStreetlight">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- DestructibleTrafficSignal ............................................................. -->
-    <!--                                                                                         -->
-    <CActorUnit id="DestructibleTrafficSignal">
-        <BarHeight value="3"/>
-    </CActorUnit>
     <CActorSound id="DisruptionWebSound">
         <EditorCategories value=""/>
         <On Terms="Effect.DisruptionWebPersistent.Start" Send="Create"/>
         <On Terms="SoundDone" Send="Destroy"/>
         <Sound value="DisruptionWeb"/>
     </CActorSound>
-    <!-- Dog                                                                                     -->
-    <CActorUnit id="Dog">
-        <BarHeight value="3"/>
-    </CActorUnit>
     <!--                                                                                         -->
     <CActorAction id="DroneAttack" effectAttack="" effectImpact="Spines" effectLaunch="SpinesLM">
         <On index="0" Terms="Effect.Spines.Start; At Caster; FromEffectTreeDescendant"/>
@@ -874,7 +436,10 @@
     <!-- Egg ................................................................................... -->
     <!--                                                                                         -->
     <CActorUnit id="Egg">
-        <BarHeight value="3"/>
+        <On Terms="AbilMorph.*.Start; MorphTo Egg" Send="$Birth 0 0.000000"/>
+        <On Terms="ActorDestruction; ModelVariation 0" Send="Create EggsplosionGeneric0"/>
+        <On Terms="ActorDestruction; ModelVariation 1" Send="Create EggsplosionGeneric1"/>
+        <On Terms="ActorDestruction; ModelVariation 2" Send="Create EggsplosionGeneric2"/>
     </CActorUnit>
     <CActorSplat id="EngineeringBaySplat">
         <Scale value="1.100000"/>
@@ -884,19 +449,35 @@
     <!--                                                                                         -->
     <CActorUnit id="Factory">
         <Scale value="0.950000,1.050000,1.000000"/>
-        <BarHeight value="3"/>
     </CActorUnit>
-    <CActorUnit id="FactoryMachineShop" parent="TerranBuilding" unitName="MachineShop2">
-        <On index="49" Terms="UnitConstruction.MachineShop2.Start" Send="Create TechReactorBuild"/>
-        <On index="53" Terms="UnitConstruction.MachineShop2.Start" Send="Create MachineShopBuild"/>
-        <Model value="MachineShop"/>
-        <BuildModel value="MachineShop"/>
-        <DeathArray index="Normal" ModelLink="TerranBuildingDeath" SoundLink="Terran_ExplosionMedium"/>
+    <CActorSplat id="FactorySplat">
+        <Scale value="0.950000,1.050000,1.000000"/>
+    </CActorSplat>
+    <CActorUnit id="MachineShop" parent="TerranBuilding" unitName="MachineShop">
+        <Macros value="QueueAnimAddon"/>
+        <Macros value="TerranAttachmentAnims"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit TechLabIsDetached" Send="DeathCustomize Detached"/>
+        <Model value="MachineShop2"/>
+        <BuildModel value="MachineShopBuild"/>
+        <DeathArray index="Normal" ModelLink="MachineShopDeath" SoundLink="TechLab_Explode"/>
+        <DeathArray index="UnderConstruction" ModelLink="TerranBuildingDeath" SoundLink="TechLab_Explode"/>
+        <DeathCustoms ModelLink="MachineShopDeathDetached" Name="Detached"/>
+        <PlacementModel value="MachineShopPlacement"/>
+        <PlacementSound value="Terran_BuildingPlacement"/>
+        <PortraitModel value="AdjutantPortrait"/>
+        <AddonIndicator value="Actor/AddonIndicator/MachineShop"/>
+        <BarOffset value="80"/>
+        <BarWidth value="75"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-TechLab.dds"/>
+        </GroupIcon>
         <GroupSoundArray index="What" value="TechLabGroupWhat"/>
         <GroupSoundArray index="Yes" value="TechLabGroupYes"/>
         <GroupSoundArray index="Attack" value="TechLabGroupAttack"/>
         <GroupSoundArray index="Board" value="TechLabGroupBoard"/>
+        <HeroIcon value="Assets\Textures\btn-building-terran-techlab.dds"/>
         <HighlightTooltip value="Unit/Name/TechLab"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-buildingarmor.dds"/>
         <SoundArray index="Birth" value="TechLab_Birth"/>
         <SoundArray index="Ready" value="TechLab_Ready"/>
         <SoundArray index="Help" value="TechLabHelp"/>
@@ -907,41 +488,182 @@
         <SoundArray index="Movement" value="TechLabMovement"/>
         <SoundArray index="Turning" value="TechLabTurning"/>
         <SoundArray index="Board" value="TechLabBoard"/>
+        <SoundArray index="Construction" value="Terran_ConstructionWhat"/>
         <SoundArray index="Click" value="TechLabClick"/>
         <SoundArray index="ClickError" value="TechLabClickError"/>
         <SoundArray index="Highlight" value="TechLabHighlight"/>
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+        <UnitIcon value="Assets\Textures\btn-building-terran-techlab.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-TechLab.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorModel id="ControlTowerBuild" parent="TerranBuildingBuildSmall">
+        <On Terms="ActorCreation" Send="SetScale 1.350000"/>
+    </CActorModel>
+    <CActorUnit id="CovertOps" parent="TerranBuilding" unitName="TerranCovertOps">
         <Macros value="QueueAnimAddon"/>
         <Macros value="TerranAttachmentAnims"/>
-        <Macros value="BuildingFlattenTerrainMacro"/>
-        <EditorModel value="MachineShop"/>
-        <PlacementModel value="MachineShopPlacement"/>
+        <On index="65" Terms="UnitConstruction.TerranCovertOps.Start" Send="Create CovertOpsBuild"/>
+        <Model value="CovertOps"/>
+        <BuildModel value="CovertOpsBuild"/>
+        <DeathArray index="Normal" ModelLink="CovertOpsDeath" SoundLink="TechLab_Explode"/>
+        <DeathArray index="UnderConstruction" ModelLink="TerranBuildingDeath" SoundLink="TechLab_Explode"/>
+        <DeathCustoms ModelLink="CovertOpsDeathDetached" Name="Detached"/>
+        <PlacementModel value="CovertOpsPlacement"/>
         <PlacementSound value="Terran_BuildingPlacement"/>
         <PortraitModel value="AdjutantPortrait"/>
+        <AddonIndicator value="Actor/AddonIndicator/CovertOps"/>
         <BarOffset value="80"/>
-        <BarWidth value="70"/>
+        <BarWidth value="75"/>
         <GroupIcon>
-            <Image value="Assets\Textures\wireframe-terran-techlab.dds"/>
+            <Image value="Assets\Textures\wireframe-terran-covertops.dds"/>
         </GroupIcon>
-        <HeroIcon value="Assets\Textures\BTN-Building-Terran-TechReactor.dds"/>
+        <GroupSoundArray index="What" value="TechLabGroupWhat"/>
+        <GroupSoundArray index="Yes" value="TechLabGroupYes"/>
+        <GroupSoundArray index="Attack" value="TechLabGroupAttack"/>
+        <GroupSoundArray index="Board" value="TechLabGroupBoard"/>
+        <HeroIcon value="Assets\Textures\btn-building-terran-covertops.dds"/>
+        <HighlightTooltip value="Unit/Name/TechLab"/>
         <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-buildingarmor.dds"/>
+        <SoundArray index="Birth" value="TechLab_Birth"/>
+        <SoundArray index="Ready" value="TechLab_Ready"/>
+        <SoundArray index="Help" value="TechLabHelp"/>
+        <SoundArray index="What" value="TechLab_What"/>
+        <SoundArray index="Yes" value="TechLabYes"/>
+        <SoundArray index="Attack" value="TechLabAttack"/>
+        <SoundArray index="Pissed" value="TechLabPissed"/>
+        <SoundArray index="Movement" value="TechLabMovement"/>
+        <SoundArray index="Turning" value="TechLabTurning"/>
+        <SoundArray index="Board" value="TechLabBoard"/>
+        <SoundArray index="Construction" value="Terran_ConstructionWhat"/>
+        <SoundArray index="Click" value="TechLabClick"/>
+        <SoundArray index="ClickError" value="TechLabClickError"/>
+        <SoundArray index="Highlight" value="TechLabHighlight"/>
         <UnitFlags index="ShowBlobShadow" value="0"/>
-        <UnitIcon value="Assets\Textures\BTN-Building-Terran-TechReactor.dds"/>
+        <UnitIcon value="Assets\Textures\btn-building-terran-covertops.dds"/>
         <Wireframe>
-            <Image value="Assets\Textures\wireframe-terran-techlab.dds"/>
+            <Image value="Assets\Textures\wireframe-terran-covertops.dds"/>
         </Wireframe>
-        <Scale value="0.800000"/>
-        <AddonIndicator value="Actor/AddonIndicator/MachineShop"/>
     </CActorUnit>
-    <CActorUnit id="FactoryReactor">
-        <BarHeight value="3"/>
+    <CActorModel id="CovertOpsBuild" parent="TerranBuildingBuildSmall">
+        <On Terms="ActorCreation" Send="SetScale 1.350000"/>
+    </CActorModel>
+    <CActorUnit id="MarineSC2BW" parent="Marine">
+        <On index="0" Terms="UnitBirth.MarineSC2BW"/>
+        <On index="1" Terms="UnitBirth.MarineSC2BW"/>
+        <On index="2" Terms="UnitRevive.MarineSC2BW"/>
+        <On index="3" Terms="UnitRevive.MarineSC2BW"/>
+        <On index="4" Terms="UnitConstruction.MarineSC2BW.Start"/>
+        <On index="5" Terms="UnitConstruction.MarineSC2BW.Finish"/>
+        <On index="63" Terms="UnitDeath.MarineSC2BW; AnimPlaying Cover"/>
+        <HighlightTooltip value="Unit/Name/MarineSC2BW"/>
     </CActorUnit>
-    <CActorSplat id="FactorySplat">
-        <Scale value="0.950000,1.050000,1.000000"/>
-    </CActorSplat>
-    <!-- Factory Tech Lab -->
-    <CActorUnit id="FactoryTechLab">
-        <BarHeight value="3"/>
+    <CActorSound id="Marine_DeathSC2BW" parent="SoundOneShot">
+        <On Terms="UnitDeath.MarineSC2BW; PassChance 100.000000" Send="Create"/>
+        <Sound value="Marine_Death"/>
+    </CActorSound>
+    <CActorModel id="NuclearSiloBuild" parent="TerranBuildingBuildSmall">
+        <Inherits index="Scale" value="0"/>
+        <On Terms="ActorCreation" Send="SetScale 1.350000"/>
+    </CActorModel>
+    <CActorUnit id="NuclearSilo" parent="TerranBuilding" unitName="TerranNuclearSilo">
+        <Macros value="QueueAnimAddon"/>
+        <Macros value="TerranAttachmentAnims"/>
+        <On index="65" Terms="UnitConstruction.TerranNuclearSilo.Start" Send="Create NuclearSiloBuild"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit TechLabIsDetached" Send="DeathCustomize Detached"/>
+        <Model value="NuclearSilo"/>
+        <BuildModel value="NuclearSiloBuild"/>
+        <DeathArray index="Normal" ModelLink="NuclearSiloDeath" SoundLink="TechLab_Explode"/>
+        <DeathArray index="UnderConstruction" ModelLink="TerranBuildingDeath" SoundLink="TechLab_Explode"/>
+        <DeathCustoms ModelLink="NuclearSiloDeathDetached" Name="Detached"/>
+        <PlacementModel value="NuclearSiloPlacement"/>
+        <PlacementSound value="Terran_BuildingPlacement"/>
+        <PortraitModel value="AdjutantPortrait"/>
+        <AddonIndicator value="Actor/AddonIndicator/TechLab"/>
+        <BarOffset value="90"/>
+        <BarWidth value="75"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\wireframe-terran-nukesilo.dds"/>
+        </GroupIcon>
+        <GroupSoundArray index="What" value="TechLabGroupWhat"/>
+        <GroupSoundArray index="Yes" value="TechLabGroupYes"/>
+        <GroupSoundArray index="Attack" value="TechLabGroupAttack"/>
+        <GroupSoundArray index="Board" value="TechLabGroupBoard"/>
+        <HeroIcon value="Assets\Textures\btn-building-terran-nukesilo.dds"/>
+        <HighlightTooltip value="Unit/Name/TechLab"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-buildingarmor.dds"/>
+        <SoundArray index="Birth" value="TechLab_Birth"/>
+        <SoundArray index="Ready" value="TechLab_Ready"/>
+        <SoundArray index="Help" value="TechLabHelp"/>
+        <SoundArray index="What" value="TechLab_What"/>
+        <SoundArray index="Yes" value="TechLabYes"/>
+        <SoundArray index="Attack" value="TechLabAttack"/>
+        <SoundArray index="Pissed" value="TechLabPissed"/>
+        <SoundArray index="Movement" value="TechLabMovement"/>
+        <SoundArray index="Turning" value="TechLabTurning"/>
+        <SoundArray index="Board" value="TechLabBoard"/>
+        <SoundArray index="Construction" value="Terran_ConstructionWhat"/>
+        <SoundArray index="Click" value="TechLabClick"/>
+        <SoundArray index="ClickError" value="TechLabClickError"/>
+        <SoundArray index="Highlight" value="TechLabHighlight"/>
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+        <UnitIcon value="Assets\Textures\btn-building-terran-nukesilo.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-terran-nukesilo.dds"/>
+        </Wireframe>
     </CActorUnit>
+    <CActorSplat id="NuclearSiloSplat" parent="GenericUnitSplat" unitName="TerranNuclearSilo"/>
+    <CActorModel id="PhysicsLabBuild" parent="TerranBuildingBuildSmall">
+        <On Terms="ActorCreation" Send="SetScale 1.350000"/>
+    </CActorModel>
+    <CActorUnit id="PhysicsLab" parent="TerranBuilding" unitName="TerranPhysicsLab">
+        <Macros value="QueueAnimAddon"/>
+        <Macros value="TerranAttachmentAnims"/>
+        <On index="65" Terms="UnitConstruction.TerranPhysicsLab.Start" Send="Create PhysicsLabBuild"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit TechLabIsDetached" Send="DeathCustomize Detached"/>
+        <Model value="PhysicsLab"/>
+        <BuildModel value="PhysicsLabBuild"/>
+        <DeathArray index="Normal" ModelLink="PhysicsLabDeath" SoundLink="TechLab_Explode"/>
+        <DeathArray index="UnderConstruction" ModelLink="TerranBuildingDeath" SoundLink="TechLab_Explode"/>
+        <DeathCustoms ModelLink="PhysicsLabDeathDetached" Name="Detached"/>
+        <PlacementModel value="PhysicsLabPlacement"/>
+        <PlacementSound value="Terran_BuildingPlacement"/>
+        <PortraitModel value="AdjutantPortrait"/>
+        <AddonIndicator value="Actor/AddonIndicator/PhysicsLab"/>
+        <BarOffset value="80"/>
+        <BarWidth value="75"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-TechLab.dds"/>
+        </GroupIcon>
+        <GroupSoundArray index="What" value="TechLabGroupWhat"/>
+        <GroupSoundArray index="Yes" value="TechLabGroupYes"/>
+        <GroupSoundArray index="Attack" value="TechLabGroupAttack"/>
+        <GroupSoundArray index="Board" value="TechLabGroupBoard"/>
+        <HeroIcon value="Assets\Textures\btn-building-terran-techlab.dds"/>
+        <HighlightTooltip value="Unit/Name/TechLab"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-buildingarmor.dds"/>
+        <SoundArray index="Birth" value="TechLab_Birth"/>
+        <SoundArray index="Ready" value="TechLab_Ready"/>
+        <SoundArray index="Help" value="TechLabHelp"/>
+        <SoundArray index="What" value="TechLab_What"/>
+        <SoundArray index="Yes" value="TechLabYes"/>
+        <SoundArray index="Attack" value="TechLabAttack"/>
+        <SoundArray index="Pissed" value="TechLabPissed"/>
+        <SoundArray index="Movement" value="TechLabMovement"/>
+        <SoundArray index="Turning" value="TechLabTurning"/>
+        <SoundArray index="Board" value="TechLabBoard"/>
+        <SoundArray index="Construction" value="Terran_ConstructionWhat"/>
+        <SoundArray index="Click" value="TechLabClick"/>
+        <SoundArray index="ClickError" value="TechLabClickError"/>
+        <SoundArray index="Highlight" value="TechLabHighlight"/>
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+        <UnitIcon value="Assets\Textures\btn-building-terran-techlab.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-TechLab.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorSplat id="MachineShopSplat" parent="GenericUnitSplat" unitName="MachineShop"/>
     <CActorModel id="FeedbackImpact">
         <Scale value="0.500000"/>
     </CActorModel>
@@ -949,9 +671,6 @@
     <CActorRange id="FeedbackRange">
         <IconArcLength value="0.500000"/>
     </CActorRange>
-    <CActorUnit id="FighterMorphModel">
-        <BarHeight value="3"/>
-    </CActorUnit>
     <CActorModel id="FirebatAttackModel">
         <Flags index="SuppressCreationErrors" value="0"/>
         <On index="1" Terms="AnimDone; AnimName BSD" Send="Destroy"/>
@@ -962,23 +681,10 @@
     </CActorRange>
     <CActorUnit id="FleetBeacon">
         <Scale value="0.900000,0.800000,1.000000"/>
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- Force Field ........................................................................... -->
-    <!--                                                                                         -->
-    <CActorUnit id="ForceField">
-        <BarHeight value="3"/>
     </CActorUnit>
     <CActorRange id="ForceFieldRange">
         <IconArcLength value="0.500000"/>
     </CActorRange>
-    <!--                                                                                         -->
-    <!-- Forge ................................................................................. -->
-    <!--                                                                                         -->
-    <CActorUnit id="Forge">
-        <BarHeight value="3"/>
-    </CActorUnit>
     <CActorSplat id="ForgeSplat">
         <Scale value="0.900000,0.800000,1.000000"/>
     </CActorSplat>
@@ -1029,36 +735,50 @@
         <SoundArray index="Click" value="PhysicsLab2_Click"/>
         <SoundArray index="ClickError" value="PhysicsLab2_ClickError"/>
         <SoundArray index="Highlight" value="PhysicsLab2_Highlight"/>
-        <BarHeight value="3"/>
         <AddonIndicator value="Actor/AddonIndicator/PhysicsLab"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- Gateway / Warp Gate.................................................................... -->
-    <!--                                                                                         -->
-    <CActorUnit id="Gateway">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!-- Used by the system to at least create a unit when the data is bad.  This enables us to-->
-    <!--         avoid a bunch of NULL checks.  This is still selectable, even though it comes from-->
-    <!--         GenericUnitMinimal. -->
-    <CActorUnit id="GenericUnitFallback">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- Ghost Academy ......................................................................... -->
-    <!--                                                                                         -->
-    <CActorUnit id="GhostAcademy">
-        <BarHeight value="3"/>
     </CActorUnit>
     <CActorAction id="CorsairAttack" parent="GenericAttack" effectLaunch="CorsairSwitch">
         <LaunchAssets Model="" Sound="CorsairAttack"/>
         <ImpactMap index="None" Sound=""/>
+    </CActorAction>
+    <CActorAction id="GoliathAirAttackU" parent="GenericAttack" effectImpact="GoliathAU" effectLaunch="GoliathALMU">
+        <EditorCategories value=""/>
+        <LaunchAttachQuery Methods="AMPatternGoliathU"/>
+        <LaunchAssets Model="ThorAAAttackLaunch" Sound="MissileTurret_AttackLaunch"/>
+        <Missile value="GoliathAirAttackMissileU"/>
+        <ImpactMap index="None" Model="GoliathAirAttackImpact" Sound="MissileTurret_AttackImpact"/>
     </CActorAction>
     <CActorSound id="IrradiateSound" parent="SoundOneShot">
         <EditorCategories value=""/>
         <On Terms="Effect.IrradiateApplyBehavior.Start" Send="Create"/>
         <Sound value="ScienceVessel_IrradiateImpact"/>
     </CActorSound>
+    <CActorUnit id="LarvaSC2BW" parent="GenericUnitMorph" unitName="LarvaSC2BW">
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <DeathArray index="Normal" ModelLink="ZergSmallUnitDeath" SoundLink="Larva_Explode"/>
+        <DeathArray index="TrainingComplete" SoundLink="Uni_DeathFXSilentKill"/>
+        <PortraitModel value="LarvaPortraitSC2BW"/>
+        <WalkAnimMoveSpeed value="0.3984"/>
+        <BarOffset value="5"/>
+        <BarWidth value="30"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Zerg-Larva.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-zerg-larva.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level0.dds"/>
+        <SoundArray index="What" value="Larva_What"/>
+        <SoundArray index="Pissed" value="Larva_Pissed"/>
+        <UnitIcon value="Assets\Textures\btn-unit-zerg-larva.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Zerg-Larva.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorSound id="Larva_DeathSC2BW" parent="SoundOneShot">
+        <On Terms="UnitDeath.LarvaSC2BW; PassChance 25.000000" Send="Create"/>
+        <Sound value="Larva_Death"/>
+    </CActorSound>
+    <CActorSplat id="CovertOpsSplat" parent="GenericUnitSplat" unitName="TerranCovertOps"/>
+    <CActorSplat id="PhysicsLabSplat" parent="GenericUnitSplat" unitName="TerranPhysicsLab"/>
     <CActorAction id="MarineAttack">
         <On index="0" Terms="Effect.GuassRifleNull.Stop; FromEffectTreeDescendant"/>
         <On index="5" Terms="Effect.GuassRifleNull.Start; At Caster"/>
@@ -1066,6 +786,43 @@
     <CActorSound id="Medic_Death">
         <On index="1" Terms="UnitDeath.Medic" Send="Create"/>
     </CActorSound>
+    <CActorUnit id="ControlTower" parent="TerranBuilding" unitName="ControlTower">
+        <Macros value="TerranAttachmentAnims"/>
+        <Macros value="QueueAnim"/>
+        <On index="53" Terms="UnitConstruction.ControlTower.Start" Send="Create ControlTowerBuild"/>
+        <On index="54" Terms="UnitConstruction.ControlTower.Start" Send="Create BuildingTerrainFlatten"/>
+        <On index="55" Terms="UnitConstruction.ControlTower.Cancel" Target="_BuildingTerrainFlatten" Send="Destroy"/>
+        <On index="56" Terms="UnitConstruction.ControlTower.Finish" Target="_BuildingTerrainFlatten" Send="Destroy"/>
+        <On index="57" Terms="UnitConstruction.ControlTower.Start" Send="QueryRadius 1.750000 BuildingCrushQueryResponse"/>
+        <On index="58" Terms="UnitBirth.ControlTower.Normal" Send="Create BuildingTerrainFlatten"/>
+        <On index="59" Terms="UnitBirth.ControlTower.Suppressed" Send="Create BuildingTerrainFlattenInstant"/>
+        <On index="60" Terms="UnitBirth.ControlTower.EditorPlaced" Send="Create BuildingTerrainFlattenEditor"/>
+        <On index="61" Terms="UnitDeath.ControlTower" Target="_BuildingTerrainFlatten" Send="Destroy"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit ReactorIsDetached" Send="DeathCustomize Detached"/>
+        <CreepHeightClass value="Small"/>
+        <DeathArray index="Normal" ModelLink="ControlTowerDeath" SoundLink="Reactor_Explode"/>
+        <DeathArray index="UnderConstruction" ModelLink="TerranBuildingDeath" SoundLink="Reactor_Explode"/>
+        <DeathCustoms ModelLink="ControlTowerDeathDetached" Name="Detached"/>
+        <PlacementModel value="ControlTowerPlacement"/>
+        <PlacementSound value="Terran_BuildingPlacement"/>
+        <PortraitModel value="AdjutantPortrait"/>
+        <AddonIndicator value="Actor/AddonIndicator/ControlTower"/>
+        <BarOffset value="65"/>
+        <BarWidth value="75"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-Reactor.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-building-terran-reactor.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-buildingarmor.dds"/>
+        <SoundArray index="Birth" value="Reactor_Birth"/>
+        <SoundArray index="Ready" value="Reactor_Ready"/>
+        <SoundArray index="What" value="Reactor_What"/>
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+        <UnitIcon value="Assets\Textures\btn-building-terran-reactor.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-Reactor.dds"/>
+        </Wireframe>
+    </CActorUnit>
     <CActorModel id="RestorationImpact">
         <EditorCategories value=""/>
         <On Terms="ActorCreation" Send="AnimBracketStart BSD Birth Stand Death ContentPlayOnce"/>
@@ -1080,12 +837,62 @@
         <On Terms="Effect.OpticalFlareApplyBehavior.Start" Send="Create"/>
         <Scale value="0.500000"/>
     </CActorModel>
+    <CActorSiteOpLocalOffset id="SOpMoveUpBy10">
+        <LocalOffset value="0.000000,0.000000,1.000000"/>
+    </CActorSiteOpLocalOffset>
+    <CActorAction id="ScoutAirLeftAttack" effectImpact="ScoutMPAirU">
+        <On index="1" Terms="Effect.ScoutMPAirU.Start; FromEffectTreeDescendant"/>
+        <On index="2" Terms="Effect.ScoutMPAirU.Stop; FromEffectTreeDescendant"/>
+        <ImpactMap index="None" Model="ScoutAirMissileImpact"/>
+    </CActorAction>
+    <CActorAction id="ScoutAirRightAttack" effectImpact="ScoutMPAirU">
+        <On index="1" Terms="Effect.ScoutMPAirU.Start; FromEffectTreeDescendant"/>
+        <On index="2" Terms="Effect.ScoutMPAirU.Stop; FromEffectTreeDescendant"/>
+        <ImpactMap index="None" Model="ScoutAirMissileImpact" Sound="Scout_AirAttackImpact"/>
+    </CActorAction>
+    <CActorAction id="SiegeTankSiegedAttack">
+        <ImpactSiteOps Ops="SOpActionCenter SOpTargetUnitZ SOpTargetPoint"/>
+    </CActorAction>
+    <CActorUnit id="Stalker">
+        <On index="62" Terms="WeaponStart.*.AttackStart" Send="AnimBracketStart Cover Cover,Start Cover Cover,End"/>
+        <On index="63" Terms="WeaponStop.*.AttackStop" Send="AnimBracketStop Cover"/>
+        <On index="64" removed="1"/>
+        <On index="65" removed="1"/>
+        <On index="66" removed="1"/>
+        <On index="67" removed="1"/>
+        <On index="68" removed="1"/>
+        <BuildModel value="ImmortalWarpIn"/>
+        <DeathArray index="Normal" ModelLink="DragoonDeath" SoundLink="DragoonDeath"/>
+        <DeathCustoms index="6" ModelLink="DragoonDeath" Name="RagdollBasic"/>
+        <PlacementModel value="ImmortalPlacement"/>
+        <PortraitModel value="ImmortalPortrait"/>
+        <WalkAnimMoveSpeed value="1.8007"/>
+        <BarOffset value="80"/>
+        <BarWidth value="90"/>
+        <GroupIcon>
+            <Image index="0" value="Assets\Textures\wireframe-void-dragoon.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-protoss-dragoon-void.dds"/>
+        <SoundArray index="Attack" value="Stalker_Yes"/>
+        <UnitIcon value="Assets\Textures\btn-unit-protoss-dragoon-void.dds"/>
+        <Wireframe>
+            <Image index="0" value="Assets\Textures\wireframe-protoss-dragoon.dds"/>
+        </Wireframe>
+        <WireframeShield>
+            <Image index="0" value="Assets\Textures\wireframe-protoss-dragoon-shield01.dds"/>
+            <Image index="1" value="Assets\Textures\wireframe-protoss-dragoon-shield02.dds"/>
+            <Image index="2" value="Assets\Textures\wireframe-protoss-dragoon-shield03.dds"/>
+        </WireframeShield>
+    </CActorUnit>
     <CActorModel id="StasisImpact">
         <EditorCategories value=""/>
         <On Terms="ActorCreation" Send="AnimBracketStart BSD Birth Stand Death ContentPlayOnce"/>
         <On Terms="AnimBracketState.*.AfterClosing; AnimName BSD" Send="Destroy"/>
         <On Terms="Effect.StasisFieldSearch.Start" Send="Create"/>
         <Scale value="1.500000,1.500000,1.000000"/>
+    </CActorModel>
+    <CActorModel id="MachineShopBuild" parent="TerranBuildingBuildSmall">
+        <On Terms="ActorCreation" Send="SetScale 1.350000"/>
     </CActorModel>
     <CActorSound id="TerranNuclearLaunchDetected" parent="SoundOneShot">
         <On index="0" Terms="Effect.NukePersistent.Start; ValidatePlayer RaceIsTerranSC2BW" Send="Create"/>
@@ -1163,7 +970,7 @@
         <ImpactMap index="LightArmor" Sound="SiegeTankAttackImpactLightArmor" ModelReaction="SiegeTankAttackImpactReactionLightArmor"/>
         <ImpactMap index="Metal" Sound="SiegeTankAttackImpactMetal" ModelReaction="SiegeTankAttackImpactReactionMetal"/>
         <ImpactMap index="Shield" Sound="SiegeTankAttackImpactShield" ModelReaction="SiegeTankAttackImpactReactionShield"/>
-        <ImpactPhysics Name="ScarabImpact" MatchKeys="Basic" Physics="SiegeTankSiegedForce"/>
+        <ImpactPhysics Name="Explosion" MatchKeys="Basic" Physics="SiegeTankSiegedForce"/>
     </CActorAction>
     <CActorAction id="SiegeTankAttack">
         <On index="0" Terms="Effect.ArcliteCannonNullDamage.Stop; FromEffectTreeDescendant"/>
@@ -1222,6 +1029,7 @@
     <CActorUnit id="TerranAcademy" parent="TerranBuildingFlyer" unitName="Academy">
         <Macros value="QueueAnim"/>
         <On index="61" Send="Create TerranAcademyBuild"/>
+        <On index="65" Terms="UnitConstruction.Academy.Start" Send="Create TerranAcademyBuild"/>
         <Model value="TerranAcademy"/>
         <BuildModel value="TerranAcademy"/>
         <DeathArray index="Normal" ModelLink="GhostAcademyDeath" SoundLink=""/>
@@ -1264,9 +1072,6 @@
     <CActorSound id="Ghost_CloakOn">
         <Sound value="Mothership_CloakFieldOn"/>
     </CActorSound>
-    <CActorUnit id="GlobeStatue">
-        <BarHeight value="3"/>
-    </CActorUnit>
     <CActorUnit id="Goliath" parent="GenericUnitBase" unitName="Goliath">
         <Macros value="UnloadDropAnim"/>
         <On Terms="WeaponStart.GoliathG.AttackStart" Send="AnimBracketStart Attack Attack"/>
@@ -1315,13 +1120,6 @@
         <EditorCategories value=""/>
         <Model value="GoliathAWeaponU2"/>
     </CActorMissile>
-    <CActorAction id="GoliathAirAttackU" parent="GenericAttack" effectImpact="GoliathAU" effectLaunch="GoliathALMU">
-        <EditorCategories value=""/>
-        <LaunchAttachQuery Methods="AMPatternGoliathU"/>
-        <LaunchAssets Model="ThorAAAttackLaunch" Sound="MissileTurret_AttackLaunch"/>
-        <Missile value="GoliathAirAttackMissileU"/>
-        <ImpactMap index="None" Model="GoliathAirAttackImpact" Sound="MissileTurret_AttackImpact"/>
-    </CActorAction>
     <!-- Ground attack.                                                                          -->
     <CActorAction id="GoliathGroundAttack" effectAttack="GoliathGNull">
         <LaunchAttachQuery Methods="AMFilterWeaponSetA0"/>
@@ -1332,18 +1130,8 @@
     <CActorRange id="GravitonBeamRange">
         <IconArcLength value="0.500000"/>
     </CActorRange>
-    <!--                                                                                         -->
-    <!-- Hellion ............................................................................... -->
-    <!--                                                                                         -->
-    <CActorUnit id="Hellion">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="HelperEmitterSelectionArrow">
-        <BarHeight value="3"/>
-    </CActorUnit>
     <CActorUnit id="HighTemplar">
         <On Terms="Abil.PsiStormHardcore.TargetCastStart" Send="AnimPlay A A"/>
-        <BarHeight value="3"/>
     </CActorUnit>
     <CActorModel id="HighTemplarPsiStormImpact">
         <On Terms="ActorCreation" Send="SetOpacity 0.500000"/>
@@ -1362,7 +1150,6 @@
     </CActorRange>
     <CActorUnit id="Hydralisk">
         <Scale value="0.800000"/>
-        <BarHeight value="3"/>
         <WalkAnimMoveSpeed value="4"/>
         <On index="56" Terms="Effect.NeedleSpinesLaunchMissile.Launch; At Caster" Send="AnimPlay Attack Attack"/>
         <On index="57" Terms="AbilMorph.LurkerAspect.Finish; MorphTo Hydralisk; !AbilKey BurrowUp" Send="Create"/>
@@ -1380,11 +1167,11 @@
         <On index="69" Terms="UnitBirth.Hydralisk" Send="TerrainSquibActivateGroup RippleStandard"/>
         <On index="70" Terms="AbilMorph.*.Finish; MorphTo Hydralisk; MorphFrom HydraliskBurrowed" Send="TerrainSquibActivateGroup RippleStandard"/>
         <On index="71" Terms="AbilMorph.*.Finish; MorphTo HydraliskBurrowed; MorphFrom Hydralisk" Send="TerrainSquibDeactivate"/>
-        <On index="72" Terms="AbilMorph.LurkerAspectMP.Finish; MorphTo Hydralisk; !AbilKey BurrowUp" Send="Create"/>
-        <On index="73" Terms="AbilMorph.LurkerAspectMP.Start; MorphFrom Hydralisk; !AbilKey BurrowDown" Send="Destroy"/>
-        <On index="74" Terms="AbilMorph.LurkerAspectMPFromHydraliskBurrowed.Finish; MorphTo Hydralisk; !AbilKey BurrowUp" Send="Create"/>
-        <On index="75" Terms="AbilMorph.LurkerAspectMPFromHydraliskBurrowed.Finish; MorphTo HydraliskBurrowed; !AbilKey BurrowUp" Send="Create"/>
-        <On index="76" Terms="AbilMorph.LurkerAspectMPFromHydraliskBurrowed.Start; MorphFrom Hydralisk; !AbilKey BurrowDown" Send="Destroy"/>
+        <On index="72" Terms="AbilMorph.LurkerAspectMP.Finish; MorphTo Hydralisk; !AbilKey BurrowUp"/>
+        <On index="73" Terms="AbilMorph.LurkerAspectMP.Start; MorphFrom Hydralisk; !AbilKey BurrowDown"/>
+        <On index="74" Terms="AbilMorph.LurkerAspectMPFromHydraliskBurrowed.Finish; MorphTo Hydralisk; !AbilKey BurrowUp"/>
+        <On index="75" Terms="AbilMorph.LurkerAspectMPFromHydraliskBurrowed.Finish; MorphTo HydraliskBurrowed; !AbilKey BurrowUp"/>
+        <On index="76" Terms="AbilMorph.LurkerAspectMPFromHydraliskBurrowed.Start; MorphFrom Hydralisk; !AbilKey BurrowDown"/>
         <On index="77" Terms="UnitHeightUpdate.*.Land" Send="Create Hydra_Land"/>
         <On index="78" removed="1"/>
         <On index="79" removed="1"/>
@@ -1397,12 +1184,12 @@
         <On index="86" removed="1"/>
         <On index="87" removed="1"/>
         <On index="88" removed="1"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- Immortal .............................................................................. -->
-    <!--                                                                                         -->
-    <CActorUnit id="Immortal">
-        <BarHeight value="3"/>
+        <On index="89" removed="1"/>
+        <On index="90" removed="1"/>
+        <On index="91" removed="1"/>
+        <On index="92" removed="1"/>
+        <On index="93" removed="1"/>
+        <On index="94" removed="1"/>
     </CActorUnit>
     <CActorModel id="Infestation" parent="ModelAddition">
         <EditorCategories value=""/>
@@ -1548,9 +1335,6 @@
         <DamageMap index="None" Model=""/>
         <ShieldFlashType value="Full"/>
     </CActorAction>
-    <CActorUnit id="InfestedTerransEgg">
-        <BarHeight value="3"/>
-    </CActorUnit>
     <!-- <CActorSimple id="FrenzyTinter">-->
     <!--        <Aliases value="_FrenzyTinter"/>-->
     <!--        <On Terms="Behavior.Frenzy.On" Send="Create"/>-->
@@ -1575,12 +1359,6 @@
         <IconArcLength value="0.500000"/>
     </CActorRange>
     <!--                                                                                         -->
-    <!-- Infestor .............................................................................. -->
-    <!--                                                                                         -->
-    <CActorUnit id="Infestor">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
     <!-- Infested Marine ....................................................................... -->
     <!--                                                                                         -->
     <CActorUnit id="InfestorTerran" unitName="InfestedTerran">
@@ -1602,32 +1380,16 @@
         <SoundArray index="Click" value="InfestedTerran_Click"/>
         <SoundArray index="ClickError" value="InfestedTerran_ClickError"/>
         <SoundArray index="Highlight" value="InfestedTerran_Highlight"/>
-        <BarHeight value="3"/>
     </CActorUnit>
     <!--                                                                                         -->
     <!-- Interceptor (Carrier Fighter) ......................................................... -->
     <!--                                                                                         -->
     <CActorUnit id="Interceptor">
-        <BarHeight value="3"/>
         <BarWidth value="20"/>
     </CActorUnit>
     <CActorRange id="IrradiateRange">
         <IconArcLength value="0.500000"/>
     </CActorRange>
-    <!-- Karak Female                                                            -->
-    <CActorUnit id="KarakFemale">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!-- Karak Male                                                            -->
-    <CActorUnit id="KarakMale">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- Larva ................................................................................. -->
-    <!--                                                                                         -->
-    <CActorUnit id="Larva">
-        <BarHeight value="3"/>
-    </CActorUnit>
     <CActorRange id="LeechRange">
         <IconArcLength value="0.500000"/>
     </CActorRange>
@@ -1652,82 +1414,14 @@
         <On Terms="Abil.LockdownHardcore.SourceFinishStart" Send="Create"/>
         <Sound value="MissileTurret_AttackLaunch"/>
     </CActorSound>
-    <!-- Lyote                                                            -->
-    <CActorUnit id="Lyote">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- MULE .................................................................................. -->
-    <!--                                                                                         -->
-    <CActorUnit id="MULE">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorModel id="MachineShopBuild" parent="TerranBuildingBuildSmall">
-        <On Terms="ActorCreation" Send="SetScale 1.350000"/>
-        <Model value="ReactorBuild"/>
-    </CActorModel>
-    <CActorUnit id="MarSaraBridgeBLUR">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="MarSaraBridgeBRUL">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- Marauder .............................................................................. -->
-    <!--                                                                                         -->
-    <CActorUnit id="Marauder">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- Marine ................................................................................ -->
-    <!--                                                                                         -->
-    <CActorUnit id="Marine">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- Medic ................................................................................. -->
-    <!--                                                                                         -->
-    <CActorUnit id="Medic">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- Mengsk Statue ......................................................................... -->
-    <!--                                                                                         -->
-    <CActorUnit id="MengskStatue">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- Mengsk Statue Alone ................................................................... -->
-    <!--                                                                                         -->
-    <CActorUnit id="MengskStatueAlone">
-        <BarHeight value="3"/>
-    </CActorUnit>
     <CActorSound id="MindControlImpact">
         <EditorCategories value=""/>
         <On Terms="Behavior.MindControl.On" Send="Create"/>
         <On Terms="SoundDone" Send="Destroy"/>
     </CActorSound>
-    <CActorUnit id="MineralField">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- Missile Turret ........................................................................ -->
-    <!--                                                                                         -->
-    <CActorUnit id="MissileTurret">
-        <BarHeight value="3"/>
-    </CActorUnit>
     <CActorRange id="MissileTurretProtectRange">
         <IconArcLength value="0.500000"/>
     </CActorRange>
-    <!--                                                                                         -->
-    <!-- Mothership ............................................................................ -->
-    <!--                                                                                         -->
-    <CActorUnit id="Mothership">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="MultiKillObject">
-        <BarHeight value="3"/>
-    </CActorUnit>
     <CActorMissile id="MutaliskAttackSegment1Missile">
         <Scale value="1.400000"/>
         <BarHeight value="1"/>
@@ -1747,19 +1441,13 @@
     <CActorRange id="NeuralParasiteRange">
         <IconArcLength value="0.500000"/>
     </CActorRange>
-    <!--                                                                                         -->
-    <!-- Nuke .................................................................................. -->
-    <!--                                                                                         -->
-    <CActorUnit id="Nuke">
-        <BarHeight value="3"/>
-    </CActorUnit>
     <CActorModel id="NydusPlacementModel" parent="PlacementModel">
-        <On index="6" Terms="ActorCreation" Send="SetOpacity 0.45"/>
-        <On index="7" Terms="ActorCreation" Send="SetCastShadows 0"/>
+        <On index="6" Terms="ActorCreation" Send="SetOpacity 0.450000"/>
+        <On index="7" Terms="ActorCreation" Send="SetCastShadows"/>
         <On index="8" Terms="ActorCreation; ModelName SporeCrawlerPlacement" Target="" Send="Create SporeCrawlerProtectRange"/>
         <On index="9" Terms="ActorDestruction" Target="SporeCrawlerProtectRange" Send="Destroy"/>
         <On index="10" Terms="ActorCreation; ModelName SpineCrawlerPlacement" Send="Create SpineCrawlerProtectRange"/>
-        <On index="11" Terms="ActorDestruction" Target="SpineCrawlerProtectRange" Send="Destroy"/>
+        <On index="11" Target="SpineCrawlerProtectRange"/>
         <Scale value="0.800000"/>
     </CActorModel>
     <CActorModel id="NydusRumble">
@@ -1776,59 +1464,9 @@
     <CActorSound id="Nydus_ConstructionStart">
         <On index="1" removed="1"/>
     </CActorSound>
-    <!--                                                                                         -->
-    <!-- Observer .............................................................................. -->
-    <!--                                                                                         -->
-    <CActorUnit id="Observer">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!-- Orbital Command ....................................................................... -->
-    <CActorUnit id="OrbitalCommand">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- Overlord .............................................................................. -->
-    <!--                                                                                         -->
-    <CActorUnit id="Overlord">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- Overlord Cocoon ....................................................................... -->
-    <!--                                                                                         -->
-    <CActorUnit id="OverlordCocoon">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- Overseer .............................................................................. -->
-    <!--                                                                                         -->
-    <CActorUnit id="Overseer">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="PathingBlocker1x1">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="PathingBlocker2x2">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- Photon Cannon ......................................................................... -->
-    <!--                                                                                         -->
-    <CActorUnit id="PhotonCannon">
-        <BarHeight value="3"/>
-    </CActorUnit>
     <CActorRange id="PhotonCannonProtectRange">
         <IconArcLength value="0.500000"/>
     </CActorRange>
-    <!-- Planetary Fortress .................................................................... -->
-    <CActorUnit id="PlanetaryFortress">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- Point Defense Drone ................................................................... -->
-    <!--                                                                                         -->
-    <CActorUnit id="PointDefenseDrone">
-        <BarHeight value="3"/>
-    </CActorUnit>
     <!-- Point Defense Drone Ability -->
     <CActorRange id="PointDefenseDroneRange">
         <IconArcLength value="0.500000"/>
@@ -1862,62 +1500,10 @@
     <CActorRange id="PsiStormRange">
         <IconArcLength value="0.500000"/>
     </CActorRange>
-    <!--                                                                                         -->
-    <!-- Pylon ................................................................................. -->
-    <!--                                                                                         -->
-    <CActorUnit id="Pylon">
-        <BarHeight value="3"/>
-    </CActorUnit>
     <CActorEventMacro id="QueueAnimAddon">
         <On index="0" Terms="Abil.que1Addon.Start" Send="StatusIncrement Queuing"/>
         <On index="1" Terms="Abil.que1Addon.Stop" Send="StatusDecrement Queuing"/>
     </CActorEventMacro>
-    <!--                                                                                         -->
-    <!-- Raven ................................................................................. -->
-    <!--                                                                                         -->
-    <CActorUnit id="Raven">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- Nuclear Reactor ....................................................................... -->
-    <!--                                                                                         -->
-    <CActorUnit id="Reactor" unitName="ControlTower">
-        <On index="0" Terms="UnitBirth.ControlTower" Send="Create SoundEmitter ControlTower_Ambience"/>
-        <On index="1" Terms="UnitBirth.ControlTower"/>
-        <On index="2" Terms="UnitRevive.ControlTower"/>
-        <On index="3" Terms="UnitRevive.ControlTower"/>
-        <On index="4" Terms="UnitConstruction.ControlTower.Start"/>
-        <On index="5" Terms="UnitConstruction.ControlTower.Finish"/>
-        <On index="53" Terms="UnitConstruction.ControlTower.Start" Send="Create ControlTowerBuild"/>
-        <On index="54" Terms="UnitConstruction.ControlTower.Start" Send="Create BuildingTerrainFlatten"/>
-        <On index="55" Terms="UnitConstruction.ControlTower.Cancel" Target="_BuildingTerrainFlatten" Send="Destroy"/>
-        <On index="56" Terms="UnitConstruction.ControlTower.Finish" Target="_BuildingTerrainFlatten" Send="Destroy"/>
-        <On index="57" Terms="UnitConstruction.ControlTower.Start" Send="QueryRadius 1.750000 BuildingCrushQueryResponse"/>
-        <On index="58" Terms="UnitBirth.ControlTower.Normal" Send="Create BuildingTerrainFlatten"/>
-        <On index="59" Terms="UnitBirth.ControlTower.Suppressed" Send="Create BuildingTerrainFlattenInstant"/>
-        <On index="60" Terms="UnitBirth.ControlTower.EditorPlaced" Send="Create BuildingTerrainFlattenEditor"/>
-        <On index="61" Terms="UnitDeath.ControlTower" Target="_BuildingTerrainFlatten" Send="Destroy"/>
-        <EventDataFootprint index="0" Model="ControlTowerFootprint"/>
-        <DeathArray index="Normal" VoiceLink="ControlTowerDeathVoice"/>
-        <GroupSoundArray index="What" value="ControlTower_GroupWhat"/>
-        <GroupSoundArray index="Yes" value="ControlTower_GroupYes"/>
-        <GroupSoundArray index="Attack" value="ControlTower_GroupAttack"/>
-        <GroupSoundArray index="Board" value="ControlTower_GroupBoard"/>
-        <SoundArray index="Help" value="ControlTower_Help"/>
-        <SoundArray index="Yes" value="ControlTower_Yes"/>
-        <SoundArray index="Attack" value="ControlTower_Attack"/>
-        <SoundArray index="Pissed" value="ControlTower_Pissed"/>
-        <SoundArray index="Movement" value="ControlTower_Movement"/>
-        <SoundArray index="Turning" value="ControlTower_Turning"/>
-        <SoundArray index="Board" value="ControlTower_Board"/>
-        <SoundArray index="Click" value="ControlTower_Click"/>
-        <SoundArray index="ClickError" value="ControlTower_ClickError"/>
-        <SoundArray index="Highlight" value="ControlTower_Highlight"/>
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ReaperPlaceholder">
-        <BarHeight value="3"/>
-    </CActorUnit>
     <CActorUnit id="Reaver" parent="GenericUnitStandard" unitName="Reaver">
         <EditorCategories value=""/>
         <EditorModel value="Reaver"/>
@@ -1933,39 +1519,13 @@
         </WireframeShield>
         <HeroIcon value="Assets\Textures\btn-unit-protoss-reaver.dds"/>
         <UnitIcon value="Assets\Textures\btn-unit-protoss-reaver.dds"/>
-        <WalkAnimMoveSpeed value="1"/>
         <LifeArmorIcon value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel0.dds"/>
-    </CActorUnit>
-    <!-- Redstone Lava Critter                                                                   -->
-    <CActorUnit id="RedstoneLavaCritter">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!-- Redstone Lava Critter Injured                                                           -->
-    <CActorUnit id="RedstoneLavaCritterInjured">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- Refinery .............................................................................. -->
-    <!--                                                                                         -->
-    <CActorUnit id="Refinery">
-        <BarHeight value="3"/>
+        <WalkAnimMoveSpeed value="1.5"/>
     </CActorUnit>
     <!-- Calldowns                                                                               -->
     <CActorRange id="ResourceDropRange">
         <IconArcLength value="0.500000"/>
     </CActorRange>
-    <CActorUnit id="RichMineralField">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="RichVespeneGeyser">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- Roach ................................................................................. -->
-    <!--                                                                                         -->
-    <CActorUnit id="Roach">
-        <BarHeight value="3"/>
-    </CActorUnit>
     <CActorSiteOpLocalOffset id="SOpHigherBy2">
         <LocalOffset value="0.000000,0.000000,2.000000"/>
     </CActorSiteOpLocalOffset>
@@ -1977,10 +1537,6 @@
         <On Terms="Effect.ScannerSweep.Start" Send="TimerSet 1.500000 ScanLifetime"/>
         <On Terms="TimerExpired; TimerName ScanLifetime" Send="Destroy"/>
     </CActorModel>
-    <!-- Scantipede                                                                              -->
-    <CActorUnit id="Scantipede">
-        <BarHeight value="3"/>
-    </CActorUnit>
     <CActorUnit id="ScienceFacility" parent="TerranBuildingFlyer" unitName="ScienceFacility">
         <Macros value="QueueAnim"/>
         <Macros value="BuildAnim"/>
@@ -2014,7 +1570,6 @@
     <!--                                                                                         -->
     <CActorUnit id="Scout">
         <Scale value="0.900000"/>
-        <BarHeight value="3"/>
         <SoundArray index="Ready" value="Phoenix_Ready"/>
         <SoundArray index="What" value="Phoenix_What"/>
         <SoundArray index="Yes" value="Phoenix_Yes"/>
@@ -2025,262 +1580,9 @@
     <CActorAction id="ScoutGroundAttack">
         <ImpactMap index="None" Sound=""/>
     </CActorAction>
-    <!--                                                                                         -->
-    <!-- Sensor Tower .......................................................................... -->
-    <!--                                                                                         -->
-    <CActorUnit id="SensorTower">
-        <BarHeight value="3"/>
-    </CActorUnit>
     <CActorRange id="SensorTowerRadar">
         <IconArcLength value="0.500000"/>
     </CActorRange>
-    <!--                                                                                         -->
-    <!-- Sentry ................................................................................ -->
-    <!--                                                                                         -->
-    <CActorUnit id="Sentry">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="Shape4PointStar">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="Shape5PointStar">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="Shape6PointStar">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="Shape8PointStar">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeApple">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeArrowPointer">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeBanana">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeBaseball">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeBaseballBat">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeBasketball">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeBowl">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeBox">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeCapsule">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeCarrot">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeCashLarge">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeCashMedium">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeCashSmall">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeCherry">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeCone">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeCrescentMoon">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeCube">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeCylinder">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeDecahedron">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeDiamond">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeDodecahedron">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeDollarSign">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeEgg">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeEuroSign">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeFootball">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeFootballColored">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeGemstone">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeGolfClub">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeGolfball">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeGrape">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeHand">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeHeart">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeHockeyPuck">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeHockeyStick">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeHorseshoe">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeIcosahedron">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeJack">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeLemon">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeLemonSmall">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeMoneyBag">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeO">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeOctahedron">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeOrange">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeOrangeSmall">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapePeanut">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapePear">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapePineapple">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapePlusSign">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapePoundSign">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapePyramid">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeRainbow">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeRoundedCube">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeSadFace">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeShamrock">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeSmileyFace">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeSoccerball">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeSpade">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeSphere">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeStrawberry">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeTennisball">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeTetrahedron">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeThickTorus">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeThinTorus">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeTorus">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeTreasureChestClosed">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeTreasureChestOpen">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeTube">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeWatermelon">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeWatermelonSmall">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeWonSign">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeX">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShapeYenSign">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!-- Sheep                                                                                   -->
-    <CActorUnit id="Sheep">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShortBridgeHorizontal">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="ShortBridgeVertical">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="SiegeModeMorphModel">
-        <BarHeight value="3"/>
-    </CActorUnit>
     <CActorSound id="SiegeModeSound1Unsiege" parent="SoundOneShot">
         <On Terms="AbilMorph.*.Start; MorphTo SiegeTank" Send="Create"/>
         <On Terms="UnitDeath.SiegeTank" Send="Destroy"/>
@@ -2312,17 +1614,12 @@
     <!--                                                                                         -->
     <CActorUnit id="SiegeTank">
         <Scale value="0.900000"/>
-        <BarHeight value="3"/>
     </CActorUnit>
     <CActorUnit id="SiegeTankSieged">
         <Scale value="0.900000"/>
-        <BarHeight value="3"/>
     </CActorUnit>
-    <CActorRange id="SiegeTankSiegedRange">
-        <IconArcLength value="0.500000"/>
-    </CActorRange>
     <CActorRange id="DarkSwarmRange" parent="SiegeTankSiegedRange">
-        <On index="1" Terms="Effect.DarkSwarmPersistent.Start"/>
+        <On index="1" Terms="Effect.DarkSwarmPersistent.Start" Send="Create"/>
         <On index="2" Terms="Effect.DarkSwarmPersistent.Stop" Send="Destroy"/>
         <On index="3" removed="1"/>
         <On index="4" removed="1"/>
@@ -2332,14 +1629,12 @@
         <Weapon value=""/>
         <Range value="4.000000"/>
         <IconTint value="155,255,128,64"/>
+        <IconArcLength value="0.500000"/>
     </CActorRange>
     <!-- Siphon                                                                                  -->
     <CActorRange id="SiphonRange">
         <IconArcLength value="0.500000"/>
     </CActorRange>
-    <CActorUnit id="SpacePlatformGeyser">
-        <BarHeight value="3"/>
-    </CActorUnit>
     <CActorRange id="SpiderMineRange">
         <On Terms="SelectionLocalUpdate.SpiderMineBurrowed.Start" Send="Create"/>
         <On Terms="SelectionLocalUpdate.SpiderMineBurrowed.Stop" Send="Destroy"/>
@@ -2410,10 +1705,12 @@
         <On index="109" removed="1"/>
         <On index="110" removed="1"/>
         <On index="111" removed="1"/>
+        <On index="112" removed="1"/>
+        <On index="113" removed="1"/>
+        <On index="114" removed="1"/>
         <HostedAttaches index="0" removed="1"/>
         <PortraitModel value="OvermindPortrait"/>
         <HighlightTooltip value="Unit/Name/SpineCrawler2"/>
-        <BarHeight value="3"/>
         <Baselines index="Stand" AnimProps="Burrow,Stand"/>
         <DeathArray index="Normal" ModelLink="ZergBuildingDeath"/>
     </CActorUnit>
@@ -2427,56 +1724,11 @@
     <CActorRange id="SporeCrawlerProtectRange">
         <IconArcLength value="0.500000"/>
     </CActorRange>
-    <CActorUnit id="StarportReactor" unitName="ControlTower2">
-        <On index="0" Terms="UnitBirth.ControlTower2" Send="Create SoundEmitter ControlTower2_Ambience"/>
-        <On index="1" Terms="UnitBirth.ControlTower2"/>
-        <On index="2" Terms="UnitRevive.ControlTower2"/>
-        <On index="3" Terms="UnitRevive.ControlTower2"/>
-        <On index="4" Terms="UnitConstruction.ControlTower2.Start"/>
-        <On index="5" Terms="UnitConstruction.ControlTower2.Finish"/>
-        <On index="53" Terms="UnitConstruction.ControlTower2.Start" Send="Create ReactorBuild"/>
-        <On index="54" Terms="UnitConstruction.ControlTower2.Start" Send="Create BuildingTerrainFlatten"/>
-        <On index="55" Terms="UnitConstruction.ControlTower2.Cancel" Target="_BuildingTerrainFlatten" Send="Destroy"/>
-        <On index="56" Terms="UnitConstruction.ControlTower2.Finish" Target="_BuildingTerrainFlatten" Send="Destroy"/>
-        <On index="57" Terms="UnitConstruction.ControlTower2.Start" Send="QueryRadius 1.750000 BuildingCrushQueryResponse"/>
-        <On index="58" Terms="UnitBirth.ControlTower2.Normal" Send="Create BuildingTerrainFlatten"/>
-        <On index="59" Terms="UnitBirth.ControlTower2.Suppressed" Send="Create BuildingTerrainFlattenInstant"/>
-        <On index="60" Terms="UnitBirth.ControlTower2.EditorPlaced" Send="Create BuildingTerrainFlattenEditor"/>
-        <On index="61" Terms="UnitDeath.ControlTower2" Target="_BuildingTerrainFlatten" Send="Destroy"/>
-        <EventDataFootprint index="0" Model="ControlTower2Footprint"/>
-        <DeathArray index="Normal" VoiceLink="ControlTower2DeathVoice"/>
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!-- Starport Tech Lab -->
-    <CActorUnit id="StarportTechLab">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="StereoscopicOptionsUnit">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="SupplyDepotLowered">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="TankModeMorphModel">
-        <BarHeight value="3"/>
-    </CActorUnit>
     <!--                                                                                         -->
     <CActorSound id="TankModeSound">
         <On index="1" removed="1"/>
         <On index="2" removed="1"/>
     </CActorSound>
-    <!--                                                                                         -->
-    <!-- Tech Lab .............................................................................. -->
-    <!--                                                                                         -->
-    <CActorUnit id="TechLab">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorModel id="TechLabBuild">
-        <Inherits index="Scale" value="0"/>
-    </CActorModel>
-    <CActorUnit id="TempleGeyser">
-        <BarHeight value="3"/>
-    </CActorUnit>
     <CActorRange id="TemporalRiftRange">
         <IconArcLength value="0.500000"/>
     </CActorRange>
@@ -2487,19 +1739,10 @@
     <CActorStateMonitor id="TerranFlamesMediumBuilding">
         <On Terms="UnitCreation.ScienceFacilityFlying" Send="Create"/>
     </CActorStateMonitor>
-    <!--                                                                                         -->
-    <!-- Thor .................................................................................. -->
-    <!--                                                                                         -->
-    <CActorUnit id="Thor">
-        <BarHeight value="3"/>
-    </CActorUnit>
     <!-- Time Warp ............................................................................. -->
     <CActorRange id="TimeWarpRange">
         <IconArcLength value="0.500000"/>
     </CActorRange>
-    <CActorUnit id="TrafficSignal">
-        <BarHeight value="3"/>
-    </CActorUnit>
     <!-- Transfusion                                                                            -->
     <CActorRange id="TransfusionRange">
         <IconArcLength value="0.500000"/>
@@ -2512,14 +1755,14 @@
     </CActorSound>
     <!-- UnitDeathModelPersistent is a unit b/c we want it to have a snapshot. -->
     <CActorUnit id="UnitDeathModelPersistent">
-        <BarHeight value="3"/>
+        <BarHeight value="7"/>
     </CActorUnit>
     <CActorUnit id="UnitDeathModelPersistentUnscaled">
-        <BarHeight value="3"/>
+        <BarHeight value="7"/>
     </CActorUnit>
     <!-- Unit Model Frame -->
     <CActorUnit id="UnitModelFrameActor">
-        <BarHeight value="3"/>
+        <BarHeight value="7"/>
     </CActorUnit>
     <CActorSplat id="UnpoweredVisual">
         <Scale value="0.966700"/>
@@ -2529,7 +1772,6 @@
     </CActorSound>
     <CActorUnit id="Nexus">
         <Scale value="0.750000,0.750000,0.850000"/>
-        <BarHeight value="3"/>
     </CActorUnit>
     <CActorSplat id="NexusSplat">
         <Scale value="0.750000,0.750000,0.850000"/>
@@ -2550,59 +1792,6 @@
         <BarHeight value="1"/>
         <BarWidth value="1"/>
     </CActorMissile>
-    <CActorUnit id="NuclearSilo" parent="TerranBuilding" unitName="NuclearSilo">
-        <Macros value="QueueAnimAddon"/>
-        <Macros value="TerranAttachmentAnims"/>
-        <Macros value="BuildingFlattenTerrainMacro"/>
-        <On index="3" Terms="UnitConstruction.NuclearSilo"/>
-        <On index="4" Terms="UnitConstruction.NuclearSilo"/>
-        <On index="47" Terms="UnitConstruction.NuclearSilo" Send="AnimBracketStop Attack"/>
-        <On index="48" Terms="UnitConstruction.NuclearSilo" Send="AnimGroupRemove Ready"/>
-        <On index="49" Terms="UnitConstruction.NuclearSilo" Send="Create NuclearSiloBuild"/>
-        <On index="50" Terms="UnitConstruction.NuclearSilo" Send="Create BuildingTerrainFlatten"/>
-        <On index="51" Terms="UnitConstruction.NuclearSilo" Target="_BuildingTerrainFlatten" Send="Destroy"/>
-        <On index="52" Terms="UnitBirth.NuclearSilo" Target="_BuildingTerrainFlatten" Send="Destroy"/>
-        <On index="53" Terms="UnitBirth.NuclearSilo" Target="_BuildingTerrainFlatten" Send="QueryRadius 1.750000 BuildingCrushQueryResponse"/>
-        <On index="54" Terms="UnitBirth.NuclearSilo" Send="Create BuildingTerrainFlatten"/>
-        <On Terms="AbilMorph.NuclearSiloMorph; MorphTo NuclearSilo" Send="Create"/>
-        <Model value="NukeSiloNova"/>
-        <Scale value="0.550000"/>
-        <BuildModel value="TechLabBuild"/>
-        <DeathArray index="Normal" ModelLink="TechReactorDetachedDeath" SoundLink="Terran_ExplosionMedium"/>
-        <PlacementModel value="TechLabPlacement"/>
-        <PlacementSound value="Terran_BuildingPlacement"/>
-        <PortraitModel value="AdjutantPortrait"/>
-        <BarOffset value="80"/>
-        <BarWidth value="70"/>
-        <GroupIcon>
-            <Image value="Assets\Textures\wireframe-terran-nukesilo.dds"/>
-        </GroupIcon>
-        <GroupSoundArray index="What" value="TechLabGroupWhat"/>
-        <GroupSoundArray index="Yes" value="TechLabGroupYes"/>
-        <GroupSoundArray index="Attack" value="TechLabGroupAttack"/>
-        <GroupSoundArray index="Board" value="TechLabGroupBoard"/>
-        <HeroIcon value="Assets\Textures\btn-building-terran-nukesilo.dds"/>
-        <HighlightTooltip value="Unit/Name/TechLab"/>
-        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-buildingarmor.dds"/>
-        <SoundArray index="Birth" value="TechLab_Birth"/>
-        <SoundArray index="Ready" value="TechLab_Ready"/>
-        <SoundArray index="Help" value="TechLabHelp"/>
-        <SoundArray index="What" value="TechLab_What"/>
-        <SoundArray index="Yes" value="TechLabYes"/>
-        <SoundArray index="Attack" value="TechLabAttack"/>
-        <SoundArray index="Pissed" value="TechLabPissed"/>
-        <SoundArray index="Movement" value="TechLabMovement"/>
-        <SoundArray index="Turning" value="TechLabTurning"/>
-        <SoundArray index="Board" value="TechLabBoard"/>
-        <SoundArray index="Click" value="TechLabClick"/>
-        <SoundArray index="ClickError" value="TechLabClickError"/>
-        <SoundArray index="Highlight" value="TechLabHighlight"/>
-        <UnitFlags index="ShowBlobShadow" value="0"/>
-        <UnitIcon value="Assets\Textures\btn-building-terran-nukesilo.dds"/>
-        <Wireframe>
-            <Image value="Assets\Textures\wireframe-terran-nukesilo.dds"/>
-        </Wireframe>
-    </CActorUnit>
     <CActorModel id="EnsnareImpact" parent="ModelAnimationStyleOneShot">
         <On Terms="Effect.EnsnareSearch.Start" Send="Create"/>
         <On Terms="ActorCreation" Send="SetOpacity 0.500000"/>
@@ -2673,6 +1862,10 @@
         <On index="83" removed="1"/>
         <On index="84" removed="1"/>
         <On index="85" removed="1"/>
+        <On index="86" removed="1"/>
+        <On index="87" removed="1"/>
+        <On index="88" removed="1"/>
+        <On index="89" removed="1"/>
         <Model value="SS_SwarmGuardian"/>
         <BuildModel value="SS_SwarmGuardian"/>
         <DeathArray index="Normal" ModelLink="ZergLargeUnitDeath" SoundLink="SS_SwarmGuardian_Explode" VoiceLink="QueenBWDeathVoice"/>
@@ -2682,13 +1875,12 @@
         <GroupIcon>
             <Image index="0" value="Assets\Textures\wireframe-zerg-queen.dds"/>
         </GroupIcon>
-        <HeroIcon value="Assets\Textures\btn-unit-zerg-Queen.dds"/>
-        <UnitIcon value="Assets\Textures\btn-unit-zerg-Queen.dds"/>
+        <HeroIcon value="Assets\Textures\btn-unit-zerg-queenclassic.dds"/>
+        <UnitIcon value="Assets\Textures\btn-unit-zerg-queenclassic.dds"/>
         <Wireframe>
-            <Image index="0" value="Assets\Textures\wireframe-zerg-queen.dds"/>
+            <Image index="0" value="Assets\Textures\wireframe-zerg-queenclassic.dds"/>
         </Wireframe>
         <HostSiteOps Ops="SOpBankerMutalisk"/>
-        <BarHeight value="3"/>
         <EventDataFootprint index="0" Model="QueenBWFootprint"/>
         <GroupSoundArray index="What" value="QueenBW_GroupWhat"/>
         <GroupSoundArray index="Yes" value="QueenBW_GroupYes"/>
@@ -2703,6 +1895,7 @@
         <SoundArray index="Click" value="QueenBW_Click"/>
         <SoundArray index="ClickError" value="QueenBW_ClickError"/>
         <SoundArray index="Highlight" value="QueenBW_Highlight"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-zerg-flyercarapace-level0.dds"/>
     </CActorUnit>
     <CActorSound id="Restoration">
         <EditorCategories value=""/>
@@ -2711,11 +1904,9 @@
     </CActorSound>
     <CActorUnit id="RoboticsBay">
         <Scale value="0.900000,0.800000,1.000000"/>
-        <BarHeight value="3"/>
     </CActorUnit>
     <CActorUnit id="RoboticsFacility">
         <Scale value="0.900000,0.800000,1.000000"/>
-        <BarHeight value="3"/>
     </CActorUnit>
     <CActorSplat id="RoboticsFacilitySplat">
         <Scale value="0.900000,0.800000,1.000000"/>
@@ -2723,61 +1914,7 @@
     <CActorSplat id="RoboticsSupportBaySplat">
         <Scale value="0.900000,0.800000,1.000000"/>
     </CActorSplat>
-    <CActorSiteOpLocalOffset id="SOpHigherBy1">
-        <LocalOffset value="0.000000,0.000000,1.000000"/>
-    </CActorSiteOpLocalOffset>
-    <CActorUnit id="ScienceFacilityCovertOps" parent="TerranBuilding" unitName="CovertOps2">
-        <Macros value="QueueAnimAddon"/>
-        <Macros value="TerranAttachmentAnims"/>
-        <Macros value="BuildingFlattenTerrainMacro"/>
-        <On index="47" Terms="WeaponStop.*.AttackStop" Send="Create BarracksTechLabBuild"/>
-        <On index="49" Terms="UnitConstruction.CovertOps2.Start" Send="Create TechLabBuild"/>
-        <On Terms="UnitDeathCustomize; ValidateUnit TechLabIsDetached" Send="DeathCustomize Detached"/>
-        <On Terms="AbilMorph.*.Finish; MorphTo CovertOps2" Target="BarracksTechLabSplat" Send="Destroy"/>
-        <On Terms="AbilMorph.*.Finish; MorphTo TechReactor" Send="Destroy"/>
-        <On Terms="UnitConstruction.CovertOps2.Start" Send="Create TerranConstruction"/>
-        <Model value="TechLab"/>
-        <BuildModel value="TechLab"/>
-        <DeathArray index="Normal" ModelLink="TechLabDeath" SoundLink="TechLab_Explode"/>
-        <DeathArray index="UnderConstruction" ModelLink="TerranBuildingDeath" SoundLink="TechLab_Explode"/>
-        <DeathCustoms ModelLink="TechLabDeathDetached" Name="Detached"/>
-        <PlacementModel value="TechLabPlacement"/>
-        <PlacementSound value="Terran_BuildingPlacement"/>
-        <PortraitModel value="AdjutantPortrait"/>
-        <AddonIndicator value="Actor/AddonIndicator/CovertOps"/>
-        <BarOffset value="80"/>
-        <BarWidth value="75"/>
-        <GroupIcon>
-            <Image value="Assets\Textures\Wireframe-Terran-TechLab.dds"/>
-        </GroupIcon>
-        <GroupSoundArray index="What" value="TechLabGroupWhat"/>
-        <GroupSoundArray index="Yes" value="TechLabGroupYes"/>
-        <GroupSoundArray index="Attack" value="TechLabGroupAttack"/>
-        <GroupSoundArray index="Board" value="TechLabGroupBoard"/>
-        <HeroIcon value="Assets\Textures\btn-building-terran-techlab.dds"/>
-        <HighlightTooltip value="Unit/Name/TechLab"/>
-        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-buildingarmor.dds"/>
-        <SoundArray index="Birth" value="TechLab_Birth"/>
-        <SoundArray index="Ready" value="TechLab_Ready"/>
-        <SoundArray index="Help" value="TechLabHelp"/>
-        <SoundArray index="What" value="TechLab_What"/>
-        <SoundArray index="Yes" value="TechLabYes"/>
-        <SoundArray index="Attack" value="TechLabAttack"/>
-        <SoundArray index="Pissed" value="TechLabPissed"/>
-        <SoundArray index="Movement" value="TechLabMovement"/>
-        <SoundArray index="Turning" value="TechLabTurning"/>
-        <SoundArray index="Board" value="TechLabBoard"/>
-        <SoundArray index="Construction" value="Terran_ConstructionWhat"/>
-        <SoundArray index="Click" value="TechLabClick"/>
-        <SoundArray index="ClickError" value="TechLabClickError"/>
-        <SoundArray index="Highlight" value="TechLabHighlight"/>
-        <UnitFlags index="ShowBlobShadow" value="0"/>
-        <UnitIcon value="Assets\Textures\btn-building-terran-techlab.dds"/>
-        <Wireframe>
-            <Image value="Assets\Textures\Wireframe-Terran-TechLab.dds"/>
-        </Wireframe>
-        <EditorModel value="TechLab"/>
-    </CActorUnit>
+    <CActorSiteOpLocalOffset id="SOpHigherBy1"/>
     <CActorUnit id="CommandCenterComsatStation" parent="TerranBuilding" unitName="ComsatStation2">
         <Macros value="QueueAnim"/>
         <Macros value="TerranAttachmentAnims"/>
@@ -2843,7 +1980,6 @@
         <On Terms="UnitDeathCustomize" Send="DeathCustomize Flying"/>
         <On Terms="AbilMorph.*.Start; MorphFrom EngineeringBay; MorphTo EngineeringBayFlying" Send="AnimGroupApply Fly Fly,Start Fly,End"/>
         <Scale value="1.100000"/>
-        <BarHeight value="3"/>
     </CActorUnit>
     <CActorModel id="IrradiateEffect">
         <On Terms="ActorCreation" Send="AnimBracketStart BSD Birth Stand Death"/>
@@ -2855,71 +1991,18 @@
         <Host Subject="_Unit"/>
         <HostSiteOps Ops="SOpAttachCenter"/>
     </CActorModel>
-    <CActorUnit id="CommandCenterNuclearSilo" parent="TerranBuilding" unitName="NuclearSilo2">
-        <Macros value="QueueAnimAddon"/>
-        <Macros value="TerranAttachmentAnims"/>
-        <Macros value="BuildAnim"/>
-        <On index="47" Terms="WeaponStop.*.AttackStop" Send="Create TechLabBuild"/>
-        <On index="49" Terms="UnitConstruction.NuclearSilo2.Start" Send="Create TechLabBuild"/>
-        <On Terms="UnitDeathCustomize; ValidateUnit TechLabIsDetached" Send="DeathCustomize Detached"/>
-        <On Terms="AbilMorph.*.Finish; MorphTo TechReactor" Target="BarracksTechLabSplat" Send="Destroy"/>
-        <On Terms="AbilMorph.*.Finish; MorphTo TechReactor" Send="Destroy"/>
-        <On Terms="UnitConstruction.NuclearSilo2.Start" Send="Create TerranConstruction"/>
-        <Model value="NukeSiloNova"/>
-        <Scale value="0.600000"/>
-        <BuildModel value="NukeSiloNova"/>
-        <DeathArray index="Normal" ModelLink="TechLabDeath" SoundLink="TechLab_Explode"/>
-        <DeathArray index="UnderConstruction" ModelLink="TerranBuildingDeath" SoundLink="TechLab_Explode"/>
-        <DeathCustoms ModelLink="TechLabDeathDetached" Name="Detached"/>
-        <PlacementModel value="TechLabPlacement"/>
-        <PlacementSound value="Terran_BuildingPlacement"/>
-        <PortraitModel value="AdjutantPortrait"/>
-        <AddonIndicator value="Actor/AddonIndicator/NukeSilo"/>
-        <BarOffset value="80"/>
-        <BarWidth value="75"/>
-        <GroupIcon>
-            <Image value="Assets\Textures\wireframe-terran-nukesilo.dds"/>
-        </GroupIcon>
-        <GroupSoundArray index="What" value="TechLabGroupWhat"/>
-        <GroupSoundArray index="Yes" value="TechLabGroupYes"/>
-        <GroupSoundArray index="Attack" value="TechLabGroupAttack"/>
-        <GroupSoundArray index="Board" value="TechLabGroupBoard"/>
-        <HeroIcon value="Assets\Textures\btn-building-terran-nukesilo.dds"/>
-        <HighlightTooltip value="Unit/Name/TechLab"/>
-        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-buildingarmor.dds"/>
-        <SoundArray index="Birth" value="TechLab_Birth"/>
-        <SoundArray index="Ready" value="TechLab_Ready"/>
-        <SoundArray index="Help" value="TechLabHelp"/>
-        <SoundArray index="What" value="TechLab_What"/>
-        <SoundArray index="Yes" value="TechLabYes"/>
-        <SoundArray index="Attack" value="TechLabAttack"/>
-        <SoundArray index="Pissed" value="TechLabPissed"/>
-        <SoundArray index="Movement" value="TechLabMovement"/>
-        <SoundArray index="Turning" value="TechLabTurning"/>
-        <SoundArray index="Board" value="TechLabBoard"/>
-        <SoundArray index="Construction" value="Terran_ConstructionWhat"/>
-        <SoundArray index="Click" value="TechLabClick"/>
-        <SoundArray index="ClickError" value="TechLabClickError"/>
-        <SoundArray index="Highlight" value="TechLabHighlight"/>
-        <UnitFlags index="ShowBlobShadow" value="0"/>
-        <UnitIcon value="Assets\Textures\btn-building-terran-nukesilo.dds"/>
-        <Wireframe>
-            <Image value="Assets\Textures\wireframe-terran-nukesilo.dds"/>
-        </Wireframe>
-    </CActorUnit>
     <CActorSplat id="ComsatStationSplat" parent="GenericUnitSplat" unitName="ComsatStation2">
         <Model value="BarracksTechLabSplat"/>
     </CActorSplat>
     <CActorUnit id="BroodLord">
         <GroupIcon>
-            <Image index="0" value="Assets\Textures\wireframe-zerg-guardian.dds"/>
+            <Image index="0" value="Assets\Textures\wireframe-zerg-primalzergguardian.dds"/>
         </GroupIcon>
-        <HeroIcon value="Assets\Textures\btn-unit-zerg-guardian.dds"/>
-        <UnitIcon value="Assets\Textures\btn-unit-zerg-guardian.dds"/>
+        <HeroIcon value="Assets\Textures\btn-unit-zerg-primalguardian.dds"/>
+        <UnitIcon value="Assets\Textures\btn-unit-zerg-primalguardian.dds"/>
         <Wireframe>
-            <Image index="0" value="Assets\Textures\wireframe-zerg-guardian.dds"/>
+            <Image index="0" value="Assets\Textures\wireframe-zerg-primalzergguardian.dds"/>
         </Wireframe>
-        <BarHeight value="3"/>
         <HostSiteOps Ops=""/>
     </CActorUnit>
     <CActorAction id="BroodLordAttack2" parent="GenericAttack" effectImpact="DevourerU" effectLaunch="DevourerLM">
@@ -2981,44 +2064,40 @@
         <On index="76" removed="1"/>
         <On index="77" removed="1"/>
         <On index="78" removed="1"/>
-        <BarHeight value="3"/>
+        <On index="79" removed="1"/>
+        <On index="80" removed="1"/>
+        <On index="81" removed="1"/>
+        <On index="82" removed="1"/>
     </CActorUnit>
     <CActorUnit id="EvolutionChamber">
         <PortraitModel value="OvermindPortrait"/>
         <Scale value="1.000000,0.850000,1.000000"/>
-        <BarHeight value="3"/>
     </CActorUnit>
     <CActorUnit id="Extractor">
         <On Terms="Behavior.HarvestableVespeneGeyserGasZerg2.Extract" Send="SetTintColor 255,170,170"/>
         <On Terms="Behavior.HarvestableVespeneGeyserGasZerg2.Extract" Send="AnimGroupRemove D"/>
         <On Terms="Behavior.HarvestableVespeneGeyserGasZerg2.Extract" Send="AnimGroupApply B"/>
         <PortraitModel value="OvermindPortrait"/>
-        <BarHeight value="3"/>
     </CActorUnit>
     <CActorUnit id="GreaterSpire">
         <PortraitModel value="OvermindPortrait"/>
-        <BarHeight value="3"/>
     </CActorUnit>
     <CActorUnit id="Hatchery">
         <PortraitModel value="OvermindPortrait"/>
         <Scale value="0.750000,0.750000,0.850000"/>
-        <BarHeight value="3"/>
         <PlacementActorModel value="ZergPlacementModelHatchery"/>
         <PlaceholderActorModel value="ZergPlacementModelHatchery"/>
     </CActorUnit>
     <CActorUnit id="Hive">
         <PortraitModel value="OvermindPortrait"/>
         <Scale value="0.750000,0.750000,0.850000"/>
-        <BarHeight value="3"/>
     </CActorUnit>
     <CActorUnit id="HydraliskDen">
         <PortraitModel value="OvermindPortrait"/>
-        <BarHeight value="3"/>
     </CActorUnit>
     <CActorUnit id="InfestationPit">
         <PortraitModel value="OvermindPortrait"/>
         <Scale value="0.900000,0.800000,1.000000"/>
-        <BarHeight value="3"/>
     </CActorUnit>
     <CActorAction id="InterceptorAttack">
         <On index="0" Terms="Effect.InterceptorBeamDamage.Start; At Caster" Send="Create"/>
@@ -3026,7 +2105,6 @@
     <CActorUnit id="Lair">
         <PortraitModel value="OvermindPortrait"/>
         <Scale value="0.750000,0.750000,0.850000"/>
-        <BarHeight value="3"/>
     </CActorUnit>
     <CActorModel id="LockdownEffect" parent="ModelAddition">
         <EditorCategories value=""/>
@@ -3094,7 +2172,7 @@
         <On index="23" Terms="ActorCreation; FlyerHelper All; ValidateUnit IsFlying" Send="Create FlyerHelperSplat"/>
         <On index="24" Terms="ActorDestruction; FlyerHelper All; !HasStatus FlyerHelper" Target="FlyerHelperSplat" Send="Destroy"/>
         <On index="25" Terms="FlyerHelperChange; FlyerHelper None"/>
-        <On index="26" Terms="FlyerHelperChange; FlyerHelper Selected; HasStatus FlyerHelper; !ScopeContains FlyerHelperSplat" Target="" Send="Create FlyerHelperSplat"/>
+        <On index="26" Terms="FlyerHelperChange; FlyerHelper Selected; HasStatus FlyerHelper; !ScopeContains FlyerHelperSplat"/>
         <On index="27" Terms="FlyerHelperChange; FlyerHelper Selected; !HasStatus FlyerHelper" Target="FlyerHelperSplat" Send="Destroy"/>
         <On index="28" Terms="FlyerHelperChange; FlyerHelper All; ValidateUnit IsFlying; !ScopeContains FlyerHelperSplat" Target="" Send="Create FlyerHelperSplat"/>
         <On index="29" Terms="UnitBirth.*.Normal" Send="$Birth 0 0.000000"/>
@@ -3136,10 +2214,20 @@
         <On index="65" removed="1"/>
         <On index="66" removed="1"/>
         <On index="67" removed="1"/>
-        <BarHeight value="3"/>
+        <On index="68" removed="1"/>
+        <On index="69" removed="1"/>
+        <On index="70" removed="1"/>
+        <On index="71" removed="1"/>
+        <On index="72" removed="1"/>
+        <On index="73" removed="1"/>
+        <On index="74" removed="1"/>
+        <On index="75" removed="1"/>
+        <On index="76" removed="1"/>
+        <On index="77" removed="1"/>
+        <On index="78" removed="1"/>
         <Model value="NydusNetwork"/>
         <Scale value="0.800000"/>
-        <BuildModel value="NydusNetwork"/>
+        <BuildModel value="ZergBuildingBuild2x2"/>
         <DeathArray index="Normal" ModelLink="NydusNetworkDeath" SoundLink="NydusNetwork_Explode" VoiceLink="NydusNetworkDeathVoice"/>
         <DeathArray index="Disintegrate" ModelLink="" SoundLink=""/>
         <DeathArray index="Fire" ModelLink="" SoundLink=""/>
@@ -3159,7 +2247,6 @@
     </CActorUnit>
     <CActorUnit id="NydusNetwork">
         <PortraitModel value="OvermindPortrait"/>
-        <BarHeight value="3"/>
         <Scale value="0.800000"/>
         <PlacementActorModel value="NydusPlacementModel"/>
         <PlaceholderActorModel value="NydusPlacementModel"/>
@@ -3185,7 +2272,6 @@
     <!--                                                                                         -->
     <CActorUnit id="Firebat">
         <Scale value="0.750000"/>
-        <BarHeight value="3"/>
     </CActorUnit>
     <CActorAction id="FirebatAttack">
         <On Terms="Effect.FirebatFlameThrowerSwitch.Start; At Caster; FromEffectTreeDescendant" Send="ActionDamage"/>
@@ -3228,13 +2314,6 @@
         </WireframeShield>
         <Scale value="1.250000"/>
     </CActorUnit>
-    <CActorModel id="DisruptionWebModel" parent="ModelAnimationStyleContinuous">
-        <On Terms="Effect.DisruptionWebPersistent.Start" Send="Create"/>
-        <On Terms="Effect.DisruptionWebPersistent.Stop" Send="AnimBracketStop BSD"/>
-        <HostSiteOps Ops="SOpShadow"/>
-        <Model value="DisruptionWeb"/>
-        <Scale value="0.450000,0.450000,0.250000"/>
-    </CActorModel>
     <CActorSplat id="DarkSwarmCursorSplat" parent="ZergCursorSplat" abil="DarkSwarm"/>
     <!--                                                                                         -->
     <!-- Ghost ................................................................................. -->
@@ -3262,7 +2341,6 @@
         <On Terms="Abil.Lockdown.SourceFinishStart" Send="AnimPlay Attack Attack"/>
         <On Terms="Abil.LockdownHardcore.SourceFinishStart" Send="AnimPlay Attack Attack"/>
         <On Terms="UnitMovementUpdate.*.Walk; AnimPlaying Attack Attack" Send="AnimClear Attack"/>
-        <BarHeight value="3"/>
         <Scale value="0.800000"/>
     </CActorUnit>
     <!--                                                                                         -->
@@ -3290,15 +2368,12 @@
         <SoundArray index="Click" value="GhostClick"/>
         <SoundArray index="ClickError" value="GhostClickError"/>
         <SoundArray index="Highlight" value="GhostHighlight"/>
-        <BarHeight value="3"/>
     </CActorUnit>
     <CActorUnit id="Probe">
         <Scale value="1.100000,1.100000,1.000000"/>
-        <BarHeight value="3"/>
     </CActorUnit>
     <CActorUnit id="RoachWarren">
         <PortraitModel value="OvermindPortrait"/>
-        <BarHeight value="3"/>
     </CActorUnit>
     <CActorUnit id="Observatory" parent="GenericUnitStandard" unitName="Observatory">
         <Macros value="UnpoweredAnim"/>
@@ -3343,7 +2418,6 @@
     <CActorUnit id="ScienceVessel">
         <DeathArray index="Normal" SoundLink="ScienceVessel_Death"/>
         <Scale value="1.400000"/>
-        <BarHeight value="3"/>
         <On Terms="Abil.IrradiateHardcore.SourceCastStart" Send="$Spell"/>
         <On Terms="Abil.EMP.SourceCastStart" Send="$Spell"/>
         <On Terms="Abil.EMPHardcore.SourceCastStart" Send="$Spell"/>
@@ -3356,7 +2430,6 @@
     <CActorUnit id="Scourge">
         <DeathArray index="Normal" SoundLink="ScourgeAttackDeath"/>
         <Scale value="0.850000"/>
-        <BarHeight value="3"/>
     </CActorUnit>
     <CActorSound id="ScourgeDeathNormalSound">
         <Sound value="ScourgeAttackDeath"/>
@@ -3415,31 +2488,26 @@
     <CActorUnit id="SpawningPool">
         <PortraitModel value="OvermindPortrait"/>
         <Scale value="0.900000,0.700000,1.000000"/>
-        <BarHeight value="3"/>
     </CActorUnit>
     <!-- Spider Mine ........................................................................... -->
     <CActorUnit id="SpiderMineVulture">
         <On Terms="AbilMorph.*.Start; MorphTo SpiderMineBurrowed" Send="AnimPlay Burrow Burrow PlayForever,NonLooping -1.000000 -1.000000 0.250000 AsDuration"/>
         <On Terms="Abil.SpiderMineAttack.SourceApproachStart" Send="AnimPlay Unburrow Unburrow 0 -1.000000 -1.000000 0.250000 AsDuration"/>
-        <BarHeight value="3"/>
         <DeathArray index="Remove" ModelLink="SpiderMineExplosion2"/>
         <DeathArray index="Blast" ModelLink="SpiderMineExplosion2"/>
         <DeathArray index="Electrocute" ModelLink="SpiderMineExplosion2"/>
     </CActorUnit>
     <CActorUnit id="Spire">
         <PortraitModel value="OvermindPortrait"/>
-        <BarHeight value="3"/>
     </CActorUnit>
     <CActorUnit id="Stargate">
         <Scale value="0.900000,1.250000,1.000000"/>
-        <BarHeight value="3"/>
     </CActorUnit>
     <!--                                                                                         -->
     <!-- Starport .............................................................................. -->
     <!--                                                                                         -->
     <CActorUnit id="Starport">
         <Scale value="1.000000,1.100000,1.000000"/>
-        <BarHeight value="3"/>
     </CActorUnit>
     <CActorSplat id="StarportSplat">
         <Scale value="1.000000,1.100000,1.000000"/>
@@ -3450,7 +2518,6 @@
         <On Terms="Abil.RepairHardcore.SourceChannelStart" Send="TimerSet 0.000000,0.300000 Repair"/>
         <On Terms="Abil.RepairHardcore.SourceChannelStop" Send="TimerKill Repair"/>
         <On Terms="Abil.RepairHardcore.SourceChannelStop" Send="AnimClear Repair"/>
-        <BarHeight value="3"/>
     </CActorUnit>
     <!-- Powerups                                                                                -->
     <CActorModel id="SS_FighterPowerUpSideMissiles1">
@@ -3470,75 +2537,6 @@
     <CActorAction id="MissileTurretAttack" effectImpact="MissileTurretLongboltMissileSwitch">
         <On index="0" Terms="Effect.MissileTurretLongboltMissileSwitch.Start; At Caster; FromEffectTreeDescendant"/>
     </CActorAction>
-    <!--                                                                                         -->
-    <!-- Phoenix ............................................................................... -->
-    <!--                                                                                         -->
-    <CActorUnit id="Phoenix">
-        <GroupSoundArray index="Birth" value="Corsair_Ready"/>
-        <GroupSoundArray index="Ready" value="Corsair_What"/>
-        <GroupSoundArray index="Help" value="Corsair_Help"/>
-        <GroupSoundArray index="What" value="Corsair_What"/>
-        <GroupSoundArray index="Yes" value="Corsair_Yes"/>
-        <GroupSoundArray index="Attack" value="Corsair_Attack"/>
-        <GroupSoundArray index="Pissed" value="Corsair_Pissed"/>
-        <GroupSoundArray index="Movement" value="Corsair_Yes"/>
-        <GroupSoundArray index="Turning" value="Phoenix_Movement"/>
-        <GroupSoundArray index="Board" value=""/>
-        <GroupSoundArray index="Click" value="Corsair_Yes"/>
-        <GroupSoundArray index="ClickError" value="Corsair_What"/>
-        <SoundArray index="Birth" value=""/>
-        <SoundArray index="Ready" value="Corsair_Ready"/>
-        <SoundArray index="Help" value="Corsair_Help"/>
-        <SoundArray index="What" value="Corsair_What"/>
-        <SoundArray index="Yes" value="Corsair_Yes"/>
-        <SoundArray index="Attack" value="Corsair_Attack"/>
-        <SoundArray index="Pissed" value="Corsair_Pissed"/>
-        <SoundArray index="Movement" value=""/>
-        <SoundArray index="Turning" value="Phoenix_Movement"/>
-        <SoundArray index="Board" value=""/>
-        <SoundArray index="Click" value=""/>
-        <SoundArray index="ClickError" value=""/>
-        <SoundArray index="Highlight" value=""/>
-        <GroupIcon>
-            <Image index="0" value="Assets\Textures\wireframe-protoss-corsair-large.dds"/>
-        </GroupIcon>
-        <HeroIcon value="Assets\Textures\btn-unit-protoss-corsair.dds"/>
-        <UnitIcon value="Assets\Textures\btn-unit-protoss-corsair.dds"/>
-        <Wireframe>
-            <Image index="0" value="Assets\Textures\wireframe-protoss-corsair-large.dds"/>
-        </Wireframe>
-        <WireframeShield>
-            <Image index="0" value="Assets\Textures\wireframe-protoss-corsair-shield01.dds"/>
-            <Image index="1" value="Assets\Textures\wireframe-protoss-corsair-shield02.dds"/>
-            <Image index="2" value="Assets\Textures\wireframe-protoss-corsair-shield03.dds"/>
-        </WireframeShield>
-        <BuildModel value="Phoenix"/>
-        <On index="44" Terms="Behavior.Hallucination.On" Send="Create HallucinationBirthSoundMedium"/>
-        <On index="45" Terms="UnitDeathCustomize; ValidateUnit IsHallucination" Send="DeathCustomize Hallucination"/>
-        <On index="46" Terms="Abil.attack.ReadyStart" Send="AnimGroupApply Ready"/>
-        <On index="47" Terms="WeaponStart.*.AttackStart" Send="AnimBracketStart Attack Attack"/>
-        <On index="48" Terms="WeaponStop.*.AttackStop" Send="AnimBracketStop Attack"/>
-        <On index="49" Terms="Abil.attack.ReadyStop" Send="AnimGroupRemove Ready"/>
-        <On index="50" removed="1"/>
-        <On index="51" removed="1"/>
-        <On index="52" removed="1"/>
-        <On index="53" removed="1"/>
-        <On index="54" removed="1"/>
-        <On index="55" removed="1"/>
-        <On index="56" removed="1"/>
-        <On index="57" removed="1"/>
-        <On index="58" removed="1"/>
-        <On index="59" removed="1"/>
-        <On index="60" removed="1"/>
-        <On index="61" removed="1"/>
-        <On index="62" removed="1"/>
-        <On index="63" removed="1"/>
-        <On index="64" removed="1"/>
-        <On index="65" removed="1"/>
-        <On index="66" removed="1"/>
-        <On index="67" removed="1"/>
-        <BarHeight value="3"/>
-    </CActorUnit>
     <CActorModel id="PlagueImpact" parent="ModelAnimationStyleOneShot">
         <On Terms="Effect.PlagueSearch.Start" Send="Create"/>
         <On Terms="ActorCreation" Send="SetTintColor 255,0,0"/>
@@ -3560,7 +2558,6 @@
         <On Terms="AbilMorph.*.Finish; MorphTo Mutalisk" Send="Create"/>
         <On Terms="AbilMorph.*.Start; MorphFrom Mutalisk" Send="Destroy"/>
         <Scale value="0.850000"/>
-        <BarHeight value="3"/>
     </CActorUnit>
     <CActorModel id="ProtossBuildingBirth">
         <On index="2" Terms="UnitConstruction.ShieldBattery.Start" Send="Create"/>
@@ -3584,86 +2581,13 @@
         <Inherits index="Scale" value="0"/>
         <AcceptedHostedPropTransfers index="Scale" value="0"/>
     </CActorModel>
-    <CActorUnit id="Arbiter" parent="GenericUnitStandard" unitName="Arbiter">
-        <Macros value="ZergBurrowMobileAnimMacro"/>
-        <Macros value="ZergMediumBurrowEffects"/>
-        <Macros value="UnloadDropAnim"/>
-        <On index="42" removed="1"/>
-        <On index="43" removed="1"/>
-        <On index="44" removed="1"/>
-        <On index="45" removed="1"/>
-        <On index="46" removed="1"/>
-        <On index="47" removed="1"/>
-        <On index="48" removed="1"/>
-        <On index="49" removed="1"/>
-        <On index="50" removed="1"/>
-        <On index="51" removed="1"/>
-        <On index="52" removed="1"/>
-        <On index="53" removed="1"/>
-        <On index="54" removed="1"/>
-        <On index="55" removed="1"/>
-        <On index="56" removed="1"/>
-        <On index="57" removed="1"/>
-        <On index="58" removed="1"/>
-        <On index="59" removed="1"/>
-        <On index="60" removed="1"/>
-        <DeathArray index="Normal" ModelLink="ArbiterDeath" SoundLink="Arbiter_Explode" VoiceLink="InfestorDeathVoice"/>
-        <DeathArray index="Eat" AnimProps=""/>
-        <DeathArray index="Eviscerate" AnimProps=""/>
-        <DeathArray index="Fire" AnimProps=""/>
-        <DeathArray index="Silentkill" AnimProps=""/>
-        <DeathArray index="Squish" AnimProps=""/>
-        <DeathArray index="UnderConstruction" AnimProps=""/>
-        <PortraitModel value="CarrierPortrait"/>
-        <WalkAnimMoveSpeed value="1.5976"/>
-        <BarOffset value="70"/>
-        <GroupIcon>
-            <Image value="Assets\Textures\wireframe-protoss-arbiter.dds"/>
-        </GroupIcon>
-        <GroupSoundArray index="Birth" value="PuMothershipWarpIn"/>
-        <GroupSoundArray index="Ready" value="Arbiter_Ready"/>
-        <GroupSoundArray index="Help" value="Artanis_UnderAttack"/>
-        <GroupSoundArray index="What" value="Arbiter_What"/>
-        <GroupSoundArray index="Yes" value="Arbiter_Yes"/>
-        <GroupSoundArray index="Attack" value="Arbiter_Yes"/>
-        <GroupSoundArray index="Pissed" value="Arbiter_Pissed"/>
-        <GroupSoundArray index="Movement" value="Artanis_Movement"/>
-        <GroupSoundArray index="Turning" value="Artanis_Turning"/>
-        <GroupSoundArray index="Board" value="Artanis_Board"/>
-        <GroupSoundArray index="Click" value="Artanis_Click"/>
-        <GroupSoundArray index="ClickError" value="Artanis_ClickError"/>
-        <GroupSoundArray index="Highlight" value="Artanis_Highlight"/>
-        <HeroIcon value="Assets\Textures\btn-unit-protoss-arbiter.dds"/>
-        <LifeArmorIcon value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel1.dds"/>
-        <NameOffset value="40"/>
-        <SoundArray index="Birth" value="PuMothershipWarpIn"/>
-        <SoundArray index="Help" value="Artanis_UnderAttack"/>
-        <SoundArray index="Attack" value="Arbiter_Yes"/>
-        <SoundArray index="Movement" value="Artanis_Movement"/>
-        <SoundArray index="Turning" value="Artanis_Turning"/>
-        <SoundArray index="Board" value="Artanis_Board"/>
-        <SoundArray index="Click" value="Artanis_Click"/>
-        <SoundArray index="ClickError" value="Artanis_ClickError"/>
-        <SoundArray index="Highlight" value="Artanis_Highlight"/>
-        <UnitIcon value="Assets\Textures\btn-unit-protoss-arbiter.dds"/>
-        <Wireframe>
-            <Image value="Assets\Textures\wireframe-protoss-arbiter.dds"/>
-        </Wireframe>
-        <WireframeShield>
-            <Image value="Assets\Textures\wireframe-protoss-arbiter-shield01.dds"/>
-            <Image value="Assets\Textures\wireframe-protoss-arbiter-shield02.dds"/>
-            <Image value="Assets\Textures\wireframe-protoss-arbiter-shield03.dds"/>
-        </WireframeShield>
-        <Scale value="0.600000"/>
-    </CActorUnit>
     <CActorMissile id="ReaverScarab" parent="GenericAttackMissile" unitName="WeaponReaverScarabDumb">
         <EditorCategories value=""/>
         <Model value="ReaverScarab"/>
         <BarHeight value="1"/>
         <BarWidth value="1"/>
         <On index="1" Terms="UnitBirth" Send="AnimBracketStart Lifetime Birth Stand {} OpeningPlayForever"/>
-        <Scale value="2.000000"/>
-        <DeathArray index="Normal" AnimProps="Death" ModelLink="ReaverScarabImpact"/>
+        <DeathArray index="Normal" AnimProps="Death" ModelLink="ReaverScarabImpact" SoundLink="Scarab_Explode"/>
         <DeathActorModel value="UnitDeathModel"/>
         <DeathActorModelLow value="UnitDeathModelUnscaled"/>
         <DeathActorSound value="UnitDeathSound"/>
@@ -3727,72 +2651,15 @@
         <On index="98" removed="1"/>
         <On index="99" removed="1"/>
         <On index="100" removed="1"/>
+        <On index="101" removed="1"/>
+        <On index="102" removed="1"/>
         <PortraitModel value="OvermindPortrait"/>
-        <BarHeight value="3"/>
         <Baselines index="Stand" AnimProps="Burrow,Stand"/>
     </CActorUnit>
-    <CActorUnit id="Stalker">
-        <On index="45" Terms="WeaponStart.*.AttackStart" Send="AnimBracketStart Attack Attack Stand,Channel {} OpeningPlayForever"/>
-        <On index="46" Terms="WeaponStop.*.AttackStop" Send="AnimBracketStop Attack 0 0.000000 AsDuration"/>
-        <On index="47" Terms="Abil.attack.ReadyStart" Send="AnimGroupRemove Ready"/>
-        <On index="48" removed="1"/>
-        <On index="49" removed="1"/>
-        <On index="50" removed="1"/>
-        <On index="51" removed="1"/>
-        <On index="52" removed="1"/>
-        <On index="53" removed="1"/>
-        <On index="54" removed="1"/>
-        <On index="55" removed="1"/>
-        <On index="56" removed="1"/>
-        <On index="57" removed="1"/>
-        <On index="58" removed="1"/>
-        <On index="59" removed="1"/>
-        <On index="60" removed="1"/>
-        <On index="61" removed="1"/>
-        <On index="62" removed="1"/>
-        <On index="63" removed="1"/>
-        <On index="64" removed="1"/>
-        <DeathArray index="Normal" ModelLink="ProtossMediumUnitDeath" SoundLink="DragoonDeath"/>
-        <DeathCustoms index="5" removed="1"/>
-        <DeathCustoms index="6" removed="1"/>
-        <DeathCustoms index="7" removed="1"/>
-        <DeathCustoms index="8" removed="1"/>
-        <DeathCustoms index="9" removed="1"/>
-        <DeathCustoms index="10" removed="1"/>
-        <DeathCustoms index="11" removed="1"/>
-        <DeathCustoms index="12" removed="1"/>
-        <DeathCustoms index="13" removed="1"/>
-        <DeathCustoms index="14" removed="1"/>
-        <DeathCustoms index="15" removed="1"/>
-        <GroupIcon>
-            <Image index="0" value="Assets\Textures\wireframe-protoss-dragoon.dds"/>
-        </GroupIcon>
-        <Wireframe>
-            <Image index="0" value="Assets\Textures\wireframe-protoss-dragoon.dds"/>
-        </Wireframe>
-        <WireframeShield>
-            <Image index="0" value="Assets\Textures\wireframe-protoss-dragoon-shield01.dds"/>
-            <Image index="1" value="Assets\Textures\wireframe-protoss-dragoon-shield02.dds"/>
-            <Image index="2" value="Assets\Textures\wireframe-protoss-dragoon-shield03.dds"/>
-        </WireframeShield>
-        <BuildModel value="ImmortalWarpIn"/>
-        <PlacementModel value="ImmortalPlacement"/>
-        <PortraitModel value="ImmortalPortrait"/>
-        <WalkAnimMoveSpeed value="1.8007"/>
-        <BarOffset value="80"/>
-        <BarWidth value="90"/>
-        <HeroIcon value="Assets\Textures\btn-unit-protoss-dragoon.dds"/>
-        <UnitIcon value="Assets\Textures\btn-unit-protoss-dragoon.dds"/>
-        <Scale value="0.950000"/>
-        <SoundArray index="Attack" value="Stalker_Yes"/>
-        <BarHeight value="3"/>
-    </CActorUnit>
     <CActorMissile id="StalkerAttackMissile">
-        <Scale value="1.250000"/>
         <BarHeight value="1"/>
         <BarWidth value="1"/>
     </CActorMissile>
-    <CActorSplat id="DisruptionWebCursorSplat" parent="ProtossCursorSplat" abil="DisruptionWeb"/>
     <CActorModel id="StasisField" parent="ModelAddition">
         <EditorCategories value=""/>
         <On Terms="Behavior.StasisField.On" Send="Create"/>
@@ -3826,65 +2693,9 @@
     </CActorModel>
     <CActorUnit id="SupplyDepot">
         <Scale value="1.100000,1.300000,1.100000"/>
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="MachineShop" parent="TerranBuilding" unitName="MachineShop">
-        <Macros value="QueueAnimAddon"/>
-        <Macros value="TerranAttachmentAnims"/>
-        <Macros value="BuildingFlattenTerrainMacro"/>
-        <On index="3" Terms="UnitConstruction.MachineShop"/>
-        <On index="4" Terms="UnitConstruction.MachineShop"/>
-        <On index="47" Terms="UnitConstruction.MachineShop" Send="AnimBracketStop Attack"/>
-        <On index="48" Terms="UnitConstruction.MachineShop" Send="AnimGroupRemove Ready"/>
-        <On index="49" Terms="UnitConstruction.MachineShop" Send="Create MachineShopBuild"/>
-        <On index="50" Terms="UnitConstruction.MachineShop" Send="Create BuildingTerrainFlatten"/>
-        <On index="51" Terms="UnitConstruction.MachineShop" Target="_BuildingTerrainFlatten" Send="Destroy"/>
-        <On index="52" Terms="UnitBirth.MachineShop" Target="_BuildingTerrainFlatten" Send="Destroy"/>
-        <On index="53" Terms="UnitBirth.MachineShop" Target="_BuildingTerrainFlatten" Send="QueryRadius 1.750000 BuildingCrushQueryResponse"/>
-        <On index="54" Terms="UnitBirth.MachineShop" Send="Create BuildingTerrainFlatten"/>
-        <On index="55" Terms="UnitDeath.MachineShop" Target="_BuildingTerrainFlatten" Send="Create BuildingTerrainFlattenInstant"/>
-        <On Terms="AbilMorph.FactoryTechLabMorph; MorphTo MachineShop" Send="Create"/>
-        <DeathArray index="Normal" ModelLink="TechReactorDetachedDeath" SoundLink="Terran_ExplosionMedium"/>
-        <EditorModel value="MachineShop"/>
-        <PlacementModel value="MachineShopPlacement"/>
-        <PlacementSound value="Terran_BuildingPlacement"/>
-        <PortraitModel value="AdjutantPortrait"/>
-        <BarOffset value="80"/>
-        <BarWidth value="70"/>
-        <GroupIcon>
-            <Image value="Assets\Textures\wireframe-terran-techlab.dds"/>
-        </GroupIcon>
-        <GroupSoundArray index="What" value="TechLabGroupWhat"/>
-        <GroupSoundArray index="Yes" value="TechLabGroupYes"/>
-        <GroupSoundArray index="Attack" value="TechLabGroupAttack"/>
-        <GroupSoundArray index="Board" value="TechLabGroupBoard"/>
-        <HeroIcon value="Assets\Textures\BTN-Building-Terran-TechReactor.dds"/>
-        <HighlightTooltip value="Unit/Name/TechLab"/>
-        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-buildingarmor.dds"/>
-        <SoundArray index="Birth" value="TechLab_Birth"/>
-        <SoundArray index="Ready" value="TechLab_Ready"/>
-        <SoundArray index="Help" value="TechLabHelp"/>
-        <SoundArray index="What" value="TechLab_What"/>
-        <SoundArray index="Yes" value="TechLabYes"/>
-        <SoundArray index="Attack" value="TechLabAttack"/>
-        <SoundArray index="Pissed" value="TechLabPissed"/>
-        <SoundArray index="Movement" value="TechLabMovement"/>
-        <SoundArray index="Turning" value="TechLabTurning"/>
-        <SoundArray index="Board" value="TechLabBoard"/>
-        <SoundArray index="Click" value="TechLabClick"/>
-        <SoundArray index="ClickError" value="TechLabClickError"/>
-        <SoundArray index="Highlight" value="TechLabHighlight"/>
-        <UnitFlags index="ShowBlobShadow" value="0"/>
-        <UnitIcon value="Assets\Textures\BTN-Building-Terran-TechReactor.dds"/>
-        <Wireframe>
-            <Image value="Assets\Textures\wireframe-terran-techlab.dds"/>
-        </Wireframe>
-        <Scale value="0.800000"/>
-        <AddonIndicator value="Actor/AddonIndicator/MachineShop"/>
     </CActorUnit>
     <CActorUnit id="TemplarArchive">
         <Scale value="0.900000,0.800000,1.000000"/>
-        <BarHeight value="3"/>
     </CActorUnit>
     <CActorSplat id="TemplarArchivesSplat">
         <Scale value="0.900000,0.800000,1.000000"/>
@@ -3905,13 +2716,12 @@
         <On Terms="UnitCreation.ControlTower" Send="Create"/>
         <On Terms="UnitCreation.ControlTower2" Send="Create"/>
         <On Terms="UnitCreation.MachineShop" Send="Create"/>
-        <On Terms="UnitCreation.MachineShop2" Send="Create"/>
+        <On Terms="UnitCreation.TerranCovertOps" Send="Create"/>
         <On Terms="UnitCreation.NuclearSilo" Send="Create"/>
         <On Terms="UnitCreation.NuclearSilo2" Send="Create"/>
     </CActorStateMonitor>
     <CActorUnit id="TwilightCouncil">
         <Scale value="0.800000,0.900000,1.000000"/>
-        <BarHeight value="3"/>
     </CActorUnit>
     <CActorSplat id="TwilightCouncilSplat">
         <Scale value="0.800000,0.900000,1.000000"/>
@@ -3922,12 +2732,10 @@
     <CActorUnit id="Ultralisk">
         <Scale value="0.800000"/>
         <SoundArray index="Attack" value="Ultralisk_Yes"/>
-        <BarHeight value="3"/>
     </CActorUnit>
     <CActorUnit id="UltraliskCavern">
         <PortraitModel value="OvermindPortrait"/>
         <Scale value="0.900000,0.800000,1.000000"/>
-        <BarHeight value="3"/>
     </CActorUnit>
     <CActorAction id="Parasite" parent="GenericAttack" effectImpact="ParasiteApply" effectLaunch="ParasiteLM">
         <EditorCategories value=""/>
@@ -3935,39 +2743,6 @@
     <CActorRange id="UnpoweredVisualLow">
         <IconArcLength value="0.500000"/>
     </CActorRange>
-    <!-- Ursadak Calf                                                            -->
-    <CActorUnit id="UrsadakCalf">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!-- Ursadak Female                                                            -->
-    <CActorUnit id="UrsadakFemale">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!-- Ursadak Female Exotic                                                                   -->
-    <CActorUnit id="UrsadakFemaleExotic">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!-- Ursadak Male                                                            -->
-    <CActorUnit id="UrsadakMale">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!-- Ursadak Male Exotic                                                                     -->
-    <CActorUnit id="UrsadakMaleExotic">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!-- UtilityBot                                                            -->
-    <CActorUnit id="UtilityBot">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <!--                                                                                         -->
-    <!-- Vespene                                                                                 -->
-    <!--                                                                                         -->
-    <CActorUnit id="VespeneGeyser">
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="VikingAssault">
-        <BarHeight value="3"/>
-    </CActorUnit>
     <!--                                                                                         -->
     <!-- Viking ................................................................................ -->
     <!--                                                                                         -->
@@ -3988,15 +2763,13 @@
         <SoundArray index="Help" value=""/>
         <SoundArray index="Attack" value=""/>
         <SoundArray index="Movement" value=""/>
-        <BarHeight value="3"/>
         <Scale value="1.350000"/>
     </CActorUnit>
     <!--                                                                                         -->
     <!-- Viking ................................................................................ -->
     <!--                                                                                         -->
     <CActorAction id="VikingFighterAttack">
-        <LaunchSiteOps Ops="SOpAttachWeapon"/>
-        <LaunchAttachQuery Methods="AMPatternValkyrie"/>
+        <LaunchAttachQuery Methods="AMPatternValkyrie AMFilterValkyrie"/>
         <ImpactSiteOps Ops="SOpValkyrieAttack"/>
         <ShieldFlashType value="Full"/>
     </CActorAction>
@@ -4005,12 +2778,6 @@
         <BarHeight value="1"/>
         <BarWidth value="1"/>
     </CActorMissile>
-    <!--                                                                                         -->
-    <!-- Void Ray .............................................................................. -->
-    <!--                                                                                         -->
-    <CActorUnit id="VoidRay">
-        <BarHeight value="3"/>
-    </CActorUnit>
     <!-- Vortex                                                                                  -->
     <CActorRange id="VortexRange">
         <IconArcLength value="0.500000"/>
@@ -4019,7 +2786,6 @@
     <!-- Vulture ............................................................................... -->
     <!--                                                                                         -->
     <CActorUnit id="Vulture">
-        <BarHeight value="3"/>
         <DeathArray index="Normal" SoundLink="Terran_ExplosionMedium"/>
     </CActorUnit>
     <CActorAction id="VultureAttack" effectImpact="">
@@ -4040,9 +2806,6 @@
         <On Terms="ActorOrphan" Send="Destroy"/>
         <On Terms="AbilMorph.*.Start; MorphTo SpiderMineBurrowed" Send="Destroy"/>
     </CActorSound>
-    <CActorUnit id="WarpGate">
-        <BarHeight value="3"/>
-    </CActorUnit>
     <CActorUnit id="WarpPrism">
         <GroupIcon>
             <Image index="0" value="Assets\Textures\wireframe-protoss-shuttle.dds"/>
@@ -4059,10 +2822,6 @@
         </WireframeShield>
         <BuildModel value=""/>
         <Scale value="0.800000"/>
-        <BarHeight value="3"/>
-    </CActorUnit>
-    <CActorUnit id="WarpPrismPhasing">
-        <BarHeight value="3"/>
     </CActorUnit>
     <CActorRange id="WarpPrismPowerVisualLow">
         <IconArcLength value="0.500000"/>
@@ -4076,12 +2835,6 @@
         <BarHeight value="1"/>
         <BarWidth value="1"/>
     </CActorMissile>
-    <!--                                                                                         -->
-    <!-- Wolf Statue ........................................................................... -->
-    <!--                                                                                         -->
-    <CActorUnit id="WolfStatue">
-        <BarHeight value="3"/>
-    </CActorUnit>
     <!--                                                                                         -->
     <!-- Wraith ................................................................................ -->
     <!--                                                                                         -->
@@ -4104,7 +2857,6 @@
         <On Terms="WeaponStart.WraithG.AttackStart" Send="AnimBracketStart Attack Attack"/>
         <On Terms="WeaponStop.*.AttackStop" Send="AnimBracketStop Attack"/>
         <On Terms="Abil.attack.ReadyStop" Send="AnimGroupRemove Ready"/>
-        <BarHeight value="3"/>
     </CActorUnit>
     <CActorAction id="WraithAirAttackLeft" parent="GenericAttack" effectImpact="WraithAU" effectLaunch="WraithALeftLaunchMissile">
         <EditorCategories value=""/>
@@ -4124,12 +2876,6 @@
         <Missile value="WraithGroundAttackMissile"/>
         <ImpactMap index="None" Model="BattlecruiserGroundAttackImpact"/>
     </CActorAction>
-    <!--                                                                                         -->
-    <!-- Map Objects                                                                             -->
-    <!--                                                                                         -->
-    <CActorUnit id="XelNagaTower">
-        <BarHeight value="3"/>
-    </CActorUnit>
     <CActorRange id="XelNagaTowerRange">
         <IconArcLength value="0.500000"/>
     </CActorRange>
@@ -4137,36 +2883,6 @@
     <CActorRange id="YamatoRange">
         <IconArcLength value="0.500000"/>
     </CActorRange>
-    <CActorUnit id="Zealot">
-        <On index="43" Terms="Abil.attack.ReadyStart" Send="AnimGroupApply Ready"/>
-        <On index="44" Terms="WeaponStart.*.AttackStart" Send="TimerSet 0.250000 ZealotAttackDelay"/>
-        <On index="45" Terms="WeaponStart.*.AttackStart; AnimPlaying Birth" Send="AnimClear Birth"/>
-        <On index="46" Terms="WeaponStop.*.AttackStop" Send="AnimBracketStop Attack"/>
-        <On index="47" Terms="Abil.attack.ReadyStop" Send="AnimGroupRemove Ready"/>
-        <On index="48" Terms="Behavior.Charging.On" Send="ModelSuddenMotionStart"/>
-        <On index="49" Terms="Behavior.Charging.Off" Send="ModelSuddenMotionStop"/>
-        <On index="50" Terms="Behavior.Hallucination.On" Send="Create HallucinationBirthSoundSmall"/>
-        <On index="51" Terms="UnitDeathCustomize; ValidateUnit IsHallucination" Send="DeathCustomize Hallucination"/>
-        <On index="52" Terms="TimerExpired; TimerName ZealotAttackDelay" Send="AnimBracketStart Attack Attack {} {} 0 2.000000 AsTimeScale"/>
-        <On index="53" Terms="UnitDeathCustomize; ValidateUnit IsHallucination" Send="DeathCustomize Hallucination"/>
-        <On index="54" Terms="WeaponStop.*.AttackStop" Send="TimerKill ZealotAttackDelay"/>
-        <On index="55" removed="1"/>
-        <On index="56" removed="1"/>
-        <On index="57" removed="1"/>
-        <On index="58" removed="1"/>
-        <On index="59" removed="1"/>
-        <On index="60" removed="1"/>
-        <On index="61" removed="1"/>
-        <On index="62" removed="1"/>
-        <On index="63" removed="1"/>
-        <On index="64" removed="1"/>
-        <On index="65" removed="1"/>
-        <On index="66" removed="1"/>
-        <On index="67" removed="1"/>
-        <On index="68" removed="1"/>
-        <On index="69" removed="1"/>
-        <BarHeight value="3"/>
-    </CActorUnit>
     <CActorAction id="ZealotAttack" effectAttack="ZealotPsiBladesSet" effectImpact="" effectLaunch="">
         <On index="0" Terms="Effect.Start; At Caster; FromEffectTreeDescendant"/>
         <On index="3" Terms="Effect.ZealotPsiBladesSet.Start; At Caster" Send="Create"/>
@@ -4241,12 +2957,6 @@
     <CActorModel id="ZergPlacementModelHatchery" parent="ZergPlacementModel">
         <Scale value="0.750000,0.750000,0.850000"/>
     </CActorModel>
-    <!--                                                                                         -->
-    <!-- Zergling .............................................................................. -->
-    <!--                                                                                         -->
-    <CActorUnit id="Zergling">
-        <BarHeight value="3"/>
-    </CActorUnit>
     <CActorSound id="ZerglingAttackStart">
         <On index="1" removed="1"/>
     </CActorSound>
@@ -4282,6 +2992,9 @@
             <Image value="Assets\Textures\Wireframe-Zerg-Lurker.dds"/>
         </Wireframe>
         <LifeArmorIcon value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level0.dds"/>
+        <Model value="LurkerMP"/>
+        <BuildModel value="LurkerMP"/>
+        <PlacementModel value="LurkerMP"/>
     </CActorUnit>
     <CActorSiteOpLocalOffset id="LurkerSOpOffset">
         <LocalOffset value="0.000000,0.100000,0.000000"/>
@@ -4410,13 +3123,4 @@
     <CActorSound id="LurkerEgg_Death" parent="SoundOneShot">
         <On Terms="UnitDeath.LurkerEgg; PassChance 25.000000" Send="Create"/>
     </CActorSound>
-    <CActorRange id="LurkerBurrowedRange">
-        <On Terms="SelectionLocalUpdate.LurkerBurrowed.Start" Send="Create"/>
-        <On Terms="SelectionLocalUpdate.LurkerBurrowed.StartEditorGround" Send="Create"/>
-        <On Terms="SelectionLocalUpdate.LurkerBurrowed.StartEditorFlyer" Send="Create"/>
-        <On Terms="SelectionLocalUpdate.LurkerBurrowed.Stop" Send="Destroy"/>
-        <On Terms="AbilMorph.*.Start; MorphTo LurkerBurrowed; Selected" Send="Create"/>
-        <On Terms="AbilMorph.*.Start; MorphTo Lurker" Send="Destroy"/>
-        <Weapon value="Lurker"/>
-    </CActorRange>
 </Catalog>

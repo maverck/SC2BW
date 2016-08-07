@@ -6,20 +6,6 @@
         <AttributeFactor index="Armored" value="-0.25"/>
         <Amount value="30"/>
     </CEffectDamage>
-    <CEffectApplyBehavior id="CarrierPushCeptorApply">
-        <ValidatorArray index="0" value="IsInterceptor"/>
-        <EditorCategories value=""/>
-        <Behavior value="StopMovement00625"/>
-    </CEffectApplyBehavior>
-    <CEffectEnumArea id="CarrierPushCeptorSearch">
-        <EditorCategories value=""/>
-        <AreaArray Radius="3" Effect="CarrierPushCeptorSet"/>
-    </CEffectEnumArea>
-    <CEffectApplyForce id="CarrierPushCeptorForce">
-        <ValidatorArray value="IsInterceptor"/>
-        <EditorCategories value=""/>
-        <Amount value="0.25"/>
-    </CEffectApplyForce>
     <CEffectSet id="ArcliteCannonNullSet">
         <EditorCategories value=""/>
     </CEffectSet>
@@ -93,22 +79,6 @@
     <CEffectSet id="C10CanisterRifleSet">
         <EditorCategories value=""/>
     </CEffectSet>
-    <CEffectApplyBehavior id="CarrierCeptorLaunched">
-        <EditorCategories value=""/>
-        <WhichUnit Value="Source"/>
-        <Behavior value="CarrierInterceptorInAir"/>
-    </CEffectApplyBehavior>
-    <CEffectRemoveBehavior id="CarrierCeptorReturned">
-        <EditorCategories value=""/>
-        <WhichUnit Value="Source"/>
-        <BehaviorLink value="CarrierInterceptorInAir"/>
-        <Count value="1"/>
-    </CEffectRemoveBehavior>
-    <CEffectSet id="CarrierPushCeptorSet">
-        <EditorCategories value=""/>
-        <EffectArray value="CarrierPushCeptorApply"/>
-        <EffectArray value="CarrierPushCeptorForce"/>
-    </CEffectSet>
     <CEffectApplyBehavior id="ClawsApply">
         <EditorCategories value=""/>
         <WhichUnit Value="Source"/>
@@ -128,7 +98,7 @@
     </CEffectSet>
     <CEffectDamage id="CrucioShockCannonBlast">
         <AttributeBonus index="Armored" value="0"/>
-        <Amount value="70"/>
+        <Amount value="0"/>
         <AreaArray index="0" Radius="0.3125" Fraction="1" Validator="NotUnderDarkSwarm"/>
         <AreaArray index="1" Radius="0.7812" Fraction="0.5" Validator="IsNotBuried"/>
         <AreaArray index="2" Radius="1.25" Fraction="0.25" Validator="IsNotBuried"/>
@@ -219,7 +189,9 @@
         <WhichLocation Value="TargetUnitOrPoint"/>
         <PeriodCount value="2"/>
         <PeriodicEffectArray value="GoliathALM"/>
+        <PeriodicEffectArray value="GoliathALM"/>
         <PeriodicPeriodArray value="0"/>
+        <PeriodicPeriodArray value="0.0625"/>
     </CEffectCreatePersistent>
     <CEffectDamage id="GoliathAU">
         <EditorCategories value=""/>
@@ -277,6 +249,19 @@
         <EffectArray value="IrradiateSearchArea"/>
         <EffectArray value="IrradiatePeriodicDamage"/>
     </CEffectSet>
+    <CEffectCreatePersistent id="LanzerTorpedoes">
+        <WhichLocation Value="TargetUnitOrPoint"/>
+        <OffsetVectorEndLocation Value="TargetUnitOrPoint"/>
+        <PeriodCount value="8"/>
+        <PeriodicEffectArray index="1" removed="1"/>
+        <PeriodicPeriodArray index="1" value="0"/>
+        <PeriodicPeriodArray value="0.5332"/>
+        <PeriodicPeriodArray value="0"/>
+        <PeriodicPeriodArray value="0.5332"/>
+        <PeriodicPeriodArray value="0"/>
+        <PeriodicPeriodArray value="0.5332"/>
+        <PeriodicPeriodArray value="0"/>
+    </CEffectCreatePersistent>
     <CEffectCreatePersistent id="Lurker">
         <EditorCategories value="Race:Zerg"/>
         <WhichLocation Value="SourcePoint"/>
@@ -780,9 +765,6 @@
     <CEffectDamage id="InterceptorBeamDamage">
         <Amount value="6"/>
     </CEffectDamage>
-    <CEffectCreatePersistent id="InterceptorLaunchPersistent">
-        <WhichLocation Value="TargetPoint"/>
-    </CEffectCreatePersistent>
     <CEffectDamage id="KaiserBladesDamage2" parent="DU_WEAP">
         <EditorCategories value="Race:Zerg"/>
         <Marker Link="Effect/KaiserBladesDamage"/>
@@ -790,21 +772,6 @@
         <Death value="Eviscerate"/>
         <Visibility value="Visible"/>
     </CEffectDamage>
-    <CEffectCreatePersistent id="LanzerTorpedoes">
-        <PeriodCount value="8"/>
-        <PeriodicEffectArray index="1" removed="1"/>
-        <PeriodicPeriodArray index="1" value="0"/>
-        <PeriodicPeriodArray value="0.5332"/>
-        <PeriodicPeriodArray value="0"/>
-        <PeriodicPeriodArray value="0.5332"/>
-        <PeriodicPeriodArray value="0"/>
-        <PeriodicPeriodArray value="0.5332"/>
-        <PeriodicPeriodArray value="0"/>
-        <WhichLocation Value="TargetUnitOrPoint"/>
-        <OffsetVectorEndLocation Value="TargetUnitOrPoint"/>
-        <Flags index="Channeled" value="1"/>
-        <Flags index="Channeling" value="1"/>
-    </CEffectCreatePersistent>
     <CEffectDamage id="LanzerTorpedoesDamage">
         <AttributeBonus index="Armored" value="0"/>
         <AttributeFactor index="Light" value="-0.5"/>
@@ -1071,28 +1038,34 @@
     <CEffectCreatePersistent id="ScannerSweep">
         <RevealRadius value="10"/>
     </CEffectCreatePersistent>
+    <CEffectDamage id="ScarabDamageDummy">
+        <EditorCategories value=""/>
+        <Kind value="Ranged"/>
+        <AreaArray Radius="0.625" Fraction="1"/>
+        <AreaArray Radius="1.25" Fraction="0.5" Validator="NotBurrowed"/>
+        <AreaArray Radius="1.875" Fraction="0.25" Validator="NotBurrowed"/>
+        <SearchFilters value="Ground;Self,Player,Ally,Air,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <KindSplash value="Splash"/>
+        <Death value="Blast"/>
+        <ExcludeArray Value="Target"/>
+        <SearchFlags index="CallForHelp" value="1"/>
+        <SearchFlags index="OffsetAreaByAngle" value="1"/>
+    </CEffectDamage>
     <CEffectApplyBehavior id="ScarabFiredApply">
         <EditorCategories value=""/>
         <WhichUnit Value="Caster"/>
         <Behavior value="ScarabFired"/>
     </CEffectApplyBehavior>
     <CEffectApplyBehavior id="ScarabFiredApplyIdentify">
-        <ValidatorArray index="0" value="ScarabFiredApplyTargetFilters"/>
-        <EditorCategories value=""/>
-        <Marker Link="Effect/ScarabFiredApply"/>
         <Behavior value="IdentifyScarab"/>
     </CEffectApplyBehavior>
     <CEffectSet id="ScarabFiredSet">
-        <ValidatorArray value="ScarabFiredApplyTargetFilters"/>
-        <EditorCategories value=""/>
-        <Marker Link="Effect/ScarabFiredApply"/>
         <EffectArray value="ScarabFiredApply"/>
         <EffectArray value="ScarabFiredApplyIdentify"/>
         <EffectArray value="KillsToCaster"/>
     </CEffectSet>
     <CEffectCreatePersistent id="Scarabs">
         <EditorCategories value="Race:Protoss"/>
-        <Marker Link="ReaverScarabPersistent"/>
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <PeriodCount value="1"/>
@@ -1132,7 +1105,6 @@
         <AreaArray Radius="1.875" Fraction="0.25" Validator="NotBurrowed"/>
         <SearchFilters value="Visible;Player,Ally,Air,RawResource,HarvestableResource,Missile,Dead"/>
         <ArmorReduction value="1"/>
-        <ExcludeArray Value="Target"/>
         <Flags index="Notification" value="1"/>
         <ResponseFlags index="Acquire" value="1"/>
         <ResponseFlags index="Flee" value="1"/>
@@ -1150,16 +1122,26 @@
         <Abil value="attack"/>
         <Target Effect="Scarabs" Value="TargetUnitOrPoint"/>
     </CEffectIssueOrder>
+    <CEffectLaunchMissile id="ScoutAirLMLeft">
+        <ImpactEffect value="ScoutMPAirU"/>
+        <Movers index="1" Link="ScoutMPAirWeaponLeft" IfRangeLTE="4"/>
+    </CEffectLaunchMissile>
+    <CEffectLaunchMissile id="ScoutAirLMRight">
+        <ImpactEffect value="ScoutMPAirU"/>
+        <Movers index="1" Link="ScoutMPAirWeaponRight" IfRangeLTE="4"/>
+    </CEffectLaunchMissile>
+    <CEffectDamage id="ScoutMPAirU">
+        <AttributeBonus index="Armored" value="0"/>
+        <AttributeFactor index="Light" value="-0.5"/>
+        <AttributeFactor index="Armored" value="-0.25"/>
+        <Amount value="14"/>
+    </CEffectDamage>
     <CEffectSwitch id="SiegeTankArcliteCannonSwitch">
         <EditorCategories value=""/>
         <CaseArray Validator="Shield0" Effect="Null"/>
         <CaseArray Validator="ShieldGZero" Effect="Null"/>
     </CEffectSwitch>
-    <CEffectSet id="ScarabSet">
-        <EditorCategories value=""/>
-        <EffectArray value="ScarabDamage"/>
-        <EffectArray value="Suicide"/>
-    </CEffectSet>
+    <CEffectSet id="ScarabSet"/>
     <CEffectDamage id="ScoutAirU" parent="DU_WEAP">
         <EditorCategories value="Race:Protoss"/>
         <AttributeFactor index="Light" value="-0.5"/>

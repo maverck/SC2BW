@@ -180,6 +180,29 @@
         <AssetArray index="8" removed="1"/>
         <AssetArray index="9" removed="1"/>
         <AssetArray index="10" removed="1"/>
+        <AssetArray index="11" removed="1"/>
+        <AssetArray index="12" removed="1"/>
+        <AssetArray index="13" removed="1"/>
+        <AssetArray index="14" removed="1"/>
+        <AssetArray index="15" removed="1"/>
+        <AssetArray index="16" removed="1"/>
+        <AssetArray index="17" removed="1"/>
+        <AssetArray index="18" removed="1"/>
+        <AssetArray index="19" removed="1"/>
+        <AssetArray index="20" removed="1"/>
+        <AssetArray index="21" removed="1"/>
+        <AssetArray index="22" removed="1"/>
+        <AssetArray index="23" removed="1"/>
+        <AssetArray index="24" removed="1"/>
+        <AssetArray index="25" removed="1"/>
+        <AssetArray index="26" removed="1"/>
+        <AssetArray index="27" removed="1"/>
+        <AssetArray index="28" removed="1"/>
+        <AssetArray index="29" removed="1"/>
+        <AssetArray index="30" removed="1"/>
+        <AssetArray index="31" removed="1"/>
+        <AssetArray index="32" removed="1"/>
+        <AssetArray index="33" removed="1"/>
     </CSound>
     <CSound id="Gateway_What">
         <AssetArray index="0" File="Assets\Sounds\Buildings\Protoss\pgaWht00.ogg" FacialGroup=""/>
@@ -392,8 +415,6 @@
     <CSound id="Scout_AirAttackImpact" parent="Combat">
         <EditorCategories value="Race:Protoss"/>
         <AssetArray File="Assets\Sounds\Bullet\PSaHit00.ogg" FacialGroup=""/>
-        <Pitch value="-1.000000,1.000000"/>
-        <Volume value="-3.000000,-3.000000"/>
     </CSound>
     <CSound id="Scout_AirAttackLaunch" parent="Combat">
         <EditorCategories value="Race:Protoss"/>
@@ -851,14 +872,6 @@
         <AssetArray index="23" removed="1"/>
         <AssetArray index="24" removed="1"/>
         <AssetArray index="25" removed="1"/>
-        <AssetArray index="26" removed="1"/>
-        <AssetArray index="27" removed="1"/>
-        <AssetArray index="28" removed="1"/>
-        <AssetArray index="29" removed="1"/>
-        <AssetArray index="30" removed="1"/>
-        <AssetArray index="31" removed="1"/>
-        <AssetArray index="32" removed="1"/>
-        <AssetArray index="33" removed="1"/>
     </CSound>
     <CSound id="GameMusicZerg">
         <AssetArray index="0" File="Assets\Sounds\Music\zerg1.ogg" FacialGroup=""/>
@@ -895,18 +908,6 @@
         <AssetArray index="31" removed="1"/>
         <AssetArray index="32" removed="1"/>
         <AssetArray index="33" removed="1"/>
-        <AssetArray index="34" removed="1"/>
-        <AssetArray index="35" removed="1"/>
-        <AssetArray index="36" removed="1"/>
-        <AssetArray index="37" removed="1"/>
-        <AssetArray index="38" removed="1"/>
-        <AssetArray index="39" removed="1"/>
-        <AssetArray index="40" removed="1"/>
-        <AssetArray index="41" removed="1"/>
-        <AssetArray index="42" removed="1"/>
-        <AssetArray index="43" removed="1"/>
-        <AssetArray index="44" removed="1"/>
-        <AssetArray index="45" removed="1"/>
     </CSound>
     <CSound id="GreaterSpire_Explode">
         <AssetArray index="0" File="Assets\Sounds\Buildings\Zerg\ZBldgDth.ogg" Pitch="0.000000,0.000000" FacialGroup=""/>
@@ -1388,6 +1389,7 @@
     <CSound id="Marine_DeathFXEviscerate">
         <AssetArray index="0" File="Assets\Sounds\Marine\TMaDth00.ogg" FacialGroup=""/>
         <AssetArray>
+            <TemplateParam value=""/>
             <File value="Assets\Sounds\Marine\TMaDth01.ogg"/>
             <LoopCount value="0"/>
             <LoopTime value="0,0"/>
@@ -1408,6 +1410,7 @@
     <CSound id="Marine_DeathFXFire">
         <AssetArray index="0" File="Assets\Sounds\Marine\TMaDth00.ogg" FacialGroup=""/>
         <AssetArray>
+            <TemplateParam value=""/>
             <File value="Assets\Sounds\Marine\TMaDth01.ogg"/>
             <LoopCount value="0"/>
             <LoopTime value="0,0"/>

@@ -1,60 +1,44 @@
 <?xml version="1.0" encoding="us-ascii"?>
 <Preload>
-<Asset path="Assets\Textures\black.dds" Type="Image"/>
-<Asset path="Assets\Textures\techcube2_green_swarm.dds" Type="Image"/>
-<Asset path="Assets\Textures\techcube2_green_swarm.lvl0" Type="Image"/>
+<Asset path="assets\textures\black.dds" Type="Image"/>
 <Actor id="SYSTEM_ActorConfig"/>
+<Behavior id="AirStackCheck"/>
+<Behavior id="DroppedFromTransportGoliath"/>
+<Behavior id="DroppedFromTransportTank"/>
+<Behavior id="DroppedFromTransportSpell"/>
+<Behavior id="StopMovement"/>
+<Behavior id="WorkerExtraSpeed"/>
+<Behavior id="WorkerReducedSpeed"/>
 <Behavior id="HallucinationHighTemplar"/>
+<Behavior id="HallucinationTimedLifeCustom"/>
+<Behavior id="IdentifyHarvesting"/>
+<Behavior id="Infest"/>
 <Behavior id="DroppedFromTransportReaver"/>
 <Behavior id="MovingShotActivateTurret"/>
-<Behavior id="Infest"/>
-<Behavior id="Miss"/>
-<Behavior id="DroppedFromTransportTank"/>
-<Behavior id="WorkerReducedSpeed"/>
-<Behavior id="DroppedFromTransportGoliath"/>
-<Behavior id="DroppedFromTransportSpell"/>
-<Behavior id="WorkerExtraSpeed"/>
-<Behavior id="CheckForUnitDeath"/>
-<Behavior id="StopMovement"/>
-<Behavior id="AirStackCheck"/>
-<Behavior id="IdentifyHarvesting"/>
-<Behavior id="HallucinationTimedLifeCustom"/>
 <Effect id="NeedleSpinesDamage"/>
-<Effect id="VultureSpiderMinesShieldDamage2"/>
-<Effect id="SpiderMineDamage"/>
-<Effect id="CrucioShockCannonBlast"/>
-<Effect id="GuassRifleNull"/>
-<Effect id="ArcliteCannonNullDamage"/>
-<Effect id="DevourerShieldU"/>
-<Effect id="ParticleDisruptorsU"/>
-<Effect id="NeedleSpinesNull"/>
-<Effect id="VultureU"/>
-<Effect id="ImpalerTentacleU2"/>
-<Effect id="LongboltMissileU2"/>
-<Effect id="InfestedTerranShieldsDamage"/>
-<Effect id="GoliathGNull"/>
-<Effect id="GoliathAU2"/>
-<Effect id="ParticleDisruptorsU3"/>
-<Effect id="YamatoU2"/>
-<Effect id="VultureUNull"/>
-<Effect id="GoliathG"/>
-<Effect id="C10CanisterRifle2"/>
-<Effect id="YamatoU"/>
-<Effect id="C10CanisterRifleNull"/>
 <Effect id="GuassRifle"/>
-<Effect id="FirebatUFull2"/>
-<Effect id="NeedleSpinesDamage2"/>
-<Effect id="YamatoCannonShieldsDamage"/>
-<Effect id="SpiderMineNullDamage"/>
 <Effect id="C10CanisterRifle"/>
-<Effect id="CrucioShockCannonDummy"/>
-<Effect id="VultureSpiderMinesSet"/>
-<Effect id="CorsairShieldDamage"/>
-<Effect id="AirUnitSpreadSearch"/>
 <Effect id="90mmCannons"/>
-<Effect id="DamagePersistent"/>
-<Effect id="WraithAU2"/>
-<Effect id="ParticleDisruptorsU2"/>
+<Effect id="CrucioShockCannonBlast"/>
+<Effect id="CrucioShockCannonDummy"/>
+<Effect id="YamatoU"/>
+<Effect id="ParticleDisruptorsU"/>
+<Effect id="VultureU"/>
+<Effect id="GoliathG"/>
+<Effect id="VultureSpiderMinesSet"/>
+<Effect id="ArcliteCannonNullDamage"/>
+<Effect id="AirUnitSpreadSearch"/>
+<Effect id="C10CanisterRifleNull"/>
+<Effect id="GoliathGNull"/>
+<Effect id="GuassRifleNull"/>
+<Effect id="NeedleSpinesNull"/>
+<Effect id="ParticleDisruptorsU3"/>
+<Effect id="ScarabDamageDummy"/>
+<Effect id="ScarabDamage"/>
+<Effect id="VultureUNull"/>
+<Effect id="SpiderMineDamage"/>
+<Effect id="SpiderMineNullDamage"/>
+<Effect id="YamatoU2"/>
 <Sound id="UI_GenericButton"/>
 <Sound id="prescue" Variations="0"/>
 </Preload>

@@ -19,9 +19,7 @@
         <Lighting value="ATALaserBatteryLMWeapon"/>
     </CModel>
     <CModel id="Arbiter">
-        <Model value="Assets\Units\Protoss\Arbiter\Arbiter0.2.m3"/>
-        <ScaleMax value="2.000000,2.000000,2.000000"/>
-        <ScaleMin value="2.000000,2.000000,2.000000"/>
+        <Model value="Assets\Units\Protoss\Arbiter_EX2\Arbiter_EX2.m3"/>
     </CModel>
     <CModel id="ArbiterAttackImpact" parent="ImpactFX">
         <Model value="Assets\Effects\Protoss\DragoonMissileImpact\DragoonMissileImpact.m3"/>
@@ -30,11 +28,10 @@
     </CModel>
     <CModel id="Battlecruiser">
         <Model value="Assets\Units\Terran\Battlecruiser\BehemothBattlecruiserCampaign.m3"/>
-        <AttachProps index="2" Id="Ref_Weapon 09">
-            <Keys index="CustomA" value="0"/>
+        <AttachProps index="2">
             <Keys index="SetA" value="1"/>
         </AttachProps>
-        <AttachProps index="3" Id="Ref_Weapon 10">
+        <AttachProps index="3">
             <Keys index="SetA" value="2"/>
         </AttachProps>
     </CModel>
@@ -47,16 +44,183 @@
         <VariationCount value="1"/>
         <AnimSpeed value="2.000000"/>
     </CModel>
-    <CModel id="Carrier">
+    <CModel id="CarrierSC2BW" parent="Unit" Race="Protoss">
         <Model value="Assets\Units\Protoss\Carrier\CarrierNew.m3"/>
-        <ScaleMax value="0.500000,0.500000,0.500000"/>
-        <ScaleMin value="0.500000,0.500000,0.500000"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraLow11"/>
+        <Radius value="1.375000"/>
+        <SelectionOffset value="0.000000,0.000000,-0.750000"/>
         <SelectionRadius value="3.000000"/>
+        <ShadowRadius value="1.718700"/>
+        <SquibTypeDefault value="Metal"/>
+        <TechPurchaseCamera value="Star2CameraLow11"/>
+        <UnitGlossaryCamera value="Star2CameraLow11"/>
     </CModel>
-    <CModel id="CarrierDeath">
-        <Model value="Assets\Units\Protoss\ScoutDeath\ScoutDeath.m3"/>
-        <ScaleMax value="3.000000,3.000000,3.000000"/>
-        <ScaleMin value="3.000000,3.000000,3.000000"/>
+    <CModel id="CarrierDeathSC2BW" parent="UnitDeath" Race="Protoss">
+        <Model value="Assets\Effects\Protoss\ProtossLargeUnitDeath\ProtossLargeUnitDeath.m3"/>
+        <LowQualityModel value="ProtossLargeUnitDeathLow"/>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="ProtossPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.190000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="ProtossPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.400000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="ProtossPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.600000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="ProtossPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.720000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="ProtossPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="1.040000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="ProtossExplosionLarge"/>
+            <Type value="Sound"/>
+            <Time value="1.780000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="ProtossPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.140000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="ProtossPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.270000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="ProtossPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.430000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="ProtossPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.500000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="ProtossPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.770000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="ProtossExplosionLarge"/>
+            <Type value="Sound"/>
+            <Time value="1.300000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,02"/>
+            <Name value="ProtossPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.140000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,02"/>
+            <Name value="ProtossExplosionLarge"/>
+            <Type value="Sound"/>
+            <Time value="0.210000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Explosion01"/>
+            <Type value="Sound"/>
+            <Time value="0.200000"/>
+            <Payload value="Protoss_ExplosionSmall"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Explosion02"/>
+            <Type value="Sound"/>
+            <Time value="0.360000"/>
+            <Payload value="Protoss_ExplosionSmall"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Explosion03"/>
+            <Type value="Sound"/>
+            <Time value="0.660000"/>
+            <Payload value="Protoss_ExplosionSmall"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Explosion04"/>
+            <Type value="Sound"/>
+            <Time value="0.800000"/>
+            <Payload value="Protoss_ExplosionSmall"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="FinalExplosion"/>
+            <Type value="Sound"/>
+            <Time value="1.950000"/>
+            <Payload value="Protoss_ExplosionLarge"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="Explosion01"/>
+            <Type value="Sound"/>
+            <Time value="0.200000"/>
+            <Payload value="Protoss_ExplosionSmall"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="Explosion02"/>
+            <Type value="Sound"/>
+            <Time value="0.360000"/>
+            <Payload value="Protoss_ExplosionSmall"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="Explosion03"/>
+            <Type value="Sound"/>
+            <Time value="0.660000"/>
+            <Payload value="Protoss_ExplosionSmall"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="Explosion04"/>
+            <Type value="Sound"/>
+            <Time value="0.800000"/>
+            <Payload value="Protoss_ExplosionSmall"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="FinalExplosion"/>
+            <Type value="Sound"/>
+            <Time value="1.460000"/>
+            <Payload value="Protoss_ExplosionLarge"/>
+        </Events>
+        <Events>
+            <Anim value="Death,02"/>
+            <Name value="FinalExplosion"/>
+            <Type value="Sound"/>
+            <Time value="0.270000"/>
+            <Payload value="Protoss_ExplosionLarge"/>
+        </Events>
+        <Occlusion value="Show"/>
     </CModel>
     <CModel id="CommandCenterPlacement">
         <ScaleMax value="0.700000,0.750000,0.750000"/>
@@ -88,6 +252,147 @@
     <CModel id="DefensiveMatrixModel">
         <ScaleMax value="0.250000,0.250000,0.250000"/>
         <ScaleMin value="0.250000,0.250000,0.250000"/>
+    </CModel>
+    <CModel id="ControlTowerBuild" parent="TerranBuildingBuildSmall">
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
+    </CModel>
+    <CModel id="CovertOps" parent="Building" Race="Terran">
+        <Radius value="1.000000"/>
+        <ScaleMax value="0.850000,0.850000,0.850000"/>
+        <ScaleMin value="0.850000,0.850000,0.850000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="1.176200"/>
+        <ShadowRadius value="1.176200"/>
+        <SquibTypeDefault value="Metal"/>
+    </CModel>
+    <CModel id="CovertOpsBuild" parent="TerranBuildingBuildSmall">
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
+    </CModel>
+    <CModel id="CovertOpsDeath" parent="Building" Race="Terran">
+        <Model value="Assets\Effects\Terran\TerranBuildingDeath\TerranBuildingDeath.m3"/>
+        <LowQualityModel value="TerranBuildingDeathLow"/>
+        <Lighting value="TechLab"/>
+        <Radius value="1.000000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="1.000000"/>
+        <ShadowRadius value="1.000000"/>
+    </CModel>
+    <CModel id="CovertOpsDeathDetached" parent="Building" Race="Terran">
+        <Model value="Assets\Effects\Terran\TerranBuildingDeath\TerranBuildingDeath.m3"/>
+        <LowQualityModel value="TerranBuildingDeathLow"/>
+        <Lighting value="TechLab"/>
+        <Radius value="1.000000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="1.000000"/>
+        <ShadowRadius value="1.000000"/>
+    </CModel>
+    <CModel id="CovertOpsPlacement" parent="Placement" Race="Terran">
+        <Model value="Assets\Buildings\Terran\CovertOps\CovertOpsPlacement.m3"/>
+        <LowQualityModel value="TechLab"/>
+        <Lighting value="TechLab"/>
+        <Radius value="-1.000000"/>
+        <ScaleMax value="0.850000,0.850000,0.850000"/>
+        <ScaleMin value="0.850000,0.850000,0.850000"/>
+        <SelectionRadius value="0.000000"/>
+        <ShadowRadius value="0.000000"/>
+    </CModel>
+    <CModel id="NuclearSilo" parent="Building" Race="Terran">
+        <Model value="Assets\Buildings\Terran\Silo\Silo.m3"/>
+        <Radius value="1.000000"/>
+        <ScaleMax value="0.750000,0.750000,0.750000"/>
+        <ScaleMin value="0.750000,0.750000,0.750000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="1.176200"/>
+        <ShadowRadius value="1.176200"/>
+        <SquibTypeDefault value="Metal"/>
+    </CModel>
+    <CModel id="NuclearSiloBuild" parent="TerranBuildingBuildSmall">
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
+    </CModel>
+    <CModel id="NuclearSiloDeath" parent="Building" Race="Terran">
+        <Model value="Assets\Effects\Terran\TerranBuildingDeath\TerranBuildingDeath.m3"/>
+        <LowQualityModel value="TerranBuildingDeathLow"/>
+        <Lighting value="TechLab"/>
+        <Radius value="1.000000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="1.000000"/>
+        <ShadowRadius value="1.000000"/>
+    </CModel>
+    <CModel id="NuclearSiloDeathDetached" parent="Building" Race="Terran">
+        <Model value="Assets\Effects\Terran\TerranBuildingDeath\TerranBuildingDeath.m3"/>
+        <LowQualityModel value="TerranBuildingDeathLow"/>
+        <Lighting value="TechLab"/>
+        <Radius value="1.000000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="1.000000"/>
+        <ShadowRadius value="1.000000"/>
+    </CModel>
+    <CModel id="NuclearSiloPlacement" parent="Placement" Race="Terran">
+        <Model value="Assets\Buildings\Terran\Silo\Silo.m3"/>
+        <LowQualityModel value="TechLab"/>
+        <Lighting value="TechLab"/>
+        <Radius value="-1.000000"/>
+        <ScaleMax value="0.750000,0.750000,0.750000"/>
+        <ScaleMin value="0.750000,0.750000,0.750000"/>
+        <SelectionRadius value="0.000000"/>
+        <ShadowRadius value="0.000000"/>
+    </CModel>
+    <CModel id="NuclearSiloSplat" parent="Splat">
+        <Model value="Assets\Splats\Splat_TechLab\Splat_TechLab.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="0.850000,0.850000,0.850000"/>
+        <ScaleMin value="0.850000,0.850000,0.850000"/>
+    </CModel>
+    <CModel id="PhysicsLab" parent="Building" Race="Terran">
+        <Model value="Assets\Buildings\Terran\TechLabEx1\TechLabEx1.m3"/>
+        <Radius value="1.000000"/>
+        <ScaleMax value="0.850000,0.850000,0.850000"/>
+        <ScaleMin value="0.850000,0.850000,0.850000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="1.176200"/>
+        <ShadowRadius value="1.176200"/>
+        <SquibTypeDefault value="Metal"/>
+    </CModel>
+    <CModel id="PhysicsLabBuild" parent="TerranBuildingBuildSmall">
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
+    </CModel>
+    <CModel id="PhysicsLabDeath" parent="Building" Race="Terran">
+        <Model value="Assets\Buildings\Terran\TechLabDeathEx1\TechLabDeathEx1.m3"/>
+        <LowQualityModel value="TerranBuildingDeathLow"/>
+        <Lighting value="TechLab"/>
+        <Radius value="1.000000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="1.000000"/>
+        <ShadowRadius value="1.000000"/>
+    </CModel>
+    <CModel id="PhysicsLabDeathDetached" parent="Building" Race="Terran">
+        <Model value="Assets\Buildings\Terran\TechLabDetachedDeathEx1\TechLabDetachedDeathEx1.m3"/>
+        <LowQualityModel value="TerranBuildingDeathLow"/>
+        <Lighting value="TechLab"/>
+        <Radius value="1.000000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="1.000000"/>
+        <ShadowRadius value="1.000000"/>
+    </CModel>
+    <CModel id="PhysicsLabPlacement" parent="Placement" Race="Terran">
+        <Model value="Assets\Buildings\Terran\TechLabPlacement\TechLabPlacement.m3"/>
+        <LowQualityModel value="TechLab"/>
+        <Lighting value="TechLab"/>
+        <Radius value="-1.000000"/>
+        <ScaleMax value="0.850000,0.850000,0.850000"/>
+        <ScaleMin value="0.850000,0.850000,0.850000"/>
+        <SelectionRadius value="0.000000"/>
+        <ShadowRadius value="0.000000"/>
+    </CModel>
+    <CModel id="MachineShopSplat" parent="Splat">
+        <Model value="Assets\Splats\Splat_TechLab\Splat_TechLab.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="0.850000,0.850000,0.850000"/>
+        <ScaleMin value="0.850000,0.850000,0.850000"/>
     </CModel>
     <CModel id="FeedbackImpact">
         <Model value="Assets\Effects\Zerg\KerriganRespawnImpact\KerriganRespawnImpact.m3"/>
@@ -218,26 +523,39 @@
         <Model value="Assets\Units\Test\HitTestSphere\HitTestSphere.m3"/>
     </CModel>
     <CModel id="DragoonDeath" parent="UnitDeath" Race="Protoss">
-        <Model value="Assets\Models\dragoondeath\dragoondeath.m3"/>
-        <Occlusion value="Show"/>
-        <VariationCount value="2"/>
-        <AnimSpeed value="2.000000"/>
+        <Model value="Assets\Units\Protoss\Dragoon_Void_Death\Dragoon_Void_Death.m3"/>
     </CModel>
     <CModel id="Infestation" parent="PersistentSpellFX">
         <Model value="Assets\Effects\Zerg\InfestationCommandCenter\InfestationCommandCenter.m3"/>
     </CModel>
-    <CModel id="Lurker" parent="Unit" Race="Zerg">
-        <Model value="Assets\Units\Zerg\Lurker\BW-Lurker.m3"/>
+    <CModel id="LarvaSC2BW" parent="Unit" Race="Zerg">
+        <Model value="Assets\Units\Zerg\Larva\Larva.m3"/>
         <Occlusion value="Show"/>
-        <PlanetPanelCamera value="Star2CameraMid07"/>
-        <Radius value="0.700000"/>
-        <ScaleMax value="1.100000,1.100000,1.100000"/>
-        <ScaleMin value="1.100000,1.100000,1.100000"/>
-        <SelectionRadius value="0.590500"/>
-        <ShadowRadius value="0.900000"/>
+        <PlanetPanelCamera value="Star2CameraLow04"/>
+        <Radius value="0.250000"/>
+        <SelectionLayer value="1"/>
+        <SelectionRadius value="0.250000"/>
+        <ShadowRadius value="0.250000"/>
         <SquibTypeDefault value="Flesh"/>
-        <TechPurchaseCamera value="Star2CameraMid07"/>
-        <UnitGlossaryCamera value="Star2CameraMid07"/>
+        <TechPurchaseCamera value="Star2CameraLow04"/>
+        <UnitGlossaryCamera value="Star2CameraLow04"/>
+    </CModel>
+    <CModel id="LarvaPortraitSC2BW" parent="Portrait" Race="Zerg">
+        <Model value="Assets\Portraits\Zerg\LarvaPortrait\LarvaPortrait.m3"/>
+        <Image value="Assets\Textures\LarvaPortrait_Static.dds"/>
+        <Lighting value="LarvaPortrait"/>
+    </CModel>
+    <CModel id="CovertOpsSplat" parent="Splat">
+        <Model value="Assets\Splats\Splat_TechLab\Splat_TechLab.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="0.850000,0.850000,0.850000"/>
+        <ScaleMin value="0.850000,0.850000,0.850000"/>
+    </CModel>
+    <CModel id="PhysicsLabSplat" parent="Splat">
+        <Model value="Assets\Splats\Splat_TechLab\Splat_TechLab.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="0.850000,0.850000,0.850000"/>
+        <ScaleMin value="0.850000,0.850000,0.850000"/>
     </CModel>
     <CModel id="MedicPortrait" parent="FXAPortrait" Race="Terran"/>
     <CModel id="Medivac">
@@ -255,11 +573,36 @@
     <CModel id="PhysicsExplosionSmallStrong">
         <Model value="Assets\Models\forceEffect\forceEffect.m3"/>
     </CModel>
-    <CModel id="Reactor">
-        <Model value="Assets\Buildings\Terran\ControlTower\ControlTower.m3"/>
+    <CModel id="ControlTower" parent="Reactor">
+        <Model value="Assets\Buildings\Terran\Control Tower\ControlTower.m3"/>
     </CModel>
-    <CModel id="ReactorPlacement">
-        <Model value="Assets\Buildings\Terran\ControlTower\ControlTowerPlacement.m3"/>
+    <CModel id="ControlTowerDeath" parent="Building" Race="Terran">
+        <Model value="Assets\Buildings\Terran\Control Tower\ControlTowerDeath.m3"/>
+        <LowQualityModel value="TerranBuildingDeathLow"/>
+        <Lighting value="Reactor"/>
+        <Radius value="1.000000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="1.000000"/>
+        <ShadowRadius value="1.000000"/>
+    </CModel>
+    <CModel id="ControlTowerDeathDetached" parent="Building" Race="Terran">
+        <Model value="Assets\Buildings\Terran\Control Tower\ControlTowerDeathDetached.m3"/>
+        <LowQualityModel value="TerranBuildingDeathLow"/>
+        <Lighting value="Reactor"/>
+        <Radius value="1.000000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="1.000000"/>
+        <ShadowRadius value="1.000000"/>
+    </CModel>
+    <CModel id="ControlTowerPlacement" parent="Placement" Race="Terran">
+        <Model value="Assets\Buildings\Terran\Control Tower\ControlTowerPlacement.m3"/>
+        <LowQualityModel value="Reactor"/>
+        <Lighting value="Reactor"/>
+        <Radius value="-1.000000"/>
+        <ScaleMax value="0.850000,0.850000,0.850000"/>
+        <ScaleMin value="0.850000,0.850000,0.850000"/>
+        <SelectionRadius value="0.000000"/>
+        <ShadowRadius value="0.000000"/>
     </CModel>
     <CModel id="RestorationImpact">
         <Model value="Assets\Effects\Protoss\BlinkIn\BlinkIn.m3"/>
@@ -268,6 +611,9 @@
         <Model value="Assets\Effects\Terran\MissileTurretMissileImpact\MissileTurretMissileImpact.m3"/>
     </CModel>
     <CModel id="ScienceVesselPortrait" parent="FXAPortrait" Race="Terran"/>
+    <CModel id="ScoutAirLeftAttackImpact">
+        <Model value="Assets\Effects\Protoss\ScoutAirMissileImpact\ScoutAirMissileImpact.m3"/>
+    </CModel>
     <CModel id="SiegeTankLightTest">
         <Model value="Assets\testlight.m3"/>
     </CModel>
@@ -290,17 +636,52 @@
         <ScaleMax value="0.650000,0.650000,0.650000"/>
         <ScaleMin value="0.650000,0.650000,0.650000"/>
     </CModel>
-    <CModel id="StarportReactor">
-        <Model value="Assets\Buildings\Terran\ControlTower\ControlTower.m3"/>
-    </CModel>
     <CModel id="StasisImpact">
-        <Model value="Assets\Effects\Protoss\TimeWarpLaunch\TimeWarpLaunch.m3"/>
+        <Model value="Assets\Effects\Protoss\Arbiter_StasisField_Shockwave\Arbiter_StasisField_Shockwave.m3"/>
+        <ScaleMax value="0.500000,0.500000,0.500000"/>
+        <ScaleMin value="0.500000,0.500000,0.500000"/>
     </CModel>
-    <CModel id="TechLab">
-        <Model value="Assets\Buildings\Terran\CovertOps\CovertOps.m3"/>
+    <CModel id="MachineShop2" parent="Building" Race="Terran">
+        <Model value="Assets\Buildings\Terran\Machine Shop\MachineShop.m3"/>
+        <Radius value="1.000000"/>
+        <ScaleMax value="0.850000,0.850000,0.850000"/>
+        <ScaleMin value="0.850000,0.850000,0.850000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="1.176200"/>
+        <ShadowRadius value="1.176200"/>
+        <SquibTypeDefault value="Metal"/>
     </CModel>
-    <CModel id="TechLabPlacement">
-        <Model value="Assets\Buildings\Terran\CovertOps\CovertOpsPlacement.m3"/>
+    <CModel id="MachineShopDeath" parent="Building" Race="Terran">
+        <Model value="Assets\Buildings\Terran\Machine Shop\MachineShopDeath.m3"/>
+        <LowQualityModel value="TerranBuildingDeathLow"/>
+        <Lighting value="TechLab"/>
+        <Radius value="1.000000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="1.000000"/>
+        <ShadowRadius value="1.000000"/>
+    </CModel>
+    <CModel id="MachineShopDeathDetached" parent="Building" Race="Terran">
+        <Model value="Assets\Buildings\Terran\Machine Shop\MachineShopDeathDetached.m3"/>
+        <LowQualityModel value="TerranBuildingDeathLow"/>
+        <Lighting value="TechLab"/>
+        <Radius value="1.000000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="1.000000"/>
+        <ShadowRadius value="1.000000"/>
+    </CModel>
+    <CModel id="MachineShopPlacement" parent="Placement" Race="Terran">
+        <Model value="Assets\Buildings\Terran\Machine Shop\MachineShopPlacement.m3"/>
+        <LowQualityModel value="TechLab"/>
+        <Lighting value="TechLab"/>
+        <Radius value="-1.000000"/>
+        <ScaleMax value="0.850000,0.850000,0.850000"/>
+        <ScaleMin value="0.850000,0.850000,0.850000"/>
+        <SelectionRadius value="0.000000"/>
+        <ShadowRadius value="0.000000"/>
+    </CModel>
+    <CModel id="MachineShopBuild" parent="TerranBuildingBuildSmall">
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
     </CModel>
     <CModel id="ThorAAAttackImpact">
         <ScaleMax value="0.750000,0.750000,0.750000"/>
@@ -314,11 +695,6 @@
         <ScaleMax value="1.000000,1.000000,1.750000"/>
         <ScaleMin value="1.000000,1.000000,1.750000"/>
     </CModel>
-    <CModel id="MachineShopPlacement">
-        <Model value="Assets\Buildings\Terran\TechReactorPlacement\TechReactorPlacement.m3"/>
-        <SelectionLayer value="2"/>
-        <SelectionRadius value="1.000000"/>
-    </CModel>
     <CModel id="NukeSiloNova" parent="Building" Race="Terran">
         <Model value="Assets\Buildings\Terran\Silo\Silo.m3"/>
         <Occlusion value="Show"/>
@@ -328,8 +704,7 @@
         <ShadowRadius value="1.666500"/>
     </CModel>
     <CModel id="ReaverDeath" parent="UnitDeath" Race="Protoss">
-        <Model value="Assets\Models\reaver_death\reaver_death.m3"/>
-        <Occlusion value="Show"/>
+        <Model value="Assets\Units\Protoss\Reaver_Death\Reaver_Death_00.m3"/>
         <AnimSpeed value="0.500000"/>
     </CModel>
     <CModel id="Devourer" parent="Unit" Race="Zerg">
@@ -389,7 +764,7 @@
         <Model value="Assets\Effects\Zerg\SlimeMissile\SlimeMissile.m3"/>
     </CModel>
     <CModel id="DisruptionWeb" parent="PersistentSpellFX">
-        <Model value="Assets\Effects\Protoss\NullField\NullField.m3"/>
+        <Model value="Assets\Effects\Protoss\Corsair_DisruptionWeb\Corsair_DisruptionWeb.m3"/>
         <ScaleMax value="0.850000,0.850000,0.850000"/>
         <ScaleMin value="0.850000,0.850000,0.850000"/>
     </CModel>
@@ -507,15 +882,6 @@
         <ScaleMax value="2.500000,2.500000,2.500000"/>
         <ScaleMin value="2.500000,2.500000,2.500000"/>
     </CModel>
-    <CModel id="MachineShop">
-        <Model value="Assets\Buildings\Terran\TechReactor\TechReactor.m3"/>
-        <SelectionRadius value="1.000000"/>
-        <SelectionLayer value="2"/>
-    </CModel>
-    <CModel id="MachineShopAttached">
-        <Model value="Assets\Buildings\Terran\TechReactor\TechReactor.m3"/>
-        <SelectionLayer value="2"/>
-    </CModel>
     <CModel id="MaelstromEffect" parent="BuffFX">
         <Model value="Assets\Effects\Protoss\NullifierBeamImpact\NullifierBeamImpact.m3"/>
         <AnimSpeed value="2.000000"/>
@@ -557,14 +923,6 @@
         <ScaleMax value="0.500000,0.500000,0.500000"/>
         <ScaleMin value="0.500000,0.500000,0.500000"/>
     </CModel>
-    <CModel id="Phoenix">
-        <ScaleMax value="0.650000,0.650000,0.650000"/>
-        <ScaleMin value="0.750000,0.750000,0.750000"/>
-        <SelectionOffset value="0.000000,0.000000,0.000000"/>
-        <Model value="Assets\Units\Protoss\Corsair\corsair0.3.m3"/>
-        <AttachProps index="0" removed="1"/>
-        <AttachProps index="1" removed="1"/>
-    </CModel>
     <CModel id="PingWarning">
         <Model value="Assets\UI\Cursors\ProtossCursor1Geo\ProtossCursor1Geo.m3"/>
     </CModel>
@@ -595,10 +953,7 @@
         <ScaleMin value="0.650000,0.650000,0.650000"/>
     </CModel>
     <CModel id="ArbiterDeath" parent="UnitDeath" Race="Protoss">
-        <Model value="Assets\Units\Protoss\Arbiter\Arbiter_Death.m3"/>
-        <Occlusion value="Show"/>
-        <ScaleMax value="0.250000,0.250000,0.250000"/>
-        <ScaleMin value="0.250000,0.250000,0.250000"/>
+        <Model value="Assets\Units\Protoss\ArbiterEX2_Death\ArbiterEX2_Death.m3"/>
     </CModel>
     <CModel id="DeathModelTest" parent="UnitDeath" Race="Protoss">
         <Model value="Assets\Reaver_Death.m3"/>
@@ -619,12 +974,11 @@
         <TipabilityWidth value="0.800000"/>
     </CModel>
     <CModel id="ReaverScarab" parent="Unit">
-        <Model value="Assets\Effects\Protoss\ArcadePlasmaMissile\ArcadePlasmaMissile.m3"/>
+        <Model value="Assets\Effects\Protoss\Reaver_Missile\Reaver_Missile.m3"/>
         <EditorCategories value=""/>
     </CModel>
     <CModel id="ReaverScarabImpact" parent="ImpactFX">
-        <Model value="Assets\Effects\Protoss\TempestPlasmaMissileImpact\TempestPlasmaMissileImpact.m3"/>
-        <AnimSpeed value="3.000000"/>
+        <Model value="Assets\Effects\Protoss\Reaver_Missile_Impact\Reaver_Missile_Impact.m3"/>
     </CModel>
     <CModel id="CorsairAttackImpact" parent="ImpactFX">
         <Model value="Assets\Effects\Custom\corsair_attack_impact.m3"/>
@@ -671,7 +1025,7 @@
         <ShadowRadius value="0.150000"/>
     </CModel>
     <CModel id="Stalker">
-        <Model value="Assets\Models\dragoon\dragoon.m3"/>
+        <Model value="Assets\Units\Protoss\Dragoon_Void\Dragoon_Void.m3"/>
         <Lighting value="Immortal"/>
         <TechPurchaseCamera value="Star2CameraHigh08"/>
         <UnitGlossaryCamera value="Star2CameraHigh08"/>
@@ -682,14 +1036,12 @@
         <ShadowRadius value="0.866400"/>
     </CModel>
     <CModel id="StalkerAttackImpact">
-        <Model value="Assets\Effects\Protoss\DragoonMissileImpact\DragoonMissileImpact.m3"/>
-        <ScaleMax value="1.500000,1.500000,1.500000"/>
-        <ScaleMin value="1.500000,1.500000,1.500000"/>
+        <Model value="Assets\Effects\Protoss\DragoonEX2_Missile_Impact\DragoonEX2_Missile_Impact.m3"/>
     </CModel>
     <CModel id="StalkerWeapon">
-        <Model value="Assets\Effects\Protoss\PhotonMissile\PhotonMissile.m3"/>
-        <ScaleMax value="1.500000,1.500000,1.500000"/>
-        <ScaleMin value="1.500000,1.500000,1.500000"/>
+        <Model value="Assets\Effects\Protoss\DragoonEX2_Missile\DragoonEX2_Missile.m3"/>
+        <ScaleMax value="1.000000,1.000000,1.000000"/>
+        <ScaleMin value="1.000000,1.000000,1.000000"/>
     </CModel>
     <CModel id="ScienceFacilityPlacement" parent="Placement" Race="Protoss">
         <Model value="Assets\Buildings\Terran\ScienceFacility\ScienceFacilityPlacement.m3"/>
@@ -701,7 +1053,7 @@
         <ShadowRadius value="2.000000"/>
     </CModel>
     <CModel id="StasisField" parent="BuffFX">
-        <Model value="Assets\Effects\Protoss\TractorBeamImpactBubble\TractorBeamImpactBubble.m3"/>
+        <Model value="Assets\Effects\Protoss\Arbiter_StasisField_Impact\Arbiter_StasisField_Impact.m3"/>
     </CModel>
     <CModel id="SunkenColonyAttackImpact" parent="ImpactFX">
         <Model value="Assets\Effects\Zerg\SunkenColonyMissile\SunkenColonyMissile.m3"/>
@@ -782,8 +1134,8 @@
         <ShadowRadius value="0.400000"/>
     </CModel>
     <CModel id="VikingFighterDeath">
-        <ScaleMax value="0.750000,0.750000,0.750000"/>
-        <ScaleMin value="0.750000,0.750000,0.750000"/>
+        <ScaleMax value="0.550000,0.550000,0.550000"/>
+        <ScaleMin value="0.550000,0.550000,0.550000"/>
     </CModel>
     <CModel id="VikingFighterWeapon">
         <Model value="Assets\Effects\Terran\ValkyrieMissile\ValkyrieMissile.m3"/>

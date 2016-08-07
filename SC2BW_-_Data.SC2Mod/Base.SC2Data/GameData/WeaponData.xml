@@ -135,6 +135,15 @@
         <Effect value="GoliathGSet"/>
         <DamagePoint value="0.0588"/>
     </CWeaponLegacy>
+    <CWeaponLegacy id="Scarab">
+        <EditorCategories value=""/>
+        <Range value="0.5"/>
+        <Effect value="ScarabSet"/>
+        <Arc value="360"/>
+        <Period value="0.25"/>
+        <Backswing value="0"/>
+        <AllowedMovement value="Slowing"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="TwinAutocannonsNull">
         <EditorCategories value="Race:Terran"/>
         <Options index="Hidden" value="1"/>
@@ -153,12 +162,14 @@
         <RandomDelayMin value="9999"/>
         <RandomDelayMax value="9999"/>
     </CWeaponLegacy>
-    <CWeaponLegacy id="GuassRifle">
+    <CWeaponLegacy id="GuassRifleSC2BW" parent="GuassRifle">
+        <Name value="Weapon/Name/GuassRifleSC2BW"/>
+        <Tip value="Weapon/Tip/GuassRifleSC2BW"/>
         <Range value="4"/>
         <Period value="0.8693"/>
-        <Effect value="GuassRifleSet"/>
         <DamagePoint value="0.1765"/>
         <Backswing value="0.4707"/>
+        <Effect value="GuassRifleSet"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="HydraliskMelee">
         <Period value="0.8693"/>
@@ -176,21 +187,6 @@
         <Icon value="Assets\Textures\btn-ability-zerg-explode-color.dds"/>
         <DisplayEffect value="InfestedTerranDamage"/>
         <TargetFilters value="Visible;Air,RawResource,HarvestableResource,Missile,Stasis,Dead,Hidden,Invulnerable"/>
-        <DamagePoint value="0.0588"/>
-    </CWeaponLegacy>
-    <CWeaponStrafe id="InterceptorBeam">
-        <DisplayAttackCount value="1"/>
-        <Effect value="InterceptorBeamDamage"/>
-        <Period value="2.0993"/>
-        <LoiterInnerRadius value="4"/>
-        <LoiterRadius value="8"/>
-        <DamagePoint value="0.0588"/>
-    </CWeaponStrafe>
-    <CWeaponLegacy id="InterceptorLaunch">
-        <MinScanRange value="16"/>
-    </CWeaponLegacy>
-    <CWeaponLegacy id="InterceptorsDummy">
-        <DisplayAttackCount value="1"/>
         <DamagePoint value="0.0588"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="ParticleBeamMoving">
@@ -280,7 +276,6 @@
     <CWeaponLegacy id="PsiBlades">
         <DamagePoint value="0.2353"/>
         <Period value="1.2751"/>
-        <Effect value="ZealotPsiBladesSet"/>
         <Range value="0.5"/>
         <RangeSlop value="0.5"/>
     </CWeaponLegacy>
@@ -299,10 +294,6 @@
         <TargetFilters value="Visible;Air,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <Range value="8"/>
         <Arc value="90"/>
-        <Marker Link="Weapon/InterceptorLaunch"/>
-        <Cost>
-            <Cooldown Link="Weapon/InterceptorLaunch"/>
-        </Cost>
         <Period value="3.4147"/>
         <DamagePoint value="0.0588"/>
         <Backswing value="0"/>
@@ -319,24 +310,6 @@
         <DamagePoint value="0.2353"/>
         <Backswing value="0.2353"/>
         <Effect value="HydraliskNeedleSpinesPersistent"/>
-    </CWeaponLegacy>
-    <CWeaponLegacy id="Scarab">
-        <EditorCategories value="Race:Protoss"/>
-        <Options index="Melee" value="1"/>
-        <Icon value="Assets\Textures\btn-ability-zerg-banelingspooge.dds"/>
-        <DisplayEffect value="ScarabDamage"/>
-        <TargetFilters value="Visible;Air,Missile,Stasis,Dead,Hidden,Invulnerable"/>
-        <Range value="0.5"/>
-        <RangeSlop value="0.25"/>
-        <Arc value="360"/>
-        <Marker Link="Weapon/Suicide"/>
-        <Cost>
-            <Cooldown Link="Weapon/Suicide"/>
-        </Cost>
-        <Period value="0"/>
-        <DamagePoint value="0.5"/>
-        <Effect value="ScarabSet"/>
-        <AllowedMovement value="Slowing"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="Scourge">
         <EditorCategories value=""/>
