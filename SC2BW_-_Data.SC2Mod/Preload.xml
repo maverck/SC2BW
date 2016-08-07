@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="us-ascii"?>
 <Preload>
 <Asset path="assets\textures\black.dds" Type="Image"/>
-<Asset path="assets\textures\techcube2_green_swarm.dds" Type="Image"/>
-<Asset path="assets\textures\techcube2_green_swarm.lvl0" Type="Image"/>
 <Actor id="SYSTEM_ActorConfig"/>
 <Behavior id="AirStackCheck"/>
-<Behavior id="CheckForUnitDeath"/>
 <Behavior id="DroppedFromTransportGoliath"/>
 <Behavior id="DroppedFromTransportTank"/>
 <Behavior id="DroppedFromTransportSpell"/>
@@ -16,7 +13,6 @@
 <Behavior id="HallucinationTimedLifeCustom"/>
 <Behavior id="IdentifyHarvesting"/>
 <Behavior id="Infest"/>
-<Behavior id="Miss"/>
 <Behavior id="DroppedFromTransportReaver"/>
 <Behavior id="MovingShotActivateTurret"/>
 <Effect id="NeedleSpinesDamage"/>
@@ -33,28 +29,15 @@
 <Effect id="ArcliteCannonNullDamage"/>
 <Effect id="AirUnitSpreadSearch"/>
 <Effect id="C10CanisterRifleNull"/>
-<Effect id="DamagePersistent"/>
 <Effect id="GoliathGNull"/>
 <Effect id="GuassRifleNull"/>
 <Effect id="NeedleSpinesNull"/>
 <Effect id="ParticleDisruptorsU3"/>
-<Effect id="CorsairShieldDamage"/>
-<Effect id="DevourerShieldU"/>
-<Effect id="C10CanisterRifle2"/>
-<Effect id="FirebatUFull2"/>
-<Effect id="GoliathAU2"/>
-<Effect id="NeedleSpinesDamage2"/>
-<Effect id="ImpalerTentacleU2"/>
-<Effect id="InfestedTerranShieldsDamage"/>
-<Effect id="LongboltMissileU2"/>
 <Effect id="ScarabDamageDummy"/>
 <Effect id="ScarabDamage"/>
 <Effect id="VultureUNull"/>
 <Effect id="SpiderMineDamage"/>
 <Effect id="SpiderMineNullDamage"/>
-<Effect id="VultureSpiderMinesShieldDamage2"/>
-<Effect id="WraithAU2"/>
-<Effect id="YamatoCannonShieldsDamage"/>
 <Effect id="YamatoU2"/>
 <Sound id="UI_GenericButton"/>
 <Sound id="prescue" Variations="0"/>
