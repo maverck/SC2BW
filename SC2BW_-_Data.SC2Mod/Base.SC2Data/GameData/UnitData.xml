@@ -41,7 +41,7 @@
         <ShieldRegenRate value="0.457"/>
         <ShieldArmorName value="Unit/ShieldArmorName/ProtossPlasmaShields"/>
         <Speed value="2.8125"/>
-        <Acceleration value="1000"/>
+        <Acceleration value="2"/>
         <LateralAcceleration value="46"/>
         <StationaryTurningRate value="999.8437"/>
         <TurningRate value="999.8437"/>
