@@ -2195,6 +2195,7 @@
         <LifeStart value="40"/>
         <LifeMax value="40"/>
         <WeaponArray index="0" Link="GuassRifleSC2BW"/>
+        <BehaviorArray Link="UnitFilterSmall"/>
     </CUnit>
     <CUnit id="TerranNuclearSilo" parent="FactoryTechLab">
         <Name value="Unit/Name/TerranNuclearSilo"/>
