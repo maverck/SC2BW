@@ -371,8 +371,10 @@ Requirement/Name/ResearchColossusReactor=Research Colossus Reactor
 Requirement/Name/ResearchGraviticThrusters=Research Gravitic Thrusters
 Requirement/Name/ResearchYamato=Research Yamato
 Requirement/Name/ScienceFacilitywithattachedPhysicsLab=Science Facility with attached Physics Lab
+Requirement/Name/ScienceFacilitywithattachedPhysicsLabandControlTower=Science Facility with attached Physics Lab and Control Tower
 Requirement/Name/UseSiegeModeSC2BW=Use Siege Mode
 RequirementNode/Name/4=4
+RequirementNode/Name/AndCountBehaviorPhysicsLabCompleteOnly3040849221CountBehaviorControlTowerCompleteOnlyAtUnit=CountBehavior(PhysicsLab,CompleteOnly){Science Facility with attached Physics Lab} && CountBehavior(ControlTower,CompleteOnlyAtUnit)
 RequirementNode/Name/AndCountUnitAcademyCompleteOnlyTechTreeCheatCountBehaviorCovertOpsCompleteOnly2842203662TechTreeCheat=CountUnit(Academy,CompleteOnly)[TechTreeCheat] && CountBehavior(CovertOps,CompleteOnly){Science Facility with attached Covert Ops}[TechTreeCheat]
 RequirementNode/Name/AndCountUnitArmoryCompleteOnly=CountUnit(Armory,CompleteOnly) && ()
 RequirementNode/Name/AndCountUnitControlTowerCompleteOnlyAtUnitCountUnitArmoryCompleteOnly=CountUnit(ControlTower,CompleteOnlyAtUnit) && CountUnit(Armory,CompleteOnly)
@@ -390,6 +392,7 @@ RequirementNode/Name/AndEq629999927CountUpgradeProtossGroundWeaponsLevel2Complet
 RequirementNode/Name/AndEq894233239CountUpgradeTerranVehicleWeaponsLevel2CompleteOnly1Or2661977898CountUnitScienceFacilityCompleteOnlyCountUnitScienceFacilityFlyingCompleteOnly=CountUpgrade(TerranVehicleWeaponsLevel2,CompleteOnly) == {Terran Vehicle Weapons Level 2}1 && (CountUnit(ScienceFacility,CompleteOnly) || {Science Facility}CountUnit(ScienceFacilityFlying,CompleteOnly))
 RequirementNode/Name/AndNotCountUnitNukeQueuedOrBetterAtUnitTechTreeCheatOrCountUnitScienceFacilityCompleteOnlyCountBehaviorNuclearSiloCompleteOnlyAtUnit=!CountUnit(Nuke,QueuedOrBetterAtUnit)[TechTreeCheat] && (CountUnit(ScienceFacility,CompleteOnly) || ()) && CountBehavior(NuclearSilo,CompleteOnlyAtUnit)
 RequirementNode/Name/AndOrCountUnitScienceFacilityCompleteOnlyCountBehaviorControlTowerCompleteOnlyAtUnitTechTreeCheat=(CountUnit(ScienceFacility,CompleteOnly) || ()) && CountBehavior(ControlTower,CompleteOnlyAtUnit)[TechTreeCheat]
+RequirementNode/Name/CountBehaviorControlTowerCompleteOnlyAtUnit=CountBehavior(ControlTower,CompleteOnlyAtUnit)
 RequirementNode/Name/CountBehaviorControlTowerCompleteOnlyAtUnitTechTreeCheat=CountBehavior(ControlTower,CompleteOnlyAtUnit)[TechTreeCheat]
 RequirementNode/Name/CountBehaviorCovertOpsCompleteOnly2842203662TechTreeCheat=CountBehavior(CovertOps,CompleteOnly){Science Facility with attached Covert Ops}[TechTreeCheat]
 RequirementNode/Name/CountBehaviorCovertOpsCompleteOnlyAtUnit2842203662=CountBehavior(CovertOps,CompleteOnlyAtUnit){Science Facility with attached Covert Ops}
@@ -397,6 +400,7 @@ RequirementNode/Name/CountBehaviorCovertOpsCompleteOnlyAtUnit2842203662TechTreeC
 RequirementNode/Name/CountBehaviorMachineShopCompleteOnlyAtUnit=CountBehavior(MachineShop,CompleteOnlyAtUnit)
 RequirementNode/Name/CountBehaviorMachineShopCompleteOnlyAtUnitTechTreeCheat=CountBehavior(MachineShop,CompleteOnlyAtUnit)[TechTreeCheat]
 RequirementNode/Name/CountBehaviorNuclearSiloCompleteOnlyAtUnit=CountBehavior(NuclearSilo,CompleteOnlyAtUnit)
+RequirementNode/Name/CountBehaviorPhysicsLabCompleteOnly3040849221=CountBehavior(PhysicsLab,CompleteOnly){Science Facility with attached Physics Lab}
 RequirementNode/Name/CountBehaviorPhysicsLabCompleteOnly3040849221TechTreeCheat=CountBehavior(PhysicsLab,CompleteOnly){Science Facility with attached Physics Lab}[TechTreeCheat]
 RequirementNode/Name/CountBehaviorPhysicsLabCompleteOnlyAtUnit3040849221TechTreeCheat=CountBehavior(PhysicsLab,CompleteOnlyAtUnit){Science Facility with attached Physics Lab}[TechTreeCheat]
 RequirementNode/Name/CountUnitAcademyCompleteOnlyTechTreeCheat=CountUnit(Academy,CompleteOnly)[TechTreeCheat]

@@ -26,6 +26,12 @@
         <EditorCategories value="Race:Terran"/>
         <Lighting value="BattlecruiserAirAttackImpact"/>
     </CModel>
+    <CModel id="Archon">
+        <Model value="Assets\Units\Protoss\Void_DarkArchon\Void_DarkArchon.m3"/>
+    </CModel>
+    <CModel id="ArchonDeath">
+        <Model value="Assets\Units\Protoss\Void_DarkArchon_Death\Void_DarkArchon_Death.m3"/>
+    </CModel>
     <CModel id="Battlecruiser">
         <Model value="Assets\Units\Terran\Battlecruiser\BehemothBattlecruiserCampaign.m3"/>
         <AttachProps index="2">

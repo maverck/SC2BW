@@ -89,7 +89,6 @@
         <On Terms="WeaponStart.*.AttackStart" Send="AnimBracketStart Attack Attack"/>
         <On Terms="WeaponStop.*.AttackStop" Send="AnimBracketStop Attack"/>
         <On Terms="Abil.attack.ReadyStop" Send="AnimGroupRemove Ready"/>
-        <On Terms="ActorCreation" Send="SetTintColor {255,0,0 0.500000}"/>
         <Model value="Archon"/>
         <BuildModel value="Archon"/>
         <DeathArray index="Normal" ModelLink="ArchonDeath" SoundLink="Archon_Explode"/>
@@ -866,7 +865,7 @@
         <DeathCustoms index="6" ModelLink="DragoonDeath" Name="RagdollBasic"/>
         <PlacementModel value="ImmortalPlacement"/>
         <PortraitModel value="ImmortalPortrait"/>
-        <WalkAnimMoveSpeed value="1.8007"/>
+        <WalkAnimMoveSpeed value="1.6015"/>
         <BarOffset value="80"/>
         <BarWidth value="90"/>
         <GroupIcon>
@@ -1442,12 +1441,12 @@
         <IconArcLength value="0.500000"/>
     </CActorRange>
     <CActorModel id="NydusPlacementModel" parent="PlacementModel">
-        <On index="6" Terms="ActorCreation" Send="SetOpacity 0.450000"/>
-        <On index="7" Terms="ActorCreation" Send="SetCastShadows"/>
-        <On index="8" Terms="ActorCreation; ModelName SporeCrawlerPlacement" Target="" Send="Create SporeCrawlerProtectRange"/>
-        <On index="9" Terms="ActorDestruction" Target="SporeCrawlerProtectRange" Send="Destroy"/>
-        <On index="10" Terms="ActorCreation; ModelName SpineCrawlerPlacement" Send="Create SpineCrawlerProtectRange"/>
-        <On index="11" Target="SpineCrawlerProtectRange"/>
+        <On Terms="ActorCreation" Send="SetOpacity 0.450000"/>
+        <On Terms="ActorCreation" Send="SetCastShadows"/>
+        <On Terms="ActorCreation; ModelName SporeCrawlerPlacement" Send="Create SporeCrawlerProtectRange"/>
+        <On Terms="ActorDestruction" Target="SporeCrawlerProtectRange" Send="Destroy"/>
+        <On Terms="ActorCreation; ModelName SpineCrawlerPlacement" Send="Create SpineCrawlerProtectRange"/>
+        <On Target="SpineCrawlerProtectRange"/>
         <Scale value="0.800000"/>
     </CActorModel>
     <CActorModel id="NydusRumble">
