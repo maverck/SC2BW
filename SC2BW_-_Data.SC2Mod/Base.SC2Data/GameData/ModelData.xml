@@ -26,6 +26,14 @@
         <EditorCategories value="Race:Terran"/>
         <Lighting value="BattlecruiserAirAttackImpact"/>
     </CModel>
+    <CModel id="DarkArchon2" parent="Archon">
+        <Model value="Assets\Units\Protoss\Void_DarkArchon\Void_DarkArchon.m3"/>
+    </CModel>
+    <CModel id="DarkArchonDeath" parent="UnitDeath" Race="Protoss">
+        <Model value="Assets\Units\Protoss\Void_DarkArchon_Death\Void_DarkArchon_Death.m3"/>
+        <LowQualityModel value="ProtossLargeUnitDeathLow"/>
+        <Occlusion value="Show"/>
+    </CModel>
     <CModel id="Battlecruiser">
         <Model value="Assets\Units\Terran\Battlecruiser\BehemothBattlecruiserCampaign.m3"/>
         <AttachProps index="2">
@@ -721,9 +729,9 @@
         <Tipability value="0.750000"/>
     </CModel>
     <CModel id="DarkArchon" parent="Portrait" Race="Protoss">
-        <Model value="Assets\Portraits\Protoss\ArchonPortrait\ArchonPortrait.m3"/>
-        <Image value="Assets\Textures\ArchonPortrait_Static.dds"/>
-        <Lighting value="PortraitDarkArchon"/>
+        <Model value="Assets\Portraits\Protoss\DarkArchonEx2Portrait\DarkArchonEx2Portrait.m3"/>
+        <Image value="Assets\Textures\darkarchonportrait_static.dds"/>
+        <Lighting value="ArchonPortrait"/>
     </CModel>
     <CModel id="BroodLordAttackImpact">
         <Model value="Assets\Effects\Zerg\PrimalGuardianMissileImpact\PrimalGuardianMissileImpact.m3"/>

@@ -293,6 +293,9 @@
     <CRequirement id="ResearchRestoration">
         <NodeArray index="Show" Link="NotCountUpgradeRestorationQueuedOrBetter"/>
     </CRequirement>
+    <CRequirement id="ScienceFacilitywithattachedPhysicsLabandControlTower">
+        <NodeArray index="Use" Link="AndCountBehaviorPhysicsLabCompleteOnly3040849221CountBehaviorControlTowerCompleteOnlyAtUnit"/>
+    </CRequirement>
     <CRequirement id="SpawnBroodlingUpgraded">
         <NodeArray index="Use" Link="CountUpgradeSpawnBroodlingCompleteOnly"/>
     </CRequirement>

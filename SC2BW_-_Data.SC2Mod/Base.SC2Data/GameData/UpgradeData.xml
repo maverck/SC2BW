@@ -79,7 +79,7 @@
         <AffectedUnitArray value="Lurker"/>
     </CUpgrade>
     <CUpgrade id="GhostMoebiusReactor">
-        <EffectArray index="0" Reference="Unit,Ghost,EnergyStart" Value="12"/>
+        <EffectArray index="0" Value="12"/>
         <EffectArray Reference="Unit,Ghost,EnergyMax" Value="50"/>
     </CUpgrade>
     <CUpgrade id="GraviticDrive">
@@ -447,7 +447,7 @@
         <EffectArray index="18" Operation="Set" Reference="Actor,Reaver,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel1.dds"/>
         <EffectArray index="19" Operation="Add" Reference="Unit,Reaver,LifeArmorLevel" Value="1"/>
         <EffectArray index="20" Operation="Add" Reference="Unit,Reaver,LifeArmor" Value="1"/>
-        <EffectArray index="21" Operation="Set" Reference="Actor,Archon2,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel1.dds"/>
+        <EffectArray index="21" Operation="Set" Reference="Actor,DarkArchon,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel1.dds"/>
         <EffectArray index="22" Operation="Add" Reference="Unit,Archon2,LifeArmorLevel" Value="1"/>
         <EffectArray index="23" Operation="Add" Reference="Unit,Archon2,LifeArmor" Value="1"/>
         <EffectArray index="24" removed="1"/>
@@ -490,7 +490,7 @@
         <EffectArray index="18" Operation="Set" Reference="Actor,Reaver,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel2.dds"/>
         <EffectArray index="19" Operation="Add" Reference="Unit,Reaver,LifeArmorLevel" Value="1"/>
         <EffectArray index="20" Operation="Add" Reference="Unit,Reaver,LifeArmor" Value="1"/>
-        <EffectArray index="21" Operation="Set" Reference="Actor,Archon2,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel2.dds"/>
+        <EffectArray index="21" Operation="Set" Reference="Actor,DarkArchon,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel2.dds"/>
         <EffectArray index="22" Operation="Add" Reference="Unit,Archon2,LifeArmorLevel" Value="1"/>
         <EffectArray index="23" Operation="Add" Reference="Unit,Archon2,LifeArmor" Value="1"/>
         <EffectArray index="24" removed="1"/>
@@ -533,7 +533,7 @@
         <EffectArray index="18" Operation="Set" Reference="Actor,Reaver,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel3.dds"/>
         <EffectArray index="19" Operation="Add" Reference="Unit,Reaver,LifeArmorLevel" Value="1"/>
         <EffectArray index="20" Operation="Add" Reference="Unit,Reaver,LifeArmor" Value="1"/>
-        <EffectArray index="21" Operation="Set" Reference="Actor,Archon2,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel3.dds"/>
+        <EffectArray index="21" Operation="Set" Reference="Actor,DarkArchon,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel3.dds"/>
         <EffectArray index="22" Operation="Add" Reference="Unit,Archon2,LifeArmorLevel" Value="1"/>
         <EffectArray index="23" Operation="Add" Reference="Unit,Archon2,LifeArmor" Value="1"/>
         <EffectArray index="24" removed="1"/>
@@ -773,7 +773,7 @@
         <EffectArray index="83" Operation="Add" Reference="Unit,FleetBeacon2,ShieldArmorLevel" Value="1"/>
         <EffectArray index="84" Operation="Add" Reference="Unit,Reaver,ShieldArmor" Value="1"/>
         <EffectArray index="85" Operation="Add" Reference="Unit,Reaver,ShieldArmorLevel" Value="1"/>
-        <EffectArray index="86" Reference="Actor,Archon2,ShieldArmorIcon"/>
+        <EffectArray index="86" Reference="Actor,DarkArchon,ShieldArmorIcon"/>
         <EffectArray index="87" Operation="Add" Reference="Unit,Archon2,ShieldArmorLevel" Value="1"/>
         <EffectArray index="88" Operation="Add" Reference="Unit,Archon2,ShieldArmor" Value="1"/>
         <EffectArray index="89" Reference="Actor,Observatory,ShieldArmorIcon"/>
@@ -803,6 +803,9 @@
         <EffectArray index="113" removed="1"/>
         <EffectArray index="114" removed="1"/>
         <EffectArray index="115" removed="1"/>
+        <EffectArray index="116" removed="1"/>
+        <EffectArray index="117" removed="1"/>
+        <EffectArray index="118" removed="1"/>
         <AffectedUnitArray index="1" value="Archon2"/>
         <AffectedUnitArray index="2" value="Arbiter"/>
         <AffectedUnitArray index="3" value="Assimilator"/>
@@ -836,6 +839,7 @@
         <AffectedUnitArray index="32" removed="1"/>
         <AffectedUnitArray index="33" removed="1"/>
         <AffectedUnitArray index="34" removed="1"/>
+        <AffectedUnitArray index="35" removed="1"/>
     </CUpgrade>
     <CUpgrade id="ProtossShieldsLevel2">
         <EffectArray index="4" Reference="Unit,Stalker,ShieldArmorLevel"/>
@@ -920,7 +924,7 @@
         <EffectArray index="83" Operation="Add" Reference="Unit,FleetBeacon2,ShieldArmorLevel" Value="1"/>
         <EffectArray index="84" Operation="Add" Reference="Unit,Reaver,ShieldArmor" Value="1"/>
         <EffectArray index="85" Operation="Add" Reference="Unit,Reaver,ShieldArmorLevel" Value="1"/>
-        <EffectArray index="86" Reference="Actor,Archon2,ShieldArmorIcon"/>
+        <EffectArray index="86" Reference="Actor,DarkArchon,ShieldArmorIcon"/>
         <EffectArray index="87" Operation="Add" Reference="Unit,Archon2,ShieldArmorLevel" Value="1"/>
         <EffectArray index="88" Operation="Add" Reference="Unit,Archon2,ShieldArmor" Value="1"/>
         <EffectArray index="89" Reference="Actor,Observatory,ShieldArmorIcon"/>
@@ -950,6 +954,9 @@
         <EffectArray index="113" removed="1"/>
         <EffectArray index="114" removed="1"/>
         <EffectArray index="115" removed="1"/>
+        <EffectArray index="116" removed="1"/>
+        <EffectArray index="117" removed="1"/>
+        <EffectArray index="118" removed="1"/>
         <AffectedUnitArray index="1" value="Archon2"/>
         <AffectedUnitArray index="2" value="Arbiter"/>
         <AffectedUnitArray index="3" value="Assimilator"/>
@@ -974,6 +981,7 @@
         <AffectedUnitArray index="32" removed="1"/>
         <AffectedUnitArray index="33" removed="1"/>
         <AffectedUnitArray index="34" removed="1"/>
+        <AffectedUnitArray index="35" removed="1"/>
     </CUpgrade>
     <CUpgrade id="ProtossShieldsLevel3">
         <EffectArray index="4" Reference="Unit,Stalker,ShieldArmorLevel"/>
@@ -1058,7 +1066,7 @@
         <EffectArray index="83" Operation="Add" Reference="Unit,FleetBeacon2,ShieldArmorLevel" Value="1"/>
         <EffectArray index="84" Operation="Add" Reference="Unit,Reaver,ShieldArmor" Value="1"/>
         <EffectArray index="85" Operation="Add" Reference="Unit,Reaver,ShieldArmorLevel" Value="1"/>
-        <EffectArray index="86" Reference="Actor,Archon2,ShieldArmorIcon"/>
+        <EffectArray index="86" Reference="Actor,DarkArchon,ShieldArmorIcon"/>
         <EffectArray index="87" Operation="Add" Reference="Unit,Archon2,ShieldArmorLevel" Value="1"/>
         <EffectArray index="88" Operation="Add" Reference="Unit,Archon2,ShieldArmor" Value="1"/>
         <EffectArray index="89" Reference="Actor,Observatory,ShieldArmorIcon"/>
@@ -1088,6 +1096,9 @@
         <EffectArray index="113" removed="1"/>
         <EffectArray index="114" removed="1"/>
         <EffectArray index="115" removed="1"/>
+        <EffectArray index="116" removed="1"/>
+        <EffectArray index="117" removed="1"/>
+        <EffectArray index="118" removed="1"/>
         <AffectedUnitArray index="1" value="Archon2"/>
         <AffectedUnitArray index="2" value="Arbiter"/>
         <AffectedUnitArray index="3" value="Assimilator"/>
@@ -1112,6 +1123,7 @@
         <AffectedUnitArray index="32" removed="1"/>
         <AffectedUnitArray index="33" removed="1"/>
         <AffectedUnitArray index="34" removed="1"/>
+        <AffectedUnitArray index="35" removed="1"/>
     </CUpgrade>
     <CUpgrade id="ResearchDisruptionWeb">
         <Icon value="Assets\Textures\btn-ability-protoss-blackhole-color.dds"/>
@@ -1180,14 +1192,20 @@
         <EffectArray index="10" Reference="Unit,Firebat,LifeArmor"/>
         <EffectArray index="11" Reference="Unit,Medic,LifeArmorLevel"/>
         <EffectArray index="12" Operation="Add" Reference="Unit,Medic,LifeArmor" Value="1"/>
-        <EffectArray index="13" Operation="Set" Reference="Actor,Firebat,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel1.dds"/>
-        <EffectArray index="14" Operation="Set" Reference="Actor,Medic,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel1.dds"/>
+        <EffectArray index="13" Reference="Actor,Firebat,LifeArmorIcon"/>
+        <EffectArray index="14" Reference="Actor,Medic,LifeArmorIcon"/>
         <EffectArray index="15" removed="1"/>
         <EffectArray index="16" removed="1"/>
         <EffectArray index="17" removed="1"/>
         <EffectArray index="18" removed="1"/>
         <EffectArray index="19" removed="1"/>
         <EffectArray index="20" removed="1"/>
+        <EffectArray index="21" removed="1"/>
+        <EffectArray index="22" removed="1"/>
+        <EffectArray index="23" removed="1"/>
+        <EffectArray index="24" removed="1"/>
+        <EffectArray index="25" removed="1"/>
+        <EffectArray index="26" removed="1"/>
         <AffectedUnitArray index="1" value="Medic"/>
         <AffectedUnitArray index="2" value=""/>
         <AffectedUnitArray index="3" value="MarineSC2BW"/>
@@ -1205,14 +1223,20 @@
         <EffectArray index="10" Reference="Unit,Firebat,LifeArmor"/>
         <EffectArray index="11" Reference="Unit,Medic,LifeArmorLevel"/>
         <EffectArray index="12" Operation="Add" Reference="Unit,Medic,LifeArmor" Value="1"/>
-        <EffectArray index="13" Operation="Set" Reference="Actor,Firebat,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel2.dds"/>
-        <EffectArray index="14" Operation="Set" Reference="Actor,Medic,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel2.dds"/>
+        <EffectArray index="13" Reference="Actor,Firebat,LifeArmorIcon"/>
+        <EffectArray index="14" Reference="Actor,Medic,LifeArmorIcon"/>
         <EffectArray index="15" removed="1"/>
         <EffectArray index="16" removed="1"/>
         <EffectArray index="17" removed="1"/>
         <EffectArray index="18" removed="1"/>
         <EffectArray index="19" removed="1"/>
         <EffectArray index="20" removed="1"/>
+        <EffectArray index="21" removed="1"/>
+        <EffectArray index="22" removed="1"/>
+        <EffectArray index="23" removed="1"/>
+        <EffectArray index="24" removed="1"/>
+        <EffectArray index="25" removed="1"/>
+        <EffectArray index="26" removed="1"/>
         <AffectedUnitArray index="1" value="Medic"/>
         <AffectedUnitArray index="2" value=""/>
         <AffectedUnitArray index="3" value="MarineSC2BW"/>
@@ -1230,14 +1254,20 @@
         <EffectArray index="10" Reference="Unit,Firebat,LifeArmor"/>
         <EffectArray index="11" Reference="Unit,Medic,LifeArmorLevel"/>
         <EffectArray index="12" Operation="Add" Reference="Unit,Medic,LifeArmor" Value="1"/>
-        <EffectArray index="13" Operation="Set" Reference="Actor,Firebat,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel3.dds"/>
-        <EffectArray index="14" Operation="Set" Reference="Actor,Medic,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel3.dds"/>
+        <EffectArray index="13" Reference="Actor,Firebat,LifeArmorIcon"/>
+        <EffectArray index="14" Reference="Actor,Medic,LifeArmorIcon"/>
         <EffectArray index="15" removed="1"/>
         <EffectArray index="16" removed="1"/>
         <EffectArray index="17" removed="1"/>
         <EffectArray index="18" removed="1"/>
         <EffectArray index="19" removed="1"/>
         <EffectArray index="20" removed="1"/>
+        <EffectArray index="21" removed="1"/>
+        <EffectArray index="22" removed="1"/>
+        <EffectArray index="23" removed="1"/>
+        <EffectArray index="24" removed="1"/>
+        <EffectArray index="25" removed="1"/>
+        <EffectArray index="26" removed="1"/>
         <AffectedUnitArray index="1" value="Medic"/>
         <AffectedUnitArray index="2" value=""/>
         <AffectedUnitArray index="3" value="MarineSC2BW"/>
@@ -1578,17 +1608,17 @@
         <EffectArray index="18" Reference="Weapon,GoliathGUpgraded,Icon"/>
         <EffectArray index="19" Operation="Add" Reference="Weapon,WarHound,Level" Value="1"/>
         <EffectArray index="20" Operation="Set" Reference="Weapon,WarHound,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel1.dds"/>
-        <EffectArray index="21" Reference="Effect,WarHoundMelee,Amount" Value="2"/>
-        <EffectArray index="22" Reference="Effect,WarHound,Amount" Value="2"/>
-        <EffectArray index="23" Reference="Weapon,WidowMineDummy,Level" Value="1"/>
-        <EffectArray index="24" Operation="Set" Reference="Weapon,WidowMineDummy,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel1.dds"/>
+        <EffectArray index="21" Reference="Effect,WarHoundMelee,Amount"/>
+        <EffectArray index="22" Reference="Effect,WarHound,Amount"/>
+        <EffectArray index="23" Reference="Weapon,WidowMineDummy,Level"/>
+        <EffectArray index="24" Reference="Weapon,WidowMineDummy,Icon"/>
         <EffectArray index="25" Reference="Effect,MineDroneDirectDamage,Amount" Value="5"/>
         <EffectArray index="26" Reference="Effect,MineDroneExplodeDamage,Amount" Value="1"/>
         <EffectArray index="27" Operation="Set" Reference="Weapon,HellionTank,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel1.dds"/>
         <EffectArray index="28" Operation="Add" Reference="Effect,HellionTankDamage,Amount" Value="1.000000"/>
         <EffectArray index="29" Reference="Weapon,HellionTank,Level" Value="1"/>
         <EffectArray index="30" Reference="Effect,HellionTankDamage,AttributeBonus[Light]" Value="1.000000"/>
-        <EffectArray index="31" Operation="Set" Reference="Weapon,GoliathAUpgraded,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel1.dds"/>
+        <EffectArray index="31" Reference="Weapon,GoliathAUpgraded,Icon"/>
         <EffectArray index="32" Reference="Effect,GoliathAU2,Amount" Value="2"/>
         <EffectArray index="33" Reference="Effect,90mmCannons2,Amount" Value="2"/>
         <EffectArray index="34" Reference="Effect,VultureUNull,Amount" Value="2"/>
@@ -1619,8 +1649,8 @@
         <EffectArray index="17" Operation="Add" Reference="Effect,GoliathAU2,Amount" Value="2"/>
         <EffectArray index="18" Operation="Add" Reference="Weapon,WarHound,Level" Value="1"/>
         <EffectArray index="19" Reference="Weapon,WarHound,Icon"/>
-        <EffectArray index="20" Reference="Effect,WarHoundMelee,Amount" Value="2"/>
-        <EffectArray index="21" Reference="Effect,WarHound,Amount" Value="2"/>
+        <EffectArray index="20" Reference="Effect,WarHoundMelee,Amount"/>
+        <EffectArray index="21" Reference="Effect,WarHound,Amount"/>
         <EffectArray index="22" Reference="Weapon,WidowMineDummy,Level" Value="1"/>
         <EffectArray index="23" Operation="Set" Reference="Weapon,WidowMineDummy,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel2.dds"/>
         <EffectArray index="24" Operation="Add" Reference="Effect,MineDroneDirectDamage,Amount" Value="5"/>
@@ -1640,6 +1670,7 @@
         <EffectArray index="38" removed="1"/>
         <EffectArray index="39" removed="1"/>
         <EffectArray index="40" removed="1"/>
+        <EffectArray index="41" removed="1"/>
         <AffectedUnitArray index="0" value="SiegeTankSieged"/>
         <AffectedUnitArray index="1" value="SiegeTank"/>
         <AffectedUnitArray index="2" value="Goliath"/>
@@ -1666,8 +1697,8 @@
         <EffectArray index="17" Operation="Add" Reference="Effect,GoliathAU2,Amount" Value="2"/>
         <EffectArray index="18" Operation="Add" Reference="Weapon,WarHound,Level" Value="1"/>
         <EffectArray index="19" Reference="Weapon,WarHound,Icon"/>
-        <EffectArray index="20" Reference="Effect,WarHoundMelee,Amount" Value="2"/>
-        <EffectArray index="21" Reference="Effect,WarHound,Amount" Value="2"/>
+        <EffectArray index="20" Reference="Effect,WarHoundMelee,Amount"/>
+        <EffectArray index="21" Reference="Effect,WarHound,Amount"/>
         <EffectArray index="22" Reference="Weapon,WidowMineDummy,Level" Value="1"/>
         <EffectArray index="23" Operation="Set" Reference="Weapon,WidowMineDummy,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel3.dds"/>
         <EffectArray index="24" Operation="Add" Reference="Effect,MineDroneDirectDamage,Amount" Value="5"/>
@@ -1687,6 +1718,7 @@
         <EffectArray index="38" removed="1"/>
         <EffectArray index="39" removed="1"/>
         <EffectArray index="40" removed="1"/>
+        <EffectArray index="41" removed="1"/>
         <AffectedUnitArray index="0" value="SiegeTankSieged"/>
         <AffectedUnitArray index="1" value="SiegeTank"/>
         <AffectedUnitArray index="2" value="Goliath"/>

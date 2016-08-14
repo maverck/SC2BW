@@ -188,15 +188,23 @@
     <CAbilResearch id="MachineShopResearchFactory" parent="FactoryTechLabResearch">
         <Name value="Abil/Name/MachineShopResearchFactory"/>
         <InfoArray index="Research27" Time="70.5935" Upgrade="SiegeTechSC2BW">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
             <Button DefaultButtonFace="ResearchSiegeTech" Requirements="LearnSiegeTech"/>
         </InfoArray>
         <InfoArray index="Research28" Time="117.6557" Upgrade="AresClassWeaponsSystem">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
             <Button DefaultButtonFace="CharonBoosters" Requirements="LearnCharonBoosters"/>
         </InfoArray>
         <InfoArray index="Research29" Time="70.5935" Upgrade="ResearchSpiderMines">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
             <Button DefaultButtonFace="ResearchSpiderMinesSC1" Requirements="ResearchSpiderMines"/>
         </InfoArray>
         <InfoArray index="Research30" Time="88.2416" Upgrade="IonThrusters">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
             <Button DefaultButtonFace="ResearchIonThrusters" Requirements="ResearchIonThrusters"/>
         </InfoArray>
     </CAbilResearch>
@@ -578,8 +586,6 @@
             <Unit value="Scourge"/>
             <Unit value="Scourge"/>
         </InfoArray>
-        <DeathTypeOnFinish value="TrainingComplete"/>
-        <DeathTypeOnCancel value="TrainingCancel"/>
     </CAbilTrain>
     <CAbilTrain id="LarvaTrain2">
         <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
@@ -3053,7 +3059,6 @@
             <Button DefaultButtonFace="BuildValkyrie" State="Restricted" Requirements="HaveArmoryandAttachedControlTower"/>
             <Unit value="VikingFighter"/>
         </InfoArray>
-        <Activity value="UI/Building"/>
     </CAbilTrain>
     <CAbilTrain id="StarportTrainSC2BW" parent="StarportTrain">
         <Name value="Abil/Name/StarportTrainSC2BW"/>
@@ -3107,7 +3112,7 @@
             <Unit value="ScienceVessel"/>
         </InfoArray>
         <InfoArray index="Train13" Time="114.513">
-            <Button DefaultButtonFace="Battlecruiser" State="Restricted" Requirements="ScienceFacilitywithattachedPhysicsLab"/>
+            <Button DefaultButtonFace="Battlecruiser" State="Restricted" Requirements="ScienceFacilitywithattachedPhysicsLabandControlTower"/>
             <Unit value="Battlecruiser"/>
         </InfoArray>
     </CAbilTrain>

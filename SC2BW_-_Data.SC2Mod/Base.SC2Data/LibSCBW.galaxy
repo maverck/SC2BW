@@ -527,8 +527,7 @@ void libSCBW_gf_InitSC2BW () {
             PlayerGroupLoopEnd();
             libSCBW_gf_RemoveMovedStartingUnits();
         }
-        else {
-        }
+
     }
     if ((libSCBW_gf_lCheckLadderConditions() == true)) {
         TriggerEnable(libSCBW_gt_LadderInit, true);
@@ -591,8 +590,7 @@ void libSCBW_gf_FindBases () {
             UnitGroupRemoveUnitGroup(lv_mineralsOnMap, lv_nearbyMinerals);
             libSCBW_gv_baseCount += 1;
         }
-        else {
-        }
+
     }
     UnitGroupLoopEnd();
 }
@@ -617,8 +615,7 @@ void libSCBW_gf_FixBases () {
             lv_unitToRemove = UnitGroupUnit(lv_nearbyVespene, 1);
             UnitRemove(lv_unitToRemove);
         }
-        else {
-        }
+
         lv_n += 1;
     }
 }
@@ -728,8 +725,7 @@ void libSCBW_gf_ApplyDamage (unit lp_source, unit lp_target, string lp_sourceDam
         }
         CatalogFieldValueSet(c_gameCatalogEffect, lp_damageApplyEffect, "Amount", UnitGetOwner(lp_source), "0");
     }
-    else {
-    }
+
 }
 
 bool libSCBW_gf_Miss (unit lp_source, unit lp_target) {
@@ -897,8 +893,7 @@ bool libSCBW_gf_FreeMineralPatchNearby (unit lp_sourceUnit) {
         if ((UnitGroupHasUnit(libSCBW_gv_beingHarvested, UnitGroupLoopCurrent()) == false)) {
             return true;
         }
-        else {
-        }
+
     }
     UnitGroupLoopEnd();
     return false;
@@ -921,25 +916,21 @@ void libSCBW_gf_CheckBuildingLarvaEgg (int lp_player, int lp_group) {
             UnitGroupClear(libSCBW_gv_controlGroups[lp_player][lp_group]);
             UnitControlGroupClear(lp_player, lp_group);
         }
-        else {
-        }
+
         if ((lv_break == false)) {
             if ((UnitFilterMatch(UnitGroupUnit(libSCBW_gv_controlGroups[lp_player][lp_group], lv_n), lp_player, UnitFilter((1 << c_targetFilterStructure), 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32)))) == true)) {
                 lv_structurePresent = true;
                 lv_structure = UnitGroupUnit(libSCBW_gv_controlGroups[lp_player][lp_group], lv_n);
             }
-            else {
-            }
+
         }
-        else {
-        }
+
         lv_n += 1;
     }
     if ((lv_structurePresent == true) && (lv_break == false)) {
         libSCBW_gf_SetControlGrouptoBuilding(lp_player, lp_group, lv_structure);
     }
-    else {
-    }
+
 }
 
 void libSCBW_gf_SetControlGrouptoBuilding (int lp_player, int lp_group, unit lp_unit) {
@@ -1008,18 +999,15 @@ bool libSCBW_gf_CheckUnitStackingRestrictions (unitgroup lp_selectedUnits) {
             if ((lv_distance < DistanceBetweenPoints(UnitGetPosition(UnitGroupUnit(lp_selectedUnits, lv_n)), UnitGroupCenterOfGroup(lp_selectedUnits)))) {
                 lv_distance = DistanceBetweenPoints(UnitGetPosition(UnitGroupUnit(lp_selectedUnits, lv_n)), UnitGroupCenterOfGroup(lp_selectedUnits));
             }
-            else {
-            }
+
             lv_n += 1;
         }
     }
-    else {
-    }
+
     if ((lv_distance > 2.0)) {
         lv_broken = true;
     }
-    else {
-    }
+
     if ((lv_broken == true) && (lv_lessthan12selected == true)) {
         lv_valid = true;
     }
@@ -1045,11 +1033,9 @@ bool libSCBW_gf_UnitatArrivedOrderPoint (unit lp_unit, order lp_order) {
             if ((DistanceBetweenPoints(UnitGetPosition(lp_unit), OrderGetTargetPosition(UnitOrder(lp_unit, 0))) <= 0.1)) {
                 lv_arrived = true;
             }
-            else {
-            }
+
         }
-        else {
-        }
+
     }
     return lv_arrived;
 }
@@ -1083,11 +1069,9 @@ bool auto_libSCBW_gf_CheckAirUnitsToSpread_TriggerFunc (bool testConds, bool run
             if ((UnitHasBehavior(lv_unit, "AirBeingSpread") == false) && (UnitHasBehavior(lv_unit, "AirStackCheck") == false) && ((UnitOrderCount(lv_unit) == 0) || (UnitGroupCount(UnitGroupSelected(lv_player), c_unitCountAlive) > 12) || (UnitIsSelected(lv_unit, lv_player) == false) || (lv_magicBoxBroken == false))) {
                 libSCBW_gf_SpreadStackedAir(lv_unit);
             }
-            else {
-            }
+
         }
-        else {
-        }
+
         lv_n += 1;
     }
     return true;
@@ -1105,12 +1089,10 @@ void libSCBW_gf_SpreadStackedAir (unit lp_unit) {
         if ((libSCBW_gf_UnitatArrivedOrderPoint(lp_unit, UnitOrder(lp_unit, 0)) == true)) {
             UnitIssueOrder(lp_unit, Order(AbilityCommand("stop", 0)), c_orderQueueReplace);
         }
-        else {
-        }
+
         PlayerCreateEffectPoint(0, "AirUnitSpreadSearch", lv_point);
     }
-    else {
-    }
+
 }
 
 trigger auto_libSCBW_gf_CheckMovement_Trigger = null;
@@ -1159,8 +1141,7 @@ bool auto_libSCBW_gf_CheckMovement_TriggerFunc (bool testConds, bool runActions)
                 UnitSetCustomValue(lv_pickedunit, 47, libNtve_gf_ArithmeticRealClamp(UnitGetCustomValue(lv_pickedunit, 47), 0.0, 3.0));
                 UnitBehaviorAdd(lv_pickedunit, "StopMovement", lv_pickedunit, 1);
             }
-            else {
-            }
+
             UnitGroupClear(lv_unitsinfront);
         }
         else {
@@ -1471,8 +1452,7 @@ void libSCBW_gf_osUpdateAPM (int lp_player) {
         lv_n = (lv_n / 2);
         libSCBW_gv_otherStats.lv_osAPM[lp_player][libSCBW_gf_lGetRace(lp_player)] = lv_n;
     }
-    else {
-    }
+
 }
 
 void libSCBW_gf_osUpdateAverageGameLength (int lp_player) {
@@ -1651,13 +1631,11 @@ void libSCBW_gf_lLadderErrors () {
     if ((!((libSCBW_gf_lCheckNumberofPlayers() == 2)))) {
         UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringExternal("Param/Value/lib_SCBW_AE36E2F1"));
     }
-    else {
-    }
+
     if ((libSCBW_gf_lCheckforUsers() == false)) {
         UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringExternal("Param/Value/lib_SCBW_3E796E88"));
     }
-    else {
-    }
+
 }
 
 void libSCBW_gf_lPreloadBanks () {
@@ -1716,8 +1694,7 @@ int libSCBW_gf_lCheckNumberofPlayers () {
         if ((PlayerStatus(lv_n) == c_playerStatusActive) && (PlayerType(lv_n) == c_playerTypeUser)) {
             lv_numberofPlayers += 1;
         }
-        else {
-        }
+
         lv_n += 1;
     }
     return lv_numberofPlayers;
@@ -1850,8 +1827,7 @@ int libSCBW_gf_lCheckGameMode () {
     if (((GameAttributeGameValue("3") == "0002") && (GameAttributeGameValue("4") == "0002") && (GameAttributeGameValue("2") == "0002"))) {
         lv_gameMode = 1;
     }
-    else {
-    }
+
     return lv_gameMode;
 }
 
@@ -1881,8 +1857,7 @@ void libSCBW_gf_lCheckPlayerPointsNotBelowThreshold (int lp_player) {
         if ((libSCBW_gv_ladderRecord.lv_playerPoints[lp_player][lv_n] < 250)) {
             libSCBW_gv_ladderRecord.lv_playerPoints[lp_player][lv_n] = 1000;
         }
-        else {
-        }
+
         lv_n += 1;
     }
 }
@@ -2079,15 +2054,13 @@ string libSCBW_gf_lGetPlayerID (int lp_player) {
         if ((BankKeyExists(libSCBW_gv_ladderRecord.lv_playerBanks[lp_player], "HCLadder", "PlayerID") == true)) {
             lv_playerID = BankValueGetAsString(libSCBW_gv_ladderRecord.lv_playerBanks[lp_player], "HCLadder", "PlayerID");
         }
-        else {
-        }
+
     }
     else {
         if ((BankKeyExists(libSCBW_gv_ladderRecord.lv_playerBanks[lp_player], "Ladder", "PlayerID") == true)) {
             lv_playerID = BankValueGetAsString(libSCBW_gv_ladderRecord.lv_playerBanks[lp_player], "Ladder", "PlayerID");
         }
-        else {
-        }
+
     }
     return lv_playerID;
 }
@@ -2373,13 +2346,11 @@ bool libSCBW_gf_lCheckPlayerStatus (int lp_player) {
     if ((PlayerStatus(lp_player) == c_playerStatusLeft)) {
         lv_playerisDefeated = true;
     }
-    else {
-    }
+
     if ((UnitGroupCount(UnitGroup(null, lp_player, RegionEntireMap(), UnitFilter((1 << c_targetFilterStructure), 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAlive) == 0)) {
         lv_playerisDefeated = true;
     }
-    else {
-    }
+
     return lv_playerisDefeated;
 }
 
@@ -2687,8 +2658,7 @@ bool libSCBW_gt_DamageHydralisk_Func (bool testConds, bool runActions) {
         lv_target = EventPlayerEffectUsedUnit(c_effectUnitTarget);
         libSCBW_gf_ApplyDamage(lv_source, lv_target, "NeedleSpinesDamage", "NeedleSpinesNull", libSCBW_ge_DamageModifier_Explosive, libSCBW_gf_Miss(lv_source, lv_target));
     }
-    else {
-    }
+
     return true;
 }
 
@@ -2718,8 +2688,7 @@ bool libSCBW_gt_DamageDragoon_Func (bool testConds, bool runActions) {
         lv_target = EventPlayerEffectUsedUnit(c_effectUnitTarget);
         libSCBW_gf_ApplyDamage(lv_source, lv_target, "ParticleDisruptorsU", "ParticleDisruptorsU3", libSCBW_ge_DamageModifier_Explosive, libSCBW_gf_Miss(lv_source, lv_target));
     }
-    else {
-    }
+
     return true;
 }
 
@@ -2749,8 +2718,7 @@ bool libSCBW_gt_DamageScarab_Func (bool testConds, bool runActions) {
         lv_target = EventPlayerEffectUsedUnit(c_effectUnitTarget);
         libSCBW_gf_ApplyDamage(lv_source, lv_target, "ScarabDamage", "ScarabDamageDummy", libSCBW_ge_DamageModifier_Explosive, false);
     }
-    else {
-    }
+
     UnitKill(lv_source);
     return true;
 }
@@ -2781,8 +2749,7 @@ bool libSCBW_gt_DamageMarine_Func (bool testConds, bool runActions) {
         lv_target = EventPlayerEffectUsedUnit(c_effectUnitTarget);
         libSCBW_gf_ApplyDamage(lv_source, lv_target, "GuassRifle", "GuassRifleNull", libSCBW_ge_DamageModifier_None, libSCBW_gf_Miss(lv_source, lv_target));
     }
-    else {
-    }
+
     return true;
 }
 
@@ -2812,8 +2779,7 @@ bool libSCBW_gt_DamageGhost_Func (bool testConds, bool runActions) {
         lv_target = EventPlayerEffectUsedUnit(c_effectUnitTarget);
         libSCBW_gf_ApplyDamage(lv_source, lv_target, "C10CanisterRifle", "C10CanisterRifleNull", libSCBW_ge_DamageModifier_Concussive, libSCBW_gf_Miss(lv_source, lv_target));
     }
-    else {
-    }
+
     return true;
 }
 
@@ -2843,8 +2809,7 @@ bool libSCBW_gt_DamageVulture_Func (bool testConds, bool runActions) {
         lv_target = EventPlayerEffectUsedUnit(c_effectUnitTarget);
         libSCBW_gf_ApplyDamage(lv_source, lv_target, "VultureU", "VultureUNull", libSCBW_ge_DamageModifier_Concussive, libSCBW_gf_Miss(lv_source, lv_target));
     }
-    else {
-    }
+
     return true;
 }
 
@@ -2874,8 +2839,7 @@ bool libSCBW_gt_DamageGoliath_Func (bool testConds, bool runActions) {
         lv_target = EventPlayerEffectUsedUnit(c_effectUnitTarget);
         libSCBW_gf_ApplyDamage(lv_source, lv_target, "GoliathG", "GoliathGNull", libSCBW_ge_DamageModifier_None, libSCBW_gf_Miss(lv_source, lv_target));
     }
-    else {
-    }
+
     return true;
 }
 
@@ -2905,8 +2869,7 @@ bool libSCBW_gt_DamageSiegeTank_Func (bool testConds, bool runActions) {
         lv_target = EventPlayerEffectUsedUnit(c_effectUnitTarget);
         libSCBW_gf_ApplyDamage(lv_source, lv_target, "90mmCannons", "ArcliteCannonNullDamage", libSCBW_ge_DamageModifier_Explosive, libSCBW_gf_Miss(lv_source, lv_target));
     }
-    else {
-    }
+
     return true;
 }
 
@@ -2936,8 +2899,7 @@ bool libSCBW_gt_DamageSiegeTankSieged_Func (bool testConds, bool runActions) {
         lv_target = EventPlayerEffectUsedUnit(c_effectUnitTarget);
         libSCBW_gf_ApplyDamage(lv_source, lv_target, "CrucioShockCannonDummy", "CrucioShockCannonBlast", libSCBW_ge_DamageModifier_Explosive, libSCBW_gf_Miss(lv_source, lv_target));
     }
-    else {
-    }
+
     return true;
 }
 
@@ -2967,8 +2929,7 @@ bool libSCBW_gt_DamageSpiderMine_Func (bool testConds, bool runActions) {
         lv_target = EventPlayerEffectUsedUnit(c_effectUnitTarget);
         libSCBW_gf_ApplyDamage(lv_source, lv_target, "SpiderMineDamage", "SpiderMineNullDamage", libSCBW_ge_DamageModifier_Explosive, libSCBW_gf_Miss(lv_source, lv_target));
     }
-    else {
-    }
+
     UnitKill(lv_source);
     return true;
 }
@@ -2999,8 +2960,7 @@ bool libSCBW_gt_DamageYamato_Func (bool testConds, bool runActions) {
         lv_target = EventPlayerEffectUsedUnit(c_effectUnitTarget);
         libSCBW_gf_ApplyDamage(lv_source, lv_target, "YamatoU", "YamatoU2", libSCBW_ge_DamageModifier_Explosive, libSCBW_gf_Miss(lv_source, lv_target));
     }
-    else {
-    }
+
     return true;
 }
 
@@ -3120,8 +3080,7 @@ bool libSCBW_gt_DisableWaitatResource_Func (bool testConds, bool runActions) {
             UnitIssueOrder(EventUnit(), OrderTargetingUnit(AbilityCommand("ProbeHarvest", 0), UnitGroupRandomUnit(UnitGroup("MineralField", c_playerAny, RegionCircle(UnitGetPosition(EventUnit()), 10.0), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAll)), c_orderQueueReplace);
         }
     }
-    else {
-    }
+
     return true;
 }
 
@@ -3241,16 +3200,14 @@ bool libSCBW_gt_ScarabPathing_Func (bool testConds, bool runActions) {
         if ((DistanceBetweenPoints(lv_point1, lv_point2) < 0.03)) {
             lv_nomovementcount += 1;
         }
-        else {
-        }
+
         if ((lv_nomovementcount >= 10)) {
             UnitIssueOrder(EventPlayerEffectUsedUnit(c_effectUnitTarget), Order(AbilityCommand("ScarabSmart", 0)), c_orderQueueAddToFront);
             Wait(0.5, c_timeGame);
             UnitIssueOrder(EventPlayerEffectUsedUnit(c_effectUnitTarget), Order(AbilityCommand("ScarabDumb", 0)), c_orderQueueAddToFront);
             lv_nomovementcount = 0;
         }
-        else {
-        }
+
     }
     return true;
 }
@@ -3355,8 +3312,7 @@ bool libSCBW_gt_InterceptorCreated_Func (bool testConds, bool runActions) {
             if ((UnitIsValid(libSCBW_gv_carriers[FixedToInt(lv_carrierArrayIndex)][lv_o]) == false)) {
                 libSCBW_gv_carriers[FixedToInt(lv_carrierArrayIndex)][lv_o] = null;
             }
-            else {
-            }
+
             if ((libSCBW_gv_carriers[FixedToInt(lv_carrierArrayIndex)][lv_o] == null)) {
                 libSCBW_gv_carriers[FixedToInt(lv_carrierArrayIndex)][lv_o] = EventUnitCreatedUnit();
                 lv_stoploop = true;
@@ -3366,8 +3322,7 @@ bool libSCBW_gt_InterceptorCreated_Func (bool testConds, bool runActions) {
             }
         }
     }
-    else {
-    }
+
     return true;
 }
 
@@ -3409,8 +3364,7 @@ bool libSCBW_gt_CarrierOrderedToAttack_Func (bool testConds, bool runActions) {
         }
         lv_stoploop = true;
     }
-    else {
-    }
+
     return true;
 }
 
@@ -3451,8 +3405,7 @@ bool libSCBW_gt_CarrierLoop_Func (bool testConds, bool runActions) {
                 if ((libSCBW_gv_carriers[lv_carrierArrayIndex][lv_o] != null) && (DistanceBetweenPoints(UnitGetPosition(lv_selectedCarrier), UnitGetPosition(lv_selectedInterceptor)) <= 1.5) && (UnitHasBehavior(lv_selectedCarrier, "CarrierIsMoving") == true)) {
                     UnitSetPosition(lv_selectedInterceptor, PointWithOffsetPolar(UnitGetPosition(lv_selectedCarrier), 1.8, AngleBetweenPoints(UnitGetPosition(lv_selectedCarrier), UnitGetPosition(lv_selectedInterceptor))), true);
                 }
-                else {
-                }
+
                 lv_o += 1;
             }
         }
@@ -3539,8 +3492,7 @@ bool libSCBW_gt_UnitEntersNydus_Func (bool testConds, bool runActions) {
             }
         }
     }
-    else {
-    }
+
     return true;
 }
 
@@ -3621,8 +3573,7 @@ bool libSCBW_gt_UnitUsesBattery_Func (bool testConds, bool runActions) {
         UnitIssueOrder(EventUnitTargetUnit(), OrderTargetingUnit(AbilityCommand("RechargeShields", 0), EventUnit()), c_orderQueueReplace);
         UnitIssueOrder(EventUnit(), Order(AbilityCommand("stop", 0)), c_orderQueueReplace);
     }
-    else {
-    }
+
     return true;
 }
 
@@ -3665,8 +3616,7 @@ bool libSCBW_gt_MovingShot_Func (bool testConds, bool runActions) {
     if (((UnitIsAlive(EventUnit()) == true) && (lv_angleofTarget < (lv_unitfacingangle + 90.0)) && (lv_angleofTarget > (lv_unitfacingangle - 90.0)) && (!((lv_ownerofTarget == lv_ownerofTriggeringUnit))))) {
         UnitBehaviorAddPlayer(EventUnit(), "MovingShotActivateTurret", UnitGetOwner(EventUnit()), 1);
     }
-    else {
-    }
+
     return true;
 }
 
@@ -3713,11 +3663,9 @@ bool libSCBW_gt_SpiderMineDetectCloaked_Func (bool testConds, bool runActions) {
             if ((libNtve_gf_UnitInRegion(EventPlayerEffectUsedUnit(c_effectUnitTarget), RegionCircle(UnitGetPosition(EventPlayerEffectUsedUnit(c_effectUnitCaster)), (UnitGetPropertyFixed(EventPlayerEffectUsedUnit(c_effectUnitTarget), c_unitPropRadius, c_unitPropCurrent) + 0.65))) == true) && (UnitIsAlive(EventPlayerEffectUsedUnit(c_effectUnitCaster)) == true) && (UnitIsAlive(EventPlayerEffectUsedUnit(c_effectUnitTarget)) == true)) {
                 UnitCreateEffectUnit(EventPlayerEffectUsedUnit(c_effectUnitCaster), "VultureSpiderMinesSet", EventPlayerEffectUsedUnit(c_effectUnitTarget));
             }
-            else {
-            }
+
         }
-        else {
-        }
+
     }
     return true;
 }
@@ -3899,16 +3847,14 @@ bool libSCBW_gt_LimitSelection_Func (bool testConds, bool runActions) {
             lv_buildingFound = true;
             libSCBW_gf_Deselect1Building(EventPlayer());
         }
-        else {
-        }
+
         lv_n += 1;
     }
     lv_n = 1;
     if ((lv_buildingFound == false) && (lv_i > 12)) {
         libSCBW_gf_Deselect12Units(EventPlayer());
     }
-    else {
-    }
+
     return true;
 }
 
@@ -3952,8 +3898,7 @@ bool libSCBW_gt_CTRL12UnitLimitonControlGroups_Func (bool testConds, bool runAct
             UnitControlGroupRemoveUnit(lv_player, lv_group, UnitGroupUnit(libSCBW_gv_controlGroups[lv_player][lv_group], UnitGroupCount(libSCBW_gv_controlGroups[lv_player][lv_group], c_unitCountAlive)));
         }
     }
-    else {
-    }
+
     libSCBW_gf_CheckBuildingLarvaEgg(lv_player, lv_group);
     return true;
 }
@@ -4022,8 +3967,7 @@ bool libSCBW_gt_SHIFT12UnitLimitonControlGroups_Func (bool testConds, bool runAc
             if ((UnitGroupHasUnit(libSCBW_gv_controlGroups[lv_player][lv_group], UnitGroupUnit(lv_units, lv_i)) == false)) {
                 UnitControlGroupRemoveUnit(lv_player, lv_group, UnitGroupUnit(lv_units, lv_i));
             }
-            else {
-            }
+
         }
         lv_i += 1;
     }
@@ -4087,8 +4031,7 @@ bool libSCBW_gt_DisableAutomine_Func (bool testConds, bool runActions) {
         if ((UnitGetType(lv_orderTarget) == "MineralField")) {
             UnitIssueOrder(EventUnitCreatedUnit(), OrderTargetingUnit(AbilityCommand("move", 0), lv_orderTarget), c_orderQueueReplace);
         }
-        else {
-        }
+
         lv_n += 1;
     }
     return true;
@@ -4453,8 +4396,7 @@ bool libSCBW_gt_sOpenStatsButtonPressed_Func (bool testConds, bool runActions) {
     if ((PlayerType(EventPlayer()) == c_playerTypeUser)) {
         lv_player = EventPlayer();
     }
-    else {
-    }
+
     if ((libSCBW_gv_dialogconstants.lv_statsDialogOpen[EventPlayer()] == false)) {
         libSCBW_gv_dialogconstants.lv_statsDialogOpen[EventPlayer()] = true;
         libSCBW_gf_sCreateStatsDialog(50, 50, c_anchorTopLeft, EventPlayer(), lv_player, false);
@@ -4601,8 +4543,7 @@ bool libSCBW_gt_CheckPlayerStatus_Func (bool testConds, bool runActions) {
             GameOver(libSCBW_gf_lGetOpponent(lv_n), c_gameOverVictory, true, true);
             TriggerEnable(libSCBW_gt_osUpdateStats, false);
         }
-        else {
-        }
+
         lv_n += 1;
     }
     return true;
